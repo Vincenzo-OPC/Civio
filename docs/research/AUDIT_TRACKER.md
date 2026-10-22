@@ -302,6 +302,14 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
   - R.A. 6713 32 (CoS topic-mix decision)
 - Packet: `audit/gap-fill-2000-01-review-request.md`. Next: gap-fill-2000-02 (Numerical basic operations and sequences, plus FIL reading and paragraph order).
 
+## 2026-10-18: gap-fill-2000-06, lint fixes for FV / Analytical / Clerical / GI Release Collection picks (247 + 7, pending CoS)
+
+- File: `docs/research/audit/fixes/gap-fill-2000-06-lintfix.json`, built by `scripts/batches/gapfill/lintfix_2000_06.py` with data in `lintfix_2000_06_data.py`. Each fix is an `<id>-LINTFIX` copy with `fix_of`, status draft/unreviewed. Originals are untouched.
+- Fixes by subject: Filipino Verbal 39, Analytical 96, Clerical 58, GI 54. There are also 7 Filipino passage-set companions, because five short passages were lengthened to the 400-character sibling floor.
+- Series, data-interpretation and numeric/date filing explanations are generated and key-checked by code. GI fixes cite LawPhil sections; all 61 quoted spans were verified against the LawPhil text.
+- QA on `integration/2000`: `explanation_lint` 0 flagged; `qa_fixfile` 0 problems against 1,811 bank items.
+- Packet: `audit/gap-fill-2000-06-lintfix-review-request.md`. It includes 7 CoS decisions, among them the R.A. 6713 Sec. 2→1 citation in 000302 and the arma_solver "business" mismatch on GAP3-0020.
+
 ## 21 October 2026 curriculum audit checkpoint
 
 Repository evidence at `dbdf2bc04fe8d7edde4c8b7cf1e87be01138abe1`: 1,478 approved-labeled primary records, not a runtime count. Independently checked 497 existing keys (400 numerical, 41 data tables, 44 syllogisms, 12 explicit sorts); all matched. Mechanically screened 2,127 main/export records; 83 quality flags, including historical #462 duplicate choices. All 45 Vera IDs reconciled; nine lack a correct listed option. Ten original numerical drafts remain unreviewed; existing full QA cannot parse their novel structures. No approvals, imports or activations. See [current assessment](curriculum/CURRENT_BANK_ASSESSMENT.md), [Vera ledger](curriculum/VERA_45_QUESTION_AUDIT.md), [production plan](curriculum/QUESTION_QUALITY_AND_PRODUCTION_PLAN.md), and [scope evidence](curriculum/CSC_COMPETENCY_GAP_MAP.md). The 2,000 milestone is incomplete; exact eligible release count unknown.
