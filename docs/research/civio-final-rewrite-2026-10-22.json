@@ -3555,7 +3555,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 §4: An official uses a government vehicle every weekend for family trips to the province. What is the proper action?",
+      "stem": "Under R.A. 6713 §4(A)(a): An official uses a government vehicle every weekend for family trips to the province. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -3575,11 +3575,21 @@
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "R.A. 6713 §4 requires: stop the personal use and reimburse the agency.",
+      "reveal": "§4(A)(a) (commitment to public interest) requires government resources to be used efficiently, honestly and economically, never for private ends. Weekend family trips in a government vehicle are private use, so the official must stop and make the agency whole. The other choices ignore, delay or hide the violation, which the law does not allow.",
       "source": "original Civio final-rewrite 2026-10-22",
       "source_group": "civio",
       "status": "draft",
-      "notes": "Genuine content variation. Not a city/number clone."
+      "notes": "Genuine content variation. Not a city/number clone.",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "by": "Grok Bot (CSE)",
+          "change": "citation verified/corrected and explanation rewritten to give reasoning",
+          "prior_stem": "Under R.A. 6713 §4: An official uses a government vehicle every weekend for family trips to the province. What is the proper action?",
+          "prior_reveal": "R.A. 6713 §4 requires: stop the personal use and reimburse the agency.",
+          "source": "R.A. 6713 text, https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html (checked 2026-10-22)"
+        }
+      ]
     },
     {
       "id": "CIVIO-FINAL-0106",
@@ -3589,7 +3599,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 §4: A division chief charges personal mobile load to the office telephone allowance. What is the proper action?",
+      "stem": "Under R.A. 6713 §4(A)(a): A division chief charges personal mobile load to the office telephone allowance. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -3609,11 +3619,21 @@
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "R.A. 6713 §4 requires: refund the personal charges and stop the practice.",
+      "reveal": "§4(A)(a) requires government resources to be used honestly and economically. Personal mobile load charged to an office allowance is a private expense paid with public funds, so it must be refunded and stopped. The other choices ignore, delay or hide the violation, which the law does not allow.",
       "source": "original Civio final-rewrite 2026-10-22",
       "source_group": "civio",
       "status": "draft",
-      "notes": "Genuine content variation. Not a city/number clone."
+      "notes": "Genuine content variation. Not a city/number clone.",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "by": "Grok Bot (CSE)",
+          "change": "citation verified/corrected and explanation rewritten to give reasoning",
+          "prior_stem": "Under R.A. 6713 §4: A division chief charges personal mobile load to the office telephone allowance. What is the proper action?",
+          "prior_reveal": "R.A. 6713 §4 requires: refund the personal charges and stop the practice.",
+          "source": "R.A. 6713 text, https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html (checked 2026-10-22)"
+        }
+      ]
     },
     {
       "id": "CIVIO-FINAL-0107",
@@ -3623,7 +3643,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 §5: A procurement officer keeps an unreported gift of ₱8,000 from a supplier. What is the proper action?",
+      "stem": "Under R.A. 6713 §7(d): A procurement officer keeps an unreported gift of ₱8,000 from a supplier. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -3643,11 +3663,21 @@
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "R.A. 6713 §5 requires: return the gift and disclose the offer.",
+      "reveal": "§7(d) prohibits soliciting or accepting any gift or anything of monetary value in connection with a transaction the office can affect. A ₱8,000 gift from a supplier falls squarely within this, so it must be returned and the offer disclosed. The other choices ignore, delay or hide the violation, which the law does not allow.",
       "source": "original Civio final-rewrite 2026-10-22",
       "source_group": "civio",
       "status": "draft",
-      "notes": "Genuine content variation. Not a city/number clone."
+      "notes": "Genuine content variation. Not a city/number clone.",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "by": "Grok Bot (CSE)",
+          "change": "citation verified/corrected and explanation rewritten to give reasoning",
+          "prior_stem": "Under R.A. 6713 §5: A procurement officer keeps an unreported gift of ₱8,000 from a supplier. What is the proper action?",
+          "prior_reveal": "R.A. 6713 §5 requires: return the gift and disclose the offer.",
+          "source": "R.A. 6713 text, https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html (checked 2026-10-22)"
+        }
+      ]
     },
     {
       "id": "CIVIO-FINAL-0108",
@@ -3657,7 +3687,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 §5: A staff member accepts free tournament tickets from a firm with a pending bid. What is the proper action?",
+      "stem": "Under R.A. 6713 §7(d): A staff member accepts free tournament tickets from a firm with a pending bid. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -3677,11 +3707,21 @@
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "R.A. 6713 §5 requires: refuse the tickets and record the offer.",
+      "reveal": "§7(d) bars accepting any gift, favor or entertainment from a person whose transaction the office can affect. Free tickets from a firm with a pending bid are entertainment of monetary value, so they must be refused and the offer recorded. The other choices ignore, delay or hide the violation, which the law does not allow.",
       "source": "original Civio final-rewrite 2026-10-22",
       "source_group": "civio",
       "status": "draft",
-      "notes": "Genuine content variation. Not a city/number clone."
+      "notes": "Genuine content variation. Not a city/number clone.",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "by": "Grok Bot (CSE)",
+          "change": "citation verified/corrected and explanation rewritten to give reasoning",
+          "prior_stem": "Under R.A. 6713 §5: A staff member accepts free tournament tickets from a firm with a pending bid. What is the proper action?",
+          "prior_reveal": "R.A. 6713 §5 requires: refuse the tickets and record the offer.",
+          "source": "R.A. 6713 text, https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html (checked 2026-10-22)"
+        }
+      ]
     },
     {
       "id": "CIVIO-FINAL-0109",
@@ -3691,7 +3731,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 §7(a): A director sits on the panel that will promote their spouse. What is the proper action?",
+      "stem": "Under R.A. 6713 §4(A)(c): A director sits on the panel that will promote their spouse. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -3711,11 +3751,21 @@
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "R.A. 6713 §7(a) requires: inhibit from the panel and disclose the relationship.",
+      "reveal": "§4(A)(c) (justness and sincerity) forbids extending undue favors on account of office to relatives by consanguinity or affinity. Sitting on a panel deciding a spouse's promotion invites exactly that, so the director should inhibit and disclose the relationship. (Nepotism in appointments is separately barred by EO 292, Book V, §59.) The other choices ignore, delay or hide the violation, which the law does not allow.",
       "source": "original Civio final-rewrite 2026-10-22",
       "source_group": "civio",
       "status": "draft",
-      "notes": "Genuine content variation. Not a city/number clone."
+      "notes": "Genuine content variation. Not a city/number clone.",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "by": "Grok Bot (CSE)",
+          "change": "citation verified/corrected and explanation rewritten to give reasoning",
+          "prior_stem": "Under R.A. 6713 §7(a): A director sits on the panel that will promote their spouse. What is the proper action?",
+          "prior_reveal": "R.A. 6713 §7(a) requires: inhibit from the panel and disclose the relationship.",
+          "source": "R.A. 6713 text, https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html (checked 2026-10-22)"
+        }
+      ]
     },
     {
       "id": "CIVIO-FINAL-0110",
@@ -3725,7 +3775,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 §7(a): An employee recommends a cousin for a vacant post in the same unit. What is the proper action?",
+      "stem": "Under R.A. 6713 §4(A)(c): An employee recommends a cousin for a vacant post in the same unit. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -3745,11 +3795,21 @@
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "R.A. 6713 §7(a) requires: withdraw the recommendation and disclose the kinship.",
+      "reveal": "§4(A)(c) forbids extending undue favors on account of office to relatives. Recommending a cousin for a post in one's own unit is such a favor, so the employee should withdraw the recommendation and disclose the kinship. (EO 292, Book V, §59 also bars nepotistic appointments.) The other choices ignore, delay or hide the violation, which the law does not allow.",
       "source": "original Civio final-rewrite 2026-10-22",
       "source_group": "civio",
       "status": "draft",
-      "notes": "Genuine content variation. Not a city/number clone."
+      "notes": "Genuine content variation. Not a city/number clone.",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "by": "Grok Bot (CSE)",
+          "change": "citation verified/corrected and explanation rewritten to give reasoning",
+          "prior_stem": "Under R.A. 6713 §7(a): An employee recommends a cousin for a vacant post in the same unit. What is the proper action?",
+          "prior_reveal": "R.A. 6713 §7(a) requires: withdraw the recommendation and disclose the kinship.",
+          "source": "R.A. 6713 text, https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html (checked 2026-10-22)"
+        }
+      ]
     },
     {
       "id": "CIVIO-FINAL-0111",
@@ -3759,7 +3819,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 §7(b): An official holds shares in a company bidding for the agency contract. What is the proper action?",
+      "stem": "Under R.A. 6713 §9: An official holds shares in a company bidding for the agency contract. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -3779,11 +3839,21 @@
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "R.A. 6713 §7(b) requires: divest or inhibit from the procurement.",
+      "reveal": "§9 (divestment) requires an official to avoid conflicts of interest and, when one arises, to divest shareholdings within 60 days of assuming office. §7(a) also bars a financial interest in any transaction the office approves. Holding shares in a bidder is that conflict, so the official must divest or at least inhibit. The other choices ignore, delay or hide the violation, which the law does not allow.",
       "source": "original Civio final-rewrite 2026-10-22",
       "source_group": "civio",
       "status": "draft",
-      "notes": "Genuine content variation. Not a city/number clone."
+      "notes": "Genuine content variation. Not a city/number clone.",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "by": "Grok Bot (CSE)",
+          "change": "citation verified/corrected and explanation rewritten to give reasoning",
+          "prior_stem": "Under R.A. 6713 §7(b): An official holds shares in a company bidding for the agency contract. What is the proper action?",
+          "prior_reveal": "R.A. 6713 §7(b) requires: divest or inhibit from the procurement.",
+          "source": "R.A. 6713 text, https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html (checked 2026-10-22)"
+        }
+      ]
     },
     {
       "id": "CIVIO-FINAL-0112",
@@ -3793,7 +3863,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 §7(b): A technical evaluator owns a consultancy that advises one of the bidders. What is the proper action?",
+      "stem": "Under R.A. 6713 §7(a): A technical evaluator owns a consultancy that advises one of the bidders. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -3813,11 +3883,21 @@
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "R.A. 6713 §7(b) requires: inhibit and disclose the financial interest.",
+      "reveal": "§7(a) bars any direct or indirect financial or material interest in a transaction requiring the office's approval. An evaluator whose own consultancy advises a bidder has that interest, so they must inhibit and disclose it. The other choices ignore, delay or hide the violation, which the law does not allow.",
       "source": "original Civio final-rewrite 2026-10-22",
       "source_group": "civio",
       "status": "draft",
-      "notes": "Genuine content variation. Not a city/number clone."
+      "notes": "Genuine content variation. Not a city/number clone.",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "by": "Grok Bot (CSE)",
+          "change": "citation verified/corrected and explanation rewritten to give reasoning",
+          "prior_stem": "Under R.A. 6713 §7(b): A technical evaluator owns a consultancy that advises one of the bidders. What is the proper action?",
+          "prior_reveal": "R.A. 6713 §7(b) requires: inhibit and disclose the financial interest.",
+          "source": "R.A. 6713 text, https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html (checked 2026-10-22)"
+        }
+      ]
     },
     {
       "id": "CIVIO-FINAL-0113",
@@ -3827,7 +3907,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 §7(c): A regulator negotiates a job with a company they currently oversee. What is the proper action?",
+      "stem": "Under R.A. 6713 §7(b)(1): A regulator negotiates a job with a company they currently oversee. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -3847,11 +3927,21 @@
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "R.A. 6713 §7(c) requires: decline until separation and cooling-off rules are met.",
+      "reveal": "§7(b)(1) bars accepting employment in a private enterprise regulated or supervised by one's office during incumbency, and the bar continues for one year after separation. Negotiating a job with a firm one currently oversees conflicts with that, so the regulator should decline until separation and the one-year period are over. The other choices ignore, delay or hide the violation, which the law does not allow.",
       "source": "original Civio final-rewrite 2026-10-22",
       "source_group": "civio",
       "status": "draft",
-      "notes": "Genuine content variation. Not a city/number clone."
+      "notes": "Genuine content variation. Not a city/number clone.",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "by": "Grok Bot (CSE)",
+          "change": "citation verified/corrected and explanation rewritten to give reasoning",
+          "prior_stem": "Under R.A. 6713 §7(c): A regulator negotiates a job with a company they currently oversee. What is the proper action?",
+          "prior_reveal": "R.A. 6713 §7(c) requires: decline until separation and cooling-off rules are met.",
+          "source": "R.A. 6713 text, https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html (checked 2026-10-22)"
+        }
+      ]
     },
     {
       "id": "CIVIO-FINAL-0114",
@@ -3861,7 +3951,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 §7(c): An outgoing chief accepts a consultancy from a regulated firm before the cooling-off period ends. What is the proper action?",
+      "stem": "Under R.A. 6713 §7(b): An outgoing chief accepts a consultancy from a regulated firm before the cooling-off period ends. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -3881,11 +3971,21 @@
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "R.A. 6713 §7(c) requires: defer the engagement until the period lapses.",
+      "reveal": "The last paragraph of §7(b) keeps the outside-employment prohibitions in force for one year after resignation, retirement or separation. Taking a consultancy with a regulated firm inside that year violates it, so the engagement must be deferred until the year lapses. The other choices ignore, delay or hide the violation, which the law does not allow.",
       "source": "original Civio final-rewrite 2026-10-22",
       "source_group": "civio",
       "status": "draft",
-      "notes": "Genuine content variation. Not a city/number clone."
+      "notes": "Genuine content variation. Not a city/number clone.",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "by": "Grok Bot (CSE)",
+          "change": "citation verified/corrected and explanation rewritten to give reasoning",
+          "prior_stem": "Under R.A. 6713 §7(c): An outgoing chief accepts a consultancy from a regulated firm before the cooling-off period ends. What is the proper action?",
+          "prior_reveal": "R.A. 6713 §7(c) requires: defer the engagement until the period lapses.",
+          "source": "R.A. 6713 text, https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html (checked 2026-10-22)"
+        }
+      ]
     },
     {
       "id": "CIVIO-FINAL-0115",
@@ -3915,11 +4015,21 @@
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "R.A. 6713 §7(d) requires: stop the solicitation and report it.",
+      "reveal": "§7(d) prohibits soliciting any gift or anything of monetary value, directly or indirectly, in connection with official duties. A supervisor asking subordinates for cash uses the position to solicit, so the solicitation must stop and be reported. The other choices ignore, delay or hide the violation, which the law does not allow.",
       "source": "original Civio final-rewrite 2026-10-22",
       "source_group": "civio",
       "status": "draft",
-      "notes": "Genuine content variation. Not a city/number clone."
+      "notes": "Genuine content variation. Not a city/number clone.",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "by": "Grok Bot (CSE)",
+          "change": "citation verified/corrected and explanation rewritten to give reasoning",
+          "prior_stem": null,
+          "prior_reveal": "R.A. 6713 §7(d) requires: stop the solicitation and report it.",
+          "source": "R.A. 6713 text, https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html (checked 2026-10-22)"
+        }
+      ]
     },
     {
       "id": "CIVIO-FINAL-0116",
@@ -3949,11 +4059,21 @@
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "R.A. 6713 §7(d) requires: cease the solicitation and disclose it.",
+      "reveal": "§7(d) bars soliciting anything of monetary value from persons whose transactions the office can affect. Asking permit applicants for donations, even for a foundation, is such a solicitation, so it must cease and be disclosed. The other choices ignore, delay or hide the violation, which the law does not allow.",
       "source": "original Civio final-rewrite 2026-10-22",
       "source_group": "civio",
       "status": "draft",
-      "notes": "Genuine content variation. Not a city/number clone."
+      "notes": "Genuine content variation. Not a city/number clone.",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "by": "Grok Bot (CSE)",
+          "change": "citation verified/corrected and explanation rewritten to give reasoning",
+          "prior_stem": null,
+          "prior_reveal": "R.A. 6713 §7(d) requires: cease the solicitation and disclose it.",
+          "source": "R.A. 6713 text, https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html (checked 2026-10-22)"
+        }
+      ]
     },
     {
       "id": "CIVIO-FINAL-0117",
@@ -4017,11 +4137,21 @@
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "R.A. 6713 §8 requires: file immediately and explain the delay.",
+      "reveal": "§8(A) requires the SALN to be filed on or before April 30 every year. Filing three months late is non-compliance: §10 lets the reviewing body direct corrective action, and §11 makes violations of §8 punishable. The correct step is to file at once and explain the lateness. The other choices leave the violation in place.",
       "source": "original Civio final-rewrite 2026-10-22",
       "source_group": "civio",
       "status": "draft",
-      "notes": "Genuine content variation. Not a city/number clone."
+      "notes": "Genuine content variation. Not a city/number clone.",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "by": "Grok Bot (CSE)",
+          "change": "citation verified/corrected and explanation rewritten to give reasoning",
+          "prior_stem": null,
+          "prior_reveal": "R.A. 6713 §8 requires: file immediately and explain the delay.",
+          "source": "R.A. 6713 text, https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html (checked 2026-10-22)"
+        }
+      ]
     },
     {
       "id": "CIVIO-FINAL-0119",
@@ -4031,7 +4161,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 §9: A records officer ignores a document request for 45 days. What is the proper action?",
+      "stem": "Under R.A. 6713 §5(a): A records officer ignores a document request for 45 days. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -4051,11 +4181,21 @@
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "R.A. 6713 §9 requires: act on the request or issue a formal denial with legal basis.",
+      "reveal": "§5(a) requires officials to respond to letters and requests from the public within fifteen (15) working days, and the reply must state the action taken. Ignoring a request for 45 days breaks that rule, so the officer must act on it or issue a reasoned denial. The other choices ignore, delay or hide the violation, which the law does not allow.",
       "source": "original Civio final-rewrite 2026-10-22",
       "source_group": "civio",
       "status": "draft",
-      "notes": "Genuine content variation. Not a city/number clone."
+      "notes": "Genuine content variation. Not a city/number clone.",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "by": "Grok Bot (CSE)",
+          "change": "citation verified/corrected and explanation rewritten to give reasoning",
+          "prior_stem": "Under R.A. 6713 §9: A records officer ignores a document request for 45 days. What is the proper action?",
+          "prior_reveal": "R.A. 6713 §9 requires: act on the request or issue a formal denial with legal basis.",
+          "source": "R.A. 6713 text, https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html (checked 2026-10-22)"
+        }
+      ]
     },
     {
       "id": "CIVIO-FINAL-0120",
@@ -4065,7 +4205,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 §9: An agency denies access to a public report without citing any exception. What is the proper action?",
+      "stem": "Under R.A. 6713 §5(e): An agency denies access to a public report without citing any exception. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -4085,11 +4225,21 @@
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "R.A. 6713 §9 requires: grant access or state the statutory ground for denial.",
+      "reveal": "§5(e) requires public documents to be made accessible to, and readily available for inspection by, the public within reasonable working hours. A denial with no stated legal ground fails that duty, so the agency must grant access or cite the statutory exception. The other choices ignore, delay or hide the violation, which the law does not allow.",
       "source": "original Civio final-rewrite 2026-10-22",
       "source_group": "civio",
       "status": "draft",
-      "notes": "Genuine content variation. Not a city/number clone."
+      "notes": "Genuine content variation. Not a city/number clone.",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "by": "Grok Bot (CSE)",
+          "change": "citation verified/corrected and explanation rewritten to give reasoning",
+          "prior_stem": "Under R.A. 6713 §9: An agency denies access to a public report without citing any exception. What is the proper action?",
+          "prior_reveal": "R.A. 6713 §9 requires: grant access or state the statutory ground for denial.",
+          "source": "R.A. 6713 text, https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html (checked 2026-10-22)"
+        }
+      ]
     },
     {
       "id": "CIVIO-FINAL-0121",
@@ -4099,7 +4249,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 §4: Confidential bid prices are posted on an official’s personal social media account. What is the proper action?",
+      "stem": "Under R.A. 6713 §7(c): Confidential bid prices are posted on an official’s personal social media account. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -4119,11 +4269,21 @@
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "R.A. 6713 §4 requires: remove the post and report the disclosure.",
+      "reveal": "§7(c) bars using or divulging confidential information known by reason of office to give anyone undue advantage or to prejudice the public interest. Posting confidential bid prices does both, so the post must come down and the disclosure be reported. The other choices ignore, delay or hide the violation, which the law does not allow.",
       "source": "original Civio final-rewrite 2026-10-22",
       "source_group": "civio",
       "status": "draft",
-      "notes": "Genuine content variation. Not a city/number clone."
+      "notes": "Genuine content variation. Not a city/number clone.",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "by": "Grok Bot (CSE)",
+          "change": "citation verified/corrected and explanation rewritten to give reasoning",
+          "prior_stem": "Under R.A. 6713 §4: Confidential bid prices are posted on an official’s personal social media account. What is the proper action?",
+          "prior_reveal": "R.A. 6713 §4 requires: remove the post and report the disclosure.",
+          "source": "R.A. 6713 text, https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html (checked 2026-10-22)"
+        }
+      ]
     },
     {
       "id": "CIVIO-FINAL-0122",
@@ -4133,7 +4293,7 @@
       "difficulty": "medium",
       "est_seconds": 80,
       "language": "en",
-      "stem": "Under R.A. 6713 §5: An inspector receives cash during a site visit and does not record it. What is the proper action?",
+      "stem": "Under R.A. 6713 §7(d): An inspector receives cash during a site visit and does not record it. What is the proper action?",
       "options": [
         {
           "option_id": "n1",
@@ -4153,11 +4313,21 @@
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "R.A. 6713 §5 requires: refuse or return the cash and report the incident.",
+      "reveal": "§7(d) bars accepting any gift or anything of monetary value in the course of official duties. Cash handed over during a site visit is exactly that, so it must be refused or returned and the incident reported. The other choices ignore, delay or hide the violation, which the law does not allow.",
       "source": "original Civio final-rewrite 2026-10-22",
       "source_group": "civio",
       "status": "draft",
-      "notes": "Genuine content variation. Not a city/number clone."
+      "notes": "Genuine content variation. Not a city/number clone.",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "by": "Grok Bot (CSE)",
+          "change": "citation verified/corrected and explanation rewritten to give reasoning",
+          "prior_stem": "Under R.A. 6713 §5: An inspector receives cash during a site visit and does not record it. What is the proper action?",
+          "prior_reveal": "R.A. 6713 §5 requires: refuse or return the cash and report the incident.",
+          "source": "R.A. 6713 text, https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html (checked 2026-10-22)"
+        }
+      ]
     }
   ]
 }

@@ -3776,10 +3776,20 @@
         }
       ],
       "answer_option_id": "n1",
-      "reveal": "Under §8, the proper action is to file immediately and explain the delay.",
+      "reveal": "§8(A) requires the SALN to be filed on or before April 30 every year. Three months late is non-compliance (corrective action under §10, penalties under §11), so the official should file at once and explain the lateness. Waiting, deferring to next year or filing an incomplete list all leave the violation in place.",
       "source": "original Civio flat-2100 2026-10-22",
       "source_group": "civio",
-      "status": "draft"
+      "status": "draft",
+      "revisions": [
+        {
+          "date": "2026-10-22",
+          "by": "Grok Bot (CSE)",
+          "change": "citation verified/corrected and explanation rewritten to give reasoning",
+          "prior_stem": null,
+          "prior_reveal": "Under §8, the proper action is to file immediately and explain the delay.",
+          "source": "R.A. 6713 text, https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html (checked 2026-10-22)"
+        }
+      ]
     },
     {
       "id": "CIVIO-2100-0116",
