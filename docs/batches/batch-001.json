@@ -646,12 +646,12 @@
     "Civio is an independent reviewer and is not affiliated with the Civil Service Commission.",
     "",
     "Mix: 3 Numerical, 3 Verbal (English), 2 General Information, 1 Analytical (Professional), 1 Clerical spelling (Subprofessional).",
-    "Post-review fixes: item 3 r3 code is now `NUM-OTHER-SHARE`; item 9 y2 code is now `ANA-OTHER-RELATION` with a reworded Reveal line."
+    "Post-review fixes: Item 3 r3 code is now `NUM-OTHER-SHARE`; Item 9 y2 code is now `ANA-OTHER-RELATION` with a reworded Reveal line."
   ],
   "outro": [
     "## Checks done by the author",
     "",
-    "- Math recomputed twice: item 1: 250 × 1.2 = 300, 300 × 0.8 = 240 (and 250 + 50 − 60 = 240). Item 2: differences 3, 5, 7, 9, 11, so 28 + 11 = 39. Item 3: 18,000 ÷ 9 = 2,000; 5 × 2,000 = 10,000; 4 × 2,000 = 8,000; total 18,000.",
+    "- Math recomputed twice: Item 1: 250 × 1.2 = 300, 300 × 0.8 = 240 (and 250 + 50 − 60 = 240). Item 2: differences 3, 5, 7, 9, 11, so 28 + 11 = 39. Item 3: 18,000 ÷ 9 = 2,000; 5 × 2,000 = 10,000; 4 × 2,000 = 8,000; total 18,000.",
     "- GI text checked against the LawPhil copies: 1987 Const. Art. XI Sec. 3(1), 3(6), Sec. 13; R.A. 6713 Sec. 4(A)(a), (b), (f), (h)."
   ]
 }
