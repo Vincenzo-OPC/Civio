@@ -1,6 +1,6 @@
 {
- "raw_non_approved_rows": 2731,
- "unique_drafts": 2617,
+ "raw_non_approved_rows": 2735,
+ "unique_drafts": 2618,
  "approved_unique": 1477,
  "approved_by_domain": {
   "numerical": 309,
@@ -20,7 +20,7 @@
  "adds_unique_pass_by_domain": {
   "general_information": 316,
   "clerical": 293,
-  "numerical": 310,
+  "numerical": 311,
   "analytical": 423,
   "verbal_en": 286,
   "verbal_fil": 178
@@ -95,7 +95,7 @@
    "pass": 70
   },
   "numerical|new": {
-   "pass": 213,
+   "pass": 214,
    "flag": 1
   },
   "numerical|revision": {

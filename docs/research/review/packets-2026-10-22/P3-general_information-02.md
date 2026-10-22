@@ -21,10 +21,10 @@ A store owner asks the police to jail a customer who has not paid a ₱3,000 cre
 
 A man was acquitted of a theft under a city ordinance. The prosecutor now charges him for the same act under a national law. What rule applies?
 
-- (A) A new prosecution is allowed within one year
+- (A) A new prosecution is allowed if it is filed within one year of the acquittal
 - (B) Acquittal under either the ordinance or the law bars another prosecution for the same act
-- (C) A new prosecution is allowed because the laws differ
-- (D) Only a conviction, not an acquittal, is a bar
+- (C) A new prosecution is allowed because the ordinance and the national law differ
+- (D) Only a conviction, not an acquittal, bars a second prosecution for the act
 
 ### 3. `CIVIO-D1022-GI-0057`  (both, medium, 30 s)
 

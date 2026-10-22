@@ -172,10 +172,10 @@ Fishermen in a coastal village in Antique were at first unhappy when the town de
 
 What does the association's warning suggest?
 
-- (A) Fishing inside the zone is now allowed
+- (A) Fishing inside the protected zone is now allowed again
 - (B) The higher catches depend on continued protection of the zone
-- (C) The catches will always keep rising
-- (D) The sanctuary will soon be closed
+- (C) The catches will keep rising every year no matter what
+- (D) The sanctuary will soon be closed by the association
 
 ### 14. `CIVIO-D1022-VEN-RC-033`  (both, easy, 45 s)
 
@@ -198,9 +198,9 @@ The rural health unit in a mountain town used to give out numbered stubs at seve
 
 What is the main idea of the passage?
 
-- (A) Every patient now has an appointment
-- (B) Mountain towns lack doctors
-- (C) Barangay health workers make home visits
+- (A) Every patient now comes to the clinic with a text-message appointment
+- (B) Mountain towns lack doctors, so patients must travel to the city for care
+- (C) Barangay health workers now make home visits to every older resident
 - (D) Text-message appointments improved the clinic's service, though some residents still need help
 
 ### 16. `CIVIO-D1022-VEN-RC-042`  (both, medium, 70 s)
@@ -289,10 +289,10 @@ A town in Quezon used to issue senior citizen IDs only at the municipal hall, wh
 
 Why were more IDs issued in four months than in all of last year?
 
-- (A) The municipal hall began opening on weekends
+- (A) The municipal hall began opening on weekends for ID applications
 - (B) The team brought the service to residents who had found it hard to travel
-- (C) Every resident had complete documents
-- (D) The town lowered the age for senior citizens
+- (C) Every resident who applied already had complete documents
+- (D) The town lowered the qualifying age for senior citizen IDs
 
 ### 23. `CIVIO-D1022-VEN-RC-063`  (both, easy, 40 s)
 
@@ -342,9 +342,9 @@ Every June, a public elementary school in Samar holds a typhoon drill before the
 As used in the passage, the word "formality" most nearly means
 
 - (A) something done only because it is required
-- (B) a serious emergency
-- (C) a written rule
-- (D) a formal party
+- (B) a serious and dangerous emergency
+- (C) a written rule that schools follow
+- (D) a formal party with guests
 
 ### 27. `CIVIO-D1022-VEN-RC-081`  (both, easy, 45 s)
 
@@ -393,10 +393,10 @@ An alternative learning system (ALS) center in Cebu City holds classes from six 
 
 Which statement best expresses the main idea?
 
-- (A) All adults should finish high school
-- (B) Floods are common in Cebu City
+- (A) All adults should go back to school and finish high school
+- (B) Floods are common in Cebu City during the rainy season
 - (C) An ALS center adapts its classes to the needs of working adults
-- (D) Children learn best with donated toys
+- (D) Children learn best when they play with donated toys
 
 ### 31. `CIVIO-D1022-VEN-RC-092`  (both, medium, 70 s)
 
@@ -432,10 +432,10 @@ Water refilling stations have spread quickly in many towns, offering drinking wa
 
 What is the passage mainly about?
 
-- (A) Why bottled water is expensive
+- (A) Why bottled water costs more than refilled water
 - (B) How refilling stations and customers keep drinking water safe
-- (C) How to start a small business
-- (D) How bacteria grow in water
+- (C) How to start and run a small water business
+- (D) How bacteria grow in water left in open containers
 
 ### 34. `CIVIO-D1022-VEN-RC-102`  (both, medium, 70 s)
 
@@ -471,9 +471,9 @@ A high school in Davao turned a waste problem into an art project. The project b
 
 What is the passage mainly about?
 
-- (A) The history of Davao's coastline
-- (B) How to paint a mural of a coastline
-- (C) Why canteens should close
+- (A) The history of Davao's coastline and how it has changed
+- (B) How students can paint a mural of a coastline
+- (C) Why school canteens should close to reduce waste
 - (D) A school project that turned canteen waste into a mural and a lesson
 
 ### 37. `CIVIO-D1022-VEN-RC-112`  (both, medium, 70 s)
@@ -511,9 +511,9 @@ Tree-planting activities are popular with schools, offices and companies, but fo
 What is the main point of the passage?
 
 - (A) Tree planting succeeds only when seedlings are cared for after planting
-- (B) Companies should stop planting trees
-- (C) Tree planting is popular with schools
-- (D) Native species grow faster than others
+- (B) Companies should stop planting trees and leave it to the office
+- (C) Tree planting is popular with schools and private companies
+- (D) Native species grow faster than trees brought in from abroad
 
 ### 40. `CIVIO-D1022-VEN-RC-122`  (both, medium, 70 s)
 

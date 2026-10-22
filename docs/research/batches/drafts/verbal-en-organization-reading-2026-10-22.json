@@ -3460,7 +3460,7 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "Fishing inside the zone is now allowed"
+     "text": "Fishing inside the protected zone is now allowed again"
     },
     {
      "option_id": "o2",
@@ -3468,11 +3468,11 @@
     },
     {
      "option_id": "o3",
-     "text": "The catches will always keep rising"
+     "text": "The catches will keep rising every year no matter what"
     },
     {
      "option_id": "o4",
-     "text": "The sanctuary will soon be closed"
+     "text": "The sanctuary will soon be closed by the association"
     }
    ],
    "answer_option_id": "o2",
@@ -3594,15 +3594,15 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "Every patient now has an appointment"
+     "text": "Every patient now comes to the clinic with a text-message appointment"
     },
     {
      "option_id": "o2",
-     "text": "Mountain towns lack doctors"
+     "text": "Mountain towns lack doctors, so patients must travel to the city for care"
     },
     {
      "option_id": "o3",
-     "text": "Barangay health workers make home visits"
+     "text": "Barangay health workers now make home visits to every older resident"
     },
     {
      "option_id": "o4",
@@ -4063,7 +4063,7 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "The municipal hall began opening on weekends"
+     "text": "The municipal hall began opening on weekends for ID applications"
     },
     {
      "option_id": "o2",
@@ -4071,11 +4071,11 @@
     },
     {
      "option_id": "o3",
-     "text": "Every resident had complete documents"
+     "text": "Every resident who applied already had complete documents"
     },
     {
      "option_id": "o4",
-     "text": "The town lowered the age for senior citizens"
+     "text": "The town lowered the qualifying age for senior citizen IDs"
     }
    ],
    "answer_option_id": "o2",
@@ -4335,15 +4335,15 @@
     },
     {
      "option_id": "o2",
-     "text": "a serious emergency"
+     "text": "a serious and dangerous emergency"
     },
     {
      "option_id": "o3",
-     "text": "a written rule"
+     "text": "a written rule that schools follow"
     },
     {
      "option_id": "o4",
-     "text": "a formal party"
+     "text": "a formal party with guests"
     }
    ],
    "answer_option_id": "o1",
@@ -4599,11 +4599,11 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "All adults should finish high school"
+     "text": "All adults should go back to school and finish high school"
     },
     {
      "option_id": "o2",
-     "text": "Floods are common in Cebu City"
+     "text": "Floods are common in Cebu City during the rainy season"
     },
     {
      "option_id": "o3",
@@ -4611,7 +4611,7 @@
     },
     {
      "option_id": "o4",
-     "text": "Children learn best with donated toys"
+     "text": "Children learn best when they play with donated toys"
     }
    ],
    "answer_option_id": "o3",
@@ -4800,7 +4800,7 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "Why bottled water is expensive"
+     "text": "Why bottled water costs more than refilled water"
     },
     {
      "option_id": "o2",
@@ -4808,11 +4808,11 @@
     },
     {
      "option_id": "o3",
-     "text": "How to start a small business"
+     "text": "How to start and run a small water business"
     },
     {
      "option_id": "o4",
-     "text": "How bacteria grow in water"
+     "text": "How bacteria grow in water left in open containers"
     }
    ],
    "answer_option_id": "o2",
@@ -5001,15 +5001,15 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "The history of Davao's coastline"
+     "text": "The history of Davao's coastline and how it has changed"
     },
     {
      "option_id": "o2",
-     "text": "How to paint a mural of a coastline"
+     "text": "How students can paint a mural of a coastline"
     },
     {
      "option_id": "o3",
-     "text": "Why canteens should close"
+     "text": "Why school canteens should close to reduce waste"
     },
     {
      "option_id": "o4",
@@ -5206,15 +5206,15 @@
     },
     {
      "option_id": "o2",
-     "text": "Companies should stop planting trees"
+     "text": "Companies should stop planting trees and leave it to the office"
     },
     {
      "option_id": "o3",
-     "text": "Tree planting is popular with schools"
+     "text": "Tree planting is popular with schools and private companies"
     },
     {
      "option_id": "o4",
-     "text": "Native species grow faster than others"
+     "text": "Native species grow faster than trees brought in from abroad"
     }
    ],
    "answer_option_id": "o1",
@@ -5403,7 +5403,7 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "The midwife's health program"
+     "text": "The midwife's health program for mothers in the barangay"
     },
     {
      "option_id": "o2",
@@ -5411,11 +5411,11 @@
     },
     {
      "option_id": "o3",
-     "text": "How to build a generator"
+     "text": "How volunteers can build a generator for a radio station"
     },
     {
      "option_id": "o4",
-     "text": "Weak phone signals in the Philippines"
+     "text": "Weak phone signals in remote parts of the Philippines"
     }
    ],
    "answer_option_id": "o2",
@@ -6010,15 +6010,15 @@
     },
     {
      "option_id": "o2",
-     "text": "Why older patients dislike hospitals"
+     "text": "Why older patients dislike going to hospitals"
     },
     {
      "option_id": "o3",
-     "text": "Why English labels should be banned"
+     "text": "Why medicine labels in English should be banned"
     },
     {
      "option_id": "o4",
-     "text": "How nurses read prescriptions"
+     "text": "How nurses read and check doctors' prescriptions"
     }
    ],
    "answer_option_id": "o1",
@@ -6073,15 +6073,15 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "Patients prefer written labels"
+     "text": "Patients prefer written labels to pictures"
     },
     {
      "option_id": "o2",
-     "text": "The law forbids picture labels"
+     "text": "The law forbids medicines with picture labels"
     },
     {
      "option_id": "o3",
-     "text": "The pictures are often wrong"
+     "text": "The pictures often show the wrong dose"
     },
     {
      "option_id": "o4",
@@ -6546,15 +6546,15 @@
     },
     {
      "option_id": "o2",
-     "text": "walked slowly"
+     "text": "walked slowly and quietly"
     },
     {
      "option_id": "o3",
-     "text": "were removed"
+     "text": "were removed from the forms"
     },
     {
      "option_id": "o4",
-     "text": "were counted"
+     "text": "were counted one by one"
     }
    ],
    "answer_option_id": "o1",

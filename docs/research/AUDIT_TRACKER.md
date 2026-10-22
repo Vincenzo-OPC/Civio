@@ -434,3 +434,23 @@ Script: `scripts/batches/fixes/baseline_ven_num_metadata_2026_10_22.py`.
 - **Fix:** `retired_count` is in the submit response and on the scorecard, with plain wording: not wrong, not skipped, and out of how many items the score is.
 - **Tests:** `tests/Js/progress-save.test.ts` (5 resume cases), `tests/Js/answer-state.test.ts` (wording), `ExamDeadlineTest` (`retired_count` in the response).
 - **Scenario status:** the reload and resume scenarios (5 and 6) are now covered by unit tests of the merge. Not yet checked end to end in a real browser.
+## Queue P2-P4 recommendations (2026-10-22, 3:50 PM)
+
+- **Environment:** `npm ci` restored `node_modules`; the full `php artisan test` passes on sqlite in memory (`phpunit.xml`). The earlier hang came from the missing Vite build after the box reset, not from the database.
+- **Evidence pass:** `scripts/batches/qa/queue_evidence_2026_10_22.py` → `review/queue-evidence-2026-10-22.json`. For each of the 681 P2-P4 rows it records how the key was checked:
+  - 332 recomputed by a solver
+  - 87 GI rows matched to a lawphil quote or the evidence sheet
+  - 1 numerical row matched to the evidence sheet
+  - 261 judgment items
+- **Reading:** all 122 Filipino rows, the 8 non-D1022 Verbal EN rows, every flagged row and every row with a review note were read in full in this pass. The 139 D1022 judgment items (106 Verbal EN, 33 Analytical) were checked by their author (the bank worker) in the earlier content-QA pass; the CSV says so and asks for a human read.
+- **Defect repaired:** in 37 D1022 drafts (26 GI, 11 Verbal EN) the key was conspicuously the longest option, a test-wise giveaway. 108 wrong options were lengthened: same wrong idea, why_wrong unchanged (`drafts/distractor_length_2026_10_22.py`, applied in the build). Manifest hashes were refreshed.
+- **Recommendations:** `review/queue-recommendations-2026-10-22.csv` covers all 723 pending rows (P1 42, P2 78, P3 288, P4 315):
+  - 707 Accept
+  - 4 Accept revision
+  - 12 Escalate: Filipino reading passages of about 30-55 words, pending GT's decision on a Filipino passage floor
+  - 0 Revise, 0 Reject
+  Recommendations only. `decision_by_human` is empty, no status changed and nothing approved.
+- **Watch items (no action):**
+  - VFIL-KASALUNGAT uses a recurring "medyo/bahagyang" partial-change distractor pattern.
+  - 20 Numerical series rows share wording frames; the rules differ, so they are distinct items.
+- **Tests:** `test_bank_gates_2026_10_22.py` now has 9 tests. New: no D1022 key is conspicuously longest; the recommendations cover exactly the pending rows and never record a decision.

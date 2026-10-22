@@ -29,10 +29,10 @@ In a remote island barangay in Palawan, mobile phone signals are weak and intern
 
 What is the passage mainly about?
 
-- (A) The midwife's health program
+- (A) The midwife's health program for mothers in the barangay
 - (B) A volunteer radio station that keeps an isolated barangay informed
-- (C) How to build a generator
-- (D) Weak phone signals in the Philippines
+- (C) How volunteers can build a generator for a radio station
+- (D) Weak phone signals in remote parts of the Philippines
 
 ### 3. `CIVIO-D1022-VEN-RC-132`  (both, medium, 70 s)
 
@@ -147,9 +147,9 @@ Pharmacists in a provincial hospital noticed that many patients, especially olde
 What is the passage mainly about?
 
 - (A) How picture labels helped patients take medicines correctly
-- (B) Why older patients dislike hospitals
-- (C) Why English labels should be banned
-- (D) How nurses read prescriptions
+- (B) Why older patients dislike going to hospitals
+- (C) Why medicine labels in English should be banned
+- (D) How nurses read and check doctors' prescriptions
 
 ### 12. `CIVIO-D1022-VEN-RC-162`  (both, medium, 70 s)
 
@@ -159,9 +159,9 @@ Pharmacists in a provincial hospital noticed that many patients, especially olde
 
 Why does the pharmacy still print written instructions?
 
-- (A) Patients prefer written labels
-- (B) The law forbids picture labels
-- (C) The pictures are often wrong
+- (A) Patients prefer written labels to pictures
+- (B) The law forbids medicines with picture labels
+- (C) The pictures often show the wrong dose
 - (D) Health workers need exact details the pictures do not give
 
 ### 13. `CIVIO-D1022-VEN-RC-163`  (both, easy, 40 s)
@@ -251,9 +251,9 @@ A regional office noticed that clients often had to fill out the same personal d
 As used in the passage, the phrase "crept in" most nearly means
 
 - (A) appeared gradually without being noticed
-- (B) walked slowly
-- (C) were removed
-- (D) were counted
+- (B) walked slowly and quietly
+- (C) were removed from the forms
+- (D) were counted one by one
 
 ### 20. `CIVIO-D1022-VEN-RC2-011`  (both, medium, 60 s)
 
@@ -342,9 +342,9 @@ When food prices rose sharply one year, a public elementary school in Leyte turn
 Which statement best expresses the main idea of the passage?
 
 - (A) A school garden became both a food source and a way to teach regular lessons
-- (B) Food prices in Leyte rose sharply one year
-- (C) Pupils with compost plots always harvest more
-- (D) Parents should decide what schools teach
+- (B) Food prices in Leyte rose so sharply one year that families went hungry
+- (C) Pupils with compost plots always harvest more than pupils without compost
+- (D) Parents, not teachers, should decide what the school teaches its pupils
 
 ---
 

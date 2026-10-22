@@ -40,9 +40,9 @@ A department head wants to suspend a records officer because they disagree on of
 An agency wants to fill a rank-and-file clerk position. Under the Constitution, on what basis must the appointment be made?
 
 - (A) Merit and fitness, determined as far as practicable by competitive examination
-- (B) Recommendation of the local congressman
-- (C) Length of residence in the province
-- (D) Seniority in age among the applicants
+- (B) Recommendation of the local congressman or another elected official
+- (C) Length of residence in the province where the office is located
+- (D) Seniority in age, so that the oldest qualified applicant is chosen
 
 ### 5. `CIVIO-D1022-GI-0005`  (both, medium, 35 s)
 
@@ -57,19 +57,19 @@ A candidate lost the mayoral election held in May. In July of the same year he i
 
 A sitting city councilor is offered a concurrent designation as head of a national agency's regional office. What does the Constitution say?
 
-- (A) He may accept if the city council approves
+- (A) He may accept if the city council approves the designation by resolution
 - (B) An elective official is not eligible for appointment to any public office during his tenure
-- (C) He may accept if he serves without pay
-- (D) He may accept because the post is in a different branch
+- (C) He may accept if he serves in the national post without any pay
+- (D) He may accept because the national post belongs to a different branch
 
 ### 7. `CIVIO-D1022-GI-0007`  (both, medium, 35 s)
 
 A provincial engineer is offered a second monthly allowance from another agency for the same work, with no law authorizing it. What applies?
 
-- (A) He may receive it as long as he declares it in his SALN
+- (A) He may receive it as long as he declares the extra allowance in his SALN every year
 - (B) He may not receive additional, double, or indirect compensation unless a law specifically authorizes it
-- (C) He may receive it if it is paid by a GOCC
-- (D) He may receive it if his head of office signs off
+- (C) He may receive it if the second allowance is paid by a government-owned corporation
+- (D) He may receive it if his head of office approves the second allowance in writing
 
 ### 8. `CIVIO-D1022-GI-0008`  (both, medium, 35 s)
 
@@ -111,10 +111,10 @@ A mayor holds lavish birthday parties every month at public expense. Which duty 
 
 Citizens want to remove a bureau director for graft. Under the Constitution, may he be removed by impeachment?
 
-- (A) No; graft is not a ground for any removal
-- (B) Yes; all public officers are impeachable
+- (A) No; graft is not a ground for removing any public officer at all
+- (B) Yes; every public officer, including a bureau director, is impeachable
 - (C) No; officers not listed in Sec. 2 are removed as provided by law, not by impeachment
-- (D) Yes, but only by the Senate acting alone
+- (D) Yes, but only by the Senate acting alone, without the House
 
 ### 13. `CIVIO-D1022-GI-0013`  (both, medium, 35 s)
 
@@ -129,10 +129,10 @@ A resident sends the Ombudsman a handwritten complaint against a barangay treasu
 
 News reports suggest that a district office is wasting supplies, but no one has filed a complaint. May the Office of the Ombudsman investigate?
 
-- (A) No; only the Commission on Audit may look into supplies
-- (B) Yes, but only if the President orders it
+- (A) No; only the Commission on Audit may look into the use of office supplies
+- (B) Yes, but only if the President first orders the Ombudsman to investigate
 - (C) Yes; it may investigate on its own any act that appears illegal, unjust, improper, or inefficient
-- (D) No; it can act only on a sworn complaint
+- (D) No; the Ombudsman can act only after someone files a sworn complaint
 
 ### 15. `CIVIO-D1022-GI-0015`  (both, medium, 35 s)
 
@@ -147,19 +147,19 @@ An Ombudsman finishes a seven-year term and wants to run for senator in the very
 
 A Cabinet secretary is asked to sit as a paid consultant of a private company that holds a government franchise. What does the Constitution say?
 
-- (A) He may accept with the approval of the Senate
-- (B) He may accept if the job is part-time
-- (C) He may accept if he resigns from the company after one year
+- (A) He may accept if the Senate approves his consultancy with the company
+- (B) He may accept if the consultancy is only part-time and done after office hours
+- (C) He may accept if he resigns from the company after one year of service
 - (D) He may not be financially interested in any franchise or special privilege granted by the Government
 
 ### 17. `CIVIO-D1022-GI-0017`  (both, medium, 35 s)
 
 The President wants to appoint her first cousin as a member of the Civil Service Commission. Under Art. VII, Sec. 13, what is the rule?
 
-- (A) It is allowed because the CSC is independent
-- (B) Only relatives within the second civil degree are barred
+- (A) It is allowed because the Civil Service Commission is an independent constitutional body
+- (B) Only relatives within the second civil degree are barred, so a first cousin may be appointed
 - (C) Relatives within the fourth civil degree of the President may not be appointed to the Constitutional Commissions during his or her tenure
-- (D) It is allowed if the Commission on Appointments consents
+- (D) It is allowed if the Commission on Appointments gives its consent to the appointment
 
 ### 18. `CIVIO-D1022-GI-0018`  (both, medium, 35 s)
 
@@ -174,18 +174,18 @@ A vice mayor has served three consecutive full terms and wants to run again for 
 
 A governor resigned halfway through his second term to avoid the term limit, then ran again. How does the Constitution treat the resignation?
 
-- (A) Resignation resets the count to zero
-- (B) Resignation is allowed only once in a career
-- (C) Resignation counts as one-half of a term
+- (A) Resignation resets his count of consecutive terms to zero
+- (B) Resignation is allowed only once in an official's whole career
+- (C) Resignation makes the unfinished term count as one-half of a term
 - (D) Voluntary renunciation is not an interruption of the continuity of service
 
 ### 20. `CIVIO-D1022-GI-0020`  (both, medium, 35 s)
 
 A city wants to issue official memoranda in Filipino. Which provision supports it?
 
-- (A) Spanish and Arabic are the official languages
-- (B) English is the only language of government
-- (C) Regional languages are the national languages
+- (A) Spanish and Arabic are the official languages of government communication
+- (B) English is the only language that may be used for official government business
+- (C) Regional languages are the national languages and must be used in memoranda
 - (D) The Government shall take steps to use Filipino as a medium of official communication
 
 ### 21. `CIVIO-D1022-GI-0021`  (both, medium, 35 s)
@@ -201,10 +201,10 @@ A teacher in Cebu uses Cebuano to explain lessons along with Filipino and Englis
 
 Police invite a vendor to the station as a suspect in a theft and begin asking questions without telling him anything about his rights. Which right is being ignored?
 
-- (A) The right to travel
+- (A) The right to travel, which may be limited only for security, safety or health
 - (B) The right to be informed of his right to remain silent and to have competent and independent counsel
-- (C) The right against double jeopardy
-- (D) The right to bail
+- (C) The right against double jeopardy, which bars a second trial for the same offense
+- (D) The right to bail, which lets an accused stay free while the case is pending
 
 ### 23. `CIVIO-D1022-GI-0037`  (both, medium, 30 s)
 
@@ -220,9 +220,9 @@ A suspect under investigation says he cannot pay a lawyer. What does the Constit
 An investigator tells a detainee to sign a paper waiving his right to counsel, with no lawyer present. Is the waiver valid?
 
 - (A) No; these rights can be waived only in writing and in the presence of counsel
-- (B) Yes, if the detainee is an adult
-- (C) Yes, because it is in writing
-- (D) Yes, if two police officers witness it
+- (B) Yes, because any adult detainee may freely give up his own rights
+- (C) Yes, because the waiver is in writing and signed by the detainee
+- (D) Yes, as long as two police officers sign the waiver as witnesses
 
 ### 25. `CIVIO-D1022-GI-0039`  (both, medium, 30 s)
 
@@ -246,19 +246,19 @@ A detainee is held in an unlisted room with no contact with family or counsel. W
 
 Officers want to search a house. A judge signs the warrant after reading the police report but without examining anyone under oath. What is wrong?
 
-- (A) The warrant needs the approval of the prosecutor
-- (B) A warrant is not needed for any house search
+- (A) The warrant also needs the written approval of the city or provincial prosecutor before it is served
+- (B) Nothing, because a warrant is not needed for any house search in the first place
 - (C) Probable cause must be determined personally by the judge after examining the complainant and witnesses under oath
-- (D) The warrant must be signed by the barangay captain
+- (D) The warrant must also be signed by the barangay captain of the place to be searched
 
 ### 28. `CIVIO-D1022-GI-0042`  (both, medium, 30 s)
 
 A warrant says only "search for illegal items" at "a house in Barangay Malinis." What constitutional defect does it have?
 
-- (A) It lacks the seal of the Ombudsman
+- (A) It lacks the seal and signature of the Office of the Ombudsman
 - (B) It does not particularly describe the place to be searched and the things to be seized
-- (C) It was not signed by the mayor
-- (D) It was not served at night
+- (C) It was not signed by the mayor of the town where the house is
+- (D) It was not served at night, when the occupants would be at home
 
 ### 29. `CIVIO-D1022-GI-0043`  (both, medium, 30 s)
 
@@ -273,37 +273,37 @@ Evidence was obtained by opening a person's private letters with no court order.
 
 Market vendors hold a peaceful rally outside city hall to ask for lower stall fees. Which right protects them most directly?
 
-- (A) The right to just compensation
-- (B) The right to bail
+- (A) The right to just compensation when private property is taken for public use
+- (B) The right to bail, which lets an accused stay free while the case is pending
 - (C) The right to peaceably assemble and petition the government for redress of grievances
-- (D) The liberty of abode
+- (D) The liberty of abode and of changing it within the limits of law
 
 ### 31. `CIVIO-D1022-GI-0045`  (both, medium, 30 s)
 
 A town ordinance would require applicants for a business permit to state their religion and belong to a named church. What does the Constitution say?
 
 - (A) No religious test shall be required for the exercise of civil or political rights
-- (B) It is valid if most residents share the religion
-- (C) It is valid for business permits only
-- (D) It is valid if the church donates to the town
+- (B) It is valid if most residents of the town share the same religion
+- (C) It is valid because it applies to business permits only
+- (D) It is valid if the named church donates to the town treasury
 
 ### 32. `CIVIO-D1022-GI-0046`  (both, medium, 30 s)
 
 A barangay captain orders a resident to move out of his rented house in the barangay, with no court order. Which right is affected?
 
-- (A) Freedom from self-incrimination
-- (B) The right to a speedy trial
+- (A) Freedom from self-incrimination in any criminal investigation
+- (B) The right to a speedy, impartial and public trial
 - (C) The liberty of abode, which may be impaired only upon lawful order of the court
-- (D) The right to information
+- (D) The right to information on matters of public concern
 
 ### 33. `CIVIO-D1022-GI-0047`  (both, medium, 30 s)
 
 During an outbreak, a law lets health officials restrict travel to a quarantined island. Is a travel restriction possible under the Constitution?
 
 - (A) Yes, in the interest of national security, public safety, or public health, as provided by law
-- (B) Yes, but only during martial law
-- (C) Yes, but only by a barangay resolution
-- (D) No; the right to travel can never be restricted
+- (B) Yes, but only while martial law is in force in that province
+- (C) Yes, but only through a resolution passed by the barangay council
+- (D) No; the right to travel can never be restricted for any reason
 
 ### 34. `CIVIO-D1022-GI-0048`  (both, medium, 30 s)
 
@@ -318,9 +318,9 @@ A province takes part of a farmer's lot to widen a road. What must the province 
 
 A poor fisherman wants to sue but is told he cannot because he has no money for a lawyer. What does the Constitution say?
 
-- (A) He must first pay a bond equal to the claim
-- (B) He may sue only in the barangay
-- (C) Only people with property may sue
+- (A) He must first pay a bond equal to the amount he is claiming in court
+- (B) He may bring his case only before the barangay, not the courts
+- (C) Only people who own property may file a case in the courts
 - (D) Free access to the courts and adequate legal assistance shall not be denied by reason of poverty
 
 ### 36. `CIVIO-D1022-GI-0050`  (both, medium, 30 s)
@@ -336,37 +336,37 @@ A person accused of a minor offense is told he cannot be released because bail w
 
 The writ of habeas corpus is suspended in a province because of a rebellion. Does the right to bail disappear there?
 
-- (A) Yes, for 60 days
+- (A) Yes, the right to bail is suspended there for 60 days
 - (B) No; the right to bail is not impaired even when the privilege of the writ is suspended
-- (C) Yes; bail is suspended along with the writ
-- (D) Only the Supreme Court can grant bail then
+- (C) Yes; the right to bail is suspended along with the writ
+- (D) Only the Supreme Court can grant bail while the writ is suspended
 
 ### 38. `CIVIO-D1022-GI-0052`  (both, medium, 30 s)
 
 A radio host says an accused should be treated as guilty because he was arrested. What principle does this ignore?
 
 - (A) The accused shall be presumed innocent until the contrary is proved
-- (B) Non-impairment of contracts
-- (C) The right to just compensation
-- (D) The liberty of abode
+- (B) No law shall impair the obligation of contracts
+- (C) Private property shall not be taken without just compensation
+- (D) The liberty of abode shall not be impaired except by court order
 
 ### 39. `CIVIO-D1022-GI-0053`  (both, medium, 30 s)
 
 In a criminal trial, the prosecutor insists that the accused take the stand and testify against himself. What right protects the accused?
 
-- (A) The right to travel
+- (A) The right to travel within and outside the country
 - (B) No person shall be compelled to be a witness against himself
-- (C) Freedom of the press
-- (D) The right to information
+- (C) Freedom of the press to report on the trial
+- (D) The right to information on matters of public concern
 
 ### 40. `CIVIO-D1022-GI-0054`  (both, medium, 30 s)
 
 A volunteer is held by authorities only because she belongs to a lawful opposition party. What does the Constitution say?
 
-- (A) She may be held if the barangay approves
+- (A) She may be held if the barangay council approves her detention
 - (B) No person shall be detained solely by reason of political beliefs and aspirations
-- (C) She may be held if her party lost the election
-- (D) She may be held for up to 36 hours
+- (C) She may be held if her party lost the most recent election
+- (D) She may be held for up to 36 hours without any charge
 
 ---
 

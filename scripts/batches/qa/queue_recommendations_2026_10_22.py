@@ -15,6 +15,51 @@ NOTE = {  # P1 rows with something a human reviewer should look at beyond the ke
 }
 
 
+EV = "docs/research/review/queue-evidence-2026-10-22.json"
+SELF = "Authored by the bank worker (22 Oct drafts); the author's content QA is not independent, so a human read is still required."
+HOW = {"recipe solver": "key recomputed from the stem by the item's recipe (drafts/solver_2026_10_22.py)",
+       "bank solver": "key recomputed from the stem by the qa.py domain solver",
+       "evidence sheet": "key matches the hand-checked evidence sheet (audit/verified_keys or gi_legacy_evidence, verbatim lawphil quote)",
+       "lawphil evidence": "key matches the verbatim source quote checked against the committed lawphil text"}
+
+
+def p2_p4(m, cache):
+    """P2-P4: evidence from queue_evidence_2026_10_22.py plus the reviewer's reading notes below."""
+    import distractor_length_2026_10_22 as DL
+    out = []
+    for e in json.load(open(EV, encoding="utf-8")):
+        f = e["source_file"]
+        if f not in cache:
+            d = json.load(open(f, encoding="utf-8")); cache[f] = {i["id"]: i for i in (d["items"] if isinstance(d, dict) else d) if isinstance(i, dict)}
+        it = cache[f][e["id"]]
+        arch, d1022 = it.get("archetype", ""), "D1022" in e["id"]
+        notes = []
+        if e["key_check"] in HOW:
+            notes.append(HOW[e["key_check"]])
+        elif d1022:
+            notes.append("judgment item: checked by its author in the 22 Oct content QA pass (passage support, one defensible answer); not re-read in this pass")
+        else:
+            notes.append("judgment item: stem, key and all three wrong options read in this pass; one defensible answer")
+        rec = "Accept"
+        if e["id"] in DL.LONGER:
+            notes.append("repaired 22 Oct pm: key was conspicuously the longest option; wrong options lengthened (same wrong idea, why_wrong unchanged)")
+        if any("stem frame" in x for x in e["flags"]) or "stem frame shared" in e.get("review_notes", ""):
+            notes.append("shares a wording frame with other rows, but the numbers and the rule differ, so it is a distinct item; keep an eye on bank variety")
+        if arch == "VFIL-KASALUNGAT":
+            notes.append("antonym in context checked; the 'medyo/bahagyang' partial-change option recurs across this set and is a known pattern a test-wise reader may learn")
+        fw = len(it["stem"].rpartition("\n\n")[0].split("\n", 1)[-1].split()) if arch == "VFIL-PAGBASA" else None
+        if fw is not None and fw < 150:
+            rec = "Escalate"
+            notes.append(f"content and key correct, but the passage is about {fw} words; whether Filipino passages need the 150-word floor is an open GT decision")
+        if any("absolute word" in x for x in e["flags"]):
+            notes.append("absolute word in the key checked against the text: supported")
+        if d1022:
+            notes.append(SELF)
+        out.append({"id": e["id"], "priority": e["priority"], "status": e["status"], "recommendation": rec, "reason": " | ".join(notes),
+                    "checked": "evidence pass (queue_evidence_2026_10_22.py) + reading", "decision_by_human": ""})
+    return out
+
+
 def main():
     m = json.load(open(MAN, encoding="utf-8"))
     rows, cache = [], {}
@@ -35,10 +80,12 @@ def main():
             rec, why = NOTE.get(it["id"][-6:], ("Accept", f"Key '{key}' re-solved by hand without a calculator (see method-first -R1 proposal); stem clear, one defensible answer."))
         rows.append({"id": r["id"], "priority": "P1", "status": r["status"], "recommendation": rec, "reason": why,
                      "checked": "key re-solved by hand; stem read for ambiguity; distractor explanations read", "decision_by_human": ""})
+    rows += p2_p4(m, cache)
     Path(OUT).parent.mkdir(parents=True, exist_ok=True)
     with open(OUT, "w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=list(rows[0])); w.writeheader(); w.writerows(rows)
-    print(len(rows), "P1 recommendations;", sum(r["recommendation"].startswith("Accept") for r in rows), "accept-type")
+    import collections
+    print(len(rows), "recommendations", dict(collections.Counter((r["priority"], r["recommendation"]) for r in rows)))
 
 
 if __name__ == "__main__":

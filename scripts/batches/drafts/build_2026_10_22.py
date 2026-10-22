@@ -91,6 +91,7 @@ FILES = {
 
 
 def main():
+    import distractor_length_2026_10_22 as _DL
     OUT.mkdir(parents=True, exist_ok=True)
     allnew, report = [], {}
     for fn, (dom, f) in FILES.items():
@@ -99,6 +100,7 @@ def main():
             assert it["domain"] == dom and it["status"] == "draft" and it["review_status"] == "unreviewed", it["id"]
             if dom == "numerical":
                 it["reveal"]["method_steps"] = method8(it)
+            _DL.apply(it)  # queue review 22 Oct pm: wrong options lengthened where the key was conspicuously longest
             errs = qa.check_item(it)
             assert not errs, (it["id"], errs)
             assert words(it) >= 50, (it["id"], words(it))

@@ -54,6 +54,31 @@ def test_p1_revisions_are_drafts_with_history_and_verified_keys():
         assert "method_steps" in it["reveal"]
 
 
+def test_no_d1022_key_is_conspicuously_longest():
+    m = json.load(open(MAN)); cache, bad = {}, []
+    for r in m["items"]:
+        if "D1022" not in r["id"]:
+            continue
+        f = r["source_file"]
+        if f not in cache:
+            cache[f] = {i["id"]: i for i in json.load(open(f))["items"]}
+        it = cache[f][r["id"]]
+        o = {x["option_id"]: x["text"] for x in it["options"]}
+        k = o[it["answer_option_id"]]
+        if len(k) > 30 and len(k) > 1.6 * max(len(t) for i2, t in o.items() if i2 != it["answer_option_id"]):
+            bad.append(r["id"])
+    assert not bad, bad
+
+
+def test_recommendations_cover_queue_and_never_approve():
+    import csv
+    rows = list(csv.DictReader(open("docs/research/review/queue-recommendations-2026-10-22.csv")))
+    m = json.load(open(MAN))
+    pending = {r["id"] for r in m["items"] if r["status"] != "approved"}
+    assert {r["id"] for r in rows} == pending
+    assert all(r["decision_by_human"] == "" and r["recommendation"] in ("Accept", "Accept revision", "Revise", "Reject", "Escalate") for r in rows)
+
+
 def test_count_is_2100():
     m = json.load(open(MAN))
     assert len(m["items"]) == 2100 and len({r["id"] for r in m["items"]}) == 2100

@@ -217,15 +217,15 @@
     },
     {
      "option_id": "o2",
-     "text": "Recommendation of the local congressman"
+     "text": "Recommendation of the local congressman or another elected official"
     },
     {
      "option_id": "o3",
-     "text": "Length of residence in the province"
+     "text": "Length of residence in the province where the office is located"
     },
     {
      "option_id": "o4",
-     "text": "Seniority in age among the applicants"
+     "text": "Seniority in age, so that the oldest qualified applicant is chosen"
     }
    ],
    "answer_option_id": "o1",
@@ -341,7 +341,7 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "He may accept if the city council approves"
+     "text": "He may accept if the city council approves the designation by resolution"
     },
     {
      "option_id": "o2",
@@ -349,11 +349,11 @@
     },
     {
      "option_id": "o3",
-     "text": "He may accept if he serves without pay"
+     "text": "He may accept if he serves in the national post without any pay"
     },
     {
      "option_id": "o4",
-     "text": "He may accept because the post is in a different branch"
+     "text": "He may accept because the national post belongs to a different branch"
     }
    ],
    "answer_option_id": "o2",
@@ -405,7 +405,7 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "He may receive it as long as he declares it in his SALN"
+     "text": "He may receive it as long as he declares the extra allowance in his SALN every year"
     },
     {
      "option_id": "o2",
@@ -413,11 +413,11 @@
     },
     {
      "option_id": "o3",
-     "text": "He may receive it if it is paid by a GOCC"
+     "text": "He may receive it if the second allowance is paid by a government-owned corporation"
     },
     {
      "option_id": "o4",
-     "text": "He may receive it if his head of office signs off"
+     "text": "He may receive it if his head of office approves the second allowance in writing"
     }
    ],
    "answer_option_id": "o2",
@@ -725,11 +725,11 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "No; graft is not a ground for any removal"
+     "text": "No; graft is not a ground for removing any public officer at all"
     },
     {
      "option_id": "o2",
-     "text": "Yes; all public officers are impeachable"
+     "text": "Yes; every public officer, including a bureau director, is impeachable"
     },
     {
      "option_id": "o3",
@@ -737,7 +737,7 @@
     },
     {
      "option_id": "o4",
-     "text": "Yes, but only by the Senate acting alone"
+     "text": "Yes, but only by the Senate acting alone, without the House"
     }
    ],
    "answer_option_id": "o3",
@@ -853,11 +853,11 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "No; only the Commission on Audit may look into supplies"
+     "text": "No; only the Commission on Audit may look into the use of office supplies"
     },
     {
      "option_id": "o2",
-     "text": "Yes, but only if the President orders it"
+     "text": "Yes, but only if the President first orders the Ombudsman to investigate"
     },
     {
      "option_id": "o3",
@@ -865,7 +865,7 @@
     },
     {
      "option_id": "o4",
-     "text": "No; it can act only on a sworn complaint"
+     "text": "No; the Ombudsman can act only after someone files a sworn complaint"
     }
    ],
    "answer_option_id": "o3",
@@ -981,15 +981,15 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "He may accept with the approval of the Senate"
+     "text": "He may accept if the Senate approves his consultancy with the company"
     },
     {
      "option_id": "o2",
-     "text": "He may accept if the job is part-time"
+     "text": "He may accept if the consultancy is only part-time and done after office hours"
     },
     {
      "option_id": "o3",
-     "text": "He may accept if he resigns from the company after one year"
+     "text": "He may accept if he resigns from the company after one year of service"
     },
     {
      "option_id": "o4",
@@ -1045,11 +1045,11 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "It is allowed because the CSC is independent"
+     "text": "It is allowed because the Civil Service Commission is an independent constitutional body"
     },
     {
      "option_id": "o2",
-     "text": "Only relatives within the second civil degree are barred"
+     "text": "Only relatives within the second civil degree are barred, so a first cousin may be appointed"
     },
     {
      "option_id": "o3",
@@ -1057,7 +1057,7 @@
     },
     {
      "option_id": "o4",
-     "text": "It is allowed if the Commission on Appointments consents"
+     "text": "It is allowed if the Commission on Appointments gives its consent to the appointment"
     }
    ],
    "answer_option_id": "o3",
@@ -1173,15 +1173,15 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "Resignation resets the count to zero"
+     "text": "Resignation resets his count of consecutive terms to zero"
     },
     {
      "option_id": "o2",
-     "text": "Resignation is allowed only once in a career"
+     "text": "Resignation is allowed only once in an official's whole career"
     },
     {
      "option_id": "o3",
-     "text": "Resignation counts as one-half of a term"
+     "text": "Resignation makes the unfinished term count as one-half of a term"
     },
     {
      "option_id": "o4",
@@ -1237,15 +1237,15 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "Spanish and Arabic are the official languages"
+     "text": "Spanish and Arabic are the official languages of government communication"
     },
     {
      "option_id": "o2",
-     "text": "English is the only language of government"
+     "text": "English is the only language that may be used for official government business"
     },
     {
      "option_id": "o3",
-     "text": "Regional languages are the national languages"
+     "text": "Regional languages are the national languages and must be used in memoranda"
     },
     {
      "option_id": "o4",
@@ -2261,7 +2261,7 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "The right to travel"
+     "text": "The right to travel, which may be limited only for security, safety or health"
     },
     {
      "option_id": "o2",
@@ -2269,11 +2269,11 @@
     },
     {
      "option_id": "o3",
-     "text": "The right against double jeopardy"
+     "text": "The right against double jeopardy, which bars a second trial for the same offense"
     },
     {
      "option_id": "o4",
-     "text": "The right to bail"
+     "text": "The right to bail, which lets an accused stay free while the case is pending"
     }
    ],
    "answer_option_id": "o2",
@@ -2393,15 +2393,15 @@
     },
     {
      "option_id": "o2",
-     "text": "Yes, if the detainee is an adult"
+     "text": "Yes, because any adult detainee may freely give up his own rights"
     },
     {
      "option_id": "o3",
-     "text": "Yes, because it is in writing"
+     "text": "Yes, because the waiver is in writing and signed by the detainee"
     },
     {
      "option_id": "o4",
-     "text": "Yes, if two police officers witness it"
+     "text": "Yes, as long as two police officers sign the waiver as witnesses"
     }
    ],
    "answer_option_id": "o1",
@@ -2581,11 +2581,11 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "The warrant needs the approval of the prosecutor"
+     "text": "The warrant also needs the written approval of the city or provincial prosecutor before it is served"
     },
     {
      "option_id": "o2",
-     "text": "A warrant is not needed for any house search"
+     "text": "Nothing, because a warrant is not needed for any house search in the first place"
     },
     {
      "option_id": "o3",
@@ -2593,7 +2593,7 @@
     },
     {
      "option_id": "o4",
-     "text": "The warrant must be signed by the barangay captain"
+     "text": "The warrant must also be signed by the barangay captain of the place to be searched"
     }
    ],
    "answer_option_id": "o3",
@@ -2645,7 +2645,7 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "It lacks the seal of the Ombudsman"
+     "text": "It lacks the seal and signature of the Office of the Ombudsman"
     },
     {
      "option_id": "o2",
@@ -2653,11 +2653,11 @@
     },
     {
      "option_id": "o3",
-     "text": "It was not signed by the mayor"
+     "text": "It was not signed by the mayor of the town where the house is"
     },
     {
      "option_id": "o4",
-     "text": "It was not served at night"
+     "text": "It was not served at night, when the occupants would be at home"
     }
    ],
    "answer_option_id": "o2",
@@ -2773,11 +2773,11 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "The right to just compensation"
+     "text": "The right to just compensation when private property is taken for public use"
     },
     {
      "option_id": "o2",
-     "text": "The right to bail"
+     "text": "The right to bail, which lets an accused stay free while the case is pending"
     },
     {
      "option_id": "o3",
@@ -2785,7 +2785,7 @@
     },
     {
      "option_id": "o4",
-     "text": "The liberty of abode"
+     "text": "The liberty of abode and of changing it within the limits of law"
     }
    ],
    "answer_option_id": "o3",
@@ -2841,15 +2841,15 @@
     },
     {
      "option_id": "o2",
-     "text": "It is valid if most residents share the religion"
+     "text": "It is valid if most residents of the town share the same religion"
     },
     {
      "option_id": "o3",
-     "text": "It is valid for business permits only"
+     "text": "It is valid because it applies to business permits only"
     },
     {
      "option_id": "o4",
-     "text": "It is valid if the church donates to the town"
+     "text": "It is valid if the named church donates to the town treasury"
     }
    ],
    "answer_option_id": "o1",
@@ -2901,11 +2901,11 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "Freedom from self-incrimination"
+     "text": "Freedom from self-incrimination in any criminal investigation"
     },
     {
      "option_id": "o2",
-     "text": "The right to a speedy trial"
+     "text": "The right to a speedy, impartial and public trial"
     },
     {
      "option_id": "o3",
@@ -2913,7 +2913,7 @@
     },
     {
      "option_id": "o4",
-     "text": "The right to information"
+     "text": "The right to information on matters of public concern"
     }
    ],
    "answer_option_id": "o3",
@@ -2969,15 +2969,15 @@
     },
     {
      "option_id": "o2",
-     "text": "Yes, but only during martial law"
+     "text": "Yes, but only while martial law is in force in that province"
     },
     {
      "option_id": "o3",
-     "text": "Yes, but only by a barangay resolution"
+     "text": "Yes, but only through a resolution passed by the barangay council"
     },
     {
      "option_id": "o4",
-     "text": "No; the right to travel can never be restricted"
+     "text": "No; the right to travel can never be restricted for any reason"
     }
    ],
    "answer_option_id": "o1",
@@ -3093,15 +3093,15 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "He must first pay a bond equal to the claim"
+     "text": "He must first pay a bond equal to the amount he is claiming in court"
     },
     {
      "option_id": "o2",
-     "text": "He may sue only in the barangay"
+     "text": "He may bring his case only before the barangay, not the courts"
     },
     {
      "option_id": "o3",
-     "text": "Only people with property may sue"
+     "text": "Only people who own property may file a case in the courts"
     },
     {
      "option_id": "o4",
@@ -3221,7 +3221,7 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "Yes, for 60 days"
+     "text": "Yes, the right to bail is suspended there for 60 days"
     },
     {
      "option_id": "o2",
@@ -3229,11 +3229,11 @@
     },
     {
      "option_id": "o3",
-     "text": "Yes; bail is suspended along with the writ"
+     "text": "Yes; the right to bail is suspended along with the writ"
     },
     {
      "option_id": "o4",
-     "text": "Only the Supreme Court can grant bail then"
+     "text": "Only the Supreme Court can grant bail while the writ is suspended"
     }
    ],
    "answer_option_id": "o2",
@@ -3289,15 +3289,15 @@
     },
     {
      "option_id": "o2",
-     "text": "Non-impairment of contracts"
+     "text": "No law shall impair the obligation of contracts"
     },
     {
      "option_id": "o3",
-     "text": "The right to just compensation"
+     "text": "Private property shall not be taken without just compensation"
     },
     {
      "option_id": "o4",
-     "text": "The liberty of abode"
+     "text": "The liberty of abode shall not be impaired except by court order"
     }
    ],
    "answer_option_id": "o1",
@@ -3349,7 +3349,7 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "The right to travel"
+     "text": "The right to travel within and outside the country"
     },
     {
      "option_id": "o2",
@@ -3357,11 +3357,11 @@
     },
     {
      "option_id": "o3",
-     "text": "Freedom of the press"
+     "text": "Freedom of the press to report on the trial"
     },
     {
      "option_id": "o4",
-     "text": "The right to information"
+     "text": "The right to information on matters of public concern"
     }
    ],
    "answer_option_id": "o2",
@@ -3413,7 +3413,7 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "She may be held if the barangay approves"
+     "text": "She may be held if the barangay council approves her detention"
     },
     {
      "option_id": "o2",
@@ -3421,11 +3421,11 @@
     },
     {
      "option_id": "o3",
-     "text": "She may be held if her party lost the election"
+     "text": "She may be held if her party lost the most recent election"
     },
     {
      "option_id": "o4",
-     "text": "She may be held for up to 36 hours"
+     "text": "She may be held for up to 36 hours without any charge"
     }
    ],
    "answer_option_id": "o2",
@@ -3541,7 +3541,7 @@
    "options": [
     {
      "option_id": "o1",
-     "text": "A new prosecution is allowed within one year"
+     "text": "A new prosecution is allowed if it is filed within one year of the acquittal"
     },
     {
      "option_id": "o2",
@@ -3549,11 +3549,11 @@
     },
     {
      "option_id": "o3",
-     "text": "A new prosecution is allowed because the laws differ"
+     "text": "A new prosecution is allowed because the ordinance and the national law differ"
     },
     {
      "option_id": "o4",
-     "text": "Only a conviction, not an acquittal, is a bar"
+     "text": "Only a conviction, not an acquittal, bars a second prosecution for the act"
     }
    ],
    "answer_option_id": "o2",
