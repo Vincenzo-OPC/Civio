@@ -36,7 +36,8 @@ class ExamGradingService
      */
     public function grade(array $questionIds, array $answers, array $clientMeta = []): array
     {
-        $ids = array_values(array_map('intval', $questionIds));
+        // Each question counts once even if a caller passes it twice.
+        $ids = array_values(array_unique(array_map('intval', $questionIds)));
         $questions = Question::query()
             ->with(['subcategory.category'])
             ->where('status', 'active')

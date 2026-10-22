@@ -19,3 +19,12 @@ test('an item retired after it was served does not count against the examinee', 
         ->and($result['skipped_count'])->toBe(0)
         ->and($result['cat_scores']['metadata']['retired_count'])->toBe(1);
 });
+
+test('a question id passed twice is graded once', function () {
+    $sub = Subcategory::factory()->create(['category_id' => Category::factory()->create(['is_demographic' => false])->id]);
+    $id = Question::factory()->create(['subcategory_id' => $sub->id, 'status' => 'active', 'options' => ['A', 'B', 'C', 'D'], 'correct_option' => 1])->id;
+
+    $result = app(ExamGradingService::class)->grade([$id, $id], [$id => 1]);
+
+    expect($result['total_questions'])->toBe(1)->and($result['answer_keys'])->toHaveCount(1);
+});

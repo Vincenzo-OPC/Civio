@@ -321,7 +321,7 @@ final class MockPoolSelector
         }
 
         $levelCategories = array_fill_keys(array_column($blueprint, 'category'), true);
-        $biased = $this->raiseWeakCategoryShare($scored, $source, array_map('strval', $bias['weakCategories'] ?? []), $target, $levelCategories);
+        $biased = $this->raiseWeakCategoryShare($state, $scored, $source, array_map('strval', $bias['weakCategories'] ?? []), $target, $levelCategories);
         $items = $this->shuffle($biased);
 
         return ['items' => $items, 'target' => $target, 'short' => count($items) < $target];
@@ -533,7 +533,7 @@ final class MockPoolSelector
      * @param  array<string, true>  $levelCategories
      * @return array<int, array<string, mixed>>
      */
-    private function raiseWeakCategoryShare(array $scored, array $source, array $weakCategories, int $target, array $levelCategories): array
+    private function raiseWeakCategoryShare(MockPoolState $state, array $scored, array $source, array $weakCategories, int $target, array $levelCategories): array
     {
         if ($weakCategories === [] || $scored === []) {
             return $scored;
@@ -564,6 +564,15 @@ final class MockPoolSelector
 
         for ($i = count($result) - 1; $i >= 0 && $weakCount < $weakTarget && $extraIdx < count($extras); $i--) {
             if (! $isWeak($result[$i])) {
+                // Extras obey the same pool rules as the blueprint picks
+                // (no key-trap pairs, no exact repeats); skip any that clash.
+                while ($extraIdx < count($extras) && ! $state->isFree($extras[$extraIdx])) {
+                    $extraIdx++;
+                }
+                if ($extraIdx >= count($extras)) {
+                    break;
+                }
+                $state->take($extras[$extraIdx]);
                 $result[$i] = $extras[$extraIdx++];
                 $weakCount++;
             }
