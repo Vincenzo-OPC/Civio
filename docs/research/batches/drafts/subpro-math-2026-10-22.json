@@ -1653,7 +1653,7 @@
     },
     {
      "option_id": "o2",
-     "text": "43.75"
+     "text": "140"
     },
     {
      "option_id": "o3",
@@ -1671,7 +1671,7 @@
     "why_correct": "35 ÷ 5 = 7, and 4 × 7 = 28.",
     "why_wrong": {
      "o1": "This adds both groups; the question asks for one group only.",
-     "o2": "This flips the ratio; match each number to the group it describes.",
+     "o2": "This multiplies 35 by 4 but never divides by 5 to find one part.",
      "o4": "Subtracting the difference of the ratio terms does not scale the ratio."
     },
     "method_steps": {
@@ -1681,13 +1681,13 @@
      "4_why": "The method matches what is asked: equivalent ratios.",
      "5_solve_by_hand": "35 ÷ 5 = 7, and 4 × 7 = 28.",
      "6_check": "Put 28 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
-     "7_distractors": "63: This adds both groups; the question asks for one group only. 43.75: This flips the ratio; match each number to the group it describes. 34: Subtracting the difference of the ratio terms does not scale the ratio.",
+     "7_distractors": "63: This adds both groups; the question asks for one group only. 140: This multiplies 35 by 4 but never divides by 5 to find one part. 34: Subtracting the difference of the ratio terms does not scale the ratio.",
      "8_shortcut": "Multiplier = 35 ÷ 5 = 7."
     }
    },
    "distractor_reasoning": {
     "o1": "NUM-EXTRA-STEP",
-    "o2": "NUM-OP-SWAP",
+    "o2": "NUM-PARTIAL",
     "o4": "NUM-PARTIAL"
    },
    "source": "Original, Civio",
@@ -1745,7 +1745,7 @@
     },
     {
      "option_id": "o4",
-     "text": "65.33"
+     "text": "84"
     }
    ],
    "answer_option_id": "o1",
@@ -1756,7 +1756,7 @@
     "why_wrong": {
      "o2": "This adds both groups; the question asks for one group only.",
      "o3": "Subtracting the difference of the ratio terms does not scale the ratio.",
-     "o4": "This flips the ratio; match each number to the group it describes."
+     "o4": "This multiplies 28 by 3 but never divides by 7 to find one part."
     },
     "method_steps": {
      "1_asked": "If there are 28 nurses, how many midwives work there?",
@@ -1765,14 +1765,14 @@
      "4_why": "The method matches what is asked: equivalent ratios.",
      "5_solve_by_hand": "28 ÷ 7 = 4, and 3 × 4 = 12.",
      "6_check": "Put 12 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
-     "7_distractors": "40: This adds both groups; the question asks for one group only. 24: Subtracting the difference of the ratio terms does not scale the ratio. 65.33: This flips the ratio; match each number to the group it describes.",
+     "7_distractors": "40: This adds both groups; the question asks for one group only. 24: Subtracting the difference of the ratio terms does not scale the ratio. 84: This multiplies 28 by 3 but never divides by 7 to find one part.",
      "8_shortcut": "Multiplier = 28 ÷ 7 = 4."
     }
    },
    "distractor_reasoning": {
     "o2": "NUM-EXTRA-STEP",
     "o3": "NUM-PARTIAL",
-    "o4": "NUM-OP-SWAP"
+    "o4": "NUM-PARTIAL"
    },
    "source": "Original, Civio",
    "source_url": null,
@@ -1829,7 +1829,7 @@
     },
     {
      "option_id": "o4",
-     "text": "17.18"
+     "text": "34"
     }
    ],
    "answer_option_id": "o3",
@@ -1840,7 +1840,7 @@
     "why_wrong": {
      "o1": "This is the size of one part only.",
      "o2": "This is the smaller quantity, not the larger one asked for.",
-     "o4": "This treats the difference as if it were the total."
+     "o4": "This adds the ratio term 7 to the difference instead of finding one part."
     },
     "method_steps": {
      "1_asked": "How old is the older sibling?",
@@ -1849,14 +1849,14 @@
      "4_why": "The method matches what is asked: if a .",
      "5_solve_by_hand": "7 − 4 = 3 parts = 27, so one part is 9. The larger is 7 × 9 = 63.",
      "6_check": "Put 63 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
-     "7_distractors": "9: This is the size of one part only. 36: This is the smaller quantity, not the larger one asked for. 17.18: This treats the difference as if it were the total.",
+     "7_distractors": "9: This is the size of one part only. 36: This is the smaller quantity, not the larger one asked for. 34: This adds the ratio term 7 to the difference instead of finding one part.",
      "8_shortcut": "One part = 27 ÷ (7 − 4)."
     }
    },
    "distractor_reasoning": {
     "o1": "NUM-PARTIAL",
     "o2": "NUM-OTHER-SHARE",
-    "o4": "NUM-WRONG-BASE"
+    "o4": "NUM-OP-SWAP"
    },
    "source": "Original, Civio",
    "source_url": null,
@@ -1912,7 +1912,7 @@
     },
     {
      "option_id": "o4",
-     "text": "20.57"
+     "text": "41"
     }
    ],
    "answer_option_id": "o2",
@@ -1923,7 +1923,7 @@
     "why_wrong": {
      "o1": "This is the size of one part only.",
      "o3": "This is the smaller quantity, not the larger one asked for.",
-     "o4": "This treats the difference as if it were the total."
+     "o4": "This adds the ratio term 9 to the difference instead of finding one part."
     },
     "method_steps": {
      "1_asked": "How many letters did the first office receive?",
@@ -1932,14 +1932,14 @@
      "4_why": "The method matches what is asked: if a .",
      "5_solve_by_hand": "9 − 5 = 4 parts = 32, so one part is 8. The larger is 9 × 8 = 72.",
      "6_check": "Put 72 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
-     "7_distractors": "8: This is the size of one part only. 40: This is the smaller quantity, not the larger one asked for. 20.57: This treats the difference as if it were the total.",
+     "7_distractors": "8: This is the size of one part only. 40: This is the smaller quantity, not the larger one asked for. 41: This adds the ratio term 9 to the difference instead of finding one part.",
      "8_shortcut": "One part = 32 ÷ (9 − 5)."
     }
    },
    "distractor_reasoning": {
     "o1": "NUM-PARTIAL",
     "o3": "NUM-OTHER-SHARE",
-    "o4": "NUM-WRONG-BASE"
+    "o4": "NUM-OP-SWAP"
    },
    "source": "Original, Civio",
    "source_url": null,
@@ -2981,7 +2981,7 @@
     },
     {
      "option_id": "o4",
-     "text": "14.4"
+     "text": "18"
     }
    ],
    "answer_option_id": "o1",
@@ -2992,7 +2992,7 @@
     "why_wrong": {
      "o2": "This is the larger number.",
      "o3": "This splits the total in half, ignoring the multiple.",
-     "o4": "This divides by 5, forgetting that the smaller number is one more part: 5 + 1 = 6."
+     "o4": "This splits the total into 4 parts; the two numbers make 5 + 1 = 6 parts."
     },
     "method_steps": {
      "1_asked": "What is the smaller number?",
@@ -3001,7 +3001,7 @@
      "4_why": "The method matches what is asked: if one number is k times the other, together they make k + 1 equal parts.",
      "5_solve_by_hand": "x + 5x = 6x = 72, so x = 12 (and the larger is 60).",
      "6_check": "Put 12 back into the problem (or redo the last step in reverse) and confirm every given number is used once.",
-     "7_distractors": "60: This is the larger number. 36: This splits the total in half, ignoring the multiple. 14.4: This divides by 5, forgetting that the smaller number is one more part: 5 + 1 = 6.",
+     "7_distractors": "60: This is the larger number. 36: This splits the total in half, ignoring the multiple. 18: This splits the total into 4 parts; the two numbers make 5 + 1 = 6 parts.",
      "8_shortcut": "72 ÷ (5 + 1)."
     }
    },

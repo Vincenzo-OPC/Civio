@@ -1797,15 +1797,15 @@
    "competency": "Word analogy",
    "concept": "word analogy",
    "micro_skill": "name the relationship, then match it",
-   "archetype": "ANA-ANALOGY-DEGREE",
-   "difficulty": "medium",
+   "archetype": "ANA-ANALOGY-FORM",
+   "difficulty": "easy",
    "est_seconds": 30,
    "language": "en",
-   "stem": "Seed is to orchard as ____.",
+   "stem": "Seed is to sapling as ____.",
    "options": [
     {
      "option_id": "o1",
-     "text": "wall : brick"
+     "text": "frog : tadpole"
     },
     {
      "option_id": "o2",
@@ -1813,22 +1813,22 @@
     },
     {
      "option_id": "o3",
-     "text": "leaf : green"
+     "text": "pond : frog"
     },
     {
      "option_id": "o4",
-     "text": "brick : wall"
+     "text": "tadpole : frog"
     }
    ],
    "answer_option_id": "o4",
    "reveal": {
-    "terms": "An analogy compares two relationships. Here the relationship is: a starting form is to the grown collection.",
-    "shortcut": "Make a sentence for the first pair (\"seed is … orchard\") and test each choice in the same sentence, keeping the order.",
-    "why_correct": "\"brick : wall\" fits the same sentence: a starting form is to the grown collection. The order also matches: the first word stands to the second exactly as seed stands to orchard.",
+    "terms": "An analogy compares two relationships. Here the relationship is: an early form of a living thing is to the next stage it grows into.",
+    "shortcut": "Make a sentence for the first pair (\"seed is … sapling\") and test each choice in the same sentence, keeping the order.",
+    "why_correct": "\"tadpole : frog\" fits the same sentence: an early form of a living thing is to the next stage it grows into. The order also matches: the first word stands to the second exactly as seed stands to sapling.",
     "why_wrong": {
-     "o1": "\"wall : brick\" has the right words but in reversed order.",
+     "o1": "\"frog : tadpole\" has the right words but in reversed order.",
      "o2": "\"seed : soil\" is about the same topic but has a different relationship.",
-     "o3": "\"leaf : green\" shows a different relationship."
+     "o3": "\"pond : frog\" shows a different relationship."
     }
    },
    "distractor_reasoning": {
@@ -1850,7 +1850,7 @@
     "spec_version": "0.1.9"
    },
    "notes": "New original draft, 22 Oct 2026 (GT approved). Not copied from any reviewer; numbers, scenario and wording are Civio's own.",
-   "shortcut": "Make a sentence for the first pair (\"seed is … orchard\") and test each choice in the same sentence, keeping the order.",
+   "shortcut": "Make a sentence for the first pair (\"seed is … sapling\") and test each choice in the same sentence, keeping the order.",
    "recipe": {
     "op": "judgment"
    }
@@ -5018,7 +5018,7 @@
    "difficulty": "easy",
    "est_seconds": 40,
    "language": "en",
-   "stem": "Study the table, then answer the question.\nVoters assisted at three precincts (number of voters)\nPrecinct | Morning | Afternoon\nPrecinct 1 | 60 | 40\nPrecinct 2 | 98 | 77\nPrecinct 3 | 13 | 67\nPrecinct 4 | 56 | 63\n\nWhich precinct assisted the fewest voters in the afternoon?",
+   "stem": "Study the table, then answer the question.\nVoters assisted at four precincts (number of voters)\nPrecinct | Morning | Afternoon\nPrecinct 1 | 60 | 40\nPrecinct 2 | 98 | 77\nPrecinct 3 | 13 | 67\nPrecinct 4 | 56 | 63\n\nWhich precinct assisted the fewest voters in the afternoon?",
    "options": [
     {
      "option_id": "o1",
@@ -7554,7 +7554,7 @@
     },
     {
      "option_id": "o2",
-     "text": "judge : court"
+     "text": "lawyer : client"
     },
     {
      "option_id": "o3",
@@ -7572,7 +7572,7 @@
     "why_correct": "\"delegate : delegation\" fits the same sentence: one member is to the group. The order also matches: the first word stands to the second exactly as councilor stands to council.",
     "why_wrong": {
      "o1": "\"verdict : trial\" is about the same topic but has a different relationship.",
-     "o2": "\"judge : court\" shows a different relationship.",
+     "o2": "\"lawyer : client\" shows a different relationship.",
      "o3": "\"team : player\" has the right words but in reversed order."
     }
    },

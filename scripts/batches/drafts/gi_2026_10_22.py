@@ -119,7 +119,7 @@ CONST = [
    ("He may accept if he resigns from the company after one year", NUM, "The bar applies during the whole tenure."),
    ("He may accept with the approval of the Senate", BODY, "No Senate approval can lift this ban."),
    ("He may accept if the job is part-time", SND, "Part-time work is still participation in business.")],
-  "They shall strictly avoid conflict of interest in the conduct of their office",
+  "be financially interested in any contract with, or in any franchise, or special privilege granted by the Government",
   "Art. VII, Sec. 13 bars the President, Vice-President, Cabinet members and their deputies from business interests tied to government franchises and from conflicts of interest"),
  (C, "Art. VII, Sec. 13", SA, "The President wants to appoint her first cousin as a member of the Civil Service Commission. Under Art. VII, Sec. 13, what is the rule?",
   "Relatives within the fourth civil degree of the President may not be appointed to the Constitutional Commissions during his or her tenure", [
@@ -542,7 +542,7 @@ ETH = [
   "All public documents must be made accessible to, and readily available for inspection by, the public within reasonable working hours",
   "R.A. 6713, Sec. 5(e) makes public documents open to public inspection during reasonable working hours"),
  (R, "R.A. 6713, Sec. 5(d)", SA, "A clerk tells a walk-in senior citizen to come back tomorrow even though the clerk is free and the service is available. Which duty is involved?",
-  "Act immediately on the public's personal transactions", [
+  "Attend to anyone who wants the office's services and act promptly and expeditiously", [
    ("Submit annual performance reports", SIB, "That duty belongs to heads of office."),
    ("Make documents accessible to the public", SIB, "No document request is involved."),
    ("Divest from private business", SIB, "Divestment is unrelated.")],

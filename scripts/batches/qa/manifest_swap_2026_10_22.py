@@ -25,6 +25,9 @@ PADDING = {"CIVIO-NUM-FRAC-DEC-000713": "CIVIO-NUM-FRAC-DEC-000440", "CIVIO-NUM-
            # same syllogism with one predicate noun swapped
            "CIVIO-ANA-SYLLOGISM-000342": "CIVIO-ANA-SYLLOGISM-000147"}
 DISPUTED = ["CIVIO-GAP3-CLR-FILE-ORDER-00%d" % n for n in (17, 20, 21, 22, 23)]
+# legacy GI drafts with no verifiable lawphil quote (qa.legacy_errors): one cites no statute, one still says "TO BE QUOTED"
+UNVERIFIED = {"CIVIO-B3-GI-ENV-PRINCIPLE-0528": "unverifiable_gi: no statute cited (general ecology fact), cannot be checked against lawphil",
+              "CIVIO-B3-GI-ENV-PRINCIPLE-0083": "unverifiable_gi: source_quote is a placeholder (\"TO BE QUOTED\"), never checked against lawphil"}
 
 
 def rr(items, key):
@@ -52,6 +55,8 @@ def main():
             out_ids[r["id"]] = REASON[r["source_file"]]
         elif r["id"] in PADDING:
             out_ids[r["id"]] = f"padding: same item as {PADDING[r['id']]} with only names, objects or one noun changed (kept the earlier twin)"
+        elif r["id"] in UNVERIFIED:
+            out_ids[r["id"]] = UNVERIFIED[r["id"]]
         elif r["id"] in DISPUTED:
             out_ids[r["id"]] = "disputed_filing_variant: bank ARMA solver disagrees with the key (punctuation/number/prefix variant); avoid disputed variants"
     # GI template supplement: keep the first item per law, swap the rest (five near-identical \"which law\" items per statute)
@@ -77,6 +82,14 @@ def main():
                     "in": it["id"], "in_source": f})
         r.update({"id": it["id"], "track": it["track"], "status": it["status"], "tier": 4, "source_file": f,
                   "content_sha256": content_hash(it), "retire_on_signoff": "", "note": "d1022_replacement"})
+    # 22 Oct drafts edited after swap-in (content QA fixes): refresh their hash. Only draft rows; approved content never changes.
+    refreshed = []
+    for r in rows:
+        if r.get("note") == "d1022_replacement" and r["status"] == "draft":
+            it = next(i for i in json.load(open(r["source_file"]))["items"] if i["id"] == r["id"])
+            if content_hash(it) != r["content_sha256"]:
+                r["content_sha256"] = content_hash(it); refreshed.append(r["id"])
+    m.setdefault("hash_refresh_2026_10_22", []).extend(x for x in refreshed if x not in m.get("hash_refresh_2026_10_22", []))
     sub = collections.defaultdict(collections.Counter)
     for r in rows:
         sub[r["domain"]][r["track"]] += 1
@@ -97,7 +110,7 @@ def main():
     OUT_JSON.write_text(json.dumps(m, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     with OUT_CSV.open("w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=list(rows[0].keys()), lineterminator="\n"); w.writeheader(); w.writerows(rows)
-    print(json.dumps({"swapped_now": sum(need.values()), "by_domain": dict(need), "total_swaps": len(log), "pct": pct,
+    print(json.dumps({"swapped_now": sum(need.values()), "by_domain": dict(need), "total_swaps": len(log), "pct": pct, "hash_refreshed": refreshed,
                       "by_status": m["by_status"]}, indent=1))
 
 

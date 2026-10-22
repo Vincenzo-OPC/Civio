@@ -677,7 +677,7 @@ CIVIO-D1022-ANA-0053,analytical,professional,draft,4,docs/research/batches/draft
 CIVIO-D1022-ANA-0078,analytical,professional,draft,4,docs/research/batches/drafts/analytical-professional-2026-10-22.json,38c4fc6f925fffa3cd0f78f2d9e260a53893fbd6bacb22c31f2e42559a09fdc9,,d1022_replacement
 CIVIO-D1022-ANA-0059,analytical,professional,draft,4,docs/research/batches/drafts/analytical-professional-2026-10-22.json,74ccb75bf1c4998363c9441a1ecea40b0ec6421140c73bcf744f46ac197e7d4b,,d1022_replacement
 CIVIO-D1022-ANA-0016,analytical,professional,draft,4,docs/research/batches/drafts/analytical-professional-2026-10-22.json,a38f1c2d001c46ad94f238a9f6a4906df9947ebaf31f9049ac5a2192091aa9b9,,d1022_replacement
-CIVIO-D1022-ANA-0042,analytical,professional,draft,4,docs/research/batches/drafts/analytical-professional-2026-10-22.json,e409a4eb4d9ad8526114c23f9ca54d768770e1eb2838477bcbd7b109a70b6585,,d1022_replacement
+CIVIO-D1022-ANA-0042,analytical,professional,draft,4,docs/research/batches/drafts/analytical-professional-2026-10-22.json,2b4f7f184765bf17cc150b25af8067ef581c380bba80a1d45931a0c13298f6d7,,d1022_replacement
 CIVIO-D1022-RSANA-0015,analytical,professional,draft,4,docs/research/batches/drafts/analytical-professional-2026-10-22.json,1e6bc46f1aac31b189277dc4984a197847bb6cf90bcfbb39f3eda14d64b318e8,,d1022_replacement
 CIVIO-D1022-ANA-0041,analytical,professional,draft,4,docs/research/batches/drafts/analytical-professional-2026-10-22.json,8dc73c44ab7b7abdb176ef1a66668beea1d32d826f1e4a2ebbc5b9e3403b696c,,d1022_replacement
 CIVIO-D1022-ANA-0040,analytical,professional,draft,4,docs/research/batches/drafts/analytical-professional-2026-10-22.json,471f53eb054fb1dda05fafb6bdc5e65abd2baa5d50c42dfa40407edfd8447abc,,d1022_replacement
@@ -2043,7 +2043,7 @@ CIVIO-D1022-GI-0014,general_information,both,draft,4,docs/research/batches/draft
 CIVIO-D1022-GI-0050,general_information,both,draft,4,docs/research/batches/drafts/gi-applied-2026-10-22.json,cb5c5fb0f1c98a43dd71d5c196b624f67a753969702db6d3a1856c18b0f3e227,,d1022_replacement
 CIVIO-D1022-GI-0015,general_information,both,draft,4,docs/research/batches/drafts/gi-applied-2026-10-22.json,b02f6ad5a26639fc942b36d2ad9f5208efdd3a58a91f66ceedb7aa9f62e63c5f,,d1022_replacement
 CIVIO-D1022-GI-0051,general_information,both,draft,4,docs/research/batches/drafts/gi-applied-2026-10-22.json,b5fa3d797e20ac2e978c19f0512e1af2edf0b7145d71abc78153f4b65685dce8,,d1022_replacement
-CIVIO-D1022-GI-0016,general_information,both,draft,4,docs/research/batches/drafts/gi-applied-2026-10-22.json,9cc18a0c2b95432fc927349947f6b625ae139cc36929913771aeb14d77ee1782,,d1022_replacement
+CIVIO-D1022-GI-0016,general_information,both,draft,4,docs/research/batches/drafts/gi-applied-2026-10-22.json,cc8584c9b1e788f45e75bf586495a7e8735c24bc172da702b530a81c83665f22,,d1022_replacement
 CIVIO-D1022-GI-0052,general_information,both,draft,4,docs/research/batches/drafts/gi-applied-2026-10-22.json,98b6113e58e146bb387f0aa32279be4d6c7a3dff5c2e9b6ab5f0c9bd5162dfcf,,d1022_replacement
 CIVIO-D1022-GI-0017,general_information,both,draft,4,docs/research/batches/drafts/gi-applied-2026-10-22.json,c175462e0a89729d388b06a0243ea0b2554d0dde7b6a6686c5624574cdf173c1,,d1022_replacement
 CIVIO-D1022-GI-0053,general_information,both,draft,4,docs/research/batches/drafts/gi-applied-2026-10-22.json,d680a3845b58053d1f5b96d95cf005ccba233ce3ff47298c087bfc6e142f1c42,,d1022_replacement
@@ -2090,12 +2090,12 @@ CIVIO-GF2K04-GI-WHO-HOLDS-POWER-0023,general_information,both,draft,3,docs/resea
 CIVIO-GF2K04-GI-WHO-HOLDS-POWER-0033,general_information,both,draft,3,docs/research/gap-fill-2000-04.json,5fb4d2e640e695a9caad414d8fa24693e6480d99f35b53505b2461db9855d6ec,,
 CIVIO-B3-GI-DEADLINE-NUMBER-0067,general_information,both,draft,3,docs/research/audit/fixes/round-03-baseline-b3-drafts.json,c01406474127fd53dcb4e16bf2df9fb4a867b860dcbe37a104f70d40a6ee8a2b,,
 CIVIO-B3-GI-ENV-PRINCIPLE-0011,general_information,both,draft,3,docs/research/audit/fixes/round-03-baseline-b3-drafts.json,19f645e995b4b414143f4454684c4ad2e82e8a8ed2da134e0b5f30616941b496,,
-CIVIO-B3-GI-ENV-PRINCIPLE-0083,general_information,both,draft,3,docs/research/audit/fixes/round-03-baseline-b3-drafts.json,7465d7db453c514e33feffb094086c6a3642287bba0d5daf5bab3cedd94d37e9,,
+CIVIO-D1022-GI-0057,general_information,both,draft,4,docs/research/batches/drafts/gi-applied-2026-10-22.json,02ce029cff489353121ea5c2bdc95262329e508b83455dd6f78c2226beea5d3a,,d1022_replacement
 CIVIO-B3-GI-ENV-PRINCIPLE-0228,general_information,both,draft,3,docs/research/audit/fixes/round-03-baseline-b3-drafts.json,08afb3bdf10605acd6a94747d56f6ce1fe4e9d7e52cbcbdc305bd5d0843c079e,,
 CIVIO-B3-GI-ENV-PRINCIPLE-0229,general_information,both,draft,3,docs/research/audit/fixes/round-03-baseline-b3-drafts.json,95a513d0731bbc898e3c2f932d2ac08ec51ab29c53c40116b16bd10dee343c96,,
 CIVIO-B3-GI-ENV-PRINCIPLE-0410,general_information,both,draft,3,docs/research/audit/fixes/round-03-baseline-b3-drafts.json,567a8fb7c452f60e8421a0259d319381443610be26bd33298a82bfd3ced6fad9,,
 CIVIO-B3-GI-ENV-PRINCIPLE-0413,general_information,both,draft,3,docs/research/audit/fixes/round-03-baseline-b3-drafts.json,1109dfaba5ba9974f48fe537364383c1090139a768b2976f906a9f4705588242,,
 CIVIO-B3-GI-ENV-PRINCIPLE-0527,general_information,both,draft,3,docs/research/audit/fixes/round-03-baseline-b3-drafts.json,a2ccfbf862866e2a5b4a37129f56b1f50a727a3244e1402ee3b5b12a02e674a4,,
-CIVIO-B3-GI-ENV-PRINCIPLE-0528,general_information,both,draft,3,docs/research/audit/fixes/round-03-baseline-b3-drafts.json,dd47fdeadd88f7bb862f33eb5188702d14a0b2fac303402cad7c7467dbaa042d,,
+CIVIO-D1022-GI-0021,general_information,both,draft,4,docs/research/batches/drafts/gi-applied-2026-10-22.json,11a9603205d65514ef4c7e54639b5508a4b03121fdd29e321c954ec474baa8b0,,d1022_replacement
 CIVIO-B3-GI-SCENARIO-APPLY-0072,general_information,both,draft,3,docs/research/audit/fixes/round-03-baseline-b3-drafts.json,9249c63fe8f402ec27f9c72d4aa537636d1553bf03cdfd2bc8f3b51a24c31f98,,
 CIVIO-B3-GI-SCENARIO-APPLY-0395,general_information,both,draft,3,docs/research/audit/fixes/round-03-baseline-b3-drafts.json,d9588e76480ec93ca24d7c75b69414d2d7c5baed8f0f55f32e93ce22d16fbfe8,,

@@ -175,7 +175,9 @@ for ctx, r, known, ki in [("In a training class, the ratio of men to women is {r
     v = F(known * r[other], r[ki])
     add(**base(nxt(), "Ratios", "finding a quantity from a ratio", "scale the ratio up to the known amount", "NUM-WP-RATIO", "easy", 50),
         stem=ctx.format(r=f"{r[0]} : {r[1]}", k=known), correct=num(v),
-        wrong=[(num(F(known * r[ki], r[other])), "NUM-OP-SWAP", "This flips the ratio; match each number to the group it describes."),
+        wrong=[((num(F(known * r[ki], r[other])), "NUM-OP-SWAP", "This flips the ratio; match each number to the group it describes.")
+                if F(known * r[ki], r[other]).denominator == 1 else
+                (num(known * r[other]), "NUM-PARTIAL", f"This multiplies {known} by {r[other]} but never divides by {r[ki]} to find one part.")),
                (num(v + known), "NUM-EXTRA-STEP", "This adds both groups; the question asks for one group only."),
                (num(known - (r[ki] - r[other])) if known - (r[ki] - r[other]) != v else num(v + 2), "NUM-PARTIAL", "Subtracting the difference of the ratio terms does not scale the ratio.")],
         terms="Equivalent ratios: multiply both terms by the same number. Find that multiplier from the known group.",
@@ -189,7 +191,9 @@ for ctx, r, diff in [("The ages of two siblings are in the ratio {r}, and the ol
     add(**base(nxt(), "Ratios", "ratio with a known difference", "the difference of the terms equals the known difference", "NUM-WP-RATIO", "medium", 75),
         stem=ctx.format(r=f"{r[0]} : {r[1]}", d=diff), correct=num(v),
         wrong=[(num(part * r[1]), "NUM-OTHER-SHARE", "This is the smaller quantity, not the larger one asked for."),
-               (num(F(diff * r[0], r[0] + r[1])), "NUM-WRONG-BASE", "This treats the difference as if it were the total."),
+               ((num(F(diff * r[0], r[0] + r[1])), "NUM-WRONG-BASE", "This treats the difference as if it were the total.")
+                if F(diff * r[0], r[0] + r[1]).denominator == 1 else
+                (num(diff + r[0]), "NUM-OP-SWAP", f"This adds the ratio term {r[0]} to the difference instead of finding one part.")),
                (num(part), "NUM-PARTIAL", "This is the size of one part only.")],
         terms="If a : b and the difference is known, then (a − b) parts equal that difference.",
         shortcut=f"One part = {diff} ÷ ({r[0]} − {r[1]}).",
@@ -286,7 +290,9 @@ for ctx, k, tot in [("Two numbers add up to 72, and one is 5 times the other. Wh
     add(**base(nxt(), "Basic algebra", "one number as a multiple of another", "x + kx = total", "NUM-WP-ALGEBRA", "easy", 45),
         stem=ctx, correct=num(s),
         wrong=[(num(s * k), "NUM-OTHER-SHARE", "This is the larger number."),
-               (num(F(tot, k)), "NUM-WRONG-BASE", f"This divides by {k}, forgetting that the smaller number is one more part: {k} + 1 = {k + 1}."),
+               ((num(F(tot, k)), "NUM-WRONG-BASE", f"This divides by {k}, forgetting that the smaller number is one more part: {k} + 1 = {k + 1}.")
+                if F(tot, k).denominator == 1 else
+                (num(F(tot, k - 1)), "NUM-WRONG-BASE", f"This splits the total into {k - 1} parts; the two numbers make {k} + 1 = {k + 1} parts.")),
                (num(F(tot, 2)), "NUM-PARTIAL", "This splits the total in half, ignoring the multiple.")],
         terms="If one number is k times the other, together they make k + 1 equal parts.",
         shortcut=f"{tot} ÷ ({k} + 1).",

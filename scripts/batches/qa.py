@@ -1,5 +1,5 @@
 """Automated QA for a generated round. Keys are recomputed from the stem text by independent solvers."""
-import json, math, os, re
+import json, math, os, re, sys
 from fractions import Fraction as F
 from common import jaccard
 import clerical, verbal, verbal_more, analytical, gi_facts, baseline
@@ -294,6 +294,29 @@ def check_key_trap(items):
     return out
 
 
+# Plain-text copies of the lawphil pages the GI evidence sheets quote (committed so QA runs anywhere).
+GI_CACHE = os.environ.get("CIVIO_GI_CACHE", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "docs", "research", "sources", "lawphil"))
+
+
+def legacy_errors(it):
+    """Legacy (pre-spec) rows skip the domain solvers, so each must be covered by a hand-checked sheet:
+    GI by a verbatim lawphil quote (audit/verified_keys, audit/gi_legacy_evidence or its own source_quote),
+    numerical/verbal_en by audit/legacy_keys. Other domains have no legacy rows."""
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "audit"))
+    import verified_keys_2026_10_22 as VK, gi_legacy_evidence_2026_10_22 as EV, legacy_keys_2026_10_22 as LK
+    d = it["domain"]
+    if d == "general_information":
+        ok = EV.check(it, GI_CACHE) if it["id"] in EV.EV else VK.verify(it, GI_CACHE)
+        if ok is None:
+            return ["legacy GI not covered by an evidence sheet (or lawphil cache missing)"]
+        return [] if ok else ["legacy GI evidence quote not found in lawphil text"]
+    if it["id"] in VK.NUM or it["id"] in VK.TEXT:
+        return [] if VK.verify(it) else ["legacy key differs from verified_keys sheet"]
+    if it["id"] not in LK.KEYS:
+        return ["legacy row not covered by a hand-checked key sheet"]
+    return [] if key_text(it) == LK.KEYS[it["id"]] else ["legacy key differs from hand-checked sheet"]
+
+
 def check_item(it):
     errs = pronoun_errors(it)
     for k in REQ:
@@ -376,6 +399,8 @@ def check_item(it):
     if it["archetype"].startswith("CLR-FILE"):
         if not any(ARMA.format(n) in it["reveal"]["why_correct"] for n in range(1, 9)):
             errs.append("filing item lacks ARMA note")
+    if it.get("_legacy"):
+        errs += legacy_errors(it)
     solver = None if it.get("_legacy") else {"numerical": solve_num, "analytical": solve_ana, "clerical": solve_cler, "verbal_en": solve_verb}.get(d)
     if solver and it.get("recipe"):  # 22 Oct 2026 drafts: recompute through the item's recipe (drafts/solver_2026_10_22.py)
         from drafts import solver_2026_10_22 as _s22

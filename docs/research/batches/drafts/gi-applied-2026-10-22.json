@@ -999,7 +999,7 @@
    "answer_option_id": "o4",
    "reveal": {
     "terms": "Primary law: 1987 Const., Art. VII, Sec. 13.",
-    "shortcut": "Key phrase in the text: \"They shall strictly avoid conflict of interest in the conduct of their office\"",
+    "shortcut": "Key phrase in the text: \"be financially interested in any contract with, or in any franchise, or special privilege granted by the Government\"",
     "why_correct": "\"He may not be financially interested in any franchise or special privilege granted by the Government\" is correct. Art. VII, Sec. 13 bars the President, Vice-President, Cabinet members and their deputies from business interests tied to government franchises and from conflicts of interest. Source checked word for word against the 1987 Constitution text on lawphil.net.",
     "why_wrong": {
      "o1": "No Senate approval can lift this ban.",
@@ -1026,8 +1026,8 @@
     "spec_version": "0.1.9"
    },
    "notes": "New original draft, 22 Oct 2026 (GT approved). Legal text verified against the cached lawphil.net page; needs a legal reviewer before approval.",
-   "shortcut": "Key phrase in the text: \"They shall strictly avoid conflict of interest in the conduct of their office\"",
-   "source_quote": "They shall strictly avoid conflict of interest in the conduct of their office",
+   "shortcut": "Key phrase in the text: \"be financially interested in any contract with, or in any franchise, or special privilege granted by the Government\"",
+   "source_quote": "be financially interested in any contract with, or in any franchise, or special privilege granted by the Government",
    "_fact22": 15
   },
   {
@@ -4833,14 +4833,14 @@
     },
     {
      "option_id": "o4",
-     "text": "Act immediately on the public's personal transactions"
+     "text": "Attend to anyone who wants the office's services and act promptly and expeditiously"
     }
    ],
    "answer_option_id": "o4",
    "reveal": {
     "terms": "Primary law: R.A. 6713, Sec. 5(d).",
     "shortcut": "Key phrase in the text: \"must attend to anyone who wants to avail himself of the services of their offices and must, at all times, act promptly and expeditiously\"",
-    "why_correct": "\"Act immediately on the public's personal transactions\" is correct. R.A. 6713, Sec. 5(d) requires public servants to attend to anyone seeking service promptly and expeditiously. Source checked word for word against the R.A. 6713 text on lawphil.net.",
+    "why_correct": "\"Attend to anyone who wants the office's services and act promptly and expeditiously\" is correct. R.A. 6713, Sec. 5(d) requires public servants to attend to anyone seeking service promptly and expeditiously. Source checked word for word against the R.A. 6713 text on lawphil.net.",
     "why_wrong": {
      "o1": "Divestment is unrelated.",
      "o2": "That duty belongs to heads of office.",

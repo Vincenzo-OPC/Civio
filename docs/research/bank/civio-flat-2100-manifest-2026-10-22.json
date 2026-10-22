@@ -26,8 +26,8 @@
  "by_tier": {
   "1": 1402,
   "2": 42,
-  "3": 388,
-  "4": 268
+  "3": 386,
+  "4": 270
  },
  "by_track": {
   "both": 1341,
@@ -13190,7 +13190,7 @@
    "status": "draft",
    "tier": 4,
    "source_file": "docs/research/batches/drafts/analytical-professional-2026-10-22.json",
-   "content_sha256": "e409a4eb4d9ad8526114c23f9ca54d768770e1eb2838477bcbd7b109a70b6585",
+   "content_sha256": "2b4f7f184765bf17cc150b25af8067ef581c380bba80a1d45931a0c13298f6d7",
    "retire_on_signoff": "",
    "note": "d1022_replacement"
   },
@@ -28216,7 +28216,7 @@
    "status": "draft",
    "tier": 4,
    "source_file": "docs/research/batches/drafts/gi-applied-2026-10-22.json",
-   "content_sha256": "9cc18a0c2b95432fc927349947f6b625ae139cc36929913771aeb14d77ee1782",
+   "content_sha256": "cc8584c9b1e788f45e75bf586495a7e8735c24bc172da702b530a81c83665f22",
    "retire_on_signoff": "",
    "note": "d1022_replacement"
   },
@@ -28727,15 +28727,15 @@
    "note": ""
   },
   {
-   "id": "CIVIO-B3-GI-ENV-PRINCIPLE-0083",
+   "id": "CIVIO-D1022-GI-0057",
    "domain": "general_information",
    "track": "both",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
-   "content_sha256": "7465d7db453c514e33feffb094086c6a3642287bba0d5daf5bab3cedd94d37e9",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/gi-applied-2026-10-22.json",
+   "content_sha256": "02ce029cff489353121ea5c2bdc95262329e508b83455dd6f78c2226beea5d3a",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
    "id": "CIVIO-B3-GI-ENV-PRINCIPLE-0228",
@@ -28793,15 +28793,15 @@
    "note": ""
   },
   {
-   "id": "CIVIO-B3-GI-ENV-PRINCIPLE-0528",
+   "id": "CIVIO-D1022-GI-0021",
    "domain": "general_information",
    "track": "both",
    "status": "draft",
-   "tier": 3,
-   "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
-   "content_sha256": "dd47fdeadd88f7bb862f33eb5188702d14a0b2fac303402cad7c7467dbaa042d",
+   "tier": 4,
+   "source_file": "docs/research/batches/drafts/gi-applied-2026-10-22.json",
+   "content_sha256": "11a9603205d65514ef4c7e54639b5508a4b03121fdd29e321c954ec474baa8b0",
    "retire_on_signoff": "",
-   "note": ""
+   "note": "d1022_replacement"
   },
   {
    "id": "CIVIO-B3-GI-SCENARIO-APPLY-0072",
@@ -30970,6 +30970,26 @@
    "reason": "padding: same item as CIVIO-ANA-CONCLUSION-000457 with only names, objects or one noun changed (kept the earlier twin)",
    "in": "CIVIO-D1022-ANA-0047",
    "in_source": "docs/research/batches/drafts/analytical-professional-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-B3-GI-ENV-PRINCIPLE-0083",
+   "out_source": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
+   "out_status": "draft",
+   "reason": "unverifiable_gi: source_quote is a placeholder (\"TO BE QUOTED\"), never checked against lawphil",
+   "in": "CIVIO-D1022-GI-0057",
+   "in_source": "docs/research/batches/drafts/gi-applied-2026-10-22.json"
+  },
+  {
+   "out": "CIVIO-B3-GI-ENV-PRINCIPLE-0528",
+   "out_source": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
+   "out_status": "draft",
+   "reason": "unverifiable_gi: no statute cited (general ecology fact), cannot be checked against lawphil",
+   "in": "CIVIO-D1022-GI-0021",
+   "in_source": "docs/research/batches/drafts/gi-applied-2026-10-22.json"
   }
+ ],
+ "hash_refresh_2026_10_22": [
+  "CIVIO-D1022-ANA-0042",
+  "CIVIO-D1022-GI-0016"
  ]
 }

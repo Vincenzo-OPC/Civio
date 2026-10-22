@@ -1,7 +1,7 @@
 """Independent answer-key sheet for manifest items the qa.py solvers cannot parse (MASTER directive 2026-10-22).
 NUM: each key recomputed here from a formula written from the stem. TEXT: keys checked by hand against the stem, with the reason.
 CLR: small independent solvers for the 2026-10-13 clerical formats. GI: evidence strings checked against the cached lawphil text."""
-import re
+import os, re
 import unicodedata
 from fractions import Fraction as F
 
@@ -148,7 +148,7 @@ def parse_num(t):
     return F(m.group(6))
 
 
-def verify(it, cache="/workspace/gi"):
+def verify(it, cache=os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "..", "docs", "research", "sources", "lawphil")):
     """True/False when the sheet covers the item, None when it does not."""
     import os, qa
     k, i = qa.key_text(it), it["id"]
