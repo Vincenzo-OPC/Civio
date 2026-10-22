@@ -5,6 +5,18 @@ The living record of how Civio differs from the baseline (commit `d3f0368`, tag
 as any change that makes Civio behave differently from the baseline (see "How to
 keep this current" below).
 
+## Owner-funded AI kill switch, 22 October 2026 (Issue #18)
+
+`App\Services\Ai\OwnerAiSpendLock` closes every owner-key AI path by default. It opens only when `CIVIO_OWNER_FUNDED_AI` is exactly `true` (not `1`, `yes`, `TRUE` or padded values), and never in production. Credentials alone no longer enable anything. While it is closed:
+- `AiGatewayService` reports no provider configured, and `runGemini`, `runWorkersAi` and `generateStructuredJson` return a disabled result before any HTTP call.
+- The question and learning-module generation jobs no-op on handle, including jobs queued before the change.
+- The admin generation endpoints return 503 with `queued: false` and dispatch nothing.
+- `GenerateUserAnalysisJob` saves deterministic analysis, with no Cloudflare-to-Gemini fallback.
+- Analytics defaults to instant mode, ignores a cached `ai` mode and stored AI text, and retry dispatches nothing.
+- The profanity rule skips Groq and Workers AI.
+
+Tests: `tests/Feature/Ai/OwnerAiSpendLockTest.php` uses dummy keys with `Http::fake()` and `assertNothingSent`. Legacy AI tests now open the lock explicitly.
+
 ## Image smoke, 22 October 2026
 
 A manual GitHub Actions workflow, `image smoke`, builds the production Dockerfile and runs `scripts/fsrs-image-smoke.sh`. It does not push the image or deploy. The host key is a disposable `openssl` value because a clean runner has no Composer install. The build context excludes local SQLite files, logs, sessions, uploads, and secrets, and keeps the storage directory markers. [Run 39631539498](https://github.com/Vincenzo-OPC/Civio/actions/runs/39631539498) passed (`php 8.4.26`, `node v22.23.2`, `sodium loaded`, `fsrs image smoke passed`). [Run 39631088212](https://github.com/Vincenzo-OPC/Civio/actions/runs/39631088212) built the image and then stopped on a missing import while the job stayed green; it is not a pass. An image pass is not a deployment and is not operational production readiness.
