@@ -1,7 +1,8 @@
-import { Head, usePage } from '@inertiajs/react';
+import { Deferred, Head, usePage } from '@inertiajs/react';
 import { useEffect } from 'react';
 import { AnnouncementsBanner } from '@/components/domain/announcements-banner';
 import { PageContainer } from '@/components/layout/page-container';
+import { AiReadinessBentoCard } from '@/pages/user/dashboard/components/ai-readiness-bento-card';
 import { ContinueStudyingCard } from '@/pages/user/dashboard/components/continue-studying-card';
 import { DailyGoalStreakCard } from '@/pages/user/dashboard/components/daily-goal-streak-card';
 import { DashboardHero } from '@/pages/user/dashboard/components/dashboard-hero';
