@@ -7,6 +7,7 @@ use App\Http\Resources\AnalyticsMetricsResource;
 use App\Models\ExamAttempt;
 use App\Models\ExamDate;
 use App\Models\Subcategory;
+use App\Services\Learning\LearningInsightsService;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Schema;
 
@@ -314,6 +315,8 @@ class AnalyticsService
             'subtestThresholds' => $subtestThresholds,
             'hasSubtestRisk' => $hasSubtestRisk,
             'coveredCategoriesCount' => $coveredCategoriesCount,
+            // Honest signals: independent-only mastery, timed suggestion, pace.
+            'learning' => app(LearningInsightsService::class)->forUser($userId),
             'filters' => [
                 'track' => $track,
                 'runs' => $runs,

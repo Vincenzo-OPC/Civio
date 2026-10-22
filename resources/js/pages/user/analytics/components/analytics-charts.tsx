@@ -14,11 +14,13 @@ export default function AnalyticsCharts({
     categories,
     pacingTrend,
     isDemoMode,
+    masteryCategories,
 }: {
     chartData: ChartDataPoint[];
     categories: AnalyticsCategory[];
     pacingTrend: PacingTrend[];
     isDemoMode: boolean;
+    masteryCategories?: AnalyticsCategory[];
 }) {
     return (
         <>
@@ -27,7 +29,9 @@ export default function AnalyticsCharts({
 
             {/* Row 2: Subject Mastery (Radial) + Question Volume (Donut) */}
             <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2">
-                <SubjectMasteryChart categories={categories} />
+                <SubjectMasteryChart
+                    categories={masteryCategories ?? categories}
+                />
                 <QuestionVolumeChart categories={categories} />
             </div>
 

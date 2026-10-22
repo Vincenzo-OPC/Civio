@@ -9,6 +9,7 @@ import { useLiteMode } from '@/hooks/use-lite-mode';
 import { AiDiagnosticBanner } from './components/ai-diagnostic-banner';
 import { AnalyticsFilters } from './components/analytics-filters';
 import { CseReadinessCard } from './components/cse-readiness-card';
+import { LearningSignalsCard } from './components/learning-signals-card';
 import { LiteAnalyticsTables } from './components/lite-analytics-tables';
 import { MetricsGrid } from './components/metrics-grid';
 import { SubjectBreakdownAccordion } from './components/subject-breakdown-accordion';
@@ -121,9 +122,16 @@ export default function AnalyticsIndex({ stats, aiAnalysis }: AnalyticsProps) {
                             categories={categories}
                             pacingTrend={activeStats.pacingTrend || []}
                             isDemoMode={isDemoMode}
+                            masteryCategories={activeStats.learning?.mastery.map(
+                                (m) => ({ ...m, color: '' }),
+                            )}
                         />
                     </Suspense>
                 )}
+
+                {activeStats.learning ? (
+                    <LearningSignalsCard learning={activeStats.learning} />
+                ) : null}
 
                 {/* Row 4: Detailed Subject & Subcategory Breakdown Accordion */}
                 <SubjectBreakdownAccordion categories={categories} />

@@ -81,6 +81,7 @@ export interface AnalyticsStats {
     };
     pacingTrend?: PacingTrend[];
     attemptBreakdowns?: AttemptBreakdown[];
+    learning?: LearningSignals;
 }
 
 export interface AnalyticsProps {
@@ -89,4 +90,16 @@ export interface AnalyticsProps {
         status: 'no_data' | 'generating' | 'ready' | 'failed' | 'no_exam_date';
         data: any | null;
     };
+}
+
+/** Independent-only signals from LearningInsightsService. */
+export interface LearningSignals {
+    mastery: {
+        name: string;
+        correct: number;
+        total: number;
+        percentage: number;
+    }[];
+    timedSuggestions: string[];
+    pace: { name: string; secondsPerItem: number; items: number }[];
 }
