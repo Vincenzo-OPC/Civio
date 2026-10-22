@@ -18,7 +18,7 @@
 
 The [source lock](data/source-lock.json) pins every inspected content PR. The [repository inventory](data/repository-inventory.json) has paths, source commits, fingerprints and flags. Open PRs 3-12 include metadata, baseline conversions, replacement drafts, gap batches and lint fixes. They have not been merged or counted as approved. Other open PRs cover styling, security and dashboard work; no concurrent work was overwritten.
 
-Unmerged gap-fill-2000-01 through 05 contain **406 distinct candidate IDs**: Filipino 127, Numerical 80, Analytical 101, Clerical 48, GI 35, English 15. PRs 7 and 12 contain two representations of the same 99 Filipino IDs. Baseline conversion 550 is not 550 new questions. B3/B4 provide 49 replacement drafts. Lint-fix files contain 371 occurrences, primarily replacements; even added passage companions need identity review before counting. The 496-item reparameterized seed is a separate unapproved proposal, not a release collection.
+Unmerged gap-fill-2000-01 through 05 contain **406 distinct candidate IDs**: Filipino 127, Numerical 80, Analytical 101, Clerical 48, GI 35, English 15. PRs 7 and 12 contain two representations of the same 99 Filipino IDs. Baseline conversion 550 is not 550 new questions. B3/B4 provide 49 replacement drafts. Lint-fix files contain 371 occurrences, primarily replacements; even added passage companions need identity review before counting. The 495-item reparameterized seed is a separate unapproved proposal, not a release collection.
 
 ## Independent answer checking and limits
 
