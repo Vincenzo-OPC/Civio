@@ -23,7 +23,7 @@ export function answerOptionVisual(input: {
         typeof input.correctIndex === 'number';
 
     if (showKey && input.optionIndex === input.correctIndex && selected) {
-        return { visual: 'correct', status: 'Correct' };
+        return { visual: 'correct', status: 'Your answer · Correct' };
     }
 
     if (showKey && input.optionIndex === input.correctIndex) {
@@ -31,7 +31,7 @@ export function answerOptionVisual(input: {
     }
 
     if (showKey && selected) {
-        return { visual: 'incorrect', status: 'Your answer' };
+        return { visual: 'incorrect', status: 'Your answer · Incorrect' };
     }
 
     if (selected) {
@@ -66,4 +66,28 @@ export function shouldRunExamClock(input: {
     isPaused: boolean;
 }): boolean {
     return input.isExamActive && !input.isExamSubmitted && !input.isPaused;
+}
+
+/** Restore original-option server answers into the displayed shuffled positions. */
+export function restoreAnswerPositions(
+    questions: { id: number; originalOptionIndices?: number[] }[],
+    answers: Record<string, number | null>,
+): Record<number, number> {
+    const restored: Record<number, number> = {};
+    questions.forEach((question, index) => {
+        const chosen = answers[String(question.id)];
+
+        if (chosen === undefined || chosen === null) {
+            return;
+        }
+
+        const display =
+            question.originalOptionIndices?.indexOf(chosen) ?? chosen;
+
+        if (display >= 0) {
+            restored[index] = display;
+        }
+    });
+
+    return restored;
 }

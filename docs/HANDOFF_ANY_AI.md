@@ -70,7 +70,7 @@ Briefs are how work moves between AIs. Write the task into `docs/` as a brief, c
 - Write gap-fill-004: 2 items each on R.A. 7610, 9710, 9745, 10353 and 9851.
 - Audit `chatgpt-batch-002.json` (100 English drafts).
 - Audit baseline batch B3 (GI: R.A. 6713 and Environment), then the other baseline domains.
-- Audit Codex's 496-item `scripts/seeds/baseline_reparameterized.json` as its own round.
+- Audit Codex's 495-item `scripts/seeds/baseline_reparameterized.json` as its own round.
 
 ## 4. Local Civio on GT's MSI
 

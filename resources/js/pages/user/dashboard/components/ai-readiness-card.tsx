@@ -127,9 +127,7 @@ export default function AiReadinessCard({
                         </div>
                         <div>
                             <h3 className="flex items-center justify-center gap-2 text-xl font-semibold tracking-tight text-slate-900 md:justify-start dark:text-white">
-                                {analysisMode === 'ai'
-                                    ? 'AI Readiness Report'
-                                    : 'Readiness Report'}
+                                Practice Report
                                 <span className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-[10px] font-medium text-slate-700 dark:border-slate-500/20 dark:border-slate-900/50 dark:bg-slate-500/10 dark:bg-slate-950/30 dark:text-slate-400">
                                     Archived
                                 </span>
@@ -157,9 +155,7 @@ export default function AiReadinessCard({
                         </div>
                         <div>
                             <h3 className="flex items-center justify-center gap-2 text-xl font-semibold tracking-tight text-slate-900 md:justify-start dark:text-white">
-                                {analysisMode === 'ai'
-                                    ? 'AI Readiness Report'
-                                    : 'Readiness Report'}
+                                Practice Report
                                 <span className="inline-flex items-center rounded-full border border-rose-200 bg-rose-50 px-2 py-0.5 text-[10px] font-medium text-rose-700 dark:border-rose-500/20 dark:border-rose-900/50 dark:bg-rose-500/10 dark:bg-rose-950/30 dark:text-rose-400">
                                     Failed
                                 </span>
@@ -197,19 +193,14 @@ export default function AiReadinessCard({
                         </div>
                         <div>
                             <h3 className="flex items-center justify-center gap-2 text-xl font-semibold tracking-tight text-slate-900 md:justify-start dark:text-white">
-                                {analysisMode === 'ai'
-                                    ? 'AI Readiness Report'
-                                    : 'Readiness Report'}
+                                Practice Report
                                 <span className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-2 py-0.5 text-[10px] font-medium text-blue-700 dark:border-blue-500/20 dark:border-blue-900/50 dark:bg-[#B3F52D] dark:bg-rose-950/30 dark:text-[#0A0A0A]/10 dark:text-[#B3F52D]">
                                     Locked
                                 </span>
                             </h3>
                             <p className="dark:text-slate-450 mt-1 text-base leading-relaxed font-medium text-slate-500 dark:text-slate-400">
-                                Complete your first exam to unlock your{' '}
-                                {analysisMode === 'ai'
-                                    ? 'AI Readiness Report'
-                                    : 'Readiness Report'}
-                                .
+                                Complete your first exam to unlock your Practice
+                                Report .
                             </p>
                         </div>
                     </div>
@@ -329,9 +320,7 @@ export default function AiReadinessCard({
                         </div>
                         <div>
                             <h3 className="flex items-center gap-2 text-base font-bold tracking-tight text-slate-900 dark:text-white">
-                                {analysisMode === 'ai'
-                                    ? 'AI Readiness Report'
-                                    : 'Readiness Report'}
+                                Practice Report
                                 <Link
                                     href="/settings/preferences"
                                     title="Change analysis mode preference"
@@ -355,8 +344,8 @@ export default function AiReadinessCard({
                                 </Link>
                             </h3>
                             <p className="text-sm leading-relaxed text-slate-500 dark:text-slate-400">
-                                Smart coaching insights tailored to your exam
-                                history
+                                Counts from the attempts you finished. Not a
+                                forecast.
                             </p>
                         </div>
                     </div>

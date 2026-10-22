@@ -1,0 +1,5 @@
+{
+  "public_key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPyjaxw8WtgswcXmmR2WZM00OhosKpHkGzPmQrskW+y0 civio-test-only",
+  "record": "{\"schema\":1,\"operation\":\"replace-baseline\",\"approver\":\"GT\",\"author\":\"synthetic-author\",\"reviewer\":\"synthetic-reviewer\",\"manifest_sha256\":\"61215ef57d7e567cfbeafd569553f6af317c91d21ae44c856fc6895cfd84579d\",\"review_report_sha256\":\"11a0bad7533cb687b8e49d839fc733bf499e8de9b81359856c8f6f0e2b0f6780\",\"expires_at\":\"2099-01-01T00:00:00Z\"}",
+  "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAg/KNrHDxa2CzBxeaZHZZkzTQ6Gi\nwqkeQbM+ZCuyRb7LQAAAATY2l2aW8tYmFuay1hcHByb3ZhbAAAAAAAAAAGc2hhNTEyAAAA\nUwAAAAtzc2gtZWQyNTUxOQAAAED3aDnoewY4PLtFPuW6g6lOwBhjoSqh+MqFhodLoUYMXZ\nnYCEgHM9mRJExOz8tVsuCDXNuvtJHB72+GJwcYxNcH\n-----END SSH SIGNATURE-----\n"
+}

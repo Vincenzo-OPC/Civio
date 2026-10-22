@@ -55,7 +55,9 @@ class QuestionRepository extends BaseRepository implements QuestionRepositoryInt
     {
         $cached = Cache::get('questions.active');
         if ($cached instanceof Collection && ! $cached->contains(fn ($item) => $item instanceof \__PHP_Incomplete_Class)) {
-            return $cached;
+            $activeIds = $this->model->newQuery()->where('status', 'active')->pluck('id');
+
+            return $cached->whereIn('id', $activeIds)->values();
         }
 
         $questions = $this->model->newQuery()

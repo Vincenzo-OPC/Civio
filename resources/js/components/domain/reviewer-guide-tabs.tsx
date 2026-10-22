@@ -38,7 +38,7 @@ export function ReviewerGuideTabs({
     const appFeatures = [
         {
             id: 'dashboard',
-            title: 'Dashboard & Readiness Tracker',
+            title: 'Dashboard',
             badge: 'Home Base',
             icon: LayoutDashboard,
             color: 'text-[#5B35F5] dark:text-[#B3F52D] dark:text-[#B3F52D] bg-blue-50 dark:bg-blue-950/40 border-blue-200 dark:border-blue-900/40',
@@ -142,7 +142,7 @@ export function ReviewerGuideTabs({
         {
             id: 'analytics',
             title: 'Performance Analytics',
-            badge: 'Readiness Diagnostics',
+            badge: 'Practice scores',
             icon: TrendingUp,
             color: 'text-cyan-600 dark:text-cyan-400 bg-cyan-50 dark:bg-cyan-950/40 border-cyan-200 dark:border-cyan-900/40',
             summary:

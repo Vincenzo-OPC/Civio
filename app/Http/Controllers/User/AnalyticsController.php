@@ -53,7 +53,7 @@ class AnalyticsController extends Controller
                 'cseReadinessIndex' => 0,
                 'subtestThresholds' => [],
                 'hasSubtestRisk' => false,
-                'percentileRank' => 50,
+                'percentileRank' => null,
                 'coveredCategoriesCount' => 0,
                 'mockExamCount' => 0,
             ]))->resolve();

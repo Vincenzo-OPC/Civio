@@ -1,4 +1,5 @@
 import { existsSync, readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import inertia from '@inertiajs/vite';
 import { wayfinder } from '@laravel/vite-plugin-wayfinder';
 import tailwindcss from '@tailwindcss/vite';
@@ -92,6 +93,20 @@ function trimPrecache<T extends { url: string }>(entries: T[]) {
 }
 
 export default defineConfig({
+    resolve: {
+        alias: [
+            {
+                // Exact match. A string alias would also catch html2canvas-pro.
+                find: /^html2canvas$/,
+                replacement: fileURLToPath(
+                    new URL(
+                        './resources/js/lib/html2canvas-stub.ts',
+                        import.meta.url,
+                    ),
+                ),
+            },
+        ],
+    },
     plugins: [
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.tsx'],

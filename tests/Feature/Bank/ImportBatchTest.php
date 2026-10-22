@@ -2,12 +2,15 @@
 
 use App\Console\Commands\ImportBatchCommand;
 use App\Models\Question;
+use Illuminate\Support\Facades\DB;
+
+require_once __DIR__.'/../../Support/BankApprovalFixtures.php';
 
 test('batch 001 imports as active civio items, keyed, and re-running changes nothing', function () {
     $path = base_path('docs/batches/batch-001.json');
 
-    $this->artisan('civio:import-batch', ['path' => $path])
-        ->expectsOutputToContain('Imported 10 item(s): 10 created, 0 updated.')
+    $this->artisan('civio:import-batch', ['path' => $path, ...bankSign($path, 'import-batch-active')])
+        ->expectsOutputToContain('Imported 10 item(s): 10 inserted or promoted, 0 unchanged.')
         ->assertSuccessful();
 
     expect(Question::count())->toBe(10)
@@ -22,14 +25,14 @@ test('batch 001 imports as active civio items, keyed, and re-running changes not
     $spell = Question::where('stem', 'like', 'Which word is misspelled?%')->firstOrFail();
     expect($spell->options[$spell->correct_option])->toBe('aquire');
 
-    $this->artisan('civio:import-batch', ['path' => $path])
-        ->expectsOutputToContain('0 created, 10 updated.')
+    $this->artisan('civio:import-batch', ['path' => $path, ...bankSign($path, 'import-batch-active')])
+        ->expectsOutputToContain('0 inserted or promoted, 10 unchanged.')
         ->assertSuccessful();
     expect(Question::count())->toBe(10);
 });
 
 test('dry run saves nothing and a bad file fails', function () {
-    $this->artisan('civio:import-batch', ['path' => base_path('docs/batches/batch-001.json'), '--dry-run' => true])
+    $this->artisan('civio:import-batch', ['path' => base_path('docs/batches/batch-001.json'), '--dry-run' => true, ...bankSign(base_path('docs/batches/batch-001.json'), 'import-batch-active')])
         ->expectsOutputToContain('Validated 10 item(s)')
         ->assertSuccessful();
     expect(Question::count())->toBe(0);
@@ -41,7 +44,7 @@ test('dry run saves nothing and a bad file fails', function () {
 });
 
 test('imported items stay out of offline packs, so the offline caps still hold', function () {
-    $this->artisan('civio:import-batch', ['path' => base_path('docs/batches/batch-001.json')])->assertSuccessful();
+    $this->artisan('civio:import-batch', ['path' => base_path('docs/batches/batch-001.json'), ...bankSign(base_path('docs/batches/batch-001.json'), 'import-batch-active')])->assertSuccessful();
 
     $this->artisan('civio:mark-offline-eligible')->assertSuccessful();
     expect(Question::where('offline_eligible', true)->count())->toBe(0);
@@ -51,7 +54,7 @@ test('a generated batch imports as drafts with --status=draft, all 100 items, no
     $path = base_path('docs/batches/batch-002.json');
 
     $this->artisan('civio:import-batch', ['path' => $path, '--status' => 'draft'])
-        ->expectsOutputToContain('Imported 100 item(s): 100 created, 0 updated.')
+        ->expectsOutputToContain('Imported 100 item(s): 100 inserted or promoted, 0 unchanged.')
         ->assertSuccessful();
 
     expect(Question::where('status', 'draft')->count())->toBe(100)
@@ -77,7 +80,7 @@ test('generated unreviewed items cannot be activated even when the operator omit
     $path = tempnam(sys_get_temp_dir(), 'unreviewed-batch-');
     file_put_contents($path, json_encode($batch));
 
-    $this->artisan('civio:import-batch', ['path' => $path])
+    $this->artisan('civio:import-batch', ['path' => $path, ...bankSign($path, 'import-batch-active')])
         ->expectsOutputToContain('active import requires status=approved and review_status=passed')
         ->assertFailed();
 
