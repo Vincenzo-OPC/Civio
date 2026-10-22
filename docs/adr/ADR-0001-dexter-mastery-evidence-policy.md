@@ -1,6 +1,6 @@
 # ADR-0001 (DRAFT): Dexter mastery evidence policy
 
-- Status: **Proposed, awaiting Astra.** Not accepted. No code changes until accepted.
+- Status: **Accepted by GT (owner) 2026-10-22; Astra review not performed.** Option A implemented in the amended form below.
 - Date: 2026-10-22 (Asia/Manila)
 - Issue: #20
 - Evidence: `docs/research/dexter2/mastery_simulation.py` and `mastery_simulation_results.json` (synthetic, offline, seeds 11/23/37); `docs/research/DEXTER_2_RESEARCH_AUDIT_2026-10-22.md` §4.
@@ -39,9 +39,32 @@ B. **A + per-item difficulty via population Elo.** Store `elo_difficulty` per qu
 C. **Rolling independent accuracy with a confidence band (Wilson).** The simplest to explain to learners ("7 of your last 10 fresh fractions questions"). It ignores difficulty.
 D. **Fit BKT per archetype with pyBKT (MIT) offline.** Only after ≥ 200 learners × 10 independent answers per archetype exist. pyBKT runs offline in Python; nothing ships at runtime.
 
-## Decision
+## Decision (GT, 2026-10-22)
 
-None yet. Recommended next step for any option: A's evidence-stream fixes, because every option needs them.
+Option A, amended by GT. The fixed 7-day repeat rule proposed above was **rejected**:
+
+- **Two streams** (`App\Services\Dexter\SkillEvidenceBuilder`):
+  - *knowledge*: the first independent answer to each distinct question feeds `SkillMasteryEstimator`;
+  - *retention*: every later answer to a question already answered feeds retention/FSRS only, whatever the gap.
+- **Blank** is its own `unanswered` state. It is not wrong, and it doesn't use up the question.
+- **Assisted** (Reveal/Expound) answers are never knowledge evidence, and they do use up the question.
+- **Ordering**: by timestamp, then a stable sequence (attempt id × 1000 + position; offline rows after that). Exam answers use the attempt's `created_at`. Accepted offline answers use their stored `answered_at`. Events without a time sort after timed ones by sequence only. No `answered_at` column was added to exam answers and nothing is backfilled or invented.
+- **Uncertainty**: fewer than 5 distinct independent answers gives `status: insufficient`. `LearningInsightsService.skillEvidence` exposes counts and status only, no estimate value.
+- **Wording**: fixed parameters are labelled `calibrated: false` and the model is `bkt-v2-fixed`. No mastery, readiness or pass prediction is displayed.
+- No Elo, no pyBKT.
+
+### Offline benchmark on the knowledge stream
+
+`docs/research/dexter2/evidence_stream_benchmark.py` → `evidence_stream_benchmark_results.json`. It compares fixed BKT and rolling10 fed only first independent answers:
+
+| generator | BKT Brier / ECE / false-ready | rolling10 Brier / ECE / false-ready |
+|---|---|---|
+| bkt_hetero | 0.142 / 0.016 / 0.007 | 0.158 / 0.083 / 0.001 |
+| irt_drift | 0.230 / 0.132 / 0.340 | 0.217 / 0.063 / 0.124 |
+| repeats | 0.228 / 0.126 / 0.318 | 0.219 / 0.077 / 0.145 |
+| skips | 0.239 / 0.139 / 0.376 | 0.225 / 0.069 / 0.137 |
+
+Cleaning the inputs doesn't fix fixed-BKT over-confidence on non-BKT data. That is why the estimate stays an internal ranking signal and is not shown.
 
 ## Acceptance tests (any option)
 

@@ -3,6 +3,7 @@
 use App\Enums\ExamMode;
 use App\Models\Category;
 use App\Models\ExamAttempt;
+use App\Models\OfflinePracticeResult;
 use App\Models\Question;
 use App\Models\ReviewEvent;
 use App\Models\Subcategory;
@@ -166,4 +167,31 @@ test('nextFocus is null when no item carries a graph archetype', function () {
     insightAttempt($user, $ids, ExamMode::Strict, array_fill_keys(array_map('strval', $ids), 0));
 
     expect(app(LearningInsightsService::class)->forUser($user->id)['nextFocus'])->toBeNull();
+});
+
+test('skill evidence: blanks are not wrong, repeats do not inflate, offline answers count with their time', function () {
+    $user = User::factory()->create();
+    $ids = insightItems('Numerical Ability', 6);
+    Question::whereIn('id', $ids)->update(['archetype' => 'NUM-WP-PCT-CHANGE']);
+    $skill = fn () => collect(app(LearningInsightsService::class)->forUser($user->id)['skillEvidence'])->firstWhere('skill', 'NUM-WP-PCT-CHANGE');
+
+    // Six blanks: no wrong evidence, no recommendation.
+    insightAttempt($user, $ids, ExamMode::Strict, []);
+    expect($skill())->toMatchArray(['independent' => 0, 'unanswered' => 6, 'status' => 'insufficient'])
+        ->and(app(LearningInsightsService::class)->forUser($user->id)['nextFocus'])->toBeNull();
+
+    // The same two questions answered correctly three times: two independent answers, four repeats.
+    foreach ([1, 2, 3] as $_) {
+        insightAttempt($user, array_slice($ids, 0, 2), ExamMode::Strict, [(string) $ids[0] => 1, (string) $ids[1] => 1]);
+    }
+    expect($skill())->toMatchArray(['independent' => 2, 'repeats' => 4, 'status' => 'insufficient']);
+
+    // Accepted offline answers to three new questions reach five distinct answers.
+    foreach (array_slice($ids, 2, 3) as $i => $qid) {
+        OfflinePracticeResult::create(['owner_key' => 'u'.$user->id, 'user_id' => $user->id, 'client_id' => 'c'.$i,
+            'question_id' => $qid, 'selected_option' => 0, 'claimed_correct_option' => 1, 'is_correct' => false,
+            'status' => 'accepted', 'source' => 'offline_practice', 'pack_version' => 't', 'answered_at' => now()->subHour()]);
+    }
+    expect($skill())->toMatchArray(['independent' => 5, 'status' => 'estimate'])
+        ->and(array_keys($skill()))->not->toContain('estimate');
 });

@@ -6,9 +6,11 @@ namespace App\Services\Learning;
 
 use App\Enums\ExamMode;
 use App\Models\ExamAttempt;
+use App\Models\OfflinePracticeResult;
 use App\Models\Question;
 use App\Models\ReviewEvent;
 use App\Services\Dexter\NextSkillRecommender;
+use App\Services\Dexter\SkillEvidenceBuilder;
 use App\Services\Dexter\SkillGraph;
 use App\Services\Dexter\SkillMasteryEstimator;
 
@@ -131,7 +133,7 @@ final class LearningInsightsService
         $skills = [];
         $history = [];
         $graph = new SkillGraph;
-        $skillEvents = [];
+        $rawSkillEvents = [];
 
         foreach ($attempts->sortBy('id') as $attempt) {
             $strict = $attempt->mode === ExamMode::Strict;
@@ -155,7 +157,19 @@ final class LearningInsightsService
                     $pace[$cat]['items'] = ($pace[$cat]['items'] ?? 0) + 1;
                 }
 
-                if (! $strict && isset($assisted[$attempt->id.':'.$qid])) {
+                $wasAssisted = ! $strict && isset($assisted[$attempt->id.':'.$qid]);
+                $answered = $chosen !== null && $chosen !== '';
+                $graphSkill = $graph->skillFor($q);
+                if ($graphSkill !== null) {
+                    $rawSkillEvents[] = [
+                        'skill' => $graphSkill, 'questionId' => $qid, 'answered' => $answered,
+                        'correct' => $answered && (int) $chosen === (int) $q->correct_option,
+                        'assisted' => $wasAssisted, 'at' => $attempt->created_at?->getTimestamp(),
+                        'seq' => (int) $attempt->id * 1000 + $position,
+                    ];
+                }
+
+                if ($wasAssisted) {
                     continue;
                 }
 
@@ -169,12 +183,24 @@ final class LearningInsightsService
                 $skills[$cat.'|'.$skill]['subcategoryId'] = (int) $q->subcategory_id;
                 $history[$qid][] = ['correct' => $isCorrect, 'at' => $attempt->created_at];
 
-                $graphSkill = $graph->skillFor($q);
-                if ($graphSkill !== null) {
-                    $skillEvents[] = ['skill' => $graphSkill, 'correct' => $isCorrect];
-                }
             }
         }
+
+        // Offline drill answers (server re-graded, accepted) carry the device's
+        // answered_at; they join the same evidence streams. Never assisted.
+        $offline = OfflinePracticeResult::query()->where('user_id', $userId)->where('status', OfflinePracticeResult::ACCEPTED)
+            ->with('question.subcategory.category')->latest('id')->limit(500)->get();
+        foreach ($offline as $row) {
+            $graphSkill = $row->question !== null ? $graph->skillFor($row->question) : null;
+            if ($graphSkill !== null) {
+                $rawSkillEvents[] = [
+                    'skill' => $graphSkill, 'questionId' => (int) $row->question_id, 'answered' => $row->selected_option !== null,
+                    'correct' => (bool) $row->is_correct, 'assisted' => false,
+                    'at' => $row->answered_at?->getTimestamp(), 'seq' => 1_000_000_000 + (int) $row->id,
+                ];
+            }
+        }
+        $evidence = (new SkillEvidenceBuilder)->build($rawSkillEvents);
 
         $masteryOut = [];
         $suggest = [];
@@ -206,7 +232,37 @@ final class LearningInsightsService
             'skills' => $this->skillProgression($skills),
             'retention' => $this->retention($history),
             // Independent answers only; null until items carry a graph archetype.
-            'nextFocus' => (new NextSkillRecommender($graph))->recommend((new SkillMasteryEstimator)->estimate($skillEvents)),
+            'nextFocus' => (new NextSkillRecommender($graph))->recommend($estimates = (new SkillMasteryEstimator)->estimate($evidence['knowledge'])),
+            'skillEvidence' => $this->skillEvidence($graph, $estimates, $evidence),
         ];
+    }
+
+    /**
+     * Per-skill evidence counts and an explicit uncertainty state (ADR-0001).
+     * No estimate value, mastery, readiness or pass prediction is exposed.
+     *
+     * @param  array<string, array{answers: int, status: string}>  $estimates
+     * @param  array{knowledge: list<array{skill: string, correct: bool}>, retention: list<array{skill: string, questionId: int, correct: bool}>, unanswered: array<string, int>, assisted: array<string, int>}  $evidence
+     * @return list<array{skill: string, label: string, independent: int, unanswered: int, assisted: int, repeats: int, status: string}>
+     */
+    private function skillEvidence(SkillGraph $graph, array $estimates, array $evidence): array
+    {
+        $repeats = [];
+        foreach ($evidence['retention'] as $r) {
+            $repeats[$r['skill']] = ($repeats[$r['skill']] ?? 0) + 1;
+        }
+
+        $skills = array_unique([...array_keys($estimates), ...array_keys($evidence['unanswered']), ...array_keys($evidence['assisted']), ...array_keys($repeats)]);
+        sort($skills);
+
+        return array_values(array_map(fn (string $s) => [
+            'skill' => $s,
+            'label' => $graph->label($s),
+            'independent' => $estimates[$s]['answers'] ?? 0,
+            'unanswered' => $evidence['unanswered'][$s] ?? 0,
+            'assisted' => $evidence['assisted'][$s] ?? 0,
+            'repeats' => $repeats[$s] ?? 0,
+            'status' => $estimates[$s]['status'] ?? 'insufficient',
+        ], $skills));
     }
 }

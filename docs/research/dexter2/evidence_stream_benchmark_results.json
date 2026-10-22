@@ -1,0 +1,69 @@
+{
+ "note": "Synthetic only. Fixed BKT parameters are not calibrated; this does not pick a model.",
+ "results": {
+  "bkt_hetero": {
+   "bkt_fixed": {
+    "brier": 0.1415,
+    "log_loss": 0.4474,
+    "ece": 0.0157,
+    "n_ready_claims": 6332.0,
+    "false_ready_rate": 0.0066
+   },
+   "rolling10": {
+    "brier": 0.1581,
+    "log_loss": 0.489,
+    "ece": 0.0827,
+    "n_ready_claims": 2065.6667,
+    "false_ready_rate": 0.0009
+   }
+  },
+  "irt_drift": {
+   "bkt_fixed": {
+    "brier": 0.2304,
+    "log_loss": 0.6729,
+    "ece": 0.1318,
+    "n_ready_claims": 5485.6667,
+    "false_ready_rate": 0.3397
+   },
+   "rolling10": {
+    "brier": 0.2169,
+    "log_loss": 0.6231,
+    "ece": 0.0628,
+    "n_ready_claims": 687.6667,
+    "false_ready_rate": 0.1244
+   }
+  },
+  "repeats": {
+   "bkt_fixed": {
+    "brier": 0.228,
+    "log_loss": 0.6641,
+    "ece": 0.1262,
+    "n_ready_claims": 3772.6667,
+    "false_ready_rate": 0.3184
+   },
+   "rolling10": {
+    "brier": 0.2185,
+    "log_loss": 0.6276,
+    "ece": 0.0766,
+    "n_ready_claims": 450.6667,
+    "false_ready_rate": 0.1445
+   }
+  },
+  "skips": {
+   "bkt_fixed": {
+    "brier": 0.2391,
+    "log_loss": 0.6933,
+    "ece": 0.1394,
+    "n_ready_claims": 4388.3333,
+    "false_ready_rate": 0.3758
+   },
+   "rolling10": {
+    "brier": 0.225,
+    "log_loss": 0.6413,
+    "ece": 0.0689,
+    "n_ready_claims": 449.6667,
+    "false_ready_rate": 0.1374
+   }
+  }
+ }
+}

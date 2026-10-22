@@ -73,7 +73,7 @@ test('with solid foundations the weak skill itself is recommended, never called 
 
     expect($r['skill'])->toBe('NUM-WP-PCT-CHANGE')
         ->and($r['kind'])->toBe('practice_skill')
-        ->and($r['model'])->toBe('bkt-v1')
+        ->and($r['model'])->toBe('bkt-v2-fixed')
         ->and(strtolower(json_encode($r)))->not->toContain('master');
 });
 
