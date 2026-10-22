@@ -371,6 +371,18 @@ On the updated PR commit, `python scripts/batches/qa_file.py docs/research/gap-f
 - `CIVIO-GF2K05-RCI-0001`: removed the unsupported comparison “as much as planting”; the answer now states only that selecting a suitable planting zone is important for survival.
 - `CIVIO-GF2K05-RCI-0002`: removed causal wording (“reminders helped”) unsupported by the before/after passage; the answer now reports that missed doses declined after reminders began while distance remains a stated barrier.
 
-Revised branch head: `882f571690e2fef11eedfc70f8b7b76ed1f5b9e9`. Repository `qa_file.py` passes: **15 items, 1,656 comparison records, 0 problems**. The 117-item lint-fix file separately passes `qa_fixfile.py`: **117 fixes, 1,592 comparison records (originals excluded), 0 problems**. This structural check does not constitute independent semantic review of those 117 fixes. The branch does not contain the referenced `explanation_lint.py` module, so that PR's reported lint result could not be reproduced from this checkout.
+Revised branch head: `882f571690e2fef11eedfc70f8b7b76ed1f5b9e9`. Repository `qa_file.py` passes: **15 items, 1,656 comparison records, 0 problems**. The 117-item lint-fix file separately passes `qa_fixfile.py`: **117 fixes, 1,592 comparison records (originals excluded), 0 problems**. This structural check does not constitute independent semantic review of those 117 fixes. The branch itself does not contain the referenced `explanation_lint.py`; I reproduced its check using the repository version present at PR #12 head `7220b8ade08deee3b348233702b97e4710fd807d`: 15/15 new items and 117/117 fixes, 0 flagged each.
 
 **Disposition:** The 15 new items remain `draft/unreviewed`; no approval, activation, import, merge or release count. The separate 117 full-item correction proposals remain unreviewed here, and the two known exceptions/holds identified in the PR's own tracker entry remain unresolved. Continue by auditing those fixes and obtaining the existing independent approval before any release selection.
+
+
+## 2026-10-22: Independent structural QA of gap-fill-2000-06 proposal (open PR #12)
+
+**Scope:** Checked PR #12 head `7220b8ade08deee3b348233702b97e4710fd807d`, containing the 99-item gap-fill-2000-01 batch and 254 full-item explanation-fix drafts. This is a validation pass, not a complete semantic audit or content approval.
+
+**Reproducible repository checks:**
+- `qa_file.py`: 99 new items, 1,656 comparison items, 0 problems.
+- `qa_fixfile.py`: 254 fixes, 1,504 comparison items excluding replaced originals; it reports six failures because its deterministic clerical solver cannot recompute the key for the filing-item archetype. This solver only implements `CLR-FILE-POSITION`, not the `CLR-FILE-ORDER` items in those six records. The errors mean “not mechanically verified,” not proven wrong. IDs: `CIVIO-GAP1-CLR-FILE-ORDER-0021-LINTFIX`, `0022-LINTFIX`, `CIVIO-GAP2-CLR-FILE-ORDER-0014-LINTFIX`, `CIVIO-GAP3-CLR-FILE-ORDER-0016-LINTFIX`, `0018-LINTFIX`, and `0020-LINTFIX`. These require competent manual filing-rule review; ANSI/ARMA full text remains unavailable in this environment.
+- `explanation_lint.py`: 99 new items and 254 fixes, 0 flagged in each file.
+
+**Disposition:** This does not verify the answers, explanations, or originality of all 99 + 254 records. Keep all proposed edits in draft/unreviewed state. Do not count drafts as approved or use the manifest's historical 1,641 + 359 projection as a current verified inventory. No activation, import, merge, or release approval.
