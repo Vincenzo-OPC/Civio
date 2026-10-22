@@ -1,5 +1,8 @@
 # Civio repository rules
 
+> **22 Oct 2026 GT scope correction: ADAPTIVE MCQs ONLY.** Read [StudyStash competitive analysis and MCQ-first brief](docs/research/STUDYSTASH_MCQ_ADAPTIVE_LEARNING_REVIEW_2026-10-22.md) with the current Dexter plan and Issue #17. Keep Civio's teaching, adaptive selection, explanations, fresh transfer and spaced review **inside multiple-choice questions**. Do not add flashcards, matching, podcasts, drag/drop exam formats or mini-games. This is a product-research handoff for Grok Bot (independent scout), Astra (architecture) and Codex (later code), not a background start signal. Preserve all existing bank, security, no-cost, no-deploy and Lite gates.
+
+
 > **COPY/PASTE HANDOFF SOURCE OF TRUTH:** [docs/DEXTER_CODEX_PROMPT_CURRENT.md](docs/DEXTER_CODEX_PROMPT_CURRENT.md). This supersedes previous prompts. Codex must consult it at session startup along with the master Dexter plan and Astra-reviewed pacing/evals brief. Keep the user's older instructions and the current security roadmap intact.
 
 
