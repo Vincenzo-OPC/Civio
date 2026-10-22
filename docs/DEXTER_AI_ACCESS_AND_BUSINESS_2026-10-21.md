@@ -1,4 +1,6 @@
 # Dexter AI access, user-funded inference and Civio revenue
+
+> **Binding GT decision, 22 Oct 2026:** Owner-funded AI budget is exactly **₱0**, including tiny charges that become meaningful when multiplied by thousands of simultaneous free users. Development of disabled-by-default Dexter is allowed; activating any owner-funded model is not. A user must fund eligible inference with their own allowed account/plan/credits, or an actually zero-owner-exposure path must be proved and accepted by GT. Do not assume free tiers can operate uncapped for an unlimited public user base. See [zero-cost activation gate](DEXTER_ZERO_COST_ACTIVATION_GATE_2026-10-22.md). This supersedes any suggestion below of even a 'low-cost' platform-funded fallback; that option is now **rejected** pending an explicit new funding decision.
 Research snapshot: 21 October 2026 (Asia/Manila). STATUS: policy and feasibility study; NO provider, payment, billing, keys, partnership or deployment authorized.
 Parent: [Dexter implementation master plan](DEXTER_ADAPTIVE_TUTOR_MASTER_PLAN_2026-10-21.md).
 
