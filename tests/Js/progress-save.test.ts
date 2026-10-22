@@ -10,6 +10,7 @@ import {
     settleSave,
     withoutWithdrawn,
 } from '../../resources/js/pages/user/exams/utils/progress-save';
+import type { Question } from '../../resources/js/pages/user/exams/types';
 import type { ProgressResponse } from '../../resources/js/pages/user/exams/utils/progress-save';
 
 const fail = (status: number) =>
@@ -188,10 +189,26 @@ function harness(answers: Record<number, number> = {}) {
         ) {
             ui.answers = update(ui.answers);
         },
-        hydrate() {},
-        notify(level: string, message: string) {
-            ui.notices.push(`${level}: ${message}`);
+        questions: {
+            current: [{ id: 7 }, { id: 8 }, { id: 9 }] as unknown as Question[],
         },
+        hydrate(server: Record<string, number | null>) {
+            const ids = [7, 8, 9];
+            ui.answers = Object.fromEntries(
+                ids.flatMap((id, i) =>
+                    server[id] == null ? [] : [[i, server[id] as number]],
+                ),
+            );
+        },
+        toast: Object.fromEntries(
+            ['info', 'success', 'warning', 'error'].map((level) => [
+                level,
+                (message: string) => ui.notices.push(`${level}: ${message}`),
+            ]),
+        ) as Record<
+            'info' | 'success' | 'warning' | 'error',
+            (m: string) => number
+        >,
     };
     const state = {
         pending: new Map<number, number | null>(),
@@ -209,19 +226,23 @@ function harness(answers: Record<number, number> = {}) {
                 ...ui,
                 closed: (s: boolean) => ui.closed.push(s),
                 setAnswers: ui.setAnswers,
-                notify: ui.notify,
             }),
     };
 }
 
 test('UI: a mixed save keeps active answers, drops the retired one and warns once', () => {
-    const h = harness({ 7: 1, 8: 0, 9: 3 });
+    // Positions 0,1,2 hold items 7,8,9: answers are keyed by position.
+    const h = harness({ 0: 1, 1: 0, 2: 3 });
     const version = h.settle(
         { kind: 'saved', version: 2, withdrawn: [9] },
         { 7: 1, 8: 0, 9: 3 },
     );
     assert.equal(version, 2);
-    assert.deepEqual(h.ui.answers, { 7: 1, 8: 0 });
+    assert.deepEqual(
+        h.ui.answers,
+        { 0: 1, 1: 0 },
+        'only position 2 (item 9) is cleared',
+    );
     assert.equal(h.ui.notices.length, 1);
     assert.match(
         h.ui.notices[0],
@@ -241,7 +262,7 @@ test('UI: a mixed save keeps active answers, drops the retired one and warns onc
 });
 
 test('UI: offline answers are held, then a mixed flush clears them and drops the retired one', () => {
-    const h = harness({ 7: 1, 9: 2 });
+    const h = harness({ 0: 1, 2: 2 });
     assert.equal(h.settle({ kind: 'offline' }, { 7: 1 }), null);
     h.settle({ kind: 'offline' }, { 9: 2 });
     assert.deepEqual(
@@ -262,7 +283,7 @@ test('UI: offline answers are held, then a mixed flush clears them and drops the
         Object.fromEntries(h.state.pending),
     );
     assert.equal(h.state.pending.size, 0);
-    assert.deepEqual(h.ui.answers, { 7: 1 });
+    assert.deepEqual(h.ui.answers, { 0: 1 });
     assert.ok(h.ui.notices.some((n) => n.startsWith('success: Reconnected')));
 });
 
@@ -376,4 +397,27 @@ test('resume: storage is cleared once everything is saved, and on withdrawal', (
     assert.deepEqual(h.state.server, { 7: 1 });
     persistPending(h.state);
     assert.equal(storage.data.size, 0);
+});
+
+test('UI: a conflict merge rehydrates by position and keeps answers still pending', () => {
+    const h = harness({ 0: 0 });
+    h.state.pending.set(9, 3);
+    h.settle(
+        { kind: 'merged', version: 4, answers: { 7: 1, 8: 2 }, withdrawn: [] },
+        { 8: 2 },
+    );
+    assert.deepEqual(h.ui.answers, { 0: 1, 1: 2, 2: 3 });
+    assert.ok(h.ui.notices.some((n) => /updated from another tab/.test(n)));
+});
+
+test('an empty batch (all withdrawn) sends nothing', async () => {
+    let calls = 0;
+    const out = await saveProgressPatch(
+        async () => (calls++, res()),
+        's',
+        {},
+        5,
+    );
+    assert.deepEqual(out, { kind: 'saved', version: 5, withdrawn: [] });
+    assert.equal(calls, 0);
 });

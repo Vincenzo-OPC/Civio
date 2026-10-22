@@ -255,6 +255,7 @@ export function useExamSubmission({
                             wrongCount: data.wrong_count ?? wrongCount,
                             skippedCount: data.skipped_count ?? skippedCount,
                             retiredCount: data.retired_count ?? 0,
+                            retiredIds: data.retired_ids,
                             categoryScoreMap: serverMap,
                             elapsedSecs,
                         });

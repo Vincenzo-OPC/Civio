@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests\User\Exam;
 
+use App\Services\ExamGradingService;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class StoreExamAttemptRequest extends FormRequest
 {
@@ -49,6 +51,9 @@ class StoreExamAttemptRequest extends FormRequest
             'question_ids.*' => ['integer', 'distinct'],
             'answers' => ['present', 'array', 'max:300'],
             'answers.*' => ['nullable', 'integer', 'min:0', 'max:7'],
+            // How answer keys are meant: question ids (default) or legacy served
+            // positions. Declared, never inferred from the key values.
+            'answer_schema' => ['sometimes', 'string', Rule::in(ExamGradingService::SCHEMAS)],
             // Client may still send cat_scores for backward-compatible clients; ignored for scoring.
             'cat_scores' => ['sometimes', 'array'],
             'metadata' => ['sometimes', 'array'],

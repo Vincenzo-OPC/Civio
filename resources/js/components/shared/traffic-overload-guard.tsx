@@ -77,6 +77,18 @@ export function TrafficOverloadGuard() {
 
                     return response;
                 } catch (error) {
+                    // Offline is not overload: fail at once so callers (e.g.
+                    // Strict-mock autosave) can hold the answer, and never
+                    // show the "server busy" dialog for a dropped connection.
+                    if (
+                        typeof navigator !== 'undefined' &&
+                        navigator.onLine === false
+                    ) {
+                        setIsRetrying(false);
+
+                        throw error;
+                    }
+
                     if (retries < maxRetries) {
                         retries++;
                         setIsRetrying(true);

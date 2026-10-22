@@ -193,8 +193,7 @@ test('legacy position-keyed answers still grade with backward-compatible read', 
     $questions = seedExamQuestions(2);
     $ids = array_map(fn ($q) => $q->id, $questions);
     $grading = app(ExamGradingService::class);
-    expect($grading->detectAnswerSchema([0 => 1, 1 => 0], $ids))->toBe('position');
-    $graded = $grading->grade($ids, [0 => 1, 1 => 0], ['track' => 'Drill']);
+    $graded = $grading->grade($ids, [0 => 1, 1 => 0], ['track' => 'Drill'], ExamGradingService::SCHEMA_POSITION);
 
     expect($graded['correct_count'])->toBe(1);
     expect($graded['wrong_count'])->toBe(1);

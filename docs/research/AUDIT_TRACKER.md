@@ -473,3 +473,9 @@ Script: `scripts/batches/fixes/baseline_ven_num_metadata_2026_10_22.py`.
   - 47 same-frame groups with different numbers are listed for information only, with no replacement (GT rule: sharing a method is not repetition).
 - **Queue (723 rows):** the CSV has a new `needs_human_read` column. It is "yes" for all 139 self-authored D1022 judgment items and for every other row a human still has to read (317 in total). The 12 former Escalate rows are now "Accept revision" (passage lengthened). Totals: 707 Accept, 16 Accept revision (4 P1 plus 12 Filipino), 0 Escalate. Recommendations only; `decision_by_human` is empty.
 - **QA fix:** a solver crash in `qa.py` on stems outside the solver's frames (batch-subpro-num-001) now records "solver could not recompute the key" instead of crashing.
+
+### Engine: real-browser checks, grader schema, withdrawn labels
+- **Browser E2E** (headless Chrome against a local app with SQLite, `tests/E2E/strict-mock.e2e.mjs`): offline reload, two-tab conflict, deadline passing offline and double submit all pass against the reload fix from 635963c.
+- **Real defect found by the E2E:** the global fetch guard retried offline requests for about 7 s and then showed an "overloaded" dialog, so an offline answer was never held. Fixed. With the fix reverted, the offline scenario fails.
+- **Grader:** the schema is now declared, not inferred. `AnswerSchemaTest` uses real small ids (1–3) with no filler, and fails against the old grader.
+- **Withdrawn items:** labelled in review and never keyed. `ExamDeadlineTest` checks `retired_ids` and that a reopened scorecard leaves the item out.

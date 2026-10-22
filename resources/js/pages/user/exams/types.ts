@@ -2,6 +2,11 @@ export interface Question {
     id: number;
     stem: string;
     options: string[];
+    /**
+     * Withdrawn by Civio after this mock was served: not scored, no key is
+     * ever returned for it, and review shows it as "Withdrawn · not scored".
+     */
+    withdrawn?: boolean;
     /** Present after submit / scorecard / reveal — withheld during live play. */
     correct_option?: number;
     explanation?: string;
@@ -96,6 +101,8 @@ export interface ExamResults {
     skippedCount: number;
     /** Items withdrawn after serving: excluded from the score. */
     retiredCount?: number;
+    /** Ids of those items, so review can label them (live submit only). */
+    retiredIds?: number[];
     categoryScoreMap: Record<string, CategoryScore>;
     elapsedSecs: number;
     cat_scores?: SavedAttempt['cat_scores'];

@@ -106,6 +106,8 @@ export default [
         ignores: [
         'scripts/**',
         'tests/Js/**',
+        // Node-only Playwright script, run manually (see tests/E2E/README.md).
+        'tests/E2E/**',
         
             'vendor',
             'node_modules',

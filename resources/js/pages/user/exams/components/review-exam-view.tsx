@@ -72,7 +72,7 @@ interface ReviewExamViewProps {
 
 export function ReviewExamView({
     details,
-    activeQuestions = [],
+    activeQuestions: servedQuestions = [],
     currentIdx = 0,
     setCurrentIdx,
     answers = {},
@@ -93,6 +93,23 @@ export function ReviewExamView({
     setReviewScreenActive,
     examLevel = 'Practice',
 }: ReviewExamViewProps) {
+    // Items withdrawn after serving: labelled, never scored, never keyed.
+    const retiredIds = results?.retiredIds;
+    const activeQuestions = useMemo(() => {
+        const retired = new Set(retiredIds ?? []);
+
+        return servedQuestions.map((q) =>
+            q.withdrawn || retired.has(q.id)
+                ? {
+                      ...q,
+                      withdrawn: true,
+                      correct_option: undefined,
+                      explanation: undefined,
+                  }
+                : q,
+        );
+    }, [servedQuestions, retiredIds]);
+
     const isCurrentMatch = useCallback(
         (q: Question | undefined, idx: number) => {
             if (!q) {
@@ -120,7 +137,9 @@ export function ReviewExamView({
                 chosen !== null &&
                 Number(chosen) === Number(q.correct_option);
             const isDemographic =
-                q.category === 'Demographic Profile' || q.isDemographic;
+                q.category === 'Demographic Profile' ||
+                q.isDemographic ||
+                q.withdrawn;
 
             if (
                 reviewStatusFilter === 'correct' &&
@@ -243,7 +262,11 @@ export function ReviewExamView({
     const wrongQuestionIds = useMemo(() => {
         return activeQuestions
             .filter((q, idx) => {
-                if (q.category === 'Demographic Profile' || q.isDemographic) {
+                if (
+                    q.category === 'Demographic Profile' ||
+                    q.isDemographic ||
+                    q.withdrawn
+                ) {
                     return false;
                 }
 
@@ -302,7 +325,9 @@ export function ReviewExamView({
             while (i >= 0 && i < activeQuestions.length) {
                 const q = activeQuestions[i];
                 const isDemographic =
-                    q.category === 'Demographic Profile' || q.isDemographic;
+                    q.category === 'Demographic Profile' ||
+                    q.isDemographic ||
+                    q.withdrawn;
                 const chosen = answers[i];
                 const isCorrect =
                     chosen !== undefined &&
@@ -384,7 +409,9 @@ export function ReviewExamView({
             const idx = (currentIdx + offset) % activeQuestions.length;
             const q = activeQuestions[idx];
             const isDemographic =
-                q.category === 'Demographic Profile' || q.isDemographic;
+                q.category === 'Demographic Profile' ||
+                q.isDemographic ||
+                q.withdrawn;
 
             if (isDemographic) {
                 continue;
@@ -517,7 +544,9 @@ export function ReviewExamView({
                     chosen !== null &&
                     Number(chosen) === Number(q.correct_option);
                 const isDemographic =
-                    q.category === 'Demographic Profile' || q.isDemographic;
+                    q.category === 'Demographic Profile' ||
+                    q.isDemographic ||
+                    q.withdrawn;
 
                 if (status === 'correct' && (isDemographic || !isCorrect)) {
                     return false;
@@ -682,7 +711,8 @@ export function ReviewExamView({
             const isDemographic =
                 q.category === 'Demographic Profile' ||
                 q.category?.toLowerCase().includes('demographic') ||
-                q.isDemographic;
+                q.isDemographic ||
+                q.withdrawn;
 
             if (isDemographic) {
                 return;
@@ -1168,6 +1198,22 @@ export function ReviewExamView({
                                                             'Demographic Profile' ||
                                                         currentQuestion.isDemographic;
 
+                                                    if (
+                                                        currentQuestion.withdrawn
+                                                    ) {
+                                                        return (
+                                                            <span
+                                                                data-testid="withdrawn-badge"
+                                                                title="Civio withdrew this item after the mock started. It is not counted as wrong or skipped, and its answer is not shown."
+                                                                className="inline-flex items-center gap-1 rounded-full border border-amber-300 bg-amber-50 px-2 py-0.5 text-[9px] font-semibold text-amber-800 dark:border-amber-500/40 dark:bg-amber-950/40 dark:text-amber-200"
+                                                            >
+                                                                <HelpCircle className="size-3" />{' '}
+                                                                Withdrawn · not
+                                                                scored
+                                                            </span>
+                                                        );
+                                                    }
+
                                                     if (isDemographic) {
                                                         return null;
                                                     }
@@ -1439,6 +1485,7 @@ export function ReviewExamView({
                                                     currentQuestion.correct_option;
                                                 const isDemographic =
                                                     currentQuestion.isDemographic ||
+                                                    currentQuestion.withdrawn ||
                                                     currentQuestion.category ===
                                                         'Demographic Profile';
 
@@ -1547,7 +1594,8 @@ export function ReviewExamView({
                                         const isDemographicItem =
                                             currentQuestion.category ===
                                                 'Demographic Profile' ||
-                                            currentQuestion.isDemographic;
+                                            currentQuestion.isDemographic ||
+                                            currentQuestion.withdrawn;
                                         const isWrongItem =
                                             !isDemographicItem &&
                                             chosenOption !== undefined &&

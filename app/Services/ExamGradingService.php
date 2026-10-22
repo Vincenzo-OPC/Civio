@@ -18,6 +18,49 @@ use App\Models\Question;
  */
 class ExamGradingService
 {
+    /** Answers keyed by question id (every current client). */
+    public const SCHEMA_ID = 'question_id';
+
+    /** Legacy answers keyed by served position; must be declared, never guessed. */
+    public const SCHEMA_POSITION = 'position';
+
+    public const SCHEMAS = [self::SCHEMA_ID, self::SCHEMA_POSITION];
+
+    private static function assertSchema(string $schema): string
+    {
+        if (! in_array($schema, self::SCHEMAS, true)) {
+            throw new \InvalidArgumentException("Unknown answer schema [{$schema}].");
+        }
+
+        return $schema;
+    }
+
+    /**
+     * True when every answer key is valid for the declared schema: a served
+     * question id, or a position inside the served list.
+     *
+     * @param  array<int|string, mixed>  $answers
+     * @param  array<int, int>  $questionIds
+     */
+    public function answerKeysMatch(array $answers, array $questionIds, string $schema): bool
+    {
+        $schema = self::assertSchema($schema);
+        $ids = array_fill_keys(array_map('intval', $questionIds), true);
+        $count = count($questionIds);
+
+        foreach (array_keys($answers) as $key) {
+            if ((string) (int) $key !== (string) $key) {
+                return false;
+            }
+            $key = (int) $key;
+            if ($schema === self::SCHEMA_ID ? ! isset($ids[$key]) : ($key < 0 || $key >= $count)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     /**
      * @param  array<int, int|string>  $questionIds
      * @param  array<int|string, mixed>  $answers
@@ -34,8 +77,9 @@ class ExamGradingService
      *     answer_keys: array<int, array{id: int, correct_option: int, explanation: string}>
      * }
      */
-    public function grade(array $questionIds, array $answers, array $clientMeta = []): array
+    public function grade(array $questionIds, array $answers, array $clientMeta = [], string $schema = self::SCHEMA_ID): array
     {
+        $schema = self::assertSchema($schema);
         // Each question counts once even if a caller passes it twice.
         $ids = array_values(array_unique(array_map('intval', $questionIds)));
         $questions = Question::query()
@@ -45,13 +89,13 @@ class ExamGradingService
             ->get()
             ->keyBy('id');
 
-        $normalizedAnswers = $this->normalizeAnswers($ids, $answers);
-        $schema = $this->detectAnswerSchema($answers, $ids);
+        $normalizedAnswers = $this->normalizeAnswers($ids, $answers, $schema);
 
         $correctCount = 0;
         $wrongCount = 0;
         $skippedCount = 0;
         $retiredCount = 0;
+        $retiredIds = [];
         $wrongQuestionIds = [];
         $catMap = [];
         $answerKeys = [];
@@ -64,6 +108,7 @@ class ExamGradingService
                 // Retired/missing since it was served: not the examinee's fault,
                 // so it stays out of the denominator instead of counting as a miss.
                 $retiredCount++;
+                $retiredIds[] = (int) $qId;
                 $normalizedAnswers[(string) $qId] = $normalizedAnswers[(string) $qId] ?? null;
 
                 continue;
@@ -121,11 +166,13 @@ class ExamGradingService
             'wrong_count' => $wrongCount,
             'skipped_count' => $skippedCount,
             'retired_count' => $retiredCount,
+            'retired_ids' => $retiredIds,
             'total_questions' => $totalScored,
             'score' => $score,
             'wrong_question_ids' => array_values(array_unique($wrongQuestionIds)),
             'graded_by' => 'server',
-            'answer_schema' => 'question_id',
+            // Stored answers are always re-keyed by question id.
+            'answer_schema' => self::SCHEMA_ID,
         ]);
 
         // Drop any client-forged score fields we already overwrote; keep timing/track.
@@ -152,9 +199,9 @@ class ExamGradingService
      * @param  array<int|string, mixed>  $answers
      * @return array<string, int|null>
      */
-    public function normalizeAnswers(array $questionIds, array $answers): array
+    public function normalizeAnswers(array $questionIds, array $answers, string $schema = self::SCHEMA_ID): array
     {
-        $schema = $this->detectAnswerSchema($answers, $questionIds);
+        $schema = self::assertSchema($schema);
         $out = [];
 
         foreach ($questionIds as $position => $qId) {
@@ -266,10 +313,14 @@ class ExamGradingService
      * @param  array<int|string, mixed>  $answers
      * @param  array<int, int>  $questionIds
      */
-    public function chosenForQuestion(array $answers, array $questionIds, int $qId): ?int
+    public function chosenForQuestion(array $answers, array $questionIds, int $qId, ?string $schema = null): ?int
     {
         $position = array_search($qId, array_values(array_map('intval', $questionIds)), true);
-        $schema = $this->detectAnswerSchema($answers, array_values(array_map('intval', $questionIds)));
+        // Rows graded since answer_schema was recorded carry it; only legacy
+        // rows without it fall back to inference.
+        $schema = $schema !== null
+            ? self::assertSchema($schema)
+            : $this->detectAnswerSchema($answers, array_values(array_map('intval', $questionIds)));
 
         if ($position === false) {
             $position = 0;

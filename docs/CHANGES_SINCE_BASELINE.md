@@ -390,3 +390,17 @@ Before this fix, retiring one served item during an open Strict mock made every 
   - after the deadline or submit, nothing local is applied, since the server copy is final.
   Malformed or unserved stored entries are ignored. The stored copy is cleared once everything is saved, and on submit.
 - The submit response now includes `retired_count`. When it is above zero, the scorecard explains: "1 item was withdrawn by Civio after this mock started. It is not counted as wrong or skipped: your score is out of 149, not 150." Reopened attempts read the same count from the attempt metadata.
+
+## Grader answer schema, withdrawn-item labels, offline fetch and browser E2E (22 October 2026)
+
+- **Grader:** the answer schema is declared, never guessed from key values.
+  - `grade()` and `normalizeAnswers()` take an explicit schema, default `question_id`. Submissions may declare `answer_schema: position` for legacy payloads.
+  - A server-held mock accepts question-id keys only, and every answer key must be a served item or the submit returns 422.
+  - Stored attempts are read using the schema recorded with them. Inference remains only for legacy rows that have no recorded schema.
+  - Before this fix, a partial answer set whose ids happened to be valid positions (for example ids 1–3) was graded against the wrong items.
+- **Withdrawn items:** the submit response now lists `retired_ids`.
+  - The post-submit review labels those items "Withdrawn · not scored", leaves them out of the counts and filters, and strips any key.
+  - A reopened scorecard never ships them or their keys.
+- **Offline fetch:** while the browser is offline, the global fetch guard fails at once. Before, it retried for about 7 s and then showed a "server overloaded" dialog, which delayed and serialised Strict-mock autosave and gave the wrong message.
+- **Fix to my earlier change:** clearing a withdrawn answer now uses the item's served position, which is how exam answers are keyed. My earlier change used the question id.
+- **Browser E2E:** added `tests/E2E/strict-mock.e2e.mjs`, run headless against a local SQLite app; see `tests/E2E/README.md`.

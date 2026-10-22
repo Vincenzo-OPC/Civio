@@ -324,7 +324,7 @@ class DeterministicAnalysisService
                 }
                 $q = $questionsMap[$qId];
                 $subcatName = $q->subcategory?->name ?? 'General Info';
-                $userAns = $grading->chosenForQuestion($answers, $qIds, $qId);
+                $userAns = $grading->chosenForQuestion($answers, $qIds, $qId, $attempt->cat_scores['metadata']['answer_schema'] ?? null);
                 $isCorrect = ($userAns !== null && (int) $userAns === (int) $q->correct_option);
 
                 if (! isset($subtopicStats[$subcatName])) {

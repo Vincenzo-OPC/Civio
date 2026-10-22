@@ -231,9 +231,6 @@ test('an on-time submit that still carries an answer to a retired item grades th
 
 test('the submit response reports withdrawn items so the scorecard can explain them', function () {
     $user = User::factory()->create();
-    // Keep question ids above the served-position range (0-2) so the
-    // answer schema is unambiguous, as it is with real bank ids.
-    Question::factory()->count(5)->create();
     $session = deadlineSession($user->id);
     [$a, $b, $retired] = $session->question_ids;
     Question::whereKey($retired)->update(['status' => 'retired']);
@@ -241,5 +238,16 @@ test('the submit response reports withdrawn items so the scorecard can explain t
     $this->actingAs($user)->postJson(route('exams.attempts.store'), deadlineFinal($session, [$a => 1, $b => 1]))
         ->assertOk()
         ->assertJson(['retired_count' => 1, 'total_questions' => 2, 'skipped_count' => 0, 'wrong_count' => 0, 'score' => 100])
+        ->assertJson(['retired_ids' => [$retired]])
         ->assertJsonMissing(['id' => $retired]);
+
+    $attempt = ExamAttempt::where('user_id', $user->id)->sole();
+    $this->withoutVite()->get(route('exams.index', ['attempt_id' => $attempt->id]))
+        ->assertOk()
+        ->assertInertia(fn ($page) => $page->where('questions', function ($questions) use ($retired) {
+            // A reopened scorecard never ships the withdrawn item or its key.
+            expect(collect($questions)->pluck('id')->all())->not->toContain($retired);
+
+            return true;
+        }));
 });

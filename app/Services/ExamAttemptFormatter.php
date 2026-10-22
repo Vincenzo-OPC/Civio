@@ -211,7 +211,7 @@ class ExamAttemptFormatter
             $answers = $attempt->answers ?? [];
 
             foreach ($qIds as $qId) {
-                $chosen = $grading->chosenForQuestion($answers, $qIds, $qId);
+                $chosen = $grading->chosenForQuestion($answers, $qIds, $qId, $attempt->cat_scores['metadata']['answer_schema'] ?? null);
                 $correct = $questions[$qId] ?? null;
 
                 if ($chosen === null || (string) $chosen !== (string) $correct) {

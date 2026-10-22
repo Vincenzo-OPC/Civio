@@ -75,9 +75,17 @@ class SubmitExamAttemptAction
                     return new SubmitExamAttemptResult(false, 422, message: 'A practice item is no longer available. Start a new session.');
                 }
 
+                // The answer schema is declared, never guessed from key values:
+                // a small question id must not be read as a served position.
+                // Server-held mocks only accept question-id keys.
+                if (($session !== null && $data->answerSchema !== ExamGradingService::SCHEMA_ID)
+                    || ! $this->gradingService->answerKeysMatch($data->answers, $data->questionIds, $data->answerSchema)) {
+                    return new SubmitExamAttemptResult(false, 422, message: 'Answers do not match the items in this attempt.');
+                }
+
                 $answers = $session?->isExpired()
                     ? (array) ($session->saved_answers ?? [])
-                    : $this->gradingService->normalizeAnswers($data->questionIds, $data->answers);
+                    : $this->gradingService->normalizeAnswers($data->questionIds, $data->answers, $data->answerSchema);
                 foreach ($answers as $id => $chosen) {
                     if ($chosen !== null && ! $active->has($id)) {
                         $answers[$id] = null;
@@ -117,7 +125,8 @@ class SubmitExamAttemptAction
                         max(0, (int) $session->created_at->diffInSeconds(now()))
                     );
                 }
-                $graded = $this->gradingService->grade($ids, $answers, $meta);
+                // $answers is keyed by question id here (normalized or saved).
+                $graded = $this->gradingService->grade($ids, $answers, $meta, ExamGradingService::SCHEMA_ID);
                 $attempt = $this->repository->create([
                     'user_id' => $userId,
                     'category_id' => $data->categoryId,
@@ -154,6 +163,7 @@ class SubmitExamAttemptAction
                     answerKeys: $graded['answer_keys'],
                     answers: $graded['answers'],
                     retiredCount: (int) ($graded['cat_scores']['metadata']['retired_count'] ?? 0),
+                    retiredIds: array_map('intval', (array) ($graded['cat_scores']['metadata']['retired_ids'] ?? [])),
                 );
             });
         } finally {

@@ -138,10 +138,6 @@ export function useServerExamProgress(
                         state.withdrawnIds,
                     );
 
-                    if (Object.keys(answers).length === 0) {
-                        return;
-                    }
-
                     const outcome = await save.saveProgressPatch(
                         post,
                         sessionId,
@@ -155,6 +151,7 @@ export function useServerExamProgress(
 
                     const next = save.settleSave(outcome, answers, state, {
                         setAnswers,
+                        questions: questionsRef,
                         hydrate: (server) =>
                             setAnswers(
                                 restoreAnswerPositions(
@@ -162,7 +159,7 @@ export function useServerExamProgress(
                                     server,
                                 ),
                             ),
-                        notify: (level, message) => toast[level](message),
+                        toast,
                         closed: (submitted) => {
                             canSave.current = false;
 

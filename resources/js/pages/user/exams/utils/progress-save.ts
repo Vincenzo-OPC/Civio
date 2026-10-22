@@ -1,3 +1,5 @@
+import type { Question } from '../types';
+
 /**
  * One Strict-mock progress save, with recovery rules:
  * - 409 version conflict (another tab saved): re-read, retry once on the
@@ -57,6 +59,11 @@ export async function saveProgressPatch(
     answers: Record<number, number | null>,
     expectedVersion: number,
 ): Promise<SaveOutcome> {
+    if (Object.keys(answers).length === 0) {
+        // Everything in the batch was withdrawn: nothing to send.
+        return { kind: 'saved', version: expectedVersion, withdrawn: [] };
+    }
+
     const patch = (version: number) =>
         post({
             exam_session_id: sessionId,
@@ -283,13 +290,17 @@ export function mergeResumed(
 }
 
 export interface SaveUi {
+    /** Exam answers are keyed by served position, not question id. */
     setAnswers: (update: (prev: AnswerMap) => AnswerMap) => void;
+    /** Served questions in position order (current at call time). */
+    questions: { current: Question[] };
     /** Replace answers from the server's original-option map. */
     hydrate: (answers: ProgressResponse['answers']) => void;
-    notify: (
-        level: 'info' | 'success' | 'warning' | 'error',
-        message: string,
-    ) => void;
+    /** sonner's toast (or any object with these methods). */
+    toast: Record<
+        'info' | 'success' | 'warning' | 'error',
+        (message: string) => unknown
+    >;
     closed: (submitted: boolean) => void;
 }
 
@@ -312,7 +323,7 @@ export function settleSave(
 
         if (!state.offline.current) {
             state.offline.current = true;
-            ui.notify('warning', progressNotices.offline);
+            ui.toast.warning(progressNotices.offline);
         }
 
         return null;
@@ -329,7 +340,7 @@ export function settleSave(
 
     if (state.pending.size === 0 && state.offline.current) {
         state.offline.current = false;
-        ui.notify('success', progressNotices.reconnected);
+        ui.toast.success(progressNotices.reconnected);
     }
 
     if (outcome.kind === 'failed') {
@@ -340,8 +351,7 @@ export function settleSave(
         state.pending.clear();
         persistPending(state);
         ui.closed(outcome.submitted);
-        ui.notify(
-            'error',
+        ui.toast.error(
             outcome.submitted
                 ? progressNotices.submitted
                 : progressNotices.expired,
@@ -356,7 +366,7 @@ export function settleSave(
             ...outcome.answers,
             ...Object.fromEntries(state.pending),
         });
-        ui.notify('info', progressNotices.merged);
+        ui.toast.info(progressNotices.merged);
     }
 
     const ids = outcome.withdrawn;
@@ -378,11 +388,14 @@ export function settleSave(
 
     if (ids.length > 0) {
         persistPending(state);
+        const positions = ui.questions.current
+            .map((q) => q.id)
+            .flatMap((id, index) => (ids.includes(id) ? [index] : []));
         ui.setAnswers((prev) => {
             const next = { ...prev };
 
-            for (const id of ids) {
-                delete next[id];
+            for (const index of positions) {
+                delete next[index];
             }
 
             return next;
@@ -390,7 +403,7 @@ export function settleSave(
     }
 
     if (fresh.length > 0) {
-        ui.notify('warning', progressNotices.withdrawn(fresh.length));
+        ui.toast.warning(progressNotices.withdrawn(fresh.length));
     }
 
     return outcome.version;
