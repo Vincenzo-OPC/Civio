@@ -1,14 +1,6 @@
 import { Suspense, lazy } from 'react';
 import { PageContainer } from '@/components/layout/page-container';
 import { ConfirmModal } from '@/components/shared/confirm-modal';
-import { Button } from '@/components/ui/button';
-import {
-    Dialog,
-    DialogContent,
-    DialogHeader,
-    DialogTitle,
-    DialogFooter,
-} from '@/components/ui/dialog';
 import { index as examsIndex } from '@/routes/exams';
 import { LiveExamView } from './components/live-exam-view';
 import { ReviewExamView } from './components/review-exam-view';
@@ -22,6 +14,12 @@ import type { ExamIndexProps } from './types';
 const PrintableExam = lazy(() =>
     import('./components/printable-exam').then((m) => ({
         default: m.PrintableExam,
+    })),
+);
+
+const ExamErrorDialog = lazy(() =>
+    import('./components/exam-error-dialog').then((m) => ({
+        default: m.ExamErrorDialog,
     })),
 );
 
@@ -282,30 +280,14 @@ export default function ExamIndex(props: ExamIndexProps) {
                 </Suspense>
             )}
 
-            {/* Error Modal */}
-            <Dialog
-                open={!!errorMessage}
-                onOpenChange={(open) => !open && setErrorMessage(null)}
-            >
-                <DialogContent className="sm:max-w-2xl">
-                    <DialogHeader>
-                        <DialogTitle className="text-red-600">
-                            Error
-                        </DialogTitle>
-                        <p className="mt-2 text-base leading-relaxed text-slate-600">
-                            {errorMessage}
-                        </p>
-                    </DialogHeader>
-                    <DialogFooter>
-                        <Button
-                            onClick={() => setErrorMessage(null)}
-                            className="bg-red-600 text-white hover:bg-red-700"
-                        >
-                            Dismiss
-                        </Button>
-                    </DialogFooter>
-                </DialogContent>
-            </Dialog>
+            {errorMessage && (
+                <Suspense fallback={null}>
+                    <ExamErrorDialog
+                        message={errorMessage}
+                        onDismiss={() => setErrorMessage(null)}
+                    />
+                </Suspense>
+            )}
         </>
     );
 }
