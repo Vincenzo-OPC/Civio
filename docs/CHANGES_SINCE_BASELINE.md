@@ -331,3 +331,7 @@ Analytics adds an "Independent accuracy and pace" card, a plain table that also 
 ## Today's Focus drill, 22 October 2026
 
 The Drills hub has a Today's Focus launcher. The server picks 15 items from the subject with the lowest independent accuracy, then 10 mixed items from the other subjects. Guests, and learners with no history, get a weekday rotation in Philippine time. No client IDs are involved and keys stay withheld. Tests in `TodaysFocusTest`.
+
+## Exam-day guide page, 22 October 2026
+
+New public page `/exam-day`, linked in the footer. It gives a short, general checklist and points to the CSC 2027 exam calendar and csc.gov.ph, and says the CSC advisory wins over this page. It contains no invented rules, fees or pass rates. Test in `ExamDayGuideTest`.

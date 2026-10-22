@@ -3,6 +3,7 @@ import AppLogo from './app-logo';
 
 const FOOTER_LINKS = [
     { href: '/cse-2027-dates', label: 'CSE 2027 Dates' },
+    { href: '/exam-day', label: 'Exam Day' },
     { href: '/terms', label: 'Terms' },
     { href: '/privacy', label: 'Privacy' },
     { href: '/support', label: 'Support' },
