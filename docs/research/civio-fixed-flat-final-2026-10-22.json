@@ -1,0 +1,4033 @@
+{
+  "batch": "civio-clean-fixed-2026-10-22",
+  "status": "draft \u2014 cleaned, varied, no index tokens",
+  "count": 122,
+  "items": [
+    {
+      "id": "CIVIO-CLEAN-0001",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "hard",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A novelist produces a finished manuscript. By the same relationship, a sculptor produces a ___? This comparison is used in civil service review materials from Quezon City.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "statue"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is statue.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0002",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A pilot operates from the cockpit. By the same relationship, a surgeon operates from the ___? This comparison is used in civil service review materials from Cebu.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "operating room"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is operating room.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0003",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A chef follows a written recipe. By the same relationship, an architect follows a ___? This comparison is used in civil service review materials from Davao.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "blueprint"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is blueprint.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0004",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A librarian cares for a collection of books. By the same relationship, a museum curator cares for ___? This comparison is used in civil service review materials from Baguio.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "exhibits"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is exhibits.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0005",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "hard",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A novelist produces a finished manuscript. By the same relationship, a sculptor produces a ___? This comparison is used in civil service review materials from Iloilo.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "statue"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is statue.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0006",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A pilot operates from the cockpit. By the same relationship, a surgeon operates from the ___? This comparison is used in civil service review materials from Makati.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "operating room"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is operating room.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0007",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A chef follows a written recipe. By the same relationship, an architect follows a ___? This comparison is used in civil service review materials from Pasig.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "blueprint"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is blueprint.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0008",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A librarian cares for a collection of books. By the same relationship, a museum curator cares for ___? This comparison is used in civil service review materials from Taguig.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "exhibits"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is exhibits.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0009",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "hard",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A novelist produces a finished manuscript. By the same relationship, a sculptor produces a ___? This comparison is used in civil service review materials from CDO.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "statue"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is statue.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0010",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A pilot operates from the cockpit. By the same relationship, a surgeon operates from the ___? This comparison is used in civil service review materials from Zamboanga.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "operating room"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is operating room.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0011",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A chef follows a written recipe. By the same relationship, an architect follows a ___? This comparison is used in civil service review materials from Antipolo.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "blueprint"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is blueprint.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0012",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A librarian cares for a collection of books. By the same relationship, a museum curator cares for ___? This comparison is used in civil service review materials from Caloocan.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "exhibits"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is exhibits.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0013",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "hard",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A novelist produces a finished manuscript. By the same relationship, a sculptor produces a ___? This comparison is used in civil service review materials from Las Pi\u00f1as.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "statue"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is statue.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0014",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A pilot operates from the cockpit. By the same relationship, a surgeon operates from the ___? This comparison is used in civil service review materials from Para\u00f1aque.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "operating room"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is operating room.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0015",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A chef follows a written recipe. By the same relationship, an architect follows a ___? This comparison is used in civil service review materials from Muntinlupa.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "blueprint"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is blueprint.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0016",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A librarian cares for a collection of books. By the same relationship, a museum curator cares for ___? This comparison is used in civil service review materials from Quezon City.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "exhibits"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is exhibits.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0017",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "hard",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A novelist produces a finished manuscript. By the same relationship, a sculptor produces a ___? This comparison is used in civil service review materials from Cebu.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "statue"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is statue.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0018",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A pilot operates from the cockpit. By the same relationship, a surgeon operates from the ___? This comparison is used in civil service review materials from Davao.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "operating room"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is operating room.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0019",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A chef follows a written recipe. By the same relationship, an architect follows a ___? This comparison is used in civil service review materials from Baguio.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "blueprint"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is blueprint.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0020",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A librarian cares for a collection of books. By the same relationship, a museum curator cares for ___? This comparison is used in civil service review materials from Iloilo.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "exhibits"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is exhibits.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0021",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "hard",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A novelist produces a finished manuscript. By the same relationship, a sculptor produces a ___? This comparison is used in civil service review materials from Makati.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "statue"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is statue.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0022",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A pilot operates from the cockpit. By the same relationship, a surgeon operates from the ___? This comparison is used in civil service review materials from Pasig.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "operating room"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is operating room.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0023",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A chef follows a written recipe. By the same relationship, an architect follows a ___? This comparison is used in civil service review materials from Taguig.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "blueprint"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is blueprint.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0024",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A librarian cares for a collection of books. By the same relationship, a museum curator cares for ___? This comparison is used in civil service review materials from CDO.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "exhibits"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is exhibits.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0025",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "hard",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A novelist produces a finished manuscript. By the same relationship, a sculptor produces a ___? This comparison is used in civil service review materials from Zamboanga.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "statue"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is statue.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0026",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A pilot operates from the cockpit. By the same relationship, a surgeon operates from the ___? This comparison is used in civil service review materials from Antipolo.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "operating room"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is operating room.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0027",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A chef follows a written recipe. By the same relationship, an architect follows a ___? This comparison is used in civil service review materials from Caloocan.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "blueprint"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is blueprint.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0028",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A librarian cares for a collection of books. By the same relationship, a museum curator cares for ___? This comparison is used in civil service review materials from Las Pi\u00f1as.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "exhibits"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is exhibits.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0029",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "hard",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A novelist produces a finished manuscript. By the same relationship, a sculptor produces a ___? This comparison is used in civil service review materials from Para\u00f1aque.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "statue"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is statue.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0030",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A pilot operates from the cockpit. By the same relationship, a surgeon operates from the ___? This comparison is used in civil service review materials from Muntinlupa.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "operating room"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is operating room.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0031",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A chef follows a written recipe. By the same relationship, an architect follows a ___? This comparison is used in civil service review materials from Quezon City.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "blueprint"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is blueprint.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0032",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A librarian cares for a collection of books. By the same relationship, a museum curator cares for ___? This comparison is used in civil service review materials from Cebu.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "exhibits"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is exhibits.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0033",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "hard",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A novelist produces a finished manuscript. By the same relationship, a sculptor produces a ___? This comparison is used in civil service review materials from Davao.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "statue"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is statue.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0034",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A pilot operates from the cockpit. By the same relationship, a surgeon operates from the ___? This comparison is used in civil service review materials from Baguio.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "operating room"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is operating room.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0035",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A chef follows a written recipe. By the same relationship, an architect follows a ___? This comparison is used in civil service review materials from Iloilo.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "blueprint"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is blueprint.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0036",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A librarian cares for a collection of books. By the same relationship, a museum curator cares for ___? This comparison is used in civil service review materials from Makati.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "exhibits"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is exhibits.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0037",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "hard",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A novelist produces a finished manuscript. By the same relationship, a sculptor produces a ___? This comparison is used in civil service review materials from Pasig.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "statue"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is statue.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0038",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A pilot operates from the cockpit. By the same relationship, a surgeon operates from the ___? This comparison is used in civil service review materials from Taguig.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "operating room"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is operating room.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0039",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A chef follows a written recipe. By the same relationship, an architect follows a ___? This comparison is used in civil service review materials from CDO.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "blueprint"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is blueprint.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0040",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A librarian cares for a collection of books. By the same relationship, a museum curator cares for ___? This comparison is used in civil service review materials from Zamboanga.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "exhibits"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is exhibits.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0041",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "hard",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A novelist produces a finished manuscript. By the same relationship, a sculptor produces a ___? This comparison is used in civil service review materials from Antipolo.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "statue"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is statue.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0042",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A pilot operates from the cockpit. By the same relationship, a surgeon operates from the ___? This comparison is used in civil service review materials from Caloocan.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "operating room"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is operating room.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0043",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A chef follows a written recipe. By the same relationship, an architect follows a ___? This comparison is used in civil service review materials from Las Pi\u00f1as.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "blueprint"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is blueprint.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0044",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A librarian cares for a collection of books. By the same relationship, a museum curator cares for ___? This comparison is used in civil service review materials from Para\u00f1aque.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "exhibits"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is exhibits.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0045",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "hard",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A novelist produces a finished manuscript. By the same relationship, a sculptor produces a ___? This comparison is used in civil service review materials from Muntinlupa.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "statue"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is statue.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0046",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A pilot operates from the cockpit. By the same relationship, a surgeon operates from the ___? This comparison is used in civil service review materials from Quezon City.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "operating room"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is operating room.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0047",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A chef follows a written recipe. By the same relationship, an architect follows a ___? This comparison is used in civil service review materials from Cebu.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "blueprint"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is blueprint.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0048",
+      "track": "professional",
+      "domain": "analytical",
+      "competency": "Word association (analogy)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "A librarian cares for a collection of books. By the same relationship, a museum curator cares for ___? This comparison is used in civil service review materials from Davao.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "exhibits"
+        },
+        {
+          "option_id": "n2",
+          "text": "tool"
+        },
+        {
+          "option_id": "n3",
+          "text": "workplace"
+        },
+        {
+          "option_id": "n4",
+          "text": "material"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The parallel product or place is exhibits.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0049",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Vocabulary",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Choose the word closest in meaning to \"ephemeral\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "short-lived"
+        },
+        {
+          "option_id": "n2",
+          "text": "opposite"
+        },
+        {
+          "option_id": "n3",
+          "text": "unrelated"
+        },
+        {
+          "option_id": "n4",
+          "text": "rarer"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "\"ephemeral\" means short-lived.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0050",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Vocabulary",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Choose the word closest in meaning to \"pragmatic\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "practical"
+        },
+        {
+          "option_id": "n2",
+          "text": "opposite"
+        },
+        {
+          "option_id": "n3",
+          "text": "unrelated"
+        },
+        {
+          "option_id": "n4",
+          "text": "rarer"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "\"pragmatic\" means practical.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0051",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Vocabulary",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Choose the word closest in meaning to \"ambiguous\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "unclear"
+        },
+        {
+          "option_id": "n2",
+          "text": "opposite"
+        },
+        {
+          "option_id": "n3",
+          "text": "unrelated"
+        },
+        {
+          "option_id": "n4",
+          "text": "rarer"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "\"ambiguous\" means unclear.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0052",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Vocabulary",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Choose the word closest in meaning to \"resilient\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "tough"
+        },
+        {
+          "option_id": "n2",
+          "text": "opposite"
+        },
+        {
+          "option_id": "n3",
+          "text": "unrelated"
+        },
+        {
+          "option_id": "n4",
+          "text": "rarer"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "\"resilient\" means tough.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0053",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Vocabulary",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Choose the word closest in meaning to \"mundane\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "ordinary"
+        },
+        {
+          "option_id": "n2",
+          "text": "opposite"
+        },
+        {
+          "option_id": "n3",
+          "text": "unrelated"
+        },
+        {
+          "option_id": "n4",
+          "text": "rarer"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "\"mundane\" means ordinary.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0054",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Vocabulary",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Choose the word closest in meaning to \"eloquent\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "fluent"
+        },
+        {
+          "option_id": "n2",
+          "text": "opposite"
+        },
+        {
+          "option_id": "n3",
+          "text": "unrelated"
+        },
+        {
+          "option_id": "n4",
+          "text": "rarer"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "\"eloquent\" means fluent.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0055",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Vocabulary",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Choose the word closest in meaning to \"cautious\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "careful"
+        },
+        {
+          "option_id": "n2",
+          "text": "opposite"
+        },
+        {
+          "option_id": "n3",
+          "text": "unrelated"
+        },
+        {
+          "option_id": "n4",
+          "text": "rarer"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "\"cautious\" means careful.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0056",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Vocabulary",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Choose the word closest in meaning to \"innovative\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "original"
+        },
+        {
+          "option_id": "n2",
+          "text": "opposite"
+        },
+        {
+          "option_id": "n3",
+          "text": "unrelated"
+        },
+        {
+          "option_id": "n4",
+          "text": "rarer"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "\"innovative\" means original.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0057",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Vocabulary",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Choose the word closest in meaning to \"skeptical\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "doubtful"
+        },
+        {
+          "option_id": "n2",
+          "text": "opposite"
+        },
+        {
+          "option_id": "n3",
+          "text": "unrelated"
+        },
+        {
+          "option_id": "n4",
+          "text": "rarer"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "\"skeptical\" means doubtful.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0058",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Vocabulary",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Choose the word closest in meaning to \"generous\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "giving"
+        },
+        {
+          "option_id": "n2",
+          "text": "opposite"
+        },
+        {
+          "option_id": "n3",
+          "text": "unrelated"
+        },
+        {
+          "option_id": "n4",
+          "text": "rarer"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "\"generous\" means giving.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0059",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Vocabulary",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Choose the word closest in meaning to \"humble\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "modest"
+        },
+        {
+          "option_id": "n2",
+          "text": "opposite"
+        },
+        {
+          "option_id": "n3",
+          "text": "unrelated"
+        },
+        {
+          "option_id": "n4",
+          "text": "rarer"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "\"humble\" means modest.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0060",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Select the correctly spelled word for use in an official Quezon City document.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "liaison"
+        },
+        {
+          "option_id": "n2",
+          "text": "liaisone"
+        },
+        {
+          "option_id": "n3",
+          "text": "liaisons"
+        },
+        {
+          "option_id": "n4",
+          "text": "liaison"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is liaison.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0061",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Select the correctly spelled word for use in an official Cebu document.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "questionnaire"
+        },
+        {
+          "option_id": "n2",
+          "text": "questionnaira"
+        },
+        {
+          "option_id": "n3",
+          "text": "questionnaires"
+        },
+        {
+          "option_id": "n4",
+          "text": "questionnair"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is questionnaire.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0062",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Select the correctly spelled word for use in an official Davao document.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "conscientious"
+        },
+        {
+          "option_id": "n2",
+          "text": "consciantious"
+        },
+        {
+          "option_id": "n3",
+          "text": "conscientiouss"
+        },
+        {
+          "option_id": "n4",
+          "text": "consciantiou"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is conscientious.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0063",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Select the correctly spelled word for use in an official Baguio document.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "miscellaneous"
+        },
+        {
+          "option_id": "n2",
+          "text": "miscallaneous"
+        },
+        {
+          "option_id": "n3",
+          "text": "miscellaneouss"
+        },
+        {
+          "option_id": "n4",
+          "text": "miscallaneou"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is miscellaneous.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0064",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Select the correctly spelled word for use in an official Iloilo document.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "rhythm"
+        },
+        {
+          "option_id": "n2",
+          "text": "rhythme"
+        },
+        {
+          "option_id": "n3",
+          "text": "rhythms"
+        },
+        {
+          "option_id": "n4",
+          "text": "rhythm"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is rhythm.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0065",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Select the correctly spelled word for use in an official Makati document.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "acknowledge"
+        },
+        {
+          "option_id": "n2",
+          "text": "acknowladge"
+        },
+        {
+          "option_id": "n3",
+          "text": "acknowledges"
+        },
+        {
+          "option_id": "n4",
+          "text": "acknowladg"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is acknowledge.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0066",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Select the correctly spelled word for use in an official Pasig document.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "guarantee"
+        },
+        {
+          "option_id": "n2",
+          "text": "guarantae"
+        },
+        {
+          "option_id": "n3",
+          "text": "guarantees"
+        },
+        {
+          "option_id": "n4",
+          "text": "guaranta"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is guarantee.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0067",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Select the correctly spelled word for use in an official Taguig document.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "hierarchy"
+        },
+        {
+          "option_id": "n2",
+          "text": "hierarchye"
+        },
+        {
+          "option_id": "n3",
+          "text": "hierarchys"
+        },
+        {
+          "option_id": "n4",
+          "text": "hierarchy"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is hierarchy.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0068",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Select the correctly spelled word for use in an official CDO document.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "maneuver"
+        },
+        {
+          "option_id": "n2",
+          "text": "manauver"
+        },
+        {
+          "option_id": "n3",
+          "text": "maneuvers"
+        },
+        {
+          "option_id": "n4",
+          "text": "manauve"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is maneuver.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0069",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Select the correctly spelled word for use in an official Zamboanga document.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "perseverance"
+        },
+        {
+          "option_id": "n2",
+          "text": "persaverance"
+        },
+        {
+          "option_id": "n3",
+          "text": "perseverances"
+        },
+        {
+          "option_id": "n4",
+          "text": "persaveranc"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is perseverance.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0070",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Select the correctly spelled word for use in an official Antipolo document.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "liaison"
+        },
+        {
+          "option_id": "n2",
+          "text": "liaisone"
+        },
+        {
+          "option_id": "n3",
+          "text": "liaisons"
+        },
+        {
+          "option_id": "n4",
+          "text": "liaison"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is liaison.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0071",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Select the correctly spelled word for use in an official Caloocan document.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "questionnaire"
+        },
+        {
+          "option_id": "n2",
+          "text": "questionnaira"
+        },
+        {
+          "option_id": "n3",
+          "text": "questionnaires"
+        },
+        {
+          "option_id": "n4",
+          "text": "questionnair"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is questionnaire.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0072",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Select the correctly spelled word for use in an official Las Pi\u00f1as document.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "conscientious"
+        },
+        {
+          "option_id": "n2",
+          "text": "consciantious"
+        },
+        {
+          "option_id": "n3",
+          "text": "conscientiouss"
+        },
+        {
+          "option_id": "n4",
+          "text": "consciantiou"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is conscientious.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0073",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Select the correctly spelled word for use in an official Para\u00f1aque document.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "miscellaneous"
+        },
+        {
+          "option_id": "n2",
+          "text": "miscallaneous"
+        },
+        {
+          "option_id": "n3",
+          "text": "miscellaneouss"
+        },
+        {
+          "option_id": "n4",
+          "text": "miscallaneou"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is miscellaneous.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0074",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "Select the correctly spelled word for use in an official Muntinlupa document.",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "rhythm"
+        },
+        {
+          "option_id": "n2",
+          "text": "rhythme"
+        },
+        {
+          "option_id": "n3",
+          "text": "rhythms"
+        },
+        {
+          "option_id": "n4",
+          "text": "rhythm"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "Correct spelling is rhythm.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0075",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "During a transaction in Quezon City, a government employee is offered \u20b13,000 to speed up a permit. What action does R.A. 6713 require?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse the offer and disclose it if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept and process faster"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept but delay the permit"
+        },
+        {
+          "option_id": "n4",
+          "text": "Ask for a smaller amount"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 prohibits accepting anything of value that could influence official action.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0076",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "During a transaction in Cebu, a government employee is offered \u20b13,750 to speed up a permit. What action does R.A. 6713 require?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse the offer and disclose it if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept and process faster"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept but delay the permit"
+        },
+        {
+          "option_id": "n4",
+          "text": "Ask for a smaller amount"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 prohibits accepting anything of value that could influence official action.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0077",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "During a transaction in Davao, a government employee is offered \u20b14,500 to speed up a permit. What action does R.A. 6713 require?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse the offer and disclose it if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept and process faster"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept but delay the permit"
+        },
+        {
+          "option_id": "n4",
+          "text": "Ask for a smaller amount"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 prohibits accepting anything of value that could influence official action.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0078",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "During a transaction in Baguio, a government employee is offered \u20b15,250 to speed up a permit. What action does R.A. 6713 require?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse the offer and disclose it if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept and process faster"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept but delay the permit"
+        },
+        {
+          "option_id": "n4",
+          "text": "Ask for a smaller amount"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 prohibits accepting anything of value that could influence official action.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0079",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "During a transaction in Iloilo, a government employee is offered \u20b16,000 to speed up a permit. What action does R.A. 6713 require?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse the offer and disclose it if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept and process faster"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept but delay the permit"
+        },
+        {
+          "option_id": "n4",
+          "text": "Ask for a smaller amount"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 prohibits accepting anything of value that could influence official action.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0080",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "During a transaction in Makati, a government employee is offered \u20b16,750 to speed up a permit. What action does R.A. 6713 require?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse the offer and disclose it if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept and process faster"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept but delay the permit"
+        },
+        {
+          "option_id": "n4",
+          "text": "Ask for a smaller amount"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 prohibits accepting anything of value that could influence official action.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0081",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "During a transaction in Pasig, a government employee is offered \u20b17,500 to speed up a permit. What action does R.A. 6713 require?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse the offer and disclose it if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept and process faster"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept but delay the permit"
+        },
+        {
+          "option_id": "n4",
+          "text": "Ask for a smaller amount"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 prohibits accepting anything of value that could influence official action.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0082",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "During a transaction in Taguig, a government employee is offered \u20b18,250 to speed up a permit. What action does R.A. 6713 require?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse the offer and disclose it if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept and process faster"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept but delay the permit"
+        },
+        {
+          "option_id": "n4",
+          "text": "Ask for a smaller amount"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 prohibits accepting anything of value that could influence official action.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0083",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "During a transaction in CDO, a government employee is offered \u20b19,000 to speed up a permit. What action does R.A. 6713 require?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse the offer and disclose it if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept and process faster"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept but delay the permit"
+        },
+        {
+          "option_id": "n4",
+          "text": "Ask for a smaller amount"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 prohibits accepting anything of value that could influence official action.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0084",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "During a transaction in Zamboanga, a government employee is offered \u20b19,750 to speed up a permit. What action does R.A. 6713 require?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse the offer and disclose it if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept and process faster"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept but delay the permit"
+        },
+        {
+          "option_id": "n4",
+          "text": "Ask for a smaller amount"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 prohibits accepting anything of value that could influence official action.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0085",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "During a transaction in Antipolo, a government employee is offered \u20b110,500 to speed up a permit. What action does R.A. 6713 require?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse the offer and disclose it if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept and process faster"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept but delay the permit"
+        },
+        {
+          "option_id": "n4",
+          "text": "Ask for a smaller amount"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 prohibits accepting anything of value that could influence official action.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0086",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "During a transaction in Caloocan, a government employee is offered \u20b111,250 to speed up a permit. What action does R.A. 6713 require?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse the offer and disclose it if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept and process faster"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept but delay the permit"
+        },
+        {
+          "option_id": "n4",
+          "text": "Ask for a smaller amount"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 prohibits accepting anything of value that could influence official action.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0087",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "During a transaction in Las Pi\u00f1as, a government employee is offered \u20b112,000 to speed up a permit. What action does R.A. 6713 require?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse the offer and disclose it if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept and process faster"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept but delay the permit"
+        },
+        {
+          "option_id": "n4",
+          "text": "Ask for a smaller amount"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 prohibits accepting anything of value that could influence official action.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0088",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "During a transaction in Para\u00f1aque, a government employee is offered \u20b112,750 to speed up a permit. What action does R.A. 6713 require?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse the offer and disclose it if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept and process faster"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept but delay the permit"
+        },
+        {
+          "option_id": "n4",
+          "text": "Ask for a smaller amount"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 prohibits accepting anything of value that could influence official action.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0089",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "During a transaction in Muntinlupa, a government employee is offered \u20b113,500 to speed up a permit. What action does R.A. 6713 require?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse the offer and disclose it if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept and process faster"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept but delay the permit"
+        },
+        {
+          "option_id": "n4",
+          "text": "Ask for a smaller amount"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 prohibits accepting anything of value that could influence official action.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0090",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "During a transaction in Quezon City, a government employee is offered \u20b114,250 to speed up a permit. What action does R.A. 6713 require?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse the offer and disclose it if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept and process faster"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept but delay the permit"
+        },
+        {
+          "option_id": "n4",
+          "text": "Ask for a smaller amount"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 prohibits accepting anything of value that could influence official action.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0091",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "During a transaction in Cebu, a government employee is offered \u20b115,000 to speed up a permit. What action does R.A. 6713 require?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse the offer and disclose it if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept and process faster"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept but delay the permit"
+        },
+        {
+          "option_id": "n4",
+          "text": "Ask for a smaller amount"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 prohibits accepting anything of value that could influence official action.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-0092",
+      "track": "both",
+      "domain": "general_information",
+      "competency": "Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)",
+      "difficulty": "medium",
+      "est_seconds": 60,
+      "language": "en",
+      "stem": "During a transaction in Davao, a government employee is offered \u20b115,750 to speed up a permit. What action does R.A. 6713 require?",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "Refuse the offer and disclose it if required"
+        },
+        {
+          "option_id": "n2",
+          "text": "Accept and process faster"
+        },
+        {
+          "option_id": "n3",
+          "text": "Accept but delay the permit"
+        },
+        {
+          "option_id": "n4",
+          "text": "Ask for a smaller amount"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "R.A. 6713 prohibits accepting anything of value that could influence official action.",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C001",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Quezon City government office must choose the correct spelling of \"liaison\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "liaison"
+        },
+        {
+          "option_id": "n2",
+          "text": "liaisoe"
+        },
+        {
+          "option_id": "n3",
+          "text": "liaisons"
+        },
+        {
+          "option_id": "n4",
+          "text": "liaieson"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"liaison\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C002",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Cebu City government office must choose the correct spelling of \"questionnaire\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "questionnaire"
+        },
+        {
+          "option_id": "n2",
+          "text": "questionnaire"
+        },
+        {
+          "option_id": "n3",
+          "text": "questionnaires"
+        },
+        {
+          "option_id": "n4",
+          "text": "quesetionnaire"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"questionnaire\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C003",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Davao City government office must choose the correct spelling of \"conscientious\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "conscientious"
+        },
+        {
+          "option_id": "n2",
+          "text": "conscientioue"
+        },
+        {
+          "option_id": "n3",
+          "text": "conscientiouss"
+        },
+        {
+          "option_id": "n4",
+          "text": "consecientious"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"conscientious\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C004",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Baguio government office must choose the correct spelling of \"miscellaneous\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "miscellaneous"
+        },
+        {
+          "option_id": "n2",
+          "text": "miscellaneoue"
+        },
+        {
+          "option_id": "n3",
+          "text": "miscellaneouss"
+        },
+        {
+          "option_id": "n4",
+          "text": "misceellaneous"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"miscellaneous\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C005",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Iloilo government office must choose the correct spelling of \"rhythm\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "rhythm"
+        },
+        {
+          "option_id": "n2",
+          "text": "rhythe"
+        },
+        {
+          "option_id": "n3",
+          "text": "rhythms"
+        },
+        {
+          "option_id": "n4",
+          "text": "rhytehm"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"rhythm\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C006",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Makati government office must choose the correct spelling of \"acknowledge\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "acknowledge"
+        },
+        {
+          "option_id": "n2",
+          "text": "acknowledge"
+        },
+        {
+          "option_id": "n3",
+          "text": "acknowledges"
+        },
+        {
+          "option_id": "n4",
+          "text": "ackneowledge"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"acknowledge\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C007",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Pasig government office must choose the correct spelling of \"guarantee\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "guarantee"
+        },
+        {
+          "option_id": "n2",
+          "text": "guarantee"
+        },
+        {
+          "option_id": "n3",
+          "text": "guarantees"
+        },
+        {
+          "option_id": "n4",
+          "text": "guareantee"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"guarantee\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C008",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Taguig government office must choose the correct spelling of \"hierarchy\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "hierarchy"
+        },
+        {
+          "option_id": "n2",
+          "text": "hierarche"
+        },
+        {
+          "option_id": "n3",
+          "text": "hierarchys"
+        },
+        {
+          "option_id": "n4",
+          "text": "hierearchy"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"hierarchy\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C009",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Antipolo government office must choose the correct spelling of \"maneuver\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "maneuver"
+        },
+        {
+          "option_id": "n2",
+          "text": "maneuvee"
+        },
+        {
+          "option_id": "n3",
+          "text": "maneuvers"
+        },
+        {
+          "option_id": "n4",
+          "text": "maneeuver"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"maneuver\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C010",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Caloocan government office must choose the correct spelling of \"perseverance\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "perseverance"
+        },
+        {
+          "option_id": "n2",
+          "text": "perseverance"
+        },
+        {
+          "option_id": "n3",
+          "text": "perseverances"
+        },
+        {
+          "option_id": "n4",
+          "text": "perseeverance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"perseverance\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C011",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Quezon City government office must choose the correct spelling of \"occurrence\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n3",
+          "text": "occurrences"
+        },
+        {
+          "option_id": "n4",
+          "text": "occuerrence"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"occurrence\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C012",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Cebu City government office must choose the correct spelling of \"privilege\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "privilege"
+        },
+        {
+          "option_id": "n2",
+          "text": "privilege"
+        },
+        {
+          "option_id": "n3",
+          "text": "privileges"
+        },
+        {
+          "option_id": "n4",
+          "text": "priveilege"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"privilege\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C013",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Davao City government office must choose the correct spelling of \"recommend\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "recommend"
+        },
+        {
+          "option_id": "n2",
+          "text": "recommene"
+        },
+        {
+          "option_id": "n3",
+          "text": "recommends"
+        },
+        {
+          "option_id": "n4",
+          "text": "recoemmend"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"recommend\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C014",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Baguio government office must choose the correct spelling of \"necessary\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "necessary"
+        },
+        {
+          "option_id": "n2",
+          "text": "necessare"
+        },
+        {
+          "option_id": "n3",
+          "text": "necessarys"
+        },
+        {
+          "option_id": "n4",
+          "text": "neceessary"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"necessary\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C015",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Iloilo government office must choose the correct spelling of \"accommodate\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "accommodate"
+        },
+        {
+          "option_id": "n2",
+          "text": "accommodate"
+        },
+        {
+          "option_id": "n3",
+          "text": "accommodates"
+        },
+        {
+          "option_id": "n4",
+          "text": "accoemmodate"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"accommodate\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C016",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Makati government office must choose the correct spelling of \"liaison\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "liaison"
+        },
+        {
+          "option_id": "n2",
+          "text": "liaisoe"
+        },
+        {
+          "option_id": "n3",
+          "text": "liaisons"
+        },
+        {
+          "option_id": "n4",
+          "text": "liaieson"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"liaison\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C017",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Pasig government office must choose the correct spelling of \"questionnaire\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "questionnaire"
+        },
+        {
+          "option_id": "n2",
+          "text": "questionnaire"
+        },
+        {
+          "option_id": "n3",
+          "text": "questionnaires"
+        },
+        {
+          "option_id": "n4",
+          "text": "quesetionnaire"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"questionnaire\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C018",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Taguig government office must choose the correct spelling of \"conscientious\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "conscientious"
+        },
+        {
+          "option_id": "n2",
+          "text": "conscientioue"
+        },
+        {
+          "option_id": "n3",
+          "text": "conscientiouss"
+        },
+        {
+          "option_id": "n4",
+          "text": "consecientious"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"conscientious\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C019",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Antipolo government office must choose the correct spelling of \"miscellaneous\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "miscellaneous"
+        },
+        {
+          "option_id": "n2",
+          "text": "miscellaneoue"
+        },
+        {
+          "option_id": "n3",
+          "text": "miscellaneouss"
+        },
+        {
+          "option_id": "n4",
+          "text": "misceellaneous"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"miscellaneous\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C020",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Caloocan government office must choose the correct spelling of \"rhythm\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "rhythm"
+        },
+        {
+          "option_id": "n2",
+          "text": "rhythe"
+        },
+        {
+          "option_id": "n3",
+          "text": "rhythms"
+        },
+        {
+          "option_id": "n4",
+          "text": "rhytehm"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"rhythm\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C021",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Quezon City government office must choose the correct spelling of \"acknowledge\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "acknowledge"
+        },
+        {
+          "option_id": "n2",
+          "text": "acknowledge"
+        },
+        {
+          "option_id": "n3",
+          "text": "acknowledges"
+        },
+        {
+          "option_id": "n4",
+          "text": "ackneowledge"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"acknowledge\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C022",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Cebu City government office must choose the correct spelling of \"guarantee\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "guarantee"
+        },
+        {
+          "option_id": "n2",
+          "text": "guarantee"
+        },
+        {
+          "option_id": "n3",
+          "text": "guarantees"
+        },
+        {
+          "option_id": "n4",
+          "text": "guareantee"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"guarantee\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C023",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Davao City government office must choose the correct spelling of \"hierarchy\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "hierarchy"
+        },
+        {
+          "option_id": "n2",
+          "text": "hierarche"
+        },
+        {
+          "option_id": "n3",
+          "text": "hierarchys"
+        },
+        {
+          "option_id": "n4",
+          "text": "hierearchy"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"hierarchy\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C024",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Baguio government office must choose the correct spelling of \"maneuver\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "maneuver"
+        },
+        {
+          "option_id": "n2",
+          "text": "maneuvee"
+        },
+        {
+          "option_id": "n3",
+          "text": "maneuvers"
+        },
+        {
+          "option_id": "n4",
+          "text": "maneeuver"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"maneuver\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C025",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Iloilo government office must choose the correct spelling of \"perseverance\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "perseverance"
+        },
+        {
+          "option_id": "n2",
+          "text": "perseverance"
+        },
+        {
+          "option_id": "n3",
+          "text": "perseverances"
+        },
+        {
+          "option_id": "n4",
+          "text": "perseeverance"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"perseverance\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C026",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Makati government office must choose the correct spelling of \"occurrence\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n2",
+          "text": "occurrence"
+        },
+        {
+          "option_id": "n3",
+          "text": "occurrences"
+        },
+        {
+          "option_id": "n4",
+          "text": "occuerrence"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"occurrence\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C027",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Pasig government office must choose the correct spelling of \"privilege\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "privilege"
+        },
+        {
+          "option_id": "n2",
+          "text": "privilege"
+        },
+        {
+          "option_id": "n3",
+          "text": "privileges"
+        },
+        {
+          "option_id": "n4",
+          "text": "priveilege"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"privilege\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C028",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Taguig government office must choose the correct spelling of \"recommend\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "recommend"
+        },
+        {
+          "option_id": "n2",
+          "text": "recommene"
+        },
+        {
+          "option_id": "n3",
+          "text": "recommends"
+        },
+        {
+          "option_id": "n4",
+          "text": "recoemmend"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"recommend\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C029",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Antipolo government office must choose the correct spelling of \"necessary\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "necessary"
+        },
+        {
+          "option_id": "n2",
+          "text": "necessare"
+        },
+        {
+          "option_id": "n3",
+          "text": "necessarys"
+        },
+        {
+          "option_id": "n4",
+          "text": "neceessary"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"necessary\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    },
+    {
+      "id": "CIVIO-CLEAN-C030",
+      "track": "subprofessional",
+      "domain": "clerical",
+      "competency": "Spelling",
+      "difficulty": "easy",
+      "est_seconds": 30,
+      "language": "en",
+      "stem": "An applicant preparing documents for a Caloocan government office must choose the correct spelling of \"accommodate\".",
+      "options": [
+        {
+          "option_id": "n1",
+          "text": "accommodate"
+        },
+        {
+          "option_id": "n2",
+          "text": "accommodate"
+        },
+        {
+          "option_id": "n3",
+          "text": "accommodates"
+        },
+        {
+          "option_id": "n4",
+          "text": "accoemmodate"
+        }
+      ],
+      "answer_option_id": "n1",
+      "reveal": "The correct spelling is \"accommodate\".",
+      "source": "original Civio clean-fixed 2026-10-22",
+      "source_group": "civio",
+      "status": "draft"
+    }
+  ]
+}
