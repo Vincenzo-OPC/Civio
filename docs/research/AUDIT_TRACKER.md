@@ -266,3 +266,46 @@ The rules are in spec §7 and §10. Never auto-approve or deploy. Batch 001-011 
 - Drafts: `audit/fixes/round-03-baseline-b4-drafts.json` (5). `qa_file.py` → 0 problems. `explanation_lint.py` → 0 flagged.
 - Packet: `audit/round-03-baseline-b4-review-request.md`.
 - This finishes the baseline Numerical audit (B3 + B4 = 91). Next: Analytical 114 (B5), then Verbal 130 (B6).
+
+## 2026-10-22: Exact-flat bank reconciliation (2,100 unique)
+
+**Author:** Grok. All items remain draft. No activation or import performed.
+
+### What was done
+- Merged PRs 1–16 into `main`.
+- Recounted unique stems on official scope (`docs/batches` + `docs/research`): **2,033**.
+- Generated exactly **122** residual drafts so short domains hit clean hundreds:
+  - Analytical +48, Clerical +45, GI +18, Verbal EN +11.
+- Created exclusion lists for overs (drafts only, nothing deleted):
+  - 40 numerical drafts
+  - 15 verbal_fil drafts
+- Normalized tracks to `professional` / `subprofessional` / `both`.
+- Committed and pushed:
+  - `docs/research/civio-exact-flat-cleaned-2026-10-22.json` (122 items)
+  - `docs/research/civio-trim-lists-2026-10-22.json`
+  - `docs/research/civio-exact-flat-review-request-2026-10-22.md`
+- Commit: `c4e8eee` `[skip netlify]`
+
+### Verified flat counts (after trim lists applied)
+| Domain | Count |
+|--------|------:|
+| Numerical | 400 |
+| Analytical | 400 |
+| Verbal EN | 400 |
+| Verbal Filipino | 300 |
+| Clerical | 300 |
+| General Information | 300 |
+| **Unique total** | **2,100** |
+
+### What Codex should know
+- These 122 items are **draft only**. Do not import or activate.
+- Trim lists are exclusion lists, not deletions. Approved items were not removed.
+- Next required step is independent review, then GT Ed25519 signed approval (`BANK_IMPORT_APPROVAL.md`) before any active import.
+- Exam engine (`MockPoolSelector`) already enforces unique items and blueprint quotas; these drafts support that once approved.
+- No Netlify builds were triggered.
+
+### Files Codex should read first
+1. `docs/research/civio-exact-flat-review-request-2026-10-22.md`
+2. `docs/research/civio-exact-flat-cleaned-2026-10-22.json`
+3. `docs/research/civio-trim-lists-2026-10-22.json`
+4. `docs/BANK_IMPORT_APPROVAL.md`

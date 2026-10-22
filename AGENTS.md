@@ -176,3 +176,11 @@ Adopted now:
 - **sentry/sentry-laravel** — no-op unless `SENTRY_LARAVEL_DSN` is set
 
 Never put provider keys in `VITE_*`.
+
+## Bank state 2026-10-22 (exact-flat)
+
+Unique stems on official scope: **2,100** after residual drafts + trim lists.  
+Every domain on clean hundred target (Numerical 400, Analytical 400, Verbal EN 400, Verbal Fil 300, Clerical 300, GI 300).  
+122 new drafts in `docs/research/civio-exact-flat-cleaned-2026-10-22.json`. All `status: draft`.  
+See `docs/research/AUDIT_TRACKER.md` (2026-10-22 section) and `docs/research/civio-exact-flat-review-request-2026-10-22.md`.  
+Do not activate. Independent review + GT Ed25519 approval required.
