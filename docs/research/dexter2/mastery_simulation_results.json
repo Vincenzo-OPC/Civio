@@ -1,0 +1,135 @@
+{
+ "config": {
+  "seeds": [
+   11,
+   23,
+   37
+  ],
+  "learners": 300,
+  "items": 120,
+  "steps": 40,
+  "guess": 0.25
+ },
+ "results": {
+  "bkt_hetero": {
+   "bkt_fixed": {
+    "brier": 0.1386,
+    "log_loss": 0.4409,
+    "ece": 0.0188,
+    "n_ready_claims": 7784.3333,
+    "false_ready_rate": 0.0069
+   },
+   "bkt_skip_wrong": {
+    "brier": 0.1386,
+    "log_loss": 0.4409,
+    "ece": 0.0188,
+    "n_ready_claims": 7784.3333,
+    "false_ready_rate": 0.0069
+   },
+   "rolling10": {
+    "brier": 0.1531,
+    "log_loss": 0.4777,
+    "ece": 0.0784,
+    "n_ready_claims": 2613.6667,
+    "false_ready_rate": 0.0008
+   },
+   "elo": {
+    "brier": 0.156,
+    "log_loss": 0.4826,
+    "ece": 0.0433,
+    "n_ready_claims": 4727.6667,
+    "false_ready_rate": 0.0084
+   }
+  },
+  "irt_drift": {
+   "bkt_fixed": {
+    "brier": 0.2274,
+    "log_loss": 0.6675,
+    "ece": 0.1305,
+    "n_ready_claims": 6862.0,
+    "false_ready_rate": 0.339
+   },
+   "bkt_skip_wrong": {
+    "brier": 0.2274,
+    "log_loss": 0.6675,
+    "ece": 0.1305,
+    "n_ready_claims": 6862.0,
+    "false_ready_rate": 0.339
+   },
+   "rolling10": {
+    "brier": 0.2132,
+    "log_loss": 0.6146,
+    "ece": 0.0591,
+    "n_ready_claims": 895.6667,
+    "false_ready_rate": 0.1173
+   },
+   "elo": {
+    "brier": 0.1994,
+    "log_loss": 0.5826,
+    "ece": 0.0548,
+    "n_ready_claims": 2823.0,
+    "false_ready_rate": 0.0882
+   }
+  },
+  "repeats": {
+   "bkt_fixed": {
+    "brier": 0.2023,
+    "log_loss": 0.6078,
+    "ece": 0.1192,
+    "n_ready_claims": 8163.3333,
+    "false_ready_rate": 0.2895
+   },
+   "bkt_skip_wrong": {
+    "brier": 0.2023,
+    "log_loss": 0.6078,
+    "ece": 0.1192,
+    "n_ready_claims": 8163.3333,
+    "false_ready_rate": 0.2895
+   },
+   "rolling10": {
+    "brier": 0.1946,
+    "log_loss": 0.5736,
+    "ece": 0.0734,
+    "n_ready_claims": 1313.3333,
+    "false_ready_rate": 0.108
+   },
+   "elo": {
+    "brier": 0.1811,
+    "log_loss": 0.5406,
+    "ece": 0.0549,
+    "n_ready_claims": 3804.3333,
+    "false_ready_rate": 0.0912
+   }
+  },
+  "skips": {
+   "bkt_fixed": {
+    "brier": 0.2376,
+    "log_loss": 0.6917,
+    "ece": 0.1394,
+    "n_ready_claims": 5361.0,
+    "false_ready_rate": 0.3717
+   },
+   "bkt_skip_wrong": {
+    "brier": 0.2348,
+    "log_loss": 0.6756,
+    "ece": 0.1267,
+    "n_ready_claims": 4068.6667,
+    "false_ready_rate": 0.3193
+   },
+   "rolling10": {
+    "brier": 0.2229,
+    "log_loss": 0.6368,
+    "ece": 0.0672,
+    "n_ready_claims": 556.6667,
+    "false_ready_rate": 0.1217
+   },
+   "elo": {
+    "brier": 0.2085,
+    "log_loss": 0.6052,
+    "ece": 0.0583,
+    "n_ready_claims": 2152.6667,
+    "false_ready_rate": 0.1075
+   }
+  }
+ }
+}
