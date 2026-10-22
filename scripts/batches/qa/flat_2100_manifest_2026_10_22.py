@@ -7,7 +7,8 @@ The rule is deterministic and fills each domain in tier order until it reaches i
      If a corrected draft replacement exists, it takes the original's slot and the original goes to retire_on_signoff.
   T2 reviewed (queue result = pass)
   T3 passing unique drafts (queue result = pass, adds_unique = yes). civio-flat-2100 goes first, then the queue's file priority, then id.
-  T4 legacy baseline drafts whose only queue flags are metadata gaps (difficulty or est_seconds). Tagged needs_metadata.
+  Legacy baseline drafts count only once they are HOLD-screened, QA'd and given metadata
+  (scripts/batches/fixes/baseline_ven_num_metadata_2026_10_22.py). They are then passing T3 drafts, noted baseline_screened.
 Always excluded: the trim lists, the superseded clone files (civio-exact-flat-cleaned, civio-fixed-flat-final, civio-final-rewrite), retired items, any other queue flag (near-dups, previously rejected, missing passage,
 duplicate options and so on), and percent-change items above the Numerical cap of 40 (MILESTONE_2000_PLAN.md).
 content_sha256 is sha256 of the item's canonical JSON (sorted keys, compact): domain, track, language, stem, options,
@@ -113,9 +114,7 @@ def main():
         if r["status"] == "reviewed" and r["result"] == "pass":
             tier = 2
         elif r["result"] == "pass" and r["adds_unique"] == "yes":
-            tier = 3
-        elif r["kind"] == "baseline" and r["result"] == "flag" and flags and flags <= META_ONLY:
-            tier, note = 4, "needs_metadata"
+            tier, note = 3, ("baseline_screened" if r["kind"] == "baseline" else "")
         if tier is None:
             excl.append((iid, r["domain"], "flag:" + ",".join(sorted(flags)) if r["result"] == "flag" else "revision_of_existing_item"))
             continue

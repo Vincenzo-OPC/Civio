@@ -26,8 +26,7 @@
  "by_tier": {
   "1": 1439,
   "2": 42,
-  "3": 510,
-  "4": 109
+  "3": 619
  },
  "by_track": {
   "both": 1357,
@@ -87,13 +86,12 @@
   "CIVIO-VFIL-20261013-0010"
  ],
  "exclusions_by_reason": {
-  "over_domain_target_tier4": 265,
+  "flag": 424,
   "duplicate_stem": 243,
   "superseded_clone_file": 179,
-  "flag": 153,
   "over_domain_target_tier3": 143,
   "trim_list": 55,
-  "percent_change_over_cap": 53,
+  "percent_change_over_cap": 47,
   "revision_of_existing_item": 34
  },
  "exclusions": [
@@ -1843,6 +1841,11 @@
    "reason": "flag:hold_phrase_overlap"
   },
   {
+   "id": "CIVIO-BASELINE-0018",
+   "domain": "verbal_en",
+   "reason": "flag:ambiguous_key,bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
    "id": "CIVIO-BASELINE-0023",
    "domain": "verbal_en",
    "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,superseded_by_lintfix"
@@ -1856,6 +1859,71 @@
    "id": "CIVIO-BASELINE-0027",
    "domain": "verbal_en",
    "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,passage_missing_or_unlinked"
+  },
+  {
+   "id": "CIVIO-BASELINE-0028",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0029",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0030",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0031",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0032",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0033",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0034",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0035",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0036",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0037",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0038",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0039",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0040",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,percent_change_topic"
   },
   {
    "id": "CIVIO-BASELINE-0041",
@@ -1908,9 +1976,39 @@
    "reason": "flag:bad_difficulty,key_not_in_reveal,missing_difficulty,missing_est_seconds"
   },
   {
+   "id": "CIVIO-BASELINE-0051",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0052",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0053",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0054",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
    "id": "CIVIO-BASELINE-0056",
    "domain": "general_information",
    "reason": "flag:hold_phrase_overlap"
+  },
+  {
+   "id": "CIVIO-BASELINE-0109",
+   "domain": "verbal_en",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,option_artifact"
+  },
+  {
+   "id": "CIVIO-BASELINE-0112",
+   "domain": "verbal_en",
+   "reason": "flag:ambiguous_key,bad_difficulty,missing_difficulty,missing_est_seconds"
   },
   {
    "id": "CIVIO-BASELINE-0114",
@@ -1921,6 +2019,16 @@
    "id": "CIVIO-BASELINE-0117",
    "domain": "verbal_en",
    "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,superseded_by_lintfix"
+  },
+  {
+   "id": "CIVIO-BASELINE-0119",
+   "domain": "verbal_en",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,near_dup"
+  },
+  {
+   "id": "CIVIO-BASELINE-0120",
+   "domain": "verbal_en",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,near_dup"
   },
   {
    "id": "CIVIO-BASELINE-0125",
@@ -1963,6 +2071,336 @@
    "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,passage_missing_or_unlinked"
   },
   {
+   "id": "CIVIO-BASELINE-0133",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0134",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0135",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0136",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0137",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0138",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0139",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0140",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0141",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0142",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0143",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0144",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0145",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0146",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0147",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0148",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0149",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0150",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0151",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0152",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0153",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0154",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0155",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0156",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0157",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0158",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0159",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0160",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0161",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0162",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0163",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0164",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0165",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0166",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,percent_change_topic"
+  },
+  {
+   "id": "CIVIO-BASELINE-0167",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0168",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0169",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0170",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0171",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0172",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0181",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,percent_change_topic"
+  },
+  {
+   "id": "CIVIO-BASELINE-0193",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,near_dup"
+  },
+  {
+   "id": "CIVIO-BASELINE-0196",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0197",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0198",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0199",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0200",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0201",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0202",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0203",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0204",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0205",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0206",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0207",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0208",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0209",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0210",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0211",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0212",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0213",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0214",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0215",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0216",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0217",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0218",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0241",
+   "domain": "verbal_en",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,option_artifact"
+  },
+  {
    "id": "CIVIO-BASELINE-0246",
    "domain": "verbal_en",
    "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,passage_missing_or_unlinked"
@@ -1971,6 +2409,556 @@
    "id": "CIVIO-BASELINE-0247",
    "domain": "verbal_en",
    "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,passage_missing_or_unlinked"
+  },
+  {
+   "id": "CIVIO-BASELINE-0248",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0249",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0250",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0251",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0252",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0253",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0254",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0255",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0256",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0257",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0258",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0259",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0260",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0261",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0262",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0263",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0264",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0265",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,percent_change_topic"
+  },
+  {
+   "id": "CIVIO-BASELINE-0266",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0267",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0268",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0269",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0270",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0271",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0272",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0273",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0274",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0275",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0276",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0277",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0278",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0279",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0280",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0281",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0282",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0283",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0284",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0285",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0286",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0287",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0288",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0289",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0290",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0291",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0292",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0293",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0294",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0295",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0296",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0297",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0298",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0299",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0300",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0301",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0302",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0303",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0304",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0305",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0306",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0307",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0308",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0309",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0310",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0311",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0312",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0313",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0314",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0315",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0316",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0317",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0318",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0319",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0320",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0321",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0322",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0323",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0324",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0325",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0326",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0327",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0328",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0329",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0330",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0331",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0332",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0333",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0334",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0335",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0336",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0337",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,percent_change_topic"
+  },
+  {
+   "id": "CIVIO-BASELINE-0338",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0339",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0340",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0341",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0342",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0343",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0344",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0345",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0346",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0347",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0348",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0349",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0350",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,percent_change_topic"
+  },
+  {
+   "id": "CIVIO-BASELINE-0351",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0352",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0353",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0420",
+   "domain": "verbal_en",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,near_dup"
+  },
+  {
+   "id": "CIVIO-BASELINE-0425",
+   "domain": "verbal_en",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,near_dup"
+  },
+  {
+   "id": "CIVIO-BASELINE-0428",
+   "domain": "verbal_en",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,near_dup"
+  },
+  {
+   "id": "CIVIO-BASELINE-0440",
+   "domain": "verbal_en",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,near_dup"
   },
   {
    "id": "CIVIO-BASELINE-0453",
@@ -2003,9 +2991,19 @@
    "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,passage_missing_or_unlinked"
   },
   {
+   "id": "CIVIO-BASELINE-0459",
+   "domain": "verbal_fil",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
    "id": "CIVIO-BASELINE-0460",
    "domain": "verbal_en",
    "reason": "duplicate_stem"
+  },
+  {
+   "id": "CIVIO-BASELINE-0461",
+   "domain": "verbal_en",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,wrong_domain"
   },
   {
    "id": "CIVIO-BASELINE-0462",
@@ -2013,14 +3011,369 @@
    "reason": "flag:bad_difficulty,duplicate_options,missing_difficulty,missing_est_seconds"
   },
   {
+   "id": "CIVIO-BASELINE-0463",
+   "domain": "verbal_en",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,wrong_domain"
+  },
+  {
+   "id": "CIVIO-BASELINE-0464",
+   "domain": "verbal_en",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,wrong_domain"
+  },
+  {
+   "id": "CIVIO-BASELINE-0465",
+   "domain": "verbal_en",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,wrong_domain"
+  },
+  {
    "id": "CIVIO-BASELINE-0466",
    "domain": "verbal_en",
    "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,passage_missing_or_unlinked"
   },
   {
+   "id": "CIVIO-BASELINE-0467",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0468",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0469",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0470",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0471",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0472",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0473",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0474",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0475",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0476",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0477",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0478",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0479",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0480",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,percent_change_topic"
+  },
+  {
+   "id": "CIVIO-BASELINE-0481",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0482",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0483",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0484",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0485",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0486",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0487",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0488",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0489",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0490",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0491",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0492",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0493",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0494",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0495",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0496",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0497",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0498",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0499",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0500",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0501",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0502",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0503",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0504",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0505",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0506",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0507",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0508",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0509",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0510",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0511",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0512",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0513",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0514",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0515",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0516",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0517",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0518",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0533",
+   "domain": "verbal_en",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0534",
+   "domain": "verbal_en",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
    "id": "CIVIO-BASELINE-0535",
    "domain": "verbal_en",
    "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds,passage_missing_or_unlinked"
+  },
+  {
+   "id": "CIVIO-BASELINE-0536",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0537",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0538",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0539",
+   "domain": "analytical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0540",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0541",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0542",
+   "domain": "numerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0543",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0544",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0545",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0546",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0547",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0548",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
+  },
+  {
+   "id": "CIVIO-BASELINE-0550",
+   "domain": "clerical",
+   "reason": "flag:bad_difficulty,missing_difficulty,missing_est_seconds"
   },
   {
    "id": "CIVIO-NUM-FRAC-DEC-210001",
@@ -3653,1361 +5006,6 @@
    "reason": "percent_change_over_cap"
   },
   {
-   "id": "CIVIO-BASELINE-0181",
-   "domain": "numerical",
-   "reason": "percent_change_over_cap"
-  },
-  {
-   "id": "CIVIO-BASELINE-0195",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0196",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0197",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0198",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0199",
-   "domain": "numerical",
-   "reason": "percent_change_over_cap"
-  },
-  {
-   "id": "CIVIO-BASELINE-0200",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0201",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0202",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0203",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0204",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0205",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0206",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0207",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0208",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0209",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0210",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0262",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0263",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0264",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0265",
-   "domain": "numerical",
-   "reason": "percent_change_over_cap"
-  },
-  {
-   "id": "CIVIO-BASELINE-0266",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0267",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0268",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0269",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0270",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0271",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0272",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0339",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0340",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0341",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0342",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0343",
-   "domain": "numerical",
-   "reason": "percent_change_over_cap"
-  },
-  {
-   "id": "CIVIO-BASELINE-0344",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0345",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0346",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0347",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0348",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0349",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0350",
-   "domain": "numerical",
-   "reason": "percent_change_over_cap"
-  },
-  {
-   "id": "CIVIO-BASELINE-0351",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0352",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0353",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0485",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0486",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0487",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0488",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0489",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0490",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0491",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0492",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0493",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0494",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0495",
-   "domain": "numerical",
-   "reason": "percent_change_over_cap"
-  },
-  {
-   "id": "CIVIO-BASELINE-0496",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0497",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0498",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0540",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0541",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0542",
-   "domain": "numerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0028",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0029",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0030",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0031",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0032",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0033",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0034",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0035",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0036",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0037",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0038",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0039",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0040",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0133",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0134",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0135",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0136",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0137",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0138",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0139",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0140",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0141",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0142",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0143",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0144",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0145",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0146",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0147",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0148",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0149",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0150",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0151",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0152",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0153",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0154",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0155",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0156",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0157",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0158",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0159",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0160",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0161",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0162",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0163",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0164",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0165",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0166",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0167",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0168",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0169",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0170",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0171",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0172",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0248",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0249",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0250",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0251",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0252",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0253",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0254",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0255",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0256",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0257",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0258",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0259",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0260",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0261",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0314",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0315",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0316",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0317",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0318",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0319",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0320",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0321",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0322",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0323",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0324",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0325",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0326",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0327",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0328",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0329",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0330",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0331",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0332",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0333",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0334",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0335",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0336",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0337",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0338",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0467",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0468",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0469",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0470",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0471",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0472",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0473",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0474",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0475",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0476",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0477",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0478",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0479",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0480",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0481",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0482",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0483",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0484",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0536",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0537",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0538",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0539",
-   "domain": "analytical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0446",
-   "domain": "verbal_en",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0447",
-   "domain": "verbal_en",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0448",
-   "domain": "verbal_en",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0449",
-   "domain": "verbal_en",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0450",
-   "domain": "verbal_en",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0451",
-   "domain": "verbal_en",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0452",
-   "domain": "verbal_en",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0461",
-   "domain": "verbal_en",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0463",
-   "domain": "verbal_en",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0464",
-   "domain": "verbal_en",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0465",
-   "domain": "verbal_en",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0530",
-   "domain": "verbal_en",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0531",
-   "domain": "verbal_en",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0532",
-   "domain": "verbal_en",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0533",
-   "domain": "verbal_en",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0534",
-   "domain": "verbal_en",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0459",
-   "domain": "verbal_fil",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0051",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0052",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0053",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0054",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0211",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0212",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0213",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0214",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0215",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0216",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0217",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0218",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0273",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0274",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0275",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0276",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0277",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0278",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0279",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0280",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0281",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0282",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0283",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0284",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0285",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0286",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0287",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0288",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0289",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0290",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0291",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0292",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0293",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0294",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0295",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0296",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0297",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0298",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0299",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0300",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0301",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0302",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0303",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0304",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0305",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0306",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0307",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0308",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0309",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0310",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0311",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0312",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0313",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0499",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0500",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0501",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0502",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0503",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0504",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0505",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0506",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0507",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0508",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0509",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0510",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0511",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0512",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0513",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0514",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0515",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0516",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0517",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0518",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0543",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0544",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0545",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0546",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0547",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0548",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
-   "id": "CIVIO-BASELINE-0550",
-   "domain": "clerical",
-   "reason": "over_domain_target_tier4"
-  },
-  {
    "id": "CIVIO-B3-GI-SCENARIO-APPLY-0412",
    "domain": "general_information",
    "reason": "over_domain_target_tier3"
@@ -5723,7 +5721,7 @@
    "reason": "over_domain_target_tier3"
   }
  ],
- "rule": "Build the flat-2100 manifest (22 Oct 2026). Run from the repo root after draft_review_queue_2026_10_22.py.\n\nDomain targets (CoS/tracker definition): Numerical, Analytical and Verbal EN 400 each; Verbal Fil, Clerical and GI 300 each.\nThe rule is deterministic and fills each domain in tier order until it reaches its target:\n  T1 approved: unique by normalized stem; ties go to the first file in sorted git order.\n     If a corrected draft replacement exists, it takes the original's slot and the original goes to retire_on_signoff.\n  T2 reviewed (queue result = pass)\n  T3 passing unique drafts (queue result = pass, adds_unique = yes). civio-flat-2100 goes first, then the queue's file priority, then id.\n  T4 legacy baseline drafts whose only queue flags are metadata gaps (difficulty or est_seconds). Tagged needs_metadata.\nAlways excluded: the trim lists, the superseded clone files (civio-exact-flat-cleaned, civio-fixed-flat-final, civio-final-rewrite), retired items, any other queue flag (near-dups, previously rejected, missing passage,\nduplicate options and so on), and percent-change items above the Numerical cap of 40 (MILESTONE_2000_PLAN.md).\ncontent_sha256 is sha256 of the item's canonical JSON (sorted keys, compact): domain, track, language, stem, options,\nanswer_option_id, reveal. It is a manifest checksum, not BankContent::fingerprint.",
+ "rule": "Build the flat-2100 manifest (22 Oct 2026). Run from the repo root after draft_review_queue_2026_10_22.py.\n\nDomain targets (CoS/tracker definition): Numerical, Analytical and Verbal EN 400 each; Verbal Fil, Clerical and GI 300 each.\nThe rule is deterministic and fills each domain in tier order until it reaches its target:\n  T1 approved: unique by normalized stem; ties go to the first file in sorted git order.\n     If a corrected draft replacement exists, it takes the original's slot and the original goes to retire_on_signoff.\n  T2 reviewed (queue result = pass)\n  T3 passing unique drafts (queue result = pass, adds_unique = yes). civio-flat-2100 goes first, then the queue's file priority, then id.\n  Legacy baseline drafts count only once they are HOLD-screened, QA'd and given metadata\n  (scripts/batches/fixes/baseline_ven_num_metadata_2026_10_22.py). They are then passing T3 drafts, noted baseline_screened.\nAlways excluded: the trim lists, the superseded clone files (civio-exact-flat-cleaned, civio-fixed-flat-final, civio-final-rewrite), retired items, any other queue flag (near-dups, previously rejected, missing passage,\nduplicate options and so on), and percent-change items above the Numerical cap of 40 (MILESTONE_2000_PLAN.md).\ncontent_sha256 is sha256 of the item's canonical JSON (sorted keys, compact): domain, track, language, stem, options,\nanswer_option_id, reveal. It is a manifest checksum, not BankContent::fingerprint.",
  "status": "manifest only; nothing approved, signed or imported",
  "items": [
   {
@@ -9885,6 +9883,237 @@
    "note": ""
   },
   {
+   "id": "CIVIO-BASELINE-0173",
+   "domain": "numerical",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "a3999ac7a92935cfce5b3efac6ce29f07082c20876d5545460dea39c19162de5",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0174",
+   "domain": "numerical",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "c585f584f094b41fe2a60a1cdcc2f1047c8af1ddc342a5c848b62f6a3b23c1ea",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0175",
+   "domain": "numerical",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "fcbb7645a5b370c4b413779cfe0102f24fe1b9d22c10b030f4f5f266e119ed2d",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0176",
+   "domain": "numerical",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "883fe8f7b0fe87faaa28e7ce9f1a73c17a6643e50073ec304a45281acefe0763",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0177",
+   "domain": "numerical",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "a5c3d074a8abf34ebbc03ee2da73a19f3e3173d9de10e2afff8f8c06e39ec74e",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0178",
+   "domain": "numerical",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "13f319ba0a8009ec119924acfea6b16e77cdc143c2f6cfe5033a39dfdd618042",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0179",
+   "domain": "numerical",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "04666d75294fd3864f7736b270f578a04d18c3408c56f7db8f67a6bb52c85be7",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0180",
+   "domain": "numerical",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "9416f4e5eaf0274ffa839d9ddaf4700518ef72d5bbd6dd17e226c2f948d5452b",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0182",
+   "domain": "numerical",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "e2637c4358e7d67f161ad1ab9d9851eb124ec15069a99d2f3edaa6aa0a72d4b6",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0183",
+   "domain": "numerical",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "defdebd09c18333c2903dda1b5356c1b5f54c9c94da78aa72ad07af156a73152",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0184",
+   "domain": "numerical",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "64a28e300a71c8fc217a28badb3b96c6f8d19af181e9a54963ddc703948a5d28",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0185",
+   "domain": "numerical",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "b394870292a379ca3fc556c58e61c5766915a8ff6cddb43da4c4419614faa3ed",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0186",
+   "domain": "numerical",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "3da4b204e610c692a4953e5b5ae3628c7cdd9fdc4f8a6752ed05ed45ab44742b",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0187",
+   "domain": "numerical",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "9cfe718d57da9ee8ecb48393089a87fa46e8fd8b900b2e4a166a0cb87f26013d",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0188",
+   "domain": "numerical",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "c53cb90efe01f27703946f8d5c54033f8ce7fdd2da38698b025f369173eae437",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0189",
+   "domain": "numerical",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "399704491b2ae284c5de63482f29345f58bb9dc0d0ef9f80bfc2d840f6ef50fa",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0190",
+   "domain": "numerical",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "b3e8ec3f1fab1ad7fd2b783ef3b43eb94e8de1029621ea8e5093936602d2b689",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0191",
+   "domain": "numerical",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "64b9ae4608dab92864231698c20148b332a4e18aaade1266d94a413fa974c85c",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0192",
+   "domain": "numerical",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "82668e2612a9074f7f9df735091b7c64ce60a7474f9ca2c284abe46aadb592b9",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0194",
+   "domain": "numerical",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "a30fe61bf3499d6e6db4f0b32302d3d7279df9cb31b3d39175f92727f4cad3d5",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0195",
+   "domain": "numerical",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "58d0a1246c399e7ee6177a02128f1a1c0775e4c82a7f7dd0c7fdedc30afed531",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
    "id": "CIVIO-NUM-WP-ALGEBRA-926051",
    "domain": "numerical",
    "track": "subprofessional",
@@ -9894,237 +10123,6 @@
    "content_sha256": "8af4e132930d3090cba82bf64e487a22b5f5146b5feb083e35ef02628c6a973a",
    "retire_on_signoff": "",
    "note": ""
-  },
-  {
-   "id": "CIVIO-BASELINE-0173",
-   "domain": "numerical",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "a3999ac7a92935cfce5b3efac6ce29f07082c20876d5545460dea39c19162de5",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0174",
-   "domain": "numerical",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "c585f584f094b41fe2a60a1cdcc2f1047c8af1ddc342a5c848b62f6a3b23c1ea",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0175",
-   "domain": "numerical",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "fcbb7645a5b370c4b413779cfe0102f24fe1b9d22c10b030f4f5f266e119ed2d",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0176",
-   "domain": "numerical",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "883fe8f7b0fe87faaa28e7ce9f1a73c17a6643e50073ec304a45281acefe0763",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0177",
-   "domain": "numerical",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "a5c3d074a8abf34ebbc03ee2da73a19f3e3173d9de10e2afff8f8c06e39ec74e",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0178",
-   "domain": "numerical",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "13f319ba0a8009ec119924acfea6b16e77cdc143c2f6cfe5033a39dfdd618042",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0179",
-   "domain": "numerical",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "04666d75294fd3864f7736b270f578a04d18c3408c56f7db8f67a6bb52c85be7",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0180",
-   "domain": "numerical",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "9416f4e5eaf0274ffa839d9ddaf4700518ef72d5bbd6dd17e226c2f948d5452b",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0182",
-   "domain": "numerical",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "e2637c4358e7d67f161ad1ab9d9851eb124ec15069a99d2f3edaa6aa0a72d4b6",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0183",
-   "domain": "numerical",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "defdebd09c18333c2903dda1b5356c1b5f54c9c94da78aa72ad07af156a73152",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0184",
-   "domain": "numerical",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "64a28e300a71c8fc217a28badb3b96c6f8d19af181e9a54963ddc703948a5d28",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0185",
-   "domain": "numerical",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "b394870292a379ca3fc556c58e61c5766915a8ff6cddb43da4c4419614faa3ed",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0186",
-   "domain": "numerical",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "3da4b204e610c692a4953e5b5ae3628c7cdd9fdc4f8a6752ed05ed45ab44742b",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0187",
-   "domain": "numerical",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "9cfe718d57da9ee8ecb48393089a87fa46e8fd8b900b2e4a166a0cb87f26013d",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0188",
-   "domain": "numerical",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "c53cb90efe01f27703946f8d5c54033f8ce7fdd2da38698b025f369173eae437",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0189",
-   "domain": "numerical",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "399704491b2ae284c5de63482f29345f58bb9dc0d0ef9f80bfc2d840f6ef50fa",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0190",
-   "domain": "numerical",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "b3e8ec3f1fab1ad7fd2b783ef3b43eb94e8de1029621ea8e5093936602d2b689",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0191",
-   "domain": "numerical",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "64b9ae4608dab92864231698c20148b332a4e18aaade1266d94a413fa974c85c",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0192",
-   "domain": "numerical",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "82668e2612a9074f7f9df735091b7c64ce60a7474f9ca2c284abe46aadb592b9",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0193",
-   "domain": "numerical",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "1cd1d70eaa9926cc4065dbc53667bd0350f45f615c0e85ac7387833963cd1439",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0194",
-   "domain": "numerical",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "a30fe61bf3499d6e6db4f0b32302d3d7279df9cb31b3d39175f92727f4cad3d5",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
   },
   {
    "id": "CIVIO-ANA-ANALOGY-PART-WHOLE-000009",
@@ -17963,968 +17961,968 @@
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "2adff2cdea635e0e5510e95702c1aa75e648594fc2e254753378b1a801cfb354",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0014",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "16765de9e770b87ffca839009ca7d697c69397a0a17badbc378ffa77835a8d50",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0015",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "760e63bee8f4b9a79a53a70f9441a6d06f6da82acfbdcd963256d421bc66931e",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0016",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "53164a06fe7c9cdc220a65ec2f6ce99c8b0e23f2352e15ae77bc5dfc88d25d99",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0017",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "44a925b40a371c42611555f9756cc6891996a98b7d0fa115ca74c494f82f062e",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0018",
-   "domain": "verbal_en",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "8594547c68624ac9debebd6ab6020ae07f5161672f7dd6579355cc819f86fefe",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0019",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "741d8898e2b8a41cc52330cd5fb6754133a7021c54a9c5085b78a8637a166a90",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0020",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "30aa1fece152a4572f75506ddd7839c1179b98fa775c5c84883c2df078949718",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0021",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "2f5f693dc746373cd0db33e90813271ee908545843505505598f265502d1d390",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0022",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "911c99726183d7721f56c5512ea8a50f177d9a1055f127e1e7945e4553ff6791",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0024",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "5c4c74eee50cfab7a5e422acb722eff963ae890aa4950cebbb8a75ba2c482e94",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0025",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "5c2acc1cea495e5178f70690f0c45f079631463d4f3ff09e30810441a9bf0e4d",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0090",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "e997114875652b8ddef20530018e92e029abcffc4e2b78c625219b733dfe85b9",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0091",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "0fae06c067dc71e3e52d3e2e81ebe901846ab3342af77dd6848939cfa6c2f209",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0092",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "943d442918622913b5fbc53a4187dbceb360c261aa4fb559bb888171b0eef3ae",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0093",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "dc0ad3b73ce7e4469cfeb4b6e43d3b039a04338ea27eaf47381fa9d4a0ac95ee",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0094",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "54b067e5abdd1ca8808826be57f18d55aff1c3bc001a458e8a29c050de262a83",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0095",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "f23acfabf732239e78fa988bc7c52124167cc8eb531e56507235ba58efa9a10a",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0096",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "bb3b076fb6aaa52a69589df08788a7aab23169d210768a69db82bfdfe1de28b1",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0097",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "1bbee2df180a38f0e17bdeeda4143baad4baad533243d27ef9668a39f8b5aa3e",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0098",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "3cd8f65fb8f4982cb18bc5b5e2bb4d9a3e3fd6dba94e7edaf85a03cec27b3048",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0099",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "49ca7332f2eb14dfa416bb6b5793f4a14caa50a381c026fdb3fd8853908320b7",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0100",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "d570f963f073fc0f52b361ecca5212c88d132016342d494ceb3425ba97e58324",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0101",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "7f139596203fe91535e9083e02a87941a3d719e92223e8e449b5905a9984e500",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0102",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "db1a76316a0f1257b017f964200d3ba9f993956cf60578c23bb2f318b498cd7c",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0103",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "ec0af4c1088ab046e9b6b6b65da7738709be516b91dfad13bf60787e6decd3cb",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0104",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "60ae4d1d8f39eba7fefc9aaa988566bd3f36f98c2012842ea6a1aab1826edfb1",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0105",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "c7b784b5654f590f03d62810cc4bb123604d1a2a12b24baa5191fe49c6e7dfe7",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0106",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "c66a733763906b47b461d41ea10435f9a1cc8ee150b530c28898238f4796a349",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0107",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "7df14ea03c99ca9706e1a13660696dcf742033d7cc8031aca723b03daa809e47",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0108",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "b9dd96f376c1bbab2fe4bf5157434f8670ea72c50576dea1e796160b18d166dd",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0109",
-   "domain": "verbal_en",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "5b387f9c95559a9b75bbf57fb2ad30f73d9c2d28569991f137218233cec22978",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0110",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "c22a83c1d148251dfe19cb353271b93791d091c15bccb8f79289566b1df8d983",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0111",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "eb807e2063ade8db8defb3b9b9962d026a4bbeac61ad9826c5882604e245d15a",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0112",
-   "domain": "verbal_en",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "57738f362df487d8e7c3a226047870147bf938cd1c310f21a380997d4c58f01f",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0113",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "fda2a90b4eae1060825402cba98e8f5ebb2799e7210c10d9c5f877243e0a2c9d",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0115",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "e6bdf9764e77494057aacd5b3e2ab06efc130fc7b6db1bfe2441cd9fd0e14fa7",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0116",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "f18ce1a8bee0b09a968ff844307586c0ca509cc6fbeb04177761cda9b58c0675",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0118",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "8604b22138b50a6601b62bd899d765c19af7390de22bf169ae2f11dbced5f5d4",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0119",
-   "domain": "verbal_en",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "9351e6750b4bf2bdc5e1b012f12505ca7a3a50eb6dd33154275724c4396ad458",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0120",
-   "domain": "verbal_en",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "3bcc4f16ac16a17e7b101ea21545f45d9beb8d88fac20ffd7adc696296198843",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0121",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "aa43b47c0e6a306f0ea10b370cb56224091f66b9a8f9c4a809c318fe22c8c7a7",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0122",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "b06b14d40a38b1c061586326c18ea9c892366c60bda1d514c8370a7ec47d756f",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0123",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "60eefa742d01aee19d3d2c22ed34de5c3c2dc3a8bd64008eefb7ed6e79c8c355",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0124",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "e11e57104ab82cb4abdcec711eb167b314c0da9ad5d4981c5fc67d851d330c01",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0230",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "f3e02851c6b835cde9c79a239d892aeb9c2ac9ae93d79f52a43bf17d237bd437",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0231",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "6a030aa869dfd6b4a87d0070d997508ea3de85c3a775e318e170f1c1b4da53d4",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0232",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "e58a6ae5d28db4e10ae90babc8b268b61d21ea243d113fbe16c606123eaab543",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0233",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "473bf9cf5be201f52f43f162840fb2ff0cee02924977f4280e8bfc2c8c4d6457",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0234",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "bd394718c27828e40ca6bcdf31508ca3ff5137f0a060f991603095e84d5a909e",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0235",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "7a026835b70545e375b7ad6f991134c340a571ab43d3f6494aba0a4c6f199613",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0236",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "a4357f988c4a1041e4eaa5f90313638299a6890fbe9ae8e8d22249f2e03ea085",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0237",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "9c21b965ea4a6c752bcc08b93319b980730c66e08f1320db628ce630917cb75a",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0238",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "bb5da4172d9da29314f5116b17e4c49187031ac0dcf483d75e7a1d562361ab0e",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0239",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "a74736147fd610b82ef075e46b93664e62dfa1b4839429c5d03d63d40d45db5b",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0240",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "77e59f816aff76f8808cbc4928139a0c6aa726b100b2b857135e6f19fee378bb",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0241",
-   "domain": "verbal_en",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "0c695ffb73e59846de3e5d974939daa3d75f34f7338dcb5c46f0ab1f01af4fd8",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0242",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "91da48630b51f03118069908ae15b6457ea7a5c06fb36741c718b870df618f61",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0243",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "b8ff5dfc5f1f6e0dfa3e78a8544f33962b0bbe17090cae267131932c9d59146f",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0244",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "558c3b0a14841c29b242fd6201316a21cd08c771f4f28959b0d9a1f6d3548f94",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0245",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "ad136e9fc85fed967a5cccafc8620d2a33691245a6cf00da8f65470fbf5776d5",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0419",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "2c1ac52c2f05bea1da6328ff332909b251623502a22ec8ab3bd7880cc54dccaf",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0420",
-   "domain": "verbal_en",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "504d7994cd31f859b589a313b96d27af9ddcd9207977eeb80c734a13c9123092",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0421",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "8a910cd06ae971acd72496e3772ab3281f720f3b3a8ea2d2ac3fe0bd34befd11",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0422",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "436902b75f7654cbd4b93a94b814ff43a949b447ad092eb01905c354982be0b9",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0423",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "3f3ad668d2634b9d7fb82ffbf07992ae5fc5d9a6c77b72b09aff85471d4aac66",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0424",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "575572aa4938b3592bda52e166f4b5f293a3bd5dac181d7f06ba516316d123cb",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0425",
-   "domain": "verbal_en",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "c936276fcf4e77f7e6f3adbed8cecdb7e075c955cf4a538845fe86d06f20b868",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0426",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "deadf1892bcd893be9fa9dd3482c4bb825ea489896875e4c82d53b92eac25235",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0427",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "683d5e098a38d3a6013038921a936efc207b2bab10af04f3728ac50b35d11611",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0428",
-   "domain": "verbal_en",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "4fd2fc08947d36846f348d34183be04be54325c7a1ad1668040809d508a37ca5",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0429",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "b3a002c7186bf2c5e2fa5ac0ca3a2591105f707b3c9c5b4705503a7cf1fc246a",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0430",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "c77ece046cbd7c6e90ea48c6a4cf49166f61702043a8260c7aa0355f67bfc596",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0431",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "efea6594e2ea40c1d85253a3fc3af4b70d6600e95199cf4834c1c2c1da075d39",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0432",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "40693922540cbbd062c639eead2d4c0a2e3a78850553d5a42b514216045faf9d",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0433",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "3423d40791f5379c8d49b85350391c140f3315dedf94b3ea64acaea09bc02bab",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0434",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "27e31f0faffd2b7d8d3668b0f0a505b3471c26493e5cde3ca2a4ddbcf075f516",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0435",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "cd91b739f028eea15b1b6a8cb7000554d13851277de936a67fb27cd9c49a1798",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0436",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "92fb72c9606a17805cd433ea1e0995e5d1444598faa170cce01637ec502cee2f",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0437",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "1c52f0f9eb2a82170c5adac801b3ac7294609fb43d7b73c4e831cc41b04cc794",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0438",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "f9d0ae22acb5fac3c2b181ddb0ba48464d98b19dde227e778fca80a09a872e80",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0439",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "e3e89d42cd02e22cf492062b7a53d9ceab9afdfdf0e960180354091a2e6addac",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
-  },
-  {
-   "id": "CIVIO-BASELINE-0440",
-   "domain": "verbal_en",
-   "track": "both",
-   "status": "draft",
-   "tier": 4,
-   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
-   "content_sha256": "16b1046ac1596951a529b81fa42ad81fd30995a1df8e81e688f6deb3c76fe938",
-   "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0441",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "65f84108e3c2126609a380b3b0979969b3db4592e7d11fabbadb6059a17c241b",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0442",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "bb846f7f7897ddd104f8effe43885270d9bcacb303cf7499c5322e87dc9187ff",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0443",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "37ea62e2ab56ad75655b0f34d0eb2da6f5a87ce4eedda2bc2dc0b678d8e6292a",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0444",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "9b6e446ee8229be22fcf15f30789275b4a6136568b8cb89098d453d8d548afb8",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-BASELINE-0445",
    "domain": "verbal_en",
    "track": "both",
    "status": "draft",
-   "tier": 4,
+   "tier": 3,
    "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
    "content_sha256": "6ef80ea7244ee5d3d26452b6f938b8dbc2b764eb0e3856bb116f6b24e6c28777",
    "retire_on_signoff": "",
-   "note": "needs_metadata"
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0446",
+   "domain": "verbal_en",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "3c31e199feb0a4a56deea59e3fecbdc84e4505e62d10ff057e9217d52b72cc64",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0447",
+   "domain": "verbal_en",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "610816d4791833d720a1102ad89ddde844acaad9e74223791d24dbea002d5241",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0448",
+   "domain": "verbal_en",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "00c963b64619d8e38ebd083e2ca96d1063f94af684a581fdfd9f20f8814c07c8",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0449",
+   "domain": "verbal_en",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "c1e9dd92a5bab721eedc7381d568fa868f44c097db799582e5fc8476a5adc77c",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0450",
+   "domain": "verbal_en",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "79c447dfd1ab188c6804e20fd4eb382472feffba98659a98a62ba9db123575bf",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0451",
+   "domain": "verbal_en",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "930e4b17803638b2a8a250cd4c4893faf7e66e285e25ef7a5b5626affd64226e",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0452",
+   "domain": "verbal_en",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "49cfe5b807cd8b63bb35007b55eb57bc8e7967857dc928dcfb01fbb0d88d7bf0",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0530",
+   "domain": "verbal_en",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "7c7fcd4ff34eda28748ce9fe8f899f4ab5f6b90e61936c6624970c5cca2e415b",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0531",
+   "domain": "verbal_en",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "5625254f95e21c2598d3396006f7d5fe61fc4d2c82e4529d67042b7110de22ea",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
+  },
+  {
+   "id": "CIVIO-BASELINE-0532",
+   "domain": "verbal_en",
+   "track": "both",
+   "status": "draft",
+   "tier": 3,
+   "source_file": "docs/research/audit/data/baseline-550-spec-2026-10-18.json",
+   "content_sha256": "3dcbbe56417f2dc6f84223c70191de3e3b7a66379f0d97ca21c354f2f9f04feb",
+   "retire_on_signoff": "",
+   "note": "baseline_screened"
   },
   {
    "id": "CIVIO-VFIL-BALARILA-040061",

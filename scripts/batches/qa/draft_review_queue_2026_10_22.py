@@ -258,10 +258,12 @@ def main():
             "civio-exact-flat", "civio-flat-2100", "civio-fixed-flat", "chatgpt-batch"]
     def rank(r):
         return (next((n for n, x in enumerate(prio) if x in r["file"]), 99), r["id"] or "")
-    # Baseline GI rows (metadata added, HOLD-screened 22 Oct) count as adds once they pass; they are
-    # served legacy rows never approved under the spec. Other baseline subjects still lack metadata.
+    # Baseline rows that were HOLD-screened and given metadata on 22 Oct (all GI, plus 88 Verbal EN and
+    # 21 Numerical) count as adds once they pass. They are served legacy rows that were never approved
+    # under the spec; other baseline rows still lack metadata.
+    screened = {e["item"].get("id") for e in pool_list if e["item"].get("hold_screen") and e["item"].get("difficulty")}
     adds = [r for r in rows_out if r["result"] == "pass" and (r["kind"] == "new" or (r["kind"] == "revision" and not pool_fix.get(r["id"]))
-                                                             or (r["kind"] == "baseline" and r["domain"] == "general_information"))]
+                                                             or (r["kind"] == "baseline" and r["id"] in screened))]
     # Verbal: balance English first (smaller pool), then Filipino.
     adds.sort(key=lambda r: (r["domain"] != "verbal_en", rank(r)))
     for r in rows_out:

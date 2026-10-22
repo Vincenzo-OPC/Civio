@@ -392,3 +392,14 @@ The five stems now use one format. Nothing activated. Recheck only 0002, 0012, 0
 - All 122 flat-2100 drafts are in.
 - Coverage: 343 items are subprofessional-only (Clerical 300, Numerical 43), and 1,700 are open to the subprofessional track (subprofessional plus both). Analytical is professional-only.
 Nothing approved, signed or imported.
+
+### Update: baseline Verbal EN and Numerical screened (GT approved)
+The needs-metadata tier is gone. 88 Verbal EN and 21 Numerical baseline drafts were HOLD-screened against 9 files (max shared 5-grams 0.11, no verbatim stems), QA'd, and given difficulty and est_seconds by approved norms. They now count as passing drafts (note `baseline_screened`).
+- 15 failed and were swapped for the next eligible items:
+  - ambiguous key: 0018, 0112
+  - editorial note in an option: 0109, 0241
+  - near-duplicate: 0119, 0120, 0193, 0420, 0425, 0428, 0440
+  - Filipino items tagged Verbal EN: 0461, 0463, 0464, 0465
+- Split: Verbal EN 39 easy and 49 medium; Numerical 8 easy, 9 medium and 4 hard.
+- The manifest is still 2,100: 1,414 approved, 644 draft, 42 reviewed.
+Script: `scripts/batches/fixes/baseline_ven_num_metadata_2026_10_22.py`.

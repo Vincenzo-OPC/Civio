@@ -17,14 +17,14 @@ Script: `scripts/batches/qa/draft_review_queue_2026_10_22.py`, rendered by `draf
 |---|---|---|---|---|---|---|---|
 | GI | 286 | 273 | 13 | 83 | 24 | 45 | 134 |
 | Clerical | 297 | 200 | 97 | 164 | 15 | 38 | 80 |
-| Numerical | 279 | 187 | 92 | 141 | 46 | 1 | 91 |
+| Numerical | 279 | 208 | 71 | 141 | 46 | 1 | 91 |
 | Analytical | 395 | 278 | 117 | 205 | 10 | 66 | 114 |
-| Verbal EN | 347 | 119 | 228 | 137 | 5 | 77 | 128 |
+| Verbal EN | 347 | 207 | 140 | 137 | 5 | 77 | 128 |
 | Verbal Fil | 179 | 165 | 14 | 127 | 34 | 17 | 1 |
 
 ## Open defects
 
-- `missing_est_seconds` (420): Baseline-550 rows outside GI still have no difficulty or est_seconds (metadata only).
+- `missing_est_seconds` (311): Baseline-550 rows outside GI still have no difficulty or est_seconds (metadata only).
 - `near_dup_approved` (261): Lint-fix revisions close to the approved item they fix. Expected, and not blocking for revisions.
 - `previously_rejected` (99): Already rejected in the ChatGPT batch 002/003 reviews.
 - `percent_change_topic` (31): Information only: the bank is already over the percent-change cap of 40.
@@ -43,7 +43,7 @@ Not found: mojibake, "(variant N)", keys outside the options, HOLD-source marker
 
 | File | Pass | Flag |
 |---|---|---|
-| baseline-550-spec-2026-10-18.json | 132 | 417 |
+| baseline-550-spec-2026-10-18.json | 241 | 308 |
 | gap-fill-2000-06-lintfix.json | 203 | 14 |
 | civio-flat-2100-2026-10-22.json | 122 | 0 |
 | civio-final-rewrite-2026-10-22.json | 120 | 0 |
@@ -70,14 +70,14 @@ Order: gap-fill-2000 files, then round-03 replacements, then baseline GI, then f
 
 | Subject | Approved | Passing adds available | Recommended | Projected if signed | Target | Shortfall |
 |---|---|---|---|---|---|---|
-| Verbal (EN+Fil) | 474 | 176 | 126 | 600 | 600 | 0 |
-| Numerical | 309 | 167 | 91 | 400 | 400 | 0 |
+| Verbal (EN+Fil) | 474 | 264 | 126 | 600 | 600 | 0 |
+| Numerical | 309 | 188 | 91 | 400 | 400 | 0 |
 | GI | 236 | 226 | 164 | 400 | 400 | 0 |
 | Analytical | 251 | 203 | 49 | 300 | 300 | 0 |
 | Clerical | 207 | 147 | 93 | 300 | 300 | 0 |
 | **Total** | **1477** | | **523** | **2000** | **2,000** | **0** |
 
-Verbal split: EN 49 + Fil 77. GI draws on baseline rows: about 107 of the 164 recommended GI items.
+Verbal split: EN 126 + Fil 0. GI draws on baseline rows: about 195 of the 164 recommended GI items.
 
 ## Next
 

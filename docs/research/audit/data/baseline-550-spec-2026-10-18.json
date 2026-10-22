@@ -752,8 +752,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "Benevolent most nearly means:",
    "options": [
@@ -797,7 +797,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0014",
@@ -807,8 +825,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "Scarce most nearly means:",
    "options": [
@@ -852,7 +870,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0015",
@@ -862,8 +898,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "Diligent most nearly means:",
    "options": [
@@ -907,7 +943,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0016",
@@ -917,8 +971,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "Obsolete most nearly means:",
    "options": [
@@ -962,7 +1016,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0017",
@@ -972,8 +1044,8 @@
    "concept": "sentence completion",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "She studied hard _____ she wanted to pass the exam.",
    "options": [
@@ -1017,7 +1089,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence completion: context clue plus word form. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0018",
@@ -1072,7 +1162,17 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "qa_flags": [
+    "ambiguous_key"
+   ],
+   "qa_note": "2026-10-22 screen: ambiguous_key: 'staff' can take 'was' or 'were', so both are defensible"
   },
   {
    "id": "CIVIO-BASELINE-0019",
@@ -1082,8 +1182,8 @@
    "concept": "sentence completion",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "If it rains tomorrow, the game _____.",
    "options": [
@@ -1127,7 +1227,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence completion: context clue plus word form. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0020",
@@ -1137,8 +1255,8 @@
    "concept": "error recognition",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "Choose the sentence with NO error:",
    "options": [
@@ -1182,7 +1300,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Error recognition: grammar and correct usage. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0021",
@@ -1192,8 +1328,8 @@
    "concept": "error recognition",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "Which sentence is grammatically correct?",
    "options": [
@@ -1237,7 +1373,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Error recognition: grammar and correct usage. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0022",
@@ -1247,8 +1401,8 @@
    "concept": "sentence structure",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 40,
    "language": "en",
    "stem": "A simple sentence contains:",
    "options": [
@@ -1292,7 +1446,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence structure: definition recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0023",
@@ -1357,8 +1529,8 @@
    "concept": "paragraph organization",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "The topic sentence usually:",
    "options": [
@@ -1402,7 +1574,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.06,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Paragraph organization: definition recall (shorter than the 75 s norm for full arrangement tasks). The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0025",
@@ -1412,8 +1602,8 @@
    "concept": "paragraph organization",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Coherence in a paragraph means ideas are:",
    "options": [
@@ -1457,7 +1647,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Paragraph organization: definition recall (shorter than the 75 s norm for full arrangement tasks). The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0026",
@@ -5194,8 +5402,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "The word PRUDENT most nearly means:",
    "options": [
@@ -5239,7 +5447,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0091",
@@ -5249,8 +5475,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "An antonym of SCARCE is:",
    "options": [
@@ -5294,7 +5520,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0092",
@@ -5304,8 +5548,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "CANDID most nearly means:",
    "options": [
@@ -5349,7 +5593,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0093",
@@ -5359,8 +5621,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "The word MITIGATE is closest in meaning to:",
    "options": [
@@ -5404,7 +5666,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.08,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0094",
@@ -5414,8 +5694,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "A synonym of IMPARTIAL is:",
    "options": [
@@ -5459,7 +5739,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0095",
@@ -5469,8 +5767,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "The word VERBOSE describes writing that is:",
    "options": [
@@ -5514,7 +5812,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0096",
@@ -5524,8 +5840,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "RESILIENT most nearly means:",
    "options": [
@@ -5569,7 +5885,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0097",
@@ -5579,8 +5913,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "An antonym of TRANSPARENT (in governance contexts) is:",
    "options": [
@@ -5624,7 +5958,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0098",
@@ -5634,8 +5986,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "CREDIBLE evidence is evidence that is:",
    "options": [
@@ -5679,7 +6031,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0099",
@@ -5689,8 +6059,8 @@
    "concept": "sentence completion",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "Despite the limited budget, the agency remained _____ and completed the project on time.",
    "options": [
@@ -5734,7 +6104,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence completion: context clue plus word form. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0100",
@@ -5744,8 +6132,8 @@
    "concept": "sentence completion",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "The auditor's report was so _____ that even non-experts understood the findings.",
    "options": [
@@ -5789,7 +6177,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence completion: context clue plus word form. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0101",
@@ -5799,8 +6205,8 @@
    "concept": "sentence completion",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "Public servants are expected to act with _____ even when no one is watching.",
    "options": [
@@ -5844,7 +6250,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence completion: context clue plus word form. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0102",
@@ -5854,8 +6278,8 @@
    "concept": "sentence completion",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "The committee postponed the hearing _____ additional documents could be reviewed.",
    "options": [
@@ -5899,7 +6323,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence completion: context clue plus word form. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0103",
@@ -5909,8 +6351,8 @@
    "concept": "sentence completion",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "Her explanation failed to _____ the panel's doubts about the data.",
    "options": [
@@ -5954,7 +6396,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence completion: context clue plus word form. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0104",
@@ -5964,8 +6424,8 @@
    "concept": "sentence completion",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "The policy was revised _____ feedback from frontline employees.",
    "options": [
@@ -6009,7 +6469,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence completion: context clue plus word form. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0105",
@@ -6019,8 +6497,8 @@
    "concept": "sentence completion",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "Efficient filing systems help clerks retrieve records with minimal _____.",
    "options": [
@@ -6064,7 +6542,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence completion: context clue plus word form. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0106",
@@ -6074,8 +6570,8 @@
    "concept": "sentence completion",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "The mayor emphasized that disaster drills are not optional but _____.",
    "options": [
@@ -6119,7 +6615,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence completion: context clue plus word form. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0107",
@@ -6129,8 +6643,8 @@
    "concept": "error recognition",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "Which sentence contains an error?",
    "options": [
@@ -6174,7 +6688,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Error recognition: grammar and correct usage. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0108",
@@ -6184,8 +6716,8 @@
    "concept": "error recognition",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "Choose the sentence with incorrect subject-verb agreement.",
    "options": [
@@ -6229,7 +6761,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Error recognition: grammar and correct usage. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0109",
@@ -6284,7 +6834,17 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "qa_flags": [
+    "option_artifact"
+   ],
+   "qa_note": "2026-10-22 screen: option_artifact; option_artifact: an option carries the note '(informal)'"
   },
   {
    "id": "CIVIO-BASELINE-0110",
@@ -6294,8 +6854,8 @@
    "concept": "error recognition",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "Identify the erroneous sentence.",
    "options": [
@@ -6339,7 +6899,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Error recognition: grammar and correct usage. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0111",
@@ -6349,8 +6927,8 @@
    "concept": "error recognition",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "Which sentence uses a wrong comparative form?",
    "options": [
@@ -6394,7 +6972,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Error recognition: grammar and correct usage. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0112",
@@ -6449,7 +7045,17 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "qa_flags": [
+    "ambiguous_key"
+   ],
+   "qa_note": "2026-10-22 screen: ambiguous_key: 'Covered in dust, the clerk…' is also a misplaced modifier"
   },
   {
    "id": "CIVIO-BASELINE-0113",
@@ -6459,8 +7065,8 @@
    "concept": "sentence structure",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 40,
    "language": "en",
    "stem": "A compound sentence typically contains:",
    "options": [
@@ -6504,7 +7110,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence structure: definition recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0114",
@@ -6569,8 +7193,8 @@
    "concept": "sentence structure",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 40,
    "language": "en",
    "stem": "Parallel structure is correctly used in:",
    "options": [
@@ -6614,7 +7238,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence structure: definition recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0116",
@@ -6624,8 +7266,8 @@
    "concept": "sentence structure",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 40,
    "language": "en",
    "stem": "A run-on sentence is best corrected by:",
    "options": [
@@ -6669,7 +7311,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence structure: definition recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0117",
@@ -6734,8 +7394,8 @@
    "concept": "sentence structure",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 40,
    "language": "en",
    "stem": "Active voice is illustrated by:",
    "options": [
@@ -6779,7 +7439,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence structure: applied sentence structure. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0119",
@@ -6834,7 +7512,17 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "qa_flags": [
+    "near_dup"
+   ],
+   "qa_note": "2026-10-22 screen: near_dup: same item as 0024 (topic sentence)"
   },
   {
    "id": "CIVIO-BASELINE-0120",
@@ -6889,7 +7577,17 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "qa_flags": [
+    "near_dup"
+   ],
+   "qa_note": "2026-10-22 screen: near_dup: same item as 0025 (coherence)"
   },
   {
    "id": "CIVIO-BASELINE-0121",
@@ -6899,8 +7597,8 @@
    "concept": "paragraph organization",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "Which order best fits a process paragraph?",
    "options": [
@@ -6944,7 +7642,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Paragraph organization: applies a paragraph principle. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0122",
@@ -6954,8 +7670,8 @@
    "concept": "paragraph organization",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "A concluding sentence often:",
    "options": [
@@ -6999,7 +7715,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Paragraph organization: definition recall (shorter than the 75 s norm for full arrangement tasks). The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0123",
@@ -7009,8 +7743,8 @@
    "concept": "paragraph organization",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Unity in a paragraph means:",
    "options": [
@@ -7054,7 +7788,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Paragraph organization: definition recall (shorter than the 75 s norm for full arrangement tasks). The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0124",
@@ -7064,8 +7816,8 @@
    "concept": "paragraph organization",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Transitional words like \"however\" and \"therefore\" help show:",
    "options": [
@@ -7109,7 +7861,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Paragraph organization: definition recall (shorter than the 75 s norm for full arrangement tasks). The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0125",
@@ -9759,8 +10529,8 @@
    "concept": "basic operations",
    "micro_skill": "",
    "archetype": "BASELINE-NUMERICAL",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 35,
    "language": "en",
    "stem": "What is 18% of 450?",
    "options": [
@@ -9804,7 +10574,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for numerical / Basic operations: single-step operation. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0174",
@@ -9814,8 +10602,8 @@
    "concept": "basic operations",
    "micro_skill": "",
    "archetype": "BASELINE-NUMERICAL",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "Simplify: 3/4 + 2/3",
    "options": [
@@ -9859,7 +10647,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for numerical / Basic operations: multi-step operation. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0175",
@@ -9869,8 +10675,8 @@
    "concept": "basic operations",
    "micro_skill": "",
    "archetype": "BASELINE-NUMERICAL",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 35,
    "language": "en",
    "stem": "Compute 125 times 0.8",
    "options": [
@@ -9914,7 +10720,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for numerical / Basic operations: single-step operation. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0176",
@@ -9924,8 +10748,8 @@
    "concept": "basic operations",
    "micro_skill": "",
    "archetype": "BASELINE-NUMERICAL",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 35,
    "language": "en",
    "stem": "What is the value of 2 to the 5th power?",
    "options": [
@@ -9969,7 +10793,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.1,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for numerical / Basic operations: single-step operation. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0177",
@@ -9979,8 +10821,8 @@
    "concept": "basic operations",
    "micro_skill": "",
    "archetype": "BASELINE-NUMERICAL",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 35,
    "language": "en",
    "stem": "Round 3,847 to the nearest hundred:",
    "options": [
@@ -10024,7 +10866,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for numerical / Basic operations: single-step operation. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0178",
@@ -10034,8 +10894,8 @@
    "concept": "basic operations",
    "micro_skill": "",
    "archetype": "BASELINE-NUMERICAL",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 35,
    "language": "en",
    "stem": "Find the LCM of 6 and 8:",
    "options": [
@@ -10079,7 +10939,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for numerical / Basic operations: single-step operation. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0179",
@@ -10089,8 +10967,8 @@
    "concept": "basic operations",
    "micro_skill": "",
    "archetype": "BASELINE-NUMERICAL",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 35,
    "language": "en",
    "stem": "Find the GCF of 36 and 54:",
    "options": [
@@ -10134,7 +11012,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for numerical / Basic operations: single-step operation. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0180",
@@ -10144,8 +11040,8 @@
    "concept": "basic operations",
    "micro_skill": "",
    "archetype": "BASELINE-NUMERICAL",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 35,
    "language": "en",
    "stem": "Convert 0.125 to a fraction in lowest terms:",
    "options": [
@@ -10189,7 +11085,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for numerical / Basic operations: single-step operation. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0181",
@@ -10254,8 +11168,8 @@
    "concept": "basic operations",
    "micro_skill": "",
    "archetype": "BASELINE-NUMERICAL",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "Evaluate: 15 - 3 times 4 + 6",
    "options": [
@@ -10299,7 +11213,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for numerical / Basic operations: multi-step operation. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0183",
@@ -10309,8 +11241,8 @@
    "concept": "basic operations",
    "micro_skill": "",
    "archetype": "BASELINE-NUMERICAL",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "A ratio of 3:5 equals which fraction for the first part over total?",
    "options": [
@@ -10354,7 +11286,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for numerical / Basic operations: multi-step operation. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0184",
@@ -10364,8 +11314,8 @@
    "concept": "basic operations",
    "micro_skill": "",
    "archetype": "BASELINE-NUMERICAL",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 35,
    "language": "en",
    "stem": "What is 2.5% of 800?",
    "options": [
@@ -10409,7 +11359,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for numerical / Basic operations: single-step operation. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0185",
@@ -10419,8 +11387,8 @@
    "concept": "number sequence",
    "micro_skill": "",
    "archetype": "BASELINE-NUMERICAL",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "Find the next number: 4, 9, 16, 25, _____",
    "options": [
@@ -10464,7 +11432,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for numerical / Number sequence: single-rule series. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0186",
@@ -10474,8 +11460,8 @@
    "concept": "number sequence",
    "micro_skill": "",
    "archetype": "BASELINE-NUMERICAL",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "Find the next number: 5, 10, 20, 40, _____",
    "options": [
@@ -10519,7 +11505,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for numerical / Number sequence: single-rule series. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0187",
@@ -10529,8 +11533,8 @@
    "concept": "number sequence",
    "micro_skill": "",
    "archetype": "BASELINE-NUMERICAL",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "Find the next: 1, 1, 2, 3, 5, 8, _____",
    "options": [
@@ -10574,7 +11578,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.11,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for numerical / Number sequence: single-rule series. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0188",
@@ -10584,8 +11606,8 @@
    "concept": "number sequence",
    "micro_skill": "",
    "archetype": "BASELINE-NUMERICAL",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "Find the next: 81, 27, 9, 3, _____",
    "options": [
@@ -10629,7 +11651,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for numerical / Number sequence: single-rule series. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0189",
@@ -10639,8 +11679,8 @@
    "concept": "number sequence",
    "micro_skill": "",
    "archetype": "BASELINE-NUMERICAL",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "hard",
+   "est_seconds": 50,
    "language": "en",
    "stem": "Find the missing: 2, 6, 12, 20, 30, _____",
    "options": [
@@ -10684,7 +11724,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for numerical / Number sequence: second-order or combined rule. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0190",
@@ -10694,8 +11752,8 @@
    "concept": "number sequence",
    "micro_skill": "",
    "archetype": "BASELINE-NUMERICAL",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "Find the next: 7, 14, 28, 56, _____",
    "options": [
@@ -10739,7 +11797,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for numerical / Number sequence: single-rule series. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0191",
@@ -10749,8 +11825,8 @@
    "concept": "number sequence",
    "micro_skill": "",
    "archetype": "BASELINE-NUMERICAL",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "hard",
+   "est_seconds": 50,
    "language": "en",
    "stem": "Find the next: 3, 7, 15, 31, _____",
    "options": [
@@ -10794,7 +11870,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for numerical / Number sequence: second-order or combined rule. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0192",
@@ -10804,8 +11898,8 @@
    "concept": "number sequence",
    "micro_skill": "",
    "archetype": "BASELINE-NUMERICAL",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "hard",
+   "est_seconds": 50,
    "language": "en",
    "stem": "Find the next: 100, 95, 85, 70, _____",
    "options": [
@@ -10849,7 +11943,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for numerical / Number sequence: second-order or combined rule. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0193",
@@ -10904,7 +12016,17 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "qa_flags": [
+    "near_dup"
+   ],
+   "qa_note": "2026-10-22 screen: near_dup: same series as 0185 (squares, next is 36)"
   },
   {
    "id": "CIVIO-BASELINE-0194",
@@ -10914,8 +12036,8 @@
    "concept": "number sequence",
    "micro_skill": "",
    "archetype": "BASELINE-NUMERICAL",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "hard",
+   "est_seconds": 50,
    "language": "en",
    "stem": "Find the next: 2, 3, 5, 8, 12, _____",
    "options": [
@@ -10959,7 +12081,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for numerical / Number sequence: second-order or combined rule. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0195",
@@ -10969,8 +12109,8 @@
    "concept": "number sequence",
    "micro_skill": "",
    "archetype": "BASELINE-NUMERICAL",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "Find the next: 64, 32, 16, 8, _____",
    "options": [
@@ -11014,7 +12154,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for numerical / Number sequence: single-rule series. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0196",
@@ -12960,8 +14118,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "TENACIOUS most nearly means:",
    "options": [
@@ -13005,7 +14163,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0231",
@@ -13015,8 +14191,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "An antonym of EXPAND is:",
    "options": [
@@ -13060,7 +14236,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0232",
@@ -13070,8 +14264,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "PLAUSIBLE most nearly means:",
    "options": [
@@ -13115,7 +14309,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0233",
@@ -13125,8 +14337,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "SCRUTINIZE means to:",
    "options": [
@@ -13170,7 +14382,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0234",
@@ -13180,8 +14410,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "AMBIGUOUS language is:",
    "options": [
@@ -13225,7 +14455,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0235",
@@ -13235,8 +14483,8 @@
    "concept": "sentence completion",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "The spokesperson gave a _____ denial, leaving no room for doubt about the agency's position.",
    "options": [
@@ -13280,7 +14528,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence completion: context clue plus word form. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0236",
@@ -13290,8 +14556,8 @@
    "concept": "sentence completion",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "Innovation in service delivery should be _____ with existing legal standards.",
    "options": [
@@ -13335,7 +14601,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence completion: context clue plus word form. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0237",
@@ -13345,8 +14629,8 @@
    "concept": "sentence completion",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "The findings were _____ by a second independent review.",
    "options": [
@@ -13390,7 +14674,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence completion: context clue plus word form. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0238",
@@ -13400,8 +14702,8 @@
    "concept": "sentence completion",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "Employees were asked to _____ from making public comments on the pending case.",
    "options": [
@@ -13445,7 +14747,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence completion: context clue plus word form. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0239",
@@ -13455,8 +14775,8 @@
    "concept": "error recognition",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "Identify the sentence with an error in article usage.",
    "options": [
@@ -13500,7 +14820,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Error recognition: grammar and correct usage. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0240",
@@ -13510,8 +14848,8 @@
    "concept": "error recognition",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "Which sentence has a tense error?",
    "options": [
@@ -13555,7 +14893,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Error recognition: grammar and correct usage. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0241",
@@ -13610,7 +14966,17 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "qa_flags": [
+    "option_artifact"
+   ],
+   "qa_note": "2026-10-22 screen: option_artifact; option_artifact: an option carries the note '(as written)'"
   },
   {
    "id": "CIVIO-BASELINE-0242",
@@ -13620,8 +14986,8 @@
    "concept": "sentence structure",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 40,
    "language": "en",
    "stem": "Which option correctly combines clauses without a comma splice?",
    "options": [
@@ -13665,7 +15031,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence structure: applied sentence structure. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0243",
@@ -13675,8 +15059,8 @@
    "concept": "sentence structure",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 40,
    "language": "en",
    "stem": "A relative clause is introduced by words such as:",
    "options": [
@@ -13720,7 +15104,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence structure: definition recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0244",
@@ -13730,8 +15132,8 @@
    "concept": "paragraph organization",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "When arranging sentences into a coherent paragraph, place background before:",
    "options": [
@@ -13775,7 +15177,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Paragraph organization: definition recall (shorter than the 75 s norm for full arrangement tasks). The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0245",
@@ -13785,8 +15205,8 @@
    "concept": "paragraph organization",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 30,
    "language": "en",
    "stem": "Chronological markers like \"first,\" \"then,\" and \"finally\" signal:",
    "options": [
@@ -13830,7 +15250,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Paragraph organization: definition recall (shorter than the 75 s norm for full arrangement tasks). The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0246",
@@ -23745,8 +25183,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "The word 'circumspect' most nearly means:",
    "options": [
@@ -23790,7 +25228,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0420",
@@ -23845,7 +25301,17 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "qa_flags": [
+    "near_dup"
+   ],
+   "qa_note": "2026-10-22 screen: near_dup: same target and relation as 0230 (tenacious)"
   },
   {
    "id": "CIVIO-BASELINE-0421",
@@ -23855,8 +25321,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "The antonym of 'mitigate' is:",
    "options": [
@@ -23900,7 +25366,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0422",
@@ -23910,8 +25394,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "'Pragmatic' most nearly means:",
    "options": [
@@ -23955,7 +25439,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0423",
@@ -23965,8 +25467,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "'Lucid' writing is:",
    "options": [
@@ -24010,7 +25512,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0424",
@@ -24020,8 +25540,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "The word 'abate' most nearly means:",
    "options": [
@@ -24065,7 +25585,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0425",
@@ -24120,7 +25658,17 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "qa_flags": [
+    "near_dup"
+   ],
+   "qa_note": "2026-10-22 screen: near_dup: same target and relation as 0094 (impartial)"
   },
   {
    "id": "CIVIO-BASELINE-0426",
@@ -24130,8 +25678,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "'Concur' most nearly means:",
    "options": [
@@ -24175,7 +25723,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0427",
@@ -24185,8 +25751,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "A 'viable' proposal is:",
    "options": [
@@ -24230,7 +25796,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0428",
@@ -24285,7 +25869,17 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "qa_flags": [
+    "near_dup"
+   ],
+   "qa_note": "2026-10-22 screen: near_dup: same item as 0091 (antonym of scarce)"
   },
   {
    "id": "CIVIO-BASELINE-0429",
@@ -24295,8 +25889,8 @@
    "concept": "sentence completion",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "The records were filed promptly, _____ the audit could begin on schedule.",
    "options": [
@@ -24340,7 +25934,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence completion: context clue plus word form. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0430",
@@ -24350,8 +25962,8 @@
    "concept": "sentence completion",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "The supervisor remained calm _____ the queue became longer.",
    "options": [
@@ -24395,7 +26007,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence completion: context clue plus word form. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0431",
@@ -24405,8 +26035,8 @@
    "concept": "sentence completion",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "The clerk checked the reference number _____ submitting the report.",
    "options": [
@@ -24450,7 +26080,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence completion: context clue plus word form. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0432",
@@ -24460,8 +26108,8 @@
    "concept": "sentence completion",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "The agency revised the form _____ applicants reported repeated confusion.",
    "options": [
@@ -24505,7 +26153,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence completion: context clue plus word form. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0433",
@@ -24515,8 +26181,8 @@
    "concept": "sentence completion",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "The notice was written in plain language _____ every visitor could understand it.",
    "options": [
@@ -24560,7 +26226,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence completion: context clue plus word form. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0434",
@@ -24570,8 +26254,8 @@
    "concept": "sentence completion",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "The officer acted _____ the written procedure, not by personal preference.",
    "options": [
@@ -24615,7 +26299,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence completion: context clue plus word form. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0435",
@@ -24625,8 +26327,8 @@
    "concept": "sentence completion",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "The meeting was postponed _____ the key participants were unavailable.",
    "options": [
@@ -24670,7 +26372,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence completion: context clue plus word form. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0436",
@@ -24680,8 +26400,8 @@
    "concept": "sentence completion",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "The team continued the inspection _____ the rain.",
    "options": [
@@ -24725,7 +26445,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence completion: context clue plus word form. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0437",
@@ -24735,8 +26473,8 @@
    "concept": "sentence completion",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "The applicant submitted a copy _____ the original document.",
    "options": [
@@ -24780,7 +26518,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence completion: context clue plus word form. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0438",
@@ -24790,8 +26546,8 @@
    "concept": "sentence completion",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "The request will be processed _____ all required fields are complete.",
    "options": [
@@ -24835,7 +26591,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence completion: context clue plus word form. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0439",
@@ -24845,8 +26619,8 @@
    "concept": "error recognition",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "Which sentence contains an error in subject-verb agreement?",
    "options": [
@@ -24890,7 +26664,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Error recognition: grammar and correct usage. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0440",
@@ -24945,7 +26737,17 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "qa_flags": [
+    "near_dup"
+   ],
+   "qa_note": "2026-10-22 screen: near_dup: same error as 0107 ('Between you and I')"
   },
   {
    "id": "CIVIO-BASELINE-0441",
@@ -24955,8 +26757,8 @@
    "concept": "error recognition",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "Which sentence contains a dangling modifier?",
    "options": [
@@ -25000,7 +26802,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Error recognition: grammar and correct usage. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0442",
@@ -25010,8 +26830,8 @@
    "concept": "error recognition",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "Which sentence uses a comma incorrectly?",
    "options": [
@@ -25055,7 +26875,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Error recognition: grammar and correct usage. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0443",
@@ -25065,8 +26903,8 @@
    "concept": "error recognition",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "Which sentence has an error in verb tense consistency?",
    "options": [
@@ -25110,7 +26948,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Error recognition: grammar and correct usage. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0444",
@@ -25120,8 +26976,8 @@
    "concept": "error recognition",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "Which sentence uses an ambiguous pronoun?",
    "options": [
@@ -25165,7 +27021,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Error recognition: grammar and correct usage. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0445",
@@ -25175,8 +27049,8 @@
    "concept": "sentence structure",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 40,
    "language": "en",
    "stem": "Which option is a complex sentence?",
    "options": [
@@ -25220,7 +27094,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence structure: applied sentence structure. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0446",
@@ -25230,8 +27122,8 @@
    "concept": "sentence structure",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 40,
    "language": "en",
    "stem": "Which option is a compound sentence?",
    "options": [
@@ -25275,7 +27167,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence structure: applied sentence structure. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0447",
@@ -25285,8 +27195,8 @@
    "concept": "sentence structure",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 40,
    "language": "en",
    "stem": "Which sentence has correct parallel structure?",
    "options": [
@@ -25330,7 +27240,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence structure: applied sentence structure. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0448",
@@ -25340,8 +27268,8 @@
    "concept": "sentence structure",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 40,
    "language": "en",
    "stem": "Which revision removes the run-on sentence from 'The form was incomplete the clerk returned it'?",
    "options": [
@@ -25385,7 +27313,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence structure: applied sentence structure. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0449",
@@ -25395,8 +27341,8 @@
    "concept": "paragraph organization",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "Which sentence is the best topic sentence for a paragraph about faster permit processing?",
    "options": [
@@ -25440,7 +27386,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Paragraph organization: applies a paragraph principle. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0450",
@@ -25450,8 +27414,8 @@
    "concept": "paragraph organization",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "Which order best organizes instructions for submitting a form?",
    "options": [
@@ -25495,7 +27459,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Paragraph organization: applies a paragraph principle. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0451",
@@ -25505,8 +27487,8 @@
    "concept": "paragraph organization",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "A paragraph has one sentence about parking and four about document security. To improve unity, the writer should:",
    "options": [
@@ -25550,7 +27532,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Paragraph organization: applies a paragraph principle. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0452",
@@ -25560,8 +27560,8 @@
    "concept": "paragraph organization",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 45,
    "language": "en",
    "stem": "Which transition best signals a contrast?",
    "options": [
@@ -25605,7 +27605,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Paragraph organization: applies a paragraph principle. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0453",
@@ -26100,7 +28118,17 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "qa_flags": [
+    "wrong_domain"
+   ],
+   "qa_note": "2026-10-22 screen: wrong_domain: the item is in Filipino"
   },
   {
    "id": "CIVIO-BASELINE-0462",
@@ -26210,7 +28238,17 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "qa_flags": [
+    "wrong_domain"
+   ],
+   "qa_note": "2026-10-22 screen: wrong_domain: the item is in Filipino"
   },
   {
    "id": "CIVIO-BASELINE-0464",
@@ -26265,7 +28303,17 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "qa_flags": [
+    "wrong_domain"
+   ],
+   "qa_note": "2026-10-22 screen: wrong_domain: the item is in Filipino"
   },
   {
    "id": "CIVIO-BASELINE-0465",
@@ -26320,7 +28368,17 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "qa_flags": [
+    "wrong_domain"
+   ],
+   "qa_note": "2026-10-22 screen: wrong_domain: the item is in Filipino"
   },
   {
    "id": "CIVIO-BASELINE-0466",
@@ -29916,8 +31974,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "The word 'meticulous' most nearly means:",
    "options": [
@@ -29961,7 +32019,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0531",
@@ -29971,8 +32047,8 @@
    "concept": "word meaning",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "easy",
+   "est_seconds": 20,
    "language": "en",
    "stem": "The antonym of 'concise' is:",
    "options": [
@@ -30016,7 +32092,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Word meaning: vocabulary recall. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0532",
@@ -30026,8 +32120,8 @@
    "concept": "sentence completion",
    "micro_skill": "",
    "archetype": "BASELINE-VERBAL_EN",
-   "difficulty": "",
-   "est_seconds": null,
+   "difficulty": "medium",
+   "est_seconds": 25,
    "language": "en",
    "stem": "The committee adopted the proposal _____ the legal review was complete.",
    "options": [
@@ -30071,7 +32165,25 @@
     "spec_version": "0.1.9"
    },
    "_legacy": true,
-   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'."
+   "notes": "Schema conversion only (Grok Bot 2026-10-18). source_group is 'civio' only because qa.py requires it; the DB row stays source_group='baseline'.",
+   "hold_screen": {
+    "date": "2026-10-22",
+    "sources": "9 HOLD files (Mutia-Tayone 255/300 and 2019/2020 compilations, CSEReviewer.com Pro/SubPro v1.0, CSE Reviewer.pdf via OCR)",
+    "shared_5gram_fraction": 0.0,
+    "verbatim_stem": false
+   },
+   "metadata_note": "difficulty/est_seconds added 2026-10-22 by rule (easy = recall or single step, medium = standard, hard = multi-step), using approved norms for verbal_en / Sentence completion: context clue plus word form. The reviewer confirms.",
+   "revisions": [
+    {
+     "date": "2026-10-22",
+     "approved_by": "GT",
+     "change": "HOLD-screened, content QA passed, metadata added; still draft.",
+     "prior": {
+      "difficulty": "",
+      "est_seconds": null
+     }
+    }
+   ]
   },
   {
    "id": "CIVIO-BASELINE-0533",

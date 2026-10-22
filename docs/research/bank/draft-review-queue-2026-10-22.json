@@ -15,15 +15,14 @@
   "clerical": 93,
   "numerical": 91,
   "analytical": 49,
-  "verbal_en": 49,
-  "verbal_fil": 77
+  "verbal_en": 126
  },
  "adds_unique_pass_by_domain": {
   "general_information": 226,
   "clerical": 147,
-  "numerical": 167,
+  "numerical": 188,
   "analytical": 203,
-  "verbal_en": 49,
+  "verbal_en": 137,
   "verbal_fil": 127
  },
  "projected_if_signed": {
@@ -90,7 +89,8 @@
    "pass": 45
   },
   "numerical|baseline": {
-   "flag": 91
+   "flag": 70,
+   "pass": 21
   },
   "numerical|new": {
    "pass": 140,
@@ -103,7 +103,8 @@
    "pass": 1
   },
   "verbal_en|baseline": {
-   "flag": 128
+   "pass": 88,
+   "flag": 40
   },
   "verbal_en|new": {
    "flag": 88,
@@ -132,9 +133,9 @@
   }
  },
  "flag_counts": {
-  "missing_est_seconds": 420,
-  "missing_difficulty": 419,
-  "bad_difficulty": 419,
+  "missing_est_seconds": 311,
+  "missing_difficulty": 310,
+  "bad_difficulty": 310,
   "near_dup_approved": 261,
   "previously_rejected": 99,
   "percent_change_topic": 31,
@@ -144,8 +145,12 @@
   "template_stem_place_name": 10,
   "key_not_in_reveal": 10,
   "difficulty_vs_time": 9,
+  "near_dup": 7,
   "superseded_by_lintfix": 4,
+  "wrong_domain": 4,
   "hold_phrase_overlap": 2,
+  "ambiguous_key": 2,
+  "option_artifact": 2,
   "options_shape": 1,
   "non_integer_intermediate": 1,
   "reveal_math_wrong": 1,
