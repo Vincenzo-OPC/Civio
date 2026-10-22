@@ -248,6 +248,10 @@ the Docker autostart task, the desktop start shortcut, and any files
    cutting a release), then tag with an annotated tag and `git push origin <tag>`.
 5. Never push to `upstream-baseline`; it is a local, read-only remote.
 
+## Review evidence — 18 October 2026
+
+The welcome paragraph's existing Prettier-only change (`cf00b8a`, PR #1) has a full passing local check run and real desktop/phone light/dark screenshots in [docs/review/2026-10-18](review/2026-10-18/README.md). No wording, scoring, question-bank, or application behavior changes were made by this evidence commit. The ordered 16-PR queue is draft pending individual verification and owner review; nothing was merged or deployed.
+
 ## Security execution checkpoint - 20 October 2026
 
 Verified MSI main was clean at efc0d81 and fast-forwarded it to fetched origin/main f2766db. GitHub PRs 1-16 were all OPEN and unmerged. No live service, study database, protected stack, question approval, or deployment was changed.
