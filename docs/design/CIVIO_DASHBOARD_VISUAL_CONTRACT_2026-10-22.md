@@ -112,3 +112,7 @@ Chief of Staff owns scope, priorities, integration, final cross-agent review, an
 ## 8. Final Report (no vague "looks premium")
 
 Deliver commit links and actual before/after screenshots. Include the measured card dimensions, mobile overflow result, examples of Title Case/copy corrections, inventory of gradients/glows removed, actual test and CI outcomes, verified track behavior, and remaining defects with owners. GT should be able to judge the improvement from the screenshots without reading the implementation essay.
+
+## 9. Scoped Color-Token Safety (Confirmed by Code Inspection)
+
+`resources/css/app.css` still contains global blue (`#2563eb`) and emerald (`#10b981`) tokens from the pre-Civio theme. **Do not blindly replace those global tokens:** its comment explicitly says admin pages retain the blue tokens; `.civio-session` already scopes violet/lime to the exam surface. That split is one reason dashboard components rely on arbitrary violet/lime colors and inconsistent dark surfaces. Scope an intentional learner-dashboard token layer (for example, a `.civio-dashboard` class with localized surface/foreground/action variables) **without altering admin screens or the protected exam look**. Then consume those tokens consistently in learner-dashboard cards instead of hardcoding different colors in every JSX file. Check contrast in both themes. Audit cross-route leakage before claiming done.
