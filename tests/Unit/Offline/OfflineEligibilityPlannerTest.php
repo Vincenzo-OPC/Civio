@@ -86,7 +86,7 @@ test('never picks demographics, clones, or items with an exact copy', function (
 
     $plan = (new OfflineEligibilityPlanner)->plan($rows)['General Information'];
 
-    // 16 unique keys (901 duplicates item 2's key); cap 4; items 2 and 901 are not candidates.
+    // 16 unique keys (901 duplicates Item 2's key); cap 4; items 2 and 901 are not candidates.
     expect($plan['unique'])->toBe(16)
         ->and($plan['cap'])->toBe(4)
         ->and($plan['eligible'])->toBe([1, 3, 4, 5])
