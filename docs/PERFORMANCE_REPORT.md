@@ -159,8 +159,10 @@ transfer from the origin.
 
 ## Kept permanent
 
-- CI (`e2e` workflow): `npm run test:perf-budget` runs `tests/Perf/budget.spec.ts`,
-  byte and request-count limits only, no timings.
+- `npm run test:perf-budget` runs `tests/Perf/budget.spec.ts`: byte and
+  request-count limits only, no timings. **Not yet in CI:** adding the step to
+  `.github/workflows/e2e.yml` needs a token with `workflow` scope, which the
+  agent token lacks; the one-step patch is ready for GT to apply.
 - `tests/Feature/Performance/QueryBudgetTest.php` (Pest) caps queries per request.
 - `tests/Js/static-cache-config.test.ts` keeps nginx, `.htaccess`, the Dockerfile
   and the perf proxy in step.

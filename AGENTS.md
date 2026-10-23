@@ -120,7 +120,7 @@ Formatting fixes go in a **separate commit** from functional changes.
   budget only on purpose, and say why in the commit.
 - **Low-end and cost review (Issue #27).** Before merging anything user-facing,
   ask: does it add bytes before the first question (budget in
-  `tests/Perf/budget.spec.ts`, run by `npm run test:perf-budget` and in CI),
+  `tests/Perf/budget.spec.ts`, run by `npm run test:perf-budget`),
   per-answer bytes during a mock (target: full mock under 250 KB), DB queries
   per request (`tests/Feature/Performance/QueryBudgetTest.php`), or a paid
   service / Redis? Does it still work with no animation, no hover, Lite Mode

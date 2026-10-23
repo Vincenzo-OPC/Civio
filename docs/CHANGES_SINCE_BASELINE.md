@@ -12,7 +12,7 @@ Measured with a throttled Playwright harness (`tests/Perf/`, see `docs/PERFORMAN
 - The bank pool is no longer cached as one `questions.active` blob (12.6 MB per entry); it is queried directly. `GET /exams` no longer loads the bank at all.
 - `pending_feedback_count` is computed only for admins; everyone else receives 0.
 - The Docker image adds `conf/nginx/civio-cache.conf`: hashed `/build/assets/*` immutable for a year, manifests `no-cache`, images 30 days. `public/.htaccess` gets the same rules (the old rule never matched). The unused `conf/nginx/nginx-site.conf` is deleted.
-- CI runs a byte and request-count budget (`npm run test:perf-budget`) and Pest caps queries per request.
+- A byte and request-count budget (`npm run test:perf-budget`, not yet wired into CI) and a Pest test capping queries per request.
 
 Strict Mock grading, timing, secrecy and rate limits are unchanged.
 
