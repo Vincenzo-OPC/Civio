@@ -1,0 +1,2312 @@
+{
+  "schema_version": "civio-family-recipes-luna-v0.1",
+  "author_provenance": {
+    "model": "gpt-6-luna",
+    "effort": "medium"
+  },
+  "source": "docs/research/dexter3/bulk-state.json family_jobs; examples extracted from source batch items using Python",
+  "status": "draft",
+  "runtime_eligible": false,
+  "independently_reviewed": false,
+  "recipes": [
+    {
+      "job_id": "FAMILY-ea4359082176",
+      "family": "NUM-OPS-ORDER",
+      "domain": "numerical",
+      "candidate_count": 33,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "operation priority, parentheses, and left-to-right evaluation",
+        "ask": "Which operation should be done first, and what expression remains?",
+        "hints": [
+          "Recognize parentheses and ×/÷ before +/−.",
+          "Check the exact operation priority, parentheses, and left-to-right evaluation against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies operation priority, parentheses, and left-to-right evaluation.",
+          "fails": "Confuses related rules or misses operation priority, parentheses, and left-to-right evaluation."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Recompute numeric answers/units.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "multiply before adding and subtracting"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-26f062d35090",
+      "family": "NUM-SEQ-DIFF",
+      "domain": "numerical",
+      "candidate_count": 51,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "successive gaps and the pattern in those gaps",
+        "ask": "What are the first differences between neighboring terms?",
+        "hints": [
+          "Subtract adjacent terms; inspect whether gaps change regularly.",
+          "Check the exact successive gaps and the pattern in those gaps against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies successive gaps and the pattern in those gaps.",
+          "fails": "Confuses related rules or misses successive gaps and the pattern in those gaps."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Recompute numeric answers/units.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "find the rule in the differences and extend it",
+        "extend a series whose jumps grow by a fixed amount"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-aade17ec5081",
+      "family": "two-share-total-candidate",
+      "domain": "numerical",
+      "candidate_count": 29,
+      "recipe": {
+        "reuse_recipe": "math25-v0.1.json#ratio-share",
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "ratio parts as units of a shared total",
+        "ask": "How many equal ratio parts are there, and what is one part worth?",
+        "hints": [
+          "Add ratio parts, divide total, multiply by requested share.",
+          "Check the exact ratio parts as units of a shared total against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies ratio parts as units of a shared total.",
+          "fails": "Confuses related rules or misses ratio parts as units of a shared total."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Recompute numeric answers/units.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "split a total in a given ratio and find the larger share",
+        "split a total in a ratio"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-70e13509fd3d",
+      "family": "NUM-WP-RATE",
+      "domain": "numerical",
+      "candidate_count": 45,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "work rates, proportional scaling, elapsed time, travel, and unit costs",
+        "ask": "What quantity changes, and what units belong to each rate?",
+        "hints": [
+          "Convert each duration to rate; add rates, then invert.",
+          "Check the exact work rates, proportional scaling, elapsed time, travel, and unit costs against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies work rates, proportional scaling, elapsed time, travel, and unit costs.",
+          "fails": "Confuses related rules or misses work rates, proportional scaling, elapsed time, travel, and unit costs."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Split methods; check units and arithmetic.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "needs_semantic_split"
+      },
+      "source_examples": [
+        "combined work rates in hours; elapsed-time item",
+        "unit price, inverse proportion, map scale, worker-hours, travel, rounding, profit and change"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-4fd4a1661858",
+      "family": "NUM-WP-AVERAGE",
+      "domain": "numerical",
+      "candidate_count": 29,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "average as total divided by count",
+        "ask": "What total does the stated average represent before the new value joins?",
+        "hints": [
+          "Recover old sum, add/remove value, divide by new count.",
+          "Check the exact average as total divided by count against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies average as total divided by count.",
+          "fails": "Confuses related rules or misses average as total divided by count."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Recompute numeric answers/units.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "find the new average after one value is added",
+        "new average after one value joins"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-bb4928314e62",
+      "family": "NUM-SEQ-MULT",
+      "domain": "numerical",
+      "candidate_count": 36,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "repeated multiplication with an additive adjustment",
+        "ask": "What operation maps each term to the next?",
+        "hints": [
+          "Compare ratios and residuals; verify one rule across all transitions.",
+          "Check the exact repeated multiplication with an additive adjustment against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies repeated multiplication with an additive adjustment.",
+          "fails": "Confuses related rules or misses repeated multiplication with an additive adjustment."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Recompute numeric answers/units.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "find a ×k then ±c rule"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-aac2773df450",
+      "family": "NUM-FRAC-DEC",
+      "domain": "numerical",
+      "candidate_count": 41,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "fraction and decimal operations with correct common units",
+        "ask": "What is the operation, and what common denominator or place value fits it?",
+        "hints": [
+          "For fractions align denominators; for decimals track place value; estimate.",
+          "Check the exact fraction and decimal operations with correct common units against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies fraction and decimal operations with correct common units.",
+          "fails": "Confuses related rules or misses fraction and decimal operations with correct common units."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Recompute numeric answers/units.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "needs_semantic_split"
+      },
+      "source_examples": [
+        "take a fraction of what is left"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-6b30a3486ebb",
+      "family": "NUM-WP-GEOM",
+      "domain": "numerical",
+      "candidate_count": 22,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "rectangle perimeter before multiplying by unit fencing cost",
+        "ask": "Which boundary length is fenced, and what does the cost rate apply to?",
+        "hints": [
+          "Compute 2L+2W, then multiply by cost per meter.",
+          "Check the exact rectangle perimeter before multiplying by unit fencing cost against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies rectangle perimeter before multiplying by unit fencing cost.",
+          "fails": "Confuses related rules or misses rectangle perimeter before multiplying by unit fencing cost."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Recompute numeric answers/units.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "find perimeter, then multiply by cost per meter"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-5a7d75fbeba9",
+      "family": "NUM-WP-ALGEBRA",
+      "domain": "numerical",
+      "candidate_count": 36,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "translate present/future age relations into equations",
+        "ask": "Let the younger age now be x; how do both ages change after the stated years?",
+        "hints": [
+          "Write current relation, write future relation, solve and check both.",
+          "Check the exact translate present/future age relations into equations against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies translate present/future age relations into equations.",
+          "fails": "Confuses related rules or misses translate present/future age relations into equations."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Recompute numeric answers/units.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "set up 'times as old now' and 'twice as old later' and solve",
+        "set up now-and-later ages"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-1cd48698d20e",
+      "family": "successive-price",
+      "domain": "numerical",
+      "candidate_count": 14,
+      "recipe": {
+        "reuse_recipe": "price15-v0.2.json + price15-v0.3-patch.json#successive-change",
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "successive percent changes on the current price",
+        "ask": "After the first change, what is the new base for the next percentage?",
+        "hints": [
+          "Use multipliers in order; check final value and direction.",
+          "Check the exact successive percent changes on the current price against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies successive percent changes on the current price.",
+          "fails": "Confuses related rules or misses successive percent changes on the current price."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Recompute numeric answers/units.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "chain a percent increase and a percent decrease on the same price",
+        "chain a percent increase and a percent decrease"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-45bcc9bbaf7a",
+      "family": "simple-interest",
+      "domain": "numerical",
+      "candidate_count": 13,
+      "recipe": {
+        "reuse_recipe": "math25-v0.1.json#simple-interest",
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "simple interest I=Prt with time in years",
+        "ask": "Which principal, annual rate, and year fraction are given?",
+        "hints": [
+          "Convert percent to decimal and months to years; compute interest only.",
+          "Check the exact simple interest I=Prt with time in years against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies simple interest I=Prt with time in years.",
+          "fails": "Confuses related rules or misses simple interest I=Prt with time in years."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Recompute numeric answers/units.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "use interest = principal × rate × time with time in years",
+        "interest = principal × rate × time"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-6ae6df1e2ca4",
+      "family": "sale-price",
+      "domain": "numerical",
+      "candidate_count": 11,
+      "recipe": {
+        "reuse_recipe": "price15-v0.2.json + price15-v0.3-patch.json#discount",
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "discount as a fraction of marked price",
+        "ask": "What amount is removed from the marked price?",
+        "hints": [
+          "Find discount, subtract from original, estimate below list price.",
+          "Check the exact discount as a fraction of marked price against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies discount as a fraction of marked price.",
+          "fails": "Confuses related rules or misses discount as a fraction of marked price."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Recompute numeric answers/units.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "price after a percent discount"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-7395f08acd9b",
+      "family": "NUM-OPS-FRAC-DEC",
+      "domain": "numerical",
+      "candidate_count": 6,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "arithmetic with fractions or decimals",
+        "ask": "Which number form and operation are present?",
+        "hints": [
+          "Choose common denominator or place-value method; estimate and verify.",
+          "Check the exact arithmetic with fractions or decimals against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies arithmetic with fractions or decimals.",
+          "fails": "Confuses related rules or misses arithmetic with fractions or decimals."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Recompute numeric answers/units.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "needs_semantic_split"
+      },
+      "source_examples": [
+        "fractions",
+        "decimals"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-25c9d7317328",
+      "family": "NUM-DECIMAL",
+      "domain": "numerical",
+      "candidate_count": 1,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "decimal multiplication and place value",
+        "ask": "How many tenths/hundredths are represented?",
+        "hints": [
+          "Multiply as integers, restore decimal places, estimate.",
+          "Check the exact decimal multiplication and place value against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies decimal multiplication and place value.",
+          "fails": "Confuses related rules or misses decimal multiplication and place value."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Recompute numeric answers/units.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "num-decimal"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-2fec343009cf",
+      "family": "NUM-PCT-BASIC",
+      "domain": "numerical",
+      "candidate_count": 9,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "percent as part per hundred or part/whole",
+        "ask": "Is the unknown the part, whole, or rate?",
+        "hints": [
+          "Represent percent as /100; calculate and check units.",
+          "Check the exact percent as part per hundred or part/whole against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies percent as part per hundred or part/whole.",
+          "fails": "Confuses related rules or misses percent as part per hundred or part/whole."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Recompute numeric answers/units.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "calculate fifteen percent by parts",
+        "convert part over whole to percent"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-5672f6585c0e",
+      "family": "NUM-PROPERTY",
+      "domain": "numerical",
+      "candidate_count": 8,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "basic arithmetic and operation meaning",
+        "ask": "Which operation is requested, and what result size is plausible?",
+        "hints": [
+          "Compute carefully; use inverse operation to check.",
+          "Check the exact basic arithmetic and operation meaning against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies basic arithmetic and operation meaning.",
+          "fails": "Confuses related rules or misses basic arithmetic and operation meaning."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Recompute numeric answers/units.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "needs_semantic_split"
+      },
+      "source_examples": [
+        "num-property"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-8a48544af078",
+      "family": "NUM-SEQ-ALT",
+      "domain": "numerical",
+      "candidate_count": 1,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "alternating subsequences and independent step patterns",
+        "ask": "Do odd- and even-position terms follow separate rules?",
+        "hints": [
+          "Separate positions, identify each pattern, recombine.",
+          "Check the exact alternating subsequences and independent step patterns against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies alternating subsequences and independent step patterns.",
+          "fails": "Confuses related rules or misses alternating subsequences and independent step patterns."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Recompute numeric answers/units.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "find the rule from the gaps between terms"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-4bd9b34508e0",
+      "family": "NUM-UNIT",
+      "domain": "numerical",
+      "candidate_count": 1,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "time-unit conversion",
+        "ask": "How many minutes are in one hour?",
+        "hints": [
+          "Convert hours to minutes, then multiply; preserve units.",
+          "Check the exact time-unit conversion against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies time-unit conversion.",
+          "fails": "Confuses related rules or misses time-unit conversion."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Recompute numeric answers/units.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "num-unit"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-46aba788cacf",
+      "family": "NUM-WP-RATIO",
+      "domain": "numerical",
+      "candidate_count": 14,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "ratio parts and named share",
+        "ask": "Which share is requested, and what total or unit value is known?",
+        "hints": [
+          "Sum parts, find one part, scale requested share.",
+          "Check the exact ratio parts and named share against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies ratio parts and named share.",
+          "fails": "Confuses related rules or misses ratio parts and named share."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Recompute numeric answers/units.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "add all the parts first",
+        "find a named share after summing ratio parts"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-10d57246fa66",
+      "family": "CLR-FILE-POSITION",
+      "domain": "clerical",
+      "candidate_count": 92,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "alphabetizing personal names under the stated indexing convention",
+        "ask": "What is the filing unit: surname, prefix, or full name?",
+        "hints": [
+          "Apply stated convention consistently; compare indexed units letter by letter.",
+          "Check the exact alphabetizing personal names under the stated indexing convention against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies alphabetizing personal names under the stated indexing convention.",
+          "fails": "Confuses related rules or misses alphabetizing personal names under the stated indexing convention."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "needs_semantic_split"
+      },
+      "source_examples": [
+        "surname, prefix and title rules"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-49179e728097",
+      "family": "CLR-SPELL-WRONG",
+      "domain": "clerical",
+      "candidate_count": 63,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "orthographic recognition of one misspelled word",
+        "ask": "Which candidate’s spelling conflicts with a trusted dictionary entry?",
+        "hints": [
+          "Check exact word form, then distinguish plausible distractors.",
+          "Check the exact orthographic recognition of one misspelled word against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies orthographic recognition of one misspelled word.",
+          "fails": "Confuses related rules or misses orthographic recognition of one misspelled word."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Verify exact spelling in a named dictionary."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "spot the one misspelled word among hard but correct words",
+        "find the one misspelled word"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-b45b26586f1f",
+      "family": "CLR-SPELL-RIGHT",
+      "domain": "clerical",
+      "candidate_count": 50,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "orthographic recognition of standard spelling",
+        "ask": "Which exact candidate is the standard dictionary headword?",
+        "hints": [
+          "Compare each spelling against a named dictionary; ignore visual familiarity.",
+          "Check the exact orthographic recognition of standard spelling against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies orthographic recognition of standard spelling.",
+          "fails": "Confuses related rules or misses orthographic recognition of standard spelling."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Verify exact spelling in a named dictionary."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "spot the correct spelling"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-ba7d39b7f15b",
+      "family": "CLR-SPELLING",
+      "domain": "clerical",
+      "candidate_count": 20,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "meaning-cued spelling discrimination",
+        "ask": "What word matches the supplied meaning, and how is it spelled?",
+        "hints": [
+          "Identify target meaning; verify exact form in a dictionary.",
+          "Check the exact meaning-cued spelling discrimination against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies meaning-cued spelling discrimination.",
+          "fails": "Confuses related rules or misses meaning-cued spelling discrimination."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Verify exact spelling in a named dictionary."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "Identify the only standard spelling"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-7f1e550e89c0",
+      "family": "CLR-FILE-ORDER",
+      "domain": "clerical",
+      "candidate_count": 21,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "alphabetic filing under the cited ARMA rules",
+        "ask": "Which indexing rule applies to each name or business?",
+        "hints": [
+          "Index entries per cited standard; compare units in order.",
+          "Check the exact alphabetic filing under the cited ARMA rules against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies alphabetic filing under the cited ARMA rules.",
+          "fails": "Confuses related rules or misses alphabetic filing under the cited ARMA rules."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "needs_semantic_split"
+      },
+      "source_examples": [
+        "alphabetic filing (ARMA rules)"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-5c6bd7c0e230",
+      "family": "CLR-NAMES",
+      "domain": "clerical",
+      "candidate_count": 8,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "explicit surname-then-given-name sorting",
+        "ask": "What is the first comparison field stated in the instructions?",
+        "hints": [
+          "Sort surname, then given name; retain ties and accents as instructed.",
+          "Check the exact explicit surname-then-given-name sorting against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies explicit surname-then-given-name sorting.",
+          "fails": "Confuses related rules or misses explicit surname-then-given-name sorting."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "Apply the stated filing order accurately"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-7b4ec63fcb5c",
+      "family": "CLR-CHRONOLOGICAL",
+      "domain": "clerical",
+      "candidate_count": 6,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "date ordering in stated format",
+        "ask": "Which date is earliest/latest under the requested direction?",
+        "hints": [
+          "Compare year, month, day numerically.",
+          "Check the exact date ordering in stated format against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies date ordering in stated format.",
+          "fails": "Confuses related rules or misses date ordering in stated format."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "Apply the stated filing order accurately"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-c59d26cdd543",
+      "family": "CLR-NUMERIC",
+      "domain": "clerical",
+      "candidate_count": 6,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "ascending/descending numeric reference sorting",
+        "ask": "Are references compared as numbers or fixed-width strings?",
+        "hints": [
+          "Follow prompt; compare full values and preserve leading zeros.",
+          "Check the exact ascending/descending numeric reference sorting against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies ascending/descending numeric reference sorting.",
+          "fails": "Confuses related rules or misses ascending/descending numeric reference sorting."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "Apply the stated filing order accurately"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-9f9082419680",
+      "family": "CLR-FILE-BUSINESS",
+      "domain": "clerical",
+      "candidate_count": 34,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "business-name indexing under the named ARMA convention",
+        "ask": "Which words are indexed or ignored under the stated rule?",
+        "hints": [
+          "Apply each rule to form filing entries, then sort entries.",
+          "Check the exact business-name indexing under the named ARMA convention against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies business-name indexing under the named ARMA convention.",
+          "fails": "Confuses related rules or misses business-name indexing under the named ARMA convention."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "apply ARMA Rule 2 when indexing"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-000b16a98c8d",
+      "family": "VEN-SENT-COMP-WORD",
+      "domain": "verbal_en",
+      "candidate_count": 59,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "contextual grammar or word-choice discrimination",
+        "ask": "What grammatical slot and meaning does the sentence require?",
+        "hints": [
+          "Check syntax and intended meaning; test each candidate in context.",
+          "Check the exact contextual grammar or word-choice discrimination against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies contextual grammar or word-choice discrimination.",
+          "fails": "Confuses related rules or misses contextual grammar or word-choice discrimination."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "needs_semantic_split"
+      },
+      "source_examples": [
+        "tell 'affect' (verb) from 'effect'",
+        "pick the preposition the word pairs with"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-74c948fc3ddf",
+      "family": "VEN-WORD-MEANING",
+      "domain": "verbal_en",
+      "candidate_count": 54,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "meaning of a word in sentence context",
+        "ask": "Which nearby clues constrain the target word’s sense?",
+        "hints": [
+          "Substitute candidate meanings; reject senses that break context.",
+          "Check the exact meaning of a word in sentence context against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies meaning of a word in sentence context.",
+          "fails": "Confuses related rules or misses meaning of a word in sentence context."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "choose the sense of 'defer' that fits the sentence",
+        "word meaning"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-dafd2dd6b5d9",
+      "family": "VEN-ERROR-AGREE",
+      "domain": "verbal_en",
+      "candidate_count": 31,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "subject-verb agreement with intervening phrases",
+        "ask": "What is the true head subject, ignoring modifiers?",
+        "hints": [
+          "Identify subject and number; match verb tense and number.",
+          "Check the exact subject-verb agreement with intervening phrases against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies subject-verb agreement with intervening phrases.",
+          "fails": "Confuses related rules or misses subject-verb agreement with intervening phrases."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "find the true subject past a prepositional phrase"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-09f598c0962f",
+      "family": "VEN-ERROR-TENSE",
+      "domain": "verbal_en",
+      "candidate_count": 30,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "tense consistency with time markers",
+        "ask": "What time frame does the clause establish?",
+        "hints": [
+          "Locate time signal; align verb form and surrounding sequence.",
+          "Check the exact tense consistency with time markers against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies tense consistency with time markers.",
+          "fails": "Confuses related rules or misses tense consistency with time markers."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "match the verb to a past time signal",
+        "match tense to a time signal"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-2daff39cd9c6",
+      "family": "VFIL-KASINGKAHULUGAN",
+      "domain": "verbal_fil",
+      "candidate_count": 59,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "kahulugan o kasingkahulugan ayon sa konteksto",
+        "ask": "Anong pahiwatig sa pangungusap ang naglilinaw sa salita?",
+        "hints": [
+          "Anong pahiwatig sa pangungusap ang naglilinaw sa salita?",
+          "Basahin muli ang pangungusap at tiyaking akma ang kahulugan sa gamit."
+        ],
+        "evidence": {
+          "supports": "Correctly applies kahulugan o kasingkahulugan ayon sa konteksto.",
+          "fails": "Confuses related rules or misses kahulugan o kasingkahulugan ayon sa konteksto."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "select a defensible contextual meaning or grammatical form"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-e22af24a59ee",
+      "family": "VFIL-WIKAIN",
+      "domain": "verbal_fil",
+      "candidate_count": 47,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "kahulugan ng sawikain sa konteksto",
+        "ask": "Ano ang ipinahihiwatig ng buong pangungusap, hindi ng literal na mga salita?",
+        "hints": [
+          "Ano ang ipinahihiwatig ng buong pangungusap, hindi ng literal na mga salita?",
+          "Ihambing ang literal na basa sa ipinahihiwatig ng buong sitwasyon."
+        ],
+        "evidence": {
+          "supports": "Correctly applies kahulugan ng sawikain sa konteksto.",
+          "fails": "Confuses related rules or misses kahulugan ng sawikain sa konteksto."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "select a defensible contextual meaning or grammatical form"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-53770502691b",
+      "family": "VEN-RC-VOCAB",
+      "domain": "verbal_en",
+      "candidate_count": 36,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "context-sensitive meaning of a word in a passage",
+        "ask": "Which sentence clues distinguish the intended sense?",
+        "hints": [
+          "Substitute meanings in context; keep the sense supported by passage.",
+          "Check the exact context-sensitive meaning of a word in a passage against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies context-sensitive meaning of a word in a passage.",
+          "fails": "Confuses related rules or misses context-sensitive meaning of a word in a passage."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "pick the sense that fits the sentence"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-58d6e1c50b21",
+      "family": "VEN-SENT-STRUCTURE",
+      "domain": "verbal_en",
+      "candidate_count": 20,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "sentence completeness, clause links, and modifier placement",
+        "ask": "Does each clause have a subject and finite verb, and do modifiers attach clearly?",
+        "hints": [
+          "Check clause boundaries, punctuation, and modifier targets.",
+          "Check the exact sentence completeness, clause links, and modifier placement against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies sentence completeness, clause links, and modifier placement.",
+          "fails": "Confuses related rules or misses sentence completeness, clause links, and modifier placement."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "recognize run-ons, fragments and misplaced modifiers"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-0a49ae990b42",
+      "family": "VFIL-COMP",
+      "domain": "verbal_fil",
+      "candidate_count": 20,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "pagkumpleto ng pangungusap ayon sa gramatika at diwa",
+        "ask": "Anong bahagi ng pananalita at kahulugan ang hinihingi ng patlang?",
+        "hints": [
+          "Anong bahagi ng pananalita at kahulugan ang hinihingi ng patlang?",
+          "Basahin ang buong pangungusap upang tiyakin ang wastong diwa at gramatika."
+        ],
+        "evidence": {
+          "supports": "Correctly applies pagkumpleto ng pangungusap ayon sa gramatika at diwa.",
+          "fails": "Confuses related rules or misses pagkumpleto ng pangungusap ayon sa gramatika at diwa."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "sentence completion"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-c905d4571397",
+      "family": "VFIL-KASALUNGAT",
+      "domain": "verbal_fil",
+      "candidate_count": 61,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "kasalungat na angkop sa konteksto",
+        "ask": "Ano ang kahulugan ng salitang may malaking titik sa pangungusap?",
+        "hints": [
+          "Ano ang kahulugan ng salitang may malaking titik sa pangungusap?",
+          "Tiyaking kasalungat ito ng kahulugang gamit sa pangungusap."
+        ],
+        "evidence": {
+          "supports": "Correctly applies kasalungat na angkop sa konteksto.",
+          "fails": "Confuses related rules or misses kasalungat na angkop sa konteksto."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "select a defensible contextual meaning or grammatical form"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-5121d3a79d83",
+      "family": "VFIL-READ",
+      "domain": "verbal_fil",
+      "candidate_count": 20,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "pag-unawa sa tahasang detalye at hinuha sa talata",
+        "ask": "Anong pahayag ang direktang sinabi, at alin ang hinuha lamang?",
+        "hints": [
+          "Anong pahayag ang direktang sinabi, at alin ang hinuha lamang?",
+          "Iugnay ang sagot sa tiyak na detalye; huwag magdagdag ng wala sa talata."
+        ],
+        "evidence": {
+          "supports": "Correctly applies pag-unawa sa tahasang detalye at hinuha sa talata.",
+          "fails": "Confuses related rules or misses pag-unawa sa tahasang detalye at hinuha sa talata."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "reading comprehension"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-5aa4bed0eba5",
+      "family": "VEN-RC-INFER",
+      "domain": "verbal_en",
+      "candidate_count": 35,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "inference bounded by passage evidence",
+        "ask": "What does the text imply without stating outright?",
+        "hints": [
+          "Cite two supporting details mentally; reject claims requiring outside facts.",
+          "Check the exact inference bounded by passage evidence against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies inference bounded by passage evidence.",
+          "fails": "Confuses related rules or misses inference bounded by passage evidence."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "derive a uniquely supported reading answer"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-18c826641051",
+      "family": "VFIL-BALARILA",
+      "domain": "verbal_fil",
+      "candidate_count": 15,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "wastong anyo at pananda sa pangungusap",
+        "ask": "Anong tungkulin ng salita ang kailangan sa puwang?",
+        "hints": [
+          "Anong tungkulin ng salita ang kailangan sa puwang?",
+          "Tiyaking tugma ang pananda sa ugnayang pambalarila sa pangungusap."
+        ],
+        "evidence": {
+          "supports": "Correctly applies wastong anyo at pananda sa pangungusap.",
+          "fails": "Confuses related rules or misses wastong anyo at pananda sa pangungusap."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "select a defensible contextual meaning or grammatical form"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-8749f2bd88b4",
+      "family": "VFIL-PAGBASA",
+      "domain": "verbal_fil",
+      "candidate_count": 27,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "pag-unawa at hinuha batay lamang sa binasa",
+        "ask": "Aling detalye sa talata ang sumusuporta sa sagot?",
+        "hints": [
+          "Aling detalye sa talata ang sumusuporta sa sagot?",
+          "Hanapin sa talata ang detalyeng batayan ng hinuha."
+        ],
+        "evidence": {
+          "supports": "Correctly applies pag-unawa at hinuha batay lamang sa binasa.",
+          "fails": "Confuses related rules or misses pag-unawa at hinuha batay lamang sa binasa."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "find an inference supported by the passage"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-7f3f0ea44141",
+      "family": "VFIL-VOCAB",
+      "domain": "verbal_fil",
+      "candidate_count": 24,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "kahulugan ng salitang Filipino sa gamit nito",
+        "ask": "Anong pahiwatig sa pangungusap ang tumutukoy sa kahulugan?",
+        "hints": [
+          "Anong pahiwatig sa pangungusap ang tumutukoy sa kahulugan?",
+          "Subukan ang kahulugan sa pangungusap at tiyaking akma ang gamit."
+        ],
+        "evidence": {
+          "supports": "Correctly applies kahulugan ng salitang Filipino sa gamit nito.",
+          "fails": "Confuses related rules or misses kahulugan ng salitang Filipino sa gamit nito."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "word meaning"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-145de5a97335",
+      "family": "VEN-PARA-ORDER",
+      "domain": "verbal_en",
+      "candidate_count": 50,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "paragraph order using topic, reference, and transition clues",
+        "ask": "Which sentence introduces the topic, and what does each pointer word refer to?",
+        "hints": [
+          "Place topic first, resolve references, check transition and chronology.",
+          "Check the exact paragraph order using topic, reference, and transition clues against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies paragraph order using topic, reference, and transition clues.",
+          "fails": "Confuses related rules or misses paragraph order using topic, reference, and transition clues."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "order sentences using topic sentences, pointer words and transitions"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-63066e67eb95",
+      "family": "VEN-SENT-COMP-PHRASAL",
+      "domain": "verbal_en",
+      "candidate_count": 12,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "particle choice in English phrasal verbs",
+        "ask": "What meaning does the verb-plus-particle need in this sentence?",
+        "hints": [
+          "Test the complete phrasal verb in context; check tense and syntax.",
+          "Check the exact particle choice in English phrasal verbs against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies particle choice in English phrasal verbs.",
+          "fails": "Confuses related rules or misses particle choice in English phrasal verbs."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "pick the particle that gives 'call ___' the meaning 'cancel'",
+        "pick the right particle"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-8af1006419dc",
+      "family": "VFIL-GRAM",
+      "domain": "verbal_fil",
+      "candidate_count": 10,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "wastong gramatika at gamit ng ng/nang",
+        "ask": "Ano ang ugnayang ipinapahayag ng pananda?",
+        "hints": [
+          "Ano ang ugnayang ipinapahayag ng pananda?",
+          "Tiyaking wasto ang gamit ng bawat pananda sa buong pangungusap."
+        ],
+        "evidence": {
+          "supports": "Correctly applies wastong gramatika at gamit ng ng/nang.",
+          "fails": "Confuses related rules or misses wastong gramatika at gamit ng ng/nang."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "sentence structure"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-524fcddeeb48",
+      "family": "VFIL-PAGSUSUNOD",
+      "domain": "verbal_fil",
+      "candidate_count": 11,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "pagkakasunod ng hakbang ayon sa panahon at sanhi",
+        "ask": "Alin ang kailangang mauna upang maging posible ang susunod na hakbang?",
+        "hints": [
+          "Alin ang kailangang mauna upang maging posible ang susunod na hakbang?",
+          "Tiyaking mauuna ang hakbang na kailangan bago magawa ang kasunod."
+        ],
+        "evidence": {
+          "supports": "Correctly applies pagkakasunod ng hakbang ayon sa panahon at sanhi.",
+          "fails": "Confuses related rules or misses pagkakasunod ng hakbang ayon sa panahon at sanhi."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "sequence statements using temporal and causal clues"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-d21342395720",
+      "family": "VEN-PARA-INSERT",
+      "domain": "verbal_en",
+      "candidate_count": 23,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "sentence insertion using reference and discourse links",
+        "ask": "Which nearby noun or idea does the inserted sentence refer to?",
+        "hints": [
+          "Track pronouns, examples, contrast, and topic continuity at each gap.",
+          "Check the exact sentence insertion using reference and discourse links against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies sentence insertion using reference and discourse links.",
+          "fails": "Confuses related rules or misses sentence insertion using reference and discourse links."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "place an added sentence using its pointer words"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-6a25c010469a",
+      "family": "VEN-RC-DETAIL",
+      "domain": "verbal_en",
+      "candidate_count": 19,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "retrieve a detail explicitly supported by the passage",
+        "ask": "What exact fact does the question request?",
+        "hints": [
+          "Locate the matching passage detail; avoid inference or outside knowledge.",
+          "Check the exact retrieve a detail explicitly supported by the passage against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies retrieve a detail explicitly supported by the passage.",
+          "fails": "Confuses related rules or misses retrieve a detail explicitly supported by the passage."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "derive a uniquely supported reading answer"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-c9bd0c0655c4",
+      "family": "VFIL-PARA",
+      "domain": "verbal_fil",
+      "candidate_count": 6,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "organisasyon ng talata gamit ang panandang pang-ugnay",
+        "ask": "Aling pangungusap ang panimula, kasunod na hakbang, at wakas?",
+        "hints": [
+          "Aling pangungusap ang panimula, kasunod na hakbang, at wakas?",
+          "Basahin ang talata mula simula hanggang wakas; tiyakin ang malinaw na daloy."
+        ],
+        "evidence": {
+          "supports": "Correctly applies organisasyon ng talata gamit ang panandang pang-ugnay.",
+          "fails": "Confuses related rules or misses organisasyon ng talata gamit ang panandang pang-ugnay."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "paragraph organization"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-9ef4fae69d89",
+      "family": "VEN-RC-MAIN",
+      "domain": "verbal_en",
+      "candidate_count": 20,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "main idea or best title supported by the whole passage",
+        "ask": "Which idea covers most details without being too broad?",
+        "hints": [
+          "Compare opening, repeated points, and conclusion; reject minor-detail titles.",
+          "Check the exact main idea or best title supported by the whole passage against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies main idea or best title supported by the whole passage.",
+          "fails": "Confuses related rules or misses main idea or best title supported by the whole passage."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "derive a uniquely supported reading answer",
+        "identify the main idea or best title"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-28ab04aa8e5a",
+      "family": "VEN-ERROR",
+      "domain": "verbal_en",
+      "candidate_count": 4,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "sentence-level grammar and usage",
+        "ask": "What exact grammatical relationship is being tested in each option?",
+        "hints": [
+          "Check subject-verb, tense, and sentence completeness; avoid style-only judgments.",
+          "Check the exact sentence-level grammar and usage against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies sentence-level grammar and usage.",
+          "fails": "Confuses related rules or misses sentence-level grammar and usage."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "error recognition"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-acfa1a5b9de7",
+      "family": "VEN-RC",
+      "domain": "verbal_en",
+      "candidate_count": 4,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "passage-based comprehension",
+        "ask": "What is asked: detail, main idea, inference, or implication?",
+        "hints": [
+          "Classify question, locate evidence, eliminate unsupported choices.",
+          "Check the exact passage-based comprehension against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies passage-based comprehension.",
+          "fails": "Confuses related rules or misses passage-based comprehension."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "reading comprehension"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-8c7751f60b11",
+      "family": "VEN-PO",
+      "domain": "verbal_en",
+      "candidate_count": 3,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "paragraph organization and process order",
+        "ask": "Which sentence establishes the topic or first step?",
+        "hints": [
+          "Use sequence words, cause-effect, and reference links to order all sentences.",
+          "Check the exact paragraph organization and process order against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies paragraph organization and process order.",
+          "fails": "Confuses related rules or misses paragraph organization and process order."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "paragraph organization"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-6d6d78bdce4e",
+      "family": "ANA-SYMBOL-SERIES",
+      "domain": "analytical",
+      "candidate_count": 82,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "letter positions and repeated or alternating step patterns",
+        "ask": "What numerical positions do the letters occupy, and how do the jumps change?",
+        "hints": [
+          "Convert letters to positions; test constant, growing, or alternating jumps.",
+          "Check the exact letter positions and repeated or alternating step patterns against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies letter positions and repeated or alternating step patterns.",
+          "fails": "Confuses related rules or misses letter positions and repeated or alternating step patterns."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "find the growing gap between letter positions",
+        "track two letter jumps at once"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-d9b49c691c26",
+      "family": "GI-DEADLINE-NUMBER",
+      "domain": "general_information",
+      "candidate_count": 66,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "retrieve a requested number from the cited constitutional/statutory provision",
+        "ask": "What exact instrument, section, unit, and event does the item specify?",
+        "hints": [
+          "Check current official primary text; match number, unit, exceptions, and wording.",
+          "Check the exact retrieve a requested number from the cited constitutional/statutory provision against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies retrieve a requested number from the cited constitutional/statutory provision.",
+          "fails": "Confuses related rules or misses retrieve a requested number from the cited constitutional/statutory provision."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Verify claims in current official primary sources; cite no unchecked law."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "recall the deadline to answer letters from the public",
+        "recall a provision"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-23750bbe3f53",
+      "family": "GI-TERM-MATCH",
+      "domain": "general_information",
+      "candidate_count": 55,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "match legal term or provision to its authoritative definition",
+        "ask": "Which named law or constitutional section governs this term?",
+        "hints": [
+          "Verify the current official primary text; distinguish similar provisions.",
+          "Check the exact match legal term or provision to its authoritative definition against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies match legal term or provision to its authoritative definition.",
+          "fails": "Confuses related rules or misses match legal term or provision to its authoritative definition."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Verify claims in current official primary sources; cite no unchecked law."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "recall a provision"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-95eaddc993a8",
+      "family": "ANA-DI-TABLE",
+      "domain": "analytical",
+      "candidate_count": 80,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "read table values and perform the requested comparison or total",
+        "ask": "Which row, column, and operation does the question require?",
+        "hints": [
+          "Select only needed cells, compute, and check units/sign.",
+          "Check the exact read table values and perform the requested comparison or total against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies read table values and perform the requested comparison or total.",
+          "fails": "Confuses related rules or misses read table values and perform the requested comparison or total."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "table diff",
+        "table total"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-504bf321f024",
+      "family": "ANA-SYLLOGISM",
+      "domain": "analytical",
+      "candidate_count": 49,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "derive only conclusions entailed by stated premises",
+        "ask": "What set relationship does each premise establish?",
+        "hints": [
+          "Diagram inclusion/exclusion; test conclusion without adding real-world assumptions.",
+          "Check the exact derive only conclusions entailed by stated premises against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies derive only conclusions entailed by stated premises.",
+          "fails": "Confuses related rules or misses derive only conclusions entailed by stated premises."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "chain 'all A are B' and 'no B is C' to 'no A is C'",
+        "some form"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-958be7c03a10",
+      "family": "ANA-CONCLUSION",
+      "domain": "analytical",
+      "candidate_count": 40,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "order entities from comparison clues",
+        "ask": "What pairwise relation is stated, and what direction is requested?",
+        "hints": [
+          "Chain comparisons; place each entity, then check ordinal direction.",
+          "Check the exact order entities from comparison clues against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies order entities from comparison clues.",
+          "fails": "Confuses related rules or misses order entities from comparison clues."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "chain comparison clues into one order"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-305374c75781",
+      "family": "GI-RIGHTS-APPLY",
+      "domain": "general_information",
+      "candidate_count": 51,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "apply a constitutional right, authority, or statutory duty to facts",
+        "ask": "Which actor, action, and protected interest appear in the scenario?",
+        "hints": [
+          "Verify applicable current official primary source; match facts to exact scope.",
+          "Check the exact apply a constitutional right, authority, or statutory duty to facts against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies apply a constitutional right, authority, or statutory duty to facts.",
+          "fails": "Confuses related rules or misses apply a constitutional right, authority, or statutory duty to facts."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Verify claims in current official primary sources; cite no unchecked law."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "Select the correct legal right, public authority or statutory duty"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-d5a8fc6d1d60",
+      "family": "GI-SCENARIO-APPLY",
+      "domain": "general_information",
+      "candidate_count": 63,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "apply a public-service norm or constitutional principle to conduct",
+        "ask": "What conduct or decision is described, and which principle governs it?",
+        "hints": [
+          "Identify the rule’s elements; verify current official primary text before teaching.",
+          "Check the exact apply a public-service norm or constitutional principle to conduct against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies apply a public-service norm or constitutional principle to conduct.",
+          "fails": "Confuses related rules or misses apply a public-service norm or constitutional principle to conduct."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Verify claims in current official primary sources; cite no unchecked law."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "match a described behavior to the R.A. 6713 norm it shows",
+        "Select the correct legal right, public authority or statutory duty"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-a7e7a36046c9",
+      "family": "GI-WHO-HOLDS-POWER",
+      "domain": "general_information",
+      "candidate_count": 31,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "identify the constitutional body or official assigned a power",
+        "ask": "Which governmental act is asked about, and who is expressly assigned it?",
+        "hints": [
+          "Check current official constitutional text; distinguish initiate, decide, and implement.",
+          "Check the exact identify the constitutional body or official assigned a power against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies identify the constitutional body or official assigned a power.",
+          "fails": "Confuses related rules or misses identify the constitutional body or official assigned a power."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Verify claims in current official primary sources; cite no unchecked law."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "name the body with the exclusive power to initiate impeachment",
+        "recall a provision"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-d0cc3d685fc8",
+      "family": "GI-ENV-PRINCIPLE",
+      "domain": "general_information",
+      "candidate_count": 27,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "apply environmental principle, practice, or law to scenario",
+        "ask": "Is the item asking for a practice, principle, agency, or statute?",
+        "hints": [
+          "Separate factual practice from legal claim; verify current official law/source.",
+          "Check the exact apply environmental principle, practice, or law to scenario against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies apply environmental principle, practice, or law to scenario.",
+          "fails": "Confuses related rules or misses apply environmental principle, practice, or law to scenario."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Verify claims in current official primary sources; cite no unchecked law."
+        ],
+        "semantic_status": "needs_semantic_split"
+      },
+      "source_examples": [
+        "Select the correct legal right, public authority or statutory duty"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-745c88d0272f",
+      "family": "ANA-ASSUME-I-II",
+      "domain": "analytical",
+      "candidate_count": 19,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "distinguish necessary assumptions from plausible additions",
+        "ask": "What must be true for the stated plan or claim to work?",
+        "hints": [
+          "Test each statement: if false, does the original rationale fail? Avoid extra assumptions.",
+          "Check the exact distinguish necessary assumptions from plausible additions against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies distinguish necessary assumptions from plausible additions.",
+          "fails": "Confuses related rules or misses distinguish necessary assumptions from plausible additions."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "keep the assumption the plan needs and drop one that is only plausible",
+        "spot an assumption the statement needs"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-66b7e13a887f",
+      "family": "ANA-ANALOGY-FUNCTION",
+      "domain": "analytical",
+      "candidate_count": 28,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "match the functional relationship between paired terms",
+        "ask": "State the relation in a short phrase; what role does each term play?",
+        "hints": [
+          "Keep direction and relation fixed; test the same phrase on options.",
+          "Check the exact match the functional relationship between paired terms against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies match the functional relationship between paired terms.",
+          "fails": "Confuses related rules or misses match the functional relationship between paired terms."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "worker : workplace",
+        "tool : what it is used for"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-f951279792de",
+      "family": "GI-SOURCE-BASED-SCENARIO",
+      "domain": "general_information",
+      "candidate_count": 7,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "apply a named primary Philippine source to a scenario",
+        "ask": "What source and subject are explicitly named?",
+        "hints": [
+          "Verify current official gazette/agency primary text; cite exact title/section only after checking.",
+          "Check the exact apply a named primary Philippine source to a scenario against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies apply a named primary Philippine source to a scenario.",
+          "fails": "Confuses related rules or misses apply a named primary Philippine source to a scenario."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Verify claims in current official primary sources; cite no unchecked law."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "Apply the cited primary Philippine law to an original scenario"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-a82fc8a9f050",
+      "family": "ANA-ANALOGY-FORM",
+      "domain": "analytical",
+      "candidate_count": 26,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "match a specific stage, condition, or transformation relation",
+        "ask": "Describe how the first term relates to the second.",
+        "hints": [
+          "Keep direction and relation type; test candidate pair symmetrically.",
+          "Check the exact match a specific stage, condition, or transformation relation against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies match a specific stage, condition, or transformation relation.",
+          "fails": "Confuses related rules or misses match a specific stage, condition, or transformation relation."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "needs_semantic_split"
+      },
+      "source_examples": [
+        "early stage : later stage",
+        "condition : what it lacks"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-8a3d16c5858a",
+      "family": "ANA-ANALOGY-PART",
+      "domain": "analytical",
+      "candidate_count": 18,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "match part-to-whole or entity-to-home relation",
+        "ask": "What kind of part, member, or dwelling is named?",
+        "hints": [
+          "Preserve relation and direction; avoid loose association.",
+          "Check the exact match part-to-whole or entity-to-home relation against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies match part-to-whole or entity-to-home relation.",
+          "fails": "Confuses related rules or misses match part-to-whole or entity-to-home relation."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "needs_semantic_split"
+      },
+      "source_examples": [
+        "part : whole",
+        "animal : home"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-07dcd5749d58",
+      "family": "ANA-ANALOGY-SYN",
+      "domain": "analytical",
+      "candidate_count": 19,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "match synonym relation",
+        "ask": "Are the terms equivalent in the relevant sense and grammatical role?",
+        "hints": [
+          "Check synonymy in the intended sense; preserve direction and part of speech.",
+          "Check the exact match synonym relation against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies match synonym relation.",
+          "fails": "Confuses related rules or misses match synonym relation."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "needs_semantic_split"
+      },
+      "source_examples": [
+        "opposite meaning"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-c33e2a5d0cb9",
+      "family": "ANA-ANALOGY-DEGREE",
+      "domain": "analytical",
+      "candidate_count": 26,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "match a graded intensity or scale relation",
+        "ask": "Which term is stronger, larger, or more intense?",
+        "hints": [
+          "Preserve direction and scale; reject pairs that merely associate.",
+          "Check the exact match a graded intensity or scale relation against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies match a graded intensity or scale relation.",
+          "fails": "Confuses related rules or misses match a graded intensity or scale relation."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "lesser : greater degree",
+        "name the relationship, then match it"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-23b6977fcaf1",
+      "family": "ANA-ANALOGY-PART/WHOLE",
+      "domain": "analytical",
+      "candidate_count": 7,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "part-to-whole relation",
+        "ask": "Which item is a constituent of the second, and in what direction?",
+        "hints": [
+          "State the relation precisely; test candidate pairs for same direction.",
+          "Check the exact part-to-whole relation against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies part-to-whole relation.",
+          "fails": "Confuses related rules or misses part-to-whole relation."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "keep the part-to-whole direction",
+        "name the relationship, then match it"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    },
+    {
+      "job_id": "FAMILY-fb1ce6bff93e",
+      "family": "ANA-ANALOGY-SYN/ANT",
+      "domain": "analytical",
+      "candidate_count": 6,
+      "recipe": {
+        "transfer": "Use a distinct, checked same-method item; no near-copy.",
+        "prereq": "distinguish synonym and antonym relations by item",
+        "ask": "Does the pair express sameness or opposition?",
+        "hints": [
+          "Classify source pair first; keep same relation type and direction throughout.",
+          "Check the exact distinguish synonym and antonym relations by item against the stem."
+        ],
+        "evidence": {
+          "supports": "Correctly applies distinguish synonym and antonym relations by item.",
+          "fails": "Confuses related rules or misses distinguish synonym and antonym relations by item."
+        },
+        "bind": [
+          "Check each stem, options, key, language, and method before binding.",
+          "Anchor feedback to this stem and key; a choice alone does not reveal reasoning.",
+          "Preserve source language and grammar; do not translate."
+        ],
+        "semantic_status": "single_recipe_candidate"
+      },
+      "source_examples": [
+        "name the relationship, then match it"
+      ],
+      "status": "draft",
+      "runtime_eligible": false,
+      "independently_reviewed": false
+    }
+  ],
+  "draft_limitations": [
+    "Computation prompts are method checks, not comprehension diagnostics.",
+    "No per-item binding or independent correctness approval is implied."
+  ]
+}

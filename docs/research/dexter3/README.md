@@ -112,3 +112,7 @@ Resume by validating the manifest and source digests, then working only the next
 - `python3 scripts/batches/qa/test_bank_gates_2026_10_22.py`: 19 passed.
 
 No runtime/PHP/browser tests or learner study were run for this research-only change. No database, bank status, existing question content, activation flag or deployment setting changed. Independent reviewer decisions remain pending.
+
+## Bulk continuation checkpoint
+
+See [resumable production](BULK_EXECUTION.md), [current summary](bulk-summary.json), [per-record ledger](bulk-state.json.gz), [Luna Medium family drafts](family-recipes-luna-v0.1.json), [25-binding math overlay](math25-v0.1.json) and [automated QA](bulk-validation.json). These extend the existing sidecars without replacing them. All 2,100 candidates are queued; all tutoring remains draft. A covered queue entry is not an approved tutoring binding.

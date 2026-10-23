@@ -1,0 +1,1987 @@
+{
+  "schema_version": "dexter-math25-overlay-v0.1",
+  "baseline_commit": "70586e4e15455a9e071255ca1bb52656006d107c",
+  "status": "draft",
+  "runtime_eligible": false,
+  "base_sidecar_sha256": "fad65b828c21304543bf9526c454376f95ebcb3a470b67befbd88cfbb40a2a7d",
+  "evidence_contract_source": "price15-v0.3-patch.json:evidence_context_contract operation",
+  "evidence_contract_sha256": "ce8d55833f7ed010a80c77bd4c5c61ff5f34704ce04f3d64e3b4d04e9220d7f4",
+  "policy": {
+    "tutor_nodes_update_knowledge": false,
+    "uncertainty_assigns_hypothesis": false,
+    "hypotheses": "Local proposals only. Confirm a candidate from compatible pre-correction responses; no diagnosis from an answer alone.",
+    "assistance": "Record help before serving tutoring; preserve the first independent answer, but all later retries on this item stay assisted.",
+    "display": "Server controls response shuffle and keeps stable authoring IDs distinct from opaque client response IDs.",
+    "fallback": "Unreviewed/stale metadata uses ordinary authorized explanation. Missing approved transfer means a truthful gap.",
+    "strict": "No tutor payload during an active Strict Mock."
+  },
+  "flows": {
+    "simple-interest": {
+      "entry": "target",
+      "node_budget": 17,
+      "nodes": {
+        "target": {
+          "kind": "comprehension",
+          "prompt": "What amount does the question ask you to find?",
+          "options": [
+            {
+              "id": "interest",
+              "text": "The interest charge alone",
+              "feedback": "Keep the borrowed money separate from the extra charge. Next identify the base amount.",
+              "next": "principal",
+              "evidence": "consistent",
+              "hypothesis": null
+            },
+            {
+              "id": "repayment",
+              "text": "The borrowed money plus interest",
+              "feedback": "Which quantity were you trying to report when you chose your answer?",
+              "next": "confirm_target",
+              "evidence": "possible",
+              "hypothesis": "interest-versus-repayment"
+            },
+            {
+              "id": "unknown",
+              "text": "I am not sure",
+              "feedback": "Interest is the extra borrowing charge. The question asks for that charge alone.",
+              "next": "principal",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ]
+        },
+        "confirm_target": {
+          "kind": "self_report",
+          "prompt": "Which describes your first approach?",
+          "options": [
+            {
+              "id": "total",
+              "text": "I thought the question wanted the total repayment",
+              "feedback": "That supports a target-quantity mix-up in this attempt. Calculate the extra interest but do not add the principal to the requested answer.",
+              "next": "principal",
+              "evidence": "supports_prior_repayment",
+              "hypothesis": "interest-versus-repayment"
+            },
+            {
+              "id": "extra",
+              "text": "I knew it wanted interest, but added the principal anyway",
+              "feedback": "That may be an extra step rather than a misunderstanding of the words. Stop when the interest has been found.",
+              "next": "principal",
+              "evidence": "self_report_only",
+              "hypothesis": null
+            },
+            {
+              "id": "other",
+              "text": "I do not remember, used another method, or selected by mistake",
+              "feedback": "We do not know the cause yet. Separate principal and interest before calculating.",
+              "next": "principal",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ]
+        },
+        "principal": {
+          "kind": "comprehension",
+          "prompt": "In this question, what does {principal} represent?",
+          "options": [
+            {
+              "id": "borrowed",
+              "text": "The amount originally borrowed",
+              "feedback": "Yes. This is the principal used to calculate simple interest.",
+              "next": "rate",
+              "evidence": "consistent",
+              "hypothesis": null
+            },
+            {
+              "id": "charge",
+              "text": "The interest already owed",
+              "feedback": "The wording says this amount was borrowed. It is the principal, not a calculated charge.",
+              "next": "rate",
+              "evidence": "possible",
+              "hypothesis": "principal-versus-interest"
+            },
+            {
+              "id": "unknown",
+              "text": "I am not sure",
+              "feedback": "The principal is the starting loan amount. Here it is {principal}.",
+              "next": "rate",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ]
+        },
+        "rate": {
+          "kind": "comprehension",
+          "prompt": "What does {rate}% per year mean here?",
+          "options": [
+            {
+              "id": "original",
+              "text": "{rate} out of every 100 of the original principal for each full year",
+              "feedback": "Yes. Under this simple-interest model the base stays the original principal.",
+              "next": "time",
+              "evidence": "consistent",
+              "hypothesis": null
+            },
+            {
+              "id": "growing",
+              "text": "{rate}% of a new balance that includes earlier interest each year",
+              "feedback": "Which base did you use for later years?",
+              "next": "confirm_base",
+              "evidence": "possible",
+              "hypothesis": "simple-versus-compound"
+            },
+            {
+              "id": "fixed",
+              "text": "Exactly ₱{rate} for the whole loan each year",
+              "feedback": "Did you treat the rate numeral as a fixed peso charge?",
+              "next": "confirm_rate",
+              "evidence": "possible",
+              "hypothesis": "percent-as-fixed-pesos"
+            },
+            {
+              "id": "unknown",
+              "text": "I am not sure",
+              "feedback": "Percent means out of 100. The annual charge is that fraction of the principal.",
+              "next": "hint_1",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ]
+        },
+        "confirm_base": {
+          "kind": "self_report",
+          "prompt": "Which matches your calculation?",
+          "options": [
+            {
+              "id": "compound",
+              "text": "I added earlier interest to the base before calculating the next year",
+              "feedback": "That describes compounding. This question specifies simple interest, so use the original principal each year.",
+              "next": "time",
+              "evidence": "supports_prior_growing",
+              "hypothesis": "simple-versus-compound"
+            },
+            {
+              "id": "original",
+              "text": "I used the original principal but chose the wrong description",
+              "feedback": "Then the selected description does not establish compounding. We can check the duration next.",
+              "next": "time",
+              "evidence": "self_report_only",
+              "hypothesis": null
+            },
+            {
+              "id": "unknown",
+              "text": "I am not sure or used another method",
+              "feedback": "The cause remains unknown. Use the original principal for this simple-interest model.",
+              "next": "time",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ]
+        },
+        "confirm_rate": {
+          "kind": "self_report",
+          "prompt": "How did you use the number {rate}?",
+          "options": [
+            {
+              "id": "pesos",
+              "text": "I used it as a fixed peso amount",
+              "feedback": "That supports a percent-unit interpretation in this attempt. The amount changes with the principal; {rate}% means {rate}/100 of it per year.",
+              "next": "hint_1",
+              "evidence": "supports_prior_fixed",
+              "hypothesis": "percent-as-fixed-pesos"
+            },
+            {
+              "id": "fraction",
+              "text": "I intended a fraction of the principal",
+              "feedback": "Then we should not label the method from the selected description alone. Check the duration next.",
+              "next": "time",
+              "evidence": "self_report_only",
+              "hypothesis": null
+            },
+            {
+              "id": "unknown",
+              "text": "I do not remember or used another method",
+              "feedback": "We do not have enough evidence for a cause. A percent reminder may help.",
+              "next": "hint_1",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ]
+        },
+        "time": {
+          "kind": "comprehension",
+          "prompt": "Which duration matches the question, using years to match the annual rate?",
+          "options": [
+            {
+              "id": "duration",
+              "text": "{duration}",
+              "feedback": "Use that duration with the annual charge.",
+              "next": "method",
+              "evidence": "consistent",
+              "hypothesis": null
+            },
+            {
+              "id": "wrong",
+              "text": "{wrong_duration}",
+              "feedback": "Which interpretation led to that duration?",
+              "next": "confirm_time",
+              "evidence": "possible",
+              "hypothesis": "duration-conversion"
+            },
+            {
+              "id": "unknown",
+              "text": "I am not sure",
+              "feedback": "The rate is per year. Extra months are divided by 12, not written as decimal digits after the whole years.",
+              "next": "time_help",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ]
+        },
+        "confirm_time": {
+          "kind": "self_report",
+          "prompt": "Which describes how you handled the time?",
+          "options": [
+            {
+              "id": "digits",
+              "text": "I wrote the month count directly after the decimal point",
+              "feedback": "Months are twelfths of a year. Six months is 6/12 = one half, not six tenths.",
+              "next": "time_help",
+              "evidence": "supports_only_if_months_present",
+              "hypothesis": "months-as-decimal-digits"
+            },
+            {
+              "id": "one",
+              "text": "I calculated only one year and did not include the full duration",
+              "feedback": "That may be an unfinished time step. Include every stated year and any extra months.",
+              "next": "time_help",
+              "evidence": "self_report_only",
+              "hypothesis": null
+            },
+            {
+              "id": "other",
+              "text": "Another method, a mistaken selection, or I do not remember",
+              "feedback": "The reason remains unknown. Match the duration to the annual rate.",
+              "next": "time_help",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ]
+        },
+        "time_help": {
+          "kind": "hint",
+          "level": 1,
+          "text": "A year has 12 months. Six months is half a year. For a whole-year duration, keep all the stated years.",
+          "next": "method",
+          "requires": "learner_requests_next_hint"
+        },
+        "method": {
+          "kind": "comprehension",
+          "prompt": "Once the interest for one year is known, how do you find the interest for the whole duration?",
+          "options": [
+            {
+              "id": "multiply",
+              "text": "Multiply the annual interest by the duration in years",
+              "feedback": "Yes. Keep that interest result separate from the original loan.",
+              "next": "retry",
+              "evidence": "consistent",
+              "hypothesis": null
+            },
+            {
+              "id": "principal",
+              "text": "Add the principal to the annual interest",
+              "feedback": "That gives a different quantity and may also leave out years. The target here is interest alone for the full duration.",
+              "next": "hint_1",
+              "evidence": "possible",
+              "hypothesis": "target-or-duration"
+            },
+            {
+              "id": "unknown",
+              "text": "I am not sure",
+              "feedback": "Simple interest uses the same annual charge for equal years. Count all years and the stated fraction of a year.",
+              "next": "hint_1",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ]
+        },
+        "hint_1": {
+          "kind": "hint",
+          "level": 1,
+          "text": "Find 1% of the principal by dividing by 100; multiply by the annual rate numeral. This gives one year’s interest.",
+          "next": "hint_2",
+          "requires": "learner_requests_next_hint"
+        },
+        "hint_2": {
+          "kind": "hint",
+          "level": 2,
+          "text": "Multiply that annual interest by the full years. For six extra months, add half of one year’s interest.",
+          "next": "retry",
+          "requires": "learner_requests_next_hint"
+        },
+        "retry": {
+          "kind": "action",
+          "action": "return_to_original_mcq",
+          "assisted": true,
+          "next": "explain",
+          "requires": "learner_requests_authorized_reveal"
+        },
+        "explain": {
+          "kind": "action",
+          "action": "authorized_binding_worked_solution",
+          "next": "transfer",
+          "requires": "server_reveal_authorized"
+        },
+        "transfer": {
+          "kind": "terminal",
+          "action": "eligible_transfer_or_truthful_gap",
+          "full_target_transfer_id": null
+        }
+      },
+      "exits": [
+        "stop",
+        "authorized_reveal"
+      ],
+      "evidence_contract_ref": "price15_v0.3_evidence_context_contract"
+    },
+    "two-share-total": {
+      "entry": "whole",
+      "node_budget": 17,
+      "exits": [
+        "stop",
+        "authorized_reveal"
+      ],
+      "evidence_contract_ref": "price15_v0.3_evidence_context_contract",
+      "nodes": {
+        "whole": {
+          "kind": "comprehension",
+          "prompt": "What does the given {total} represent?",
+          "options": [
+            {
+              "id": "combined",
+              "text": "The combined fund for both named recipients",
+              "feedback": "Yes. The ratio describes how to split that whole fund.",
+              "next": "order",
+              "evidence": "consistent",
+              "hypothesis": null
+            },
+            {
+              "id": "second",
+              "text": "Only the second recipient’s share",
+              "feedback": "Which meaning did you give that amount when solving?",
+              "next": "confirm_whole",
+              "evidence": "possible",
+              "hypothesis": "whole-versus-share"
+            },
+            {
+              "id": "unknown",
+              "text": "I am not sure",
+              "feedback": "The wording says the amount is shared or divided. It names the whole fund before the shares are found.",
+              "next": "order",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ]
+        },
+        "confirm_whole": {
+          "kind": "self_report",
+          "prompt": "Which describes your approach?",
+          "options": [
+            {
+              "id": "share",
+              "text": "I treated the given amount as one recipient’s share",
+              "feedback": "That supports a whole-versus-share interpretation in this attempt. Here the amount is both shares combined.",
+              "next": "order",
+              "evidence": "supports_prior_second",
+              "hypothesis": "whole-versus-share"
+            },
+            {
+              "id": "total",
+              "text": "I knew it was the whole but selected the other description",
+              "feedback": "Then the selection does not establish that misconception. We can check ratio order next.",
+              "next": "order",
+              "evidence": "self_report_only",
+              "hypothesis": null
+            },
+            {
+              "id": "unknown",
+              "text": "I do not remember or used another method",
+              "feedback": "The cause remains unknown. Keep the full fund separate from either share.",
+              "next": "order",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ]
+        },
+        "order": {
+          "kind": "comprehension",
+          "prompt": "In {first_parts}:{second_parts}, which number belongs to the second named recipient?",
+          "options": [
+            {
+              "id": "second",
+              "text": "{second_parts} parts",
+              "feedback": "Yes. Keep that recipient attached to those parts.",
+              "next": "denominator",
+              "evidence": "consistent",
+              "hypothesis": null
+            },
+            {
+              "id": "first",
+              "text": "{first_parts} parts",
+              "feedback": "Did you reverse the recipient order, or was that a mistaken selection?",
+              "next": "confirm_order",
+              "evidence": "possible",
+              "hypothesis": "recipient-order"
+            },
+            {
+              "id": "unknown",
+              "text": "I am not sure",
+              "feedback": "Match the first recipient to the first ratio number and the second recipient to the second number.",
+              "next": "denominator",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ]
+        },
+        "confirm_order": {
+          "kind": "self_report",
+          "prompt": "Which matches your first calculation?",
+          "options": [
+            {
+              "id": "reversed",
+              "text": "I assigned the first ratio number to the second recipient",
+              "feedback": "That supports an order mix-up here. Ratio order follows recipient order in the wording.",
+              "next": "denominator",
+              "evidence": "supports_prior_first",
+              "hypothesis": "recipient-order"
+            },
+            {
+              "id": "misclick",
+              "text": "I intended the second ratio number but selected the first",
+              "feedback": "Then do not infer an order misconception. Check the total number of parts next.",
+              "next": "denominator",
+              "evidence": "self_report_only",
+              "hypothesis": null
+            },
+            {
+              "id": "unknown",
+              "text": "I used another method or cannot explain yet",
+              "feedback": "We do not know the cause. Label each recipient before counting all parts.",
+              "next": "denominator",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ]
+        },
+        "denominator": {
+          "kind": "comprehension",
+          "prompt": "How many equal parts does the entire fund contain?",
+          "options": [
+            {
+              "id": "sum",
+              "text": "{sum_parts} parts: {first_parts} + {second_parts}",
+              "feedback": "Yes. One part is the whole fund divided by all those equal parts.",
+              "next": "one_part",
+              "evidence": "consistent",
+              "hypothesis": null
+            },
+            {
+              "id": "target",
+              "text": "Only {second_parts} parts",
+              "feedback": "Which rule did you use to divide the whole fund?",
+              "next": "confirm_parts",
+              "evidence": "possible",
+              "hypothesis": "target-only-denominator"
+            },
+            {
+              "id": "two",
+              "text": "Two equal parts because there are two recipients",
+              "feedback": "Two recipients do not necessarily get equal shares. The ratio counts how many equal-sized units each receives.",
+              "next": "hint_1",
+              "evidence": "possible",
+              "hypothesis": "equal-sharing"
+            },
+            {
+              "id": "unknown",
+              "text": "I am not sure",
+              "feedback": "Count all the ratio parts, not only the parts for the recipient being asked about.",
+              "next": "hint_1",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ]
+        },
+        "confirm_parts": {
+          "kind": "self_report",
+          "prompt": "Which describes your division step?",
+          "options": [
+            {
+              "id": "target",
+              "text": "I divided the whole fund by the requested recipient’s ratio number",
+              "feedback": "That supports a denominator mix-up. To find one equal part, divide by the sum of both ratio numbers.",
+              "next": "hint_1",
+              "evidence": "supports_prior_target",
+              "hypothesis": "target-only-denominator"
+            },
+            {
+              "id": "sum",
+              "text": "I used the sum but chose the wrong description",
+              "feedback": "Then we should not label your denominator from that selection. Check what one part means.",
+              "next": "one_part",
+              "evidence": "self_report_only",
+              "hypothesis": null
+            },
+            {
+              "id": "unknown",
+              "text": "I cannot remember, guessed, or used another method",
+              "feedback": "The cause remains unknown. We can rebuild the equal-part interpretation.",
+              "next": "hint_1",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ]
+        },
+        "one_part": {
+          "kind": "comprehension",
+          "prompt": "After dividing {total} by {sum_parts}, what have you found?",
+          "options": [
+            {
+              "id": "unit",
+              "text": "The value of one equal ratio part",
+              "feedback": "Yes. The requested recipient receives several such parts.",
+              "next": "target",
+              "evidence": "consistent",
+              "hypothesis": null
+            },
+            {
+              "id": "answer",
+              "text": "The requested recipient’s complete share",
+              "feedback": "Did you stop at one part because you thought that was the whole requested share?",
+              "next": "confirm_unit",
+              "evidence": "possible",
+              "hypothesis": "one-part-versus-share"
+            },
+            {
+              "id": "unknown",
+              "text": "I am not sure",
+              "feedback": "That division finds one equal-sized unit. Multiply it by the requested recipient’s number of units.",
+              "next": "hint_2",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ]
+        },
+        "confirm_unit": {
+          "kind": "self_report",
+          "prompt": "Which best describes why you stopped there?",
+          "options": [
+            {
+              "id": "meaning",
+              "text": "I thought one part was the recipient’s entire share",
+              "feedback": "That supports a part-versus-share mix-up in this attempt. The requested recipient gets {second_parts} of those equal parts.",
+              "next": "hint_2",
+              "evidence": "supports_prior_answer",
+              "hypothesis": "one-part-versus-share"
+            },
+            {
+              "id": "unfinished",
+              "text": "I knew I still had to multiply but did not finish",
+              "feedback": "That may be incomplete work rather than a conceptual mistake. Include the requested number of parts.",
+              "next": "hint_2",
+              "evidence": "self_report_only",
+              "hypothesis": null
+            },
+            {
+              "id": "unknown",
+              "text": "I do not know or selected the description by mistake",
+              "feedback": "No specific cause is established. Keep one part separate from the full share.",
+              "next": "hint_2",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ]
+        },
+        "target": {
+          "kind": "comprehension",
+          "prompt": "Which final quantity should you report?",
+          "options": [
+            {
+              "id": "second",
+              "text": "The second named recipient’s share",
+              "feedback": "Yes. Use {second_parts} parts, then check both shares add to {total}.",
+              "next": "retry",
+              "evidence": "consistent",
+              "hypothesis": null
+            },
+            {
+              "id": "first",
+              "text": "The first named recipient’s share",
+              "feedback": "That is a different share. Reread whose amount is requested before multiplying.",
+              "next": "hint_2",
+              "evidence": "possible",
+              "hypothesis": "other-recipient"
+            },
+            {
+              "id": "unknown",
+              "text": "I am not sure",
+              "feedback": "The question asks for the second named recipient. Keep that name beside {second_parts} parts.",
+              "next": "hint_2",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ]
+        },
+        "hint_1": {
+          "kind": "hint",
+          "level": 1,
+          "text": "Add the two ratio numbers. That sum counts all the equal parts in the combined fund.",
+          "next": "hint_2",
+          "requires": "learner_requests_next_hint"
+        },
+        "hint_2": {
+          "kind": "hint",
+          "level": 2,
+          "text": "Divide the total fund by all parts, then multiply one part by the requested recipient’s parts.",
+          "next": "retry",
+          "requires": "learner_requests_next_hint"
+        },
+        "retry": {
+          "kind": "action",
+          "action": "return_to_original_mcq",
+          "assisted": true,
+          "next": "explain",
+          "requires": "learner_requests_authorized_reveal"
+        },
+        "explain": {
+          "kind": "action",
+          "action": "authorized_binding_worked_solution",
+          "next": "transfer",
+          "requires": "server_reveal_authorized"
+        },
+        "transfer": {
+          "kind": "terminal",
+          "action": "eligible_transfer_or_truthful_gap",
+          "full_target_transfer_id": null
+        }
+      }
+    }
+  },
+  "bindings": [
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000133",
+      "source_file": "docs/batches/batch-003.json",
+      "source_question_hash": "ca9c95267133625d6df19035d522781675f7265ce01f21cbac380844c75801a7",
+      "source_record_sha256": "1b2189f7397bec61a2a2c7c5d0eaae299edeecde0de8c83e8b77be039b584f22",
+      "status": "draft",
+      "base_binding_sha256": "677139f4a175b23a9319fb50d7c7100ac4ce6638f8b58411398ef2b0a579231c",
+      "review": {
+        "human_reviewer_1": null,
+        "human_reviewer_2": null,
+        "adjudication": null
+      },
+      "family": "simple-interest",
+      "visibility": {
+        "meanings_and_solution": "authorized_explanation_only",
+        "flow": "one_current_node_only"
+      },
+      "source_codes_preserved": true,
+      "parameters": {
+        "principal": "₱12,000",
+        "rate": "3",
+        "duration": "3 years",
+        "wrong_duration": "One year only"
+      },
+      "worked_solution": [
+        "1% of ₱12,000 is ₱120.",
+        "3% for one year is ₱360.",
+        "Full years contribute ₱1,080.",
+        "Interest alone: ₱1,080. Do not add the loan amount.",
+        "Check: ₱12,000 × 3/100 × (3 + 0/12) = ₱1,080."
+      ],
+      "mental_method": "Find 1%, multiply by the rate numeral, then use whole annual charges and half an annual charge for six months.",
+      "prerequisites": [
+        "percent-as-hundredths",
+        "annual-rate-units",
+        "year-as-12-months",
+        "principal-versus-interest"
+      ],
+      "local_hypotheses": {
+        "NUM-PARTIAL": "duration-omitted-or-stopped-early",
+        "NUM-UNIT": "months-as-decimal-digits",
+        "NUM-EXTRA-STEP": "interest-versus-repayment",
+        "NUM-DECIMAL": "rate-scale-possible"
+      },
+      "transfer": {
+        "full_target_distinct_family_id": null,
+        "same_family_practice_candidates": [
+          "CIVIO-NUM-WP-PCT-CHANGE-000013"
+        ],
+        "related_component_candidate": "CIVIO-NUM-WP-PCT-CHANGE-000121",
+        "component_limit": "Sale-price application checks percentage amount and target quantity; it does not test annual rate or duration.",
+        "approved_for_transfer": false
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000134",
+      "source_file": "docs/batches/batch-003.json",
+      "source_question_hash": "42a9aac3a22fbf4a8e22cdf2163f913203aca7cdc20e06c6a9e9d1dcfd47697b",
+      "source_record_sha256": "a6f55cda653c4fa6a011eca84f4ae8d408d34bce178ddf8268a05b38509003d8",
+      "status": "draft",
+      "base_binding_sha256": "6ccb90fd1f74785e27cfff42f131c390880753963f573df6a2976236ce17e39b",
+      "review": {
+        "human_reviewer_1": null,
+        "human_reviewer_2": null,
+        "adjudication": null
+      },
+      "family": "simple-interest",
+      "visibility": {
+        "meanings_and_solution": "authorized_explanation_only",
+        "flow": "one_current_node_only"
+      },
+      "source_codes_preserved": true,
+      "parameters": {
+        "principal": "₱25,000",
+        "rate": "3",
+        "duration": "3 years plus half a year (6 months)",
+        "wrong_duration": "3.6 years"
+      },
+      "worked_solution": [
+        "1% of ₱25,000 is ₱250.",
+        "3% for one year is ₱750.",
+        "Full years contribute ₱2,250.",
+        "Six months contributes half an annual charge: ₱375.",
+        "Interest alone: ₱2,625. Do not add the loan amount.",
+        "Check: ₱25,000 × 3/100 × (3 + 6/12) = ₱2,625."
+      ],
+      "mental_method": "Find 1%, multiply by the rate numeral, then use whole annual charges and half an annual charge for six months.",
+      "prerequisites": [
+        "percent-as-hundredths",
+        "annual-rate-units",
+        "year-as-12-months",
+        "principal-versus-interest"
+      ],
+      "local_hypotheses": {
+        "NUM-PARTIAL": "duration-omitted-or-stopped-early",
+        "NUM-UNIT": "months-as-decimal-digits",
+        "NUM-EXTRA-STEP": "interest-versus-repayment",
+        "NUM-DECIMAL": "rate-scale-possible"
+      },
+      "transfer": {
+        "full_target_distinct_family_id": null,
+        "same_family_practice_candidates": [
+          "CIVIO-NUM-WP-PCT-CHANGE-000013"
+        ],
+        "related_component_candidate": "CIVIO-NUM-WP-PCT-CHANGE-000121",
+        "component_limit": "Sale-price application checks percentage amount and target quantity; it does not test annual rate or duration.",
+        "approved_for_transfer": false
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000217",
+      "source_file": "docs/batches/batch-004.json",
+      "source_question_hash": "1ff67fbb302d4ac1e7b6e2419f8272f8edf3175c3082b91ab76ddf37b41d373f",
+      "source_record_sha256": "5fef3bb65cb8d889fce60da9c8d7224ee94014178f6660a0dccfed147cf4b05a",
+      "status": "draft",
+      "base_binding_sha256": "55fad0b95d572696a29da283b68ec82c00fcd019c88309e839783b600fa06e6e",
+      "review": {
+        "human_reviewer_1": null,
+        "human_reviewer_2": null,
+        "adjudication": null
+      },
+      "family": "simple-interest",
+      "visibility": {
+        "meanings_and_solution": "authorized_explanation_only",
+        "flow": "one_current_node_only"
+      },
+      "source_codes_preserved": true,
+      "parameters": {
+        "principal": "₱20,000",
+        "rate": "5",
+        "duration": "1 years plus half a year (6 months)",
+        "wrong_duration": "1.6 years"
+      },
+      "worked_solution": [
+        "1% of ₱20,000 is ₱200.",
+        "5% for one year is ₱1,000.",
+        "Full years contribute ₱1,000.",
+        "Six months contributes half an annual charge: ₱500.",
+        "Interest alone: ₱1,500. Do not add the loan amount.",
+        "Check: ₱20,000 × 5/100 × (1 + 6/12) = ₱1,500."
+      ],
+      "mental_method": "Find 1%, multiply by the rate numeral, then use whole annual charges and half an annual charge for six months.",
+      "prerequisites": [
+        "percent-as-hundredths",
+        "annual-rate-units",
+        "year-as-12-months",
+        "principal-versus-interest"
+      ],
+      "local_hypotheses": {
+        "NUM-PARTIAL": "duration-omitted-or-stopped-early",
+        "NUM-UNIT": "months-as-decimal-digits",
+        "NUM-EXTRA-STEP": "interest-versus-repayment",
+        "NUM-DECIMAL": "rate-scale-possible"
+      },
+      "transfer": {
+        "full_target_distinct_family_id": null,
+        "same_family_practice_candidates": [
+          "CIVIO-NUM-WP-PCT-CHANGE-000013"
+        ],
+        "related_component_candidate": "CIVIO-NUM-WP-PCT-CHANGE-000121",
+        "component_limit": "Sale-price application checks percentage amount and target quantity; it does not test annual rate or duration.",
+        "approved_for_transfer": false
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000218",
+      "source_file": "docs/batches/batch-004.json",
+      "source_question_hash": "811e4a1ea3cc78dfa594a003b1e7cf16d469c7eb534250eb3f32c02cb697d955",
+      "source_record_sha256": "0709a8916d198ff8e06987aa5b79d9f9cc51f22e6138f7fd193df5ce6dce6ce9",
+      "status": "draft",
+      "base_binding_sha256": "66958d460dd9cee696c646d2adb67a8fde064eac37a775872f2b882ed63f2cf9",
+      "review": {
+        "human_reviewer_1": null,
+        "human_reviewer_2": null,
+        "adjudication": null
+      },
+      "family": "simple-interest",
+      "visibility": {
+        "meanings_and_solution": "authorized_explanation_only",
+        "flow": "one_current_node_only"
+      },
+      "source_codes_preserved": true,
+      "parameters": {
+        "principal": "₱30,000",
+        "rate": "3",
+        "duration": "2 years plus half a year (6 months)",
+        "wrong_duration": "2.6 years"
+      },
+      "worked_solution": [
+        "1% of ₱30,000 is ₱300.",
+        "3% for one year is ₱900.",
+        "Full years contribute ₱1,800.",
+        "Six months contributes half an annual charge: ₱450.",
+        "Interest alone: ₱2,250. Do not add the loan amount.",
+        "Check: ₱30,000 × 3/100 × (2 + 6/12) = ₱2,250."
+      ],
+      "mental_method": "Find 1%, multiply by the rate numeral, then use whole annual charges and half an annual charge for six months.",
+      "prerequisites": [
+        "percent-as-hundredths",
+        "annual-rate-units",
+        "year-as-12-months",
+        "principal-versus-interest"
+      ],
+      "local_hypotheses": {
+        "NUM-PARTIAL": "duration-omitted-or-stopped-early",
+        "NUM-UNIT": "months-as-decimal-digits",
+        "NUM-EXTRA-STEP": "interest-versus-repayment",
+        "NUM-DECIMAL": "rate-scale-possible"
+      },
+      "transfer": {
+        "full_target_distinct_family_id": null,
+        "same_family_practice_candidates": [
+          "CIVIO-NUM-WP-PCT-CHANGE-000013"
+        ],
+        "related_component_candidate": "CIVIO-NUM-WP-PCT-CHANGE-000121",
+        "component_limit": "Sale-price application checks percentage amount and target quantity; it does not test annual rate or duration.",
+        "approved_for_transfer": false
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000330",
+      "source_file": "docs/batches/batch-005.json",
+      "source_question_hash": "917f9737808929963b6131ae339412c70fc9e6d212a73504db9697bb2b09b27b",
+      "source_record_sha256": "11d966af5ff7149dbe13f344dfd3969d6fc4146a2276f92965398fa3c84f8b04",
+      "status": "draft",
+      "base_binding_sha256": "4da021d1905b8dffbc0404ec620b7feea55393d0cd903baf12d726f9eade54e1",
+      "review": {
+        "human_reviewer_1": null,
+        "human_reviewer_2": null,
+        "adjudication": null
+      },
+      "family": "simple-interest",
+      "visibility": {
+        "meanings_and_solution": "authorized_explanation_only",
+        "flow": "one_current_node_only"
+      },
+      "source_codes_preserved": true,
+      "parameters": {
+        "principal": "₱50,000",
+        "rate": "6",
+        "duration": "2 years",
+        "wrong_duration": "One year only"
+      },
+      "worked_solution": [
+        "1% of ₱50,000 is ₱500.",
+        "6% for one year is ₱3,000.",
+        "Full years contribute ₱6,000.",
+        "Interest alone: ₱6,000. Do not add the loan amount.",
+        "Check: ₱50,000 × 6/100 × (2 + 0/12) = ₱6,000."
+      ],
+      "mental_method": "Find 1%, multiply by the rate numeral, then use whole annual charges and half an annual charge for six months.",
+      "prerequisites": [
+        "percent-as-hundredths",
+        "annual-rate-units",
+        "year-as-12-months",
+        "principal-versus-interest"
+      ],
+      "local_hypotheses": {
+        "NUM-PARTIAL": "duration-omitted-or-stopped-early",
+        "NUM-UNIT": "months-as-decimal-digits",
+        "NUM-EXTRA-STEP": "interest-versus-repayment",
+        "NUM-DECIMAL": "rate-scale-possible"
+      },
+      "transfer": {
+        "full_target_distinct_family_id": null,
+        "same_family_practice_candidates": [
+          "CIVIO-NUM-WP-PCT-CHANGE-000013"
+        ],
+        "related_component_candidate": "CIVIO-NUM-WP-PCT-CHANGE-000121",
+        "component_limit": "Sale-price application checks percentage amount and target quantity; it does not test annual rate or duration.",
+        "approved_for_transfer": false
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000003",
+      "source_file": "docs/batches/batch-001.json",
+      "source_question_hash": "5d59cb3fa95312bb4722ddb18bf41fc7602bf615441dea8e5af9a4af2251bda0",
+      "source_record_sha256": "7a844b529b0e76180a7e6c7ebe5a542200efb5c92844f29422f204a630307e40",
+      "status": "draft",
+      "base_binding_sha256": "9d60b01c700d7da7bd723015469878e8e51d836d5651276a430542d9d051fd31",
+      "review": {
+        "human_reviewer_1": null,
+        "human_reviewer_2": null,
+        "adjudication": null
+      },
+      "family": "two-share-total",
+      "visibility": {
+        "meanings_and_solution": "authorized_explanation_only",
+        "flow": "one_current_node_only"
+      },
+      "source_codes_preserved": true,
+      "parameters": {
+        "total": "₱18,000",
+        "first_parts": "4",
+        "second_parts": "5",
+        "sum_parts": "9"
+      },
+      "worked_solution": [
+        "The whole fund has 4 + 5 = 9 equal parts.",
+        "One part is ₱18,000 ÷ 9 = ₱2,000.",
+        "The second recipient gets 5 × ₱2,000 = ₱10,000.",
+        "Check: the first share is ₱8,000; both add to ₱18,000, with ratio 4:5."
+      ],
+      "mental_method": "Find one equal part first. Keep the requested recipient’s name attached to its ratio number; check both shares reconstruct the fund.",
+      "prerequisites": [
+        "whole-versus-part",
+        "ordered-ratio-meaning",
+        "division",
+        "multiplication"
+      ],
+      "local_hypotheses": {
+        "NUM-PARTIAL": "one-part-versus-share",
+        "NUM-WRONG-BASE": "target-only-denominator",
+        "NUM-OTHER-SHARE": "other-recipient"
+      },
+      "transfer": {
+        "full_target_distinct_family_id": null,
+        "same_family_practice_candidates": [
+          "CIVIO-NUM-WP-RATIO-000021"
+        ],
+        "related_component_candidate": null,
+        "component_limit": "The approved ratio family repeats second-share-from-total. Combined work-rate items add rate/fraction prerequisites and are not automatic transfer for this beginner skill.",
+        "approved_for_transfer": false
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000022",
+      "source_file": "docs/batches/batch-002.json",
+      "source_question_hash": "5ee6eb2ee34bbeb407ead4a9c0e9ac93041489ca4152ccf3e52e3c60a16a6b51",
+      "source_record_sha256": "f3fdf2ac07b4e010ddfb6b69b73cfebf4b262c972b194747d149400e21ef0532",
+      "status": "draft",
+      "base_binding_sha256": "88f9c47f395611b9850ca64813b0b043451d11728df077aeea413a27c1343df6",
+      "review": {
+        "human_reviewer_1": null,
+        "human_reviewer_2": null,
+        "adjudication": null
+      },
+      "family": "two-share-total",
+      "visibility": {
+        "meanings_and_solution": "authorized_explanation_only",
+        "flow": "one_current_node_only"
+      },
+      "source_codes_preserved": true,
+      "parameters": {
+        "total": "₱25,000",
+        "first_parts": "3",
+        "second_parts": "7",
+        "sum_parts": "10"
+      },
+      "worked_solution": [
+        "The whole fund has 3 + 7 = 10 equal parts.",
+        "One part is ₱25,000 ÷ 10 = ₱2,500.",
+        "The second recipient gets 7 × ₱2,500 = ₱17,500.",
+        "Check: the first share is ₱7,500; both add to ₱25,000, with ratio 3:7."
+      ],
+      "mental_method": "Find one equal part first. Keep the requested recipient’s name attached to its ratio number; check both shares reconstruct the fund.",
+      "prerequisites": [
+        "whole-versus-part",
+        "ordered-ratio-meaning",
+        "division",
+        "multiplication"
+      ],
+      "local_hypotheses": {
+        "NUM-PARTIAL": "one-part-versus-share",
+        "NUM-WRONG-BASE": "target-only-denominator",
+        "NUM-OTHER-SHARE": "other-recipient"
+      },
+      "transfer": {
+        "full_target_distinct_family_id": null,
+        "same_family_practice_candidates": [
+          "CIVIO-NUM-WP-RATIO-000021"
+        ],
+        "related_component_candidate": null,
+        "component_limit": "The approved ratio family repeats second-share-from-total. Combined work-rate items add rate/fraction prerequisites and are not automatic transfer for this beginner skill.",
+        "approved_for_transfer": false
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000040",
+      "source_file": "docs/batches/batch-002.json",
+      "source_question_hash": "8c97fc78b4c216f20743a754bc619d9580424f5f6f3976935c9596f8dafd278b",
+      "source_record_sha256": "436c3fdb29f7a7a417bd03b8c79e80967bf3ea532e9d26333b9667058853d8a6",
+      "status": "draft",
+      "base_binding_sha256": "c488bf190f392da7f0898c4e2de7d8b563e32969542ed902da1eb03774274af6",
+      "review": {
+        "human_reviewer_1": null,
+        "human_reviewer_2": null,
+        "adjudication": null
+      },
+      "family": "two-share-total",
+      "visibility": {
+        "meanings_and_solution": "authorized_explanation_only",
+        "flow": "one_current_node_only"
+      },
+      "source_codes_preserved": true,
+      "parameters": {
+        "total": "₱21,000",
+        "first_parts": "3",
+        "second_parts": "4",
+        "sum_parts": "7"
+      },
+      "worked_solution": [
+        "The whole fund has 3 + 4 = 7 equal parts.",
+        "One part is ₱21,000 ÷ 7 = ₱3,000.",
+        "The second recipient gets 4 × ₱3,000 = ₱12,000.",
+        "Check: the first share is ₱9,000; both add to ₱21,000, with ratio 3:4."
+      ],
+      "mental_method": "Find one equal part first. Keep the requested recipient’s name attached to its ratio number; check both shares reconstruct the fund.",
+      "prerequisites": [
+        "whole-versus-part",
+        "ordered-ratio-meaning",
+        "division",
+        "multiplication"
+      ],
+      "local_hypotheses": {
+        "NUM-PARTIAL": "one-part-versus-share",
+        "NUM-WRONG-BASE": "target-only-denominator",
+        "NUM-OTHER-SHARE": "other-recipient"
+      },
+      "transfer": {
+        "full_target_distinct_family_id": null,
+        "same_family_practice_candidates": [
+          "CIVIO-NUM-WP-RATIO-000021"
+        ],
+        "related_component_candidate": null,
+        "component_limit": "The approved ratio family repeats second-share-from-total. Combined work-rate items add rate/fraction prerequisites and are not automatic transfer for this beginner skill.",
+        "approved_for_transfer": false
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000125",
+      "source_file": "docs/batches/batch-003.json",
+      "source_question_hash": "4e117e53e84f2040a6112e0950cb06adc2ecf6be9f09958c9760c967b7066cb5",
+      "source_record_sha256": "753b0abc16299df3435ebd5e06aa0316ab70fb499f35c9ee281b021d493f1759",
+      "status": "draft",
+      "base_binding_sha256": "cac9a710344a41d59ecf692fa8bb00e7d907bf59381e2059e25cc0542f0c0aa2",
+      "review": {
+        "human_reviewer_1": null,
+        "human_reviewer_2": null,
+        "adjudication": null
+      },
+      "family": "two-share-total",
+      "visibility": {
+        "meanings_and_solution": "authorized_explanation_only",
+        "flow": "one_current_node_only"
+      },
+      "source_codes_preserved": true,
+      "parameters": {
+        "total": "₱14,000",
+        "first_parts": "2",
+        "second_parts": "5",
+        "sum_parts": "7"
+      },
+      "worked_solution": [
+        "The whole fund has 2 + 5 = 7 equal parts.",
+        "One part is ₱14,000 ÷ 7 = ₱2,000.",
+        "The second recipient gets 5 × ₱2,000 = ₱10,000.",
+        "Check: the first share is ₱4,000; both add to ₱14,000, with ratio 2:5."
+      ],
+      "mental_method": "Find one equal part first. Keep the requested recipient’s name attached to its ratio number; check both shares reconstruct the fund.",
+      "prerequisites": [
+        "whole-versus-part",
+        "ordered-ratio-meaning",
+        "division",
+        "multiplication"
+      ],
+      "local_hypotheses": {
+        "NUM-PARTIAL": "one-part-versus-share",
+        "NUM-WRONG-BASE": "target-only-denominator",
+        "NUM-OTHER-SHARE": "other-recipient"
+      },
+      "transfer": {
+        "full_target_distinct_family_id": null,
+        "same_family_practice_candidates": [
+          "CIVIO-NUM-WP-RATIO-000021"
+        ],
+        "related_component_candidate": null,
+        "component_limit": "The approved ratio family repeats second-share-from-total. Combined work-rate items add rate/fraction prerequisites and are not automatic transfer for this beginner skill.",
+        "approved_for_transfer": false
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000136",
+      "source_file": "docs/batches/batch-003.json",
+      "source_question_hash": "9d57190d949d3b17cf820b315755585385ee04733d19359d3d1be4162b9924fa",
+      "source_record_sha256": "074ffae88e8b72a81415c324c5c486dc9a50bd499aba77a50a442365b589ba14",
+      "status": "draft",
+      "base_binding_sha256": "2e022556f47be7a9de6281986692ace1bd26d580d3dc8b0f5ec416e7ee11ae9f",
+      "review": {
+        "human_reviewer_1": null,
+        "human_reviewer_2": null,
+        "adjudication": null
+      },
+      "family": "two-share-total",
+      "visibility": {
+        "meanings_and_solution": "authorized_explanation_only",
+        "flow": "one_current_node_only"
+      },
+      "source_codes_preserved": true,
+      "parameters": {
+        "total": "₱7,500",
+        "first_parts": "2",
+        "second_parts": "3",
+        "sum_parts": "5"
+      },
+      "worked_solution": [
+        "The whole fund has 2 + 3 = 5 equal parts.",
+        "One part is ₱7,500 ÷ 5 = ₱1,500.",
+        "The second recipient gets 3 × ₱1,500 = ₱4,500.",
+        "Check: the first share is ₱3,000; both add to ₱7,500, with ratio 2:3."
+      ],
+      "mental_method": "Find one equal part first. Keep the requested recipient’s name attached to its ratio number; check both shares reconstruct the fund.",
+      "prerequisites": [
+        "whole-versus-part",
+        "ordered-ratio-meaning",
+        "division",
+        "multiplication"
+      ],
+      "local_hypotheses": {
+        "NUM-PARTIAL": "one-part-versus-share",
+        "NUM-WRONG-BASE": "target-only-denominator",
+        "NUM-OTHER-SHARE": "other-recipient"
+      },
+      "transfer": {
+        "full_target_distinct_family_id": null,
+        "same_family_practice_candidates": [
+          "CIVIO-NUM-WP-RATIO-000021"
+        ],
+        "related_component_candidate": null,
+        "component_limit": "The approved ratio family repeats second-share-from-total. Combined work-rate items add rate/fraction prerequisites and are not automatic transfer for this beginner skill.",
+        "approved_for_transfer": false
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000234",
+      "source_file": "docs/batches/batch-004.json",
+      "source_question_hash": "d513bc6cdb95258f1c41764b0266b4ca7f0d435244f31eb65b12b29e37d0c70f",
+      "source_record_sha256": "2f4091e01d7c8a06c6eb2990ddc5ca68b4e292922d22fbe83193b04c8eed29a8",
+      "status": "draft",
+      "base_binding_sha256": "c67e69a2b7f77596a40bb7b39142e4d628eb48e88912a603ef36aff56883ddb6",
+      "review": {
+        "human_reviewer_1": null,
+        "human_reviewer_2": null,
+        "adjudication": null
+      },
+      "family": "two-share-total",
+      "visibility": {
+        "meanings_and_solution": "authorized_explanation_only",
+        "flow": "one_current_node_only"
+      },
+      "source_codes_preserved": true,
+      "parameters": {
+        "total": "₱12,000",
+        "first_parts": "3",
+        "second_parts": "7",
+        "sum_parts": "10"
+      },
+      "worked_solution": [
+        "The whole fund has 3 + 7 = 10 equal parts.",
+        "One part is ₱12,000 ÷ 10 = ₱1,200.",
+        "The second recipient gets 7 × ₱1,200 = ₱8,400.",
+        "Check: the first share is ₱3,600; both add to ₱12,000, with ratio 3:7."
+      ],
+      "mental_method": "Find one equal part first. Keep the requested recipient’s name attached to its ratio number; check both shares reconstruct the fund.",
+      "prerequisites": [
+        "whole-versus-part",
+        "ordered-ratio-meaning",
+        "division",
+        "multiplication"
+      ],
+      "local_hypotheses": {
+        "NUM-PARTIAL": "one-part-versus-share",
+        "NUM-WRONG-BASE": "target-only-denominator",
+        "NUM-OTHER-SHARE": "other-recipient"
+      },
+      "transfer": {
+        "full_target_distinct_family_id": null,
+        "same_family_practice_candidates": [
+          "CIVIO-NUM-WP-RATIO-000021"
+        ],
+        "related_component_candidate": null,
+        "component_limit": "The approved ratio family repeats second-share-from-total. Combined work-rate items add rate/fraction prerequisites and are not automatic transfer for this beginner skill.",
+        "approved_for_transfer": false
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000320",
+      "source_file": "docs/batches/batch-005.json",
+      "source_question_hash": "a4b26c3961e6d3ebfada265ce82c798cd7ad9db89e235375db001f8225d73681",
+      "source_record_sha256": "1d24801c5a3ac01aa8eb621a9aa10ec7a4c56331b9a9189c6f03dbb4886f1d05",
+      "status": "draft",
+      "base_binding_sha256": "fdeeda00f3df354d0ba7b1630c676db2ec56a68007f012b792005b61bf590add",
+      "review": {
+        "human_reviewer_1": null,
+        "human_reviewer_2": null,
+        "adjudication": null
+      },
+      "family": "two-share-total",
+      "visibility": {
+        "meanings_and_solution": "authorized_explanation_only",
+        "flow": "one_current_node_only"
+      },
+      "source_codes_preserved": true,
+      "parameters": {
+        "total": "₱2,500",
+        "first_parts": "2",
+        "second_parts": "3",
+        "sum_parts": "5"
+      },
+      "worked_solution": [
+        "The whole fund has 2 + 3 = 5 equal parts.",
+        "One part is ₱2,500 ÷ 5 = ₱500.",
+        "The second recipient gets 3 × ₱500 = ₱1,500.",
+        "Check: the first share is ₱1,000; both add to ₱2,500, with ratio 2:3."
+      ],
+      "mental_method": "Find one equal part first. Keep the requested recipient’s name attached to its ratio number; check both shares reconstruct the fund.",
+      "prerequisites": [
+        "whole-versus-part",
+        "ordered-ratio-meaning",
+        "division",
+        "multiplication"
+      ],
+      "local_hypotheses": {
+        "NUM-PARTIAL": "one-part-versus-share",
+        "NUM-WRONG-BASE": "target-only-denominator",
+        "NUM-OTHER-SHARE": "other-recipient"
+      },
+      "transfer": {
+        "full_target_distinct_family_id": null,
+        "same_family_practice_candidates": [
+          "CIVIO-NUM-WP-RATIO-000021"
+        ],
+        "related_component_candidate": null,
+        "component_limit": "The approved ratio family repeats second-share-from-total. Combined work-rate items add rate/fraction prerequisites and are not automatic transfer for this beginner skill.",
+        "approved_for_transfer": false
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000327",
+      "source_file": "docs/batches/batch-005.json",
+      "source_question_hash": "f3fff16426f3632425a85893c7227be4d6696e0fbddbd8e7ffb63acb47e903e8",
+      "source_record_sha256": "cb232c4e03eceeb42d9c5a8592fd3a45fbe2137b2d3dce2f7f5d96c687e4b38e",
+      "status": "draft",
+      "base_binding_sha256": "526ad1611f46f8a77ced5049d7e4fb9abbf0f40abea51ab4905d5240594457fb",
+      "review": {
+        "human_reviewer_1": null,
+        "human_reviewer_2": null,
+        "adjudication": null
+      },
+      "family": "two-share-total",
+      "visibility": {
+        "meanings_and_solution": "authorized_explanation_only",
+        "flow": "one_current_node_only"
+      },
+      "source_codes_preserved": true,
+      "parameters": {
+        "total": "₱9,000",
+        "first_parts": "4",
+        "second_parts": "5",
+        "sum_parts": "9"
+      },
+      "worked_solution": [
+        "The whole fund has 4 + 5 = 9 equal parts.",
+        "One part is ₱9,000 ÷ 9 = ₱1,000.",
+        "The second recipient gets 5 × ₱1,000 = ₱5,000.",
+        "Check: the first share is ₱4,000; both add to ₱9,000, with ratio 4:5."
+      ],
+      "mental_method": "Find one equal part first. Keep the requested recipient’s name attached to its ratio number; check both shares reconstruct the fund.",
+      "prerequisites": [
+        "whole-versus-part",
+        "ordered-ratio-meaning",
+        "division",
+        "multiplication"
+      ],
+      "local_hypotheses": {
+        "NUM-PARTIAL": "one-part-versus-share",
+        "NUM-WRONG-BASE": "target-only-denominator",
+        "NUM-OTHER-SHARE": "other-recipient"
+      },
+      "transfer": {
+        "full_target_distinct_family_id": null,
+        "same_family_practice_candidates": [
+          "CIVIO-NUM-WP-RATIO-000021"
+        ],
+        "related_component_candidate": null,
+        "component_limit": "The approved ratio family repeats second-share-from-total. Combined work-rate items add rate/fraction prerequisites and are not automatic transfer for this beginner skill.",
+        "approved_for_transfer": false
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000426",
+      "source_file": "docs/batches/batch-006.json",
+      "source_question_hash": "cc692d88da345100c946f6a6b3d24398a9e6151b29e63bb592bca523373a8342",
+      "source_record_sha256": "1ed473c8b243a60fa01b85b89453176ef3822b4932d37840e1e6005811e5f068",
+      "status": "draft",
+      "base_binding_sha256": "ca3afcc9bd60fb8bc00a485623123071025fef62e35f8416dd3027833d540deb",
+      "review": {
+        "human_reviewer_1": null,
+        "human_reviewer_2": null,
+        "adjudication": null
+      },
+      "family": "two-share-total",
+      "visibility": {
+        "meanings_and_solution": "authorized_explanation_only",
+        "flow": "one_current_node_only"
+      },
+      "source_codes_preserved": true,
+      "parameters": {
+        "total": "₱27,000",
+        "first_parts": "4",
+        "second_parts": "5",
+        "sum_parts": "9"
+      },
+      "worked_solution": [
+        "The whole fund has 4 + 5 = 9 equal parts.",
+        "One part is ₱27,000 ÷ 9 = ₱3,000.",
+        "The second recipient gets 5 × ₱3,000 = ₱15,000.",
+        "Check: the first share is ₱12,000; both add to ₱27,000, with ratio 4:5."
+      ],
+      "mental_method": "Find one equal part first. Keep the requested recipient’s name attached to its ratio number; check both shares reconstruct the fund.",
+      "prerequisites": [
+        "whole-versus-part",
+        "ordered-ratio-meaning",
+        "division",
+        "multiplication"
+      ],
+      "local_hypotheses": {
+        "NUM-PARTIAL": "one-part-versus-share",
+        "NUM-WRONG-BASE": "target-only-denominator",
+        "NUM-OTHER-SHARE": "other-recipient"
+      },
+      "transfer": {
+        "full_target_distinct_family_id": null,
+        "same_family_practice_candidates": [
+          "CIVIO-NUM-WP-RATIO-000021"
+        ],
+        "related_component_candidate": null,
+        "component_limit": "The approved ratio family repeats second-share-from-total. Combined work-rate items add rate/fraction prerequisites and are not automatic transfer for this beginner skill.",
+        "approved_for_transfer": false
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000432",
+      "source_file": "docs/batches/batch-006.json",
+      "source_question_hash": "8c43afb0d4ecc4e52e4c83aeb8bbb7dc0c3247d9c91c28d66fef046c1832ee28",
+      "source_record_sha256": "4d63fe34710ea50a28d34ecffe80b92765692c0a6c973842ca56f8a385e605ae",
+      "status": "draft",
+      "base_binding_sha256": "ff01ee8906cae3f71e765fe4785e7962be0409d6e1dfd5c9b89efa3dd4b31592",
+      "review": {
+        "human_reviewer_1": null,
+        "human_reviewer_2": null,
+        "adjudication": null
+      },
+      "family": "two-share-total",
+      "visibility": {
+        "meanings_and_solution": "authorized_explanation_only",
+        "flow": "one_current_node_only"
+      },
+      "source_codes_preserved": true,
+      "parameters": {
+        "total": "₱14,400",
+        "first_parts": "5",
+        "second_parts": "7",
+        "sum_parts": "12"
+      },
+      "worked_solution": [
+        "The whole fund has 5 + 7 = 12 equal parts.",
+        "One part is ₱14,400 ÷ 12 = ₱1,200.",
+        "The second recipient gets 7 × ₱1,200 = ₱8,400.",
+        "Check: the first share is ₱6,000; both add to ₱14,400, with ratio 5:7."
+      ],
+      "mental_method": "Find one equal part first. Keep the requested recipient’s name attached to its ratio number; check both shares reconstruct the fund.",
+      "prerequisites": [
+        "whole-versus-part",
+        "ordered-ratio-meaning",
+        "division",
+        "multiplication"
+      ],
+      "local_hypotheses": {
+        "NUM-PARTIAL": "one-part-versus-share",
+        "NUM-WRONG-BASE": "target-only-denominator",
+        "NUM-OTHER-SHARE": "other-recipient"
+      },
+      "transfer": {
+        "full_target_distinct_family_id": null,
+        "same_family_practice_candidates": [
+          "CIVIO-NUM-WP-RATIO-000021"
+        ],
+        "related_component_candidate": null,
+        "component_limit": "The approved ratio family repeats second-share-from-total. Combined work-rate items add rate/fraction prerequisites and are not automatic transfer for this beginner skill.",
+        "approved_for_transfer": false
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000434",
+      "source_file": "docs/batches/batch-006.json",
+      "source_question_hash": "6db221026bd0f3e8e0711d117a7a55a89c26e31839c2c1c75ef05caeb3a1b247",
+      "source_record_sha256": "aee354167010626ff0fc7767348d973c15d8ea09ad21b130b15902e23f2e1cad",
+      "status": "draft",
+      "base_binding_sha256": "ed05fa227e0e5fc26270f3bcf18902f0320691f8c8f62b1051d84c191e0b4acc",
+      "review": {
+        "human_reviewer_1": null,
+        "human_reviewer_2": null,
+        "adjudication": null
+      },
+      "family": "two-share-total",
+      "visibility": {
+        "meanings_and_solution": "authorized_explanation_only",
+        "flow": "one_current_node_only"
+      },
+      "source_codes_preserved": true,
+      "parameters": {
+        "total": "₱12,500",
+        "first_parts": "2",
+        "second_parts": "3",
+        "sum_parts": "5"
+      },
+      "worked_solution": [
+        "The whole fund has 2 + 3 = 5 equal parts.",
+        "One part is ₱12,500 ÷ 5 = ₱2,500.",
+        "The second recipient gets 3 × ₱2,500 = ₱7,500.",
+        "Check: the first share is ₱5,000; both add to ₱12,500, with ratio 2:3."
+      ],
+      "mental_method": "Find one equal part first. Keep the requested recipient’s name attached to its ratio number; check both shares reconstruct the fund.",
+      "prerequisites": [
+        "whole-versus-part",
+        "ordered-ratio-meaning",
+        "division",
+        "multiplication"
+      ],
+      "local_hypotheses": {
+        "NUM-PARTIAL": "one-part-versus-share",
+        "NUM-WRONG-BASE": "target-only-denominator",
+        "NUM-OTHER-SHARE": "other-recipient"
+      },
+      "transfer": {
+        "full_target_distinct_family_id": null,
+        "same_family_practice_candidates": [
+          "CIVIO-NUM-WP-RATIO-000021"
+        ],
+        "related_component_candidate": null,
+        "component_limit": "The approved ratio family repeats second-share-from-total. Combined work-rate items add rate/fraction prerequisites and are not automatic transfer for this beginner skill.",
+        "approved_for_transfer": false
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000516",
+      "source_file": "docs/batches/batch-007.json",
+      "source_question_hash": "8512e2a379dbaa8042e71aeb5f60f26338f117f5717d4a06f403351368b617c1",
+      "source_record_sha256": "e8102cfcb43db37af5926b17a19544ce8b40d02145c82227bbacf2c28d9c0b46",
+      "status": "draft",
+      "base_binding_sha256": "057c169d0e5c48e0c705d2b6b84b3e80dc5576219aaf972f7e4988d8b6f719c3",
+      "review": {
+        "human_reviewer_1": null,
+        "human_reviewer_2": null,
+        "adjudication": null
+      },
+      "family": "two-share-total",
+      "visibility": {
+        "meanings_and_solution": "authorized_explanation_only",
+        "flow": "one_current_node_only"
+      },
+      "source_codes_preserved": true,
+      "parameters": {
+        "total": "₱25,000",
+        "first_parts": "3",
+        "second_parts": "7",
+        "sum_parts": "10"
+      },
+      "worked_solution": [
+        "The whole fund has 3 + 7 = 10 equal parts.",
+        "One part is ₱25,000 ÷ 10 = ₱2,500.",
+        "The second recipient gets 7 × ₱2,500 = ₱17,500.",
+        "Check: the first share is ₱7,500; both add to ₱25,000, with ratio 3:7."
+      ],
+      "mental_method": "Find one equal part first. Keep the requested recipient’s name attached to its ratio number; check both shares reconstruct the fund.",
+      "prerequisites": [
+        "whole-versus-part",
+        "ordered-ratio-meaning",
+        "division",
+        "multiplication"
+      ],
+      "local_hypotheses": {
+        "NUM-PARTIAL": "one-part-versus-share",
+        "NUM-WRONG-BASE": "target-only-denominator",
+        "NUM-OTHER-SHARE": "other-recipient"
+      },
+      "transfer": {
+        "full_target_distinct_family_id": null,
+        "same_family_practice_candidates": [
+          "CIVIO-NUM-WP-RATIO-000021"
+        ],
+        "related_component_candidate": null,
+        "component_limit": "The approved ratio family repeats second-share-from-total. Combined work-rate items add rate/fraction prerequisites and are not automatic transfer for this beginner skill.",
+        "approved_for_transfer": false
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000519",
+      "source_file": "docs/batches/batch-007.json",
+      "source_question_hash": "59bdebd64d88894c74936109ac6d28c40ae022eca1d6dec777d0c5166d84310d",
+      "source_record_sha256": "edcc43d3b5a3fa70fbbfa20a3e90539a433c3be614c3ec79cee4484b2b9a32d5",
+      "status": "draft",
+      "base_binding_sha256": "4ac6c99a6a52d2d18113feb8a165eb41b86c381ba54a3e33e467589fd705dc15",
+      "review": {
+        "human_reviewer_1": null,
+        "human_reviewer_2": null,
+        "adjudication": null
+      },
+      "family": "two-share-total",
+      "visibility": {
+        "meanings_and_solution": "authorized_explanation_only",
+        "flow": "one_current_node_only"
+      },
+      "source_codes_preserved": true,
+      "parameters": {
+        "total": "₱10,500",
+        "first_parts": "3",
+        "second_parts": "4",
+        "sum_parts": "7"
+      },
+      "worked_solution": [
+        "The whole fund has 3 + 4 = 7 equal parts.",
+        "One part is ₱10,500 ÷ 7 = ₱1,500.",
+        "The second recipient gets 4 × ₱1,500 = ₱6,000.",
+        "Check: the first share is ₱4,500; both add to ₱10,500, with ratio 3:4."
+      ],
+      "mental_method": "Find one equal part first. Keep the requested recipient’s name attached to its ratio number; check both shares reconstruct the fund.",
+      "prerequisites": [
+        "whole-versus-part",
+        "ordered-ratio-meaning",
+        "division",
+        "multiplication"
+      ],
+      "local_hypotheses": {
+        "NUM-PARTIAL": "one-part-versus-share",
+        "NUM-WRONG-BASE": "target-only-denominator",
+        "NUM-OTHER-SHARE": "other-recipient"
+      },
+      "transfer": {
+        "full_target_distinct_family_id": null,
+        "same_family_practice_candidates": [
+          "CIVIO-NUM-WP-RATIO-000021"
+        ],
+        "related_component_candidate": null,
+        "component_limit": "The approved ratio family repeats second-share-from-total. Combined work-rate items add rate/fraction prerequisites and are not automatic transfer for this beginner skill.",
+        "approved_for_transfer": false
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000625",
+      "source_file": "docs/batches/batch-008.json",
+      "source_question_hash": "7c9e6386f02b7ea32c37ba42d2b97402638a2f7588fbe488d0defdc4d5ec5a0a",
+      "source_record_sha256": "867e52db825c75455cd7dd09b22dee03b3e50d8bc5def45dfe3b7ced49992622",
+      "status": "draft",
+      "base_binding_sha256": "12d2e8d2a608d1350c46eb41ce2b0d221e65a00a8cf6104fa1c2da6d14c1a14e",
+      "review": {
+        "human_reviewer_1": null,
+        "human_reviewer_2": null,
+        "adjudication": null
+      },
+      "family": "two-share-total",
+      "visibility": {
+        "meanings_and_solution": "authorized_explanation_only",
+        "flow": "one_current_node_only"
+      },
+      "source_codes_preserved": true,
+      "parameters": {
+        "total": "₱9,600",
+        "first_parts": "3",
+        "second_parts": "5",
+        "sum_parts": "8"
+      },
+      "worked_solution": [
+        "The whole fund has 3 + 5 = 8 equal parts.",
+        "One part is ₱9,600 ÷ 8 = ₱1,200.",
+        "The second recipient gets 5 × ₱1,200 = ₱6,000.",
+        "Check: the first share is ₱3,600; both add to ₱9,600, with ratio 3:5."
+      ],
+      "mental_method": "Find one equal part first. Keep the requested recipient’s name attached to its ratio number; check both shares reconstruct the fund.",
+      "prerequisites": [
+        "whole-versus-part",
+        "ordered-ratio-meaning",
+        "division",
+        "multiplication"
+      ],
+      "local_hypotheses": {
+        "NUM-PARTIAL": "one-part-versus-share",
+        "NUM-WRONG-BASE": "target-only-denominator",
+        "NUM-OTHER-SHARE": "other-recipient"
+      },
+      "transfer": {
+        "full_target_distinct_family_id": null,
+        "same_family_practice_candidates": [
+          "CIVIO-NUM-WP-RATIO-000021"
+        ],
+        "related_component_candidate": null,
+        "component_limit": "The approved ratio family repeats second-share-from-total. Combined work-rate items add rate/fraction prerequisites and are not automatic transfer for this beginner skill.",
+        "approved_for_transfer": false
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000629",
+      "source_file": "docs/batches/batch-008.json",
+      "source_question_hash": "b578eed97e70970185104a0f15d1a5004d0ff20bff4eff6f8b7e46dfedb4a26c",
+      "source_record_sha256": "f55807a5979940cea907dac41d6ce2382daeea10f260b98a10489a31c0b0f845",
+      "status": "draft",
+      "base_binding_sha256": "72350343c39d30c7d0d2ab4dd0587e9c1ef68f8d4283aca416bc6b0644ed3230",
+      "review": {
+        "human_reviewer_1": null,
+        "human_reviewer_2": null,
+        "adjudication": null
+      },
+      "family": "two-share-total",
+      "visibility": {
+        "meanings_and_solution": "authorized_explanation_only",
+        "flow": "one_current_node_only"
+      },
+      "source_codes_preserved": true,
+      "parameters": {
+        "total": "₱25,000",
+        "first_parts": "3",
+        "second_parts": "7",
+        "sum_parts": "10"
+      },
+      "worked_solution": [
+        "The whole fund has 3 + 7 = 10 equal parts.",
+        "One part is ₱25,000 ÷ 10 = ₱2,500.",
+        "The second recipient gets 7 × ₱2,500 = ₱17,500.",
+        "Check: the first share is ₱7,500; both add to ₱25,000, with ratio 3:7."
+      ],
+      "mental_method": "Find one equal part first. Keep the requested recipient’s name attached to its ratio number; check both shares reconstruct the fund.",
+      "prerequisites": [
+        "whole-versus-part",
+        "ordered-ratio-meaning",
+        "division",
+        "multiplication"
+      ],
+      "local_hypotheses": {
+        "NUM-PARTIAL": "one-part-versus-share",
+        "NUM-WRONG-BASE": "target-only-denominator",
+        "NUM-OTHER-SHARE": "other-recipient"
+      },
+      "transfer": {
+        "full_target_distinct_family_id": null,
+        "same_family_practice_candidates": [
+          "CIVIO-NUM-WP-RATIO-000021"
+        ],
+        "related_component_candidate": null,
+        "component_limit": "The approved ratio family repeats second-share-from-total. Combined work-rate items add rate/fraction prerequisites and are not automatic transfer for this beginner skill.",
+        "approved_for_transfer": false
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000637",
+      "source_file": "docs/batches/batch-008.json",
+      "source_question_hash": "6a896b204edc962fd197c6c773ec58b1b2245980d43e7f6ba7fe2313dca71788",
+      "source_record_sha256": "a7f7d9bfacd0972ed2cd3321219ff0acc3de033423adf9b5be451ba7ef07bddf",
+      "status": "draft",
+      "base_binding_sha256": "4084fd8398232a208143c57241b1500e61d8c913a8fa55b995e7e8af7aa43c36",
+      "review": {
+        "human_reviewer_1": null,
+        "human_reviewer_2": null,
+        "adjudication": null
+      },
+      "family": "two-share-total",
+      "visibility": {
+        "meanings_and_solution": "authorized_explanation_only",
+        "flow": "one_current_node_only"
+      },
+      "source_codes_preserved": true,
+      "parameters": {
+        "total": "₱14,400",
+        "first_parts": "5",
+        "second_parts": "7",
+        "sum_parts": "12"
+      },
+      "worked_solution": [
+        "The whole fund has 5 + 7 = 12 equal parts.",
+        "One part is ₱14,400 ÷ 12 = ₱1,200.",
+        "The second recipient gets 7 × ₱1,200 = ₱8,400.",
+        "Check: the first share is ₱6,000; both add to ₱14,400, with ratio 5:7."
+      ],
+      "mental_method": "Find one equal part first. Keep the requested recipient’s name attached to its ratio number; check both shares reconstruct the fund.",
+      "prerequisites": [
+        "whole-versus-part",
+        "ordered-ratio-meaning",
+        "division",
+        "multiplication"
+      ],
+      "local_hypotheses": {
+        "NUM-PARTIAL": "one-part-versus-share",
+        "NUM-WRONG-BASE": "target-only-denominator",
+        "NUM-OTHER-SHARE": "other-recipient"
+      },
+      "transfer": {
+        "full_target_distinct_family_id": null,
+        "same_family_practice_candidates": [
+          "CIVIO-NUM-WP-RATIO-000021"
+        ],
+        "related_component_candidate": null,
+        "component_limit": "The approved ratio family repeats second-share-from-total. Combined work-rate items add rate/fraction prerequisites and are not automatic transfer for this beginner skill.",
+        "approved_for_transfer": false
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000740",
+      "source_file": "docs/batches/batch-009.json",
+      "source_question_hash": "5cb6a5a80a33acdaf644273f2326f7bc83228b3e41da071fe7fdb90ebcb1c3e5",
+      "source_record_sha256": "4088183f181cc8e6b517361ee8e0bfe66699b73d7de4f6132486c2004a254988",
+      "status": "draft",
+      "base_binding_sha256": "43c556aa8854b38a0933cef0f0393a0373437e90172451ad3681b9ff75b647f5",
+      "review": {
+        "human_reviewer_1": null,
+        "human_reviewer_2": null,
+        "adjudication": null
+      },
+      "family": "two-share-total",
+      "visibility": {
+        "meanings_and_solution": "authorized_explanation_only",
+        "flow": "one_current_node_only"
+      },
+      "source_codes_preserved": true,
+      "parameters": {
+        "total": "₱3,500",
+        "first_parts": "3",
+        "second_parts": "4",
+        "sum_parts": "7"
+      },
+      "worked_solution": [
+        "The whole fund has 3 + 4 = 7 equal parts.",
+        "One part is ₱3,500 ÷ 7 = ₱500.",
+        "The second recipient gets 4 × ₱500 = ₱2,000.",
+        "Check: the first share is ₱1,500; both add to ₱3,500, with ratio 3:4."
+      ],
+      "mental_method": "Find one equal part first. Keep the requested recipient’s name attached to its ratio number; check both shares reconstruct the fund.",
+      "prerequisites": [
+        "whole-versus-part",
+        "ordered-ratio-meaning",
+        "division",
+        "multiplication"
+      ],
+      "local_hypotheses": {
+        "NUM-PARTIAL": "one-part-versus-share",
+        "NUM-WRONG-BASE": "target-only-denominator",
+        "NUM-OTHER-SHARE": "other-recipient"
+      },
+      "transfer": {
+        "full_target_distinct_family_id": null,
+        "same_family_practice_candidates": [
+          "CIVIO-NUM-WP-RATIO-000021"
+        ],
+        "related_component_candidate": null,
+        "component_limit": "The approved ratio family repeats second-share-from-total. Combined work-rate items add rate/fraction prerequisites and are not automatic transfer for this beginner skill.",
+        "approved_for_transfer": false
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000813",
+      "source_file": "docs/batches/batch-010.json",
+      "source_question_hash": "b04f8cd70bf40675d6565f934d8d2ac3f16fbf0004c732a75c0b2958e4d76732",
+      "source_record_sha256": "9e4b8e66978e82b271cc9cefb0aa9917178db146f329b30381aac0457f4d5172",
+      "status": "draft",
+      "base_binding_sha256": "405de5d4026641b103dce4f1323e28cc546aaf39cdcdde4ea4b04ec12a4e0a37",
+      "review": {
+        "human_reviewer_1": null,
+        "human_reviewer_2": null,
+        "adjudication": null
+      },
+      "family": "two-share-total",
+      "visibility": {
+        "meanings_and_solution": "authorized_explanation_only",
+        "flow": "one_current_node_only"
+      },
+      "source_codes_preserved": true,
+      "parameters": {
+        "total": "₱9,600",
+        "first_parts": "3",
+        "second_parts": "5",
+        "sum_parts": "8"
+      },
+      "worked_solution": [
+        "The whole fund has 3 + 5 = 8 equal parts.",
+        "One part is ₱9,600 ÷ 8 = ₱1,200.",
+        "The second recipient gets 5 × ₱1,200 = ₱6,000.",
+        "Check: the first share is ₱3,600; both add to ₱9,600, with ratio 3:5."
+      ],
+      "mental_method": "Find one equal part first. Keep the requested recipient’s name attached to its ratio number; check both shares reconstruct the fund.",
+      "prerequisites": [
+        "whole-versus-part",
+        "ordered-ratio-meaning",
+        "division",
+        "multiplication"
+      ],
+      "local_hypotheses": {
+        "NUM-PARTIAL": "one-part-versus-share",
+        "NUM-WRONG-BASE": "target-only-denominator",
+        "NUM-OTHER-SHARE": "other-recipient"
+      },
+      "transfer": {
+        "full_target_distinct_family_id": null,
+        "same_family_practice_candidates": [
+          "CIVIO-NUM-WP-RATIO-000021"
+        ],
+        "related_component_candidate": null,
+        "component_limit": "The approved ratio family repeats second-share-from-total. Combined work-rate items add rate/fraction prerequisites and are not automatic transfer for this beginner skill.",
+        "approved_for_transfer": false
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000821",
+      "source_file": "docs/batches/batch-010.json",
+      "source_question_hash": "0bcdabd1ed19124358d1e02f54c3c1e89b8b02a46b913a7994da15732b865379",
+      "source_record_sha256": "0a9ccb9e413c135b3657022bec8c5d03371ce04f9a24bdd97aebdcaefb5bf470",
+      "status": "draft",
+      "base_binding_sha256": "cefe19564f529f543b0ab41cc606049fbddd2f6e2bf3ca6173ed671467047df5",
+      "review": {
+        "human_reviewer_1": null,
+        "human_reviewer_2": null,
+        "adjudication": null
+      },
+      "family": "two-share-total",
+      "visibility": {
+        "meanings_and_solution": "authorized_explanation_only",
+        "flow": "one_current_node_only"
+      },
+      "source_codes_preserved": true,
+      "parameters": {
+        "total": "₱22,500",
+        "first_parts": "4",
+        "second_parts": "5",
+        "sum_parts": "9"
+      },
+      "worked_solution": [
+        "The whole fund has 4 + 5 = 9 equal parts.",
+        "One part is ₱22,500 ÷ 9 = ₱2,500.",
+        "The second recipient gets 5 × ₱2,500 = ₱12,500.",
+        "Check: the first share is ₱10,000; both add to ₱22,500, with ratio 4:5."
+      ],
+      "mental_method": "Find one equal part first. Keep the requested recipient’s name attached to its ratio number; check both shares reconstruct the fund.",
+      "prerequisites": [
+        "whole-versus-part",
+        "ordered-ratio-meaning",
+        "division",
+        "multiplication"
+      ],
+      "local_hypotheses": {
+        "NUM-PARTIAL": "one-part-versus-share",
+        "NUM-WRONG-BASE": "target-only-denominator",
+        "NUM-OTHER-SHARE": "other-recipient"
+      },
+      "transfer": {
+        "full_target_distinct_family_id": null,
+        "same_family_practice_candidates": [
+          "CIVIO-NUM-WP-RATIO-000021"
+        ],
+        "related_component_candidate": null,
+        "component_limit": "The approved ratio family repeats second-share-from-total. Combined work-rate items add rate/fraction prerequisites and are not automatic transfer for this beginner skill.",
+        "approved_for_transfer": false
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000933",
+      "source_file": "docs/batches/batch-011.json",
+      "source_question_hash": "d8f134de70db2c78f776004216a1ffb53ccfdf709438966ca6d6bf00b3595ea6",
+      "source_record_sha256": "d666e56edf3368fa769aa571aa6ee14495e0fd8a5a4c08def8185743bc25b433",
+      "status": "draft",
+      "base_binding_sha256": "79852684c58304d83b286b7c73dac5a24c648606db54e8d171e2e7e1656dae19",
+      "review": {
+        "human_reviewer_1": null,
+        "human_reviewer_2": null,
+        "adjudication": null
+      },
+      "family": "two-share-total",
+      "visibility": {
+        "meanings_and_solution": "authorized_explanation_only",
+        "flow": "one_current_node_only"
+      },
+      "source_codes_preserved": true,
+      "parameters": {
+        "total": "₱30,000",
+        "first_parts": "3",
+        "second_parts": "7",
+        "sum_parts": "10"
+      },
+      "worked_solution": [
+        "The whole fund has 3 + 7 = 10 equal parts.",
+        "One part is ₱30,000 ÷ 10 = ₱3,000.",
+        "The second recipient gets 7 × ₱3,000 = ₱21,000.",
+        "Check: the first share is ₱9,000; both add to ₱30,000, with ratio 3:7."
+      ],
+      "mental_method": "Find one equal part first. Keep the requested recipient’s name attached to its ratio number; check both shares reconstruct the fund.",
+      "prerequisites": [
+        "whole-versus-part",
+        "ordered-ratio-meaning",
+        "division",
+        "multiplication"
+      ],
+      "local_hypotheses": {
+        "NUM-PARTIAL": "one-part-versus-share",
+        "NUM-WRONG-BASE": "target-only-denominator",
+        "NUM-OTHER-SHARE": "other-recipient"
+      },
+      "transfer": {
+        "full_target_distinct_family_id": null,
+        "same_family_practice_candidates": [
+          "CIVIO-NUM-WP-RATIO-000021"
+        ],
+        "related_component_candidate": null,
+        "component_limit": "The approved ratio family repeats second-share-from-total. Combined work-rate items add rate/fraction prerequisites and are not automatic transfer for this beginner skill.",
+        "approved_for_transfer": false
+      }
+    }
+  ],
+  "independent_ai_review": null,
+  "human_adjudication": null,
+  "learner_evidence": null
+}

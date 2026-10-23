@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "candidate_queue": 2100,
+  "work_groups": 73,
+  "warm_cache_hits": 2100,
+  "single_source_change_recomputed": 1,
+  "recipe_change_scope": "only dependent group",
+  "overlay_keys_checked": 25,
+  "overlay_distractor_amounts_checked": 75,
+  "all_overlay_flows": "references, reachability, acyclic paths, rendered parameters and budgets passed",
+  "semantic_split_groups": 11,
+  "runtime_approvals": 0,
+  "limits": [
+    "Structural checks are not semantic or human approval.",
+    "Only 38 supported bank stems have fresh automated math checks in the bulk ledger.",
+    "25 overlay calculations separately checked; 5 overlap those 38, so do not add counts blindly.",
+    "Interest whole-year bindings still contain a month-specific response; editorial pruning pending.",
+    "Luna registry is a family draft scaffold, not 2100 completed tutoring bindings."
+  ]
+}

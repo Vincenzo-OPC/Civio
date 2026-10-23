@@ -1,0 +1,24 @@
+{
+  "candidate_records_accounted_for": 2100,
+  "archetype_labels": 70,
+  "work_groups_not_verified_semantic_families": 73,
+  "by_content_support": {
+    "family_draft_authored_needs_binding_review": 2013,
+    "refined_draft_separate_ai_pass": 15,
+    "author_draft_pending_flow_qa": 25,
+    "family_recipe_candidate_needs_binding_review": 27,
+    "original_draft_needs_refinement": 20
+  },
+  "bank_statuses": {
+    "approved": 1377,
+    "draft": 685,
+    "reviewed": 38
+  },
+  "mechanical_problem_records": 0,
+  "semantic_split_records": 362,
+  "exact_math_checks": 38,
+  "unmapped_code_records": 1565,
+  "all_tutoring_authoring_complete": false,
+  "runtime_approved_records": 0,
+  "next_work": "Process family_jobs by priority, splitting mixed methods; author once per method, verify each binding, review exceptions, checkpoint and continue without asking after each small slice."
+}
