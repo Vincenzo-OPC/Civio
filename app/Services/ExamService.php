@@ -44,7 +44,6 @@ class ExamService
      */
     public function getExamSessionData(ExamSessionQueryData $query, ?int $userId, bool $lite = false): array
     {
-        $activeQuestions = $this->questionRepository->getActivePool();
         $savedAttempt = null;
         $retakeSource = null;
         $attempt = null;
@@ -72,13 +71,14 @@ class ExamService
         // Lite L1: never ship the whole bank. Full mocks are picked on the
         // server (POST /exams/sessions); this page only carries the items a
         // scorecard, retake or drill actually needs.
+        // The plain setup page needs no items, so it skips the bank query.
         if ($attempt !== null) {
             $wanted = array_map('intval', (array) $attempt->question_ids);
-            $selected = $activeQuestions->whereIn('id', $wanted);
+            $selected = $this->questionRepository->getActivePool()->whereIn('id', $wanted);
         } elseif ($query->isDrill) {
-            $selected = $this->drillCandidates($activeQuestions, $query, $userId);
+            $selected = $this->drillCandidates($this->questionRepository->getActivePool(), $query, $userId);
         } else {
-            $selected = $activeQuestions->take(0);
+            $selected = new \Illuminate\Database\Eloquent\Collection;
         }
 
         $selected = $selected->take(300);

@@ -60,9 +60,12 @@ class HandleInertiaRequests extends Middleware
 
         $lite = LiteMode::enabled($request);
 
-        $pendingFeedbackCount = Cache::remember('pending_feedback_count', 60, function () {
-            return Feedback::query()->where('status', 'pending')->count();
-        });
+        // Admin-only badge: learners and guests never need it (Issue #27).
+        $pendingFeedbackCount = $request->user()?->isAdmin()
+            ? Cache::remember('pending_feedback_count', 60, function () {
+                return Feedback::query()->where('status', 'pending')->count();
+            })
+            : 0;
 
         return [
             ...parent::share($request),

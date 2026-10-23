@@ -51,23 +51,21 @@ class QuestionRepository extends BaseRepository implements QuestionRepositoryInt
         return $query->paginate($perPage)->withQueryString();
     }
 
+    /**
+     * Every active item with its subcategory and category.
+     *
+     * Not cached on purpose (Issue #27). The old `questions.active` cache
+     * stored serialized models: about 12.6 MB for a 2,100-item bank, read
+     * back from the database cache table and unserialized on every hit
+     * (about 109 ms CPU, 137 MB peak), slower than this query (about 35 ms,
+     * 2.8 MB of rows). Writers still forget the old key, which is harmless.
+     */
     public function getActivePool(): Collection
     {
-        $cached = Cache::get('questions.active');
-        if ($cached instanceof Collection && ! $cached->contains(fn ($item) => $item instanceof \__PHP_Incomplete_Class)) {
-            $activeIds = $this->model->newQuery()->where('status', 'active')->pluck('id');
-
-            return $cached->whereIn('id', $activeIds)->values();
-        }
-
-        $questions = $this->model->newQuery()
+        return $this->model->newQuery()
             ->where('status', 'active')
             ->with(['subcategory.category'])
             ->get();
-
-        Cache::forever('questions.active', $questions);
-
-        return $questions;
     }
 
     /**
