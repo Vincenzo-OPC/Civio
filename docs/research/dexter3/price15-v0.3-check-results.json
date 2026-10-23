@@ -1,0 +1,53 @@
+{
+  "baseline_commit": "d405fed2faa08270f48e266e90f0afe52009cf42",
+  "patch_sha256": "ce8d55833f7ed010a80c77bd4c5c61ff5f34704ce04f3d64e3b4d04e9220d7f4",
+  "separate_ai_review_sha256": "2319bc4f13af2c04b778b678b7879c530c0d646b0ad3438835b5e34c27aeb468",
+  "separate_ai_followup_sha256": "a29db05110cdf34ad88d4df0c471b03055391e8db27f43d47e10bf0082b15cf9",
+  "separate_ai_review_kind": "AI_with_limited_blinding",
+  "binding_references_preserved": 15,
+  "source_keys_or_options_changed": 0,
+  "flow_checks": {
+    "successive-price": {
+      "nodes": 21,
+      "max_path_nodes": 16,
+      "terminals": [
+        "arithmetic_exit",
+        "transfer"
+      ]
+    },
+    "sale-price": {
+      "nodes": 18,
+      "max_path_nodes": 14,
+      "terminals": [
+        "arithmetic_exit",
+        "transfer"
+      ]
+    }
+  },
+  "contrast_node_count": 13,
+  "foundation_proposals_pending_review": 2,
+  "invalid_fixtures_rejected": [
+    "base drift",
+    "fake human decision",
+    "runtime activation",
+    "alter source identity",
+    "wrong answer advances to transfer",
+    "arithmetic error gets generic hint",
+    "intermediate target removed",
+    "meanings shown before diagnosis",
+    "tutor nodes become knowledge",
+    "foundation proposal activated",
+    "timeline collapsed",
+    "untraceable AI assessment"
+  ],
+  "protected_snapshots_byte_identical": [
+    "pilot-v0.1.json",
+    "coverage-v0.1.json",
+    "price15-v0.2.json",
+    "price15-review-packet-v0.1.json",
+    "foundation4-audit-v0.1.json"
+  ],
+  "human_review_decisions_recorded": 0,
+  "runtime_approved": false,
+  "runtime_tests_run": false
+}

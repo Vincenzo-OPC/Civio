@@ -1,0 +1,129 @@
+{
+  "schema_version": "dexter3-ai-followup-v0.1",
+  "reviewer_identity": "Codex separate reviewer agent /root/price15_separate_review",
+  "reviewer_kind": "AI",
+  "reviewed_at": "2026-10-23",
+  "review_type": "focused_AI_re_review_of_author_patch",
+  "patch_file": "price15-v0.3-patch.json",
+  "patch_sha256": "ce8d55833f7ed010a80c77bd4c5c61ff5f34704ce04f3d64e3b4d04e9220d7f4",
+  "base_overlay_sha256": "d1337b21a192a389e2c71e99ef414e2e8016b42a8e6bd069dfbdf744c4150bca",
+  "frozen_assessment_sha256": "2319bc4f13af2c04b778b678b7879c530c0d646b0ad3438835b5e34c27aeb468",
+  "independence_declaration": "Same separate AI reviewer following up on author corrections, with the limited-blinding disclosure from the frozen v0.2 review retained. No human independence, statistical independence, blind replication, or learner-evidence claim. The materialize helper reads the author foundation audit for identity checks; this follow-up is openly a correction review, not a new blinded foundation assessment.",
+  "scope": "Focused F01–F05 correction review, new arithmetic remediation, given_meanings visibility, 900 wrong/unknown and transfer-choice paths, foundation proposals as unapproved editorial suggestions. Not a fresh complete review of all canonical sources.",
+  "runtime_approved": false,
+  "runtime_approval": false,
+  "human_reviewer_1": "pending",
+  "human_reviewer_2": "pending",
+  "human_adjudication": "pending",
+  "learner_evidence": null,
+  "overall_disposition": "F01–F05 addressed at draft authoring level; no new blocking regression found in focused scope. Remains draft and not approved for bank import or runtime activation.",
+  "finding_dispositions": [
+    {
+      "finding_id": "AI01-F01",
+      "disposition": "addressed_in_draft",
+      "locations": [
+        "flows.successive-price.nodes.target.options.raised",
+        "flows.successive-price.nodes.confirm_intermediate"
+      ],
+      "evidence": "Raised intermediate price now has its own response. The follow-up distinguishes thinking it was the final target, knowingly leaving work unfinished, and uncertainty/mistaken selection. Correction follows the self-report, so it does not teach the distinction before that confirmation. The latter two choices have null hypotheses."
+    },
+    {
+      "finding_id": "AI01-F02",
+      "disposition": "addressed_in_draft",
+      "locations": [
+        "flows.successive-price.nodes.confirm_base.options.unknown",
+        "flows.successive-price.nodes.confirm_base.options.misclick"
+      ],
+      "evidence": "Unknown now admits forgotten reasoning or another approach without claiming no rule. Misclick explicitly allows intending the raised price and keeps only self-report evidence with null hypothesis. No forced same-base diagnosis remains in this response set."
+    },
+    {
+      "finding_id": "AI01-F03",
+      "disposition": "addressed_in_draft",
+      "locations": [
+        "flows.successive-price.nodes.arithmetic_check.options.10",
+        "flows.sale-price.nodes.arithmetic_check.options.10"
+      ],
+      "evidence": "Both feedback strings now explain the value relationship and explicitly state that the answer alone does not identify the method. The retained percent-as-pesos label is a possible hypothesis only, not confirmation; the new contract forbids knowledge updates and requires cause to remain uncertain where teaching preceded the response. Nulling that hypothesis would also be conservative but is not required by this assessment."
+    },
+    {
+      "finding_id": "AI01-F04",
+      "disposition": "addressed_in_draft_contract_not_runtime_verified",
+      "locations": [
+        "evidence_context_contract",
+        "flows.*.evidence_contract_ref",
+        "contrast.evidence_contract_ref",
+        "contrast.nodes.forward",
+        "contrast.nodes.discount_base",
+        "contrast.nodes.reverse_meaning",
+        "contrast.nodes.reverse_operation"
+      ],
+      "evidence": "Both flows and contrast reference a contract requiring attempt/node/response/sequence/target and teaching/help provenance. It preserves the first unassisted response, marks subsequent same-item responses helped, forbids tutor-node knowledge updates, and forbids post-teaching self-report becoming pre-correction confirmation. The four previously problematic contrast nodes are now assisted_check and their correct responses have assisted_check evidence. Remaining possible hypotheses on wrong taught checks must remain uncertain by this contract. No current consumer or runtime enforcement is claimed."
+    },
+    {
+      "finding_id": "AI01-F05",
+      "disposition": "addressed_in_draft",
+      "locations": [
+        "flows.successive-price.nodes.hint_1.text"
+      ],
+      "evidence": "The first hint explicitly labels starting price, price after raise, and final price after discount; saved versus paid remains separate. No full numerical solution is exposed."
+    }
+  ],
+  "additional_checks": [
+    {
+      "check": "arithmetic_remediation",
+      "disposition": "pass_draft",
+      "details": "In both flows every wrong/unknown 10%-of-200 answer routes to percent_help. Confirmed fixed-peso reasoning and percent_meaning/unknown also route there. The reminder distinguishes tenths and hundredths. 10% of ₱300 is ₱30; ₱3 is 1%; ₱10 is 10% of ₱100. Correct mini-check returns to assisted retry; wrong/unknown ends at arithmetic_exit, with no approved prerequisite ID or fabricated scored substitute. The check expressly disclaims broad mastery. Learner-request-next-hint and global stop/reveal exits retain the original style; no runtime behavior is assessed."
+    },
+    {
+      "check": "given_meanings_visibility",
+      "disposition": "pass_draft",
+      "details": "All 15 bindings now use authorized_explanation_only instead of after_initial_response_only. This prevents the complete given-stage/base meanings being automatically shown before diagnosis. Source binding identity, mathematical fields, review placeholders, and other fields remain unchanged under materialize checks. Actual server-side withholding remains a future runtime obligation."
+    },
+    {
+      "check": "900_wrong_unknown_routes",
+      "disposition": "pass_draft",
+      "details": "different_calculation/675, /1125 and /unknown each route to reverse_remedy rather than fresh transfer. The remedial relation original×1.25=900 is correct; the 0.75 alternative receives correct markup/complement feedback. All remedy responses terminate at remedial_exit, which explicitly forbids automatic transfer/readiness or independent-success claims."
+    },
+    {
+      "check": "900_correct_and_optional_transfer",
+      "disposition": "pass_draft",
+      "details": "different_calculation/720 routes to an explicit learner choice: request another unassisted item, review, or stop. Review returns to assisted remedy; stop ends without mastery; request alone reaches fresh. Fresh still has no full-target transfer mapping and honestly discloses missing approved coverage. A correct assisted response is not recast as independent by this choice."
+    },
+    {
+      "check": "foundation_proposals_F06_F07",
+      "disposition": "draft_suggestions_only_partial_F06",
+      "details": "926013/o4 proposes percent_numeral_as_divisor plus confirmation allowing another method. 0265 proposes clear original=100%/after=120% terms and percent_as_fixed_pesos for n3, with confirmation allowing another method; existing correct hand method, keys/options and source are retained. These address the requested foundation precision as proposals only. F06’s three sale-price canonical code mismatches remain preserved and unresolved as canonical editorial work, as intended; no approval or bank mutation is implied."
+    },
+    {
+      "check": "structure_and_paths",
+      "disposition": "pass_draft",
+      "details": "Imported author validator and called materialize() and validate() without write-report. Both flows and contrast materialize and validate in memory. All nodes are reachable, paths are acyclic and within budgets: successive maximum 16, sale maximum 14; contrast also within 16. This is structural review, not execution of a tutor runtime or independent validation of the validator itself."
+    }
+  ],
+  "new_blocking_issues": [],
+  "remaining_limits": [
+    "Provenance and authorized_explanation_only are authoring requirements; no runtime consumer/enforcement was implemented or tested.",
+    "The 10%-of-300 probe is an assisted narrow check, not proof of 15%, 30%, 40%, unknown-whole or multi-step competence.",
+    "All source/candidate approval, freshness and full-target distinct-family transfer gates remain pending; no eligible item is created by this patch.",
+    "Frozen F06/F07 canonical-code concerns are not silently cleared by draft local-hypothesis proposals.",
+    "No frozen assessment, patch, canonical bank, sidecar snapshot, runtime code, human decision field, or approval state was modified."
+  ],
+  "validator_flow_results": {
+    "successive-price": {
+      "nodes": 21,
+      "max_path_nodes": 16,
+      "terminals": [
+        "arithmetic_exit",
+        "transfer"
+      ]
+    },
+    "sale-price": {
+      "nodes": 18,
+      "max_path_nodes": 14,
+      "terminals": [
+        "arithmetic_exit",
+        "transfer"
+      ]
+    }
+  }
+}

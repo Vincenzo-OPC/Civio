@@ -1,5 +1,7 @@
 # Dexter 3.0 content checkpoint: 23 October 2026
 
+**Separate AI assessment and draft corrections:** [review reconciliation and v0.3 patch](PRICE15_REVIEW_RECONCILIATION.md). Seven reviewer findings, targeted branch corrections and explicit assistance provenance; human review and activation remain pending.
+
 **Review packet ready:** [15-item adjudication instructions and four foundation-candidate checks](PRICE15_REVIEW_READY.md). Independent reviewer fields remain blank; this adds review evidence without approving candidates or changing the pilot.
 
 **Next checkpoint:** [15-binding editorial QA, draft v0.2 overlay and Guide Me handoff](PRICE15_EDITORIAL_REVIEW.md). The original v0.1 pilot remains intact. This follow-up is an author second pass, not independent human approval.

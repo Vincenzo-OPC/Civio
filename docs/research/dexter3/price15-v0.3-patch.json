@@ -1,0 +1,592 @@
+{
+  "schema_version": "dexter-guide-price-patch-v0.3",
+  "status": "draft",
+  "runtime_eligible": false,
+  "base_file": "price15-v0.2.json",
+  "base_sha256": "d1337b21a192a389e2c71e99ef414e2e8016b42a8e6bd069dfbdf744c4150bca",
+  "operations": [
+    {
+      "op": "add",
+      "path": "/flows/successive-price/nodes/percent_help",
+      "value": {
+        "kind": "hint",
+        "level": 1,
+        "text": "Percent describes a fraction of a base amount. For 10%, divide the base into ten equal parts; it is not always ₱10. For 1%, divide into one hundred parts.",
+        "next": "percent_check",
+        "requires": "learner_requests_next_hint"
+      }
+    },
+    {
+      "op": "add",
+      "path": "/flows/successive-price/nodes/percent_check",
+      "value": {
+        "kind": "assisted_check",
+        "prompt": "After that reminder, what is 10% of ₱300?",
+        "options": [
+          {
+            "id": "30",
+            "text": "₱30",
+            "feedback": "Yes: one tenth of ₱300 is ₱30. This checks this calculation after help; it does not establish broad percentage mastery.",
+            "next": "retry",
+            "evidence": "assisted_check",
+            "hypothesis": null
+          },
+          {
+            "id": "3",
+            "text": "₱3",
+            "feedback": "₱3 is one hundredth, or 1%, of ₱300. We should continue with the hundredths/tenths relationship before returning to a longer price problem.",
+            "next": "arithmetic_exit",
+            "evidence": "assisted_check",
+            "hypothesis": null
+          },
+          {
+            "id": "10",
+            "text": "₱10",
+            "feedback": "₱10 is 10% of ₱100; with a base of ₱300, 10% is ₱30. We have not established why you chose ₱10. A smaller guided step may help.",
+            "next": "arithmetic_exit",
+            "evidence": "assisted_check",
+            "hypothesis": null
+          },
+          {
+            "id": "unknown",
+            "text": "I am not sure",
+            "feedback": "We can pause here and use a smaller foundation step. No misconception is established by uncertainty.",
+            "next": "arithmetic_exit",
+            "evidence": "unknown",
+            "hypothesis": null
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "path": "/flows/successive-price/nodes/arithmetic_exit",
+      "value": {
+        "kind": "terminal",
+        "action": "offer_authorized_foundational_explanation_or_stop",
+        "independent_evidence": false,
+        "approved_prerequisite_id": null,
+        "fallback": "No approved basic-percent assessment is mapped. Use authorized teaching or pause; do not generate a scored substitute or mark the prerequisite mastered."
+      }
+    },
+    {
+      "op": "replace",
+      "path": "/flows/successive-price/nodes/arithmetic_check/options/1/next",
+      "value": "percent_help"
+    },
+    {
+      "op": "replace",
+      "path": "/flows/successive-price/nodes/arithmetic_check/options/2/next",
+      "value": "percent_help"
+    },
+    {
+      "op": "replace",
+      "path": "/flows/successive-price/nodes/arithmetic_check/options/3/next",
+      "value": "percent_help"
+    },
+    {
+      "op": "replace",
+      "path": "/flows/successive-price/nodes/percent_meaning/options/2/next",
+      "value": "percent_help"
+    },
+    {
+      "op": "replace",
+      "path": "/flows/successive-price/nodes/confirm_units/options/0/next",
+      "value": "percent_help"
+    },
+    {
+      "op": "replace",
+      "path": "/flows/successive-price/nodes/confirm_units/options/2/next",
+      "value": "percent_help"
+    },
+    {
+      "op": "add",
+      "path": "/flows/sale-price/nodes/percent_help",
+      "value": {
+        "kind": "hint",
+        "level": 1,
+        "text": "Percent describes a fraction of a base amount. For 10%, divide the base into ten equal parts; it is not always ₱10. For 1%, divide into one hundred parts.",
+        "next": "percent_check",
+        "requires": "learner_requests_next_hint"
+      }
+    },
+    {
+      "op": "add",
+      "path": "/flows/sale-price/nodes/percent_check",
+      "value": {
+        "kind": "assisted_check",
+        "prompt": "After that reminder, what is 10% of ₱300?",
+        "options": [
+          {
+            "id": "30",
+            "text": "₱30",
+            "feedback": "Yes: one tenth of ₱300 is ₱30. This checks this calculation after help; it does not establish broad percentage mastery.",
+            "next": "retry",
+            "evidence": "assisted_check",
+            "hypothesis": null
+          },
+          {
+            "id": "3",
+            "text": "₱3",
+            "feedback": "₱3 is one hundredth, or 1%, of ₱300. We should continue with the hundredths/tenths relationship before returning to a longer price problem.",
+            "next": "arithmetic_exit",
+            "evidence": "assisted_check",
+            "hypothesis": null
+          },
+          {
+            "id": "10",
+            "text": "₱10",
+            "feedback": "₱10 is 10% of ₱100; with a base of ₱300, 10% is ₱30. We have not established why you chose ₱10. A smaller guided step may help.",
+            "next": "arithmetic_exit",
+            "evidence": "assisted_check",
+            "hypothesis": null
+          },
+          {
+            "id": "unknown",
+            "text": "I am not sure",
+            "feedback": "We can pause here and use a smaller foundation step. No misconception is established by uncertainty.",
+            "next": "arithmetic_exit",
+            "evidence": "unknown",
+            "hypothesis": null
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "path": "/flows/sale-price/nodes/arithmetic_exit",
+      "value": {
+        "kind": "terminal",
+        "action": "offer_authorized_foundational_explanation_or_stop",
+        "independent_evidence": false,
+        "approved_prerequisite_id": null,
+        "fallback": "No approved basic-percent assessment is mapped. Use authorized teaching or pause; do not generate a scored substitute or mark the prerequisite mastered."
+      }
+    },
+    {
+      "op": "replace",
+      "path": "/flows/sale-price/nodes/arithmetic_check/options/1/next",
+      "value": "percent_help"
+    },
+    {
+      "op": "replace",
+      "path": "/flows/sale-price/nodes/arithmetic_check/options/2/next",
+      "value": "percent_help"
+    },
+    {
+      "op": "replace",
+      "path": "/flows/sale-price/nodes/arithmetic_check/options/3/next",
+      "value": "percent_help"
+    },
+    {
+      "op": "replace",
+      "path": "/flows/sale-price/nodes/percent_meaning/options/2/next",
+      "value": "percent_help"
+    },
+    {
+      "op": "replace",
+      "path": "/flows/sale-price/nodes/confirm_units/options/0/next",
+      "value": "percent_help"
+    },
+    {
+      "op": "replace",
+      "path": "/flows/sale-price/nodes/confirm_units/options/2/next",
+      "value": "percent_help"
+    },
+    {
+      "op": "replace",
+      "path": "/flows/successive-price/nodes/confirm_base/options/2/text",
+      "value": "I do not remember, or I used another approach"
+    },
+    {
+      "op": "replace",
+      "path": "/flows/successive-price/nodes/confirm_base/options/2/feedback",
+      "value": "We do not have enough evidence to name the cause. Label the price just before each change, or use the worked explanation."
+    },
+    {
+      "op": "add",
+      "path": "/flows/successive-price/nodes/confirm_base/options/-",
+      "value": {
+        "id": "misclick",
+        "text": "I meant the raised price but selected the other option",
+        "feedback": "Then that selection does not support a same-base diagnosis. We can check the percentage meaning next.",
+        "next": "percent_meaning",
+        "evidence": "self_report_only",
+        "hypothesis": null
+      }
+    },
+    {
+      "op": "add",
+      "path": "/flows/successive-price/nodes/target/options/-",
+      "value": {
+        "id": "raised",
+        "text": "The price just after the raise, before the discount",
+        "feedback": "Let us check whether that was the quantity you intended to report.",
+        "next": "confirm_intermediate",
+        "evidence": "possible",
+        "hypothesis": "intermediate-as-target"
+      }
+    },
+    {
+      "op": "add",
+      "path": "/flows/successive-price/nodes/confirm_intermediate",
+      "value": {
+        "kind": "self_report",
+        "prompt": "Why did you stop at the price after the raise?",
+        "options": [
+          {
+            "id": "target",
+            "text": "I thought that was the final price the question asked for",
+            "feedback": "That supports a target-stage mix-up in this attempt. The question also includes the later discount; keep that step on the timeline.",
+            "next": "hint_1",
+            "evidence": "supports_if_prior_raised",
+            "hypothesis": "intermediate-as-target"
+          },
+          {
+            "id": "unfinished",
+            "text": "I knew the discount remained but did not finish",
+            "feedback": "That may be an unfinished solution rather than a reading misconception. The final price comes after the discount step.",
+            "next": "hint_1",
+            "evidence": "self_report_only",
+            "hypothesis": null
+          },
+          {
+            "id": "unknown",
+            "text": "I cannot tell, or I selected that description by mistake",
+            "feedback": "The reason remains uncertain. Review the requested final quantity without assigning a diagnosis.",
+            "next": "hint_1",
+            "evidence": "unknown",
+            "hypothesis": null
+          }
+        ]
+      }
+    },
+    {
+      "op": "replace",
+      "path": "/bindings/0/visibility/given_meanings",
+      "value": "authorized_explanation_only"
+    },
+    {
+      "op": "replace",
+      "path": "/bindings/1/visibility/given_meanings",
+      "value": "authorized_explanation_only"
+    },
+    {
+      "op": "replace",
+      "path": "/bindings/2/visibility/given_meanings",
+      "value": "authorized_explanation_only"
+    },
+    {
+      "op": "replace",
+      "path": "/bindings/3/visibility/given_meanings",
+      "value": "authorized_explanation_only"
+    },
+    {
+      "op": "replace",
+      "path": "/bindings/4/visibility/given_meanings",
+      "value": "authorized_explanation_only"
+    },
+    {
+      "op": "replace",
+      "path": "/bindings/5/visibility/given_meanings",
+      "value": "authorized_explanation_only"
+    },
+    {
+      "op": "replace",
+      "path": "/bindings/6/visibility/given_meanings",
+      "value": "authorized_explanation_only"
+    },
+    {
+      "op": "replace",
+      "path": "/bindings/7/visibility/given_meanings",
+      "value": "authorized_explanation_only"
+    },
+    {
+      "op": "replace",
+      "path": "/bindings/8/visibility/given_meanings",
+      "value": "authorized_explanation_only"
+    },
+    {
+      "op": "replace",
+      "path": "/bindings/9/visibility/given_meanings",
+      "value": "authorized_explanation_only"
+    },
+    {
+      "op": "replace",
+      "path": "/bindings/10/visibility/given_meanings",
+      "value": "authorized_explanation_only"
+    },
+    {
+      "op": "replace",
+      "path": "/bindings/11/visibility/given_meanings",
+      "value": "authorized_explanation_only"
+    },
+    {
+      "op": "replace",
+      "path": "/bindings/12/visibility/given_meanings",
+      "value": "authorized_explanation_only"
+    },
+    {
+      "op": "replace",
+      "path": "/bindings/13/visibility/given_meanings",
+      "value": "authorized_explanation_only"
+    },
+    {
+      "op": "replace",
+      "path": "/bindings/14/visibility/given_meanings",
+      "value": "authorized_explanation_only"
+    },
+    {
+      "op": "replace",
+      "path": "/contrast/nodes/different_calculation/options/0/next",
+      "value": "transfer_choice"
+    },
+    {
+      "op": "replace",
+      "path": "/contrast/nodes/different_calculation/options/1/next",
+      "value": "reverse_remedy"
+    },
+    {
+      "op": "replace",
+      "path": "/contrast/nodes/different_calculation/options/2/next",
+      "value": "reverse_remedy"
+    },
+    {
+      "op": "replace",
+      "path": "/contrast/nodes/different_calculation/options/3/next",
+      "value": "reverse_remedy"
+    },
+    {
+      "op": "add",
+      "path": "/contrast/nodes/reverse_remedy",
+      "value": {
+        "kind": "assisted_check",
+        "prompt": "For the bag priced at ₱900 after a 25% markup, which relationship matches the wording?",
+        "options": [
+          {
+            "id": "125",
+            "text": "Original × 1.25 = ₱900",
+            "feedback": "Yes. That relation gives original = 900 ÷ 1.25 = ₱720. This is a correction after help; continue guided practice or pause.",
+            "next": "remedial_exit",
+            "evidence": "assisted_check",
+            "hypothesis": null
+          },
+          {
+            "id": "75",
+            "text": "Original × 0.75 = ₱900",
+            "feedback": "A 25% markup increases the original to 125%, not 75%. The matching relation is original × 1.25 = 900.",
+            "next": "remedial_exit",
+            "evidence": "assisted_check",
+            "hypothesis": null
+          },
+          {
+            "id": "unknown",
+            "text": "I am not sure",
+            "feedback": "Treat the unknown original as 100%. After adding 25%, the given price is 125%. A slower worked explanation is available.",
+            "next": "remedial_exit",
+            "evidence": "unknown",
+            "hypothesis": null
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "path": "/contrast/nodes/remedial_exit",
+      "value": {
+        "kind": "terminal",
+        "action": "continue_authorized_reverse_guidance_or_stop",
+        "independent_evidence": false,
+        "transfer_automatically_requested": false,
+        "message": "This assisted check is still unresolved or was just corrected. Continue teaching or pause; do not treat it as readiness or an independent success."
+      }
+    },
+    {
+      "op": "add",
+      "path": "/contrast/nodes/transfer_choice",
+      "value": {
+        "kind": "learner_choice",
+        "prompt": "Would you like to try another item without hints, review the method, or stop?",
+        "options": [
+          {
+            "id": "practice",
+            "text": "Try another item without hints",
+            "feedback": "We will check for an approved, unexposed item and explain any coverage limitation.",
+            "next": "fresh",
+            "evidence": "choice_only",
+            "hypothesis": null
+          },
+          {
+            "id": "review",
+            "text": "Review the method first",
+            "feedback": "We can stay with the reverse relation and a short worked check.",
+            "next": "reverse_remedy",
+            "evidence": "choice_only",
+            "hypothesis": null
+          },
+          {
+            "id": "stop",
+            "text": "Stop here",
+            "feedback": "The session can end without claiming mastery.",
+            "next": "done",
+            "evidence": "choice_only",
+            "hypothesis": null
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "path": "/contrast/nodes/done",
+      "value": {
+        "kind": "terminal",
+        "action": "stop_without_mastery_claim"
+      }
+    },
+    {
+      "op": "replace",
+      "path": "/schema_version",
+      "value": "dexter-guide-price-overlay-v0.3"
+    },
+    {
+      "op": "replace",
+      "path": "/flows/successive-price/nodes/arithmetic_check/options/2/feedback",
+      "value": "₱10 is 10% of ₱100. Here the base is ₱200, so 10% is ₱20. That answer alone does not tell us which method you used."
+    },
+    {
+      "op": "replace",
+      "path": "/flows/sale-price/nodes/arithmetic_check/options/2/feedback",
+      "value": "₱10 is 10% of ₱100. Here the base is ₱200, so 10% is ₱20. That answer alone does not tell us which method you used."
+    },
+    {
+      "op": "replace",
+      "path": "/flows/successive-price/nodes/hint_1/text",
+      "value": "Label three stages: starting price, price after the raise, and final price after the discount. Keep the amount saved separate from the amount paid."
+    },
+    {
+      "op": "add",
+      "path": "/evidence_context_contract",
+      "value": {
+        "knowledge_updates_from_tutor_nodes": false,
+        "response_labels_mean": "Response-local consistency or self-report only. A consistent response after teaching is an assisted learning check, not independent knowledge or new pre-teaching confirmation.",
+        "required_provenance": [
+          "source_attempt_id",
+          "node_id",
+          "response_id",
+          "sequence",
+          "target_concept",
+          "target_was_taught_before_response",
+          "help_shown_on_item"
+        ],
+        "assistance_rule": "Entering tutoring records help for subsequent answers on this item; retain the earlier first unassisted answer without rewriting it.",
+        "confirmation_rule": "Only matching relevant selections and pre-correction self-report can support an attempt-level hypothesis. If the target was taught before either response, record a guided response and keep cause uncertain.",
+        "learner_records_created": null
+      }
+    },
+    {
+      "op": "add",
+      "path": "/contrast/evidence_contract_ref",
+      "value": "evidence_context_contract"
+    },
+    {
+      "op": "add",
+      "path": "/contrast/node_budget",
+      "value": 16
+    },
+    {
+      "op": "add",
+      "path": "/flows/successive-price/evidence_contract_ref",
+      "value": "evidence_context_contract"
+    },
+    {
+      "op": "add",
+      "path": "/flows/sale-price/evidence_contract_ref",
+      "value": "evidence_context_contract"
+    },
+    {
+      "op": "replace",
+      "path": "/contrast/nodes/forward/kind",
+      "value": "assisted_check"
+    },
+    {
+      "op": "replace",
+      "path": "/contrast/nodes/forward/options/0/evidence",
+      "value": "assisted_check"
+    },
+    {
+      "op": "replace",
+      "path": "/contrast/nodes/discount_base/kind",
+      "value": "assisted_check"
+    },
+    {
+      "op": "replace",
+      "path": "/contrast/nodes/discount_base/options/0/evidence",
+      "value": "assisted_check"
+    },
+    {
+      "op": "replace",
+      "path": "/contrast/nodes/reverse_meaning/kind",
+      "value": "assisted_check"
+    },
+    {
+      "op": "replace",
+      "path": "/contrast/nodes/reverse_meaning/options/0/evidence",
+      "value": "assisted_check"
+    },
+    {
+      "op": "replace",
+      "path": "/contrast/nodes/reverse_operation/kind",
+      "value": "assisted_check"
+    },
+    {
+      "op": "replace",
+      "path": "/contrast/nodes/reverse_operation/options/0/evidence",
+      "value": "assisted_check"
+    }
+  ],
+  "review": {
+    "independent_ai_pass": "reviews/ai-review-01.json",
+    "human_reviewer_1": null,
+    "human_reviewer_2": null,
+    "adjudication": null,
+    "separate_ai_review_scope": "v0.2 frozen packet only; v0.3 author corrections are not thereby reviewed or approved"
+  },
+  "note": "RFC 6902 add/replace draft authoring patch only. Preserve all prior snapshots and canonical questions. The separate AI review assesses v0.2; these corrections still require review.",
+  "foundation_proposals": [
+    {
+      "question_id": "CIVIO-NUM-PCT-BASIC-926013",
+      "source_record_sha256": "c4be7d69e70a2252d164e3ba440c0035f49e8c6d01a584998e6d8f4bd644c206",
+      "status": "draft_proposal_only",
+      "canonical_code_preserved": {
+        "o4": "NUM-WRONG-BASE"
+      },
+      "proposed_local_hypothesis": {
+        "o4": "percent_numeral_as_divisor"
+      },
+      "confirmation_prompt": "Did you divide 360 by 15, or use another method?",
+      "independent_reviewer": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-B3-NUM-PCT-BASIC-0265",
+      "source_record_sha256": "92d8c6b6cfa380ab2ce7cddcd3d4ec573e3a44b98eeed6cd71dcf86ae7b3f1f2",
+      "status": "draft_proposal_only",
+      "proposed_terms": "The original allowance is 100%. A 20% raise adds 20% of that original allowance, so the new allowance is 120% of it. The given ₱180 is already the new 120%, not the original 100%.",
+      "retain_existing_fields": [
+        "reveal.method_steps",
+        "answer_option_id",
+        "options",
+        "source"
+      ],
+      "canonical_code_preserved": {
+        "n3": "NUM-OP-SWAP"
+      },
+      "proposed_local_hypothesis": {
+        "n3": "percent_as_fixed_pesos"
+      },
+      "confirmation_prompt": "Did you subtract ₱20 because you read 20% as ₱20, or did you use another method?",
+      "independent_reviewer": null,
+      "runtime_eligible": false
+    }
+  ]
+}

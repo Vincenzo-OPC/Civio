@@ -1,0 +1,971 @@
+{
+  "schema_version": "dexter3-ai-assessment-v0.1",
+  "reviewer_identity": "Codex separate reviewer agent /root/price15_separate_review",
+  "reviewer_kind": "AI",
+  "reviewed_at": "2026-10-23",
+  "baseline_commit": "d405fed2faa08270f48e266e90f0afe52009cf42",
+  "packet_sha256": "b4dafd1d5adbf7c706e1072251b3c99cc9944dbc207b5988d4df887831655d66",
+  "independence_declaration": "Separate agent pass with limited blinding. No human independence or statistical independence claim. Source keys were visible in packet reads; results were independently recomputed, not claimed to have been solved before seeing every key. A search for original rules unexpectedly displayed README audit bullets (including sale-price code mismatches and transfer caveats) before submission. No PRICE15_EDITORIAL_REVIEW.md, PRICE15_REVIEW_READY.md, foundation4-audit-v0.1.json, or other completed reviewer forms were opened.",
+  "runtime_approval": false,
+  "runtime_approved": false,
+  "human_reviewers": "pending",
+  "human_adjudication": "pending",
+  "learner_evidence": null,
+  "scope": {
+    "price_bindings": 15,
+    "price_wrong_options": 45,
+    "shared_flows": [
+      "successive-price",
+      "sale-price"
+    ],
+    "contrast": "640 forward/reverse and 900 reverse",
+    "foundation_candidate_sources": 4,
+    "foundation_wrong_options": 12,
+    "inherited_original_pilot_fields": [
+      "worked_solution",
+      "math_verification",
+      "distractor_evidence"
+    ],
+    "method": "Manual source and flow reading; independent rational arithmetic and option-path recomputation with Python fractions; no network or model API calls; no canonical modifications."
+  },
+  "overall_recommendation": "revise_draft_then_separate_human_review; no runtime or bank approval",
+  "findings": [
+    {
+      "id": "AI01-F01",
+      "severity": "medium",
+      "locations": [
+        "flows.successive-price.nodes.target",
+        "flows.successive-price.nodes.confirm_target"
+      ],
+      "issue": "The target diagnostic cannot express stopping at the raised intermediate price.",
+      "example": "000024/o1 is ₱1,320 (raised price), but target only offers final amount paid, amount taken off, or unsure. A learner can know the target and stop early, or mistake the raised price for the target; this branch cannot separate those cases. All 12 successive sources have a corresponding intermediate-price distractor.",
+      "minimal_correction": "Add an intermediate-price option and a neutral pre-correction follow-up distinguishing target confusion from unfinished work. Keep existing saved/paid distinction."
+    },
+    {
+      "id": "AI01-F02",
+      "severity": "medium",
+      "locations": [
+        "flows.successive-price.nodes.confirm_base.options.unknown"
+      ],
+      "issue": "The confirmation response set forces an unsupported account of the learner’s reasoning.",
+      "example": "After base/original, the only choices are used the first price for both, subtracted rates first, or “I selected without a rule.” There is no truthful choice for a mistaken click, forgotten reasoning, or another approach. The last choice is not a neutral unknown.",
+      "minimal_correction": "Add “I intended the raised price but selected the wrong description,” with self-report-only evidence; replace unknown with “I cannot explain / another approach,” leaving the cause unknown."
+    },
+    {
+      "id": "AI01-F03",
+      "severity": "medium",
+      "locations": [
+        "flows.successive-price.nodes.arithmetic_check.options.10",
+        "flows.sale-price.nodes.arithmetic_check.options.10"
+      ],
+      "issue": "Feedback assigns a fixed-peso interpretation from an answer that does not uniquely establish that reasoning.",
+      "example": "Selecting ₱10 for 10% of ₱200 could reuse the numeral, but could also take 10% of ₱100, make an arithmetic slip, or guess. “The 10 is a percentage, not a fixed peso amount” presumes the first cause, unlike the explicit confirmation used at percent_meaning/pesos. The hypothesis is only possible, so this is a feedback/evidence mismatch rather than a permanent-diagnosis claim.",
+      "minimal_correction": "Say “₱10 would be 10% of ₱100; here the base is ₱200, so 10% is ₱20.” If a percent-as-pesos diagnosis is desired, ask the learner how they used 10 before correcting it."
+    },
+    {
+      "id": "AI01-F04",
+      "severity": "medium",
+      "locations": [
+        "flows.*.nodes.direction",
+        "flows.*.nodes.arithmetic_check",
+        "contrast.nodes.forward",
+        "contrast.nodes.discount_base",
+        "contrast.nodes.reverse_operation"
+      ],
+      "issue": "Response-local evidence labels require an explicit history-aware assistance rule to prevent later teaching checks being read as fresh evidence.",
+      "example": "interpret/unknown → wording_help/before → direction/forward ends with evidence=consistent after the stage was taught. In the contrast, forward/divide is corrected and discount_base immediately states “After the markup gives ₱800”; discount_base/new is then consistent. reverse_meaning/100 teaches 125% before reverse_operation. The original pilot correctly makes all subsequent item success assisted, but the local labels alone do not encode that provenance.",
+      "minimal_correction": "Explicitly bind both flows and the contrast to the original assistance contract and record help_seen/path provenance. Treat consistent as response consistency only; post-teaching checks must never become pre-help confirmation or independent evidence. Re-label affected contrast nodes assisted_check where appropriate.",
+      "qualification": "No current runtime misclassification is alleged; these are draft authoring semantics, and the original outcome contract already supplies the conservative policy."
+    },
+    {
+      "id": "AI01-F05",
+      "severity": "low",
+      "locations": [
+        "flows.successive-price.nodes.hint_1"
+      ],
+      "issue": "The first stage-label hint collapses a two-change timeline.",
+      "example": "“before the change, after the change, and the amount asked for” can leave a beginner unsure whether “after” means after the raise or after the discount.",
+      "minimal_correction": "Use “starting price → price after the raise → final price after the discount,” without numerical values."
+    },
+    {
+      "id": "AI01-F06",
+      "severity": "medium",
+      "locations": [
+        "price_items.000030.source.distractor_reasoning.o2",
+        "price_items.000036.source.distractor_reasoning.o3",
+        "price_items.000224.source.distractor_reasoning.o1",
+        "candidate_sources.926013.source.distractor_reasoning.o4"
+      ],
+      "issue": "Several codes do not precisely describe their own mathematically accurate rationale.",
+      "example": "000030/o2 subtracts 15 pesos from ₱480; 000036/o3 subtracts 15 from ₱400; 000224/o1 subtracts 25 from ₱960. These confuse units/percent meaning rather than selecting a wrong base for an otherwise valid percentage calculation. 926013/o4 calculates 360÷15=24; that is a percent-to-divisor/operation error, not simply choosing the wrong total.",
+      "minimal_correction": "In a separately reviewed correction, distinguish percent-as-fixed-money and dividing by the percent numeral from wrong-base errors; preserve the frozen canonical records during this review. Do not diagnose any code from an option alone.",
+      "blinding_note": "The three sale-price mismatches were also present in the accidentally displayed README audit bullets; they are corroborated here, not claimed as wholly blind discoveries."
+    },
+    {
+      "id": "AI01-F07",
+      "severity": "low",
+      "locations": [
+        "candidate_sources.CIVIO-B3-NUM-PCT-BASIC-0265.source.reveal.terms",
+        "candidate_sources.CIVIO-B3-NUM-PCT-BASIC-0265.source.distractor_reasoning.n3"
+      ],
+      "issue": "The reverse-percent candidate has correct mathematics but weak beginner terms and an imprecise unit-error code.",
+      "example": "The terms field lists operation names instead of explaining 20%, original 100%, and after-raise 120%. n3=160 is subtraction of 20 pesos rather than 20%; OP-SWAP describes the operation more broadly than the unit confusion. The method_steps field is substantially more instructive and correct.",
+      "minimal_correction": "Explain the original whole and the new 120% explicitly, retain the excellent 120%→10%→100% hand method, and distinguish n3’s unit confusion from n4’s extra forward markup."
+    }
+  ],
+  "price_items": [
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000001",
+      "own_solution": "250 + 50 = 300; 300 − 60 = 240 pesos.",
+      "answer_pesos": "240",
+      "key_agrees": true,
+      "worked_solution_and_mental_method_checked": true,
+      "criteria": {
+        "interpretation_correct": "yes",
+        "diagnostic_tests_comprehension": "yes",
+        "feedback_distinct_and_appropriate": "yes",
+        "hypothesis_supported_without_overclaim": "no",
+        "hints_progress_without_early_solution": "yes",
+        "worked_solution_and_shortcut_correct": "yes",
+        "original_intermediate_final_distinguished": "no",
+        "accessible_to_percentage_beginner": "unclear",
+        "natural_tutor_voice": "yes",
+        "safe_to_reuse_with_validated_parameters": "no"
+      },
+      "distractors": [
+        {
+          "option_id": "n2",
+          "value": "250",
+          "code": "NUM-PCT-ADD",
+          "own_path_result": "250",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "n3",
+          "value": "288",
+          "code": "NUM-EXTRA-STEP",
+          "own_path_result": "288",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "n4",
+          "value": "300",
+          "code": "NUM-PARTIAL",
+          "own_path_result": "300",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        }
+      ],
+      "item_family_distinct": false,
+      "family": "successive-price",
+      "notes": "Same instructional family as its siblings; no independent-transfer approval. Criteria include shared-flow findings AI01-F01–F05. Beginner success is not demonstrated by authoring review.",
+      "answer_alias_caveat": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000024",
+      "own_solution": "1200 + 120 = 1320; 1320 − 528 = 792 pesos.",
+      "answer_pesos": "792",
+      "key_agrees": true,
+      "worked_solution_and_mental_method_checked": true,
+      "criteria": {
+        "interpretation_correct": "yes",
+        "diagnostic_tests_comprehension": "yes",
+        "feedback_distinct_and_appropriate": "yes",
+        "hypothesis_supported_without_overclaim": "no",
+        "hints_progress_without_early_solution": "yes",
+        "worked_solution_and_shortcut_correct": "yes",
+        "original_intermediate_final_distinguished": "no",
+        "accessible_to_percentage_beginner": "unclear",
+        "natural_tutor_voice": "yes",
+        "safe_to_reuse_with_validated_parameters": "no"
+      },
+      "distractors": [
+        {
+          "option_id": "o1",
+          "value": "1320",
+          "code": "NUM-PARTIAL",
+          "own_path_result": "1320",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o2",
+          "value": "4356/5",
+          "code": "NUM-EXTRA-STEP",
+          "own_path_result": "4356/5",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o4",
+          "value": "840",
+          "code": "NUM-PCT-ADD",
+          "own_path_result": "840",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        }
+      ],
+      "item_family_distinct": false,
+      "family": "successive-price",
+      "notes": "Same instructional family as its siblings; no independent-transfer approval. Criteria include shared-flow findings AI01-F01–F05. Beginner success is not demonstrated by authoring review.",
+      "answer_alias_caveat": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000030",
+      "own_solution": "480 × 15/100 = 72; 480 − 72 = 408 pesos.",
+      "answer_pesos": "408",
+      "key_agrees": true,
+      "worked_solution_and_mental_method_checked": true,
+      "criteria": {
+        "interpretation_correct": "yes",
+        "diagnostic_tests_comprehension": "yes",
+        "feedback_distinct_and_appropriate": "yes",
+        "hypothesis_supported_without_overclaim": "no",
+        "hints_progress_without_early_solution": "yes",
+        "worked_solution_and_shortcut_correct": "yes",
+        "original_intermediate_final_distinguished": "yes",
+        "accessible_to_percentage_beginner": "unclear",
+        "natural_tutor_voice": "yes",
+        "safe_to_reuse_with_validated_parameters": "no"
+      },
+      "distractors": [
+        {
+          "option_id": "o2",
+          "value": "465",
+          "code": "NUM-WRONG-BASE",
+          "own_path_result": "465",
+          "code_matches_error": "no",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o3",
+          "value": "72",
+          "code": "NUM-PARTIAL",
+          "own_path_result": "72",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o4",
+          "value": "552",
+          "code": "NUM-OP-SWAP",
+          "own_path_result": "552",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        }
+      ],
+      "item_family_distinct": false,
+      "family": "sale-price",
+      "notes": "Same instructional family as its siblings; no independent-transfer approval. Criteria include shared-flow findings AI01-F01–F05. Beginner success is not demonstrated by authoring review.",
+      "answer_alias_caveat": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000036",
+      "own_solution": "400 × 15/100 = 60; 400 − 60 = 340 pesos.",
+      "answer_pesos": "340",
+      "key_agrees": true,
+      "worked_solution_and_mental_method_checked": true,
+      "criteria": {
+        "interpretation_correct": "yes",
+        "diagnostic_tests_comprehension": "yes",
+        "feedback_distinct_and_appropriate": "yes",
+        "hypothesis_supported_without_overclaim": "no",
+        "hints_progress_without_early_solution": "yes",
+        "worked_solution_and_shortcut_correct": "yes",
+        "original_intermediate_final_distinguished": "yes",
+        "accessible_to_percentage_beginner": "unclear",
+        "natural_tutor_voice": "yes",
+        "safe_to_reuse_with_validated_parameters": "no"
+      },
+      "distractors": [
+        {
+          "option_id": "o2",
+          "value": "60",
+          "code": "NUM-PARTIAL",
+          "own_path_result": "60",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o3",
+          "value": "385",
+          "code": "NUM-WRONG-BASE",
+          "own_path_result": "385",
+          "code_matches_error": "no",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o4",
+          "value": "460",
+          "code": "NUM-OP-SWAP",
+          "own_path_result": "460",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        }
+      ],
+      "item_family_distinct": false,
+      "family": "sale-price",
+      "notes": "Same instructional family as its siblings; no independent-transfer approval. Criteria include shared-flow findings AI01-F01–F05. Beginner success is not demonstrated by authoring review.",
+      "answer_alias_caveat": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000038",
+      "own_solution": "800 + 240 = 1040; 1040 − 520 = 520 pesos.",
+      "answer_pesos": "520",
+      "key_agrees": true,
+      "worked_solution_and_mental_method_checked": true,
+      "criteria": {
+        "interpretation_correct": "yes",
+        "diagnostic_tests_comprehension": "yes",
+        "feedback_distinct_and_appropriate": "yes",
+        "hypothesis_supported_without_overclaim": "no",
+        "hints_progress_without_early_solution": "yes",
+        "worked_solution_and_shortcut_correct": "yes",
+        "original_intermediate_final_distinguished": "no",
+        "accessible_to_percentage_beginner": "unclear",
+        "natural_tutor_voice": "yes",
+        "safe_to_reuse_with_validated_parameters": "no"
+      },
+      "distractors": [
+        {
+          "option_id": "o1",
+          "value": "640",
+          "code": "NUM-PCT-ADD",
+          "own_path_result": "640",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o2",
+          "value": "676",
+          "code": "NUM-EXTRA-STEP",
+          "own_path_result": "676",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o3",
+          "value": "1040",
+          "code": "NUM-PARTIAL",
+          "own_path_result": "1040",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        }
+      ],
+      "item_family_distinct": false,
+      "family": "successive-price",
+      "notes": "Same instructional family as its siblings; no independent-transfer approval. Criteria include shared-flow findings AI01-F01–F05. Beginner success is not demonstrated by authoring review.",
+      "answer_alias_caveat": "Discount equals amount paid because discount is 50%; correct original option cannot distinguish the two targets."
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000045",
+      "own_solution": "150 + 75 = 225; 225 − 45 = 180 pesos.",
+      "answer_pesos": "180",
+      "key_agrees": true,
+      "worked_solution_and_mental_method_checked": true,
+      "criteria": {
+        "interpretation_correct": "yes",
+        "diagnostic_tests_comprehension": "yes",
+        "feedback_distinct_and_appropriate": "yes",
+        "hypothesis_supported_without_overclaim": "no",
+        "hints_progress_without_early_solution": "yes",
+        "worked_solution_and_shortcut_correct": "yes",
+        "original_intermediate_final_distinguished": "no",
+        "accessible_to_percentage_beginner": "unclear",
+        "natural_tutor_voice": "yes",
+        "safe_to_reuse_with_validated_parameters": "no"
+      },
+      "distractors": [
+        {
+          "option_id": "o1",
+          "value": "225",
+          "code": "NUM-PARTIAL",
+          "own_path_result": "225",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o2",
+          "value": "270",
+          "code": "NUM-EXTRA-STEP",
+          "own_path_result": "270",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o3",
+          "value": "195",
+          "code": "NUM-PCT-ADD",
+          "own_path_result": "195",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        }
+      ],
+      "item_family_distinct": false,
+      "family": "successive-price",
+      "notes": "Same instructional family as its siblings; no independent-transfer approval. Criteria include shared-flow findings AI01-F01–F05. Beginner success is not demonstrated by authoring review.",
+      "answer_alias_caveat": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000113",
+      "own_solution": "240 + 120 = 360; 360 − 180 = 180 pesos.",
+      "answer_pesos": "180",
+      "key_agrees": true,
+      "worked_solution_and_mental_method_checked": true,
+      "criteria": {
+        "interpretation_correct": "yes",
+        "diagnostic_tests_comprehension": "yes",
+        "feedback_distinct_and_appropriate": "yes",
+        "hypothesis_supported_without_overclaim": "no",
+        "hints_progress_without_early_solution": "yes",
+        "worked_solution_and_shortcut_correct": "yes",
+        "original_intermediate_final_distinguished": "no",
+        "accessible_to_percentage_beginner": "unclear",
+        "natural_tutor_voice": "yes",
+        "safe_to_reuse_with_validated_parameters": "no"
+      },
+      "distractors": [
+        {
+          "option_id": "o1",
+          "value": "270",
+          "code": "NUM-EXTRA-STEP",
+          "own_path_result": "270",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o2",
+          "value": "240",
+          "code": "NUM-PCT-ADD",
+          "own_path_result": "240",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o3",
+          "value": "360",
+          "code": "NUM-PARTIAL",
+          "own_path_result": "360",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        }
+      ],
+      "item_family_distinct": false,
+      "family": "successive-price",
+      "notes": "Same instructional family as its siblings; no independent-transfer approval. Criteria include shared-flow findings AI01-F01–F05. Beginner success is not demonstrated by authoring review.",
+      "answer_alias_caveat": "Discount equals amount paid because discount is 50%; correct original option cannot distinguish the two targets."
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000224",
+      "own_solution": "960 × 25/100 = 240; 960 − 240 = 720 pesos.",
+      "answer_pesos": "720",
+      "key_agrees": true,
+      "worked_solution_and_mental_method_checked": true,
+      "criteria": {
+        "interpretation_correct": "yes",
+        "diagnostic_tests_comprehension": "yes",
+        "feedback_distinct_and_appropriate": "yes",
+        "hypothesis_supported_without_overclaim": "no",
+        "hints_progress_without_early_solution": "yes",
+        "worked_solution_and_shortcut_correct": "yes",
+        "original_intermediate_final_distinguished": "yes",
+        "accessible_to_percentage_beginner": "unclear",
+        "natural_tutor_voice": "yes",
+        "safe_to_reuse_with_validated_parameters": "no"
+      },
+      "distractors": [
+        {
+          "option_id": "o1",
+          "value": "935",
+          "code": "NUM-WRONG-BASE",
+          "own_path_result": "935",
+          "code_matches_error": "no",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o2",
+          "value": "240",
+          "code": "NUM-PARTIAL",
+          "own_path_result": "240",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o4",
+          "value": "1200",
+          "code": "NUM-OP-SWAP",
+          "own_path_result": "1200",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        }
+      ],
+      "item_family_distinct": false,
+      "family": "sale-price",
+      "notes": "Same instructional family as its siblings; no independent-transfer approval. Criteria include shared-flow findings AI01-F01–F05. Beginner success is not demonstrated by authoring review.",
+      "answer_alias_caveat": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000227",
+      "own_solution": "1200 + 480 = 1680; 1680 − 672 = 1008 pesos.",
+      "answer_pesos": "1008",
+      "key_agrees": true,
+      "worked_solution_and_mental_method_checked": true,
+      "criteria": {
+        "interpretation_correct": "yes",
+        "diagnostic_tests_comprehension": "yes",
+        "feedback_distinct_and_appropriate": "yes",
+        "hypothesis_supported_without_overclaim": "no",
+        "hints_progress_without_early_solution": "yes",
+        "worked_solution_and_shortcut_correct": "yes",
+        "original_intermediate_final_distinguished": "no",
+        "accessible_to_percentage_beginner": "unclear",
+        "natural_tutor_voice": "yes",
+        "safe_to_reuse_with_validated_parameters": "no"
+      },
+      "distractors": [
+        {
+          "option_id": "o1",
+          "value": "7056/5",
+          "code": "NUM-EXTRA-STEP",
+          "own_path_result": "7056/5",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o2",
+          "value": "1680",
+          "code": "NUM-PARTIAL",
+          "own_path_result": "1680",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o3",
+          "value": "1200",
+          "code": "NUM-PCT-ADD",
+          "own_path_result": "1200",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        }
+      ],
+      "item_family_distinct": false,
+      "family": "successive-price",
+      "notes": "Same instructional family as its siblings; no independent-transfer approval. Criteria include shared-flow findings AI01-F01–F05. Beginner success is not demonstrated by authoring review.",
+      "answer_alias_caveat": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000324",
+      "own_solution": "250 + 50 = 300; 300 − 30 = 270 pesos.",
+      "answer_pesos": "270",
+      "key_agrees": true,
+      "worked_solution_and_mental_method_checked": true,
+      "criteria": {
+        "interpretation_correct": "yes",
+        "diagnostic_tests_comprehension": "yes",
+        "feedback_distinct_and_appropriate": "yes",
+        "hypothesis_supported_without_overclaim": "no",
+        "hints_progress_without_early_solution": "yes",
+        "worked_solution_and_shortcut_correct": "yes",
+        "original_intermediate_final_distinguished": "no",
+        "accessible_to_percentage_beginner": "unclear",
+        "natural_tutor_voice": "yes",
+        "safe_to_reuse_with_validated_parameters": "no"
+      },
+      "distractors": [
+        {
+          "option_id": "o1",
+          "value": "275",
+          "code": "NUM-PCT-ADD",
+          "own_path_result": "275",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o3",
+          "value": "324",
+          "code": "NUM-EXTRA-STEP",
+          "own_path_result": "324",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o4",
+          "value": "300",
+          "code": "NUM-PARTIAL",
+          "own_path_result": "300",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        }
+      ],
+      "item_family_distinct": false,
+      "family": "successive-price",
+      "notes": "Same instructional family as its siblings; no independent-transfer approval. Criteria include shared-flow findings AI01-F01–F05. Beginner success is not demonstrated by authoring review.",
+      "answer_alias_caveat": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000328",
+      "own_solution": "750 + 150 = 900; 900 − 360 = 540 pesos.",
+      "answer_pesos": "540",
+      "key_agrees": true,
+      "worked_solution_and_mental_method_checked": true,
+      "criteria": {
+        "interpretation_correct": "yes",
+        "diagnostic_tests_comprehension": "yes",
+        "feedback_distinct_and_appropriate": "yes",
+        "hypothesis_supported_without_overclaim": "no",
+        "hints_progress_without_early_solution": "yes",
+        "worked_solution_and_shortcut_correct": "yes",
+        "original_intermediate_final_distinguished": "no",
+        "accessible_to_percentage_beginner": "unclear",
+        "natural_tutor_voice": "yes",
+        "safe_to_reuse_with_validated_parameters": "no"
+      },
+      "distractors": [
+        {
+          "option_id": "o2",
+          "value": "600",
+          "code": "NUM-PCT-ADD",
+          "own_path_result": "600",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o3",
+          "value": "648",
+          "code": "NUM-EXTRA-STEP",
+          "own_path_result": "648",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o4",
+          "value": "900",
+          "code": "NUM-PARTIAL",
+          "own_path_result": "900",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        }
+      ],
+      "item_family_distinct": false,
+      "family": "successive-price",
+      "notes": "Same instructional family as its siblings; no independent-transfer approval. Criteria include shared-flow findings AI01-F01–F05. Beginner success is not demonstrated by authoring review.",
+      "answer_alias_caveat": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000415",
+      "own_solution": "600 + 300 = 900; 900 − 225 = 675 pesos.",
+      "answer_pesos": "675",
+      "key_agrees": true,
+      "worked_solution_and_mental_method_checked": true,
+      "criteria": {
+        "interpretation_correct": "yes",
+        "diagnostic_tests_comprehension": "yes",
+        "feedback_distinct_and_appropriate": "yes",
+        "hypothesis_supported_without_overclaim": "no",
+        "hints_progress_without_early_solution": "yes",
+        "worked_solution_and_shortcut_correct": "yes",
+        "original_intermediate_final_distinguished": "no",
+        "accessible_to_percentage_beginner": "unclear",
+        "natural_tutor_voice": "yes",
+        "safe_to_reuse_with_validated_parameters": "no"
+      },
+      "distractors": [
+        {
+          "option_id": "o1",
+          "value": "900",
+          "code": "NUM-PARTIAL",
+          "own_path_result": "900",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o2",
+          "value": "2025/2",
+          "code": "NUM-EXTRA-STEP",
+          "own_path_result": "2025/2",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o3",
+          "value": "750",
+          "code": "NUM-PCT-ADD",
+          "own_path_result": "750",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        }
+      ],
+      "item_family_distinct": false,
+      "family": "successive-price",
+      "notes": "Same instructional family as its siblings; no independent-transfer approval. Criteria include shared-flow findings AI01-F01–F05. Beginner success is not demonstrated by authoring review.",
+      "answer_alias_caveat": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000428",
+      "own_solution": "400 + 40 = 440; 440 − 176 = 264 pesos.",
+      "answer_pesos": "264",
+      "key_agrees": true,
+      "worked_solution_and_mental_method_checked": true,
+      "criteria": {
+        "interpretation_correct": "yes",
+        "diagnostic_tests_comprehension": "yes",
+        "feedback_distinct_and_appropriate": "yes",
+        "hypothesis_supported_without_overclaim": "no",
+        "hints_progress_without_early_solution": "yes",
+        "worked_solution_and_shortcut_correct": "yes",
+        "original_intermediate_final_distinguished": "no",
+        "accessible_to_percentage_beginner": "unclear",
+        "natural_tutor_voice": "yes",
+        "safe_to_reuse_with_validated_parameters": "no"
+      },
+      "distractors": [
+        {
+          "option_id": "o1",
+          "value": "440",
+          "code": "NUM-PARTIAL",
+          "own_path_result": "440",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o2",
+          "value": "280",
+          "code": "NUM-PCT-ADD",
+          "own_path_result": "280",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o3",
+          "value": "1452/5",
+          "code": "NUM-EXTRA-STEP",
+          "own_path_result": "1452/5",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        }
+      ],
+      "item_family_distinct": false,
+      "family": "successive-price",
+      "notes": "Same instructional family as its siblings; no independent-transfer approval. Criteria include shared-flow findings AI01-F01–F05. Beginner success is not demonstrated by authoring review.",
+      "answer_alias_caveat": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000429",
+      "own_solution": "600 + 180 = 780; 780 − 312 = 468 pesos.",
+      "answer_pesos": "468",
+      "key_agrees": true,
+      "worked_solution_and_mental_method_checked": true,
+      "criteria": {
+        "interpretation_correct": "yes",
+        "diagnostic_tests_comprehension": "yes",
+        "feedback_distinct_and_appropriate": "yes",
+        "hypothesis_supported_without_overclaim": "no",
+        "hints_progress_without_early_solution": "yes",
+        "worked_solution_and_shortcut_correct": "yes",
+        "original_intermediate_final_distinguished": "no",
+        "accessible_to_percentage_beginner": "unclear",
+        "natural_tutor_voice": "yes",
+        "safe_to_reuse_with_validated_parameters": "no"
+      },
+      "distractors": [
+        {
+          "option_id": "o2",
+          "value": "540",
+          "code": "NUM-PCT-ADD",
+          "own_path_result": "540",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o3",
+          "value": "3042/5",
+          "code": "NUM-EXTRA-STEP",
+          "own_path_result": "3042/5",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o4",
+          "value": "780",
+          "code": "NUM-PARTIAL",
+          "own_path_result": "780",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        }
+      ],
+      "item_family_distinct": false,
+      "family": "successive-price",
+      "notes": "Same instructional family as its siblings; no independent-transfer approval. Criteria include shared-flow findings AI01-F01–F05. Beginner success is not demonstrated by authoring review.",
+      "answer_alias_caveat": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000515",
+      "own_solution": "240 + 24 = 264; 264 − 132 = 132 pesos.",
+      "answer_pesos": "132",
+      "key_agrees": true,
+      "worked_solution_and_mental_method_checked": true,
+      "criteria": {
+        "interpretation_correct": "yes",
+        "diagnostic_tests_comprehension": "yes",
+        "feedback_distinct_and_appropriate": "yes",
+        "hypothesis_supported_without_overclaim": "no",
+        "hints_progress_without_early_solution": "yes",
+        "worked_solution_and_shortcut_correct": "yes",
+        "original_intermediate_final_distinguished": "no",
+        "accessible_to_percentage_beginner": "unclear",
+        "natural_tutor_voice": "yes",
+        "safe_to_reuse_with_validated_parameters": "no"
+      },
+      "distractors": [
+        {
+          "option_id": "o2",
+          "value": "264",
+          "code": "NUM-PARTIAL",
+          "own_path_result": "264",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o3",
+          "value": "144",
+          "code": "NUM-PCT-ADD",
+          "own_path_result": "144",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        },
+        {
+          "option_id": "o4",
+          "value": "726/5",
+          "code": "NUM-EXTRA-STEP",
+          "own_path_result": "726/5",
+          "code_matches_error": "yes",
+          "why_wrong_accurate": "yes",
+          "notes": "Accurate numerical pathway; not proof that the learner used it."
+        }
+      ],
+      "item_family_distinct": false,
+      "family": "successive-price",
+      "notes": "Same instructional family as its siblings; no independent-transfer approval. Criteria include shared-flow findings AI01-F01–F05. Beginner success is not demonstrated by authoring review.",
+      "answer_alias_caveat": "Discount equals amount paid because discount is 50%; correct original option cannot distinguish the two targets."
+    }
+  ],
+  "contrast": {
+    "meaning_first": "yes",
+    "forward_reverse_distinct": "yes",
+    "wrong_inverse_demonstrated": "yes",
+    "new_example_correct": "yes",
+    "no_false_independent_outcome": "yes",
+    "own_checks": [
+      "640 + 160 = 800; 800 − 160 = 640",
+      "640 ÷ 1.25 = 512; 512 + 128 = 640",
+      "640 − 160 = 480; 480 × 1.25 = 600",
+      "900 ÷ 1.25 = 720; 720 + 180 = 900",
+      "900 − 225 = 675; 675 × 1.25 = 843.75"
+    ],
+    "notes": "All mathematics correct. The final 900 check is honestly assisted. Preserve authorized_explanation_context and owner-specific arithmetic-evidence restriction; never generalize the supplied 25%-of-640 fact to another learner. See AI01-F04 for earlier local evidence labels."
+  },
+  "foundation_candidates": [
+    {
+      "question_id": "CIVIO-NUM-PCT-BASIC-926013",
+      "own_solution": "10% of 360 = 36; 5% = 18; total 15% = 54 notebooks.",
+      "key_correct": "yes",
+      "wording_clear": "yes",
+      "rationales_correct": "yes",
+      "codes_precise": "no",
+      "transfer_role": "cross-context forward percentage-part prerequisite only; not full successive-change or reverse-price transfer",
+      "notes": "72=20%×360; 36=10%×360; 24=360÷15. EXTRA-STEP is broad for 72; WRONG-BASE is imprecise for division by 15. Remains unapproved."
+    },
+    {
+      "question_id": "CIVIO-NUM-PCT-BASIC-926014",
+      "own_solution": "18/60 = 3/10 = 30%.",
+      "key_correct": "yes",
+      "wording_clear": "yes",
+      "rationales_correct": "yes",
+      "codes_precise": "yes",
+      "transfer_role": "cross-context unknown-rate prerequisite; not full price-change transfer",
+      "notes": "Wrong values: 60÷18 gives 3 1/3, then the erroneous percent label; 18% repeats the count; 42/60=70% is the complementary group. Explain the missing conversion explicitly for beginners. Remains unapproved."
+    },
+    {
+      "question_id": "CIVIO-NUM-PCT-BASIC-926015",
+      "own_solution": "72 is one quarter; whole = 72×4 = 288 files.",
+      "key_correct": "yes",
+      "wording_clear": "yes",
+      "rationales_correct": "yes",
+      "codes_precise": "unclear",
+      "transfer_role": "cross-context unknown-whole percentage reasoning; may assess a component of reverse reasoning, not full price-change transfer",
+      "notes": "18=72×25%; 72 repeats the part; 96=72÷75%. WRONG-BASE is defensible broadly but hides the wrong known-percentage/complement selection in o4. Remains unapproved."
+    },
+    {
+      "question_id": "CIVIO-B3-NUM-PCT-BASIC-0265",
+      "own_solution": "180 is 120%; 10%=15; 100%=150 pesos. Check 150+30=180.",
+      "key_correct": "yes",
+      "wording_clear": "yes",
+      "rationales_correct": "yes",
+      "codes_precise": "no",
+      "transfer_role": "best of these four for an actual reverse-change application, but draft/unapproved and freshness must be checked; not full two-change transfer",
+      "notes": "144=180×80%; 160=180−20; 216=180×120%. See AI01-F07. Remains unapproved."
+    }
+  ],
+  "positive_controls": [
+    "No numerical/key conflict found in 15 price sources or four foundations.",
+    "All 45 price distractor explanations reproduce their option values; 12 foundation wrong-value explanations reproduce their values.",
+    "Stage/units/target confirmation generally withholds correction until after self-report.",
+    "No full worked original answer appears in hint nodes.",
+    "Unknown responses keep null hypotheses.",
+    "Worked explanation requires authorized reveal; contrast requires authorized explanation context.",
+    "Transfers remain unapproved, exposure unknown, full-target distinct mappings absent; same-family siblings are not independent transfer."
+  ],
+  "limits": [
+    "Assessment is authoring review, not runtime execution, human signoff, empirical usability testing, learner learning evidence, or model-comparison/statistical independence evidence.",
+    "All 15 share only two instructional families; different numbers/objects do not establish unfamiliar transfer.",
+    "A fixed 10%-of-200 arithmetic probe cannot demonstrate calculation competence at 15%, 30%, 40%, or multi-step decimal arithmetic. It is correctly only a sample.",
+    "50% discounts in 000038, 000113 and 000515 make the saved amount equal the final price; correct choice alone cannot validate target understanding.",
+    "No canonical, sidecar, runtime, human reviewer or adjudication field was changed."
+  ]
+}
