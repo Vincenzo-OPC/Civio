@@ -1,0 +1,4395 @@
+{
+  "schema_version": "dexter-word-math87-guide-draft-v0.1",
+  "baseline_commit": "c2f003c6746573e82d8d07ec1206b9ad22aad3ef",
+  "status": "draft",
+  "runtime_eligible": false,
+  "human_review": null,
+  "learner_evidence": null,
+  "bindings": [
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000012",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "72c4367f752e749729e89e2bc28c28807968f1948e88871760bec63d2e3258b0",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 5,
+        "old_average": 32,
+        "new_value": 44
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 5 × 32 = 160.",
+        "Add the new member: 160 + 44 = 204.",
+        "Divide by the new count 6: 204 ÷ 6 = 34."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "a1",
+        "value": "34",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "34 is right. Check the long way: 5 × 32 = 160. 160 + 44 = 204. 204 ÷ 6 = 34.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000032",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "dae53640d6e0eb926466b2f02840d975687f80fe1a9ac088df19e1cdac4e4536",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 4,
+        "old_average": 22,
+        "new_value": 32
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 4 × 22 = 88.",
+        "Add the new member: 88 + 32 = 120.",
+        "Divide by the new count 5: 120 ÷ 5 = 24."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "24",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "24 years is right. Long way: 4 × 22 = 88; + 32 = 120; ÷ 5 = 24.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000037",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "546031af42c15a666f9b9c5881a63806f1f567fe653177e9fe9bb0f9f434f15f",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 4,
+        "old_average": 9,
+        "new_value": 19
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 4 × 9 = 36.",
+        "Add the new member: 36 + 19 = 55.",
+        "Divide by the new count 5: 55 ÷ 5 = 11."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "11",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "11 years is right. Long way: 4 × 9 = 36; + 19 = 55; ÷ 5 = 11.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000114",
+      "source_file": "docs/batches/batch-003.json",
+      "source_record_sha256": "b4d8bd0fe2cbf5b5c236bc79511c0b9da59b3d4eaeaf5181f12e827081eaa514",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 8,
+        "old_average": 13,
+        "new_value": 40
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 8 × 13 = 104.",
+        "Add the new member: 104 + 40 = 144.",
+        "Divide by the new count 9: 144 ÷ 9 = 16."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "16",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "16 years is right. Long way: 8 × 13 = 104; + 40 = 144; ÷ 9 = 16.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000115",
+      "source_file": "docs/batches/batch-003.json",
+      "source_record_sha256": "be7b6689d5dfb5639950e7d9ad10d8a6f91c3b308af058a15c52492866dae599",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 4,
+        "old_average": 14,
+        "new_value": 24
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 4 × 14 = 56.",
+        "Add the new member: 56 + 24 = 80.",
+        "Divide by the new count 5: 80 ÷ 5 = 16."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "16",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "16 years is right. Long way: 4 × 14 = 56; + 24 = 80; ÷ 5 = 16.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000132",
+      "source_file": "docs/batches/batch-003.json",
+      "source_record_sha256": "bb8fc765808bd6b1313a924e1d8af923494829021d0a6f5a2182f4640c37956d",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 8,
+        "old_average": 13,
+        "new_value": 49
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 8 × 13 = 104.",
+        "Add the new member: 104 + 49 = 153.",
+        "Divide by the new count 9: 153 ÷ 9 = 17."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "17",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "17 years is right. Long way: 8 × 13 = 104; + 49 = 153; ÷ 9 = 17.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000215",
+      "source_file": "docs/batches/batch-004.json",
+      "source_record_sha256": "72d40f5b755ffea8aba6737cdcde557c7b53d0f64874d2942ef4adf04ef2a313",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 5,
+        "old_average": 45,
+        "new_value": 51
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 5 × 45 = 225.",
+        "Add the new member: 225 + 51 = 276.",
+        "Divide by the new count 6: 276 ÷ 6 = 46."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "46",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "46 years is right. Long way: 5 × 45 = 225; + 51 = 276; ÷ 6 = 46.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000232",
+      "source_file": "docs/batches/batch-004.json",
+      "source_record_sha256": "735f39e188fa5e7284890b8155e5605b8a8136f550dc37b076abb3a466f58c8d",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 9,
+        "old_average": 12,
+        "new_value": 52
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 9 × 12 = 108.",
+        "Add the new member: 108 + 52 = 160.",
+        "Divide by the new count 10: 160 ÷ 10 = 16."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "16",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "16 years is right. Long way: 9 × 12 = 108; + 52 = 160; ÷ 10 = 16.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000233",
+      "source_file": "docs/batches/batch-004.json",
+      "source_record_sha256": "72b711e1dc26c8086623d74eeaa969a826f50a5d346bc40f21142112a64b3b9e",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 4,
+        "old_average": 24,
+        "new_value": 34
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 4 × 24 = 96.",
+        "Add the new member: 96 + 34 = 130.",
+        "Divide by the new count 5: 130 ÷ 5 = 26."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "26",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "26 years is right. Long way: 4 × 24 = 96; + 34 = 130; ÷ 5 = 26.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000331",
+      "source_file": "docs/batches/batch-005.json",
+      "source_record_sha256": "a043d8cddd59a063e17919ffb18260142bd75cdf22e891a219d022bd8deef27b",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 8,
+        "old_average": 10,
+        "new_value": 19
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 8 × 10 = 80.",
+        "Add the new member: 80 + 19 = 99.",
+        "Divide by the new count 9: 99 ÷ 9 = 11."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "11",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "11 years is right. Long way: 8 × 10 = 80; + 19 = 99; ÷ 9 = 11.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000338",
+      "source_file": "docs/batches/batch-005.json",
+      "source_record_sha256": "9c7c5ce1bac729c57ebaa7f3e76fb9d7ef6ecc003aecf28b993e5cfdd642a206",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 5,
+        "old_average": 26,
+        "new_value": 50
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 5 × 26 = 130.",
+        "Add the new member: 130 + 50 = 180.",
+        "Divide by the new count 6: 180 ÷ 6 = 30."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "30",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "30 years is right. Long way: 5 × 26 = 130; + 50 = 180; ÷ 6 = 30.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000339",
+      "source_file": "docs/batches/batch-005.json",
+      "source_record_sha256": "be54cbad9993bac9426066741bce6e6f335d67da0c4cccaf6df87a5c73c193f8",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 6,
+        "old_average": 11,
+        "new_value": 18
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 6 × 11 = 66.",
+        "Add the new member: 66 + 18 = 84.",
+        "Divide by the new count 7: 84 ÷ 7 = 12."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "12",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "12 years is right. Long way: 6 × 11 = 66; + 18 = 84; ÷ 7 = 12.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000413",
+      "source_file": "docs/batches/batch-006.json",
+      "source_record_sha256": "da0ff94cd65b587c62e9eae13067725bdaabe6c2b3d9e05f784e3b6295ccf4b4",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 5,
+        "old_average": 8,
+        "new_value": 26
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 5 × 8 = 40.",
+        "Add the new member: 40 + 26 = 66.",
+        "Divide by the new count 6: 66 ÷ 6 = 11."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "11",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "11 years is right. Long way: 5 × 8 = 40; + 26 = 66; ÷ 6 = 11.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000431",
+      "source_file": "docs/batches/batch-006.json",
+      "source_record_sha256": "15c8efa54c57d3a7722ebcb58b82a98e1db85e33e995d440d7155eac7dbb00e9",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 8,
+        "old_average": 42,
+        "new_value": 69
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 8 × 42 = 336.",
+        "Add the new member: 336 + 69 = 405.",
+        "Divide by the new count 9: 405 ÷ 9 = 45."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "45",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "45 years is right. Long way: 8 × 42 = 336; + 69 = 405; ÷ 9 = 45.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000436",
+      "source_file": "docs/batches/batch-006.json",
+      "source_record_sha256": "2ac2f245adb516501ea3a4d05f2b5772fa00b18583448783618c92db77107d85",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 6,
+        "old_average": 20,
+        "new_value": 34
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 6 × 20 = 120.",
+        "Add the new member: 120 + 34 = 154.",
+        "Divide by the new count 7: 154 ÷ 7 = 22."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "22",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "22 years is right. Long way: 6 × 20 = 120; + 34 = 154; ÷ 7 = 22.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000526",
+      "source_file": "docs/batches/batch-007.json",
+      "source_record_sha256": "90cb37429f19ff27082acb89bf42bb20aa64d437cde768ee550a3d445d7b422a",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 4,
+        "old_average": 16,
+        "new_value": 31
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 4 × 16 = 64.",
+        "Add the new member: 64 + 31 = 95.",
+        "Divide by the new count 5: 95 ÷ 5 = 19."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "19",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "19 years is right. Long way: 4 × 16 = 64; + 31 = 95; ÷ 5 = 19.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000527",
+      "source_file": "docs/batches/batch-007.json",
+      "source_record_sha256": "b6e3ce72ef9295fa3b6d903a52874ae7f7b0276738e40cfa84e41d9e916711cf",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 6,
+        "old_average": 16,
+        "new_value": 30
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 6 × 16 = 96.",
+        "Add the new member: 96 + 30 = 126.",
+        "Divide by the new count 7: 126 ÷ 7 = 18."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "18",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "18 years is right. Long way: 6 × 16 = 96; + 30 = 126; ÷ 7 = 18.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000628",
+      "source_file": "docs/batches/batch-008.json",
+      "source_record_sha256": "2369212a2e8f504ac617288c69fc6becc9f969978b0b8012b39880cb54e30ac0",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 8,
+        "old_average": 28,
+        "new_value": 55
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 8 × 28 = 224.",
+        "Add the new member: 224 + 55 = 279.",
+        "Divide by the new count 9: 279 ÷ 9 = 31."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "31",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "31 years is right. Long way: 8 × 28 = 224; + 55 = 279; ÷ 9 = 31.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000630",
+      "source_file": "docs/batches/batch-008.json",
+      "source_record_sha256": "65c86ff977ec70a1ed4fb0e601f4ce8cdd36aea04c1c45c9e80e96a27ee60f89",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 7,
+        "old_average": 15,
+        "new_value": 23
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 7 × 15 = 105.",
+        "Add the new member: 105 + 23 = 128.",
+        "Divide by the new count 8: 128 ÷ 8 = 16."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "o2",
+        "value": "16",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "16 years is right. Long way: 7 × 15 = 105; + 23 = 128; ÷ 8 = 16.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000641",
+      "source_file": "docs/batches/batch-008.json",
+      "source_record_sha256": "7426b26fae788d017dc11f3d3f923624cdb29bcf497b69a359ee003fa1919447",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 8,
+        "old_average": 40,
+        "new_value": 58
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 8 × 40 = 320.",
+        "Add the new member: 320 + 58 = 378.",
+        "Divide by the new count 9: 378 ÷ 9 = 42."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "o2",
+        "value": "42",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "42 years is right. Long way: 8 × 40 = 320; + 58 = 378; ÷ 9 = 42.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000730",
+      "source_file": "docs/batches/batch-009.json",
+      "source_record_sha256": "6e3158056072e794ebf94b0ccb908c3cfe693615ad2113860b263666813d88c5",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 4,
+        "old_average": 15,
+        "new_value": 25
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 4 × 15 = 60.",
+        "Add the new member: 60 + 25 = 85.",
+        "Divide by the new count 5: 85 ÷ 5 = 17."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "17",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "17 years is right. Long way: 4 × 15 = 60; + 25 = 85; ÷ 5 = 17.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000732",
+      "source_file": "docs/batches/batch-009.json",
+      "source_record_sha256": "12b79009f826f39a1adcb49bf07d206662928eda8c3ba92b26536c2501d59ea3",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 8,
+        "old_average": 29,
+        "new_value": 38
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 8 × 29 = 232.",
+        "Add the new member: 232 + 38 = 270.",
+        "Divide by the new count 9: 270 ÷ 9 = 30."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "o2",
+        "value": "30",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "30 years is right. Long way: 8 × 29 = 232; + 38 = 270; ÷ 9 = 30.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000735",
+      "source_file": "docs/batches/batch-009.json",
+      "source_record_sha256": "b3df01d39e065fd717099f5a5080028a547804901c924a97d62e3079c6ceaf31",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 6,
+        "old_average": 41,
+        "new_value": 48
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 6 × 41 = 246.",
+        "Add the new member: 246 + 48 = 294.",
+        "Divide by the new count 7: 294 ÷ 7 = 42."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "42",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "42 years is right. Long way: 6 × 41 = 246; + 48 = 294; ÷ 7 = 42.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000826",
+      "source_file": "docs/batches/batch-010.json",
+      "source_record_sha256": "b43658b8d4b7b008c213430b07fad326966e2a959963aff7bbfdd51f03023d0b",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 8,
+        "old_average": 11,
+        "new_value": 20
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 8 × 11 = 88.",
+        "Add the new member: 88 + 20 = 108.",
+        "Divide by the new count 9: 108 ÷ 9 = 12."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "12",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "12 years is right. Long way: 8 × 11 = 88; + 20 = 108; ÷ 9 = 12.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000916",
+      "source_file": "docs/batches/batch-011.json",
+      "source_record_sha256": "dfae8588e8ff08b305ce43559d6d9374d54671ca7ac51df614ffd6089717d077",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 7,
+        "old_average": 21,
+        "new_value": 29
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 7 × 21 = 147.",
+        "Add the new member: 147 + 29 = 176.",
+        "Divide by the new count 8: 176 ÷ 8 = 22."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "o2",
+        "value": "22",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "22 years is right. Long way: 7 × 21 = 147; + 29 = 176; ÷ 8 = 22.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-AVERAGE-000926",
+      "source_file": "docs/batches/batch-011.json",
+      "source_record_sha256": "23e62ad5502ea66bee820a4f809112774b92347c7310b11cab1faafb31eb225c",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "count": 6,
+        "old_average": 8,
+        "new_value": 15
+      },
+      "method": "new-member-average",
+      "diagnostic": {
+        "prompt": "What does the stated average tell you about the original group?",
+        "choices": [
+          {
+            "id": "old-total",
+            "text": "Its total is its average multiplied by its number of members.",
+            "role": "correct-rule",
+            "feedback": "Yes. Average × count recovers the original total. Then include the new member and divide by the new count."
+          },
+          {
+            "id": "add-first",
+            "text": "Add the new member to the average, then divide by the new count.",
+            "role": "common-error",
+            "feedback": "The average is not the original total. First recover the old total by multiplying average by the old count."
+          },
+          {
+            "id": "divide-old",
+            "text": "Divide the old average by the new count, then add the new member.",
+            "role": "common-error",
+            "feedback": "The old average describes the old group. Recover that group’s total before including the newcomer."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s separate the group’s average from its total first."
+          }
+        ],
+        "confirmation": "Was that your original method, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Average × number of members gives the original total.",
+        "Add the new member, then divide by one more member."
+      ],
+      "worked_solution": [
+        "Original total: 6 × 8 = 48.",
+        "Add the new member: 48 + 15 = 63.",
+        "Divide by the new count 7: 63 ÷ 7 = 9."
+      ],
+      "mental_shortcut": "New average = old average + (new member’s value − old average) ÷ new group size.",
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "9",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "9 years is right. Long way: 6 × 8 = 48; + 15 = 63; ÷ 7 = 9.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-GEOM-000027",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "21840c2a0b23a0fa7d8b4f29f1097806a39607792b4fb2a4da86d60c146e4e9a",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "length_m": 16,
+        "width_m": 6,
+        "cost_per_m": "50"
+      },
+      "method": "rectangular-perimeter-times-unit-rate",
+      "diagnostic": {
+        "prompt": "The question asks about fencing the whole boundary. Which quantity should you find before using a per-meter cost?",
+        "choices": [
+          {
+            "id": "perimeter",
+            "text": "The total distance around the rectangle.",
+            "role": "correct-rule",
+            "feedback": "Correct. A per-meter charge applies to the boundary length, not the area."
+          },
+          {
+            "id": "area",
+            "text": "The length multiplied by the width.",
+            "role": "common-error",
+            "feedback": "That is the area inside the rectangle. Fencing the boundary requires the distance around it."
+          },
+          {
+            "id": "one-side",
+            "text": "Only the length plus the width once.",
+            "role": "common-error",
+            "feedback": "A rectangle has two lengths and two widths around its boundary."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Trace all four sides of the rectangle."
+          }
+        ],
+        "confirmation": "Was that the quantity you used before answering, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "A rectangle has two lengths and two widths.",
+        "Find the perimeter first; multiply it by the rate only if the question asks for cost."
+      ],
+      "worked_solution": [
+        "Perimeter = 2 × (16 + 6) = 44 m.",
+        "Multiply fence length by cost per meter: 44 × ₱50 = ₱2200."
+      ],
+      "mental_shortcut": "Double the sum of length and width, then apply the cost per meter if requested.",
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "2200",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "₱2,200 is right: 44 m × ₱50 = ₱2,200.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-GEOM-000043",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "fde8d23c742734365d16c744cd309e4fd0bc8f81a0df98e29d0841b47ca15037",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "length_m": 30,
+        "width_m": 6,
+        "cost_per_m": "40"
+      },
+      "method": "rectangular-perimeter-times-unit-rate",
+      "diagnostic": {
+        "prompt": "The question asks about fencing the whole boundary. Which quantity should you find before using a per-meter cost?",
+        "choices": [
+          {
+            "id": "perimeter",
+            "text": "The total distance around the rectangle.",
+            "role": "correct-rule",
+            "feedback": "Correct. A per-meter charge applies to the boundary length, not the area."
+          },
+          {
+            "id": "area",
+            "text": "The length multiplied by the width.",
+            "role": "common-error",
+            "feedback": "That is the area inside the rectangle. Fencing the boundary requires the distance around it."
+          },
+          {
+            "id": "one-side",
+            "text": "Only the length plus the width once.",
+            "role": "common-error",
+            "feedback": "A rectangle has two lengths and two widths around its boundary."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Trace all four sides of the rectangle."
+          }
+        ],
+        "confirmation": "Was that the quantity you used before answering, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "A rectangle has two lengths and two widths.",
+        "Find the perimeter first; multiply it by the rate only if the question asks for cost."
+      ],
+      "worked_solution": [
+        "Perimeter = 2 × (30 + 6) = 72 m.",
+        "Multiply fence length by cost per meter: 72 × ₱40 = ₱2880."
+      ],
+      "mental_shortcut": "Double the sum of length and width, then apply the cost per meter if requested.",
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "2880",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "₱2,880 is right: 72 m × ₱40 = ₱2,880.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-GEOM-000127",
+      "source_file": "docs/batches/batch-003.json",
+      "source_record_sha256": "a2305253264707c3279704e66dda464cf24a7dc93395ced1f01b3da28d28057b",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "length_m": 19,
+        "width_m": 20,
+        "cost_per_m": "120"
+      },
+      "method": "rectangular-perimeter-times-unit-rate",
+      "diagnostic": {
+        "prompt": "The question asks about fencing the whole boundary. Which quantity should you find before using a per-meter cost?",
+        "choices": [
+          {
+            "id": "perimeter",
+            "text": "The total distance around the rectangle.",
+            "role": "correct-rule",
+            "feedback": "Correct. A per-meter charge applies to the boundary length, not the area."
+          },
+          {
+            "id": "area",
+            "text": "The length multiplied by the width.",
+            "role": "common-error",
+            "feedback": "That is the area inside the rectangle. Fencing the boundary requires the distance around it."
+          },
+          {
+            "id": "one-side",
+            "text": "Only the length plus the width once.",
+            "role": "common-error",
+            "feedback": "A rectangle has two lengths and two widths around its boundary."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Trace all four sides of the rectangle."
+          }
+        ],
+        "confirmation": "Was that the quantity you used before answering, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "A rectangle has two lengths and two widths.",
+        "Find the perimeter first; multiply it by the rate only if the question asks for cost."
+      ],
+      "worked_solution": [
+        "Perimeter = 2 × (19 + 20) = 78 m.",
+        "Multiply fence length by cost per meter: 78 × ₱120 = ₱9360."
+      ],
+      "mental_shortcut": "Double the sum of length and width, then apply the cost per meter if requested.",
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "9360",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "₱9,360 is right: 78 m × ₱120 = ₱9,360.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-GEOM-000128",
+      "source_file": "docs/batches/batch-003.json",
+      "source_record_sha256": "6fee2d26402647e88cb77f28d4a563b376e7f3a2707864e6307ad9cebcff1ff7",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "length_m": 31,
+        "width_m": 9,
+        "cost_per_m": "120"
+      },
+      "method": "rectangular-perimeter-times-unit-rate",
+      "diagnostic": {
+        "prompt": "The question asks about fencing the whole boundary. Which quantity should you find before using a per-meter cost?",
+        "choices": [
+          {
+            "id": "perimeter",
+            "text": "The total distance around the rectangle.",
+            "role": "correct-rule",
+            "feedback": "Correct. A per-meter charge applies to the boundary length, not the area."
+          },
+          {
+            "id": "area",
+            "text": "The length multiplied by the width.",
+            "role": "common-error",
+            "feedback": "That is the area inside the rectangle. Fencing the boundary requires the distance around it."
+          },
+          {
+            "id": "one-side",
+            "text": "Only the length plus the width once.",
+            "role": "common-error",
+            "feedback": "A rectangle has two lengths and two widths around its boundary."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Trace all four sides of the rectangle."
+          }
+        ],
+        "confirmation": "Was that the quantity you used before answering, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "A rectangle has two lengths and two widths.",
+        "Find the perimeter first; multiply it by the rate only if the question asks for cost."
+      ],
+      "worked_solution": [
+        "Perimeter = 2 × (31 + 9) = 80 m.",
+        "Multiply fence length by cost per meter: 80 × ₱120 = ₱9600."
+      ],
+      "mental_shortcut": "Double the sum of length and width, then apply the cost per meter if requested.",
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "9600",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "₱9,600 is right: 80 m × ₱120 = ₱9,600.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-GEOM-000225",
+      "source_file": "docs/batches/batch-004.json",
+      "source_record_sha256": "8639ee8c6e64843e3660641cc4e1d03435befa789ec260ae7de5ace07dd57715",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "length_m": 38,
+        "width_m": 14,
+        "cost_per_m": "75"
+      },
+      "method": "rectangular-perimeter-times-unit-rate",
+      "diagnostic": {
+        "prompt": "The question asks about fencing the whole boundary. Which quantity should you find before using a per-meter cost?",
+        "choices": [
+          {
+            "id": "perimeter",
+            "text": "The total distance around the rectangle.",
+            "role": "correct-rule",
+            "feedback": "Correct. A per-meter charge applies to the boundary length, not the area."
+          },
+          {
+            "id": "area",
+            "text": "The length multiplied by the width.",
+            "role": "common-error",
+            "feedback": "That is the area inside the rectangle. Fencing the boundary requires the distance around it."
+          },
+          {
+            "id": "one-side",
+            "text": "Only the length plus the width once.",
+            "role": "common-error",
+            "feedback": "A rectangle has two lengths and two widths around its boundary."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Trace all four sides of the rectangle."
+          }
+        ],
+        "confirmation": "Was that the quantity you used before answering, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "A rectangle has two lengths and two widths.",
+        "Find the perimeter first; multiply it by the rate only if the question asks for cost."
+      ],
+      "worked_solution": [
+        "Perimeter = 2 × (38 + 14) = 104 m.",
+        "Multiply fence length by cost per meter: 104 × ₱75 = ₱7800."
+      ],
+      "mental_shortcut": "Double the sum of length and width, then apply the cost per meter if requested.",
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "7800",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "₱7,800 is right: 104 m × ₱75 = ₱7,800.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-GEOM-000236",
+      "source_file": "docs/batches/batch-004.json",
+      "source_record_sha256": "d3ecff1c21342eb68043bf5ced20d670c68a68a505639132827914777963a381",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "length_m": 23,
+        "width_m": 16,
+        "cost_per_m": "50"
+      },
+      "method": "rectangular-perimeter-times-unit-rate",
+      "diagnostic": {
+        "prompt": "The question asks about fencing the whole boundary. Which quantity should you find before using a per-meter cost?",
+        "choices": [
+          {
+            "id": "perimeter",
+            "text": "The total distance around the rectangle.",
+            "role": "correct-rule",
+            "feedback": "Correct. A per-meter charge applies to the boundary length, not the area."
+          },
+          {
+            "id": "area",
+            "text": "The length multiplied by the width.",
+            "role": "common-error",
+            "feedback": "That is the area inside the rectangle. Fencing the boundary requires the distance around it."
+          },
+          {
+            "id": "one-side",
+            "text": "Only the length plus the width once.",
+            "role": "common-error",
+            "feedback": "A rectangle has two lengths and two widths around its boundary."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Trace all four sides of the rectangle."
+          }
+        ],
+        "confirmation": "Was that the quantity you used before answering, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "A rectangle has two lengths and two widths.",
+        "Find the perimeter first; multiply it by the rate only if the question asks for cost."
+      ],
+      "worked_solution": [
+        "Perimeter = 2 × (23 + 16) = 78 m.",
+        "Multiply fence length by cost per meter: 78 × ₱50 = ₱3900."
+      ],
+      "mental_shortcut": "Double the sum of length and width, then apply the cost per meter if requested.",
+      "verified_answer": {
+        "option_id": "o2",
+        "value": "3900",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "₱3,900 is right: 78 m × ₱50 = ₱3,900.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-GEOM-000315",
+      "source_file": "docs/batches/batch-005.json",
+      "source_record_sha256": "0399fdddce822f85e7aea496a486c237b07b43d5883f83ef7dc20f81e4660664",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "length_m": 14,
+        "width_m": 18,
+        "cost_per_m": "25"
+      },
+      "method": "rectangular-perimeter-times-unit-rate",
+      "diagnostic": {
+        "prompt": "The question asks about fencing the whole boundary. Which quantity should you find before using a per-meter cost?",
+        "choices": [
+          {
+            "id": "perimeter",
+            "text": "The total distance around the rectangle.",
+            "role": "correct-rule",
+            "feedback": "Correct. A per-meter charge applies to the boundary length, not the area."
+          },
+          {
+            "id": "area",
+            "text": "The length multiplied by the width.",
+            "role": "common-error",
+            "feedback": "That is the area inside the rectangle. Fencing the boundary requires the distance around it."
+          },
+          {
+            "id": "one-side",
+            "text": "Only the length plus the width once.",
+            "role": "common-error",
+            "feedback": "A rectangle has two lengths and two widths around its boundary."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Trace all four sides of the rectangle."
+          }
+        ],
+        "confirmation": "Was that the quantity you used before answering, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "A rectangle has two lengths and two widths.",
+        "Find the perimeter first; multiply it by the rate only if the question asks for cost."
+      ],
+      "worked_solution": [
+        "Perimeter = 2 × (14 + 18) = 64 m.",
+        "Multiply fence length by cost per meter: 64 × ₱25 = ₱1600."
+      ],
+      "mental_shortcut": "Double the sum of length and width, then apply the cost per meter if requested.",
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "1600",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "₱1,600 is right: 64 m × ₱25 = ₱1,600.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-GEOM-000318",
+      "source_file": "docs/batches/batch-005.json",
+      "source_record_sha256": "dc048c47fefec6541fa39c55823a18963b3c53c8608c0847ea6c977e8ed3d3d2",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "length_m": 38,
+        "width_m": 18,
+        "cost_per_m": "120"
+      },
+      "method": "rectangular-perimeter-times-unit-rate",
+      "diagnostic": {
+        "prompt": "The question asks about fencing the whole boundary. Which quantity should you find before using a per-meter cost?",
+        "choices": [
+          {
+            "id": "perimeter",
+            "text": "The total distance around the rectangle.",
+            "role": "correct-rule",
+            "feedback": "Correct. A per-meter charge applies to the boundary length, not the area."
+          },
+          {
+            "id": "area",
+            "text": "The length multiplied by the width.",
+            "role": "common-error",
+            "feedback": "That is the area inside the rectangle. Fencing the boundary requires the distance around it."
+          },
+          {
+            "id": "one-side",
+            "text": "Only the length plus the width once.",
+            "role": "common-error",
+            "feedback": "A rectangle has two lengths and two widths around its boundary."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Trace all four sides of the rectangle."
+          }
+        ],
+        "confirmation": "Was that the quantity you used before answering, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "A rectangle has two lengths and two widths.",
+        "Find the perimeter first; multiply it by the rate only if the question asks for cost."
+      ],
+      "worked_solution": [
+        "Perimeter = 2 × (38 + 18) = 112 m.",
+        "Multiply fence length by cost per meter: 112 × ₱120 = ₱13440."
+      ],
+      "mental_shortcut": "Double the sum of length and width, then apply the cost per meter if requested.",
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "13440",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "₱13,440 is right: 112 m × ₱120 = ₱13,440.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-GEOM-000422",
+      "source_file": "docs/batches/batch-006.json",
+      "source_record_sha256": "fd6a203e06fbbff9b7a7aef232d5e81382bdc7be91f04b0e414757a28749fcc1",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "length_m": 32,
+        "width_m": 11,
+        "cost_per_m": "150"
+      },
+      "method": "rectangular-perimeter-times-unit-rate",
+      "diagnostic": {
+        "prompt": "The question asks about fencing the whole boundary. Which quantity should you find before using a per-meter cost?",
+        "choices": [
+          {
+            "id": "perimeter",
+            "text": "The total distance around the rectangle.",
+            "role": "correct-rule",
+            "feedback": "Correct. A per-meter charge applies to the boundary length, not the area."
+          },
+          {
+            "id": "area",
+            "text": "The length multiplied by the width.",
+            "role": "common-error",
+            "feedback": "That is the area inside the rectangle. Fencing the boundary requires the distance around it."
+          },
+          {
+            "id": "one-side",
+            "text": "Only the length plus the width once.",
+            "role": "common-error",
+            "feedback": "A rectangle has two lengths and two widths around its boundary."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Trace all four sides of the rectangle."
+          }
+        ],
+        "confirmation": "Was that the quantity you used before answering, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "A rectangle has two lengths and two widths.",
+        "Find the perimeter first; multiply it by the rate only if the question asks for cost."
+      ],
+      "worked_solution": [
+        "Perimeter = 2 × (32 + 11) = 86 m.",
+        "Multiply fence length by cost per meter: 86 × ₱150 = ₱12900."
+      ],
+      "mental_shortcut": "Double the sum of length and width, then apply the cost per meter if requested.",
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "12900",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "₱12,900 is right: 86 m × ₱150 = ₱12,900.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-GEOM-000437",
+      "source_file": "docs/batches/batch-006.json",
+      "source_record_sha256": "f929674684f8b707ecd1a539beb26c6afe763738b6d89144efce8e511b72bfcb",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "length_m": 36,
+        "width_m": 3,
+        "cost_per_m": "150"
+      },
+      "method": "rectangular-perimeter-times-unit-rate",
+      "diagnostic": {
+        "prompt": "The question asks about fencing the whole boundary. Which quantity should you find before using a per-meter cost?",
+        "choices": [
+          {
+            "id": "perimeter",
+            "text": "The total distance around the rectangle.",
+            "role": "correct-rule",
+            "feedback": "Correct. A per-meter charge applies to the boundary length, not the area."
+          },
+          {
+            "id": "area",
+            "text": "The length multiplied by the width.",
+            "role": "common-error",
+            "feedback": "That is the area inside the rectangle. Fencing the boundary requires the distance around it."
+          },
+          {
+            "id": "one-side",
+            "text": "Only the length plus the width once.",
+            "role": "common-error",
+            "feedback": "A rectangle has two lengths and two widths around its boundary."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Trace all four sides of the rectangle."
+          }
+        ],
+        "confirmation": "Was that the quantity you used before answering, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "A rectangle has two lengths and two widths.",
+        "Find the perimeter first; multiply it by the rate only if the question asks for cost."
+      ],
+      "worked_solution": [
+        "Perimeter = 2 × (36 + 3) = 78 m.",
+        "Multiply fence length by cost per meter: 78 × ₱150 = ₱11700."
+      ],
+      "mental_shortcut": "Double the sum of length and width, then apply the cost per meter if requested.",
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "11700",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "₱11,700 is right: 78 m × ₱150 = ₱11,700.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-GEOM-000439",
+      "source_file": "docs/batches/batch-006.json",
+      "source_record_sha256": "b630d7f5530f0df12eeb8eef707eae3f0dc9568585db001d5734e9b24733db62",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "length_m": 30,
+        "width_m": 16,
+        "cost_per_m": "25"
+      },
+      "method": "rectangular-perimeter-times-unit-rate",
+      "diagnostic": {
+        "prompt": "The question asks about fencing the whole boundary. Which quantity should you find before using a per-meter cost?",
+        "choices": [
+          {
+            "id": "perimeter",
+            "text": "The total distance around the rectangle.",
+            "role": "correct-rule",
+            "feedback": "Correct. A per-meter charge applies to the boundary length, not the area."
+          },
+          {
+            "id": "area",
+            "text": "The length multiplied by the width.",
+            "role": "common-error",
+            "feedback": "That is the area inside the rectangle. Fencing the boundary requires the distance around it."
+          },
+          {
+            "id": "one-side",
+            "text": "Only the length plus the width once.",
+            "role": "common-error",
+            "feedback": "A rectangle has two lengths and two widths around its boundary."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Trace all four sides of the rectangle."
+          }
+        ],
+        "confirmation": "Was that the quantity you used before answering, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "A rectangle has two lengths and two widths.",
+        "Find the perimeter first; multiply it by the rate only if the question asks for cost."
+      ],
+      "worked_solution": [
+        "Perimeter = 2 × (30 + 16) = 92 m.",
+        "Multiply fence length by cost per meter: 92 × ₱25 = ₱2300."
+      ],
+      "mental_shortcut": "Double the sum of length and width, then apply the cost per meter if requested.",
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "2300",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "₱2,300 is right: 92 m × ₱25 = ₱2,300.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-GEOM-000621",
+      "source_file": "docs/batches/batch-008.json",
+      "source_record_sha256": "f8e65c170fc5926e473fc32d48adb81854c562c43de738299b1cf678f4a657b2",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "length_m": 19,
+        "width_m": 4,
+        "cost_per_m": "120"
+      },
+      "method": "rectangular-perimeter-times-unit-rate",
+      "diagnostic": {
+        "prompt": "The question asks about fencing the whole boundary. Which quantity should you find before using a per-meter cost?",
+        "choices": [
+          {
+            "id": "perimeter",
+            "text": "The total distance around the rectangle.",
+            "role": "correct-rule",
+            "feedback": "Correct. A per-meter charge applies to the boundary length, not the area."
+          },
+          {
+            "id": "area",
+            "text": "The length multiplied by the width.",
+            "role": "common-error",
+            "feedback": "That is the area inside the rectangle. Fencing the boundary requires the distance around it."
+          },
+          {
+            "id": "one-side",
+            "text": "Only the length plus the width once.",
+            "role": "common-error",
+            "feedback": "A rectangle has two lengths and two widths around its boundary."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Trace all four sides of the rectangle."
+          }
+        ],
+        "confirmation": "Was that the quantity you used before answering, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "A rectangle has two lengths and two widths.",
+        "Find the perimeter first; multiply it by the rate only if the question asks for cost."
+      ],
+      "worked_solution": [
+        "Perimeter = 2 × (19 + 4) = 46 m.",
+        "Multiply fence length by cost per meter: 46 × ₱120 = ₱5520."
+      ],
+      "mental_shortcut": "Double the sum of length and width, then apply the cost per meter if requested.",
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "5520",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "₱5,520 is right: 46 m × ₱120 = ₱5,520.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-GEOM-000622",
+      "source_file": "docs/batches/batch-008.json",
+      "source_record_sha256": "49c0756a2016be1e2dac5489769f8d500eebefcf6271dbd5ff5146d64938a9f9",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "length_m": 12,
+        "width_m": 20,
+        "cost_per_m": "40"
+      },
+      "method": "rectangular-perimeter-times-unit-rate",
+      "diagnostic": {
+        "prompt": "The question asks about fencing the whole boundary. Which quantity should you find before using a per-meter cost?",
+        "choices": [
+          {
+            "id": "perimeter",
+            "text": "The total distance around the rectangle.",
+            "role": "correct-rule",
+            "feedback": "Correct. A per-meter charge applies to the boundary length, not the area."
+          },
+          {
+            "id": "area",
+            "text": "The length multiplied by the width.",
+            "role": "common-error",
+            "feedback": "That is the area inside the rectangle. Fencing the boundary requires the distance around it."
+          },
+          {
+            "id": "one-side",
+            "text": "Only the length plus the width once.",
+            "role": "common-error",
+            "feedback": "A rectangle has two lengths and two widths around its boundary."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Trace all four sides of the rectangle."
+          }
+        ],
+        "confirmation": "Was that the quantity you used before answering, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "A rectangle has two lengths and two widths.",
+        "Find the perimeter first; multiply it by the rate only if the question asks for cost."
+      ],
+      "worked_solution": [
+        "Perimeter = 2 × (12 + 20) = 64 m.",
+        "Multiply fence length by cost per meter: 64 × ₱40 = ₱2560."
+      ],
+      "mental_shortcut": "Double the sum of length and width, then apply the cost per meter if requested.",
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "2560",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "₱2,560 is right: 64 m × ₱40 = ₱2,560.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-GEOM-000633",
+      "source_file": "docs/batches/batch-008.json",
+      "source_record_sha256": "44adacc2fca377e35c5146023ad68f3af2118f1884bf7aa69b20829806ba0feb",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "length_m": 25,
+        "width_m": 13,
+        "cost_per_m": "120"
+      },
+      "method": "rectangular-perimeter-times-unit-rate",
+      "diagnostic": {
+        "prompt": "The question asks about fencing the whole boundary. Which quantity should you find before using a per-meter cost?",
+        "choices": [
+          {
+            "id": "perimeter",
+            "text": "The total distance around the rectangle.",
+            "role": "correct-rule",
+            "feedback": "Correct. A per-meter charge applies to the boundary length, not the area."
+          },
+          {
+            "id": "area",
+            "text": "The length multiplied by the width.",
+            "role": "common-error",
+            "feedback": "That is the area inside the rectangle. Fencing the boundary requires the distance around it."
+          },
+          {
+            "id": "one-side",
+            "text": "Only the length plus the width once.",
+            "role": "common-error",
+            "feedback": "A rectangle has two lengths and two widths around its boundary."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Trace all four sides of the rectangle."
+          }
+        ],
+        "confirmation": "Was that the quantity you used before answering, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "A rectangle has two lengths and two widths.",
+        "Find the perimeter first; multiply it by the rate only if the question asks for cost."
+      ],
+      "worked_solution": [
+        "Perimeter = 2 × (25 + 13) = 76 m.",
+        "Multiply fence length by cost per meter: 76 × ₱120 = ₱9120."
+      ],
+      "mental_shortcut": "Double the sum of length and width, then apply the cost per meter if requested.",
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "9120",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "₱9,120 is right: 76 m × ₱120 = ₱9,120.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-GEOM-000724",
+      "source_file": "docs/batches/batch-009.json",
+      "source_record_sha256": "c5d5c21da4464ce76410ba5e6a2174ec72a30c3c295e08bbb84353cb0e5222ca",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "length_m": 28,
+        "width_m": 20,
+        "cost_per_m": "150"
+      },
+      "method": "rectangular-perimeter-times-unit-rate",
+      "diagnostic": {
+        "prompt": "The question asks about fencing the whole boundary. Which quantity should you find before using a per-meter cost?",
+        "choices": [
+          {
+            "id": "perimeter",
+            "text": "The total distance around the rectangle.",
+            "role": "correct-rule",
+            "feedback": "Correct. A per-meter charge applies to the boundary length, not the area."
+          },
+          {
+            "id": "area",
+            "text": "The length multiplied by the width.",
+            "role": "common-error",
+            "feedback": "That is the area inside the rectangle. Fencing the boundary requires the distance around it."
+          },
+          {
+            "id": "one-side",
+            "text": "Only the length plus the width once.",
+            "role": "common-error",
+            "feedback": "A rectangle has two lengths and two widths around its boundary."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Trace all four sides of the rectangle."
+          }
+        ],
+        "confirmation": "Was that the quantity you used before answering, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "A rectangle has two lengths and two widths.",
+        "Find the perimeter first; multiply it by the rate only if the question asks for cost."
+      ],
+      "worked_solution": [
+        "Perimeter = 2 × (28 + 20) = 96 m.",
+        "Multiply fence length by cost per meter: 96 × ₱150 = ₱14400."
+      ],
+      "mental_shortcut": "Double the sum of length and width, then apply the cost per meter if requested.",
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "14400",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "₱14,400 is right: 96 m × ₱150 = ₱14,400.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-GEOM-000734",
+      "source_file": "docs/batches/batch-009.json",
+      "source_record_sha256": "29805c18e58a9f4ab02f61825e8fda47d26519f5ae173586abccdf7e65150520",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "length_m": 22,
+        "width_m": 20,
+        "cost_per_m": "150"
+      },
+      "method": "rectangular-perimeter-times-unit-rate",
+      "diagnostic": {
+        "prompt": "The question asks about fencing the whole boundary. Which quantity should you find before using a per-meter cost?",
+        "choices": [
+          {
+            "id": "perimeter",
+            "text": "The total distance around the rectangle.",
+            "role": "correct-rule",
+            "feedback": "Correct. A per-meter charge applies to the boundary length, not the area."
+          },
+          {
+            "id": "area",
+            "text": "The length multiplied by the width.",
+            "role": "common-error",
+            "feedback": "That is the area inside the rectangle. Fencing the boundary requires the distance around it."
+          },
+          {
+            "id": "one-side",
+            "text": "Only the length plus the width once.",
+            "role": "common-error",
+            "feedback": "A rectangle has two lengths and two widths around its boundary."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Trace all four sides of the rectangle."
+          }
+        ],
+        "confirmation": "Was that the quantity you used before answering, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "A rectangle has two lengths and two widths.",
+        "Find the perimeter first; multiply it by the rate only if the question asks for cost."
+      ],
+      "worked_solution": [
+        "Perimeter = 2 × (22 + 20) = 84 m.",
+        "Multiply fence length by cost per meter: 84 × ₱150 = ₱12600."
+      ],
+      "mental_shortcut": "Double the sum of length and width, then apply the cost per meter if requested.",
+      "verified_answer": {
+        "option_id": "o2",
+        "value": "12600",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "₱12,600 is right: 84 m × ₱150 = ₱12,600.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-GEOM-000827",
+      "source_file": "docs/batches/batch-010.json",
+      "source_record_sha256": "515b6d79a08a8e24fabcac305fb8d6e8c4491eec06a0a9fe1dd3785c0522879b",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "length_m": 11,
+        "width_m": 3,
+        "cost_per_m": "50"
+      },
+      "method": "rectangular-perimeter-times-unit-rate",
+      "diagnostic": {
+        "prompt": "The question asks about fencing the whole boundary. Which quantity should you find before using a per-meter cost?",
+        "choices": [
+          {
+            "id": "perimeter",
+            "text": "The total distance around the rectangle.",
+            "role": "correct-rule",
+            "feedback": "Correct. A per-meter charge applies to the boundary length, not the area."
+          },
+          {
+            "id": "area",
+            "text": "The length multiplied by the width.",
+            "role": "common-error",
+            "feedback": "That is the area inside the rectangle. Fencing the boundary requires the distance around it."
+          },
+          {
+            "id": "one-side",
+            "text": "Only the length plus the width once.",
+            "role": "common-error",
+            "feedback": "A rectangle has two lengths and two widths around its boundary."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Trace all four sides of the rectangle."
+          }
+        ],
+        "confirmation": "Was that the quantity you used before answering, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "A rectangle has two lengths and two widths.",
+        "Find the perimeter first; multiply it by the rate only if the question asks for cost."
+      ],
+      "worked_solution": [
+        "Perimeter = 2 × (11 + 3) = 28 m.",
+        "Multiply fence length by cost per meter: 28 × ₱50 = ₱1400."
+      ],
+      "mental_shortcut": "Double the sum of length and width, then apply the cost per meter if requested.",
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "1400",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "₱1,400 is right: 28 m × ₱50 = ₱1,400.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-GEOM-000834",
+      "source_file": "docs/batches/batch-010.json",
+      "source_record_sha256": "821e4cea336aadf5f3b186fc479b69518cfafe44509377f5f41e41f487d9052b",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "parameters": {
+        "length_m": 30,
+        "width_m": 13,
+        "cost_per_m": "150"
+      },
+      "method": "rectangular-perimeter-times-unit-rate",
+      "diagnostic": {
+        "prompt": "The question asks about fencing the whole boundary. Which quantity should you find before using a per-meter cost?",
+        "choices": [
+          {
+            "id": "perimeter",
+            "text": "The total distance around the rectangle.",
+            "role": "correct-rule",
+            "feedback": "Correct. A per-meter charge applies to the boundary length, not the area."
+          },
+          {
+            "id": "area",
+            "text": "The length multiplied by the width.",
+            "role": "common-error",
+            "feedback": "That is the area inside the rectangle. Fencing the boundary requires the distance around it."
+          },
+          {
+            "id": "one-side",
+            "text": "Only the length plus the width once.",
+            "role": "common-error",
+            "feedback": "A rectangle has two lengths and two widths around its boundary."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Trace all four sides of the rectangle."
+          }
+        ],
+        "confirmation": "Was that the quantity you used before answering, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "A rectangle has two lengths and two widths.",
+        "Find the perimeter first; multiply it by the rate only if the question asks for cost."
+      ],
+      "worked_solution": [
+        "Perimeter = 2 × (30 + 13) = 86 m.",
+        "Multiply fence length by cost per meter: 86 × ₱150 = ₱12900."
+      ],
+      "mental_shortcut": "Double the sum of length and width, then apply the cost per meter if requested.",
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "12900",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "₱12,900 is right: 86 m × ₱150 = ₱12,900.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-ALGEBRA-000014",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "04cfabf803244bf09fba298202bc974b2e4512ddb96af59f62e74c0df2adef22",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "parameters": {
+        "present_ratio": 3,
+        "years": 12,
+        "future_ratio": 2,
+        "younger_now": "12",
+        "older_now": "36"
+      },
+      "method": "age-ratio-forward-time",
+      "diagnostic": {
+        "prompt": "Let the younger person’s present age be x. Which equation represents the ages 12 years from now?",
+        "choices": [
+          {
+            "id": "both-advance",
+            "text": "3x + 12 = 2(x + 12)",
+            "role": "correct-rule",
+            "feedback": "Yes. Both people age by the same number of years. The future ratio applies to their future ages."
+          },
+          {
+            "id": "only-younger-advances",
+            "text": "3x = 2(x + 12)",
+            "role": "common-error",
+            "feedback": "This advances the younger person but leaves the older person at the present age. Add the same time to both."
+          },
+          {
+            "id": "only-older-advances",
+            "text": "3x + 12 = 2x",
+            "role": "common-error",
+            "feedback": "This advances the older person but leaves the younger person at the present age. Add the same time to both."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Track each person’s present age and future age separately."
+          }
+        ],
+        "confirmation": "Was that how you set up the original problem, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Choose x for the younger person’s age now; express the older person’s current age with the given ratio.",
+        "After t years, add t to both ages before applying the future ratio."
+      ],
+      "worked_solution": [
+        "Let the younger person’s present age be x. The older person is 3x now.",
+        "After 12 years: 3x + 12 = 2(x + 12).",
+        "Solve: x = 12; the older person’s present age is 3 × 12 = 36.",
+        "Check: now 36:12 = 3:1; in 12 years, 48:24 = 2:1."
+      ],
+      "mental_shortcut": "The younger age is t × (future ratio − 1) ÷ (present ratio − future ratio); multiply by the present ratio if asked for the older person.",
+      "verified_answer": {
+        "option_id": "t3",
+        "value": "36",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "36 is right. Algebra check: son = s, Teresa = 3s. 3s + 12 = 2(s + 12), so 3s + 12 = 2s + 24, so s = 12 and Teresa = 36.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-ALGEBRA-000025",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "8cf684e2536df30460144d120a60576e99fedb9e02b06558bd53069cc9f5e540",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "parameters": {
+        "present_ratio": 3,
+        "years": 5,
+        "future_ratio": 2,
+        "younger_now": "5",
+        "older_now": "15"
+      },
+      "method": "age-ratio-forward-time",
+      "diagnostic": {
+        "prompt": "Let the younger person’s present age be x. Which equation represents the ages 5 years from now?",
+        "choices": [
+          {
+            "id": "both-advance",
+            "text": "3x + 5 = 2(x + 5)",
+            "role": "correct-rule",
+            "feedback": "Yes. Both people age by the same number of years. The future ratio applies to their future ages."
+          },
+          {
+            "id": "only-younger-advances",
+            "text": "3x = 2(x + 5)",
+            "role": "common-error",
+            "feedback": "This advances the younger person but leaves the older person at the present age. Add the same time to both."
+          },
+          {
+            "id": "only-older-advances",
+            "text": "3x + 5 = 2x",
+            "role": "common-error",
+            "feedback": "This advances the older person but leaves the younger person at the present age. Add the same time to both."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Track each person’s present age and future age separately."
+          }
+        ],
+        "confirmation": "Was that how you set up the original problem, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Choose x for the younger person’s age now; express the older person’s current age with the given ratio.",
+        "After t years, add t to both ages before applying the future ratio."
+      ],
+      "worked_solution": [
+        "Let the younger person’s present age be x. The older person is 3x now.",
+        "After 5 years: 3x + 5 = 2(x + 5).",
+        "Solve: x = 5; the older person’s present age is 3 × 5 = 15.",
+        "Check: now 15:5 = 3:1; in 5 years, 20:10 = 2:1."
+      ],
+      "mental_shortcut": "The younger age is t × (future ratio − 1) ÷ (present ratio − future ratio); multiply by the present ratio if asked for the older person.",
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "15",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "15 is right. Algebra: daughter = s, Rogelio = 3s; 3s + 5 = 2(s + 5) gives s = 5, so Rogelio = 15.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-ALGEBRA-000026",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "c48678114af58289fcf0a6d174202030dd9f3b3f27aed5fce9bc3f8419d8400b",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "parameters": {
+        "present_ratio": 4,
+        "years": 10,
+        "future_ratio": 2,
+        "younger_now": "5",
+        "older_now": "20"
+      },
+      "method": "age-ratio-forward-time",
+      "diagnostic": {
+        "prompt": "Let the younger person’s present age be x. Which equation represents the ages 10 years from now?",
+        "choices": [
+          {
+            "id": "both-advance",
+            "text": "4x + 10 = 2(x + 10)",
+            "role": "correct-rule",
+            "feedback": "Yes. Both people age by the same number of years. The future ratio applies to their future ages."
+          },
+          {
+            "id": "only-younger-advances",
+            "text": "4x = 2(x + 10)",
+            "role": "common-error",
+            "feedback": "This advances the younger person but leaves the older person at the present age. Add the same time to both."
+          },
+          {
+            "id": "only-older-advances",
+            "text": "4x + 10 = 2x",
+            "role": "common-error",
+            "feedback": "This advances the older person but leaves the younger person at the present age. Add the same time to both."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Track each person’s present age and future age separately."
+          }
+        ],
+        "confirmation": "Was that how you set up the original problem, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Choose x for the younger person’s age now; express the older person’s current age with the given ratio.",
+        "After t years, add t to both ages before applying the future ratio."
+      ],
+      "worked_solution": [
+        "Let the younger person’s present age be x. The older person is 4x now.",
+        "After 10 years: 4x + 10 = 2(x + 10).",
+        "Solve: x = 5; the older person’s present age is 4 × 5 = 20.",
+        "Check: now 20:5 = 4:1; in 10 years, 30:15 = 2:1."
+      ],
+      "mental_shortcut": "The younger age is t × (future ratio − 1) ÷ (present ratio − future ratio); multiply by the present ratio if asked for the older person.",
+      "verified_answer": {
+        "option_id": "o2",
+        "value": "20",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "20 is right. Algebra: nephew = s, Aileen = 4s; 4s + 10 = 2(s + 10) gives s = 5, so Aileen = 20.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-ALGEBRA-000130",
+      "source_file": "docs/batches/batch-003.json",
+      "source_record_sha256": "4723e4e82248c2277b2f1187454d2a6f19d7c33155b6506328455885f21ffc3d",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "parameters": {
+        "present_ratio": 5,
+        "years": 15,
+        "future_ratio": 3,
+        "younger_now": "15",
+        "older_now": "75"
+      },
+      "method": "age-ratio-forward-time",
+      "diagnostic": {
+        "prompt": "Let the younger person’s present age be x. Which equation represents the ages 15 years from now?",
+        "choices": [
+          {
+            "id": "both-advance",
+            "text": "5x + 15 = 3(x + 15)",
+            "role": "correct-rule",
+            "feedback": "Yes. Both people age by the same number of years. The future ratio applies to their future ages."
+          },
+          {
+            "id": "only-younger-advances",
+            "text": "5x = 3(x + 15)",
+            "role": "common-error",
+            "feedback": "This advances the younger person but leaves the older person at the present age. Add the same time to both."
+          },
+          {
+            "id": "only-older-advances",
+            "text": "5x + 15 = 3x",
+            "role": "common-error",
+            "feedback": "This advances the older person but leaves the younger person at the present age. Add the same time to both."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Track each person’s present age and future age separately."
+          }
+        ],
+        "confirmation": "Was that how you set up the original problem, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Choose x for the younger person’s age now; express the older person’s current age with the given ratio.",
+        "After t years, add t to both ages before applying the future ratio."
+      ],
+      "worked_solution": [
+        "Let the younger person’s present age be x. The older person is 5x now.",
+        "After 15 years: 5x + 15 = 3(x + 15).",
+        "Solve: x = 15; the older person’s present age is 5 × 15 = 75.",
+        "Check: now 75:15 = 5:1; in 15 years, 90:30 = 3:1."
+      ],
+      "mental_shortcut": "The younger age is t × (future ratio − 1) ÷ (present ratio − future ratio); multiply by the present ratio if asked for the older person.",
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "75",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "75 is right. Algebra: daughter = s, Nestor = 5s; 5s + 15 = 3(s + 15) gives s = 15, so Nestor = 75.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-ALGEBRA-000216",
+      "source_file": "docs/batches/batch-004.json",
+      "source_record_sha256": "ff2a6e0ac2b29bde63cf223303f3feb4f77e24f01af28ae39faf15efb0f8bc60",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "parameters": {
+        "present_ratio": 3,
+        "years": 11,
+        "future_ratio": 2,
+        "younger_now": "11",
+        "older_now": "33"
+      },
+      "method": "age-ratio-forward-time",
+      "diagnostic": {
+        "prompt": "Let the younger person’s present age be x. Which equation represents the ages 11 years from now?",
+        "choices": [
+          {
+            "id": "both-advance",
+            "text": "3x + 11 = 2(x + 11)",
+            "role": "correct-rule",
+            "feedback": "Yes. Both people age by the same number of years. The future ratio applies to their future ages."
+          },
+          {
+            "id": "only-younger-advances",
+            "text": "3x = 2(x + 11)",
+            "role": "common-error",
+            "feedback": "This advances the younger person but leaves the older person at the present age. Add the same time to both."
+          },
+          {
+            "id": "only-older-advances",
+            "text": "3x + 11 = 2x",
+            "role": "common-error",
+            "feedback": "This advances the older person but leaves the younger person at the present age. Add the same time to both."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Track each person’s present age and future age separately."
+          }
+        ],
+        "confirmation": "Was that how you set up the original problem, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Choose x for the younger person’s age now; express the older person’s current age with the given ratio.",
+        "After t years, add t to both ages before applying the future ratio."
+      ],
+      "worked_solution": [
+        "Let the younger person’s present age be x. The older person is 3x now.",
+        "After 11 years: 3x + 11 = 2(x + 11).",
+        "Solve: x = 11; the older person’s present age is 3 × 11 = 33.",
+        "Check: now 33:11 = 3:1; in 11 years, 44:22 = 2:1."
+      ],
+      "mental_shortcut": "The younger age is t × (future ratio − 1) ÷ (present ratio − future ratio); multiply by the present ratio if asked for the older person.",
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "33",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "33 is right. Algebra: nephew = s, Inday = 3s; 3s + 11 = 2(s + 11) gives s = 11, so Inday = 33.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-ALGEBRA-000219",
+      "source_file": "docs/batches/batch-004.json",
+      "source_record_sha256": "a4e6ab493e797e2254349eabddd570bd60af533b8e1e7c02650baedb6baf4519",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "parameters": {
+        "present_ratio": 3,
+        "years": 10,
+        "future_ratio": 2,
+        "younger_now": "10",
+        "older_now": "30"
+      },
+      "method": "age-ratio-forward-time",
+      "diagnostic": {
+        "prompt": "Let the younger person’s present age be x. Which equation represents the ages 10 years from now?",
+        "choices": [
+          {
+            "id": "both-advance",
+            "text": "3x + 10 = 2(x + 10)",
+            "role": "correct-rule",
+            "feedback": "Yes. Both people age by the same number of years. The future ratio applies to their future ages."
+          },
+          {
+            "id": "only-younger-advances",
+            "text": "3x = 2(x + 10)",
+            "role": "common-error",
+            "feedback": "This advances the younger person but leaves the older person at the present age. Add the same time to both."
+          },
+          {
+            "id": "only-older-advances",
+            "text": "3x + 10 = 2x",
+            "role": "common-error",
+            "feedback": "This advances the older person but leaves the younger person at the present age. Add the same time to both."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Track each person’s present age and future age separately."
+          }
+        ],
+        "confirmation": "Was that how you set up the original problem, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Choose x for the younger person’s age now; express the older person’s current age with the given ratio.",
+        "After t years, add t to both ages before applying the future ratio."
+      ],
+      "worked_solution": [
+        "Let the younger person’s present age be x. The older person is 3x now.",
+        "After 10 years: 3x + 10 = 2(x + 10).",
+        "Solve: x = 10; the older person’s present age is 3 × 10 = 30.",
+        "Check: now 30:10 = 3:1; in 10 years, 40:20 = 2:1."
+      ],
+      "mental_shortcut": "The younger age is t × (future ratio − 1) ÷ (present ratio − future ratio); multiply by the present ratio if asked for the older person.",
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "30",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "30 is right. Algebra: son = s, Analyn = 3s; 3s + 10 = 2(s + 10) gives s = 10, so Analyn = 30.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-ALGEBRA-000229",
+      "source_file": "docs/batches/batch-004.json",
+      "source_record_sha256": "6af32dd433414a983c107b5511521ddc3e56181f76c7241fa37a919b5803e39d",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "parameters": {
+        "present_ratio": 5,
+        "years": 24,
+        "future_ratio": 2,
+        "younger_now": "8",
+        "older_now": "40"
+      },
+      "method": "age-ratio-forward-time",
+      "diagnostic": {
+        "prompt": "Let the younger person’s present age be x. Which equation represents the ages 24 years from now?",
+        "choices": [
+          {
+            "id": "both-advance",
+            "text": "5x + 24 = 2(x + 24)",
+            "role": "correct-rule",
+            "feedback": "Yes. Both people age by the same number of years. The future ratio applies to their future ages."
+          },
+          {
+            "id": "only-younger-advances",
+            "text": "5x = 2(x + 24)",
+            "role": "common-error",
+            "feedback": "This advances the younger person but leaves the older person at the present age. Add the same time to both."
+          },
+          {
+            "id": "only-older-advances",
+            "text": "5x + 24 = 2x",
+            "role": "common-error",
+            "feedback": "This advances the older person but leaves the younger person at the present age. Add the same time to both."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Track each person’s present age and future age separately."
+          }
+        ],
+        "confirmation": "Was that how you set up the original problem, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Choose x for the younger person’s age now; express the older person’s current age with the given ratio.",
+        "After t years, add t to both ages before applying the future ratio."
+      ],
+      "worked_solution": [
+        "Let the younger person’s present age be x. The older person is 5x now.",
+        "After 24 years: 5x + 24 = 2(x + 24).",
+        "Solve: x = 8; the older person’s present age is 5 × 8 = 40.",
+        "Check: now 40:8 = 5:1; in 24 years, 64:32 = 2:1."
+      ],
+      "mental_shortcut": "The younger age is t × (future ratio − 1) ÷ (present ratio − future ratio); multiply by the present ratio if asked for the older person.",
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "40",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "40 is right. Algebra: son = s, Rhea = 5s; 5s + 24 = 2(s + 24) gives s = 8, so Rhea = 40.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-ALGEBRA-000418",
+      "source_file": "docs/batches/batch-006.json",
+      "source_record_sha256": "e7ed3c5776073d9680e66cb58543ae0d480cd6a2466c5d1c242ddb4447e47f52",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "parameters": {
+        "present_ratio": 3,
+        "years": 12,
+        "future_ratio": 2,
+        "younger_now": "12",
+        "older_now": "36"
+      },
+      "method": "age-ratio-forward-time",
+      "diagnostic": {
+        "prompt": "Let the younger person’s present age be x. Which equation represents the ages 12 years from now?",
+        "choices": [
+          {
+            "id": "both-advance",
+            "text": "3x + 12 = 2(x + 12)",
+            "role": "correct-rule",
+            "feedback": "Yes. Both people age by the same number of years. The future ratio applies to their future ages."
+          },
+          {
+            "id": "only-younger-advances",
+            "text": "3x = 2(x + 12)",
+            "role": "common-error",
+            "feedback": "This advances the younger person but leaves the older person at the present age. Add the same time to both."
+          },
+          {
+            "id": "only-older-advances",
+            "text": "3x + 12 = 2x",
+            "role": "common-error",
+            "feedback": "This advances the older person but leaves the younger person at the present age. Add the same time to both."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Track each person’s present age and future age separately."
+          }
+        ],
+        "confirmation": "Was that how you set up the original problem, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Choose x for the younger person’s age now; express the older person’s current age with the given ratio.",
+        "After t years, add t to both ages before applying the future ratio."
+      ],
+      "worked_solution": [
+        "Let the younger person’s present age be x. The older person is 3x now.",
+        "After 12 years: 3x + 12 = 2(x + 12).",
+        "Solve: x = 12; the older person’s present age is 3 × 12 = 36.",
+        "Check: now 36:12 = 3:1; in 12 years, 48:24 = 2:1."
+      ],
+      "mental_shortcut": "The younger age is t × (future ratio − 1) ÷ (present ratio − future ratio); multiply by the present ratio if asked for the older person.",
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "36",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "36 is right. Algebra: daughter = s, Bong = 3s; 3s + 12 = 2(s + 12) gives s = 12, so Bong = 36.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-ALGEBRA-000435",
+      "source_file": "docs/batches/batch-006.json",
+      "source_record_sha256": "c608306c14700c2cf78c573dd12f3b8eb8f5c4c0443d576a39ab17821f13fad8",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "parameters": {
+        "present_ratio": 5,
+        "years": 10,
+        "future_ratio": 3,
+        "younger_now": "10",
+        "older_now": "50"
+      },
+      "method": "age-ratio-forward-time",
+      "diagnostic": {
+        "prompt": "Let the younger person’s present age be x. Which equation represents the ages 10 years from now?",
+        "choices": [
+          {
+            "id": "both-advance",
+            "text": "5x + 10 = 3(x + 10)",
+            "role": "correct-rule",
+            "feedback": "Yes. Both people age by the same number of years. The future ratio applies to their future ages."
+          },
+          {
+            "id": "only-younger-advances",
+            "text": "5x = 3(x + 10)",
+            "role": "common-error",
+            "feedback": "This advances the younger person but leaves the older person at the present age. Add the same time to both."
+          },
+          {
+            "id": "only-older-advances",
+            "text": "5x + 10 = 3x",
+            "role": "common-error",
+            "feedback": "This advances the older person but leaves the younger person at the present age. Add the same time to both."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Track each person’s present age and future age separately."
+          }
+        ],
+        "confirmation": "Was that how you set up the original problem, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Choose x for the younger person’s age now; express the older person’s current age with the given ratio.",
+        "After t years, add t to both ages before applying the future ratio."
+      ],
+      "worked_solution": [
+        "Let the younger person’s present age be x. The older person is 5x now.",
+        "After 10 years: 5x + 10 = 3(x + 10).",
+        "Solve: x = 10; the older person’s present age is 5 × 10 = 50.",
+        "Check: now 50:10 = 5:1; in 10 years, 60:20 = 3:1."
+      ],
+      "mental_shortcut": "The younger age is t × (future ratio − 1) ÷ (present ratio − future ratio); multiply by the present ratio if asked for the older person.",
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "50",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "50 is right. Algebra: daughter = s, Nestor = 5s; 5s + 10 = 3(s + 10) gives s = 10, so Nestor = 50.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-ALGEBRA-000512",
+      "source_file": "docs/batches/batch-007.json",
+      "source_record_sha256": "c8c3741d0c7d42dc68257bff68f1cb322d80078b83308c55fd95b9a7d2ae236a",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "parameters": {
+        "present_ratio": 5,
+        "years": 16,
+        "future_ratio": 3,
+        "younger_now": "16",
+        "older_now": "80"
+      },
+      "method": "age-ratio-forward-time",
+      "diagnostic": {
+        "prompt": "Let the younger person’s present age be x. Which equation represents the ages 16 years from now?",
+        "choices": [
+          {
+            "id": "both-advance",
+            "text": "5x + 16 = 3(x + 16)",
+            "role": "correct-rule",
+            "feedback": "Yes. Both people age by the same number of years. The future ratio applies to their future ages."
+          },
+          {
+            "id": "only-younger-advances",
+            "text": "5x = 3(x + 16)",
+            "role": "common-error",
+            "feedback": "This advances the younger person but leaves the older person at the present age. Add the same time to both."
+          },
+          {
+            "id": "only-older-advances",
+            "text": "5x + 16 = 3x",
+            "role": "common-error",
+            "feedback": "This advances the older person but leaves the younger person at the present age. Add the same time to both."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Track each person’s present age and future age separately."
+          }
+        ],
+        "confirmation": "Was that how you set up the original problem, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Choose x for the younger person’s age now; express the older person’s current age with the given ratio.",
+        "After t years, add t to both ages before applying the future ratio."
+      ],
+      "worked_solution": [
+        "Let the younger person’s present age be x. The older person is 5x now.",
+        "After 16 years: 5x + 16 = 3(x + 16).",
+        "Solve: x = 16; the older person’s present age is 5 × 16 = 80.",
+        "Check: now 80:16 = 5:1; in 16 years, 96:32 = 3:1."
+      ],
+      "mental_shortcut": "The younger age is t × (future ratio − 1) ÷ (present ratio − future ratio); multiply by the present ratio if asked for the older person.",
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "80",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "80 is right. Algebra: niece = s, Bea = 5s; 5s + 16 = 3(s + 16) gives s = 16, so Bea = 80.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-ALGEBRA-000624",
+      "source_file": "docs/batches/batch-008.json",
+      "source_record_sha256": "81266c68376569c494801ae87bdb9552df088bae3397118d5dd85916bdee807b",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "parameters": {
+        "present_ratio": 5,
+        "years": 14,
+        "future_ratio": 3,
+        "younger_now": "14",
+        "older_now": "70"
+      },
+      "method": "age-ratio-forward-time",
+      "diagnostic": {
+        "prompt": "Let the younger person’s present age be x. Which equation represents the ages 14 years from now?",
+        "choices": [
+          {
+            "id": "both-advance",
+            "text": "5x + 14 = 3(x + 14)",
+            "role": "correct-rule",
+            "feedback": "Yes. Both people age by the same number of years. The future ratio applies to their future ages."
+          },
+          {
+            "id": "only-younger-advances",
+            "text": "5x = 3(x + 14)",
+            "role": "common-error",
+            "feedback": "This advances the younger person but leaves the older person at the present age. Add the same time to both."
+          },
+          {
+            "id": "only-older-advances",
+            "text": "5x + 14 = 3x",
+            "role": "common-error",
+            "feedback": "This advances the older person but leaves the younger person at the present age. Add the same time to both."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Track each person’s present age and future age separately."
+          }
+        ],
+        "confirmation": "Was that how you set up the original problem, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Choose x for the younger person’s age now; express the older person’s current age with the given ratio.",
+        "After t years, add t to both ages before applying the future ratio."
+      ],
+      "worked_solution": [
+        "Let the younger person’s present age be x. The older person is 5x now.",
+        "After 14 years: 5x + 14 = 3(x + 14).",
+        "Solve: x = 14; the older person’s present age is 5 × 14 = 70.",
+        "Check: now 70:14 = 5:1; in 14 years, 84:28 = 3:1."
+      ],
+      "mental_shortcut": "The younger age is t × (future ratio − 1) ÷ (present ratio − future ratio); multiply by the present ratio if asked for the older person.",
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "70",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "70 is right. Algebra: niece = s, Lourdes = 5s; 5s + 14 = 3(s + 14) gives s = 14, so Lourdes = 70.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-ALGEBRA-000823",
+      "source_file": "docs/batches/batch-010.json",
+      "source_record_sha256": "c6e35bfe794e90df51324e62cda1c207043490fd5e46b437a4af0e4425af83d0",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "parameters": {
+        "present_ratio": 3,
+        "years": 5,
+        "future_ratio": 2,
+        "younger_now": "5",
+        "older_now": "15"
+      },
+      "method": "age-ratio-forward-time",
+      "diagnostic": {
+        "prompt": "Let the younger person’s present age be x. Which equation represents the ages 5 years from now?",
+        "choices": [
+          {
+            "id": "both-advance",
+            "text": "3x + 5 = 2(x + 5)",
+            "role": "correct-rule",
+            "feedback": "Yes. Both people age by the same number of years. The future ratio applies to their future ages."
+          },
+          {
+            "id": "only-younger-advances",
+            "text": "3x = 2(x + 5)",
+            "role": "common-error",
+            "feedback": "This advances the younger person but leaves the older person at the present age. Add the same time to both."
+          },
+          {
+            "id": "only-older-advances",
+            "text": "3x + 5 = 2x",
+            "role": "common-error",
+            "feedback": "This advances the older person but leaves the younger person at the present age. Add the same time to both."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Track each person’s present age and future age separately."
+          }
+        ],
+        "confirmation": "Was that how you set up the original problem, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Choose x for the younger person’s age now; express the older person’s current age with the given ratio.",
+        "After t years, add t to both ages before applying the future ratio."
+      ],
+      "worked_solution": [
+        "Let the younger person’s present age be x. The older person is 3x now.",
+        "After 5 years: 3x + 5 = 2(x + 5).",
+        "Solve: x = 5; the older person’s present age is 3 × 5 = 15.",
+        "Check: now 15:5 = 3:1; in 5 years, 20:10 = 2:1."
+      ],
+      "mental_shortcut": "The younger age is t × (future ratio − 1) ÷ (present ratio − future ratio); multiply by the present ratio if asked for the older person.",
+      "verified_answer": {
+        "option_id": "o2",
+        "value": "15",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "15 is right. Algebra: niece = s, Nonoy = 3s; 3s + 5 = 2(s + 5) gives s = 5, so Nonoy = 15.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-ALGEBRA-000828",
+      "source_file": "docs/batches/batch-010.json",
+      "source_record_sha256": "4d012807b91dbd699346e39e3d3a043838ff42c52e0652af153845334aef1313",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "parameters": {
+        "present_ratio": 4,
+        "years": 24,
+        "future_ratio": 2,
+        "younger_now": "12",
+        "older_now": "48"
+      },
+      "method": "age-ratio-forward-time",
+      "diagnostic": {
+        "prompt": "Let the younger person’s present age be x. Which equation represents the ages 24 years from now?",
+        "choices": [
+          {
+            "id": "both-advance",
+            "text": "4x + 24 = 2(x + 24)",
+            "role": "correct-rule",
+            "feedback": "Yes. Both people age by the same number of years. The future ratio applies to their future ages."
+          },
+          {
+            "id": "only-younger-advances",
+            "text": "4x = 2(x + 24)",
+            "role": "common-error",
+            "feedback": "This advances the younger person but leaves the older person at the present age. Add the same time to both."
+          },
+          {
+            "id": "only-older-advances",
+            "text": "4x + 24 = 2x",
+            "role": "common-error",
+            "feedback": "This advances the older person but leaves the younger person at the present age. Add the same time to both."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Track each person’s present age and future age separately."
+          }
+        ],
+        "confirmation": "Was that how you set up the original problem, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Choose x for the younger person’s age now; express the older person’s current age with the given ratio.",
+        "After t years, add t to both ages before applying the future ratio."
+      ],
+      "worked_solution": [
+        "Let the younger person’s present age be x. The older person is 4x now.",
+        "After 24 years: 4x + 24 = 2(x + 24).",
+        "Solve: x = 12; the older person’s present age is 4 × 12 = 48.",
+        "Check: now 48:12 = 4:1; in 24 years, 72:36 = 2:1."
+      ],
+      "mental_shortcut": "The younger age is t × (future ratio − 1) ÷ (present ratio − future ratio); multiply by the present ratio if asked for the older person.",
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "48",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "48 is right. Algebra: daughter = s, Analyn = 4s; 4s + 24 = 2(s + 24) gives s = 12, so Analyn = 48.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-ALGEBRA-000835",
+      "source_file": "docs/batches/batch-010.json",
+      "source_record_sha256": "98a5378f018512e9349bcfad3c24ef406b4f9819d42bcc8dbe435872093d4a3c",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "parameters": {
+        "present_ratio": 3,
+        "years": 7,
+        "future_ratio": 2,
+        "younger_now": "7",
+        "older_now": "21"
+      },
+      "method": "age-ratio-forward-time",
+      "diagnostic": {
+        "prompt": "Let the younger person’s present age be x. Which equation represents the ages 7 years from now?",
+        "choices": [
+          {
+            "id": "both-advance",
+            "text": "3x + 7 = 2(x + 7)",
+            "role": "correct-rule",
+            "feedback": "Yes. Both people age by the same number of years. The future ratio applies to their future ages."
+          },
+          {
+            "id": "only-younger-advances",
+            "text": "3x = 2(x + 7)",
+            "role": "common-error",
+            "feedback": "This advances the younger person but leaves the older person at the present age. Add the same time to both."
+          },
+          {
+            "id": "only-older-advances",
+            "text": "3x + 7 = 2x",
+            "role": "common-error",
+            "feedback": "This advances the older person but leaves the younger person at the present age. Add the same time to both."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Track each person’s present age and future age separately."
+          }
+        ],
+        "confirmation": "Was that how you set up the original problem, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Choose x for the younger person’s age now; express the older person’s current age with the given ratio.",
+        "After t years, add t to both ages before applying the future ratio."
+      ],
+      "worked_solution": [
+        "Let the younger person’s present age be x. The older person is 3x now.",
+        "After 7 years: 3x + 7 = 2(x + 7).",
+        "Solve: x = 7; the older person’s present age is 3 × 7 = 21.",
+        "Check: now 21:7 = 3:1; in 7 years, 28:14 = 2:1."
+      ],
+      "mental_shortcut": "The younger age is t × (future ratio − 1) ÷ (present ratio − future ratio); multiply by the present ratio if asked for the older person.",
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "21",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "21 is right. Algebra: niece = s, Aling Rosa = 3s; 3s + 7 = 2(s + 7) gives s = 7, so Aling Rosa = 21.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-ALGEBRA-000936",
+      "source_file": "docs/batches/batch-011.json",
+      "source_record_sha256": "f08248dffd9db0fef070b57d6215ec996c9481c74541e812396c479d38a88b42",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "parameters": {
+        "present_ratio": 3,
+        "years": 14,
+        "future_ratio": 2,
+        "younger_now": "14",
+        "older_now": "42"
+      },
+      "method": "age-ratio-forward-time",
+      "diagnostic": {
+        "prompt": "Let the younger person’s present age be x. Which equation represents the ages 14 years from now?",
+        "choices": [
+          {
+            "id": "both-advance",
+            "text": "3x + 14 = 2(x + 14)",
+            "role": "correct-rule",
+            "feedback": "Yes. Both people age by the same number of years. The future ratio applies to their future ages."
+          },
+          {
+            "id": "only-younger-advances",
+            "text": "3x = 2(x + 14)",
+            "role": "common-error",
+            "feedback": "This advances the younger person but leaves the older person at the present age. Add the same time to both."
+          },
+          {
+            "id": "only-older-advances",
+            "text": "3x + 14 = 2x",
+            "role": "common-error",
+            "feedback": "This advances the older person but leaves the younger person at the present age. Add the same time to both."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Track each person’s present age and future age separately."
+          }
+        ],
+        "confirmation": "Was that how you set up the original problem, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Choose x for the younger person’s age now; express the older person’s current age with the given ratio.",
+        "After t years, add t to both ages before applying the future ratio."
+      ],
+      "worked_solution": [
+        "Let the younger person’s present age be x. The older person is 3x now.",
+        "After 14 years: 3x + 14 = 2(x + 14).",
+        "Solve: x = 14; the older person’s present age is 3 × 14 = 42.",
+        "Check: now 42:14 = 3:1; in 14 years, 56:28 = 2:1."
+      ],
+      "mental_shortcut": "The younger age is t × (future ratio − 1) ÷ (present ratio − future ratio); multiply by the present ratio if asked for the older person.",
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "42",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "42 is right. Algebra: niece = s, Inday = 3s; 3s + 14 = 2(s + 14) gives s = 14, so Inday = 42.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-ALGEBRA-000937",
+      "source_file": "docs/batches/batch-011.json",
+      "source_record_sha256": "790491af2330954ebedd450192d4f629e93dbcbe73cc817c94c698d9c3f9e392",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "parameters": {
+        "present_ratio": 4,
+        "years": 8,
+        "future_ratio": 3,
+        "younger_now": "16",
+        "older_now": "64"
+      },
+      "method": "age-ratio-forward-time",
+      "diagnostic": {
+        "prompt": "Let the younger person’s present age be x. Which equation represents the ages 8 years from now?",
+        "choices": [
+          {
+            "id": "both-advance",
+            "text": "4x + 8 = 3(x + 8)",
+            "role": "correct-rule",
+            "feedback": "Yes. Both people age by the same number of years. The future ratio applies to their future ages."
+          },
+          {
+            "id": "only-younger-advances",
+            "text": "4x = 3(x + 8)",
+            "role": "common-error",
+            "feedback": "This advances the younger person but leaves the older person at the present age. Add the same time to both."
+          },
+          {
+            "id": "only-older-advances",
+            "text": "4x + 8 = 3x",
+            "role": "common-error",
+            "feedback": "This advances the older person but leaves the younger person at the present age. Add the same time to both."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Track each person’s present age and future age separately."
+          }
+        ],
+        "confirmation": "Was that how you set up the original problem, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Choose x for the younger person’s age now; express the older person’s current age with the given ratio.",
+        "After t years, add t to both ages before applying the future ratio."
+      ],
+      "worked_solution": [
+        "Let the younger person’s present age be x. The older person is 4x now.",
+        "After 8 years: 4x + 8 = 3(x + 8).",
+        "Solve: x = 16; the older person’s present age is 4 × 16 = 64.",
+        "Check: now 64:16 = 4:1; in 8 years, 72:24 = 3:1."
+      ],
+      "mental_shortcut": "The younger age is t × (future ratio − 1) ÷ (present ratio − future ratio); multiply by the present ratio if asked for the older person.",
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "64",
+        "exact_calculation_matches_stored_key": true
+      },
+      "existing_explanation_reference": "64 is right. Algebra: niece = s, Ramon = 4s; 4s + 8 = 3(s + 8) gives s = 16, so Ramon = 64.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_and_all_retries_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_not_independent_proof": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    }
+  ],
+  "excluded_nonapproved_ids": [
+    "CIVIO-NUM-WP-AVERAGE-926049",
+    "CIVIO-D1022-SPMATH-0054",
+    "CIVIO-D1022-SPMATH-0055",
+    "CIVIO-NUM-WP-GEOM-000226-R1",
+    "CIVIO-B4-NUM-WP-GEOM-0206",
+    "CIVIO-D1022-SPMATH-0058",
+    "CIVIO-D1022-SPMATH-0059",
+    "CIVIO-D1022-SPMATH-0034",
+    "CIVIO-NUM-WP-ALGEBRA-926033",
+    "CIVIO-NUM-WP-ALGEBRA-926034",
+    "CIVIO-NUM-WP-ALGEBRA-926035",
+    "CIVIO-NUM-WP-ALGEBRA-926036",
+    "CIVIO-NUM-WP-ALGEBRA-926038",
+    "CIVIO-NUM-WP-ALGEBRA-926039-R1",
+    "CIVIO-NUM-WP-ALGEBRA-926040",
+    "CIVIO-NUM-WP-ALGEBRA-926041-R1",
+    "CIVIO-NUM-WP-ALGEBRA-926042-R1",
+    "CIVIO-NUM-WP-ALGEBRA-926048",
+    "CIVIO-D1022-SPMATH-0035",
+    "CIVIO-D1022-SPMATH-0036",
+    "CIVIO-D1022-SPMATH-0037",
+    "CIVIO-D1022-SPMATH-0038",
+    "CIVIO-B4-NUM-WP-ALGEBRA-0201",
+    "CIVIO-D1022-SPMATH-0031",
+    "CIVIO-D1022-SPMATH-0032",
+    "CIVIO-D1022-SPMATH-0033",
+    "CIVIO-NUM-WP-ALGEBRA-926051"
+  ],
+  "notes": [
+    "Exact calculations are checked; wording, diagnostic quality, and feedback still require editorial review.",
+    "Three separate method families use one reusable interaction shape each.",
+    "No unrelated approved transfer candidate is asserted.",
+    "No canonical question, option, key, status or source reference was changed."
+  ]
+}

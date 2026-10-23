@@ -118,3 +118,5 @@ No runtime/PHP/browser tests or learner study were run for this research-only ch
 See [resumable production](BULK_EXECUTION.md), [current summary](bulk-summary.json), [per-record ledger](bulk-state.json.gz), [Luna Medium family drafts](family-recipes-luna-v0.1.json), [25-binding math overlay](math25-v0.1.json) and [automated QA](bulk-validation.json). These extend the existing sidecars without replacing them. All 2,100 candidates are queued; all tutoring remains draft. A covered queue entry is not an approved tutoring binding.
 
 **Numerical queue batch 1:** [84-item key audit, 59 approved-source Guide Me drafts, and reproducible checks](BULK_EXECUTION.md#numerical-batch-1-order-of-operations-and-sequences). The 25 non-approved source records were audited but excluded from tutoring bindings.
+
+**Numerical queue batch 2:** [87-item exact word-problem audit and 60 approved-source tutoring drafts](BULK_EXECUTION.md#numerical-batch-2-averages-geometry-and-algebra-word-problems). 8 reviewed and 19 draft bank records were audited but not bound.

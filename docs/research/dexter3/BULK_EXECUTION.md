@@ -78,3 +78,23 @@ python3 docs/research/dexter3/validate_numerical84.py
 ```
 
 The audit is exact and reproducible, but it does not replace the separate editorial review of human-readable diagnostic branches, distractor validity or learning effectiveness. These 59 bindings remain draft pending that review.
+
+## Numerical batch 2: averages, geometry and algebra word problems
+
+Checkpoint parent: `c2f003c6746573e82d8d07ec1206b9ad22aad3ef`.
+
+A deterministic, method-specific pass audited **87 records**: 29 averages, 22 geometry and 36 algebra. All 87 calculations matched the stored key and exactly one choice; the supported stems all include feedback for wrong options. No key conflict was found. The 60 source records labeled approved received draft tutoring bindings; 8 reviewed and 19 draft records were audited but excluded from tutoring bindings.
+
+The 60 approved bindings reuse three concept-specific diagnostics: recovering a group's total from its average before adding a member; finding rectangle perimeter before applying a per-meter rate; and translating present/future age ratios into an equation where both people age. Solutions were recomputed exactly, explanations still point to the unchanged canonical record, and every draft leaves transfer unresolved. Diagnostic responses are assisted and cannot establish mastery or a confirmed misconception.
+
+The bank repeats 12 parameterized stem templates across this 87-item batch. The largest approved pools are 26 new-member average questions, 18 rectangle perimeter-and-cost questions, and 16 age-ratio questions. Repeated templates have different values or names, so this is evidence of narrow practice variety rather than proof that all are exact duplicate records. The separate sequence audit already identified one exact repeated term list.
+
+Run:
+
+```bash
+python3 docs/research/dexter3/audit_word_math87.py
+python3 docs/research/dexter3/build_word_math87_tutoring.py
+python3 docs/research/dexter3/validate_word_math87.py
+```
+
+This is answer verification and a draft teaching scaffold, not independent editorial approval. Review calculations for distractors as distinct from checking their explanation presence; assess whether the diagnostic choices represent plausible learner strategies; and find appropriate approved transfer items before any runtime use.

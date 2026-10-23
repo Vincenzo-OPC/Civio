@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "source_records_audited": 87,
+  "exact_answer_checks": 87,
+  "key_conflicts": 0,
+  "approved_source_bindings": 60,
+  "nonapproved_sources_excluded": 27,
+  "duplicate_template_frames": 12,
+  "transfer_mappings_approved": 0,
+  "human_reviews": 0,
+  "runtime_approved": 0
+}
