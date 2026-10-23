@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "audit_records": 36,
+  "unique_source_records": 36,
+  "exact_rule_and_key_checks": 36,
+  "key_conflicts": 0,
+  "approved_source_tutoring_drafts": 20,
+  "nonapproved_excluded": 16,
+  "overlapping_sequence_pairs_flagged": 5,
+  "human_reviews": 0,
+  "runtime_approved": 0
+}

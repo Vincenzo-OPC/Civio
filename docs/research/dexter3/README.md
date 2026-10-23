@@ -122,3 +122,5 @@ See [resumable production](BULK_EXECUTION.md), [current summary](bulk-summary.js
 **Numerical queue batch 2:** [87-item exact word-problem audit and 60 approved-source tutoring drafts](BULK_EXECUTION.md#numerical-batch-2-averages-geometry-and-algebra-word-problems). 8 reviewed and 19 draft bank records were audited but not bound.
 
 **Numerical queue batch 3:** [65-item foundational math audit and 25 approved-source draft bindings](BULK_EXECUTION.md#numerical-batch-3-fraction-decimal-percentage-and-operation-foundations). The nine basic-percentage source items in this slice remain reviewed/draft, not active tutoring bindings.
+
+**Numerical queue batch 4:** [36-item multiplication-pattern sequence audit and 20 approved-source tutoring drafts](BULK_EXECUTION.md#numerical-batch-4-multiplication-pattern-sequences). Five cross-status pairs share at least four consecutive terms; all remain draft transfer exclusions pending editorial review.

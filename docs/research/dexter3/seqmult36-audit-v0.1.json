@@ -1,0 +1,1117 @@
+{
+  "schema_version": "dexter-seqmult36-audit-v0.1",
+  "baseline_commit": "cb0312813f23c83b7789cd0d08dbf4b23e4d1e97",
+  "method": "Exact rational candidate recognition for constant differences, constant second differences, affine multiplier-plus-offset recurrence, constant ratio, squares, cubes and the explicit factorial sequence. Matching the stored key is a screening check; it does not establish a unique intended pattern pedagogically.",
+  "summary": {
+    "record_count": 36,
+    "statuses": {
+      "approved": 20,
+      "draft": 16
+    },
+    "supported_exact_rule_checks": 36,
+    "key_matches": 36,
+    "key_conflicts_or_manual": 0,
+    "missing_wrong_choice_feedback": 0,
+    "same_or_overlapping_runs": [
+      {
+        "question_ids": [
+          "CIVIO-NUM-SEQ-MULT-000334",
+          "CIVIO-GF2K02-SEQM-0020"
+        ],
+        "shared_consecutive_terms": 4,
+        "pattern_concern": "same run/pattern; editorial review required"
+      },
+      {
+        "question_ids": [
+          "CIVIO-NUM-SEQ-MULT-000538",
+          "CIVIO-GF2K02-SEQM-0014"
+        ],
+        "shared_consecutive_terms": 4,
+        "pattern_concern": "same run/pattern; editorial review required"
+      },
+      {
+        "question_ids": [
+          "CIVIO-NUM-SEQ-MULT-000617",
+          "CIVIO-GF2K02-SEQM-0016"
+        ],
+        "shared_consecutive_terms": 4,
+        "pattern_concern": "same run/pattern; editorial review required"
+      },
+      {
+        "question_ids": [
+          "CIVIO-NUM-SEQ-MULT-000619",
+          "CIVIO-GF2K02-SEQM-0012"
+        ],
+        "shared_consecutive_terms": 5,
+        "pattern_concern": "same run/pattern; editorial review required"
+      },
+      {
+        "question_ids": [
+          "CIVIO-NUM-SEQ-MULT-000919",
+          "CIVIO-GF2K02-SEQM-0018"
+        ],
+        "shared_consecutive_terms": 4,
+        "pattern_concern": "same run/pattern; editorial review required"
+      }
+    ],
+    "rule_families": {
+      "affine-multiplicative-recurrence": 34,
+      "factorial-growth": 1,
+      "consecutive-cubes": 1
+    },
+    "status": "draft_audit_only",
+    "human_review": null,
+    "runtime_eligible": false
+  },
+  "items": [
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000035",
+      "status": "approved",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "c66cc3f792749a12c7de322ea7ee729f19c78ad8e4409830d633364e9086677a",
+      "stem": "What number comes next?  2, 6, 14, 30, 62, ___",
+      "sequence": [
+        "2",
+        "6",
+        "14",
+        "30",
+        "62"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "126"
+        }
+      ],
+      "key_option_id": "o4",
+      "key_value": "126",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o4"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000129",
+      "status": "approved",
+      "source_file": "docs/batches/batch-003.json",
+      "source_record_sha256": "beb36540904eba9ab73fb6e9a35d8daf35c1bfadf3664c8c79d6548a2d8c6a5a",
+      "stem": "What number comes next?  2, 8, 26, 80, 242, ___",
+      "sequence": [
+        "2",
+        "8",
+        "26",
+        "80",
+        "242"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "728"
+        }
+      ],
+      "key_option_id": "o1",
+      "key_value": "728",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o1"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000137",
+      "status": "approved",
+      "source_file": "docs/batches/batch-003.json",
+      "source_record_sha256": "089e7780118a4f654ee4f5c437e1532f91332061f20e4dd4a953ce3d922952ef",
+      "stem": "What number comes next?  3, 8, 23, 68, 203, ___",
+      "sequence": [
+        "3",
+        "8",
+        "23",
+        "68",
+        "203"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "608"
+        }
+      ],
+      "key_option_id": "o3",
+      "key_value": "608",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o3"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000138",
+      "status": "approved",
+      "source_file": "docs/batches/batch-003.json",
+      "source_record_sha256": "81809e618ce0c831ab568cbf639edb6ace4360c1f132e5d1a0d1df66715ae57d",
+      "stem": "What number comes next?  6, 15, 33, 69, 141, ___",
+      "sequence": [
+        "6",
+        "15",
+        "33",
+        "69",
+        "141"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "285"
+        }
+      ],
+      "key_option_id": "o2",
+      "key_value": "285",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o2"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000214",
+      "status": "approved",
+      "source_file": "docs/batches/batch-004.json",
+      "source_record_sha256": "291be085cbe7aed8a8b2edf9b4e04650a76fc17a440d2689abfffe78320e378a",
+      "stem": "What number comes next?  3, 11, 35, 107, 323, ___",
+      "sequence": [
+        "3",
+        "11",
+        "35",
+        "107",
+        "323"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "971"
+        }
+      ],
+      "key_option_id": "o2",
+      "key_value": "971",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o2"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000241",
+      "status": "approved",
+      "source_file": "docs/batches/batch-004.json",
+      "source_record_sha256": "f1822534327a19dffeab73fb550d374858231bd28278e998364407d7fcd887f5",
+      "stem": "What number comes next?  4, 13, 40, 121, 364, ___",
+      "sequence": [
+        "4",
+        "13",
+        "40",
+        "121",
+        "364"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "1093"
+        }
+      ],
+      "key_option_id": "o2",
+      "key_value": "1093",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o2"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000334",
+      "status": "approved",
+      "source_file": "docs/batches/batch-005.json",
+      "source_record_sha256": "07820dc1c50f71ff68f463bc7cda257e9352073bc590de38b3d89ad9f20cd6c5",
+      "stem": "What number comes next?  1, 4, 10, 22, 46, ___",
+      "sequence": [
+        "1",
+        "4",
+        "10",
+        "22",
+        "46"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "94"
+        }
+      ],
+      "key_option_id": "o4",
+      "key_value": "94",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o4"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000335",
+      "status": "approved",
+      "source_file": "docs/batches/batch-005.json",
+      "source_record_sha256": "0b0b98a8b82bdd63d4ce95cd8bd920ec812a6de2239b227a748f3fe086b3f821",
+      "stem": "What number comes next?  5, 13, 37, 109, 325, ___",
+      "sequence": [
+        "5",
+        "13",
+        "37",
+        "109",
+        "325"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "973"
+        }
+      ],
+      "key_option_id": "o3",
+      "key_value": "973",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o3"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000337",
+      "status": "approved",
+      "source_file": "docs/batches/batch-005.json",
+      "source_record_sha256": "e0de6d095ddde6a69cd49eb9346ef81b0a9eef354871d2355fb51bd0d037aad6",
+      "stem": "What number comes next?  4, 7, 13, 25, 49, ___",
+      "sequence": [
+        "4",
+        "7",
+        "13",
+        "25",
+        "49"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "97"
+        }
+      ],
+      "key_option_id": "o3",
+      "key_value": "97",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o3"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000438",
+      "status": "approved",
+      "source_file": "docs/batches/batch-006.json",
+      "source_record_sha256": "e4b5a90da5eff06689a9e0fa6092529fbb9555f876b098a049782af52b872ed0",
+      "stem": "What number comes next?  5, 11, 23, 47, 95, ___",
+      "sequence": [
+        "5",
+        "11",
+        "23",
+        "47",
+        "95"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "191"
+        }
+      ],
+      "key_option_id": "o1",
+      "key_value": "191",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o1"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-D1022-NUMSEQ-0013",
+      "status": "draft",
+      "source_file": "docs/research/batches/drafts/numerical-series-2026-10-22.json",
+      "source_record_sha256": "ed60f6d74ea715e7ea76685f6d785e3f843f035427565685bc604e30a373634a",
+      "stem": "Complete the series with the most logical number: 1458, 486, 162, 54, ___",
+      "sequence": [
+        "1458",
+        "486",
+        "162",
+        "54"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "18"
+        },
+        {
+          "family": "constant-ratio",
+          "next": "18"
+        }
+      ],
+      "key_option_id": "o2",
+      "key_value": "18",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o2"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000529",
+      "status": "approved",
+      "source_file": "docs/batches/batch-007.json",
+      "source_record_sha256": "5be4cc6f02b09f659e78cabfed6ad7522263fb46d5503c408b336cdf3fe191ed",
+      "stem": "What number comes next?  3, 10, 31, 94, 283, ___",
+      "sequence": [
+        "3",
+        "10",
+        "31",
+        "94",
+        "283"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "850"
+        }
+      ],
+      "key_option_id": "o4",
+      "key_value": "850",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o4"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000538",
+      "status": "approved",
+      "source_file": "docs/batches/batch-007.json",
+      "source_record_sha256": "aa5444e6af6b50cd8710cd95267c7fb3ffebfaeeb47ecc695610ad542c8783ff",
+      "stem": "What number comes next?  5, 14, 41, 122, 365, ___",
+      "sequence": [
+        "5",
+        "14",
+        "41",
+        "122",
+        "365"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "1094"
+        }
+      ],
+      "key_option_id": "o3",
+      "key_value": "1094",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o3"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000539",
+      "status": "approved",
+      "source_file": "docs/batches/batch-007.json",
+      "source_record_sha256": "d79d9ad9c7a62867bff46ca03b13ab37c76ea0b2ecacf10d2a350359e4ac1095",
+      "stem": "What number comes next?  6, 13, 27, 55, 111, ___",
+      "sequence": [
+        "6",
+        "13",
+        "27",
+        "55",
+        "111"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "223"
+        }
+      ],
+      "key_option_id": "o4",
+      "key_value": "223",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o4"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000616",
+      "status": "approved",
+      "source_file": "docs/batches/batch-008.json",
+      "source_record_sha256": "a4a2594ea9344ca9bcc8653985fdc7f613fd3a35c2ee789300f063af13e9eebc",
+      "stem": "What number comes next?  3, 9, 21, 45, 93, ___",
+      "sequence": [
+        "3",
+        "9",
+        "21",
+        "45",
+        "93"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "189"
+        }
+      ],
+      "key_option_id": "o2",
+      "key_value": "189",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o2"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000617",
+      "status": "approved",
+      "source_file": "docs/batches/batch-008.json",
+      "source_record_sha256": "4c0ea5a9ce793eb98ce7ac8d8af497c491615aa7e6264efa9b53ca0a6dbeac72",
+      "stem": "What number comes next?  1, 5, 17, 53, 161, ___",
+      "sequence": [
+        "1",
+        "5",
+        "17",
+        "53",
+        "161"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "485"
+        }
+      ],
+      "key_option_id": "o4",
+      "key_value": "485",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o4"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000619",
+      "status": "approved",
+      "source_file": "docs/batches/batch-008.json",
+      "source_record_sha256": "e748e9f8d9a0a516101305f0792fa180828338da44dd0c56a83df6968739ecb9",
+      "stem": "What number comes next?  3, 12, 39, 120, 363, ___",
+      "sequence": [
+        "3",
+        "12",
+        "39",
+        "120",
+        "363"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "1092"
+        }
+      ],
+      "key_option_id": "o4",
+      "key_value": "1092",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o4"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000717",
+      "status": "approved",
+      "source_file": "docs/batches/batch-009.json",
+      "source_record_sha256": "9a29a607270d9c7147d5d82b95e32b2a697b478672a6687fdb042a94478e7223",
+      "stem": "What number comes next?  4, 6, 10, 18, 34, ___",
+      "sequence": [
+        "4",
+        "6",
+        "10",
+        "18",
+        "34"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "66"
+        }
+      ],
+      "key_option_id": "o4",
+      "key_value": "66",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o4"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000840",
+      "status": "approved",
+      "source_file": "docs/batches/batch-010.json",
+      "source_record_sha256": "d996b59a5c1309643ae5c8667430cfb1b7f49b22962da6ce9cd7ffcfb60025cd",
+      "stem": "What number comes next?  5, 8, 14, 26, 50, ___",
+      "sequence": [
+        "5",
+        "8",
+        "14",
+        "26",
+        "50"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "98"
+        }
+      ],
+      "key_option_id": "o3",
+      "key_value": "98",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o3"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000919",
+      "status": "approved",
+      "source_file": "docs/batches/batch-011.json",
+      "source_record_sha256": "9c9b8052173000e1391aa75e62d6d8b5cde740ba6be93d0fa093f26040efc6cb",
+      "stem": "What number comes next?  1, 6, 21, 66, 201, ___",
+      "sequence": [
+        "1",
+        "6",
+        "21",
+        "66",
+        "201"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "606"
+        }
+      ],
+      "key_option_id": "o1",
+      "key_value": "606",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o1"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000938",
+      "status": "approved",
+      "source_file": "docs/batches/batch-011.json",
+      "source_record_sha256": "a585653a7c801f6435789fade87b71cf5e69e385c6f9769a4ac72c19ef3ca911",
+      "stem": "What number comes next?  3, 8, 18, 38, 78, ___",
+      "sequence": [
+        "3",
+        "8",
+        "18",
+        "38",
+        "78"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "158"
+        }
+      ],
+      "key_option_id": "o3",
+      "key_value": "158",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o3"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-D1022-NUMSEQ-0003",
+      "status": "draft",
+      "source_file": "docs/research/batches/drafts/numerical-series-2026-10-22.json",
+      "source_record_sha256": "59b9b884b360463781bfd3da05d2187c0483698d3b3cd24873a9ae23a57420b5",
+      "stem": "Complete the series with the most logical number: 2, 6, 18, 54, ___",
+      "sequence": [
+        "2",
+        "6",
+        "18",
+        "54"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "162"
+        },
+        {
+          "family": "constant-ratio",
+          "next": "162"
+        }
+      ],
+      "key_option_id": "o2",
+      "key_value": "162",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o2"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-GF2K02-SEQM-0012",
+      "status": "draft",
+      "source_file": "docs/research/gap-fill-2000-02.json",
+      "source_record_sha256": "73905479fccfeb3d0969cf6c296d6425bb0d4058b0400154200e95da6659f1fc",
+      "stem": "Which number should replace the blank?  3, 12, 39, 120, 363, ___",
+      "sequence": [
+        "3",
+        "12",
+        "39",
+        "120",
+        "363"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "1092"
+        }
+      ],
+      "key_option_id": "o4",
+      "key_value": "1092",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o4"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-GF2K02-SEQM-0013",
+      "status": "draft",
+      "source_file": "docs/research/gap-fill-2000-02.json",
+      "source_record_sha256": "b9dd7a2bc72792b03d808020bc67186f610242573e1fe53b35be7160ab7173de",
+      "stem": "What number comes next in the series?  4, 14, 44, 134, 404, ___",
+      "sequence": [
+        "4",
+        "14",
+        "44",
+        "134",
+        "404"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "1214"
+        }
+      ],
+      "key_option_id": "o1",
+      "key_value": "1214",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o1"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-GF2K02-SEQM-0014",
+      "status": "draft",
+      "source_file": "docs/research/gap-fill-2000-02.json",
+      "source_record_sha256": "47ec5f820b7af949259016a23e32bf470e89dcf47855e9a529bb8fe86d6c7c24",
+      "stem": "Which number continues the pattern?  2, 5, 14, 41, 122, ___",
+      "sequence": [
+        "2",
+        "5",
+        "14",
+        "41",
+        "122"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "365"
+        }
+      ],
+      "key_option_id": "o2",
+      "key_value": "365",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o2"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-GF2K02-SEQM-0015",
+      "status": "draft",
+      "source_file": "docs/research/gap-fill-2000-02.json",
+      "source_record_sha256": "14c75dab1b84a36b9c4f9e84afc24d6310f77fcaf81c7d2da6e18725ad9cdd7b",
+      "stem": "What is the next number in the sequence?  3, 7, 15, 31, 63, ___",
+      "sequence": [
+        "3",
+        "7",
+        "15",
+        "31",
+        "63"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "127"
+        }
+      ],
+      "key_option_id": "o3",
+      "key_value": "127",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o3"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-GF2K02-SEQM-0016",
+      "status": "draft",
+      "source_file": "docs/research/gap-fill-2000-02.json",
+      "source_record_sha256": "c0b7780c44a7aa99b4e09ede99cfc3a0a045a37818d7f659c3a12a673605f6ff",
+      "stem": "Which number should replace the blank?  5, 17, 53, 161, 485, ___",
+      "sequence": [
+        "5",
+        "17",
+        "53",
+        "161",
+        "485"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "1457"
+        }
+      ],
+      "key_option_id": "o4",
+      "key_value": "1457",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o4"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-GF2K02-SEQM-0017",
+      "status": "draft",
+      "source_file": "docs/research/gap-fill-2000-02.json",
+      "source_record_sha256": "9a10496bb82d2bcf8609fa5ea639402126170c3ffca4903047525e9abafc549c",
+      "stem": "What number comes next in the series?  4, 15, 48, 147, 444, ___",
+      "sequence": [
+        "4",
+        "15",
+        "48",
+        "147",
+        "444"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "1335"
+        }
+      ],
+      "key_option_id": "o1",
+      "key_value": "1335",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o1"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-GF2K02-SEQM-0018",
+      "status": "draft",
+      "source_file": "docs/research/gap-fill-2000-02.json",
+      "source_record_sha256": "9a4881735ddcc18d60a69437c58b384aa80cdfb6367e0a6768a34144248dcb72",
+      "stem": "Which number continues the pattern?  6, 21, 66, 201, 606, ___",
+      "sequence": [
+        "6",
+        "21",
+        "66",
+        "201",
+        "606"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "1821"
+        }
+      ],
+      "key_option_id": "o2",
+      "key_value": "1821",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o2"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-GF2K02-SEQM-0019",
+      "status": "draft",
+      "source_file": "docs/research/gap-fill-2000-02.json",
+      "source_record_sha256": "cb3fa4c6d6e8d1faddd4df698adc0e6b47334b73a0d69d51cd848fa2cef8d1df",
+      "stem": "What is the next number in the sequence?  5, 18, 57, 174, 525, ___",
+      "sequence": [
+        "5",
+        "18",
+        "57",
+        "174",
+        "525"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "1578"
+        }
+      ],
+      "key_option_id": "o3",
+      "key_value": "1578",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o3"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-GF2K02-SEQM-0020",
+      "status": "draft",
+      "source_file": "docs/research/gap-fill-2000-02.json",
+      "source_record_sha256": "e7f986566585d163e9728a3825d24f1701347b369e802c3d4d9e7ca310ed038f",
+      "stem": "Which number should replace the blank?  4, 10, 22, 46, 94, ___",
+      "sequence": [
+        "4",
+        "10",
+        "22",
+        "46",
+        "94"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "190"
+        }
+      ],
+      "key_option_id": "o4",
+      "key_value": "190",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o4"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-B3-NUM-SEQ-MULT-0190",
+      "status": "draft",
+      "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
+      "source_record_sha256": "3764832d60844228d94b3f417bbebbd2dd6666a8b2d19fc8a13599296a1dc570",
+      "stem": "Continue the series 7, 14, 28, 56 with the next term.",
+      "sequence": [
+        "7",
+        "14",
+        "28",
+        "56"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "112"
+        },
+        {
+          "family": "constant-ratio",
+          "next": "112"
+        }
+      ],
+      "key_option_id": "n1",
+      "key_value": "112",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "n1"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-B3-NUM-SEQ-MULT-0267",
+      "status": "draft",
+      "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
+      "source_record_sha256": "2b1e80d37e28c34cf9e334233998beac1216e002e993f9aa101469f5a532a6c3",
+      "stem": "In the series 1, 2, 6, 24, each term is a product of the one before. What is the fifth term?",
+      "sequence": [
+        "1",
+        "2",
+        "6",
+        "24"
+      ],
+      "candidate_rules": [
+        {
+          "family": "factorial-growth",
+          "next": "120"
+        }
+      ],
+      "key_option_id": "n4",
+      "key_value": "120",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "n4"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-D1022-NUMSEQ-0004",
+      "status": "draft",
+      "source_file": "docs/research/batches/drafts/numerical-series-2026-10-22.json",
+      "source_record_sha256": "8f63d3c10e7967d3f8032113f75ebb3228c1ab2cd3dece639531d80bc6f2f664",
+      "stem": "Study the pattern and supply the missing term: 4, 9, 19, 39, ___",
+      "sequence": [
+        "4",
+        "9",
+        "19",
+        "39"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "79"
+        }
+      ],
+      "key_option_id": "o1",
+      "key_value": "79",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o1"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-D1022-NUMSEQ-0005",
+      "status": "draft",
+      "source_file": "docs/research/batches/drafts/numerical-series-2026-10-22.json",
+      "source_record_sha256": "22ab1ab4a75961c7e7d446dad95783101476b2f3701bb76d19efc05247332723",
+      "stem": "Which number continues this sequence best: 2, 7, 22, 67, ___?",
+      "sequence": [
+        "2",
+        "7",
+        "22",
+        "67"
+      ],
+      "candidate_rules": [
+        {
+          "family": "affine-multiplicative-recurrence",
+          "next": "202"
+        }
+      ],
+      "key_option_id": "o3",
+      "key_value": "202",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o3"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-D1022-NUMSEQ-0009",
+      "status": "draft",
+      "source_file": "docs/research/batches/drafts/numerical-series-2026-10-22.json",
+      "source_record_sha256": "77ab969360cac132659b00f581e2c607ae885db5d65a2a91f0565f23bbb5ed13",
+      "stem": "Study the pattern and supply the missing term: 1, 8, 27, 64, ___",
+      "sequence": [
+        "1",
+        "8",
+        "27",
+        "64"
+      ],
+      "candidate_rules": [
+        {
+          "family": "consecutive-cubes",
+          "next": "125"
+        }
+      ],
+      "key_option_id": "o3",
+      "key_value": "125",
+      "key_matches_supported_rule": true,
+      "matching_options": [
+        "o3"
+      ],
+      "competing_offered_rule": false,
+      "distractor_feedback_present": true,
+      "manual_review": null
+    }
+  ]
+}

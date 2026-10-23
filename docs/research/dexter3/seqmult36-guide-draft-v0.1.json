@@ -1,0 +1,1613 @@
+{
+  "schema_version": "dexter-seqmult36-guide-draft-v0.1",
+  "baseline_commit": "cb0312813f23c83b7789cd0d08dbf4b23e4d1e97",
+  "status": "draft",
+  "runtime_eligible": false,
+  "independent_review": null,
+  "learner_evidence": null,
+  "bindings": [
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000035",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "c66cc3f792749a12c7de322ea7ee729f19c78ad8e4409830d633364e9086677a",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "language": "en",
+      "concept_family": "affine-multiplicative-recurrence",
+      "diagnostic_template": "multiply-then-fixed-adjustment",
+      "diagnostic": {
+        "prompt": "Before finding the next number, which kind of rule should you test against every pair of neighboring terms?",
+        "choices": [
+          {
+            "id": "affine-rule",
+            "text": "Multiply the previous term by a fixed number, then make the same fixed adjustment.",
+            "role": "correct-rule",
+            "feedback": "That two-part rule is the pattern to test. Check it against every listed transition before extending it."
+          },
+          {
+            "id": "constant-gap",
+            "text": "Add the same amount to the previous term each time.",
+            "role": "common-error",
+            "feedback": "Compare the differences. They do not stay equal here, so a fixed addition alone does not explain all transitions."
+          },
+          {
+            "id": "constant-ratio",
+            "text": "Multiply the previous term by the same factor, with no extra adjustment.",
+            "role": "common-error",
+            "feedback": "Compare the ratios. A constant multiplier alone does not account for the same additional change at each step."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. First compare neighboring differences; if they change, test a multiplier and a repeated adjustment."
+          }
+        ],
+        "confirmation": "Was that your original way of reading the sequence, a method you chose after seeing these choices, a guess, or a misclick? A selection alone does not confirm a misconception."
+      },
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "126",
+        "method": "multiply the previous term by 2, then add 2",
+        "checks": [
+          "exact recurrence verified across all transitions",
+          "calculated next term matches stored answer",
+          "single matching option under audited candidate rules"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Neighboring differences are 4, 8, 16, 32; they are not a constant gap.",
+          "A rule that fits every listed transition is: multiply the previous term by 2, then add 2.",
+          "Check the final given transition: 30 × 2 + 2 = 62.",
+          "Continue once: 62 × 2 + 2 = 126."
+        ],
+        "hint_levels": [
+          "Compare the differences between neighboring terms.",
+          "If those differences change, test a fixed multiplier and then check whether the same adjustment remains.",
+          "Substitute the rule into each listed transition before extending it."
+        ],
+        "shortcut": "Once a two-part rule is confirmed across all given terms, apply it once to the final term. Do not assume a rule from only one transition."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No distinct-family approved transfer item has been verified. Overlapping sequences in this family are flagged for editorial review, not treated as independent transfer."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000129",
+      "source_file": "docs/batches/batch-003.json",
+      "source_record_sha256": "beb36540904eba9ab73fb6e9a35d8daf35c1bfadf3664c8c79d6548a2d8c6a5a",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "language": "en",
+      "concept_family": "affine-multiplicative-recurrence",
+      "diagnostic_template": "multiply-then-fixed-adjustment",
+      "diagnostic": {
+        "prompt": "Before finding the next number, which kind of rule should you test against every pair of neighboring terms?",
+        "choices": [
+          {
+            "id": "affine-rule",
+            "text": "Multiply the previous term by a fixed number, then make the same fixed adjustment.",
+            "role": "correct-rule",
+            "feedback": "That two-part rule is the pattern to test. Check it against every listed transition before extending it."
+          },
+          {
+            "id": "constant-gap",
+            "text": "Add the same amount to the previous term each time.",
+            "role": "common-error",
+            "feedback": "Compare the differences. They do not stay equal here, so a fixed addition alone does not explain all transitions."
+          },
+          {
+            "id": "constant-ratio",
+            "text": "Multiply the previous term by the same factor, with no extra adjustment.",
+            "role": "common-error",
+            "feedback": "Compare the ratios. A constant multiplier alone does not account for the same additional change at each step."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. First compare neighboring differences; if they change, test a multiplier and a repeated adjustment."
+          }
+        ],
+        "confirmation": "Was that your original way of reading the sequence, a method you chose after seeing these choices, a guess, or a misclick? A selection alone does not confirm a misconception."
+      },
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "728",
+        "method": "multiply the previous term by 3, then add 2",
+        "checks": [
+          "exact recurrence verified across all transitions",
+          "calculated next term matches stored answer",
+          "single matching option under audited candidate rules"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Neighboring differences are 6, 18, 54, 162; they are not a constant gap.",
+          "A rule that fits every listed transition is: multiply the previous term by 3, then add 2.",
+          "Check the final given transition: 80 × 3 + 2 = 242.",
+          "Continue once: 242 × 3 + 2 = 728."
+        ],
+        "hint_levels": [
+          "Compare the differences between neighboring terms.",
+          "If those differences change, test a fixed multiplier and then check whether the same adjustment remains.",
+          "Substitute the rule into each listed transition before extending it."
+        ],
+        "shortcut": "Once a two-part rule is confirmed across all given terms, apply it once to the final term. Do not assume a rule from only one transition."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No distinct-family approved transfer item has been verified. Overlapping sequences in this family are flagged for editorial review, not treated as independent transfer."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000137",
+      "source_file": "docs/batches/batch-003.json",
+      "source_record_sha256": "089e7780118a4f654ee4f5c437e1532f91332061f20e4dd4a953ce3d922952ef",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "language": "en",
+      "concept_family": "affine-multiplicative-recurrence",
+      "diagnostic_template": "multiply-then-fixed-adjustment",
+      "diagnostic": {
+        "prompt": "Before finding the next number, which kind of rule should you test against every pair of neighboring terms?",
+        "choices": [
+          {
+            "id": "affine-rule",
+            "text": "Multiply the previous term by a fixed number, then make the same fixed adjustment.",
+            "role": "correct-rule",
+            "feedback": "That two-part rule is the pattern to test. Check it against every listed transition before extending it."
+          },
+          {
+            "id": "constant-gap",
+            "text": "Add the same amount to the previous term each time.",
+            "role": "common-error",
+            "feedback": "Compare the differences. They do not stay equal here, so a fixed addition alone does not explain all transitions."
+          },
+          {
+            "id": "constant-ratio",
+            "text": "Multiply the previous term by the same factor, with no extra adjustment.",
+            "role": "common-error",
+            "feedback": "Compare the ratios. A constant multiplier alone does not account for the same additional change at each step."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. First compare neighboring differences; if they change, test a multiplier and a repeated adjustment."
+          }
+        ],
+        "confirmation": "Was that your original way of reading the sequence, a method you chose after seeing these choices, a guess, or a misclick? A selection alone does not confirm a misconception."
+      },
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "608",
+        "method": "multiply the previous term by 3, then subtract 1",
+        "checks": [
+          "exact recurrence verified across all transitions",
+          "calculated next term matches stored answer",
+          "single matching option under audited candidate rules"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Neighboring differences are 5, 15, 45, 135; they are not a constant gap.",
+          "A rule that fits every listed transition is: multiply the previous term by 3, then subtract 1.",
+          "Check the final given transition: 68 × 3 − 1 = 203.",
+          "Continue once: 203 × 3 − 1 = 608."
+        ],
+        "hint_levels": [
+          "Compare the differences between neighboring terms.",
+          "If those differences change, test a fixed multiplier and then check whether the same adjustment remains.",
+          "Substitute the rule into each listed transition before extending it."
+        ],
+        "shortcut": "Once a two-part rule is confirmed across all given terms, apply it once to the final term. Do not assume a rule from only one transition."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No distinct-family approved transfer item has been verified. Overlapping sequences in this family are flagged for editorial review, not treated as independent transfer."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000138",
+      "source_file": "docs/batches/batch-003.json",
+      "source_record_sha256": "81809e618ce0c831ab568cbf639edb6ace4360c1f132e5d1a0d1df66715ae57d",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "language": "en",
+      "concept_family": "affine-multiplicative-recurrence",
+      "diagnostic_template": "multiply-then-fixed-adjustment",
+      "diagnostic": {
+        "prompt": "Before finding the next number, which kind of rule should you test against every pair of neighboring terms?",
+        "choices": [
+          {
+            "id": "affine-rule",
+            "text": "Multiply the previous term by a fixed number, then make the same fixed adjustment.",
+            "role": "correct-rule",
+            "feedback": "That two-part rule is the pattern to test. Check it against every listed transition before extending it."
+          },
+          {
+            "id": "constant-gap",
+            "text": "Add the same amount to the previous term each time.",
+            "role": "common-error",
+            "feedback": "Compare the differences. They do not stay equal here, so a fixed addition alone does not explain all transitions."
+          },
+          {
+            "id": "constant-ratio",
+            "text": "Multiply the previous term by the same factor, with no extra adjustment.",
+            "role": "common-error",
+            "feedback": "Compare the ratios. A constant multiplier alone does not account for the same additional change at each step."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. First compare neighboring differences; if they change, test a multiplier and a repeated adjustment."
+          }
+        ],
+        "confirmation": "Was that your original way of reading the sequence, a method you chose after seeing these choices, a guess, or a misclick? A selection alone does not confirm a misconception."
+      },
+      "verified_answer": {
+        "option_id": "o2",
+        "value": "285",
+        "method": "multiply the previous term by 2, then add 3",
+        "checks": [
+          "exact recurrence verified across all transitions",
+          "calculated next term matches stored answer",
+          "single matching option under audited candidate rules"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Neighboring differences are 9, 18, 36, 72; they are not a constant gap.",
+          "A rule that fits every listed transition is: multiply the previous term by 2, then add 3.",
+          "Check the final given transition: 69 × 2 + 3 = 141.",
+          "Continue once: 141 × 2 + 3 = 285."
+        ],
+        "hint_levels": [
+          "Compare the differences between neighboring terms.",
+          "If those differences change, test a fixed multiplier and then check whether the same adjustment remains.",
+          "Substitute the rule into each listed transition before extending it."
+        ],
+        "shortcut": "Once a two-part rule is confirmed across all given terms, apply it once to the final term. Do not assume a rule from only one transition."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No distinct-family approved transfer item has been verified. Overlapping sequences in this family are flagged for editorial review, not treated as independent transfer."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000214",
+      "source_file": "docs/batches/batch-004.json",
+      "source_record_sha256": "291be085cbe7aed8a8b2edf9b4e04650a76fc17a440d2689abfffe78320e378a",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "language": "en",
+      "concept_family": "affine-multiplicative-recurrence",
+      "diagnostic_template": "multiply-then-fixed-adjustment",
+      "diagnostic": {
+        "prompt": "Before finding the next number, which kind of rule should you test against every pair of neighboring terms?",
+        "choices": [
+          {
+            "id": "affine-rule",
+            "text": "Multiply the previous term by a fixed number, then make the same fixed adjustment.",
+            "role": "correct-rule",
+            "feedback": "That two-part rule is the pattern to test. Check it against every listed transition before extending it."
+          },
+          {
+            "id": "constant-gap",
+            "text": "Add the same amount to the previous term each time.",
+            "role": "common-error",
+            "feedback": "Compare the differences. They do not stay equal here, so a fixed addition alone does not explain all transitions."
+          },
+          {
+            "id": "constant-ratio",
+            "text": "Multiply the previous term by the same factor, with no extra adjustment.",
+            "role": "common-error",
+            "feedback": "Compare the ratios. A constant multiplier alone does not account for the same additional change at each step."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. First compare neighboring differences; if they change, test a multiplier and a repeated adjustment."
+          }
+        ],
+        "confirmation": "Was that your original way of reading the sequence, a method you chose after seeing these choices, a guess, or a misclick? A selection alone does not confirm a misconception."
+      },
+      "verified_answer": {
+        "option_id": "o2",
+        "value": "971",
+        "method": "multiply the previous term by 3, then add 2",
+        "checks": [
+          "exact recurrence verified across all transitions",
+          "calculated next term matches stored answer",
+          "single matching option under audited candidate rules"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Neighboring differences are 8, 24, 72, 216; they are not a constant gap.",
+          "A rule that fits every listed transition is: multiply the previous term by 3, then add 2.",
+          "Check the final given transition: 107 × 3 + 2 = 323.",
+          "Continue once: 323 × 3 + 2 = 971."
+        ],
+        "hint_levels": [
+          "Compare the differences between neighboring terms.",
+          "If those differences change, test a fixed multiplier and then check whether the same adjustment remains.",
+          "Substitute the rule into each listed transition before extending it."
+        ],
+        "shortcut": "Once a two-part rule is confirmed across all given terms, apply it once to the final term. Do not assume a rule from only one transition."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No distinct-family approved transfer item has been verified. Overlapping sequences in this family are flagged for editorial review, not treated as independent transfer."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000241",
+      "source_file": "docs/batches/batch-004.json",
+      "source_record_sha256": "f1822534327a19dffeab73fb550d374858231bd28278e998364407d7fcd887f5",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "language": "en",
+      "concept_family": "affine-multiplicative-recurrence",
+      "diagnostic_template": "multiply-then-fixed-adjustment",
+      "diagnostic": {
+        "prompt": "Before finding the next number, which kind of rule should you test against every pair of neighboring terms?",
+        "choices": [
+          {
+            "id": "affine-rule",
+            "text": "Multiply the previous term by a fixed number, then make the same fixed adjustment.",
+            "role": "correct-rule",
+            "feedback": "That two-part rule is the pattern to test. Check it against every listed transition before extending it."
+          },
+          {
+            "id": "constant-gap",
+            "text": "Add the same amount to the previous term each time.",
+            "role": "common-error",
+            "feedback": "Compare the differences. They do not stay equal here, so a fixed addition alone does not explain all transitions."
+          },
+          {
+            "id": "constant-ratio",
+            "text": "Multiply the previous term by the same factor, with no extra adjustment.",
+            "role": "common-error",
+            "feedback": "Compare the ratios. A constant multiplier alone does not account for the same additional change at each step."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. First compare neighboring differences; if they change, test a multiplier and a repeated adjustment."
+          }
+        ],
+        "confirmation": "Was that your original way of reading the sequence, a method you chose after seeing these choices, a guess, or a misclick? A selection alone does not confirm a misconception."
+      },
+      "verified_answer": {
+        "option_id": "o2",
+        "value": "1093",
+        "method": "multiply the previous term by 3, then add 1",
+        "checks": [
+          "exact recurrence verified across all transitions",
+          "calculated next term matches stored answer",
+          "single matching option under audited candidate rules"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Neighboring differences are 9, 27, 81, 243; they are not a constant gap.",
+          "A rule that fits every listed transition is: multiply the previous term by 3, then add 1.",
+          "Check the final given transition: 121 × 3 + 1 = 364.",
+          "Continue once: 364 × 3 + 1 = 1093."
+        ],
+        "hint_levels": [
+          "Compare the differences between neighboring terms.",
+          "If those differences change, test a fixed multiplier and then check whether the same adjustment remains.",
+          "Substitute the rule into each listed transition before extending it."
+        ],
+        "shortcut": "Once a two-part rule is confirmed across all given terms, apply it once to the final term. Do not assume a rule from only one transition."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No distinct-family approved transfer item has been verified. Overlapping sequences in this family are flagged for editorial review, not treated as independent transfer."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000334",
+      "source_file": "docs/batches/batch-005.json",
+      "source_record_sha256": "07820dc1c50f71ff68f463bc7cda257e9352073bc590de38b3d89ad9f20cd6c5",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "language": "en",
+      "concept_family": "affine-multiplicative-recurrence",
+      "diagnostic_template": "multiply-then-fixed-adjustment",
+      "diagnostic": {
+        "prompt": "Before finding the next number, which kind of rule should you test against every pair of neighboring terms?",
+        "choices": [
+          {
+            "id": "affine-rule",
+            "text": "Multiply the previous term by a fixed number, then make the same fixed adjustment.",
+            "role": "correct-rule",
+            "feedback": "That two-part rule is the pattern to test. Check it against every listed transition before extending it."
+          },
+          {
+            "id": "constant-gap",
+            "text": "Add the same amount to the previous term each time.",
+            "role": "common-error",
+            "feedback": "Compare the differences. They do not stay equal here, so a fixed addition alone does not explain all transitions."
+          },
+          {
+            "id": "constant-ratio",
+            "text": "Multiply the previous term by the same factor, with no extra adjustment.",
+            "role": "common-error",
+            "feedback": "Compare the ratios. A constant multiplier alone does not account for the same additional change at each step."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. First compare neighboring differences; if they change, test a multiplier and a repeated adjustment."
+          }
+        ],
+        "confirmation": "Was that your original way of reading the sequence, a method you chose after seeing these choices, a guess, or a misclick? A selection alone does not confirm a misconception."
+      },
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "94",
+        "method": "multiply the previous term by 2, then add 2",
+        "checks": [
+          "exact recurrence verified across all transitions",
+          "calculated next term matches stored answer",
+          "single matching option under audited candidate rules"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Neighboring differences are 3, 6, 12, 24; they are not a constant gap.",
+          "A rule that fits every listed transition is: multiply the previous term by 2, then add 2.",
+          "Check the final given transition: 22 × 2 + 2 = 46.",
+          "Continue once: 46 × 2 + 2 = 94."
+        ],
+        "hint_levels": [
+          "Compare the differences between neighboring terms.",
+          "If those differences change, test a fixed multiplier and then check whether the same adjustment remains.",
+          "Substitute the rule into each listed transition before extending it."
+        ],
+        "shortcut": "Once a two-part rule is confirmed across all given terms, apply it once to the final term. Do not assume a rule from only one transition."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No distinct-family approved transfer item has been verified. Overlapping sequences in this family are flagged for editorial review, not treated as independent transfer."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000335",
+      "source_file": "docs/batches/batch-005.json",
+      "source_record_sha256": "0b0b98a8b82bdd63d4ce95cd8bd920ec812a6de2239b227a748f3fe086b3f821",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "language": "en",
+      "concept_family": "affine-multiplicative-recurrence",
+      "diagnostic_template": "multiply-then-fixed-adjustment",
+      "diagnostic": {
+        "prompt": "Before finding the next number, which kind of rule should you test against every pair of neighboring terms?",
+        "choices": [
+          {
+            "id": "affine-rule",
+            "text": "Multiply the previous term by a fixed number, then make the same fixed adjustment.",
+            "role": "correct-rule",
+            "feedback": "That two-part rule is the pattern to test. Check it against every listed transition before extending it."
+          },
+          {
+            "id": "constant-gap",
+            "text": "Add the same amount to the previous term each time.",
+            "role": "common-error",
+            "feedback": "Compare the differences. They do not stay equal here, so a fixed addition alone does not explain all transitions."
+          },
+          {
+            "id": "constant-ratio",
+            "text": "Multiply the previous term by the same factor, with no extra adjustment.",
+            "role": "common-error",
+            "feedback": "Compare the ratios. A constant multiplier alone does not account for the same additional change at each step."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. First compare neighboring differences; if they change, test a multiplier and a repeated adjustment."
+          }
+        ],
+        "confirmation": "Was that your original way of reading the sequence, a method you chose after seeing these choices, a guess, or a misclick? A selection alone does not confirm a misconception."
+      },
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "973",
+        "method": "multiply the previous term by 3, then subtract 2",
+        "checks": [
+          "exact recurrence verified across all transitions",
+          "calculated next term matches stored answer",
+          "single matching option under audited candidate rules"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Neighboring differences are 8, 24, 72, 216; they are not a constant gap.",
+          "A rule that fits every listed transition is: multiply the previous term by 3, then subtract 2.",
+          "Check the final given transition: 109 × 3 − 2 = 325.",
+          "Continue once: 325 × 3 − 2 = 973."
+        ],
+        "hint_levels": [
+          "Compare the differences between neighboring terms.",
+          "If those differences change, test a fixed multiplier and then check whether the same adjustment remains.",
+          "Substitute the rule into each listed transition before extending it."
+        ],
+        "shortcut": "Once a two-part rule is confirmed across all given terms, apply it once to the final term. Do not assume a rule from only one transition."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No distinct-family approved transfer item has been verified. Overlapping sequences in this family are flagged for editorial review, not treated as independent transfer."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000337",
+      "source_file": "docs/batches/batch-005.json",
+      "source_record_sha256": "e0de6d095ddde6a69cd49eb9346ef81b0a9eef354871d2355fb51bd0d037aad6",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "language": "en",
+      "concept_family": "affine-multiplicative-recurrence",
+      "diagnostic_template": "multiply-then-fixed-adjustment",
+      "diagnostic": {
+        "prompt": "Before finding the next number, which kind of rule should you test against every pair of neighboring terms?",
+        "choices": [
+          {
+            "id": "affine-rule",
+            "text": "Multiply the previous term by a fixed number, then make the same fixed adjustment.",
+            "role": "correct-rule",
+            "feedback": "That two-part rule is the pattern to test. Check it against every listed transition before extending it."
+          },
+          {
+            "id": "constant-gap",
+            "text": "Add the same amount to the previous term each time.",
+            "role": "common-error",
+            "feedback": "Compare the differences. They do not stay equal here, so a fixed addition alone does not explain all transitions."
+          },
+          {
+            "id": "constant-ratio",
+            "text": "Multiply the previous term by the same factor, with no extra adjustment.",
+            "role": "common-error",
+            "feedback": "Compare the ratios. A constant multiplier alone does not account for the same additional change at each step."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. First compare neighboring differences; if they change, test a multiplier and a repeated adjustment."
+          }
+        ],
+        "confirmation": "Was that your original way of reading the sequence, a method you chose after seeing these choices, a guess, or a misclick? A selection alone does not confirm a misconception."
+      },
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "97",
+        "method": "multiply the previous term by 2, then subtract 1",
+        "checks": [
+          "exact recurrence verified across all transitions",
+          "calculated next term matches stored answer",
+          "single matching option under audited candidate rules"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Neighboring differences are 3, 6, 12, 24; they are not a constant gap.",
+          "A rule that fits every listed transition is: multiply the previous term by 2, then subtract 1.",
+          "Check the final given transition: 25 × 2 − 1 = 49.",
+          "Continue once: 49 × 2 − 1 = 97."
+        ],
+        "hint_levels": [
+          "Compare the differences between neighboring terms.",
+          "If those differences change, test a fixed multiplier and then check whether the same adjustment remains.",
+          "Substitute the rule into each listed transition before extending it."
+        ],
+        "shortcut": "Once a two-part rule is confirmed across all given terms, apply it once to the final term. Do not assume a rule from only one transition."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No distinct-family approved transfer item has been verified. Overlapping sequences in this family are flagged for editorial review, not treated as independent transfer."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000438",
+      "source_file": "docs/batches/batch-006.json",
+      "source_record_sha256": "e4b5a90da5eff06689a9e0fa6092529fbb9555f876b098a049782af52b872ed0",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "language": "en",
+      "concept_family": "affine-multiplicative-recurrence",
+      "diagnostic_template": "multiply-then-fixed-adjustment",
+      "diagnostic": {
+        "prompt": "Before finding the next number, which kind of rule should you test against every pair of neighboring terms?",
+        "choices": [
+          {
+            "id": "affine-rule",
+            "text": "Multiply the previous term by a fixed number, then make the same fixed adjustment.",
+            "role": "correct-rule",
+            "feedback": "That two-part rule is the pattern to test. Check it against every listed transition before extending it."
+          },
+          {
+            "id": "constant-gap",
+            "text": "Add the same amount to the previous term each time.",
+            "role": "common-error",
+            "feedback": "Compare the differences. They do not stay equal here, so a fixed addition alone does not explain all transitions."
+          },
+          {
+            "id": "constant-ratio",
+            "text": "Multiply the previous term by the same factor, with no extra adjustment.",
+            "role": "common-error",
+            "feedback": "Compare the ratios. A constant multiplier alone does not account for the same additional change at each step."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. First compare neighboring differences; if they change, test a multiplier and a repeated adjustment."
+          }
+        ],
+        "confirmation": "Was that your original way of reading the sequence, a method you chose after seeing these choices, a guess, or a misclick? A selection alone does not confirm a misconception."
+      },
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "191",
+        "method": "multiply the previous term by 2, then add 1",
+        "checks": [
+          "exact recurrence verified across all transitions",
+          "calculated next term matches stored answer",
+          "single matching option under audited candidate rules"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Neighboring differences are 6, 12, 24, 48; they are not a constant gap.",
+          "A rule that fits every listed transition is: multiply the previous term by 2, then add 1.",
+          "Check the final given transition: 47 × 2 + 1 = 95.",
+          "Continue once: 95 × 2 + 1 = 191."
+        ],
+        "hint_levels": [
+          "Compare the differences between neighboring terms.",
+          "If those differences change, test a fixed multiplier and then check whether the same adjustment remains.",
+          "Substitute the rule into each listed transition before extending it."
+        ],
+        "shortcut": "Once a two-part rule is confirmed across all given terms, apply it once to the final term. Do not assume a rule from only one transition."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No distinct-family approved transfer item has been verified. Overlapping sequences in this family are flagged for editorial review, not treated as independent transfer."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000529",
+      "source_file": "docs/batches/batch-007.json",
+      "source_record_sha256": "5be4cc6f02b09f659e78cabfed6ad7522263fb46d5503c408b336cdf3fe191ed",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "language": "en",
+      "concept_family": "affine-multiplicative-recurrence",
+      "diagnostic_template": "multiply-then-fixed-adjustment",
+      "diagnostic": {
+        "prompt": "Before finding the next number, which kind of rule should you test against every pair of neighboring terms?",
+        "choices": [
+          {
+            "id": "affine-rule",
+            "text": "Multiply the previous term by a fixed number, then make the same fixed adjustment.",
+            "role": "correct-rule",
+            "feedback": "That two-part rule is the pattern to test. Check it against every listed transition before extending it."
+          },
+          {
+            "id": "constant-gap",
+            "text": "Add the same amount to the previous term each time.",
+            "role": "common-error",
+            "feedback": "Compare the differences. They do not stay equal here, so a fixed addition alone does not explain all transitions."
+          },
+          {
+            "id": "constant-ratio",
+            "text": "Multiply the previous term by the same factor, with no extra adjustment.",
+            "role": "common-error",
+            "feedback": "Compare the ratios. A constant multiplier alone does not account for the same additional change at each step."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. First compare neighboring differences; if they change, test a multiplier and a repeated adjustment."
+          }
+        ],
+        "confirmation": "Was that your original way of reading the sequence, a method you chose after seeing these choices, a guess, or a misclick? A selection alone does not confirm a misconception."
+      },
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "850",
+        "method": "multiply the previous term by 3, then add 1",
+        "checks": [
+          "exact recurrence verified across all transitions",
+          "calculated next term matches stored answer",
+          "single matching option under audited candidate rules"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Neighboring differences are 7, 21, 63, 189; they are not a constant gap.",
+          "A rule that fits every listed transition is: multiply the previous term by 3, then add 1.",
+          "Check the final given transition: 94 × 3 + 1 = 283.",
+          "Continue once: 283 × 3 + 1 = 850."
+        ],
+        "hint_levels": [
+          "Compare the differences between neighboring terms.",
+          "If those differences change, test a fixed multiplier and then check whether the same adjustment remains.",
+          "Substitute the rule into each listed transition before extending it."
+        ],
+        "shortcut": "Once a two-part rule is confirmed across all given terms, apply it once to the final term. Do not assume a rule from only one transition."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No distinct-family approved transfer item has been verified. Overlapping sequences in this family are flagged for editorial review, not treated as independent transfer."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000538",
+      "source_file": "docs/batches/batch-007.json",
+      "source_record_sha256": "aa5444e6af6b50cd8710cd95267c7fb3ffebfaeeb47ecc695610ad542c8783ff",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "language": "en",
+      "concept_family": "affine-multiplicative-recurrence",
+      "diagnostic_template": "multiply-then-fixed-adjustment",
+      "diagnostic": {
+        "prompt": "Before finding the next number, which kind of rule should you test against every pair of neighboring terms?",
+        "choices": [
+          {
+            "id": "affine-rule",
+            "text": "Multiply the previous term by a fixed number, then make the same fixed adjustment.",
+            "role": "correct-rule",
+            "feedback": "That two-part rule is the pattern to test. Check it against every listed transition before extending it."
+          },
+          {
+            "id": "constant-gap",
+            "text": "Add the same amount to the previous term each time.",
+            "role": "common-error",
+            "feedback": "Compare the differences. They do not stay equal here, so a fixed addition alone does not explain all transitions."
+          },
+          {
+            "id": "constant-ratio",
+            "text": "Multiply the previous term by the same factor, with no extra adjustment.",
+            "role": "common-error",
+            "feedback": "Compare the ratios. A constant multiplier alone does not account for the same additional change at each step."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. First compare neighboring differences; if they change, test a multiplier and a repeated adjustment."
+          }
+        ],
+        "confirmation": "Was that your original way of reading the sequence, a method you chose after seeing these choices, a guess, or a misclick? A selection alone does not confirm a misconception."
+      },
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "1094",
+        "method": "multiply the previous term by 3, then subtract 1",
+        "checks": [
+          "exact recurrence verified across all transitions",
+          "calculated next term matches stored answer",
+          "single matching option under audited candidate rules"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Neighboring differences are 9, 27, 81, 243; they are not a constant gap.",
+          "A rule that fits every listed transition is: multiply the previous term by 3, then subtract 1.",
+          "Check the final given transition: 122 × 3 − 1 = 365.",
+          "Continue once: 365 × 3 − 1 = 1094."
+        ],
+        "hint_levels": [
+          "Compare the differences between neighboring terms.",
+          "If those differences change, test a fixed multiplier and then check whether the same adjustment remains.",
+          "Substitute the rule into each listed transition before extending it."
+        ],
+        "shortcut": "Once a two-part rule is confirmed across all given terms, apply it once to the final term. Do not assume a rule from only one transition."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No distinct-family approved transfer item has been verified. Overlapping sequences in this family are flagged for editorial review, not treated as independent transfer."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000539",
+      "source_file": "docs/batches/batch-007.json",
+      "source_record_sha256": "d79d9ad9c7a62867bff46ca03b13ab37c76ea0b2ecacf10d2a350359e4ac1095",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "language": "en",
+      "concept_family": "affine-multiplicative-recurrence",
+      "diagnostic_template": "multiply-then-fixed-adjustment",
+      "diagnostic": {
+        "prompt": "Before finding the next number, which kind of rule should you test against every pair of neighboring terms?",
+        "choices": [
+          {
+            "id": "affine-rule",
+            "text": "Multiply the previous term by a fixed number, then make the same fixed adjustment.",
+            "role": "correct-rule",
+            "feedback": "That two-part rule is the pattern to test. Check it against every listed transition before extending it."
+          },
+          {
+            "id": "constant-gap",
+            "text": "Add the same amount to the previous term each time.",
+            "role": "common-error",
+            "feedback": "Compare the differences. They do not stay equal here, so a fixed addition alone does not explain all transitions."
+          },
+          {
+            "id": "constant-ratio",
+            "text": "Multiply the previous term by the same factor, with no extra adjustment.",
+            "role": "common-error",
+            "feedback": "Compare the ratios. A constant multiplier alone does not account for the same additional change at each step."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. First compare neighboring differences; if they change, test a multiplier and a repeated adjustment."
+          }
+        ],
+        "confirmation": "Was that your original way of reading the sequence, a method you chose after seeing these choices, a guess, or a misclick? A selection alone does not confirm a misconception."
+      },
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "223",
+        "method": "multiply the previous term by 2, then add 1",
+        "checks": [
+          "exact recurrence verified across all transitions",
+          "calculated next term matches stored answer",
+          "single matching option under audited candidate rules"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Neighboring differences are 7, 14, 28, 56; they are not a constant gap.",
+          "A rule that fits every listed transition is: multiply the previous term by 2, then add 1.",
+          "Check the final given transition: 55 × 2 + 1 = 111.",
+          "Continue once: 111 × 2 + 1 = 223."
+        ],
+        "hint_levels": [
+          "Compare the differences between neighboring terms.",
+          "If those differences change, test a fixed multiplier and then check whether the same adjustment remains.",
+          "Substitute the rule into each listed transition before extending it."
+        ],
+        "shortcut": "Once a two-part rule is confirmed across all given terms, apply it once to the final term. Do not assume a rule from only one transition."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No distinct-family approved transfer item has been verified. Overlapping sequences in this family are flagged for editorial review, not treated as independent transfer."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000616",
+      "source_file": "docs/batches/batch-008.json",
+      "source_record_sha256": "a4a2594ea9344ca9bcc8653985fdc7f613fd3a35c2ee789300f063af13e9eebc",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "language": "en",
+      "concept_family": "affine-multiplicative-recurrence",
+      "diagnostic_template": "multiply-then-fixed-adjustment",
+      "diagnostic": {
+        "prompt": "Before finding the next number, which kind of rule should you test against every pair of neighboring terms?",
+        "choices": [
+          {
+            "id": "affine-rule",
+            "text": "Multiply the previous term by a fixed number, then make the same fixed adjustment.",
+            "role": "correct-rule",
+            "feedback": "That two-part rule is the pattern to test. Check it against every listed transition before extending it."
+          },
+          {
+            "id": "constant-gap",
+            "text": "Add the same amount to the previous term each time.",
+            "role": "common-error",
+            "feedback": "Compare the differences. They do not stay equal here, so a fixed addition alone does not explain all transitions."
+          },
+          {
+            "id": "constant-ratio",
+            "text": "Multiply the previous term by the same factor, with no extra adjustment.",
+            "role": "common-error",
+            "feedback": "Compare the ratios. A constant multiplier alone does not account for the same additional change at each step."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. First compare neighboring differences; if they change, test a multiplier and a repeated adjustment."
+          }
+        ],
+        "confirmation": "Was that your original way of reading the sequence, a method you chose after seeing these choices, a guess, or a misclick? A selection alone does not confirm a misconception."
+      },
+      "verified_answer": {
+        "option_id": "o2",
+        "value": "189",
+        "method": "multiply the previous term by 2, then add 3",
+        "checks": [
+          "exact recurrence verified across all transitions",
+          "calculated next term matches stored answer",
+          "single matching option under audited candidate rules"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Neighboring differences are 6, 12, 24, 48; they are not a constant gap.",
+          "A rule that fits every listed transition is: multiply the previous term by 2, then add 3.",
+          "Check the final given transition: 45 × 2 + 3 = 93.",
+          "Continue once: 93 × 2 + 3 = 189."
+        ],
+        "hint_levels": [
+          "Compare the differences between neighboring terms.",
+          "If those differences change, test a fixed multiplier and then check whether the same adjustment remains.",
+          "Substitute the rule into each listed transition before extending it."
+        ],
+        "shortcut": "Once a two-part rule is confirmed across all given terms, apply it once to the final term. Do not assume a rule from only one transition."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No distinct-family approved transfer item has been verified. Overlapping sequences in this family are flagged for editorial review, not treated as independent transfer."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000617",
+      "source_file": "docs/batches/batch-008.json",
+      "source_record_sha256": "4c0ea5a9ce793eb98ce7ac8d8af497c491615aa7e6264efa9b53ca0a6dbeac72",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "language": "en",
+      "concept_family": "affine-multiplicative-recurrence",
+      "diagnostic_template": "multiply-then-fixed-adjustment",
+      "diagnostic": {
+        "prompt": "Before finding the next number, which kind of rule should you test against every pair of neighboring terms?",
+        "choices": [
+          {
+            "id": "affine-rule",
+            "text": "Multiply the previous term by a fixed number, then make the same fixed adjustment.",
+            "role": "correct-rule",
+            "feedback": "That two-part rule is the pattern to test. Check it against every listed transition before extending it."
+          },
+          {
+            "id": "constant-gap",
+            "text": "Add the same amount to the previous term each time.",
+            "role": "common-error",
+            "feedback": "Compare the differences. They do not stay equal here, so a fixed addition alone does not explain all transitions."
+          },
+          {
+            "id": "constant-ratio",
+            "text": "Multiply the previous term by the same factor, with no extra adjustment.",
+            "role": "common-error",
+            "feedback": "Compare the ratios. A constant multiplier alone does not account for the same additional change at each step."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. First compare neighboring differences; if they change, test a multiplier and a repeated adjustment."
+          }
+        ],
+        "confirmation": "Was that your original way of reading the sequence, a method you chose after seeing these choices, a guess, or a misclick? A selection alone does not confirm a misconception."
+      },
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "485",
+        "method": "multiply the previous term by 3, then add 2",
+        "checks": [
+          "exact recurrence verified across all transitions",
+          "calculated next term matches stored answer",
+          "single matching option under audited candidate rules"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Neighboring differences are 4, 12, 36, 108; they are not a constant gap.",
+          "A rule that fits every listed transition is: multiply the previous term by 3, then add 2.",
+          "Check the final given transition: 53 × 3 + 2 = 161.",
+          "Continue once: 161 × 3 + 2 = 485."
+        ],
+        "hint_levels": [
+          "Compare the differences between neighboring terms.",
+          "If those differences change, test a fixed multiplier and then check whether the same adjustment remains.",
+          "Substitute the rule into each listed transition before extending it."
+        ],
+        "shortcut": "Once a two-part rule is confirmed across all given terms, apply it once to the final term. Do not assume a rule from only one transition."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No distinct-family approved transfer item has been verified. Overlapping sequences in this family are flagged for editorial review, not treated as independent transfer."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000619",
+      "source_file": "docs/batches/batch-008.json",
+      "source_record_sha256": "e748e9f8d9a0a516101305f0792fa180828338da44dd0c56a83df6968739ecb9",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "language": "en",
+      "concept_family": "affine-multiplicative-recurrence",
+      "diagnostic_template": "multiply-then-fixed-adjustment",
+      "diagnostic": {
+        "prompt": "Before finding the next number, which kind of rule should you test against every pair of neighboring terms?",
+        "choices": [
+          {
+            "id": "affine-rule",
+            "text": "Multiply the previous term by a fixed number, then make the same fixed adjustment.",
+            "role": "correct-rule",
+            "feedback": "That two-part rule is the pattern to test. Check it against every listed transition before extending it."
+          },
+          {
+            "id": "constant-gap",
+            "text": "Add the same amount to the previous term each time.",
+            "role": "common-error",
+            "feedback": "Compare the differences. They do not stay equal here, so a fixed addition alone does not explain all transitions."
+          },
+          {
+            "id": "constant-ratio",
+            "text": "Multiply the previous term by the same factor, with no extra adjustment.",
+            "role": "common-error",
+            "feedback": "Compare the ratios. A constant multiplier alone does not account for the same additional change at each step."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. First compare neighboring differences; if they change, test a multiplier and a repeated adjustment."
+          }
+        ],
+        "confirmation": "Was that your original way of reading the sequence, a method you chose after seeing these choices, a guess, or a misclick? A selection alone does not confirm a misconception."
+      },
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "1092",
+        "method": "multiply the previous term by 3, then add 3",
+        "checks": [
+          "exact recurrence verified across all transitions",
+          "calculated next term matches stored answer",
+          "single matching option under audited candidate rules"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Neighboring differences are 9, 27, 81, 243; they are not a constant gap.",
+          "A rule that fits every listed transition is: multiply the previous term by 3, then add 3.",
+          "Check the final given transition: 120 × 3 + 3 = 363.",
+          "Continue once: 363 × 3 + 3 = 1092."
+        ],
+        "hint_levels": [
+          "Compare the differences between neighboring terms.",
+          "If those differences change, test a fixed multiplier and then check whether the same adjustment remains.",
+          "Substitute the rule into each listed transition before extending it."
+        ],
+        "shortcut": "Once a two-part rule is confirmed across all given terms, apply it once to the final term. Do not assume a rule from only one transition."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No distinct-family approved transfer item has been verified. Overlapping sequences in this family are flagged for editorial review, not treated as independent transfer."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000717",
+      "source_file": "docs/batches/batch-009.json",
+      "source_record_sha256": "9a29a607270d9c7147d5d82b95e32b2a697b478672a6687fdb042a94478e7223",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "language": "en",
+      "concept_family": "affine-multiplicative-recurrence",
+      "diagnostic_template": "multiply-then-fixed-adjustment",
+      "diagnostic": {
+        "prompt": "Before finding the next number, which kind of rule should you test against every pair of neighboring terms?",
+        "choices": [
+          {
+            "id": "affine-rule",
+            "text": "Multiply the previous term by a fixed number, then make the same fixed adjustment.",
+            "role": "correct-rule",
+            "feedback": "That two-part rule is the pattern to test. Check it against every listed transition before extending it."
+          },
+          {
+            "id": "constant-gap",
+            "text": "Add the same amount to the previous term each time.",
+            "role": "common-error",
+            "feedback": "Compare the differences. They do not stay equal here, so a fixed addition alone does not explain all transitions."
+          },
+          {
+            "id": "constant-ratio",
+            "text": "Multiply the previous term by the same factor, with no extra adjustment.",
+            "role": "common-error",
+            "feedback": "Compare the ratios. A constant multiplier alone does not account for the same additional change at each step."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. First compare neighboring differences; if they change, test a multiplier and a repeated adjustment."
+          }
+        ],
+        "confirmation": "Was that your original way of reading the sequence, a method you chose after seeing these choices, a guess, or a misclick? A selection alone does not confirm a misconception."
+      },
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "66",
+        "method": "multiply the previous term by 2, then subtract 2",
+        "checks": [
+          "exact recurrence verified across all transitions",
+          "calculated next term matches stored answer",
+          "single matching option under audited candidate rules"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Neighboring differences are 2, 4, 8, 16; they are not a constant gap.",
+          "A rule that fits every listed transition is: multiply the previous term by 2, then subtract 2.",
+          "Check the final given transition: 18 × 2 − 2 = 34.",
+          "Continue once: 34 × 2 − 2 = 66."
+        ],
+        "hint_levels": [
+          "Compare the differences between neighboring terms.",
+          "If those differences change, test a fixed multiplier and then check whether the same adjustment remains.",
+          "Substitute the rule into each listed transition before extending it."
+        ],
+        "shortcut": "Once a two-part rule is confirmed across all given terms, apply it once to the final term. Do not assume a rule from only one transition."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No distinct-family approved transfer item has been verified. Overlapping sequences in this family are flagged for editorial review, not treated as independent transfer."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000840",
+      "source_file": "docs/batches/batch-010.json",
+      "source_record_sha256": "d996b59a5c1309643ae5c8667430cfb1b7f49b22962da6ce9cd7ffcfb60025cd",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "language": "en",
+      "concept_family": "affine-multiplicative-recurrence",
+      "diagnostic_template": "multiply-then-fixed-adjustment",
+      "diagnostic": {
+        "prompt": "Before finding the next number, which kind of rule should you test against every pair of neighboring terms?",
+        "choices": [
+          {
+            "id": "affine-rule",
+            "text": "Multiply the previous term by a fixed number, then make the same fixed adjustment.",
+            "role": "correct-rule",
+            "feedback": "That two-part rule is the pattern to test. Check it against every listed transition before extending it."
+          },
+          {
+            "id": "constant-gap",
+            "text": "Add the same amount to the previous term each time.",
+            "role": "common-error",
+            "feedback": "Compare the differences. They do not stay equal here, so a fixed addition alone does not explain all transitions."
+          },
+          {
+            "id": "constant-ratio",
+            "text": "Multiply the previous term by the same factor, with no extra adjustment.",
+            "role": "common-error",
+            "feedback": "Compare the ratios. A constant multiplier alone does not account for the same additional change at each step."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. First compare neighboring differences; if they change, test a multiplier and a repeated adjustment."
+          }
+        ],
+        "confirmation": "Was that your original way of reading the sequence, a method you chose after seeing these choices, a guess, or a misclick? A selection alone does not confirm a misconception."
+      },
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "98",
+        "method": "multiply the previous term by 2, then subtract 2",
+        "checks": [
+          "exact recurrence verified across all transitions",
+          "calculated next term matches stored answer",
+          "single matching option under audited candidate rules"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Neighboring differences are 3, 6, 12, 24; they are not a constant gap.",
+          "A rule that fits every listed transition is: multiply the previous term by 2, then subtract 2.",
+          "Check the final given transition: 26 × 2 − 2 = 50.",
+          "Continue once: 50 × 2 − 2 = 98."
+        ],
+        "hint_levels": [
+          "Compare the differences between neighboring terms.",
+          "If those differences change, test a fixed multiplier and then check whether the same adjustment remains.",
+          "Substitute the rule into each listed transition before extending it."
+        ],
+        "shortcut": "Once a two-part rule is confirmed across all given terms, apply it once to the final term. Do not assume a rule from only one transition."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No distinct-family approved transfer item has been verified. Overlapping sequences in this family are flagged for editorial review, not treated as independent transfer."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000919",
+      "source_file": "docs/batches/batch-011.json",
+      "source_record_sha256": "9c9b8052173000e1391aa75e62d6d8b5cde740ba6be93d0fa093f26040efc6cb",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "language": "en",
+      "concept_family": "affine-multiplicative-recurrence",
+      "diagnostic_template": "multiply-then-fixed-adjustment",
+      "diagnostic": {
+        "prompt": "Before finding the next number, which kind of rule should you test against every pair of neighboring terms?",
+        "choices": [
+          {
+            "id": "affine-rule",
+            "text": "Multiply the previous term by a fixed number, then make the same fixed adjustment.",
+            "role": "correct-rule",
+            "feedback": "That two-part rule is the pattern to test. Check it against every listed transition before extending it."
+          },
+          {
+            "id": "constant-gap",
+            "text": "Add the same amount to the previous term each time.",
+            "role": "common-error",
+            "feedback": "Compare the differences. They do not stay equal here, so a fixed addition alone does not explain all transitions."
+          },
+          {
+            "id": "constant-ratio",
+            "text": "Multiply the previous term by the same factor, with no extra adjustment.",
+            "role": "common-error",
+            "feedback": "Compare the ratios. A constant multiplier alone does not account for the same additional change at each step."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. First compare neighboring differences; if they change, test a multiplier and a repeated adjustment."
+          }
+        ],
+        "confirmation": "Was that your original way of reading the sequence, a method you chose after seeing these choices, a guess, or a misclick? A selection alone does not confirm a misconception."
+      },
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "606",
+        "method": "multiply the previous term by 3, then add 3",
+        "checks": [
+          "exact recurrence verified across all transitions",
+          "calculated next term matches stored answer",
+          "single matching option under audited candidate rules"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Neighboring differences are 5, 15, 45, 135; they are not a constant gap.",
+          "A rule that fits every listed transition is: multiply the previous term by 3, then add 3.",
+          "Check the final given transition: 66 × 3 + 3 = 201.",
+          "Continue once: 201 × 3 + 3 = 606."
+        ],
+        "hint_levels": [
+          "Compare the differences between neighboring terms.",
+          "If those differences change, test a fixed multiplier and then check whether the same adjustment remains.",
+          "Substitute the rule into each listed transition before extending it."
+        ],
+        "shortcut": "Once a two-part rule is confirmed across all given terms, apply it once to the final term. Do not assume a rule from only one transition."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No distinct-family approved transfer item has been verified. Overlapping sequences in this family are flagged for editorial review, not treated as independent transfer."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-MULT-000938",
+      "source_file": "docs/batches/batch-011.json",
+      "source_record_sha256": "a585653a7c801f6435789fade87b71cf5e69e385c6f9769a4ac72c19ef3ca911",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "hard",
+      "language": "en",
+      "concept_family": "affine-multiplicative-recurrence",
+      "diagnostic_template": "multiply-then-fixed-adjustment",
+      "diagnostic": {
+        "prompt": "Before finding the next number, which kind of rule should you test against every pair of neighboring terms?",
+        "choices": [
+          {
+            "id": "affine-rule",
+            "text": "Multiply the previous term by a fixed number, then make the same fixed adjustment.",
+            "role": "correct-rule",
+            "feedback": "That two-part rule is the pattern to test. Check it against every listed transition before extending it."
+          },
+          {
+            "id": "constant-gap",
+            "text": "Add the same amount to the previous term each time.",
+            "role": "common-error",
+            "feedback": "Compare the differences. They do not stay equal here, so a fixed addition alone does not explain all transitions."
+          },
+          {
+            "id": "constant-ratio",
+            "text": "Multiply the previous term by the same factor, with no extra adjustment.",
+            "role": "common-error",
+            "feedback": "Compare the ratios. A constant multiplier alone does not account for the same additional change at each step."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. First compare neighboring differences; if they change, test a multiplier and a repeated adjustment."
+          }
+        ],
+        "confirmation": "Was that your original way of reading the sequence, a method you chose after seeing these choices, a guess, or a misclick? A selection alone does not confirm a misconception."
+      },
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "158",
+        "method": "multiply the previous term by 2, then add 2",
+        "checks": [
+          "exact recurrence verified across all transitions",
+          "calculated next term matches stored answer",
+          "single matching option under audited candidate rules"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Neighboring differences are 5, 10, 20, 40; they are not a constant gap.",
+          "A rule that fits every listed transition is: multiply the previous term by 2, then add 2.",
+          "Check the final given transition: 38 × 2 + 2 = 78.",
+          "Continue once: 78 × 2 + 2 = 158."
+        ],
+        "hint_levels": [
+          "Compare the differences between neighboring terms.",
+          "If those differences change, test a fixed multiplier and then check whether the same adjustment remains.",
+          "Substitute the rule into each listed transition before extending it."
+        ],
+        "shortcut": "Once a two-part rule is confirmed across all given terms, apply it once to the final term. Do not assume a rule from only one transition."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No distinct-family approved transfer item has been verified. Overlapping sequences in this family are flagged for editorial review, not treated as independent transfer."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    }
+  ],
+  "excluded_nonapproved_ids": [
+    "CIVIO-D1022-NUMSEQ-0013",
+    "CIVIO-D1022-NUMSEQ-0003",
+    "CIVIO-GF2K02-SEQM-0012",
+    "CIVIO-GF2K02-SEQM-0013",
+    "CIVIO-GF2K02-SEQM-0014",
+    "CIVIO-GF2K02-SEQM-0015",
+    "CIVIO-GF2K02-SEQM-0016",
+    "CIVIO-GF2K02-SEQM-0017",
+    "CIVIO-GF2K02-SEQM-0018",
+    "CIVIO-GF2K02-SEQM-0019",
+    "CIVIO-GF2K02-SEQM-0020",
+    "CIVIO-B3-NUM-SEQ-MULT-0190",
+    "CIVIO-B3-NUM-SEQ-MULT-0267",
+    "CIVIO-D1022-NUMSEQ-0004",
+    "CIVIO-D1022-NUMSEQ-0005",
+    "CIVIO-D1022-NUMSEQ-0009"
+  ],
+  "notes": [
+    "Draft scaffolding only; no source item, answer, option or approval status changed.",
+    "All approved items in this batch share the same affine multiplier-plus-offset family; 20 question bindings therefore do not represent 20 distinct learning families.",
+    "Transfer mapping remains unresolved pending approved, unfamiliar questions."
+  ]
+}

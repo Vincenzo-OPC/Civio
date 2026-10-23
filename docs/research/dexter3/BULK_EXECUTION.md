@@ -117,4 +117,22 @@ python3 docs/research/dexter3/build_foundation65_tutoring.py
 python3 docs/research/dexter3/validate_foundation65.py
 ```
 
-Across the three queued numerical batches, 236 distinct records have targeted exact-key checks and 144 approved-source tutoring bindings are drafted. Remaining numerical groups still include the mixed `NUM-WP-RATE` pool, ratio, multiplication-pattern sequences, percent change and other topics. Do not read the current batch count as completion of the 2,100-item audit.
+Across the first three queued numerical batches, 236 distinct records had targeted exact-key checks and 144 approved-source tutoring bindings were drafted. Batch 4 below adds 36 records and 20 drafts. Remaining numerical groups still include the mixed `NUM-WP-RATE` pool, ratio, percent change and other topics. Do not read these completed slices as completion of the 2,100-item audit.
+
+## Numerical batch 4: multiplication-pattern sequences
+
+Checkpoint parent: `cb0312813f23c83b7789cd0d08dbf4b23e4d1e97`.
+
+The screening pass covers **36 records**: 20 approved and 16 draft. Exact rational rules (affine multiply-then-adjust, constant ratio, square/cube and factorial checks) match all 36 stored keys against exactly one offered option; all wrong-option feedback fields are present. This is a deterministic answer screen, not proof that a finite sequence has only one conceivable mathematical continuation or that its distractors teach well.
+
+Thirty-four items fit an affine multiplier-plus-fixed-adjustment recurrence, one is a consecutive-cubes pattern and one uses factorial growth. The approved set is especially narrow: all 20 use the affine recurrence with a nonzero adjustment. Five pairs share at least four consecutive terms across approved and draft records, including one exact five-term run; these are overlapping pattern variants and require editorial handling rather than being counted as transfer. The 20 approved-source records received draft rule-recognition bindings; the 16 drafts were excluded. Every transfer mapping remains null, and no human approval or runtime eligibility was added.
+
+Run:
+
+```bash
+python3 docs/research/dexter3/audit_seqmult36.py
+python3 docs/research/dexter3/build_seqmult36_tutoring.py
+python3 docs/research/dexter3/validate_seqmult36.py
+```
+
+Across four numerical batches, **272 distinct records** have targeted exact answer checks and **164 approved-source tutoring bindings** are drafted. This is partial, family-based coverage—not a full question-bank audit or completion of Dexter metadata.
