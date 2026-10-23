@@ -135,4 +135,22 @@ python3 docs/research/dexter3/build_seqmult36_tutoring.py
 python3 docs/research/dexter3/validate_seqmult36.py
 ```
 
-Across four numerical batches, **272 distinct records** have targeted exact answer checks and **164 approved-source tutoring bindings** are drafted. This is partial, family-based coverage—not a full question-bank audit or completion of Dexter metadata.
+Across four numerical batches, **272 distinct records** had targeted exact answer checks and **164 approved-source tutoring bindings** were drafted. Batch 5 adds 45 records and 27 drafts below. This is partial, family-based coverage—not a full question-bank audit or completion of Dexter metadata.
+
+## Numerical batch 5: work rates, time, speed and proportionality
+
+Checkpoint parent: `ac59a961f3136c88a81219bb3d5f920ba7a7fae2`.
+
+An explicit exact-rational screen covered **45 records**: 27 approved, 11 draft and 7 reviewed. Every stem matched a supported solver across simultaneous work, elapsed time, unit rates, worker-hour output, map scale, speed, profit, money and pack-size ceiling. All 45 computed answers matched exactly one offered choice and the stored key. Existing wrong-option explanations were present; their reasoning was not independently validated here.
+
+The bank has 29 records with two people completing one shared task together. The 27 approved instances all reuse the same unit-work-rate concept. Nine groups repeat the same numerical work-time inputs across records (including multiple contexts/names); those are parameterized retrieval repetitions, not nine distinct question families. The remaining items introduce more varied rate contexts, but 18 reviewed/draft records were excluded from tutoring. The 27 approved work-together records received draft diagnostics that separate time from rate and teach adding unit-work fractions before taking the reciprocal. No approved unfamiliar transfer is linked.
+
+Run:
+
+```bash
+python3 docs/research/dexter3/audit_rate45.py
+python3 docs/research/dexter3/build_rate45_tutoring.py
+python3 docs/research/dexter3/validate_rate45.py
+```
+
+Across five numerical batches, **317 distinct records** have targeted exact answer checks and **191 approved-source tutoring bindings** are drafted. None of these figures represents a complete review of the 2,100 candidates or human approval.

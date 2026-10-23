@@ -1,0 +1,2357 @@
+{
+  "schema_version": "dexter-rate45-guide-draft-v0.1",
+  "baseline_commit": "ac59a961f3136c88a81219bb3d5f920ba7a7fae2",
+  "status": "draft",
+  "runtime_eligible": false,
+  "independent_review": null,
+  "learner_evidence": null,
+  "bindings": [
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000011",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "53ccac05a490d1bcec856c680bc76b27fef893c4c4471a075fbd140785e529b1",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "n2",
+        "value_hours": "2",
+        "combined_rate_jobs_per_hour": "1/2",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/3 of the job.",
+          "In one hour, the second worker completes 1/6 of the job.",
+          "Together they complete 1/3 + 1/6 = 1/2 of the job per hour.",
+          "Time = 1 ÷ 1/2 = 2 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000028",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "e6f360352b14825a0e547bc9e81f329721c9b97c1f55e36eed69ff41eaf83257",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o3",
+        "value_hours": "6",
+        "combined_rate_jobs_per_hour": "1/6",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/8 of the job.",
+          "In one hour, the second worker completes 1/24 of the job.",
+          "Together they complete 1/8 + 1/24 = 1/6 of the job per hour.",
+          "Time = 1 ÷ 1/6 = 6 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000042",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "07c7248c1520e5387ff5e890ba38836d5374eb88062fdfc562d82ab0a8a6cd3e",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o2",
+        "value_hours": "2",
+        "combined_rate_jobs_per_hour": "1/2",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/3 of the job.",
+          "In one hour, the second worker completes 1/6 of the job.",
+          "Together they complete 1/3 + 1/6 = 1/2 of the job per hour.",
+          "Time = 1 ÷ 1/2 = 2 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000112",
+      "source_file": "docs/batches/batch-003.json",
+      "source_record_sha256": "469a658709f2ce182968f58b2ee03801fad507a8ed8b292b1f7a8ba6a4838c6b",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o1",
+        "value_hours": "6",
+        "combined_rate_jobs_per_hour": "1/6",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/9 of the job.",
+          "In one hour, the second worker completes 1/18 of the job.",
+          "Together they complete 1/9 + 1/18 = 1/6 of the job per hour.",
+          "Time = 1 ÷ 1/6 = 6 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000120",
+      "source_file": "docs/batches/batch-003.json",
+      "source_record_sha256": "c11dc9ff629e8685500f45067d95281624c1f3c3d30caac7a2ffc0bf72e59887",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o3",
+        "value_hours": "18",
+        "combined_rate_jobs_per_hour": "1/18",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/30 of the job.",
+          "In one hour, the second worker completes 1/45 of the job.",
+          "Together they complete 1/30 + 1/45 = 1/18 of the job per hour.",
+          "Time = 1 ÷ 1/18 = 18 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000212",
+      "source_file": "docs/batches/batch-004.json",
+      "source_record_sha256": "e49f25f80211d0ca980ac06e46ef85143daaf770a0f08a9cb8042767ba842a8d",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o1",
+        "value_hours": "2",
+        "combined_rate_jobs_per_hour": "1/2",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/3 of the job.",
+          "In one hour, the second worker completes 1/6 of the job.",
+          "Together they complete 1/3 + 1/6 = 1/2 of the job per hour.",
+          "Time = 1 ÷ 1/2 = 2 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000239",
+      "source_file": "docs/batches/batch-004.json",
+      "source_record_sha256": "05bbd21741ecaf78bfe126b817398b8fcae3d80e8a332d7e9b23c6481fc58bbf",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o2",
+        "value_hours": "20",
+        "combined_rate_jobs_per_hour": "1/20",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/30 of the job.",
+          "In one hour, the second worker completes 1/60 of the job.",
+          "Together they complete 1/30 + 1/60 = 1/20 of the job per hour.",
+          "Time = 1 ÷ 1/20 = 20 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000313",
+      "source_file": "docs/batches/batch-005.json",
+      "source_record_sha256": "2e7c7479126f0cf8c82db63dfde3aedf71f46d11dc0ec2ad954bf592b30efdd2",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o4",
+        "value_hours": "9",
+        "combined_rate_jobs_per_hour": "1/9",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/12 of the job.",
+          "In one hour, the second worker completes 1/36 of the job.",
+          "Together they complete 1/12 + 1/36 = 1/9 of the job per hour.",
+          "Time = 1 ÷ 1/9 = 9 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000317",
+      "source_file": "docs/batches/batch-005.json",
+      "source_record_sha256": "a62414fef4ff0b42e1a5a00cf53bcfb4fcfb61d59d237e50e091db49a76a5fbf",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o2",
+        "value_hours": "4",
+        "combined_rate_jobs_per_hour": "1/4",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/6 of the job.",
+          "In one hour, the second worker completes 1/12 of the job.",
+          "Together they complete 1/6 + 1/12 = 1/4 of the job per hour.",
+          "Time = 1 ÷ 1/4 = 4 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000325",
+      "source_file": "docs/batches/batch-005.json",
+      "source_record_sha256": "fb19405e7a68b57a4dabadbfb1001eb862ae25001029b6239b184f16e20137bc",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o1",
+        "value_hours": "8",
+        "combined_rate_jobs_per_hour": "1/8",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/10 of the job.",
+          "In one hour, the second worker completes 1/40 of the job.",
+          "Together they complete 1/10 + 1/40 = 1/8 of the job per hour.",
+          "Time = 1 ÷ 1/8 = 8 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000419",
+      "source_file": "docs/batches/batch-006.json",
+      "source_record_sha256": "2100e147dd0ec7ba21034ca5d74f22d1254b10ad33db094b981cef95b5ed70e5",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o1",
+        "value_hours": "9",
+        "combined_rate_jobs_per_hour": "1/9",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/12 of the job.",
+          "In one hour, the second worker completes 1/36 of the job.",
+          "Together they complete 1/12 + 1/36 = 1/9 of the job per hour.",
+          "Time = 1 ÷ 1/9 = 9 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000424",
+      "source_file": "docs/batches/batch-006.json",
+      "source_record_sha256": "9774b725f7b6171e3d28d91da5e471e9361db3edc25e2f083b8a6907e15e1dc0",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o2",
+        "value_hours": "6",
+        "combined_rate_jobs_per_hour": "1/6",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/9 of the job.",
+          "In one hour, the second worker completes 1/18 of the job.",
+          "Together they complete 1/9 + 1/18 = 1/6 of the job per hour.",
+          "Time = 1 ÷ 1/6 = 6 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000430",
+      "source_file": "docs/batches/batch-006.json",
+      "source_record_sha256": "4f4cb3211c46f57e7d6e1d562bf0979490f2428b0d69d43f503cba024dee3340",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o2",
+        "value_hours": "12",
+        "combined_rate_jobs_per_hour": "1/12",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/20 of the job.",
+          "In one hour, the second worker completes 1/30 of the job.",
+          "Together they complete 1/20 + 1/30 = 1/12 of the job per hour.",
+          "Time = 1 ÷ 1/12 = 12 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000518",
+      "source_file": "docs/batches/batch-007.json",
+      "source_record_sha256": "20e9017e85031b798a2e6ccde2120aaf14d0649a1b361f34168f7df9108421b3",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o4",
+        "value_hours": "9",
+        "combined_rate_jobs_per_hour": "1/9",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/12 of the job.",
+          "In one hour, the second worker completes 1/36 of the job.",
+          "Together they complete 1/12 + 1/36 = 1/9 of the job per hour.",
+          "Time = 1 ÷ 1/9 = 9 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000521",
+      "source_file": "docs/batches/batch-007.json",
+      "source_record_sha256": "65682b516715d8b8e2553b513eeb2996bfa2a12b0c296f7800270b834cc2373d",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o2",
+        "value_hours": "20",
+        "combined_rate_jobs_per_hour": "1/20",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/30 of the job.",
+          "In one hour, the second worker completes 1/60 of the job.",
+          "Together they complete 1/30 + 1/60 = 1/20 of the job per hour.",
+          "Time = 1 ÷ 1/20 = 20 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000524",
+      "source_file": "docs/batches/batch-007.json",
+      "source_record_sha256": "6119893dc8b86c5753bbfd348e6d323fc2dcc44491c68cf392343ecdf0ba3ef0",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o1",
+        "value_hours": "2",
+        "combined_rate_jobs_per_hour": "1/2",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/3 of the job.",
+          "In one hour, the second worker completes 1/6 of the job.",
+          "Together they complete 1/3 + 1/6 = 1/2 of the job per hour.",
+          "Time = 1 ÷ 1/2 = 2 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000631",
+      "source_file": "docs/batches/batch-008.json",
+      "source_record_sha256": "7233615b8b629aaaf634d7a724ea5b0b907c26ecddfadc56617cba3104b68849",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o2",
+        "value_hours": "8",
+        "combined_rate_jobs_per_hour": "1/8",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/10 of the job.",
+          "In one hour, the second worker completes 1/40 of the job.",
+          "Together they complete 1/10 + 1/40 = 1/8 of the job per hour.",
+          "Time = 1 ÷ 1/8 = 8 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000634",
+      "source_file": "docs/batches/batch-008.json",
+      "source_record_sha256": "a05441c805d1a5d6082b1a0d01f48a7114299fa223ee2adf77281a362dd9a042",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o1",
+        "value_hours": "6",
+        "combined_rate_jobs_per_hour": "1/6",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/10 of the job.",
+          "In one hour, the second worker completes 1/15 of the job.",
+          "Together they complete 1/10 + 1/15 = 1/6 of the job per hour.",
+          "Time = 1 ÷ 1/6 = 6 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000635",
+      "source_file": "docs/batches/batch-008.json",
+      "source_record_sha256": "2152a0b1d449b147e5eba8f063606f6123ca179b5feee81394c6c02356dfd23c",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o4",
+        "value_hours": "4",
+        "combined_rate_jobs_per_hour": "1/4",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/6 of the job.",
+          "In one hour, the second worker completes 1/12 of the job.",
+          "Together they complete 1/6 + 1/12 = 1/4 of the job per hour.",
+          "Time = 1 ÷ 1/4 = 4 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000718",
+      "source_file": "docs/batches/batch-009.json",
+      "source_record_sha256": "751e2c6e46e310f0e8b626d4ee6f90c2cc5cb396b0c023c8cf7769424ccf5898",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o4",
+        "value_hours": "12",
+        "combined_rate_jobs_per_hour": "1/12",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/21 of the job.",
+          "In one hour, the second worker completes 1/28 of the job.",
+          "Together they complete 1/21 + 1/28 = 1/12 of the job per hour.",
+          "Time = 1 ÷ 1/12 = 12 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000721",
+      "source_file": "docs/batches/batch-009.json",
+      "source_record_sha256": "2074653b76224970a9d6fd5ad67204365cda83fd5955120c5304bb2bfc949b65",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o2",
+        "value_hours": "12",
+        "combined_rate_jobs_per_hour": "1/12",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/21 of the job.",
+          "In one hour, the second worker completes 1/28 of the job.",
+          "Together they complete 1/21 + 1/28 = 1/12 of the job per hour.",
+          "Time = 1 ÷ 1/12 = 12 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000722",
+      "source_file": "docs/batches/batch-009.json",
+      "source_record_sha256": "f82d42357175bb7737ef7590d8f2bda0e5f43b4e2e988e51d2dca987d7033327",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o4",
+        "value_hours": "6",
+        "combined_rate_jobs_per_hour": "1/6",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/9 of the job.",
+          "In one hour, the second worker completes 1/18 of the job.",
+          "Together they complete 1/9 + 1/18 = 1/6 of the job per hour.",
+          "Time = 1 ÷ 1/6 = 6 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000812",
+      "source_file": "docs/batches/batch-010.json",
+      "source_record_sha256": "84577b456b294cae6c0f5477d798e2bb36127df296fcb8f915af4317f3f028a8",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o3",
+        "value_hours": "6",
+        "combined_rate_jobs_per_hour": "1/6",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/10 of the job.",
+          "In one hour, the second worker completes 1/15 of the job.",
+          "Together they complete 1/10 + 1/15 = 1/6 of the job per hour.",
+          "Time = 1 ÷ 1/6 = 6 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000814",
+      "source_file": "docs/batches/batch-010.json",
+      "source_record_sha256": "fa927844a304165852cfdbcb47c50f205aeb3f6457903f97d1282371eaa3b05f",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o1",
+        "value_hours": "6",
+        "combined_rate_jobs_per_hour": "1/6",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/10 of the job.",
+          "In one hour, the second worker completes 1/15 of the job.",
+          "Together they complete 1/10 + 1/15 = 1/6 of the job per hour.",
+          "Time = 1 ÷ 1/6 = 6 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000815",
+      "source_file": "docs/batches/batch-010.json",
+      "source_record_sha256": "e08075841153a8ca508084ea374eac5c1732db45d8dcabacda7c164472f6a50a",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o2",
+        "value_hours": "10",
+        "combined_rate_jobs_per_hour": "1/10",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/14 of the job.",
+          "In one hour, the second worker completes 1/35 of the job.",
+          "Together they complete 1/14 + 1/35 = 1/10 of the job per hour.",
+          "Time = 1 ÷ 1/10 = 10 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000922",
+      "source_file": "docs/batches/batch-011.json",
+      "source_record_sha256": "2a3c491248633e8df6cb24dbb4eb3f4a9e487279cfd93b7675fb69809bf6ef3c",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o2",
+        "value_hours": "3",
+        "combined_rate_jobs_per_hour": "1/3",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/4 of the job.",
+          "In one hour, the second worker completes 1/12 of the job.",
+          "Together they complete 1/4 + 1/12 = 1/3 of the job per hour.",
+          "Time = 1 ÷ 1/3 = 3 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000935",
+      "source_file": "docs/batches/batch-011.json",
+      "source_record_sha256": "6e33460996d1402d4d102919b722b35055771c04824ea9468004354e3a8630a2",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "simultaneous-constant-work-rates",
+      "diagnostic_template": "add-unit-work-rates-then-reciprocal",
+      "diagnostic": {
+        "prompt": "Before calculating together-time, what should you combine?",
+        "choices": [
+          {
+            "id": "combine-rates",
+            "text": "Add the fractions of the job each person completes in one hour, then take the reciprocal.",
+            "role": "correct-rule",
+            "feedback": "Right. Work rates add because both people contribute during the same hour. The combined rate is jobs per hour; its reciprocal gives hours per job."
+          },
+          {
+            "id": "add-times",
+            "text": "Add the two completion times.",
+            "role": "time-rate-confusion",
+            "feedback": "Those are the times each person would need alone. To combine simultaneous workers, add the amount of the job each completes per hour."
+          },
+          {
+            "id": "average-times",
+            "text": "Average the two completion times.",
+            "role": "average-time-error",
+            "feedback": "The mean time does not account for how much work each person contributes in the same hour. Convert each time to a rate first."
+          },
+          {
+            "id": "faster-alone",
+            "text": "Use only the faster person’s completion time.",
+            "role": "ignore-second-contribution",
+            "feedback": "The faster person works at that rate, but the second person adds more work during each hour. Combine both rates."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or used another approach.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Ask: what fraction of the job does each person finish in one hour?"
+          }
+        ],
+        "confirmation": "Was that the reasoning you used before answering, did you choose it after seeing these choices, did you guess, or did you misclick? A selected option is only a hypothesis."
+      },
+      "verified_answer": {
+        "option_id": "o3",
+        "value_hours": "3",
+        "combined_rate_jobs_per_hour": "1/3",
+        "method": "reciprocal of the sum of individual unit-work rates",
+        "checks": [
+          "exact reciprocal verified",
+          "calculation matches stored key",
+          "one offered option matches exact answer"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "In one hour, the first worker completes 1/4 of the job.",
+          "In one hour, the second worker completes 1/12 of the job.",
+          "Together they complete 1/4 + 1/12 = 1/3 of the job per hour.",
+          "Time = 1 ÷ 1/3 = 3 hours."
+        ],
+        "hints": [
+          "A completion time is not the same as a work rate.",
+          "Find the fraction of the whole job each person completes in one hour.",
+          "Add those hourly fractions, then ask how many hours are needed for one whole job."
+        ],
+        "shortcut": "For two constant-rate workers completing the same job together: time = (first time × second time) ÷ (first time + second time). Check that the result is shorter than either solo time."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "No approved, unfamiliar transfer item from a distinct rate context has been verified; repetitions within two-worker work-together questions are retrieval only."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    }
+  ],
+  "excluded_nonapproved_ids": [
+    "CIVIO-NUM-WP-RATE-000116-R1",
+    "CIVIO-D1022-SPMATH-0049",
+    "CIVIO-NUM-WP-RATE-926029",
+    "CIVIO-NUM-WP-RATE-926030",
+    "CIVIO-NUM-WP-RATE-926031",
+    "CIVIO-NUM-WP-RATE-926043-R1",
+    "CIVIO-NUM-WP-RATE-926044",
+    "CIVIO-NUM-WP-RATE-926045",
+    "CIVIO-NUM-WP-RATE-926046",
+    "CIVIO-NUM-WP-RATE-926047",
+    "CIVIO-D1022-SPMATH-0050",
+    "CIVIO-D1022-SPMATH-0052",
+    "CIVIO-D1022-SPMATH-0053",
+    "CIVIO-D1022-SPMATH-0056",
+    "CIVIO-B4-NUM-WP-RATE-0349",
+    "CIVIO-D1022-SPMATH-0046",
+    "CIVIO-D1022-SPMATH-0047",
+    "CIVIO-D1022-SPMATH-0048"
+  ],
+  "notes": [
+    "Only 27 approved-source questions share this same simultaneous-work archetype; they are one learning family, not 27 distinct skills.",
+    "All 18 reviewed/draft source records are excluded from tutoring bindings, although their answer calculations were audited.",
+    "No distinct-family approved transfer is linked; no question status or canonical record was changed."
+  ]
+}

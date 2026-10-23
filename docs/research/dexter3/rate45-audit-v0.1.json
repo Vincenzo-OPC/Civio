@@ -1,0 +1,1225 @@
+{
+  "schema_version": "dexter-rate45-audit-v0.1",
+  "baseline_commit": "ac59a961f3136c88a81219bb3d5f920ba7a7fae2",
+  "method": "Explicit exact-rational solvers for rate/work, proportionality, constant speed, elapsed time, unit pricing, output, money and pack-ceiling forms. Any unsupported stem is retained as a manual exception. Stored-key agreement is not editorial approval.",
+  "summary": {
+    "record_count": 45,
+    "status_counts": {
+      "approved": 27,
+      "draft": 11,
+      "reviewed": 7
+    },
+    "methods": {
+      "two-workers-combined-rate": 29,
+      "elapsed-time-minus-breaks": 1,
+      "unit-rate-proportion": 1,
+      "inverse-workers-time": 1,
+      "map-scale": 1,
+      "workers-hours-output": 1,
+      "two-pumps-combined-rate": 1,
+      "constant-speed-time": 1,
+      "average-speed-total-distance-over-total-time": 1,
+      "total-profit-per-unit-margin": 1,
+      "distance-over-speed": 1,
+      "two-hoses-combined-rate": 1,
+      "whole-packs-ceiling": 1,
+      "unit-rate-times-time": 1,
+      "purchase-change": 2,
+      "elapsed-work-time": 1
+    },
+    "exact_calculations": 45,
+    "key_matches": 45,
+    "key_conflicts": 0,
+    "manual_required": 0,
+    "missing_wrong_choice_feedback": 0,
+    "same-parameter-question-groups": [
+      {
+        "question_ids": [
+          "CIVIO-NUM-WP-RATE-000011",
+          "CIVIO-NUM-WP-RATE-000042",
+          "CIVIO-NUM-WP-RATE-000212",
+          "CIVIO-NUM-WP-RATE-000524",
+          "CIVIO-D1022-SPMATH-0052"
+        ],
+        "same_solution_parameters": [
+          "two-workers-combined-rate",
+          "{\"hours\": [3, 6]}"
+        ]
+      },
+      {
+        "question_ids": [
+          "CIVIO-NUM-WP-RATE-000112",
+          "CIVIO-NUM-WP-RATE-000424",
+          "CIVIO-NUM-WP-RATE-000722"
+        ],
+        "same_solution_parameters": [
+          "two-workers-combined-rate",
+          "{\"hours\": [9, 18]}"
+        ]
+      },
+      {
+        "question_ids": [
+          "CIVIO-NUM-WP-RATE-000116-R1",
+          "CIVIO-NUM-WP-RATE-000718",
+          "CIVIO-NUM-WP-RATE-000721"
+        ],
+        "same_solution_parameters": [
+          "two-workers-combined-rate",
+          "{\"hours\": [21, 28]}"
+        ]
+      },
+      {
+        "question_ids": [
+          "CIVIO-NUM-WP-RATE-000239",
+          "CIVIO-NUM-WP-RATE-000521"
+        ],
+        "same_solution_parameters": [
+          "two-workers-combined-rate",
+          "{\"hours\": [30, 60]}"
+        ]
+      },
+      {
+        "question_ids": [
+          "CIVIO-NUM-WP-RATE-000313",
+          "CIVIO-NUM-WP-RATE-000419",
+          "CIVIO-NUM-WP-RATE-000518"
+        ],
+        "same_solution_parameters": [
+          "two-workers-combined-rate",
+          "{\"hours\": [12, 36]}"
+        ]
+      },
+      {
+        "question_ids": [
+          "CIVIO-NUM-WP-RATE-000317",
+          "CIVIO-NUM-WP-RATE-000635"
+        ],
+        "same_solution_parameters": [
+          "two-workers-combined-rate",
+          "{\"hours\": [6, 12]}"
+        ]
+      },
+      {
+        "question_ids": [
+          "CIVIO-NUM-WP-RATE-000325",
+          "CIVIO-NUM-WP-RATE-000631"
+        ],
+        "same_solution_parameters": [
+          "two-workers-combined-rate",
+          "{\"hours\": [10, 40]}"
+        ]
+      },
+      {
+        "question_ids": [
+          "CIVIO-NUM-WP-RATE-000634",
+          "CIVIO-NUM-WP-RATE-000812",
+          "CIVIO-NUM-WP-RATE-000814"
+        ],
+        "same_solution_parameters": [
+          "two-workers-combined-rate",
+          "{\"hours\": [10, 15]}"
+        ]
+      },
+      {
+        "question_ids": [
+          "CIVIO-NUM-WP-RATE-000922",
+          "CIVIO-NUM-WP-RATE-000935"
+        ],
+        "same_solution_parameters": [
+          "two-workers-combined-rate",
+          "{\"hours\": [4, 12]}"
+        ]
+      }
+    ],
+    "status": "draft_audit_only",
+    "human_review": null,
+    "runtime_eligible": false
+  },
+  "items": [
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000011",
+      "status": "approved",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "53ccac05a490d1bcec856c680bc76b27fef893c4c4471a075fbd140785e529b1",
+      "stem": "Liza can encode a box of survey forms in 6 hours. Ramon can encode the same box in 3 hours. If they work together, how long will it take them to encode one box?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          3,
+          6
+        ]
+      },
+      "calculated_answer": "2",
+      "key_option_id": "n2",
+      "key_text": "2 hours",
+      "matching_options": [
+        "n2"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [3, 6]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000028",
+      "status": "approved",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "e6f360352b14825a0e547bc9e81f329721c9b97c1f55e36eed69ff41eaf83257",
+      "stem": "Ramon can wash the ambulance fleet in 8 hours. Bong can do the same job in 24 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          8,
+          24
+        ]
+      },
+      "calculated_answer": "6",
+      "key_option_id": "o3",
+      "key_text": "6 hours",
+      "matching_options": [
+        "o3"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [8, 24]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000042",
+      "status": "approved",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "07c7248c1520e5387ff5e890ba38836d5374eb88062fdfc562d82ab0a8a6cd3e",
+      "stem": "Ramon can encode a box of survey forms in 6 hours. Arnel can do the same job in 3 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          3,
+          6
+        ]
+      },
+      "calculated_answer": "2",
+      "key_option_id": "o2",
+      "key_text": "2 hours",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [3, 6]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000112",
+      "status": "approved",
+      "source_file": "docs/batches/batch-003.json",
+      "source_record_sha256": "469a658709f2ce182968f58b2ee03801fad507a8ed8b292b1f7a8ba6a4838c6b",
+      "stem": "Mang Jun can wash the ambulance fleet in 18 hours. Datu can do the same job in 9 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          9,
+          18
+        ]
+      },
+      "calculated_answer": "6",
+      "key_option_id": "o1",
+      "key_text": "6 hours",
+      "matching_options": [
+        "o1"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [9, 18]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000116-R1",
+      "status": "draft",
+      "source_file": "docs/research/audit/fixes/signoff-replacements-2026-10-22.json",
+      "source_record_sha256": "3e6c8f2fe620ac5449f5533f9eeb35d29840abab9bd27d9326a3f09ba3a22f84",
+      "stem": "Nestor can paint a classroom in 21 hours. Aling Rosa can do the same job in 28 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          21,
+          28
+        ]
+      },
+      "calculated_answer": "12",
+      "key_option_id": "o1",
+      "key_text": "12 hours",
+      "matching_options": [
+        "o1"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [21, 28]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000120",
+      "status": "approved",
+      "source_file": "docs/batches/batch-003.json",
+      "source_record_sha256": "c11dc9ff629e8685500f45067d95281624c1f3c3d30caac7a2ffc0bf72e59887",
+      "stem": "Carlo can repack the relief goods in 45 hours. Joy can do the same job in 30 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          30,
+          45
+        ]
+      },
+      "calculated_answer": "18",
+      "key_option_id": "o3",
+      "key_text": "18 hours",
+      "matching_options": [
+        "o3"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [30, 45]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000212",
+      "status": "approved",
+      "source_file": "docs/batches/batch-004.json",
+      "source_record_sha256": "e49f25f80211d0ca980ac06e46ef85143daaf770a0f08a9cb8042767ba842a8d",
+      "stem": "Grace can paint a classroom in 6 hours. Mang Jun can do the same job in 3 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          3,
+          6
+        ]
+      },
+      "calculated_answer": "2",
+      "key_option_id": "o1",
+      "key_text": "2 hours",
+      "matching_options": [
+        "o1"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [3, 6]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000239",
+      "status": "approved",
+      "source_file": "docs/batches/batch-004.json",
+      "source_record_sha256": "05bbd21741ecaf78bfe126b817398b8fcae3d80e8a332d7e9b23c6481fc58bbf",
+      "stem": "Bea can label the census boxes in 30 hours. Rhea can do the same job in 60 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          30,
+          60
+        ]
+      },
+      "calculated_answer": "20",
+      "key_option_id": "o2",
+      "key_text": "20 hours",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [30, 60]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000313",
+      "status": "approved",
+      "source_file": "docs/batches/batch-005.json",
+      "source_record_sha256": "2e7c7479126f0cf8c82db63dfde3aedf71f46d11dc0ec2ad954bf592b30efdd2",
+      "stem": "Rogelio can sort a sack of mail in 36 hours. Kimberly can do the same job in 12 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          12,
+          36
+        ]
+      },
+      "calculated_answer": "9",
+      "key_option_id": "o4",
+      "key_text": "9 hours",
+      "matching_options": [
+        "o4"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [12, 36]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000317",
+      "status": "approved",
+      "source_file": "docs/batches/batch-005.json",
+      "source_record_sha256": "a62414fef4ff0b42e1a5a00cf53bcfb4fcfb61d59d237e50e091db49a76a5fbf",
+      "stem": "Aileen can paint a classroom in 6 hours. Ramon can do the same job in 12 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          6,
+          12
+        ]
+      },
+      "calculated_answer": "4",
+      "key_option_id": "o2",
+      "key_text": "4 hours",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [6, 12]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000325",
+      "status": "approved",
+      "source_file": "docs/batches/batch-005.json",
+      "source_record_sha256": "fb19405e7a68b57a4dabadbfb1001eb862ae25001029b6239b184f16e20137bc",
+      "stem": "Ramon can label the census boxes in 10 hours. Rhea can do the same job in 40 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          10,
+          40
+        ]
+      },
+      "calculated_answer": "8",
+      "key_option_id": "o1",
+      "key_text": "8 hours",
+      "matching_options": [
+        "o1"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [10, 40]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000419",
+      "status": "approved",
+      "source_file": "docs/batches/batch-006.json",
+      "source_record_sha256": "2100e147dd0ec7ba21034ca5d74f22d1254b10ad33db094b981cef95b5ed70e5",
+      "stem": "Kimberly can encode a box of survey forms in 36 hours. Carlo can do the same job in 12 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          12,
+          36
+        ]
+      },
+      "calculated_answer": "9",
+      "key_option_id": "o1",
+      "key_text": "9 hours",
+      "matching_options": [
+        "o1"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [12, 36]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000424",
+      "status": "approved",
+      "source_file": "docs/batches/batch-006.json",
+      "source_record_sha256": "9774b725f7b6171e3d28d91da5e471e9361db3edc25e2f083b8a6907e15e1dc0",
+      "stem": "Bea can clean the plaza in 18 hours. Aileen can do the same job in 9 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          9,
+          18
+        ]
+      },
+      "calculated_answer": "6",
+      "key_option_id": "o2",
+      "key_text": "6 hours",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [9, 18]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000430",
+      "status": "approved",
+      "source_file": "docs/batches/batch-006.json",
+      "source_record_sha256": "4f4cb3211c46f57e7d6e1d562bf0979490f2428b0d69d43f503cba024dee3340",
+      "stem": "Grace can repack the relief goods in 20 hours. Bea can do the same job in 30 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          20,
+          30
+        ]
+      },
+      "calculated_answer": "12",
+      "key_option_id": "o2",
+      "key_text": "12 hours",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [20, 30]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000518",
+      "status": "approved",
+      "source_file": "docs/batches/batch-007.json",
+      "source_record_sha256": "20e9017e85031b798a2e6ccde2120aaf14d0649a1b361f34168f7df9108421b3",
+      "stem": "Dindo can paint a classroom in 36 hours. Aling Rosa can do the same job in 12 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          12,
+          36
+        ]
+      },
+      "calculated_answer": "9",
+      "key_option_id": "o4",
+      "key_text": "9 hours",
+      "matching_options": [
+        "o4"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [12, 36]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000521",
+      "status": "approved",
+      "source_file": "docs/batches/batch-007.json",
+      "source_record_sha256": "65682b516715d8b8e2553b513eeb2996bfa2a12b0c296f7800270b834cc2373d",
+      "stem": "Paolo can scan the old land titles in 30 hours. Grace can do the same job in 60 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          30,
+          60
+        ]
+      },
+      "calculated_answer": "20",
+      "key_option_id": "o2",
+      "key_text": "20 hours",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [30, 60]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000524",
+      "status": "approved",
+      "source_file": "docs/batches/batch-007.json",
+      "source_record_sha256": "6119893dc8b86c5753bbfd348e6d323fc2dcc44491c68cf392343ecdf0ba3ef0",
+      "stem": "Cora can repack the relief goods in 6 hours. Lourdes can do the same job in 3 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          3,
+          6
+        ]
+      },
+      "calculated_answer": "2",
+      "key_option_id": "o1",
+      "key_text": "2 hours",
+      "matching_options": [
+        "o1"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [3, 6]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000631",
+      "status": "approved",
+      "source_file": "docs/batches/batch-008.json",
+      "source_record_sha256": "7233615b8b629aaaf634d7a724ea5b0b907c26ecddfadc56617cba3104b68849",
+      "stem": "Cora can paint a classroom in 40 hours. Aileen can do the same job in 10 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          10,
+          40
+        ]
+      },
+      "calculated_answer": "8",
+      "key_option_id": "o2",
+      "key_text": "8 hours",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [10, 40]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000634",
+      "status": "approved",
+      "source_file": "docs/batches/batch-008.json",
+      "source_record_sha256": "a05441c805d1a5d6082b1a0d01f48a7114299fa223ee2adf77281a362dd9a042",
+      "stem": "Nestor can inventory a supply room in 10 hours. Rhea can do the same job in 15 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          10,
+          15
+        ]
+      },
+      "calculated_answer": "6",
+      "key_option_id": "o1",
+      "key_text": "6 hours",
+      "matching_options": [
+        "o1"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [10, 15]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000635",
+      "status": "approved",
+      "source_file": "docs/batches/batch-008.json",
+      "source_record_sha256": "2152a0b1d449b147e5eba8f063606f6123ca179b5feee81394c6c02356dfd23c",
+      "stem": "Mang Jun can repack the relief goods in 6 hours. Efren can do the same job in 12 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          6,
+          12
+        ]
+      },
+      "calculated_answer": "4",
+      "key_option_id": "o4",
+      "key_text": "4 hours",
+      "matching_options": [
+        "o4"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [6, 12]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000718",
+      "status": "approved",
+      "source_file": "docs/batches/batch-009.json",
+      "source_record_sha256": "751e2c6e46e310f0e8b626d4ee6f90c2cc5cb396b0c023c8cf7769424ccf5898",
+      "stem": "Bea can paint a classroom in 21 hours. Liza can do the same job in 28 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          21,
+          28
+        ]
+      },
+      "calculated_answer": "12",
+      "key_option_id": "o4",
+      "key_text": "12 hours",
+      "matching_options": [
+        "o4"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [21, 28]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000721",
+      "status": "approved",
+      "source_file": "docs/batches/batch-009.json",
+      "source_record_sha256": "2074653b76224970a9d6fd5ad67204365cda83fd5955120c5304bb2bfc949b65",
+      "stem": "Jomar can label the census boxes in 21 hours. Bong can do the same job in 28 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          21,
+          28
+        ]
+      },
+      "calculated_answer": "12",
+      "key_option_id": "o2",
+      "key_text": "12 hours",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [21, 28]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000722",
+      "status": "approved",
+      "source_file": "docs/batches/batch-009.json",
+      "source_record_sha256": "f82d42357175bb7737ef7590d8f2bda0e5f43b4e2e988e51d2dca987d7033327",
+      "stem": "Liza can paint a classroom in 18 hours. Rogelio can do the same job in 9 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          9,
+          18
+        ]
+      },
+      "calculated_answer": "6",
+      "key_option_id": "o4",
+      "key_text": "6 hours",
+      "matching_options": [
+        "o4"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [9, 18]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-D1022-SPMATH-0049",
+      "status": "draft",
+      "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+      "source_record_sha256": "ed7f49deb25449d5c883b461aa1cfad64d68e100b9e101711fc138473d92ba08",
+      "stem": "A seminar ran from 9:50 a.m. to 3:05 p.m., with a 45-minute lunch and a 15-minute snack break. How much time was spent in actual sessions?",
+      "method": "elapsed-time-minus-breaks",
+      "parameters": {
+        "duration_minutes": 315,
+        "break_minutes": 60
+      },
+      "calculated_answer": "17/4",
+      "key_option_id": "o4",
+      "key_text": "4 hours 15 minutes",
+      "matching_options": [
+        "o4"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"elapsed-time-minus-breaks\", \"{\\\"break_minutes\\\": 60, \\\"duration_minutes\\\": 315}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000812",
+      "status": "approved",
+      "source_file": "docs/batches/batch-010.json",
+      "source_record_sha256": "84577b456b294cae6c0f5477d798e2bb36127df296fcb8f915af4317f3f028a8",
+      "stem": "Analyn can label the census boxes in 15 hours. Bea can do the same job in 10 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          10,
+          15
+        ]
+      },
+      "calculated_answer": "6",
+      "key_option_id": "o3",
+      "key_text": "6 hours",
+      "matching_options": [
+        "o3"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [10, 15]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000814",
+      "status": "approved",
+      "source_file": "docs/batches/batch-010.json",
+      "source_record_sha256": "fa927844a304165852cfdbcb47c50f205aeb3f6457903f97d1282371eaa3b05f",
+      "stem": "Rogelio can sort a sack of mail in 15 hours. Tess can do the same job in 10 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          10,
+          15
+        ]
+      },
+      "calculated_answer": "6",
+      "key_option_id": "o1",
+      "key_text": "6 hours",
+      "matching_options": [
+        "o1"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [10, 15]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000815",
+      "status": "approved",
+      "source_file": "docs/batches/batch-010.json",
+      "source_record_sha256": "e08075841153a8ca508084ea374eac5c1732db45d8dcabacda7c164472f6a50a",
+      "stem": "Paolo can clean the plaza in 35 hours. Liza can do the same job in 14 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          14,
+          35
+        ]
+      },
+      "calculated_answer": "10",
+      "key_option_id": "o2",
+      "key_text": "10 hours",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [14, 35]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000922",
+      "status": "approved",
+      "source_file": "docs/batches/batch-011.json",
+      "source_record_sha256": "2a3c491248633e8df6cb24dbb4eb3f4a9e487279cfd93b7675fb69809bf6ef3c",
+      "stem": "Tess can sort a sack of mail in 12 hours. Bea can do the same job in 4 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          4,
+          12
+        ]
+      },
+      "calculated_answer": "3",
+      "key_option_id": "o2",
+      "key_text": "3 hours",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [4, 12]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-000935",
+      "status": "approved",
+      "source_file": "docs/batches/batch-011.json",
+      "source_record_sha256": "6e33460996d1402d4d102919b722b35055771c04824ea9468004354e3a8630a2",
+      "stem": "Marites can paint a classroom in 4 hours. Carlo can do the same job in 12 hours. Working together, how long will they take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          4,
+          12
+        ]
+      },
+      "calculated_answer": "3",
+      "key_option_id": "o3",
+      "key_text": "3 hours",
+      "matching_options": [
+        "o3"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [4, 12]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-926029",
+      "status": "reviewed",
+      "source_file": "docs/research/batch-subpro-num-001.json",
+      "source_record_sha256": "37ef831e6842cd4b5c2324a6c2b45aa87323a5b0f1552e1ff72f7ad3a1e0059b",
+      "stem": "A weaving group sells 6 meters of plain abaca cloth for ₱390. At the same price per meter, what will 10 meters cost?",
+      "method": "unit-rate-proportion",
+      "parameters": {
+        "base_quantity": 6,
+        "base_cost": 390,
+        "target_quantity": 10
+      },
+      "calculated_answer": "650",
+      "key_option_id": "o1",
+      "key_text": "₱650",
+      "matching_options": [
+        "o1"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"unit-rate-proportion\", \"{\\\"base_cost\\\": 390, \\\"base_quantity\\\": 6, \\\"target_quantity\\\": 10}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-926030",
+      "status": "reviewed",
+      "source_file": "docs/research/batch-subpro-num-001.json",
+      "source_record_sha256": "3a04f493a8470c4503a34c5c7e11940dd5d5f866f0f667069bc94fcfb415514e",
+      "stem": "Eight trained packers can finish an order in 15 hours. If 12 equally fast packers handle the same order, how many hours will it take?",
+      "method": "inverse-workers-time",
+      "parameters": {
+        "workers_start": 8,
+        "hours_start": 15,
+        "workers_target": 12
+      },
+      "calculated_answer": "10",
+      "key_option_id": "o2",
+      "key_text": "10 hours",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"inverse-workers-time\", \"{\\\"hours_start\\\": 15, \\\"workers_start\\\": 8, \\\"workers_target\\\": 12}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-926031",
+      "status": "reviewed",
+      "source_file": "docs/research/batch-subpro-num-001.json",
+      "source_record_sha256": "dd71c308f4619b820c75ed3c9bc9ba3160780f2ce44edcd280c656daba62ca11",
+      "stem": "On an evacuation route map, every 1 centimeter represents 4 kilometers. A road is 7 1/2 centimeters long on the map. How long is that road in reality?",
+      "method": "map-scale",
+      "parameters": {
+        "km_per_cm": "4",
+        "map_cm": "15/2"
+      },
+      "calculated_answer": "30",
+      "key_option_id": "o3",
+      "key_text": "30 kilometers",
+      "matching_options": [
+        "o3"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"map-scale\", \"{\\\"km_per_cm\\\": \\\"4\\\", \\\"map_cm\\\": \\\"15/2\\\"}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-926043-R1",
+      "status": "draft",
+      "source_file": "docs/research/audit/fixes/p1-editorial-r1-2026-10-22.json",
+      "source_record_sha256": "cff374847cf3fb0ddf4967b5c8646adc380b5e3f6e88d29e08cbf044d9ab0535",
+      "stem": "Three equally fast volunteers pack 360 relief kits in 6 hours. At the same pace, how many kits can 5 volunteers pack in 4 hours?",
+      "method": "workers-hours-output",
+      "parameters": {
+        "workers": 3,
+        "output": 360,
+        "hours": 6,
+        "target_workers": 5,
+        "target_hours": 4
+      },
+      "calculated_answer": "400",
+      "key_option_id": "o3",
+      "key_text": "400 kits",
+      "matching_options": [
+        "o3"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"workers-hours-output\", \"{\\\"hours\\\": 6, \\\"output\\\": 360, \\\"target_hours\\\": 4, \\\"target_workers\\\": 5, \\\"workers\\\": 3}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-926044",
+      "status": "reviewed",
+      "source_file": "docs/research/batch-subpro-num-001.json",
+      "source_record_sha256": "70ce3d2a3162115f6f81b6d93161a3edbf630dd4325cd8128c5c672f7eb94a4e",
+      "stem": "One pump empties a pond in 8 hours. Another pump can empty the same pond in 12 hours. If both operate together from the start, how long will they take?",
+      "method": "two-pumps-combined-rate",
+      "parameters": {
+        "hours": [
+          8,
+          12
+        ]
+      },
+      "calculated_answer": "24/5",
+      "key_option_id": "o4",
+      "key_text": "4 4/5 hours",
+      "matching_options": [
+        "o4"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-pumps-combined-rate\", \"{\\\"hours\\\": [8, 12]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-926045",
+      "status": "reviewed",
+      "source_file": "docs/research/batch-subpro-num-001.json",
+      "source_record_sha256": "6756fd4609fb46df5ec488240c2e9995570422b5a87b0880777bc507070f0594",
+      "stem": "A provincial bus covers 72 kilometers in 1 1/2 hours at a steady speed. How many hours will it need to travel 120 kilometers at the same speed?",
+      "method": "constant-speed-time",
+      "parameters": {
+        "distance_km": 72,
+        "time_h": "3/2",
+        "target_distance_km": 120
+      },
+      "calculated_answer": "5/2",
+      "key_option_id": "o1",
+      "key_text": "2 1/2 hours",
+      "matching_options": [
+        "o1"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"constant-speed-time\", \"{\\\"distance_km\\\": 72, \\\"target_distance_km\\\": 120, \\\"time_h\\\": \\\"3/2\\\"}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-926046",
+      "status": "reviewed",
+      "source_file": "docs/research/batch-subpro-num-001.json",
+      "source_record_sha256": "92d5396633be6687e49283e98ea0548ef428e783e7ad274ee1a0b76881539419",
+      "stem": "A delivery van travels 50 kilometers at 50 km/h, then another 50 kilometers at 25 km/h. What is the average speed for the entire 100-kilometer trip?",
+      "method": "average-speed-total-distance-over-total-time",
+      "parameters": {
+        "legs": [
+          [
+            50,
+            50
+          ],
+          [
+            50,
+            25
+          ]
+        ]
+      },
+      "calculated_answer": "100/3",
+      "key_option_id": "o2",
+      "key_text": "33 1/3 km/h",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"average-speed-total-distance-over-total-time\", \"{\\\"legs\\\": [[50, 50], [50, 25]]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATE-926047",
+      "status": "reviewed",
+      "source_file": "docs/research/batch-subpro-num-001.json",
+      "source_record_sha256": "e616d478c8747a823016776b973be24bacc760b2154f62544ef9466ff7171ace",
+      "stem": "A campus kiosk sells 18 prepaid study cards for ₱35 each. Each card costs the kiosk ₱22. What is its total profit on these sales?",
+      "method": "total-profit-per-unit-margin",
+      "parameters": {
+        "quantity": 18,
+        "selling_price": 35,
+        "unit_cost": 22
+      },
+      "calculated_answer": "234",
+      "key_option_id": "o3",
+      "key_text": "₱234",
+      "matching_options": [
+        "o3"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"total-profit-per-unit-margin\", \"{\\\"quantity\\\": 18, \\\"selling_price\\\": 35, \\\"unit_cost\\\": 22}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-D1022-SPMATH-0050",
+      "status": "draft",
+      "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+      "source_record_sha256": "74a44b7871882e577f724861e71e390fcb595ad4e5e1ea31b48da07b17e47e04",
+      "stem": "A bus from Roxas to Iloilo covers 150 km at an average of 60 km/h. How long is the trip?",
+      "method": "distance-over-speed",
+      "parameters": {
+        "distance_km": 150,
+        "speed_kmh": 60
+      },
+      "calculated_answer": "5/2",
+      "key_option_id": "o3",
+      "key_text": "2 hours 30 minutes",
+      "matching_options": [
+        "o3"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"distance-over-speed\", \"{\\\"distance_km\\\": 150, \\\"speed_kmh\\\": 60}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-D1022-SPMATH-0052",
+      "status": "draft",
+      "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+      "source_record_sha256": "b1a9504d34d8ab4e9f8ad91ed68cf61f3cc0f5bce6d8ab6cc28f027b7d514104",
+      "stem": "Bea can type the minutes of a meeting in 6 hours; Nonoy can type the same minutes in 3 hours. If they split the work and type at the same time, how many hours will it take?",
+      "method": "two-workers-combined-rate",
+      "parameters": {
+        "hours": [
+          3,
+          6
+        ]
+      },
+      "calculated_answer": "2",
+      "key_option_id": "o2",
+      "key_text": "2 hours",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-workers-combined-rate\", \"{\\\"hours\\\": [3, 6]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-D1022-SPMATH-0053",
+      "status": "draft",
+      "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+      "source_record_sha256": "ccaa638d8b750fe6caa3b8080a6c3305365e02d4030838bb1d72a242be4a85bf",
+      "stem": "One hose fills a water tank in 4 hours, and a second hose fills it in 12 hours. If both run at once, how long until the tank is full?",
+      "method": "two-hoses-combined-rate",
+      "parameters": {
+        "hours": [
+          4,
+          12
+        ]
+      },
+      "calculated_answer": "3",
+      "key_option_id": "o2",
+      "key_text": "3 hours",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"two-hoses-combined-rate\", \"{\\\"hours\\\": [4, 12]}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-D1022-SPMATH-0056",
+      "status": "draft",
+      "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+      "source_record_sha256": "a785fa0dc9c021354b8d09702e45d4174fb4a61e6be121deb97b5db1c223449f",
+      "stem": "A barangay office needs 250 envelopes for its notices. Envelopes are sold only in packs of 40. How many packs must it buy?",
+      "method": "whole-packs-ceiling",
+      "parameters": {
+        "needed": 250,
+        "per_pack": 40
+      },
+      "calculated_answer": "7",
+      "key_option_id": "o1",
+      "key_text": "7",
+      "matching_options": [
+        "o1"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"whole-packs-ceiling\", \"{\\\"needed\\\": 250, \\\"per_pack\\\": 40}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-B4-NUM-WP-RATE-0349",
+      "status": "draft",
+      "source_file": "docs/research/audit/fixes/round-03-baseline-b4-drafts.json",
+      "source_record_sha256": "80ef2815003fbabe1a8b6d28f4679ed8cc37e13bf6a4ca0b23c5629e5a3a53e9",
+      "stem": "Working steadily, a records clerk puts away 18 folders each hour. How many folders are put away in a 4-hour shift?",
+      "method": "unit-rate-times-time",
+      "parameters": {
+        "per_hour": 18,
+        "hours": 4
+      },
+      "calculated_answer": "72",
+      "key_option_id": "n4",
+      "key_text": "72",
+      "matching_options": [
+        "n4"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"unit-rate-times-time\", \"{\\\"hours\\\": 4, \\\"per_hour\\\": 18}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-D1022-SPMATH-0046",
+      "status": "draft",
+      "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+      "source_record_sha256": "bda8d6977a2277b970c6b9d91b007f289baed1a4de5c2e956d541136cd179c9f",
+      "stem": "At a school supply store, Teresa buys 4 ballpens at ₱18 each and 3 folders at ₱25 each. She pays with a ₱200 bill. How much change should she get?",
+      "method": "purchase-change",
+      "parameters": {
+        "counts_prices": [
+          [
+            4,
+            18
+          ],
+          [
+            3,
+            25
+          ]
+        ],
+        "paid": 200
+      },
+      "calculated_answer": "53",
+      "key_option_id": "o4",
+      "key_text": "₱53",
+      "matching_options": [
+        "o4"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"purchase-change\", \"{\\\"counts_prices\\\": [[4, 18], [3, 25]], \\\"paid\\\": 200}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-D1022-SPMATH-0047",
+      "status": "draft",
+      "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+      "source_record_sha256": "d7a39a0f2f5d14c77696c3c8dc1ad9d69f196031e4dc7f178363a041feb320b9",
+      "stem": "For a seminar, Carlo buys 6 bottles of water at ₱15 each and 2 boxes of pandesal at ₱85 each, paying with a ₱500 bill. What is his change?",
+      "method": "purchase-change",
+      "parameters": {
+        "counts_prices": [
+          [
+            6,
+            15
+          ],
+          [
+            2,
+            85
+          ]
+        ],
+        "paid": 500
+      },
+      "calculated_answer": "240",
+      "key_option_id": "o1",
+      "key_text": "₱240",
+      "matching_options": [
+        "o1"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"purchase-change\", \"{\\\"counts_prices\\\": [[6, 15], [2, 85]], \\\"paid\\\": 500}\"]",
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-D1022-SPMATH-0048",
+      "status": "draft",
+      "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+      "source_record_sha256": "a2814ff32fe8ba8fe43f096c77cad9072a65b2cebb1557ee093bd1e56b5aa72f",
+      "stem": "A data encoder starts work at 8:45 a.m. and stops at 1:20 p.m., taking a 30-minute lunch break in between. How long did she actually encode?",
+      "method": "elapsed-work-time",
+      "parameters": {
+        "elapsed_minutes": 275,
+        "break_minutes": 30
+      },
+      "calculated_answer": "49/12",
+      "key_option_id": "o2",
+      "key_text": "4 hours 5 minutes",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "distractor_feedback_present": true,
+      "duplicate_signature": "[\"elapsed-work-time\", \"{\\\"break_minutes\\\": 30, \\\"elapsed_minutes\\\": 275}\"]",
+      "manual_review": null
+    }
+  ]
+}
