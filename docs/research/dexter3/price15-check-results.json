@@ -1,0 +1,126 @@
+{
+  "baseline_commit": "4934bc2c4551ee6f9823db99f3f8dcf9926e01de",
+  "overlay_sha256": "d1337b21a192a389e2c71e99ef414e2e8016b42a8e6bd069dfbdf744c4150bca",
+  "bindings_evaluated": 15,
+  "contrast_evaluated": 1,
+  "math_checks": [
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000001",
+      "result": "240",
+      "key": "n1",
+      "distractors_checked": 3
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000024",
+      "result": "792",
+      "key": "o3",
+      "distractors_checked": 3
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000030",
+      "result": "408",
+      "key": "o1",
+      "distractors_checked": 3
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000036",
+      "result": "340",
+      "key": "o1",
+      "distractors_checked": 3
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000038",
+      "result": "520",
+      "key": "o4",
+      "distractors_checked": 3
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000045",
+      "result": "180",
+      "key": "o4",
+      "distractors_checked": 3
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000113",
+      "result": "180",
+      "key": "o4",
+      "distractors_checked": 3
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000224",
+      "result": "720",
+      "key": "o3",
+      "distractors_checked": 3
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000227",
+      "result": "1008",
+      "key": "o4",
+      "distractors_checked": 3
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000324",
+      "result": "270",
+      "key": "o2",
+      "distractors_checked": 3
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000328",
+      "result": "540",
+      "key": "o1",
+      "distractors_checked": 3
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000415",
+      "result": "675",
+      "key": "o4",
+      "distractors_checked": 3
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000428",
+      "result": "264",
+      "key": "o4",
+      "distractors_checked": 3
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000429",
+      "result": "468",
+      "key": "o1",
+      "distractors_checked": 3
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000515",
+      "result": "132",
+      "key": "o1",
+      "distractors_checked": 3
+    }
+  ],
+  "canonical_distractor_values_checked": 45,
+  "candidate_calculations": {
+    "CIVIO-NUM-WP-PCT-CHANGE-000013": "₱3,000",
+    "CIVIO-NUM-WP-PCT-CHANGE-000124": "₱225",
+    "CIVIO-NUM-WP-PCT-CHANGE-000121": "₱1,800"
+  },
+  "flow_contracts_passed": 2,
+  "invalid_fixtures_rejected": [
+    "source drift",
+    "runtime promotion",
+    "invented reviewer",
+    "unknown becomes diagnosis",
+    "broken edge",
+    "duplicate response feedback",
+    "false transfer approval",
+    "wrong contrast result"
+  ],
+  "prior_files_byte_identical": [
+    "pilot-v0.1.json",
+    "coverage-v0.1.json",
+    "build_pilot.py",
+    "validate_pilot.py"
+  ],
+  "mathematical_errors_found": 0,
+  "editorial_status": "author_second_pass_plausible_pending_independent_review",
+  "independent_human_reviews": 0,
+  "runtime_approvals": 0,
+  "runtime_tests_run": false
+}

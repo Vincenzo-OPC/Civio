@@ -1,5 +1,7 @@
 # Dexter 3.0 content checkpoint: 23 October 2026
 
+**Next checkpoint:** [15-binding editorial QA, draft v0.2 overlay and Guide Me handoff](PRICE15_EDITORIAL_REVIEW.md). The original v0.1 pilot remains intact. This follow-up is an author second pass, not independent human approval.
+
 **Draft research and tutoring metadata, not an implemented or approved tutor.** Examined main `78df5c26b07b5c94b53482c2f6200ab4a49a1551`. This extends the [Guide Me proposal](../dexter2/SOCRATIC_GUIDE_ME_AND_BANK_ENRICHMENT_2026-10-23.md), [October 23 intelligence review](../dexter2/INTELLIGENCE_REVIEW_2026-10-23.md), [October 22 audit](../DEXTER_2_RESEARCH_AUDIT_2026-10-22.md) and [60-item packet](../dexter2/pilot/README.md). It does not replace the execution roadmap.
 
 ## Verified bank state
