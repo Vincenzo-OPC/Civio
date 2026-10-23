@@ -56,3 +56,25 @@ No application behavior, canonical bank content, approval status, protected serv
 Research checks passed: manifest (2,100 IDs, zero problems), original pilot validator, price-patch validator, 19 bank-gate tests, Python compilation and `validate_bulk.py`. The new overlay pass checks 25 keys and 75 distractor amounts; queue cache fixtures prove 2,100 warm hits, one-record source invalidation and group-scoped recipe invalidation.
 
 Repository pre-publication checks also passed: TypeScript, ESLint, Vite build, and 622 PHP/Pest tests with 5,254 assertions. Local setup required a worktree-specific Composer autoloader, generated Wayfinder forms, a disposable test encryption key and a 1 GB test-process memory setting. These are test-environment setup, not application changes; initial attempts failed before that setup. No browser, learner study or human approval is claimed.
+
+## Numerical batch 1: order of operations and sequences
+
+Checkpoint parent: `8b69fffbba83fc663e6a2389bdae880a325314d8`.
+
+The independent exact-rational screening pass covers all **84** records in two groups: 33 order-of-operations and 51 number sequences. It parsed operations under a restricted AST, checked exact values against all options and stored keys, and matched sequence candidates to the single offered keyed option under conventional rules. All 84 stored keys match; all 84 have canonical explanations and distractor codes for every wrong option. This verifies these answer paths, not whether each distractor is a good diagnosis or whether an explanation teaches effectively.
+
+The 51 sequence items are not one family. Their stored-key methods resolve to 45 growing-gap patterns, two consecutive-square patterns, two previous-two-sum patterns, one square-gap pattern and one prime pattern. In the approved subset, 28 of 29 sequence items use growing gaps and one uses consecutive squares. The bank therefore overstates sequence-method variety. Three stems also admit a different familiar next-term rule whose result is not offered; the answer remains uniquely supported by the choices, but these items should say what kind of pattern to inspect if used outside a multiple-choice context.
+
+The exact term list `11, 15, 20, 26, 33` appears in both `CIVIO-NUM-SEQ-DIFF-000220` and `CIVIO-GF2K02-SEQD-0010`. It is recorded as a duplicate candidate, not silently counted as diverse practice.
+
+A draft Guide Me sidecar now binds reusable rule diagnostics to **59 approved source records**: 30 order-of-operations, 28 growing-gap, and one square-sequence item. The other 25 records were audited but excluded from bindings because their source bank status is draft. The draft asks which rule applies before revealing the arithmetic, includes response-specific teaching and self-report confirmation, and keeps any learner hypothesis provisional. All 59 have no approved distinct-family transfer yet. Existing question IDs, keys, options and source text are unchanged; no item or tutoring draft is runtime eligible.
+
+Re-run:
+
+```bash
+python3 docs/research/dexter3/audit_numerical84.py
+python3 docs/research/dexter3/build_numerical84_tutoring.py
+python3 docs/research/dexter3/validate_numerical84.py
+```
+
+The audit is exact and reproducible, but it does not replace the separate editorial review of human-readable diagnostic branches, distractor validity or learning effectiveness. These 59 bindings remain draft pending that review.

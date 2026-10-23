@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "audit_records": 84,
+  "exact_key_checks": 84,
+  "draft_bindings_source_approved": 59,
+  "nonapproved_excluded": 25,
+  "duplicate_sequence_pairs": 1,
+  "unmapped_transfer_approved": 59,
+  "runtime_approved": 0,
+  "human_review_decisions": 0
+}

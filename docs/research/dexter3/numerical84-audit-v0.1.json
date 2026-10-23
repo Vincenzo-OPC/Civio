@@ -1,0 +1,2834 @@
+{
+  "schema_version": "dexter-numerical84-audit-v0.1",
+  "baseline_commit": "8b69fffbba83fc663e6a2389bdae880a325314d8",
+  "method": "Restricted exact-expression evaluation; conventional sequence rule candidates plus exact options/key reconciliation. Results are screening, not pedagogical approval.",
+  "summary": {
+    "groups_audited": {
+      "NUM-OPS-ORDER": 33,
+      "NUM-SEQ-DIFF": 51
+    },
+    "records": 84,
+    "exact_key_passes": 84,
+    "key_conflicts_or_manual_exceptions": 0,
+    "uncovered_explanations": 0,
+    "uncovered_codes": 0,
+    "repeated_term_sequences": [
+      {
+        "terms": [
+          11,
+          15,
+          20,
+          26,
+          33
+        ],
+        "question_ids": [
+          "CIVIO-NUM-SEQ-DIFF-000220",
+          "CIVIO-GF2K02-SEQD-0010"
+        ]
+      }
+    ],
+    "status": "draft_audit_only",
+    "human_review": null,
+    "runtime_eligible": false
+  },
+  "items": [
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000031",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "a5fcc7996200c57ada285efbff734d8f33a3dbffdc302124f50ff4d46674c144",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of 4 + 2 × 4 − 10?",
+      "key_option_id": "o1",
+      "key_text": "2",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "4 + 2 × 4 − 10",
+      "exact_answer": "2",
+      "key_matches": true,
+      "matching_options": [
+        "o1"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000039",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "ab9fdb5da3251bb4d0baa0f9a5c1db32230e06d10efdab53111bb68c9723f583",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of (4 + 8) × 2 − 5?",
+      "key_option_id": "o2",
+      "key_text": "19",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "(4 + 8) × 2 − 5",
+      "exact_answer": "19",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000041",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "5b1503ab0142f35b564a2e6090856246f88b88a06b3b48a9c9bb41d8af00bd79",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of 9 × 4 − 9 ÷ 3?",
+      "key_option_id": "o1",
+      "key_text": "33",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "9 × 4 − 9 ÷ 3",
+      "exact_answer": "33",
+      "key_matches": true,
+      "matching_options": [
+        "o1"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000118",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "945fae7670192192863fecadf0f0aec706374612af4a25a4e1e21f3552983c1a",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of 3 − 3 × 7 + 2?",
+      "key_option_id": "o3",
+      "key_text": "-16",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "3 − 3 × 7 + 2",
+      "exact_answer": "-16",
+      "key_matches": true,
+      "matching_options": [
+        "o3"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000131",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "5e38ad436afd21039ee2bb10f413df063387c96c1f23f1fc38935f1628df04bb",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of 2 + 8 × (7 − 8)?",
+      "key_option_id": "o2",
+      "key_text": "-6",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "2 + 8 × (7 − 8)",
+      "exact_answer": "-6",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000135",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "d4834517aee15410cfda23e861501a300208935a59a267da83fb8ddd6442d6a4",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of (14 × 2 + 7) ÷ 7?",
+      "key_option_id": "o4",
+      "key_text": "5",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "(14 × 2 + 7) ÷ 7",
+      "exact_answer": "5",
+      "key_matches": true,
+      "matching_options": [
+        "o4"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000213",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "7d9d0deb0a9ae2a4b42398a5b15daa44e7703dc1eb850b06133ea2595d55950e",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of 7 + 9 × 8 − 9?",
+      "key_option_id": "o4",
+      "key_text": "70",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "7 + 9 × 8 − 9",
+      "exact_answer": "70",
+      "key_matches": true,
+      "matching_options": [
+        "o4"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000235",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "e28245a89819094f62520f86922353703e061b4072984b576d89f1a60439d0fa",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of (17 + 6) × 8 − 3?",
+      "key_option_id": "o3",
+      "key_text": "181",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "(17 + 6) × 8 − 3",
+      "exact_answer": "181",
+      "key_matches": true,
+      "matching_options": [
+        "o3"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000240",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "10ac559740853fd4b2040458a2af874f3156e2173d28b276d0efed3403e66cee",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of 19 × 2 − 10 ÷ 2?",
+      "key_option_id": "o2",
+      "key_text": "33",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "19 × 2 − 10 ÷ 2",
+      "exact_answer": "33",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000319",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "2fe641b77001e3708c0cf8f6d01591f712000065c5c1e6dd8fcbc40e32ee5caa",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of 8 − 5 × 2 + 3?",
+      "key_option_id": "o4",
+      "key_text": "1",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "8 − 5 × 2 + 3",
+      "exact_answer": "1",
+      "key_matches": true,
+      "matching_options": [
+        "o4"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000321",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "608939a488d79eecd7f288c76b30236b67087f75aa8cb289d8e928aa9af8be6e",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of 9 + 4 × (5 − 9)?",
+      "key_option_id": "o4",
+      "key_text": "-7",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "9 + 4 × (5 − 9)",
+      "exact_answer": "-7",
+      "key_matches": true,
+      "matching_options": [
+        "o4"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000322",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "7a1ba52391a69522a4771b81e226cfa68b757adabeec11be7bd370e15d641624",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of (8 × 8 + 16) ÷ 2?",
+      "key_option_id": "o2",
+      "key_text": "40",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "(8 × 8 + 16) ÷ 2",
+      "exact_answer": "40",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000412",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "45cadc2478066292b5c8f27cbb80f8f0d9fecffdf959549e1224de8cdf1c657c",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of 12 + 3 × 5 − 8?",
+      "key_option_id": "o2",
+      "key_text": "19",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "12 + 3 × 5 − 8",
+      "exact_answer": "19",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000416",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "0b6f71e71c592c498e4780c2a6aceb03de996ac1419297be767c64fc2b6983ec",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of (14 + 2) × 7 − 6?",
+      "key_option_id": "o1",
+      "key_text": "106",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "(14 + 2) × 7 − 6",
+      "exact_answer": "106",
+      "key_matches": true,
+      "matching_options": [
+        "o1"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000433",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "6bb40f72d40264f0de9d16e15bbf3a7801cb8d52184723d8eed1245d24966ce2",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of 5 × 3 − 18 ÷ 3?",
+      "key_option_id": "o4",
+      "key_text": "9",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "5 × 3 − 18 ÷ 3",
+      "exact_answer": "9",
+      "key_matches": true,
+      "matching_options": [
+        "o4"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000520",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "ed3abc4abc8c486e3fa591a24aba25bd978b01da522867f648fde5a0bb7a3a30",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of 6 − 4 × 8 + 7?",
+      "key_option_id": "o2",
+      "key_text": "-19",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "6 − 4 × 8 + 7",
+      "exact_answer": "-19",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000525",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "61585213b119f93f21a8bf8e952dd77938c3b2de1760e5fa7b8b8feb4ab71bc5",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of 14 + 2 × (5 − 8)?",
+      "key_option_id": "o2",
+      "key_text": "8",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "14 + 2 × (5 − 8)",
+      "exact_answer": "8",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000536",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "d94877dfe53563a4520c65732a633c5eb22402ed078bbacf14814634515fc224",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of (14 × 7 + 12) ÷ 2?",
+      "key_option_id": "o3",
+      "key_text": "55",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "(14 × 7 + 12) ÷ 2",
+      "exact_answer": "55",
+      "key_matches": true,
+      "matching_options": [
+        "o3"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000618",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "86bc480db18bf3bcfbf5ab8ddedb1d8982e13980e4c106454491b3ed130942de",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of 14 + 3 × 8 − 7?",
+      "key_option_id": "o2",
+      "key_text": "31",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "14 + 3 × 8 − 7",
+      "exact_answer": "31",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000638",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "ba79eb6709bf102b7e362ffbbf65469efeb1d8d8a2d5dc4449c40565c065abbd",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of (8 + 4) × 7 − 2?",
+      "key_option_id": "o3",
+      "key_text": "82",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "(8 + 4) × 7 − 2",
+      "exact_answer": "82",
+      "key_matches": true,
+      "matching_options": [
+        "o3"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000640",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "1860c2c486b937f34444758b4e1ae3ad523e527ae303a170c485e2c6702b98ca",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of 18 × 3 − 12 ÷ 6?",
+      "key_option_id": "o3",
+      "key_text": "52",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "18 × 3 − 12 ÷ 6",
+      "exact_answer": "52",
+      "key_matches": true,
+      "matching_options": [
+        "o3"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000719",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "9a4e644320b123e4d9a840941c72b867cc2a01d0a4499c6c3678eae43c484c73",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of 17 − 9 × 3 + 12?",
+      "key_option_id": "o4",
+      "key_text": "2",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "17 − 9 × 3 + 12",
+      "exact_answer": "2",
+      "key_matches": true,
+      "matching_options": [
+        "o4"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000720",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "52d13f00cabebd76240f22dc30712c77fcc0d892fcb6e8f89220925d873d3a8f",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of 14 + 2 × (9 − 1)?",
+      "key_option_id": "o3",
+      "key_text": "30",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "14 + 2 × (9 − 1)",
+      "exact_answer": "30",
+      "key_matches": true,
+      "matching_options": [
+        "o3"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000729",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "748d0114f98d92bc44d970b0cf399367cb83dfb28d3e44e07351f6c69e57c4ea",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of (15 × 7 + 6) ÷ 3?",
+      "key_option_id": "o2",
+      "key_text": "37",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "(15 × 7 + 6) ÷ 3",
+      "exact_answer": "37",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000830",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "266dff16fe533801c5873e04e9714816445574f520709e78867a7f908b08868f",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of 5 + 7 × 6 − 6?",
+      "key_option_id": "o1",
+      "key_text": "41",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "5 + 7 × 6 − 6",
+      "exact_answer": "41",
+      "key_matches": true,
+      "matching_options": [
+        "o1"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000833",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "c13fbc87f7733ba35fe19293e04495c41298293677da80f69f1d12b6a9c0a1a2",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of (3 + 8) × 7 − 8?",
+      "key_option_id": "o2",
+      "key_text": "69",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "(3 + 8) × 7 − 8",
+      "exact_answer": "69",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000839",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "db9a7b339c494c3ff68f6a7b3856608fdbf9ed330c5bf83d110d41fea59be819",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of 6 × 6 − 10 ÷ 2?",
+      "key_option_id": "o3",
+      "key_text": "31",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "6 × 6 − 10 ÷ 2",
+      "exact_answer": "31",
+      "key_matches": true,
+      "matching_options": [
+        "o3"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000912",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "d3379a893d13f160aaa3cdcc6522d3998f4de1387be717c8b37b0dfe02b0fc41",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of 7 − 3 × 6 + 11?",
+      "key_option_id": "o4",
+      "key_text": "0",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "7 − 3 × 6 + 11",
+      "exact_answer": "0",
+      "key_matches": true,
+      "matching_options": [
+        "o4"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000914",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "b9a738e7bd8e11368971299090366a694a6112b91584dd59820d6ef0a92a16ff",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of 10 + 6 × (7 − 6)?",
+      "key_option_id": "o3",
+      "key_text": "16",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "10 + 6 × (7 − 6)",
+      "exact_answer": "16",
+      "key_matches": true,
+      "matching_options": [
+        "o3"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-OPS-ORDER-000932",
+      "bank_status": "approved",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "619f95ca0f531a0165aaac899feafa300f23d72e301abd2d6788bfb5e0e42c0e",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "What is the value of (20 × 5 + 6) ÷ 2?",
+      "key_option_id": "o3",
+      "key_text": "53",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "(20 × 5 + 6) ÷ 2",
+      "exact_answer": "53",
+      "key_matches": true,
+      "matching_options": [
+        "o3"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-GF2K02-NUMOPS-0041",
+      "bank_status": "draft",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "465dfde25f0c215cae655c9194d76a14a046df2b12a1535ab8c1f1b990d71371",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "Determine the value of 52 − 20 ÷ 4 + 3?",
+      "key_option_id": "o1",
+      "key_text": "50",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "52 − 20 ÷ 4 + 3",
+      "exact_answer": "50",
+      "key_matches": true,
+      "matching_options": [
+        "o1"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-GF2K02-NUMOPS-0047",
+      "bank_status": "draft",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "c56c5a18038c088c0412a09701277ace80d7be5b1f58ab203bafed07f0296232",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "Calculate the value of 91 × (5 − 2) + 16?",
+      "key_option_id": "o3",
+      "key_text": "289",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "91 × (5 − 2) + 16",
+      "exact_answer": "289",
+      "key_matches": true,
+      "matching_options": [
+        "o3"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-GF2K02-NUMOPS-0054",
+      "bank_status": "draft",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "51765266fcfe6579e05a1ccee07fea01a2b760aa62b376498d21a0d7a8279894",
+      "archetype": "NUM-OPS-ORDER",
+      "stem": "Calculate the value of 2 × 12 ÷ (12 − 8)?",
+      "key_option_id": "o2",
+      "key_text": "6",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "concept_family": "order-of-operations",
+      "parsed_expression": "2 × 12 ÷ (12 − 8)",
+      "exact_answer": "6",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "independent_method": "restricted AST exact-rational evaluation",
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000002",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "3ae4d4dd82078948130fd37e5574476b697720d3b078f842c4277b85076515ff",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "What number comes next in the series?  4, 7, 12, 19, 28, ___",
+      "key_option_id": "s3",
+      "key_text": "39",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        4,
+        7,
+        12,
+        19,
+        28
+      ],
+      "first_differences": [
+        3,
+        5,
+        7,
+        9
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "39"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "39",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "s3"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000023",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "0a0425b844865255fcc844f0ca4eff112c80e1fec7a70ed3c6648873aaa331cc",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Find the next number in the series.  6, 12, 19, 27, 36, ___",
+      "key_option_id": "o3",
+      "key_text": "46",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        6,
+        12,
+        19,
+        27,
+        36
+      ],
+      "first_differences": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "46"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "46",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o3"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000044",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "4827a3789435415c65497c8e66e7ffbc29bb9b503f3f2e652b4907f0805b3880",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Which number should come next?  4, 8, 15, 25, 38, ___",
+      "key_option_id": "o2",
+      "key_text": "54",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        4,
+        8,
+        15,
+        25,
+        38
+      ],
+      "first_differences": [
+        4,
+        7,
+        10,
+        13
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "54"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "54",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o2"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000117",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "a78067095fbbacf3ef65d4efb5bbb4f3d1c7260eaf4320e19cb40c22dec62ea1",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "What number comes next in the series?  5, 7, 10, 14, 19, ___",
+      "key_option_id": "o1",
+      "key_text": "25",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        5,
+        7,
+        10,
+        14,
+        19
+      ],
+      "first_differences": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "25"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "25",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o1"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000122",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "05b0cafeadbf930df8fe502aed43d941175cb33d1b3795d86223948ae6addb54",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Which number should come next?  7, 11, 16, 22, 29, ___",
+      "key_option_id": "o1",
+      "key_text": "37",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        7,
+        11,
+        16,
+        22,
+        29
+      ],
+      "first_differences": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "37"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "37",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o1"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000123",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "c1fa996905b4726f06764408905815849865c4a400cfe8baf7a5cd0a9171686b",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Find the next number in the series.  8, 14, 22, 32, 44, ___",
+      "key_option_id": "o2",
+      "key_text": "58",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        8,
+        14,
+        22,
+        32,
+        44
+      ],
+      "first_differences": [
+        6,
+        8,
+        10,
+        12
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "58"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "58",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o2"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000220",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "efbd565a651ea3a6a0fcf2d411f1be0a8fdd43683ce21026299da4bba4c36679",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "What number comes next in the series?  11, 15, 20, 26, 33, ___",
+      "key_option_id": "o1",
+      "key_text": "41",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        11,
+        15,
+        20,
+        26,
+        33
+      ],
+      "first_differences": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "41"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "41",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o1"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000222",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "02f418a8032ac4c65d4e07e1aaddb0b852d4b841665901e4a8d1a0a2a4487be8",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Which number should come next?  4, 9, 16, 25, 36, ___",
+      "key_option_id": "o4",
+      "key_text": "49",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        4,
+        9,
+        16,
+        25,
+        36
+      ],
+      "first_differences": [
+        5,
+        7,
+        9,
+        11
+      ],
+      "candidate_rules": [
+        {
+          "family": "consecutive-squares",
+          "next": "49"
+        },
+        {
+          "family": "arithmetic-first-differences",
+          "next": "49"
+        }
+      ],
+      "concept_family": "consecutive-squares",
+      "exact_answer": "49",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o4"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000238",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "efb78e7c2193900d94f85325122b4dcac1d21ccd41f1002c82f38333041d3a25",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "What number comes next in the series?  7, 12, 18, 25, 33, ___",
+      "key_option_id": "o1",
+      "key_text": "42",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        7,
+        12,
+        18,
+        25,
+        33
+      ],
+      "first_differences": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "42"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "42",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o1"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000316",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "7a633844ae3c265168776d43afc7b10e1326a95ee137898871257d15933f2f0c",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Which number should come next?  11, 16, 22, 29, 37, ___",
+      "key_option_id": "o4",
+      "key_text": "46",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        11,
+        16,
+        22,
+        29,
+        37
+      ],
+      "first_differences": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "46"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "46",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o4"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000332",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "800b511b32640902f0abaa0fb4ffc617c756a24389a8a973c058d6b152ffc4ae",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "What number comes next in the series?  11, 15, 21, 29, 39, ___",
+      "key_option_id": "o2",
+      "key_text": "51",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        11,
+        15,
+        21,
+        29,
+        39
+      ],
+      "first_differences": [
+        4,
+        6,
+        8,
+        10
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "51"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "51",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o2"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000336",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "43bf54549e8d1d2ad0d84fcfcd24ea475a958d7d822a7bd191f06cd840552416",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "What number comes next in the series?  1, 6, 13, 22, 33, ___",
+      "key_option_id": "o4",
+      "key_text": "46",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        1,
+        6,
+        13,
+        22,
+        33
+      ],
+      "first_differences": [
+        5,
+        7,
+        9,
+        11
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "46"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "46",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o4"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-D1022-NUMSEQ-0010",
+      "bank_status": "draft",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "031e5d3d82035c89b03378f7665f55d9915d20748590bb85ae190e35ae65a054",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Which number continues this sequence best: 100, 96, 88, 76, ___?",
+      "key_option_id": "o4",
+      "key_text": "60",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        100,
+        96,
+        88,
+        76
+      ],
+      "first_differences": [
+        -4,
+        -8,
+        -12
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "60"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "60",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o4"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000420",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "c0564507d8d70091b0622bee064acb57fa93a7c8d1988c87aadfa062aa6326b6",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Find the next number in the series.  6, 7, 11, 18, 28, ___",
+      "key_option_id": "o1",
+      "key_text": "41",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        6,
+        7,
+        11,
+        18,
+        28
+      ],
+      "first_differences": [
+        1,
+        4,
+        7,
+        10
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "41"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "41",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o1"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000425",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "26ebe12a6b887899743b7fe56bbc33a82c8ad6c17ba1133aca1124db6844be6f",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "What number comes next in the series?  1, 4, 8, 13, 19, ___",
+      "key_option_id": "o1",
+      "key_text": "26",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        1,
+        4,
+        8,
+        13,
+        19
+      ],
+      "first_differences": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "26"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "26",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o1"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000427",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "b65a3d88483c8da9819fe2baec826b1fec3e6c348af6b014d33cc3775cb07eb0",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Which number should come next?  11, 13, 18, 26, 37, ___",
+      "key_option_id": "o2",
+      "key_text": "51",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        11,
+        13,
+        18,
+        26,
+        37
+      ],
+      "first_differences": [
+        2,
+        5,
+        8,
+        11
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "51"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "51",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o2"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000513",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "a9cbd97805da4d7f5a152149b7405185ae1da8c3bfd0665eb1c564b0be0fec41",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Which number should come next?  3, 4, 7, 12, 19, ___",
+      "key_option_id": "o3",
+      "key_text": "28",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        3,
+        4,
+        7,
+        12,
+        19
+      ],
+      "first_differences": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "28"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "28",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o3"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000532",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "3c82ce47461d5a367f84fa1ccb6b15be69eef007350db26c432299160906867e",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "What number comes next in the series?  2, 7, 15, 26, 40, ___",
+      "key_option_id": "o4",
+      "key_text": "57",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        2,
+        7,
+        15,
+        26,
+        40
+      ],
+      "first_differences": [
+        5,
+        8,
+        11,
+        14
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "57"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "57",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o4"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000533",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "c014f9533508731144bfec695fa17707b41773025f0ad2d44ac76ec3b9fa0f38",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Find the next number in the series.  12, 13, 17, 24, 34, ___",
+      "key_option_id": "o4",
+      "key_text": "47",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        12,
+        13,
+        17,
+        24,
+        34
+      ],
+      "first_differences": [
+        1,
+        4,
+        7,
+        10
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "47"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "47",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o4"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000614",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "368981a48c6d62e71b0731cc0bf6fa948e815f65f74f3e89b63305b1da6b9e74",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Find the next number in the series.  2, 5, 11, 20, 32, ___",
+      "key_option_id": "o3",
+      "key_text": "47",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        2,
+        5,
+        11,
+        20,
+        32
+      ],
+      "first_differences": [
+        3,
+        6,
+        9,
+        12
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "47"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "47",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o3"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000615",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "aa97a536431a8f18d0f7b29d890d199f9cff307d0a713ebd43266df69d5ea2ff",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "What number comes next in the series?  15, 21, 28, 36, 45, ___",
+      "key_option_id": "o4",
+      "key_text": "55",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        15,
+        21,
+        28,
+        36,
+        45
+      ],
+      "first_differences": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "55"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "55",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o4"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000627",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "ec6374e0e4c6c12ef71fae095555044dd395939f2689e023a74665c4df0126c8",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "What number comes next in the series?  5, 6, 10, 17, 27, ___",
+      "key_option_id": "o2",
+      "key_text": "40",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        5,
+        6,
+        10,
+        17,
+        27
+      ],
+      "first_differences": [
+        1,
+        4,
+        7,
+        10
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "40"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "40",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o2"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000715",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "35747e31c889a1179023585c2bb607a152d8b70de872592863d8a6ef1be973e3",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "What number comes next in the series?  15, 16, 20, 27, 37, ___",
+      "key_option_id": "o3",
+      "key_text": "50",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        15,
+        16,
+        20,
+        27,
+        37
+      ],
+      "first_differences": [
+        1,
+        4,
+        7,
+        10
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "50"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "50",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o3"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000731",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "4588343c3f75c9e9be38cfc9c55928d219c4d1d93dbc90d546267ff9830d7388",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "What number comes next in the series?  10, 15, 21, 28, 36, ___",
+      "key_option_id": "o2",
+      "key_text": "45",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        10,
+        15,
+        21,
+        28,
+        36
+      ],
+      "first_differences": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "45"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "45",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o2"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000737",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "76292623cd2cf729e81747457769e27e3a5deb60a7cfecc11d162676b6bc26d2",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Find the next number in the series.  15, 18, 24, 33, 45, ___",
+      "key_option_id": "o4",
+      "key_text": "60",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        15,
+        18,
+        24,
+        33,
+        45
+      ],
+      "first_differences": [
+        3,
+        6,
+        9,
+        12
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "60"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "60",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o4"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-D1022-NUMSEQ-0001",
+      "bank_status": "draft",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "7e955b2bba4e7acd05ae0730e5db9b2e542e0fc7383997b4f2d8da5c36ff06a8",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Find the next number in the series: 7, 12, 17, 22, 27, ___",
+      "key_option_id": "o1",
+      "key_text": "32",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        7,
+        12,
+        17,
+        22,
+        27
+      ],
+      "first_differences": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-sequence",
+          "next": "32"
+        },
+        {
+          "family": "arithmetic-first-differences",
+          "next": "32"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "32",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o1"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000817",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "a065200623efccd330f19b1397c6b62bb51f383c4c015334a70174e62533fe38",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Find the next number in the series.  11, 13, 17, 23, 31, ___",
+      "key_option_id": "o3",
+      "key_text": "41",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        11,
+        13,
+        17,
+        23,
+        31
+      ],
+      "first_differences": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "candidate_rules": [
+        {
+          "family": "consecutive-primes",
+          "next": "37"
+        },
+        {
+          "family": "arithmetic-first-differences",
+          "next": "41"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "41",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o3"
+      ],
+      "alternatives_not_offered": [
+        "37"
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000824",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "5e7c53011e8558eb5d8f6bf87cedd5372771857953547a59605993e5f04937d3",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "What number comes next in the series?  5, 8, 12, 17, 23, ___",
+      "key_option_id": "o2",
+      "key_text": "30",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        5,
+        8,
+        12,
+        17,
+        23
+      ],
+      "first_differences": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "30"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "30",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o2"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000836",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "bbc08f0840658aa28809a6cb22eb59aa6f7578f681b92c27d3bb2917dbf11775",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Which number should come next?  8, 13, 21, 32, 46, ___",
+      "key_option_id": "o1",
+      "key_text": "63",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        8,
+        13,
+        21,
+        32,
+        46
+      ],
+      "first_differences": [
+        5,
+        8,
+        11,
+        14
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "63"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "63",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o1"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000915",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "8c88caae048bd05a5ac84e72c415d6c53fcdabaa0d14c71210b436758da6234f",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Which number should come next?  6, 8, 13, 21, 32, ___",
+      "key_option_id": "o4",
+      "key_text": "46",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        6,
+        8,
+        13,
+        21,
+        32
+      ],
+      "first_differences": [
+        2,
+        5,
+        8,
+        11
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "46"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "46",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o4"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-NUM-SEQ-DIFF-000939",
+      "bank_status": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "b91a1d612932b8f871a27269aaaf452ae3a3ab0fb1f782b2a871a9b625d49c6e",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "What number comes next in the series?  2, 3, 7, 14, 24, ___",
+      "key_option_id": "o3",
+      "key_text": "37",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        2,
+        3,
+        7,
+        14,
+        24
+      ],
+      "first_differences": [
+        1,
+        4,
+        7,
+        10
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "37"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "37",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o3"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-D1022-NUMSEQ-0011",
+      "bank_status": "draft",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "248996af01b9ac7adef8257ce9c7813f9ba29800f389043e37b7946a1339b485",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Find the next number in the series: 81, 72, 64, 57, ___",
+      "key_option_id": "o1",
+      "key_text": "51",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        81,
+        72,
+        64,
+        57
+      ],
+      "first_differences": [
+        -9,
+        -8,
+        -7
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "51"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "51",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o1"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-D1022-NUMSEQ-0012",
+      "bank_status": "draft",
+      "difficulty": "hard",
+      "language": "en",
+      "source_hash": "aaa9ca0755d297676f1f3c08d4faac9d9fdd9eaa27cdd03108cc4453fb930e48",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "What number comes next: 3, 4, 8, 17, 33, ___?",
+      "key_option_id": "o2",
+      "key_text": "58",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        3,
+        4,
+        8,
+        17,
+        33
+      ],
+      "first_differences": [
+        1,
+        4,
+        9,
+        16
+      ],
+      "candidate_rules": [
+        {
+          "family": "square-number-differences",
+          "next": "58"
+        }
+      ],
+      "concept_family": "square-number-differences",
+      "exact_answer": "58",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o2"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-GF2K02-SEQD-0001",
+      "bank_status": "draft",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "5c4f1b4cab9e5e34406b8aed9964dbe4ba10239c93549fe04fa689fb555c73f2",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "What number comes next in the series?  19, 23, 31, 43, 59, ___",
+      "key_option_id": "o1",
+      "key_text": "79",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        19,
+        23,
+        31,
+        43,
+        59
+      ],
+      "first_differences": [
+        4,
+        8,
+        12,
+        16
+      ],
+      "candidate_rules": [
+        {
+          "family": "consecutive-primes",
+          "next": "61"
+        },
+        {
+          "family": "arithmetic-first-differences",
+          "next": "79"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "79",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o1"
+      ],
+      "alternatives_not_offered": [
+        "61"
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-GF2K02-SEQD-0002",
+      "bank_status": "draft",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "72aa672b4ce39eb748aee35d82fba3ee5fb11612620a93b5e634bf353d90317f",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Which number continues the pattern?  15, 23, 33, 45, 59, ___",
+      "key_option_id": "o2",
+      "key_text": "75",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        15,
+        23,
+        33,
+        45,
+        59
+      ],
+      "first_differences": [
+        8,
+        10,
+        12,
+        14
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "75"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "75",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o2"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-GF2K02-SEQD-0003",
+      "bank_status": "draft",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "f2910af32318f548ae0f6119d8d0925468ebfdcfaddab138144e1f1cf2ae27d7",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "What is the next number in the sequence?  8, 16, 27, 41, 58, ___",
+      "key_option_id": "o3",
+      "key_text": "78",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        8,
+        16,
+        27,
+        41,
+        58
+      ],
+      "first_differences": [
+        8,
+        11,
+        14,
+        17
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "78"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "78",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o3"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-GF2K02-SEQD-0004",
+      "bank_status": "draft",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "bb82133d8676ba57b57820bb1cae34ad5683596211378151d1e8b1668daa3c8d",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Which number should replace the blank?  5, 7, 12, 20, 31, ___",
+      "key_option_id": "o4",
+      "key_text": "45",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        5,
+        7,
+        12,
+        20,
+        31
+      ],
+      "first_differences": [
+        2,
+        5,
+        8,
+        11
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "45"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "45",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o4"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-GF2K02-SEQD-0005",
+      "bank_status": "draft",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "3eacb435782a93ee466d4bc8b6cd9304abea49395671f2d6d1b975cb4186ea7a",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "What number comes next in the series?  21, 25, 32, 42, 55, ___",
+      "key_option_id": "o1",
+      "key_text": "71",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        21,
+        25,
+        32,
+        42,
+        55
+      ],
+      "first_differences": [
+        4,
+        7,
+        10,
+        13
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "71"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "71",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o1"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-GF2K02-SEQD-0006",
+      "bank_status": "draft",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "b28e8b6c2b6017dea807cf3b6f2637073b1af6d99409cce94a4b26439bb7b621",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Which number continues the pattern?  5, 12, 23, 38, 57, ___",
+      "key_option_id": "o2",
+      "key_text": "80",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        5,
+        12,
+        23,
+        38,
+        57
+      ],
+      "first_differences": [
+        7,
+        11,
+        15,
+        19
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "80"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "80",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o2"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-GF2K02-SEQD-0007",
+      "bank_status": "draft",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "4973628c06614faa5e6af48c85bd5998584a603d6c8dece5cae7a3a06c1aca04",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "What is the next number in the sequence?  19, 25, 33, 43, 55, ___",
+      "key_option_id": "o3",
+      "key_text": "69",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        19,
+        25,
+        33,
+        43,
+        55
+      ],
+      "first_differences": [
+        6,
+        8,
+        10,
+        12
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "69"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "69",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o3"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-GF2K02-SEQD-0008",
+      "bank_status": "draft",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "f74b4fea64ecad412075756706be12a309a5f5ae5734ff2b24215014690c3c98",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Which number should replace the blank?  13, 17, 23, 31, 41, ___",
+      "key_option_id": "o4",
+      "key_text": "53",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        13,
+        17,
+        23,
+        31,
+        41
+      ],
+      "first_differences": [
+        4,
+        6,
+        8,
+        10
+      ],
+      "candidate_rules": [
+        {
+          "family": "consecutive-primes",
+          "next": "43"
+        },
+        {
+          "family": "arithmetic-first-differences",
+          "next": "53"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "53",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o4"
+      ],
+      "alternatives_not_offered": [
+        "43"
+      ],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-GF2K02-SEQD-0009",
+      "bank_status": "draft",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "644ce39671d2b9b1550cb4421dd8e155a6f41e79edd521c44f1e08d9a71db23c",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "What number comes next in the series?  25, 30, 39, 52, 69, ___",
+      "key_option_id": "o1",
+      "key_text": "90",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        25,
+        30,
+        39,
+        52,
+        69
+      ],
+      "first_differences": [
+        5,
+        9,
+        13,
+        17
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "90"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "90",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o1"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-GF2K02-SEQD-0010",
+      "bank_status": "draft",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "d0c7495881a2746a014d6f7197c0fd776b886ec0b416b24f0b24fde1c15754b1",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Which number continues the pattern?  11, 15, 20, 26, 33, ___",
+      "key_option_id": "o2",
+      "key_text": "41",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        11,
+        15,
+        20,
+        26,
+        33
+      ],
+      "first_differences": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "41"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "41",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o2"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-GF2K02-SEQD-0011",
+      "bank_status": "draft",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "cd7cd6ff2bfe6e294b7ce6e8798436cd56b379bcff64276921f066458c3be05b",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "What is the next number in the sequence?  25, 34, 46, 61, 79, ___",
+      "key_option_id": "o3",
+      "key_text": "100",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        25,
+        34,
+        46,
+        61,
+        79
+      ],
+      "first_differences": [
+        9,
+        12,
+        15,
+        18
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "100"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "100",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o3"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-B3-NUM-SEQ-DIFF-0045",
+      "bank_status": "draft",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "a03c3d2e610b436fa17e478c3da3c5357c97cdb958ceb6884cacbcf63aff7ab1",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "What number comes next? 3, 6, 9, 12, ___",
+      "key_option_id": "n3",
+      "key_text": "15",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        3,
+        6,
+        9,
+        12
+      ],
+      "first_differences": [
+        3,
+        3,
+        3
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-sequence",
+          "next": "15"
+        },
+        {
+          "family": "arithmetic-first-differences",
+          "next": "15"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "15",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "n3"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-B3-NUM-SEQ-DIFF-0187",
+      "bank_status": "draft",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "cfad4119ac52e884b2ff0c15e1ffcf3346b83daed8bac30b0e0fa8fcd9cd4d80",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Which term follows 1, 1, 2, 3, 5, 8?",
+      "key_option_id": "n4",
+      "key_text": "13",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        1,
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "first_differences": [
+        0,
+        1,
+        1,
+        2,
+        3
+      ],
+      "candidate_rules": [
+        {
+          "family": "sum-previous-two",
+          "next": "13"
+        }
+      ],
+      "concept_family": "sum-previous-two",
+      "exact_answer": "13",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "n4"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-B3-NUM-SEQ-DIFF-0193",
+      "bank_status": "draft",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "588acdac566226e5f120864890d3cea1b5b7b4b91d920078c5ce62ad3bdb49c7",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "What number comes next? 1, 4, 9, 16, 25, ___",
+      "key_option_id": "n2",
+      "key_text": "36",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        1,
+        4,
+        9,
+        16,
+        25
+      ],
+      "first_differences": [
+        3,
+        5,
+        7,
+        9
+      ],
+      "candidate_rules": [
+        {
+          "family": "consecutive-squares",
+          "next": "36"
+        },
+        {
+          "family": "arithmetic-first-differences",
+          "next": "36"
+        }
+      ],
+      "concept_family": "consecutive-squares",
+      "exact_answer": "36",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "n2"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-B3-NUM-SEQ-DIFF-0196",
+      "bank_status": "draft",
+      "difficulty": "easy",
+      "language": "en",
+      "source_hash": "658d85fbd2ff22dd1189c051fb286e894bdb88880c936d478a8d4d47a1edac98",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Which number should follow 11, 13, 17, 19, 23?",
+      "key_option_id": "n3",
+      "key_text": "29",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        11,
+        13,
+        17,
+        19,
+        23
+      ],
+      "first_differences": [
+        2,
+        4,
+        2,
+        4
+      ],
+      "candidate_rules": [
+        {
+          "family": "consecutive-primes",
+          "next": "29"
+        }
+      ],
+      "concept_family": "consecutive-primes",
+      "exact_answer": "29",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "n3"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-D1022-NUMSEQ-0002",
+      "bank_status": "draft",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "d905499833d03ea9ff624e9ddb11343babdfb7c32893c19467ee9b70b27edeb6",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "What number comes next: 3, 5, 9, 15, 23, ___?",
+      "key_option_id": "o2",
+      "key_text": "33",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        3,
+        5,
+        9,
+        15,
+        23
+      ],
+      "first_differences": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "33"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "33",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o2"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-D1022-NUMSEQ-0007",
+      "bank_status": "draft",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "8bc1048006d635e73c596d3ad8f27eee4c7ea586907c30a3efcf8788c6db3ec3",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "What number comes next: 2, 3, 5, 8, 13, 21, ___?",
+      "key_option_id": "o3",
+      "key_text": "34",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        2,
+        3,
+        5,
+        8,
+        13,
+        21
+      ],
+      "first_differences": [
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "candidate_rules": [
+        {
+          "family": "sum-previous-two",
+          "next": "34"
+        }
+      ],
+      "concept_family": "sum-previous-two",
+      "exact_answer": "34",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o3"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    },
+    {
+      "question_id": "CIVIO-D1022-NUMSEQ-0008",
+      "bank_status": "draft",
+      "difficulty": "medium",
+      "language": "en",
+      "source_hash": "e47df7956818481a0ee77bb01f1b8666f7feb3e31e86010dde0337f5f21d11e1",
+      "archetype": "NUM-SEQ-DIFF",
+      "stem": "Complete the series with the most logical number: 3, 6, 11, 18, 27, ___",
+      "key_option_id": "o3",
+      "key_text": "38",
+      "distractor_feedback_coverage": true,
+      "distractor_code_coverage": true,
+      "sequence": [
+        3,
+        6,
+        11,
+        18,
+        27
+      ],
+      "first_differences": [
+        3,
+        5,
+        7,
+        9
+      ],
+      "candidate_rules": [
+        {
+          "family": "arithmetic-first-differences",
+          "next": "38"
+        }
+      ],
+      "concept_family": "arithmetic-first-differences",
+      "exact_answer": "38",
+      "key_matches": true,
+      "matching_candidate_options": [
+        "o3"
+      ],
+      "alternatives_not_offered": [],
+      "needs_manual_review": false
+    }
+  ]
+}
