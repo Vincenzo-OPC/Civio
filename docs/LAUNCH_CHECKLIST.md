@@ -45,3 +45,30 @@ Official sources checked:
 - Laravel 13 proxy trust: https://laravel.com/framework/docs/requests#configuring-trusted-proxies
 
 **Release rule:** No deployment, hosting signup, paid service, DNS/proxy changes, keys, or billable activation without GT approval. Continue safe code-only fixes and tests on isolated infrastructure.
+
+## Readiness check (Sprint 2)
+
+`php artisan civio:launch-check` reads configuration only (no network, no writes) and exits non-zero on any failure. In production (or with `--production`) these fail: `APP_DEBUG` on, `SESSION_SECURE_COOKIE` not `true`, Turnstile keys missing, a wildcard trusted proxy without acknowledgement, `CIVIO_OWNER_FUNDED_AI=true`, `CIVIO_GUEST_UNLIMITED=true`. Warnings: no trusted proxies, Turnstile fail-closed off, an acknowledged wildcard, and not running as production. Run it before switching traffic to a new host.
+
+Turnstile fail-closed: `CIVIO_TURNSTILE_REQUIRED=true` makes login, register and password-reset POSTs refuse with a neutral message when the keys are missing in production. Off by default so a missing key cannot lock everyone out without GT choosing that. Fixed alongside: a missing Turnstile env value used to crash `TurnstileService` (null into a typed string) and 500 the auth pages.
+
+## Trusted-proxy strategy (anti-spoofing)
+
+- Proxy trust is configured only through `CIVIO_TRUSTED_PROXIES` (comma-separated IPs/CIDRs). Empty, the default, trusts nobody: `X-Forwarded-For` is ignored and `$request->ip()` is the TCP peer. No ranges are configured in the repo.
+- Put only the edge's published egress ranges there (for example the CDN's list), and keep it updated when the provider changes them.
+- Never use `*` unless the origin accepts connections only from the edge (private network, firewall allow-list or authenticated tunnel). Then set `CIVIO_TRUSTED_PROXIES_ALLOW_WILDCARD=true`; the launch check still warns.
+- Host-specific test before launch: send a request directly to the origin with a forged `X-Forwarded-For: 1.2.3.4` and confirm logs and rate limits see the real peer, not `1.2.3.4`.
+
+## Backups and restore
+
+- Daily automated database backups with at least 7 days of point-in-time or snapshot retention; one copy outside the hosting account.
+- Restore drill before launch and monthly: restore into a scratch database, run `php artisan migrate --pretend` and the test suite against it, and check row counts for `users`, `exam_attempts`, `questions`.
+- The question bank is the irreplaceable asset: keep an export of approved questions in version-controlled or offline storage separate from the app database.
+- Backups contain personal data (emails, answers); encrypt at rest and restrict access to GT.
+
+## Logging without personal data
+
+- `LOG_LEVEL=warning` or `error` in production; never `debug`.
+- Do not log request bodies, answers, emails, passwords, tokens, Turnstile tokens or full IPs. Prefer user ids and hashed or truncated IPs.
+- `APP_DEBUG=false` (checked) so exception pages never show env or query bindings.
+- Set log retention (for example 14–30 days) on the host's log store.

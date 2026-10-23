@@ -53,4 +53,18 @@ return [
         'max_days' => 365,
         'batch_size' => 500,
     ],
+
+    // Trusted reverse proxies, comma-separated IPs/CIDRs of the edge that
+    // sits in front of the app. Empty (the default) trusts nobody, so
+    // X-Forwarded-For is ignored and cannot be spoofed. Never use '*'
+    // unless the only network path to the origin is a known edge; then
+    // also set CIVIO_TRUSTED_PROXIES_ALLOW_WILDCARD=true. See
+    // docs/LAUNCH_CHECKLIST.md.
+    'trusted_proxies' => array_values(array_filter(array_map('trim', explode(',', (string) env('CIVIO_TRUSTED_PROXIES', ''))))),
+    'trusted_proxies_allow_wildcard' => filter_var(env('CIVIO_TRUSTED_PROXIES_ALLOW_WILDCARD', false), FILTER_VALIDATE_BOOLEAN),
+
+    // Fail closed: when true and Turnstile keys are missing in production,
+    // login, register and password-reset POSTs are refused instead of
+    // skipping the CAPTCHA.
+    'turnstile_required' => filter_var(env('CIVIO_TURNSTILE_REQUIRED', false), FILTER_VALIDATE_BOOLEAN),
 ];

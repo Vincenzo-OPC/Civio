@@ -17,13 +17,21 @@ class VerifyTurnstile
 
     public function handle(Request $request, Closure $next)
     {
-        // Skip verification if Turnstile is not configured
+        $protected = $request->isMethod('POST') && in_array($request->route()?->getName(), ['login', 'login.store', 'register', 'register.store', 'password.email']);
+
         if (! $this->turnstileService->isConfigured()) {
+            // Fail closed only when explicitly required in production.
+            if ($protected && app()->isProduction() && config('civio.turnstile_required') === true) {
+                return back()->withErrors([
+                    'turnstile' => 'Sign-in is temporarily unavailable. Please try again later.',
+                ])->withInput();
+            }
+
             return $next($request);
         }
 
         // Verify Turnstile token for form submissions
-        if ($request->isMethod('POST') && in_array($request->route()?->getName(), ['login', 'login.store', 'register', 'register.store', 'password.email'])) {
+        if ($protected) {
             $token = $request->input('cf_turnstile_response');
             if (empty($token) || ! $this->turnstileService->verify($token)) {
                 return back()->withErrors([

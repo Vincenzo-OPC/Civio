@@ -16,8 +16,8 @@ class TurnstileService
      */
     public function __construct()
     {
-        $this->siteKey = config('services.turnstile.site_key');
-        $this->secretKey = config('services.turnstile.secret_key');
+        $this->siteKey = (string) config('services.turnstile.site_key', '');
+        $this->secretKey = (string) config('services.turnstile.secret_key', '');
     }
 
     /**

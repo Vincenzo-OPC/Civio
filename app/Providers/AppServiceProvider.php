@@ -21,6 +21,7 @@ use Carbon\CarbonImmutable;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Middleware\TrustProxies;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
@@ -53,6 +54,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        // Proxy ranges come only from CIVIO_TRUSTED_PROXIES; none by default.
+        $proxies = (array) config('civio.trusted_proxies', []);
+        if ($proxies !== []) {
+            TrustProxies::at(in_array('*', $proxies, true) ? '*' : $proxies);
+        }
+
         // Register Observers for Cache Invalidation
         Question::observe(QuestionObserver::class);
         Category::observe(CategoryObserver::class);
