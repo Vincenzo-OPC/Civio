@@ -43,4 +43,14 @@ return [
         'packs_per_minute' => (int) env('CIVIO_OFFLINE_PACKS_PER_MINUTE', 60),
         'sync_per_minute' => (int) env('CIVIO_OFFLINE_SYNC_PER_MINUTE', 20),
     ],
+
+    // Abandoned exam-session pruning (civio:prune-exam-sessions, daily).
+    // Local study recovery promises 30 days, so retention is clamped to
+    // 31..365 days whatever the env says. Default 45 leaves a 15-day margin.
+    'prune_exam_sessions' => [
+        'retention_days' => (int) env('CIVIO_EXAM_SESSION_RETENTION_DAYS', 45),
+        'min_days' => 31,
+        'max_days' => 365,
+        'batch_size' => 500,
+    ],
 ];
