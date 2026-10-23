@@ -8,7 +8,10 @@
 
 **What the evidence does NOT show.** The author's read is not independent. Treat every key as unconfirmed until you have solved the item yourself.
 
-**Bank worker's recommendations (not decisions):** 29 Accept.
+**Current recommendations (23 Oct independent second pass; not decisions):** 28 Accept, 1 Revise.
+
+
+**23 Oct second pass:** The question order below is retained; the review queue now marks `CIVIO-GF2K01-VFIL-WIKAIN-0014` as Revise. Four separate draft corrections are in `docs/research/audit/fixes/vfil-gapfill01-r2-2026-10-23.json`. Compare each with the original before deciding. No item is approved by this note.
 
 **Risks in this packet:**
 
@@ -305,7 +308,7 @@ Ano ang kasingkahulugan ng salitang nasa malalaking titik? Nais ng pangkat ng WA
 | 5 | CIVIO-GF2K01-VFIL-WIKAIN-0011 | o2: mapagsamantalang sakim | none (judgment item) | key not machine-checkable | Accept |
 | 6 | CIVIO-GF2K01-VFIL-WIKAIN-0012 | o3: minadali at hindi pulido | none (judgment item) | key not machine-checkable | Accept |
 | 7 | CIVIO-GF2K01-VFIL-WIKAIN-0013 | o4: mababaw ang tulog | none (judgment item) | key not machine-checkable | Accept |
-| 8 | CIVIO-GF2K01-VFIL-WIKAIN-0014 | o1: napakapayat | none (judgment item) | key not machine-checkable | Accept |
+| 8 | CIVIO-GF2K01-VFIL-WIKAIN-0014 | o1: napakapayat | none (judgment item) | key not machine-checkable; 23 Oct: The skeleton foil can also mean extremely thin, giving two defensible choices. | Revise |
 | 9 | CIVIO-GF2K01-VFIL-WIKAIN-0015 | o2: yumabang | none (judgment item) | key not machine-checkable | Accept |
 | 10 | CIVIO-GF2K01-VFIL-WIKAIN-0016 | o3: mahilig magnakaw | none (judgment item) | key not machine-checkable | Accept |
 | 11 | CIVIO-GF2K01-VFIL-WIKAIN-0017 | o4: pagkukunwari | none (judgment item) | key not machine-checkable | Accept |

@@ -200,7 +200,8 @@ def test_approval_packets_cover_queue_by_evidence_type_risk_first():
     import csv, glob, re
     rows = {r["id"] for r in csv.DictReader(open("docs/research/review/queue-recommendations-2026-10-22.csv"))}
     seen, maxes = [], []
-    files = sorted(glob.glob("docs/research/review/approval-packets-2026-10-22/A*.md"))
+    files = sorted(f for f in glob.glob("docs/research/review/approval-packets-2026-10-22/A*.md")
+                   if "INDEPENDENT-REVIEW" not in f)
     for f in files:
         t = open(f).read()
         head, items, answers = t.split("## Items (no keys)")[0], t.split("## Items (no keys)")[1].split("## Answer sheet")[0], t.split("## Answer sheet")[1]

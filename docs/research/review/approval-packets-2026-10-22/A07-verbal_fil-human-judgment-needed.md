@@ -8,7 +8,10 @@
 
 **What the evidence does NOT show.** The author's read is not independent. Treat every key as unconfirmed until you have solved the item yourself.
 
-**Bank worker's recommendations (not decisions):** 31 Accept.
+**Current recommendations (23 Oct independent second pass; not decisions):** 30 Accept, 1 Revise.
+
+
+**23 Oct second pass:** The question order below is retained; the review queue now marks `CIVIO-GF2K01-VFIL-KASALUNGAT-0033` as Revise. Four separate draft corrections are in `docs/research/audit/fixes/vfil-gapfill01-r2-2026-10-23.json`. Compare each with the original before deciding. No item is approved by this note.
 
 **Risks in this packet:**
 
@@ -325,7 +328,7 @@ Sa pangungusap na "TIWALAG na sa samahan ang dating kasapi." ano ang pinakamalap
 | 11 | CIVIO-GF2K01-VFIL-KASALUNGAT-0030 | o2: maikli | none (judgment item) | key not machine-checkable | Accept |
 | 12 | CIVIO-GF2K01-VFIL-KASALUNGAT-0031 | o3: pabaya | none (judgment item) | key not machine-checkable | Accept |
 | 13 | CIVIO-GF2K01-VFIL-KASALUNGAT-0032 | o4: tamad | none (judgment item) | key not machine-checkable | Accept |
-| 14 | CIVIO-GF2K01-VFIL-KASALUNGAT-0033 | o1: mainitin ang ulo | none (judgment item) | key not machine-checkable | Accept |
+| 14 | CIVIO-GF2K01-VFIL-KASALUNGAT-0033 | o1: mainitin ang ulo | none (judgment item) | key not machine-checkable; 23 Oct: The keyed temper description is not a direct antonym of understanding a sick employee. | Revise |
 | 15 | CIVIO-GF2K01-VFIL-KASALUNGAT-0034 | o2: nakaayos | none (judgment item) | key not machine-checkable | Accept |
 | 16 | CIVIO-GF2K01-VFIL-KASALUNGAT-0035 | o3: kapus-palad | none (judgment item) | key not machine-checkable | Accept |
 | 17 | CIVIO-GF2K01-VFIL-KASALUNGAT-0036 | o4: mura | none (judgment item) | key not machine-checkable | Accept |

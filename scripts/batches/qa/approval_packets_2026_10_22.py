@@ -116,7 +116,9 @@ def main():
     packets.sort(key=lambda p: (-p["max"], -p["mean"]))
     OUT.mkdir(parents=True, exist_ok=True)
     for f in OUT.glob("*.md"):
-        f.unlink()
+        # The independent editorial review is a hand-written record, not a generated packet.
+        if "INDEPENDENT-REVIEW" not in f.name:
+            f.unlink()
     index = []
     for n, p in enumerate(packets, 1):
         name = f"A{n:02d}-{p['dom']}-{p['et']}.md"

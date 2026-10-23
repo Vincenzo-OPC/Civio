@@ -1,0 +1,291 @@
+{
+  "batch": "vfil-gapfill01-r2-2026-10-23",
+  "status": "draft (independent correction proposals)",
+  "note": "Four proposed replacements for manifest items in gap-fill-2000-01. Originals remain unchanged; no approval or activation.",
+  "items": [
+    {
+      "id": "CIVIO-GF2K01-VFIL-KASALUNGAT-0033-R2",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "antonyms",
+      "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+      "archetype": "VFIL-KASALUNGAT",
+      "difficulty": "medium",
+      "est_seconds": 30,
+      "language": "fil",
+      "stem": "Alin ang kasalungat ng \"MAUNAWAIN\" sa pangungusap na \"MAUNAWAIN ang hepe sa mga kawaning may sakit.\"?",
+      "shortcut": "Hanapin ang kabaligtaran ng maunawain: walang pag-unawa.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "walang pag-unawa"
+        },
+        {
+          "option_id": "o2",
+          "text": "mapagpasensiya"
+        },
+        {
+          "option_id": "o3",
+          "text": "mabait"
+        },
+        {
+          "option_id": "o4",
+          "text": "minsang naiinis"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Ang kasalungat ay salitang may kabaligtarang kahulugan.",
+        "shortcut": "Hanapin ang kabaligtaran ng maunawain: walang pag-unawa.",
+        "why_correct": "\"walang pag-unawa\" ang tamang sagot. Ang maunawain ay may pag-unawa sa kalagayan ng iba; ang walang pag-unawa ay kabaligtaran nito.",
+        "why_wrong": {
+          "o2": "\"mapagpasensiya\" — kasingkahulugan o kahawig ng maunawain, hindi kasalungat",
+          "o3": "\"mabait\" — kaugnay ng sitwasyon ngunit hindi kabaligtaran ng maunawain",
+          "o4": "\"minsang naiinis\" — bahagyang pagbabago lamang, hindi lubos na kabaligtaran"
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "FIL-SYNONYM-TRAP",
+        "o3": "FIL-SAME-FIELD",
+        "o4": "FIL-INTENSITY"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "Codex independent second pass",
+        "method": "editorial correction proposal",
+        "created_at": "2026-10-23",
+        "spec_version": "0.1.9",
+        "based_on": "CIVIO-GF2K01-VFIL-KASALUNGAT-0033"
+      },
+      "notes": "Independent editorial correction proposal. Pending item-level reviewer decision; original manifest item remains unchanged.",
+      "replaces": "CIVIO-GF2K01-VFIL-KASALUNGAT-0033",
+      "reviewer": null,
+      "reviewed_at": null,
+      "revision_history": [
+        {
+          "date": "2026-10-23",
+          "reason": "independent Filipino semantic review",
+          "change": "See proposed revised stem/choice/reason below; no status or manifest change."
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-GF2K01-VFIL-WIKAIN-0001-R2",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "idioms",
+      "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+      "archetype": "VFIL-WIKAIN",
+      "difficulty": "medium",
+      "est_seconds": 35,
+      "language": "fil",
+      "stem": "Si Mang Jose ang HALIGI NG TAHANAN mula nang magkasakit ang kaniyang asawa. Ano ang ibig sabihin ng sawikaing HALIGI NG TAHANAN sa pangungusap?",
+      "shortcut": "Huwag basahin nang literal ang haligi ng tahanan: pangunahing nagtataguyod ng pamilya.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "matibay na poste ng bahay"
+        },
+        {
+          "option_id": "o2",
+          "text": "umaasa sa iba para sa gastusin ng pamilya"
+        },
+        {
+          "option_id": "o3",
+          "text": "kapitbahay na laging tumutulong"
+        },
+        {
+          "option_id": "o4",
+          "text": "pangunahing nagtataguyod ng pamilya"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+        "shortcut": "Huwag basahin nang literal ang haligi ng tahanan: pangunahing nagtataguyod ng pamilya.",
+        "why_correct": "\"pangunahing nagtataguyod ng pamilya\" ang tamang sagot. Matalinghaga ang \"haligi ng tahanan\"; sa pangungusap, ito ay pangunahing nagtataguyod ng pamilya.",
+        "why_wrong": {
+          "o1": "\"matibay na poste ng bahay\" — literal na pagbasa ng sawikain",
+          "o2": "\"umaasa sa iba para sa gastusin ng pamilya\" — kabaligtaran ng pangunahing nagtataguyod sa pamilya.",
+          "o3": "\"kapitbahay na laging tumutulong\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "FIL-LITERAL",
+        "o2": "FIL-ANTONYM-TRAP",
+        "o3": "FIL-OTHER-TRAIT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "Codex independent second pass",
+        "method": "editorial correction proposal",
+        "created_at": "2026-10-23",
+        "spec_version": "0.1.9",
+        "based_on": "CIVIO-GF2K01-VFIL-WIKAIN-0001"
+      },
+      "notes": "Independent editorial correction proposal. Pending item-level reviewer decision; original manifest item remains unchanged.",
+      "replaces": "CIVIO-GF2K01-VFIL-WIKAIN-0001",
+      "reviewer": null,
+      "reviewed_at": null,
+      "revision_history": [
+        {
+          "date": "2026-10-23",
+          "reason": "independent Filipino semantic review",
+          "change": "See proposed revised stem/choice/reason below; no status or manifest change."
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-GF2K01-VFIL-WIKAIN-0002-R2",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "idioms",
+      "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+      "archetype": "VFIL-WIKAIN",
+      "difficulty": "medium",
+      "est_seconds": 35,
+      "language": "fil",
+      "stem": "Si Aling Rosa ang ILAW NG TAHANAN na gumagabay sa kaniyang mga anak. Ano ang ibig sabihin ng sawikaing ILAW NG TAHANAN dito?",
+      "shortcut": "Huwag basahin nang literal ang ilaw ng tahanan: ina ng pamilya.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "ina ng pamilya"
+        },
+        {
+          "option_id": "o2",
+          "text": "bombilya sa salas"
+        },
+        {
+          "option_id": "o3",
+          "text": "ama ng pamilya"
+        },
+        {
+          "option_id": "o4",
+          "text": "pinakamatandang kapatid"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+        "shortcut": "Huwag basahin nang literal ang ilaw ng tahanan: ina ng pamilya.",
+        "why_correct": "\"ina ng pamilya\" ang tamang sagot. Matalinghaga ang \"ilaw ng tahanan\"; sa pangungusap, ito ay ina ng pamilya.",
+        "why_wrong": {
+          "o2": "\"bombilya sa salas\" — literal na pagbasa ng sawikain",
+          "o3": "\"ama ng pamilya\" — kaugnay ng pamilya ngunit hindi ito ang tinutukoy ng sawikain.",
+          "o4": "\"pinakamatandang kapatid\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "FIL-LITERAL",
+        "o3": "FIL-SAME-FIELD",
+        "o4": "FIL-OTHER-TRAIT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "Codex independent second pass",
+        "method": "editorial correction proposal",
+        "created_at": "2026-10-23",
+        "spec_version": "0.1.9",
+        "based_on": "CIVIO-GF2K01-VFIL-WIKAIN-0002"
+      },
+      "notes": "Independent editorial correction proposal. Pending item-level reviewer decision; original manifest item remains unchanged.",
+      "replaces": "CIVIO-GF2K01-VFIL-WIKAIN-0002",
+      "reviewer": null,
+      "reviewed_at": null,
+      "revision_history": [
+        {
+          "date": "2026-10-23",
+          "reason": "independent Filipino semantic review",
+          "change": "See proposed revised stem/choice/reason below; no status or manifest change."
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-GF2K01-VFIL-WIKAIN-0014-R2",
+      "track": "both",
+      "domain": "verbal_fil",
+      "competency": "Word meaning",
+      "concept": "idioms",
+      "micro_skill": "piliin ang angkop na kahulugan ayon sa konteksto",
+      "archetype": "VFIL-WIKAIN",
+      "difficulty": "medium",
+      "est_seconds": 35,
+      "language": "fil",
+      "stem": "Nang matagpuan ng mga tagapagligtas ang aso, BUTO’T BALAT na ito. Ano ang ibig sabihin ng sawikaing BUTO’T BALAT dito?",
+      "shortcut": "Huwag basahin nang literal ang buto't balat: napakapayat.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "napakapayat"
+        },
+        {
+          "option_id": "o2",
+          "text": "bahagyang pumayat"
+        },
+        {
+          "option_id": "o3",
+          "text": "malusog at mataba"
+        },
+        {
+          "option_id": "o4",
+          "text": "maliit ang pangangatawan"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Ang sawikain ay may matalinghagang kahulugan, hindi literal.",
+        "shortcut": "Huwag basahin nang literal ang buto't balat: napakapayat.",
+        "why_correct": "\"napakapayat\" ang tamang sagot. Matalinghaga ang \"buto't balat\"; sa pangungusap, ito ay napakapayat.",
+        "why_wrong": {
+          "o2": "\"bahagyang pumayat\" — mas mahina ito kaysa sa matinding kapayatang ipinahihiwatig ng buto’t balat.",
+          "o3": "\"malusog at mataba\" — kabaligtaran ng tunay na kahulugan",
+          "o4": "\"maliit ang pangangatawan\" — ibang katangian na hindi ipinahihiwatig ng sawikain"
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "FIL-INTENSITY",
+        "o3": "FIL-ANTONYM-TRAP",
+        "o4": "FIL-OTHER-TRAIT"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "provenance": {
+        "author": "Codex independent second pass",
+        "method": "editorial correction proposal",
+        "created_at": "2026-10-23",
+        "spec_version": "0.1.9",
+        "based_on": "CIVIO-GF2K01-VFIL-WIKAIN-0014"
+      },
+      "notes": "Independent editorial correction proposal. Pending item-level reviewer decision; original manifest item remains unchanged.",
+      "replaces": "CIVIO-GF2K01-VFIL-WIKAIN-0014",
+      "reviewer": null,
+      "reviewed_at": null,
+      "revision_history": [
+        {
+          "date": "2026-10-23",
+          "reason": "independent Filipino semantic review",
+          "change": "See proposed revised stem/choice/reason below; no status or manifest change."
+        }
+      ]
+    }
+  ]
+}

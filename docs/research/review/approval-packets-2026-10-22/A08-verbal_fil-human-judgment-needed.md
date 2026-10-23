@@ -8,7 +8,10 @@
 
 **What the evidence does NOT show.** The author's read is not independent. Treat every key as unconfirmed until you have solved the item yourself.
 
-**Bank worker's recommendations (not decisions):** 31 Accept.
+**Current recommendations (23 Oct independent second pass; not decisions):** 29 Accept, 2 Revise.
+
+
+**23 Oct second pass:** The question order below is retained; the review queue now marks `CIVIO-GF2K01-VFIL-WIKAIN-0001`, `CIVIO-GF2K01-VFIL-WIKAIN-0002` as Revise. Four separate draft corrections are in `docs/research/audit/fixes/vfil-gapfill01-r2-2026-10-23.json`. Compare each with the original before deciding. No item is approved by this note.
 
 **Risks in this packet:**
 
@@ -337,8 +340,8 @@ Basahin: "MAKATI ANG PAA ni Carlo kaya bihira siyang nasa bahay tuwing Sabado." 
 | 23 | CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0032 | o1: takot | none (judgment item) | key not machine-checkable | Accept |
 | 24 | CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0033 | o2: magaling | none (judgment item) | key not machine-checkable | Accept |
 | 25 | CIVIO-GF2K01-VFIL-KASINGKAHULUGAN-0034 | o3: maginhawa | none (judgment item) | key not machine-checkable | Accept |
-| 26 | CIVIO-GF2K01-VFIL-WIKAIN-0001 | o4: pangunahing nagtataguyod ng pamilya | none (judgment item) | key not machine-checkable | Accept |
-| 27 | CIVIO-GF2K01-VFIL-WIKAIN-0002 | o1: ina ng pamilya | none (judgment item) | key not machine-checkable | Accept |
+| 26 | CIVIO-GF2K01-VFIL-WIKAIN-0001 | o4: pangunahing nagtataguyod ng pamilya | none (judgment item) | key not machine-checkable; 23 Oct: The youngest-child foil is mislabeled as an antonym. | Revise |
+| 27 | CIVIO-GF2K01-VFIL-WIKAIN-0002 | o1: ina ng pamilya | none (judgment item) | key not machine-checkable; 23 Oct: The award wording is unnatural and the guest foil is not an antonym. | Revise |
 | 28 | CIVIO-GF2K01-VFIL-WIKAIN-0003 | o2: palaging binabanggit | none (judgment item) | key not machine-checkable | Accept |
 | 29 | CIVIO-GF2K01-VFIL-WIKAIN-0004 | o3: sanay sa layaw at mahirap utusan | none (judgment item) | key not machine-checkable | Accept |
 | 30 | CIVIO-GF2K01-VFIL-WIKAIN-0005 | o4: mga manggagawang nagbabanat ng buto | none (judgment item) | key not machine-checkable | Accept |

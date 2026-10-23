@@ -552,3 +552,19 @@ Script: `scripts/batches/fixes/baseline_ven_num_metadata_2026_10_22.py`.
 - **Real defect found and fixed:** Pest inherited DB settings from the shell. phpunit.xml set them without `force` and only in `<env>`, but Laravel reads `$_SERVER` first. A shell exporting the E2E variables made Pest run `RefreshDatabase` on the E2E file and wipe it; this happened twice during this work. phpunit.xml now forces the values in both `<env>` and `<server>`. `TestDatabaseIsolationTest` failed before the fix and passes after it. A full Pest run with the E2E variables (and a pgsql/5434 env) exported now passes 526/526 and leaves the E2E file intact (24 questions before and after).
 - **Production bundle:** unchanged. No file under `resources/` changed, and the size-limit numbers are identical.
 
+
+
+## 2026-10-23: Independent Filipino gap-fill second pass (99 manifest drafts)
+
+Read the stems, four choices and keyed meanings of all 99 items in `gap-fill-2000-01.json`; inspected the explanations and distractor codes of the four flagged items (41 antonyms, 34 synonyms, 24 idioms). This is an author-independent editorial review of those drafts, not a dictionary certification of every term and not an approval. Ninety-five had no specific second-answer or meaning defect detected in this pass; four require revision before an item-level human decision:
+
+| ID suffix | Finding | Separate draft correction |
+|---|---|---|
+| `VFIL-KASALUNGAT-0033` | “mainitin ang ulo” describes temper and is not the direct opposite of understanding a sick employee. | `-R2` replaces the answer text with an explicit lack of understanding. |
+| `VFIL-WIKAIN-0001` | “pinakabunsong anak” is not an antonym of the main family provider despite its `FIL-ANTONYM-TRAP` code. | `-R2` supplies a genuine opposite-role foil and tailored explanation. |
+| `VFIL-WIKAIN-0002` | “ilaw ng tahanan ng taon” is unnatural; the visiting guest foil is mislabeled an antonym. | `-R2` rewrites the context and uses a same-field foil with the matching code. |
+| `VFIL-WIKAIN-0014` | “kalansay na lamang” can also express extreme thinness, making a second choice defensible. | `-R2` replaces it with a weaker-degree foil and its proper code. |
+
+The four full-item proposals are in `audit/fixes/vfil-gapfill01-r2-2026-10-23.json`, all `draft/unreviewed`, each carrying `replaces`. The originals stay in the 2,100-item manifest unchanged. The proposals pass `qa_file.py` (4 items, 2,108 comparison records, 0 problems) and `explanation_lint.py` (0 flagged). These checks do not approve their language.
+
+The reproducible review queue now marks these four as `Revise` and `needs_human_read: yes`, and packets A07–A09 carry the same flags. Queue totals: 694 Accept recommendations, 20 Accept revision, 9 Revise; all 723 `decision_by_human` cells remain empty. The existing independent A01 review is preserved by the packet builder; its test was corrected to exclude that hand-written review from the generated-packet census. Nineteen bank-gate tests pass, and the flat manifest validator still reports 2,100 IDs, zero structural problems (1,377 approved, 685 draft, 38 reviewed in its pinned snapshot). No import, activation, signature or count increase.

@@ -19,6 +19,14 @@ NOTE = {  # P1 rows with something a human reviewer should look at beyond the ke
 
 EV = "docs/research/review/queue-evidence-2026-10-22.json"
 SELF = "Authored by the bank worker (22 Oct drafts); the author's content QA is not independent, so a human read is still required."
+# Independent second pass, 23 Oct: these four Filipino drafts need a content revision.
+# Detailed replacement proposals are in audit/fixes/vfil-gapfill01-r2-2026-10-23.json.
+VFIL_SECOND_PASS = {
+    "CIVIO-GF2K01-VFIL-KASALUNGAT-0033": "'mainitin ang ulo' describes temper and is not the direct antonym of understanding a sick employee; use an explicit lack of understanding.",
+    "CIVIO-GF2K01-VFIL-WIKAIN-0001": "'pinakabunsong anak' is not an antonym of the family's main provider, despite its FIL-ANTONYM-TRAP code.",
+    "CIVIO-GF2K01-VFIL-WIKAIN-0002": "'ilaw ng tahanan ng taon' is unnatural, and 'panauhing dumadalaw' is mislabeled as an antonym of mother.",
+    "CIVIO-GF2K01-VFIL-WIKAIN-0014": "'kalansay na lamang' can itself mean extremely thin, so two choices can defend the key's meaning; replace that foil.",
+}
 HOW = {"recipe solver": "key recomputed from the stem by the item's recipe (drafts/solver_2026_10_22.py)",
        "bank solver": "key recomputed from the stem by the qa.py domain solver",
        "evidence sheet": "key matches the hand-checked evidence sheet (audit/verified_keys or gi_legacy_evidence, verbatim lawphil quote)",
@@ -70,6 +78,10 @@ def p2_p4(m, cache):
             human = True
         if d1022:
             notes.append(SELF)
+        if e["id"] in VFIL_SECOND_PASS:
+            rec, human = "Revise", True
+            notes = [n for n in notes if "one defensible answer" not in n]
+            notes.append("Independent 23 Oct review: " + VFIL_SECOND_PASS[e["id"]])
         out.append({"id": e["id"], "priority": e["priority"], "status": e["status"], "recommendation": rec, "reason": " | ".join(notes),
                     "checked": "evidence pass (queue_evidence_2026_10_22.py) + reading", "needs_human_read": "yes" if human else "no",
                     "decision_by_human": ""})
