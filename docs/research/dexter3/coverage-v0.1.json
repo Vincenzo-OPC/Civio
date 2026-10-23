@@ -1,0 +1,382 @@
+{
+  "baseline_commit": "78df5c26b07b5c94b53482c2f6200ab4a49a1551",
+  "manifest_sha256": "e9b137e0d54080e752539dac2dc22a61bebf6ec8d29171554590912fdd58e9b6",
+  "source_files": {
+    "docs/batches/batch-001.json": "d86eafb69bfe877fde290fbb38b9cee21eee084ebc2906b4ce8e72b5854babda",
+    "docs/batches/batch-002.json": "4428628418f12f7eb66740ba9f366189bf37a0745702ac6f7a5a0197a1e7eb36",
+    "docs/batches/batch-003.json": "8389676d28b94bbc91a09acd912a46bce7746ddf1693c22188d8aa1b10c08a04",
+    "docs/batches/batch-004.json": "3c1da34b600530c67819f161ea29a966e9e6cff8888d6781a1d4674f662c51dd",
+    "docs/batches/batch-005.json": "35ab03d8be9c79ec19798be72f349a17a3f91ec60fc20fc5e6116e96c25c30fb",
+    "docs/batches/batch-006.json": "e52612234f3ce0281682863c1c3a5a7b01dd892c2d58dd2cc0534803d2aae1f3",
+    "docs/batches/batch-007.json": "a6efe60092ced27eda1a5b33d105a7508beb843a0ddd3dc9a531006a96ec11a9",
+    "docs/batches/batch-008.json": "833c999aa57ef5ed79f379af65018d7dbd7169f5be9819110583d819cad81507",
+    "docs/batches/batch-009.json": "842a4a9dfdb29750ac45c21d56fffe9260d328751b7e1b1e8eb1f892c2b3141d",
+    "docs/batches/batch-010.json": "911659c41f957a0b829185f8a5b63e8b63b80acf2e72c7edc45c94baf19500a5",
+    "docs/batches/batch-011.json": "a4c7a1224b9aa0f153971af235b9c898e2f3dc918915de8852d669ef42b6311f",
+    "docs/research/audit/fixes/gap-fill-2000-06-lintfix.json": "b7c252ad5715ba0254b63dd4e05e2afd2687bff1a468641a1eea0b5ec62e3d28",
+    "docs/research/audit/fixes/p1-editorial-r1-2026-10-22.json": "530e209eeef180d7c5c5fbff4a167127dc1369688b1c67a7222ea97e0a904887",
+    "docs/research/audit/fixes/round-03-baseline-b3-drafts.json": "dde14e19875a87fb82ead6dca806566cd3fcfd2566839e86b3f7ce4176427cdf",
+    "docs/research/audit/fixes/round-03-baseline-b4-drafts.json": "4bb7d976a3d37424cc1c805ad775ed6e50efaa08c4abb4635118dbd9636afc73",
+    "docs/research/audit/fixes/signoff-replacements-2026-10-22.json": "7dadfb9aef40bb37f3543bef2a90efa80ec22a201f38a75a7c6dde15188a1602",
+    "docs/research/batch-subpro-num-001.json": "b622f978759a6ffdb186921f75c758e2355e273901079df57df060948487242c",
+    "docs/research/batches/drafts/analytical-professional-2026-10-22.json": "5078f3f8bcad538f5669616e6a463d737b38be29b0e48eebdc3a3ccd4547f719",
+    "docs/research/batches/drafts/gi-applied-2026-10-22.json": "0fd5765cc435159b84a6d2a78a73aeeca96bc5dbf2c0989a32277737dd1b59d1",
+    "docs/research/batches/drafts/numerical-series-2026-10-22.json": "7e15eb528d37ccb15be5705b67720b907cd745c8901b0980214ee6cc9644a108",
+    "docs/research/batches/drafts/subpro-clerical-2026-10-22.json": "76a492d5a825799e7a632070d35c7b39bb8d4c68506bcb8770ed9d2c52f22d1a",
+    "docs/research/batches/drafts/subpro-math-2026-10-22.json": "5e79a7e65a480d8f1fccff29bb5ca4f20e396c9816319c9912a2886347cf35a8",
+    "docs/research/batches/drafts/verbal-en-organization-reading-2026-10-22.json": "a3e17604aaf594780e4b7e20fa95dc1ad47667eceb4ccb044f9710027ad7884e",
+    "docs/research/batches/drafts/verbal-en-reading-set2-2026-10-22.json": "29559306146c49b9af390bf4786ca61a3fc05ab53c7d77d681047e0822e73892",
+    "docs/research/chatgpt-batch-001.json": "7b71cf0eb2208ea43de7a6b7ab0017af1cc69d1e44c1b0d4e06c2c512aa2f30f",
+    "docs/research/chatgpt-batch-002.json": "21f2fa573dbc3717a09d5a5e5082974fc09c4440ead36a9f5148c96c6e1ee455",
+    "docs/research/chatgpt-batch-003.json": "974095506d7b72e5a68d7d98988b3689026a4a136e0f571ccad9effd721dd095",
+    "docs/research/filipino-supplement-001.json": "7d591be27c25e3e76679dabfb69d91f74d4eeed279eb5ad109ec50129df901f7",
+    "docs/research/gap-fill-001.json": "74d51094384fc2a84a19ed85ab9fc8ed0a026108df0839113a815b1ed0cab341",
+    "docs/research/gap-fill-002.json": "6c24855b9086dc478f2537cafa7c35764e1b62c96d00ee659ced40819a2202dd",
+    "docs/research/gap-fill-003.json": "5437c428bb5c9d3ce7916333b7f92ba70ca7a486da62c4b03323e17c85719364",
+    "docs/research/gap-fill-004.json": "2b2c5cb6f8cb9332133a5b5585f643e8fb8b2b636582ee6b7803f9b4d3ab06ba",
+    "docs/research/gap-fill-005.json": "1915740f18d987c20eda6adf7723de7d50be0079b5599f1d838fc3456432180a",
+    "docs/research/gap-fill-2000-01.json": "a1b7efb520f6a6954fa552fa2bf4884b7c0d04f4624ac68bb687b0fef3ee5733",
+    "docs/research/gap-fill-2000-02.json": "6dc065ac5ea97089426ffae841d558ff39fb0d8f02a0ee5a21cf470dd8168037",
+    "docs/research/gap-fill-2000-03.json": "5747f1bcbd6fae95e829ab13e529b7ec022b5a75074729d08f77203756ac9fb8",
+    "docs/research/gap-fill-2000-04.json": "8b5b5782d40f452d343e86c91aaed7a05c1cd4368347a884b691f9361e998dc0",
+    "docs/research/gap-fill-2000-05.json": "aff541e1a326a34274bdbb4cff1c866542a8976acbd0d07f40d00e5175c60dfe",
+    "docs/research/subprofessional-clerical-supplement-001.json": "0dce9bbb0ae8924ebe0de4948d20e59434b2cf1e3e1c31dcbda247659b0d4369",
+    "docs/research/subprofessional-general-info-supplement-001.json": "e0dd05576e4ce42815e504d57d2fab212aa201c17e9e7babe06b60524ef4a4a2"
+  },
+  "candidate_records": 2100,
+  "approved_subprofessional_eligible": 1136,
+  "by_domain_status": {
+    "numerical": {
+      "approved": 257,
+      "draft": 105,
+      "reviewed": 38
+    },
+    "analytical": {
+      "approved": 241,
+      "draft": 159
+    },
+    "verbal_en": {
+      "approved": 286,
+      "draft": 114
+    },
+    "verbal_fil": {
+      "approved": 178,
+      "draft": 122
+    },
+    "clerical": {
+      "approved": 202,
+      "draft": 98
+    },
+    "general_information": {
+      "approved": 213,
+      "draft": 87
+    }
+  },
+  "by_archetype_status": {
+    "NUM-SEQ-DIFF": {
+      "approved": 29,
+      "draft": 22
+    },
+    "NUM-WP-PCT-CHANGE": {
+      "approved": 37,
+      "draft": 1
+    },
+    "NUM-WP-RATIO": {
+      "approved": 29,
+      "draft": 9,
+      "reviewed": 5
+    },
+    "NUM-FRAC-DEC": {
+      "approved": 19,
+      "draft": 10,
+      "reviewed": 12
+    },
+    "NUM-OPS-ORDER": {
+      "approved": 30,
+      "draft": 3
+    },
+    "NUM-SEQ-MULT": {
+      "approved": 20,
+      "draft": 16
+    },
+    "NUM-WP-ALGEBRA": {
+      "approved": 16,
+      "draft": 13,
+      "reviewed": 7
+    },
+    "NUM-WP-AVERAGE": {
+      "approved": 26,
+      "reviewed": 1,
+      "draft": 2
+    },
+    "NUM-WP-GEOM": {
+      "approved": 18,
+      "draft": 4
+    },
+    "NUM-WP-RATE": {
+      "approved": 27,
+      "draft": 11,
+      "reviewed": 7
+    },
+    "NUM-SEQ-ALT": {
+      "draft": 1
+    },
+    "NUM-OPS-FRAC-DEC": {
+      "approved": 6
+    },
+    "NUM-PCT-BASIC": {
+      "reviewed": 6,
+      "draft": 3
+    },
+    "NUM-DECIMAL": {
+      "draft": 1
+    },
+    "NUM-PROPERTY": {
+      "draft": 8
+    },
+    "NUM-UNIT": {
+      "draft": 1
+    },
+    "ANA-ANALOGY-PART/WHOLE": {
+      "approved": 1,
+      "draft": 6
+    },
+    "ANA-ANALOGY-FUNCTION": {
+      "approved": 9,
+      "draft": 19
+    },
+    "ANA-ANALOGY-SYN": {
+      "approved": 5,
+      "draft": 14
+    },
+    "ANA-ASSUME-I-II": {
+      "approved": 19
+    },
+    "ANA-CONCLUSION": {
+      "approved": 35,
+      "draft": 5
+    },
+    "ANA-DI-TABLE": {
+      "approved": 41,
+      "draft": 39
+    },
+    "ANA-SYLLOGISM": {
+      "approved": 39,
+      "draft": 10
+    },
+    "ANA-SYMBOL-SERIES": {
+      "approved": 77,
+      "draft": 5
+    },
+    "ANA-ANALOGY-FORM": {
+      "approved": 6,
+      "draft": 20
+    },
+    "ANA-ANALOGY-DEGREE": {
+      "approved": 3,
+      "draft": 23
+    },
+    "ANA-ANALOGY-PART": {
+      "approved": 6,
+      "draft": 12
+    },
+    "ANA-ANALOGY-SYN/ANT": {
+      "draft": 6
+    },
+    "VEN-SENT-COMP-PHRASAL": {
+      "approved": 12
+    },
+    "VEN-SENT-COMP-WORD": {
+      "approved": 59
+    },
+    "VEN-WORD-MEANING": {
+      "approved": 54
+    },
+    "VEN-ERROR-AGREE": {
+      "approved": 31
+    },
+    "VEN-ERROR-TENSE": {
+      "approved": 30
+    },
+    "VEN-RC-VOCAB": {
+      "approved": 22,
+      "draft": 14
+    },
+    "VEN-RC-DETAIL": {
+      "approved": 7,
+      "draft": 12
+    },
+    "VEN-RC-INFER": {
+      "approved": 15,
+      "draft": 20
+    },
+    "VEN-RC-MAIN": {
+      "approved": 5,
+      "draft": 15
+    },
+    "VEN-PO": {
+      "approved": 3
+    },
+    "VEN-RC": {
+      "approved": 4
+    },
+    "VEN-ERROR": {
+      "approved": 4
+    },
+    "VEN-PARA-INSERT": {
+      "approved": 8,
+      "draft": 15
+    },
+    "VEN-PARA-ORDER": {
+      "approved": 12,
+      "draft": 38
+    },
+    "VEN-SENT-STRUCTURE": {
+      "approved": 20
+    },
+    "VFIL-BALARILA": {
+      "approved": 15
+    },
+    "VFIL-KASALUNGAT": {
+      "approved": 20,
+      "draft": 41
+    },
+    "VFIL-KASINGKAHULUGAN": {
+      "approved": 25,
+      "draft": 34
+    },
+    "VFIL-PAGBASA": {
+      "approved": 15,
+      "draft": 12
+    },
+    "VFIL-PAGSUSUNOD": {
+      "approved": 10,
+      "draft": 1
+    },
+    "VFIL-WIKAIN": {
+      "approved": 23,
+      "draft": 24
+    },
+    "VFIL-VOCAB": {
+      "draft": 10,
+      "approved": 14
+    },
+    "VFIL-COMP": {
+      "approved": 20
+    },
+    "VFIL-GRAM": {
+      "approved": 10
+    },
+    "VFIL-READ": {
+      "approved": 20
+    },
+    "VFIL-PARA": {
+      "approved": 6
+    },
+    "CLR-SPELL-WRONG": {
+      "approved": 57,
+      "draft": 6
+    },
+    "CLR-FILE-POSITION": {
+      "approved": 58,
+      "draft": 34
+    },
+    "CLR-SPELL-RIGHT": {
+      "approved": 36,
+      "draft": 14
+    },
+    "CLR-FILE-ORDER": {
+      "approved": 11,
+      "draft": 10
+    },
+    "CLR-FILE-BUSINESS": {
+      "draft": 34
+    },
+    "CLR-NAMES": {
+      "approved": 8
+    },
+    "CLR-NUMERIC": {
+      "approved": 6
+    },
+    "CLR-CHRONOLOGICAL": {
+      "approved": 6
+    },
+    "CLR-SPELLING": {
+      "approved": 20
+    },
+    "GI-SCENARIO-APPLY": {
+      "approved": 27,
+      "draft": 36
+    },
+    "GI-WHO-HOLDS-POWER": {
+      "approved": 23,
+      "draft": 8
+    },
+    "GI-DEADLINE-NUMBER": {
+      "approved": 60,
+      "draft": 6
+    },
+    "GI-TERM-MATCH": {
+      "approved": 46,
+      "draft": 9
+    },
+    "GI-ENV-PRINCIPLE": {
+      "approved": 21,
+      "draft": 6
+    },
+    "GI-RIGHTS-APPLY": {
+      "approved": 29,
+      "draft": 22
+    },
+    "GI-SOURCE-BASED-SCENARIO": {
+      "approved": 7
+    }
+  },
+  "metadata_presence_by_status": {
+    "approved": {
+      "records": 1377,
+      "why_correct": 1377,
+      "terms": 1377,
+      "shortcut": 1377,
+      "complete_wrong_rationales": 1377,
+      "complete_distractor_codes": 1377
+    },
+    "draft": {
+      "records": 685,
+      "why_correct": 685,
+      "terms": 685,
+      "shortcut": 685,
+      "complete_wrong_rationales": 685,
+      "complete_distractor_codes": 685
+    },
+    "reviewed": {
+      "records": 38,
+      "why_correct": 38,
+      "terms": 38,
+      "shortcut": 38,
+      "complete_wrong_rationales": 38,
+      "complete_distractor_codes": 38
+    }
+  },
+  "pilot_items": 60,
+  "pilot_distractor_rows": 180,
+  "pilot_adjudicated_rows": 0,
+  "pilot_recipe_counts": {
+    "successive-price": 12,
+    "sale-price": 3,
+    "simple-interest": 5,
+    "two-share-total": 20,
+    "spelling-task-direction": 20
+  },
+  "math_items_checked": 40,
+  "spelling_items_needing_dictionary_review": 20,
+  "selected_approved_distinct_family_transfers": 0,
+  "independently_approved_sidecars": 0,
+  "source_items_changed": 0,
+  "limitations": [
+    "Mechanical metadata presence is not semantic correctness.",
+    "Approved labels are not proof of signed active import.",
+    "No live database or learner records accessed.",
+    "All 60 require independent editorial review; no reviewer cells filled."
+  ]
+}

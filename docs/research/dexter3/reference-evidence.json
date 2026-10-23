@@ -1,0 +1,46 @@
+{
+  "checked_on": "2026-10-23",
+  "scope": "License files and primary project documentation; no third-party code or lesson text copied.",
+  "repositories": [
+    {
+      "repository": "NavyashreeNS/ai-tutor",
+      "observed_commit": "a276b1ca876c04de2d80090df4a2cf899dd3cbd2",
+      "license_blob_sha": "ee5ca04a0ce7b31c14e08b51ab3e245c6e8f6970",
+      "readme_blob_sha": "52e40a48325e458b418e39156c4cabd4763fc973",
+      "license": "MIT",
+      "code_reuse_proposed": false
+    },
+    {
+      "repository": "CAHLR/OATutor",
+      "observed_commit": "e24c8456e5f75c07b6048159ea9e128b036f673d",
+      "license_blob_sha": "7cb404425d825147c6237562c29552aa1b9f596c",
+      "readme_blob_sha": "8145cb3bb6c936150d6a4a192b6cd7335bdcf38c",
+      "license": "MIT",
+      "code_reuse_proposed": false
+    },
+    {
+      "repository": "Galliard7/OpenMath",
+      "observed_commit": "8b7ebaa86b886df2e7631f5760128507f65571b0",
+      "license_blob_sha": null,
+      "readme_blob_sha": "3590673738e755ae071c6ff2260a56387b79d6e6",
+      "license": "README claims Apache-2.0; standalone license file not located; reuse blocked",
+      "code_reuse_proposed": false
+    },
+    {
+      "repository": "oppia/oppia",
+      "observed_commit": "87e5883654d39646d2f09ceb0565beeb7e1549ca",
+      "license_blob_sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "readme_blob_sha": null,
+      "license": "Apache-2.0",
+      "code_reuse_proposed": false
+    },
+    {
+      "repository": "CAHLR/pyBKT",
+      "observed_commit": "9bfeb31c09ea63c5962afc06b3935b5eefb4029e",
+      "license_blob_sha": "b4306f275478362326a0a54ebfeb2972e415c7c0",
+      "readme_blob_sha": "50defe74c6e7079b29dc24ae9e4cc2deb1dbbe2e",
+      "license": "MIT",
+      "code_reuse_proposed": false
+    }
+  ]
+}
