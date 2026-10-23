@@ -35,6 +35,8 @@ RUN export APP_KEY="base64:$(php -r 'echo base64_encode(random_bytes(32));')" \
     && chown -R www-data:www-data node_modules
 
 COPY --chmod=755 scripts/00-laravel-deploy.sh /etc/entrypoint.d/00-laravel-deploy.sh
+# Long-lived immutable caching for hashed build assets (Lite L0 item 6).
+COPY --chmod=644 conf/nginx/civio-cache.conf /etc/nginx/server-opts.d/civio-cache.conf
 
 EXPOSE 8080
 
