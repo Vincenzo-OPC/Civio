@@ -1,0 +1,20 @@
+{
+  "baseline_commit": "9584106042bdd8d57eaa054f98fb4a1b73470cb0",
+  "packet_sha256": "b4dafd1d5adbf7c706e1072251b3c99cc9944dbc207b5988d4df887831655d66",
+  "foundation_audit_sha256": "4f0cc128c6d93787c569bf57441745841847cb54fe38a21c222350ea4fc243f5",
+  "price_items_in_review_packet": 15,
+  "distractor_rows_in_review_packet": 45,
+  "foundation_keys_checked": 4,
+  "foundation_distractor_values_checked": 12,
+  "invalid_candidate_fixtures_rejected": 8,
+  "foundation_statuses": {
+    "reviewed": 3,
+    "draft": 1
+  },
+  "independent_reviews_recorded": 0,
+  "approved_candidates_added": 0,
+  "prior_artifacts_byte_identical": true,
+  "original_reviewer_csv_byte_identical": true,
+  "bank_items_changed": 0,
+  "runtime_changes": 0
+}

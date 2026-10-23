@@ -1,0 +1,3963 @@
+{
+  "schema_version": "dexter-price15-review-packet-v0.1",
+  "baseline_commit": "9584106042bdd8d57eaa054f98fb4a1b73470cb0",
+  "status": "awaiting_independent_review",
+  "overlay_file": "price15-v0.2.json",
+  "overlay_sha256": "d1337b21a192a389e2c71e99ef414e2e8016b42a8e6bd069dfbdf744c4150bca",
+  "original_packet_sha256": "f49d637e086a7ce7acdc91d2f3dbaaec4070e747540c26ac47b97f81e991ce61",
+  "criteria": [
+    "interpretation_correct",
+    "diagnostic_tests_comprehension",
+    "feedback_distinct_and_appropriate",
+    "hypothesis_supported_without_overclaim",
+    "hints_progress_without_early_solution",
+    "worked_solution_and_shortcut_correct",
+    "original_intermediate_final_distinguished",
+    "accessible_to_percentage_beginner",
+    "natural_tutor_voice",
+    "safe_to_reuse_with_validated_parameters"
+  ],
+  "rating_values": [
+    "yes",
+    "no",
+    "unclear"
+  ],
+  "instructions": [
+    "Solve each source item before consulting its stored key. A key in this packet is reference evidence, not an instruction to agree.",
+    "Review independently; do not inspect another reviewer's completed form before submitting your own.",
+    "Compare diagnosis with the actual response evidence. Unknown/self-report/assisted checks must not become knowledge or permanent diagnoses.",
+    "Mark exact failures and affected node/response IDs. Do not copy the author second-pass verdict as your own.",
+    "Foundation candidates remain unapproved even when your mathematics is correct. Bank signing and runtime activation are separate gates."
+  ],
+  "price_items": [
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000001",
+      "source_file": "docs/batches/batch-001.json",
+      "source_record_sha256": "691e2f0e80f02ca8ce38fda1f7691e5c4ff0773c721971c277c0b277928187ec",
+      "source_question_hash": "3d561dab56cb06513817ba8c16307b113203563f8f7172145b009781fa5f5a0d",
+      "source": {
+        "id": "CIVIO-NUM-WP-PCT-CHANGE-000001",
+        "track": "both",
+        "archetype": "NUM-WP-PCT-CHANGE",
+        "stem": "A store sold a sack of rice for ₱250. It raised the price by 20%. A week later, it cut the new price by 20%. What is the final price of the sack?",
+        "options": [
+          {
+            "option_id": "n1",
+            "text": "₱240"
+          },
+          {
+            "option_id": "n2",
+            "text": "₱250"
+          },
+          {
+            "option_id": "n3",
+            "text": "₱288"
+          },
+          {
+            "option_id": "n4",
+            "text": "₱300"
+          }
+        ],
+        "answer_option_id": "n1",
+        "reveal": {
+          "terms": "\"Percent\" means \"out of 100\". 20% of a price is 20 pesos for every 100 pesos. \"Raise by 20%\" means add 20% of the price at that moment. \"Cut by 20%\" means take away 20% of the price at that moment.",
+          "shortcut": "Each change uses the price right before it. Tiny example: ₱100 up 10% is ₱110. Then down 10% is ₱110 − ₱11 = ₱99, not ₱100. Now this item: ₱250 up 20% is ₱250 + ₱50 = ₱300. Then down 20% of ₱300 is ₱300 − ₱60 = ₱240.",
+          "why_correct": "₱240 is right. Check another way: 250 × 1.2 = 300, and 300 × 0.8 = 240.",
+          "why_wrong": {
+            "n2": "₱250 treats +20% and −20% as cancelling out. The cut is taken from the bigger price, ₱300, so it removes more than the raise added.",
+            "n3": "₱288 adds the 20% raise again to ₱240. That is one step too many.",
+            "n4": "₱300 is only the price after the raise. It stops before the cut."
+          }
+        },
+        "distractor_reasoning": {
+          "n2": "NUM-PCT-ADD",
+          "n3": "NUM-EXTRA-STEP",
+          "n4": "NUM-PARTIAL"
+        },
+        "source": "Original, Civio",
+        "status": "approved"
+      },
+      "binding": {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000001",
+        "source_question_hash": "3d561dab56cb06513817ba8c16307b113203563f8f7172145b009781fa5f5a0d",
+        "source_record_sha256": "691e2f0e80f02ca8ce38fda1f7691e5c4ff0773c721971c277c0b277928187ec",
+        "source_file": "docs/batches/batch-001.json",
+        "base_binding_sha256": "72b35e9f46ead93aad215aeb18eaa21e88d2229fd3b4bfc5d9fd551dee815bfa",
+        "status": "draft",
+        "review": {
+          "reviewer_1": null,
+          "reviewer_2": null,
+          "adjudication": null
+        },
+        "family": "successive-price",
+        "flow_id": "successive-price",
+        "parameters": {
+          "original": "₱250",
+          "rate": "20"
+        },
+        "inherited_fields": [
+          "worked_solution",
+          "math_verification",
+          "distractor_evidence"
+        ],
+        "visibility": {
+          "given_meanings": "after_initial_response_only",
+          "worked_solution": "server_authorized_reveal_only",
+          "flow": "one_current_node_only"
+        },
+        "mental_method": [
+          "Find one fifth by dividing by 5.",
+          "Add that increase to the starting price.",
+          "Find one fifth by dividing by 5. Use the raised price this time.",
+          "Subtract that discount from the raised price."
+        ],
+        "prerequisites": {
+          "required": [
+            "understand_percent_as_hundredths",
+            "identify_stage",
+            "add_subtract"
+          ],
+          "optional_methods": [
+            "fraction_benchmarks",
+            "decimal_multipliers"
+          ],
+          "missing_approved_assessment": "NUM-PCT-BASIC"
+        },
+        "transfer": {
+          "candidate_ids": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000013"
+          ],
+          "full_target_distinct_family_id": null,
+          "same_family_pilot_siblings": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000024",
+            "CIVIO-NUM-WP-PCT-CHANGE-000038",
+            "CIVIO-NUM-WP-PCT-CHANGE-000045",
+            "CIVIO-NUM-WP-PCT-CHANGE-000113",
+            "CIVIO-NUM-WP-PCT-CHANGE-000227",
+            "CIVIO-NUM-WP-PCT-CHANGE-000324",
+            "CIVIO-NUM-WP-PCT-CHANGE-000328",
+            "CIVIO-NUM-WP-PCT-CHANGE-000415",
+            "CIVIO-NUM-WP-PCT-CHANGE-000428",
+            "CIVIO-NUM-WP-PCT-CHANGE-000429",
+            "CIVIO-NUM-WP-PCT-CHANGE-000515"
+          ],
+          "runtime_exposure": "unknown",
+          "independent_transfer_approved": false
+        }
+      },
+      "original_distractor_rows": [
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000001",
+          "correct_option": "n1: ₱240",
+          "distractor_option": "n2: ₱250",
+          "distractor_code": "NUM-PCT-ADD",
+          "why_wrong": "₱250 treats +20% and −20% as cancelling out. The cut is taken from the bigger price, ₱300, so it removes more than the raise added.",
+          "why_correct": "₱240 is right. Check another way: 250 × 1.2 = 300, and 300 × 0.8 = 240."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000001",
+          "correct_option": "n1: ₱240",
+          "distractor_option": "n3: ₱288",
+          "distractor_code": "NUM-EXTRA-STEP",
+          "why_wrong": "₱288 adds the 20% raise again to ₱240. That is one step too many.",
+          "why_correct": "₱240 is right. Check another way: 250 × 1.2 = 300, and 300 × 0.8 = 240."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000001",
+          "correct_option": "n1: ₱240",
+          "distractor_option": "n4: ₱300",
+          "distractor_code": "NUM-PARTIAL",
+          "why_wrong": "₱300 is only the price after the raise. It stops before the cut.",
+          "why_correct": "₱240 is right. Check another way: 250 × 1.2 = 300, and 300 × 0.8 = 240."
+        }
+      ]
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000024",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "0852548ef319861dacca3f821467830c183ea5abcdf8c481a8669d5237b3f704",
+      "source_question_hash": "ece54a9228a6c529b4c0d090a53e6f7a935c1e491523fb91af733b6c2bea1e07",
+      "source": {
+        "id": "CIVIO-NUM-WP-PCT-CHANGE-000024",
+        "track": "both",
+        "archetype": "NUM-WP-PCT-CHANGE",
+        "stem": "A supplier sold a bag of cement for ₱1,200. It raised the price by 10%. Later, it lowered the new price by 40%. What is the final price?",
+        "options": [
+          {
+            "option_id": "o1",
+            "text": "₱1,320"
+          },
+          {
+            "option_id": "o2",
+            "text": "₱871.20"
+          },
+          {
+            "option_id": "o3",
+            "text": "₱792"
+          },
+          {
+            "option_id": "o4",
+            "text": "₱840"
+          }
+        ],
+        "answer_option_id": "o3",
+        "reveal": {
+          "terms": "\"Percent\" means \"out of 100\". A raise or a cut of a percent is always taken from the price at that moment.",
+          "shortcut": "Do one change at a time. ₱1,200 up 10% is ₱1,200 + ₱120 = ₱1,320. Then 40% of ₱1,320 is ₱528, so ₱1,320 − ₱528 = ₱792.",
+          "why_correct": "₱792 is right. Check: 1,200 × 1.1 = 1,320, and 1,320 × 0.6 = 792.",
+          "why_wrong": {
+            "o1": "₱1,320 is only the price after the raise. It stops before the cut.",
+            "o2": "₱871.20 applies the 10% raise again at the end. That is one step too many.",
+            "o4": "₱840 adds and subtracts the percents first (10% − 40%). The second change is taken from the new price, not the old one."
+          }
+        },
+        "distractor_reasoning": {
+          "o1": "NUM-PARTIAL",
+          "o2": "NUM-EXTRA-STEP",
+          "o4": "NUM-PCT-ADD"
+        },
+        "source": "Original, Civio",
+        "status": "approved"
+      },
+      "binding": {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000024",
+        "source_question_hash": "ece54a9228a6c529b4c0d090a53e6f7a935c1e491523fb91af733b6c2bea1e07",
+        "source_record_sha256": "0852548ef319861dacca3f821467830c183ea5abcdf8c481a8669d5237b3f704",
+        "source_file": "docs/batches/batch-002.json",
+        "base_binding_sha256": "0c835ca3d1794dc037b9bc27fb2aa744c73b9bc0e94641040a9f370db5c734f2",
+        "status": "draft",
+        "review": {
+          "reviewer_1": null,
+          "reviewer_2": null,
+          "adjudication": null
+        },
+        "family": "successive-price",
+        "flow_id": "successive-price",
+        "parameters": {
+          "original": "₱1,200",
+          "rate": "10"
+        },
+        "inherited_fields": [
+          "worked_solution",
+          "math_verification",
+          "distractor_evidence"
+        ],
+        "visibility": {
+          "given_meanings": "after_initial_response_only",
+          "worked_solution": "server_authorized_reveal_only",
+          "flow": "one_current_node_only"
+        },
+        "mental_method": [
+          "Find 10% by dividing by 10.",
+          "Add that increase to the starting price.",
+          "Find 10% and multiply it by 4. Use the raised price this time.",
+          "Subtract that discount from the raised price."
+        ],
+        "prerequisites": {
+          "required": [
+            "understand_percent_as_hundredths",
+            "identify_stage",
+            "add_subtract"
+          ],
+          "optional_methods": [
+            "fraction_benchmarks",
+            "decimal_multipliers"
+          ],
+          "missing_approved_assessment": "NUM-PCT-BASIC"
+        },
+        "transfer": {
+          "candidate_ids": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000013"
+          ],
+          "full_target_distinct_family_id": null,
+          "same_family_pilot_siblings": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000001",
+            "CIVIO-NUM-WP-PCT-CHANGE-000038",
+            "CIVIO-NUM-WP-PCT-CHANGE-000045",
+            "CIVIO-NUM-WP-PCT-CHANGE-000113",
+            "CIVIO-NUM-WP-PCT-CHANGE-000227",
+            "CIVIO-NUM-WP-PCT-CHANGE-000324",
+            "CIVIO-NUM-WP-PCT-CHANGE-000328",
+            "CIVIO-NUM-WP-PCT-CHANGE-000415",
+            "CIVIO-NUM-WP-PCT-CHANGE-000428",
+            "CIVIO-NUM-WP-PCT-CHANGE-000429",
+            "CIVIO-NUM-WP-PCT-CHANGE-000515"
+          ],
+          "runtime_exposure": "unknown",
+          "independent_transfer_approved": false
+        }
+      },
+      "original_distractor_rows": [
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000024",
+          "correct_option": "o3: ₱792",
+          "distractor_option": "o1: ₱1,320",
+          "distractor_code": "NUM-PARTIAL",
+          "why_wrong": "₱1,320 is only the price after the raise. It stops before the cut.",
+          "why_correct": "₱792 is right. Check: 1,200 × 1.1 = 1,320, and 1,320 × 0.6 = 792."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000024",
+          "correct_option": "o3: ₱792",
+          "distractor_option": "o2: ₱871.20",
+          "distractor_code": "NUM-EXTRA-STEP",
+          "why_wrong": "₱871.20 applies the 10% raise again at the end. That is one step too many.",
+          "why_correct": "₱792 is right. Check: 1,200 × 1.1 = 1,320, and 1,320 × 0.6 = 792."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000024",
+          "correct_option": "o3: ₱792",
+          "distractor_option": "o4: ₱840",
+          "distractor_code": "NUM-PCT-ADD",
+          "why_wrong": "₱840 adds and subtracts the percents first (10% − 40%). The second change is taken from the new price, not the old one.",
+          "why_correct": "₱792 is right. Check: 1,200 × 1.1 = 1,320, and 1,320 × 0.6 = 792."
+        }
+      ]
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000030",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "db8cf6adf1f1e312a336b00cc35cef83ff671c5743d23f80675dd80a5eecce94",
+      "source_question_hash": "c58c5dc3b04af41133af889f5abb698f4824a05c622f4250a2cd59cc260ec55f",
+      "source": {
+        "id": "CIVIO-NUM-WP-PCT-CHANGE-000030",
+        "track": "both",
+        "archetype": "NUM-WP-PCT-CHANGE",
+        "stem": "A pair of school shoes is priced at ₱480. It is sold at 15% off. How much does a buyer pay?",
+        "options": [
+          {
+            "option_id": "o1",
+            "text": "₱408"
+          },
+          {
+            "option_id": "o2",
+            "text": "₱465"
+          },
+          {
+            "option_id": "o3",
+            "text": "₱72"
+          },
+          {
+            "option_id": "o4",
+            "text": "₱552"
+          }
+        ],
+        "answer_option_id": "o1",
+        "reveal": {
+          "terms": "\"15% off\" means 15 pesos less for every 100 pesos of the price.",
+          "shortcut": "Pay 85% of the price: ₱480 × 0.85 = ₱408.",
+          "why_correct": "₱408 is right. Check: discount ₱72; ₱480 − ₱72 = ₱408.",
+          "why_wrong": {
+            "o2": "₱465 subtracts 15 pesos, not 15% of the price.",
+            "o3": "₱72 is the discount itself. The buyer pays the price minus this amount.",
+            "o4": "₱552 adds 15% instead of taking it off."
+          }
+        },
+        "distractor_reasoning": {
+          "o2": "NUM-WRONG-BASE",
+          "o3": "NUM-PARTIAL",
+          "o4": "NUM-OP-SWAP"
+        },
+        "source": "Original, Civio",
+        "status": "approved"
+      },
+      "binding": {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000030",
+        "source_question_hash": "c58c5dc3b04af41133af889f5abb698f4824a05c622f4250a2cd59cc260ec55f",
+        "source_record_sha256": "db8cf6adf1f1e312a336b00cc35cef83ff671c5743d23f80675dd80a5eecce94",
+        "source_file": "docs/batches/batch-002.json",
+        "base_binding_sha256": "1a0f75b67607f7c789b3c30dc318fc29bfa3e278bbf40605617785fe01f07179",
+        "status": "draft",
+        "review": {
+          "reviewer_1": null,
+          "reviewer_2": null,
+          "adjudication": null
+        },
+        "family": "sale-price",
+        "flow_id": "sale-price",
+        "parameters": {
+          "original": "₱480",
+          "rate": "15"
+        },
+        "inherited_fields": [
+          "worked_solution",
+          "math_verification",
+          "distractor_evidence"
+        ],
+        "visibility": {
+          "given_meanings": "after_initial_response_only",
+          "worked_solution": "server_authorized_reveal_only",
+          "flow": "one_current_node_only"
+        },
+        "mental_method": [
+          "Find 10%, then half of that for 5%; add them.",
+          "Subtract the saving from the starting price."
+        ],
+        "prerequisites": {
+          "required": [
+            "understand_percent_as_hundredths",
+            "identify_stage",
+            "add_subtract"
+          ],
+          "optional_methods": [
+            "fraction_benchmarks",
+            "decimal_multipliers"
+          ],
+          "missing_approved_assessment": "NUM-PCT-BASIC"
+        },
+        "transfer": {
+          "candidate_ids": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000124",
+            "CIVIO-NUM-WP-PCT-CHANGE-000013"
+          ],
+          "full_target_distinct_family_id": null,
+          "same_family_pilot_siblings": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000036",
+            "CIVIO-NUM-WP-PCT-CHANGE-000224"
+          ],
+          "runtime_exposure": "unknown",
+          "independent_transfer_approved": false
+        }
+      },
+      "original_distractor_rows": [
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000030",
+          "correct_option": "o1: ₱408",
+          "distractor_option": "o2: ₱465",
+          "distractor_code": "NUM-WRONG-BASE",
+          "why_wrong": "₱465 subtracts 15 pesos, not 15% of the price.",
+          "why_correct": "₱408 is right. Check: discount ₱72; ₱480 − ₱72 = ₱408."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000030",
+          "correct_option": "o1: ₱408",
+          "distractor_option": "o3: ₱72",
+          "distractor_code": "NUM-PARTIAL",
+          "why_wrong": "₱72 is the discount itself. The buyer pays the price minus this amount.",
+          "why_correct": "₱408 is right. Check: discount ₱72; ₱480 − ₱72 = ₱408."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000030",
+          "correct_option": "o1: ₱408",
+          "distractor_option": "o4: ₱552",
+          "distractor_code": "NUM-OP-SWAP",
+          "why_wrong": "₱552 adds 15% instead of taking it off.",
+          "why_correct": "₱408 is right. Check: discount ₱72; ₱480 − ₱72 = ₱408."
+        }
+      ]
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000036",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "93c9814c850f07f22d61ebe26c5a3589ca1d634d6c73e7237b76d0cf77de125c",
+      "source_question_hash": "1f65c090e38c44f71cc362c8dd0f1da3204ed724ae3d170bb5edb8c4f79e4b5a",
+      "source": {
+        "id": "CIVIO-NUM-WP-PCT-CHANGE-000036",
+        "track": "both",
+        "archetype": "NUM-WP-PCT-CHANGE",
+        "stem": "A backpack is priced at ₱400. It is sold at 15% off. How much does a buyer pay?",
+        "options": [
+          {
+            "option_id": "o1",
+            "text": "₱340"
+          },
+          {
+            "option_id": "o2",
+            "text": "₱60"
+          },
+          {
+            "option_id": "o3",
+            "text": "₱385"
+          },
+          {
+            "option_id": "o4",
+            "text": "₱460"
+          }
+        ],
+        "answer_option_id": "o1",
+        "reveal": {
+          "terms": "\"15% off\" means 15 pesos less for every 100 pesos of the price.",
+          "shortcut": "Pay 85% of the price: ₱400 × 0.85 = ₱340.",
+          "why_correct": "₱340 is right. Check: discount ₱60; ₱400 − ₱60 = ₱340.",
+          "why_wrong": {
+            "o2": "₱60 is the discount itself. The buyer pays the price minus this amount.",
+            "o3": "₱385 subtracts 15 pesos, not 15% of the price.",
+            "o4": "₱460 adds 15% instead of taking it off."
+          }
+        },
+        "distractor_reasoning": {
+          "o2": "NUM-PARTIAL",
+          "o3": "NUM-WRONG-BASE",
+          "o4": "NUM-OP-SWAP"
+        },
+        "source": "Original, Civio",
+        "status": "approved"
+      },
+      "binding": {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000036",
+        "source_question_hash": "1f65c090e38c44f71cc362c8dd0f1da3204ed724ae3d170bb5edb8c4f79e4b5a",
+        "source_record_sha256": "93c9814c850f07f22d61ebe26c5a3589ca1d634d6c73e7237b76d0cf77de125c",
+        "source_file": "docs/batches/batch-002.json",
+        "base_binding_sha256": "fd26ca91b164210cade4652fdc6cc6cb20478977707236c62e9ebb896102455e",
+        "status": "draft",
+        "review": {
+          "reviewer_1": null,
+          "reviewer_2": null,
+          "adjudication": null
+        },
+        "family": "sale-price",
+        "flow_id": "sale-price",
+        "parameters": {
+          "original": "₱400",
+          "rate": "15"
+        },
+        "inherited_fields": [
+          "worked_solution",
+          "math_verification",
+          "distractor_evidence"
+        ],
+        "visibility": {
+          "given_meanings": "after_initial_response_only",
+          "worked_solution": "server_authorized_reveal_only",
+          "flow": "one_current_node_only"
+        },
+        "mental_method": [
+          "Find 10%, then half of that for 5%; add them.",
+          "Subtract the saving from the starting price."
+        ],
+        "prerequisites": {
+          "required": [
+            "understand_percent_as_hundredths",
+            "identify_stage",
+            "add_subtract"
+          ],
+          "optional_methods": [
+            "fraction_benchmarks",
+            "decimal_multipliers"
+          ],
+          "missing_approved_assessment": "NUM-PCT-BASIC"
+        },
+        "transfer": {
+          "candidate_ids": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000124",
+            "CIVIO-NUM-WP-PCT-CHANGE-000013"
+          ],
+          "full_target_distinct_family_id": null,
+          "same_family_pilot_siblings": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000030",
+            "CIVIO-NUM-WP-PCT-CHANGE-000224"
+          ],
+          "runtime_exposure": "unknown",
+          "independent_transfer_approved": false
+        }
+      },
+      "original_distractor_rows": [
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000036",
+          "correct_option": "o1: ₱340",
+          "distractor_option": "o2: ₱60",
+          "distractor_code": "NUM-PARTIAL",
+          "why_wrong": "₱60 is the discount itself. The buyer pays the price minus this amount.",
+          "why_correct": "₱340 is right. Check: discount ₱60; ₱400 − ₱60 = ₱340."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000036",
+          "correct_option": "o1: ₱340",
+          "distractor_option": "o3: ₱385",
+          "distractor_code": "NUM-WRONG-BASE",
+          "why_wrong": "₱385 subtracts 15 pesos, not 15% of the price.",
+          "why_correct": "₱340 is right. Check: discount ₱60; ₱400 − ₱60 = ₱340."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000036",
+          "correct_option": "o1: ₱340",
+          "distractor_option": "o4: ₱460",
+          "distractor_code": "NUM-OP-SWAP",
+          "why_wrong": "₱460 adds 15% instead of taking it off.",
+          "why_correct": "₱340 is right. Check: discount ₱60; ₱400 − ₱60 = ₱340."
+        }
+      ]
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000038",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "01653ad4a85db7a1e0488ae948867627665b80d978a443c7595e5ec06996ae90",
+      "source_question_hash": "a1fc625e6aab210a1a042b38dec108c6e6f7166b74f352a3662065866679d292",
+      "source": {
+        "id": "CIVIO-NUM-WP-PCT-CHANGE-000038",
+        "track": "both",
+        "archetype": "NUM-WP-PCT-CHANGE",
+        "stem": "A hardware store sold a gallon of paint for ₱800. It raised the price by 30%. Later, it lowered the new price by 50%. What is the final price?",
+        "options": [
+          {
+            "option_id": "o1",
+            "text": "₱640"
+          },
+          {
+            "option_id": "o2",
+            "text": "₱676"
+          },
+          {
+            "option_id": "o3",
+            "text": "₱1,040"
+          },
+          {
+            "option_id": "o4",
+            "text": "₱520"
+          }
+        ],
+        "answer_option_id": "o4",
+        "reveal": {
+          "terms": "\"Percent\" means \"out of 100\". A raise or a cut of a percent is always taken from the price at that moment.",
+          "shortcut": "Do one change at a time. ₱800 up 30% is ₱800 + ₱240 = ₱1,040. Then 50% of ₱1,040 is ₱520, so ₱1,040 − ₱520 = ₱520.",
+          "why_correct": "₱520 is right. Check: 800 × 1.3 = 1,040, and 1,040 × 0.5 = 520.",
+          "why_wrong": {
+            "o1": "₱640 adds and subtracts the percents first (30% − 50%). The second change is taken from the new price, not the old one.",
+            "o2": "₱676 applies the 30% raise again at the end. That is one step too many.",
+            "o3": "₱1,040 is only the price after the raise. It stops before the cut."
+          }
+        },
+        "distractor_reasoning": {
+          "o1": "NUM-PCT-ADD",
+          "o2": "NUM-EXTRA-STEP",
+          "o3": "NUM-PARTIAL"
+        },
+        "source": "Original, Civio",
+        "status": "approved"
+      },
+      "binding": {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000038",
+        "source_question_hash": "a1fc625e6aab210a1a042b38dec108c6e6f7166b74f352a3662065866679d292",
+        "source_record_sha256": "01653ad4a85db7a1e0488ae948867627665b80d978a443c7595e5ec06996ae90",
+        "source_file": "docs/batches/batch-002.json",
+        "base_binding_sha256": "b000f611b50b0bd6c4c78296a45d9826348b778173de25b6f6419c93691c1b7f",
+        "status": "draft",
+        "review": {
+          "reviewer_1": null,
+          "reviewer_2": null,
+          "adjudication": null
+        },
+        "family": "successive-price",
+        "flow_id": "successive-price",
+        "parameters": {
+          "original": "₱800",
+          "rate": "30"
+        },
+        "inherited_fields": [
+          "worked_solution",
+          "math_verification",
+          "distractor_evidence"
+        ],
+        "visibility": {
+          "given_meanings": "after_initial_response_only",
+          "worked_solution": "server_authorized_reveal_only",
+          "flow": "one_current_node_only"
+        },
+        "mental_method": [
+          "Find 10% and multiply it by 3.",
+          "Add that increase to the starting price.",
+          "Take half. Use the raised price this time.",
+          "Subtract that discount from the raised price."
+        ],
+        "prerequisites": {
+          "required": [
+            "understand_percent_as_hundredths",
+            "identify_stage",
+            "add_subtract"
+          ],
+          "optional_methods": [
+            "fraction_benchmarks",
+            "decimal_multipliers"
+          ],
+          "missing_approved_assessment": "NUM-PCT-BASIC"
+        },
+        "transfer": {
+          "candidate_ids": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000013"
+          ],
+          "full_target_distinct_family_id": null,
+          "same_family_pilot_siblings": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000001",
+            "CIVIO-NUM-WP-PCT-CHANGE-000024",
+            "CIVIO-NUM-WP-PCT-CHANGE-000045",
+            "CIVIO-NUM-WP-PCT-CHANGE-000113",
+            "CIVIO-NUM-WP-PCT-CHANGE-000227",
+            "CIVIO-NUM-WP-PCT-CHANGE-000324",
+            "CIVIO-NUM-WP-PCT-CHANGE-000328",
+            "CIVIO-NUM-WP-PCT-CHANGE-000415",
+            "CIVIO-NUM-WP-PCT-CHANGE-000428",
+            "CIVIO-NUM-WP-PCT-CHANGE-000429",
+            "CIVIO-NUM-WP-PCT-CHANGE-000515"
+          ],
+          "runtime_exposure": "unknown",
+          "independent_transfer_approved": false
+        }
+      },
+      "original_distractor_rows": [
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000038",
+          "correct_option": "o4: ₱520",
+          "distractor_option": "o1: ₱640",
+          "distractor_code": "NUM-PCT-ADD",
+          "why_wrong": "₱640 adds and subtracts the percents first (30% − 50%). The second change is taken from the new price, not the old one.",
+          "why_correct": "₱520 is right. Check: 800 × 1.3 = 1,040, and 1,040 × 0.5 = 520."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000038",
+          "correct_option": "o4: ₱520",
+          "distractor_option": "o2: ₱676",
+          "distractor_code": "NUM-EXTRA-STEP",
+          "why_wrong": "₱676 applies the 30% raise again at the end. That is one step too many.",
+          "why_correct": "₱520 is right. Check: 800 × 1.3 = 1,040, and 1,040 × 0.5 = 520."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000038",
+          "correct_option": "o4: ₱520",
+          "distractor_option": "o3: ₱1,040",
+          "distractor_code": "NUM-PARTIAL",
+          "why_wrong": "₱1,040 is only the price after the raise. It stops before the cut.",
+          "why_correct": "₱520 is right. Check: 800 × 1.3 = 1,040, and 1,040 × 0.5 = 520."
+        }
+      ]
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000045",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "07a847dfc5d2c5a2a1f5b52fc90d1918877037b3afef866e701829cb1df0e627",
+      "source_question_hash": "7183a38862c6282bf11dbca449e59b3d9a3c656f3418ad7c7c4493b546f6624c",
+      "source": {
+        "id": "CIVIO-NUM-WP-PCT-CHANGE-000045",
+        "track": "both",
+        "archetype": "NUM-WP-PCT-CHANGE",
+        "stem": "A cooperative store sold a tank of LPG for ₱150. It raised the price by 50%. Later, it lowered the new price by 20%. What is the final price?",
+        "options": [
+          {
+            "option_id": "o1",
+            "text": "₱225"
+          },
+          {
+            "option_id": "o2",
+            "text": "₱270"
+          },
+          {
+            "option_id": "o3",
+            "text": "₱195"
+          },
+          {
+            "option_id": "o4",
+            "text": "₱180"
+          }
+        ],
+        "answer_option_id": "o4",
+        "reveal": {
+          "terms": "\"Percent\" means \"out of 100\". A raise or a cut of a percent is always taken from the price at that moment.",
+          "shortcut": "Do one change at a time. ₱150 up 50% is ₱150 + ₱75 = ₱225. Then 20% of ₱225 is ₱45, so ₱225 − ₱45 = ₱180.",
+          "why_correct": "₱180 is right. Check: 150 × 1.5 = 225, and 225 × 0.8 = 180.",
+          "why_wrong": {
+            "o1": "₱225 is only the price after the raise. It stops before the cut.",
+            "o2": "₱270 applies the 50% raise again at the end. That is one step too many.",
+            "o3": "₱195 adds and subtracts the percents first (50% − 20%). The second change is taken from the new price, not the old one."
+          }
+        },
+        "distractor_reasoning": {
+          "o1": "NUM-PARTIAL",
+          "o2": "NUM-EXTRA-STEP",
+          "o3": "NUM-PCT-ADD"
+        },
+        "source": "Original, Civio",
+        "status": "approved"
+      },
+      "binding": {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000045",
+        "source_question_hash": "7183a38862c6282bf11dbca449e59b3d9a3c656f3418ad7c7c4493b546f6624c",
+        "source_record_sha256": "07a847dfc5d2c5a2a1f5b52fc90d1918877037b3afef866e701829cb1df0e627",
+        "source_file": "docs/batches/batch-002.json",
+        "base_binding_sha256": "1651b5168ec637a4688ad9dcb350fe645c7a49ff9cd03ebe6a8222088d6193ff",
+        "status": "draft",
+        "review": {
+          "reviewer_1": null,
+          "reviewer_2": null,
+          "adjudication": null
+        },
+        "family": "successive-price",
+        "flow_id": "successive-price",
+        "parameters": {
+          "original": "₱150",
+          "rate": "50"
+        },
+        "inherited_fields": [
+          "worked_solution",
+          "math_verification",
+          "distractor_evidence"
+        ],
+        "visibility": {
+          "given_meanings": "after_initial_response_only",
+          "worked_solution": "server_authorized_reveal_only",
+          "flow": "one_current_node_only"
+        },
+        "mental_method": [
+          "Take half.",
+          "Add that increase to the starting price.",
+          "Find one fifth by dividing by 5. Use the raised price this time.",
+          "Subtract that discount from the raised price."
+        ],
+        "prerequisites": {
+          "required": [
+            "understand_percent_as_hundredths",
+            "identify_stage",
+            "add_subtract"
+          ],
+          "optional_methods": [
+            "fraction_benchmarks",
+            "decimal_multipliers"
+          ],
+          "missing_approved_assessment": "NUM-PCT-BASIC"
+        },
+        "transfer": {
+          "candidate_ids": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000013"
+          ],
+          "full_target_distinct_family_id": null,
+          "same_family_pilot_siblings": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000001",
+            "CIVIO-NUM-WP-PCT-CHANGE-000024",
+            "CIVIO-NUM-WP-PCT-CHANGE-000038",
+            "CIVIO-NUM-WP-PCT-CHANGE-000113",
+            "CIVIO-NUM-WP-PCT-CHANGE-000227",
+            "CIVIO-NUM-WP-PCT-CHANGE-000324",
+            "CIVIO-NUM-WP-PCT-CHANGE-000328",
+            "CIVIO-NUM-WP-PCT-CHANGE-000415",
+            "CIVIO-NUM-WP-PCT-CHANGE-000428",
+            "CIVIO-NUM-WP-PCT-CHANGE-000429",
+            "CIVIO-NUM-WP-PCT-CHANGE-000515"
+          ],
+          "runtime_exposure": "unknown",
+          "independent_transfer_approved": false
+        }
+      },
+      "original_distractor_rows": [
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000045",
+          "correct_option": "o4: ₱180",
+          "distractor_option": "o1: ₱225",
+          "distractor_code": "NUM-PARTIAL",
+          "why_wrong": "₱225 is only the price after the raise. It stops before the cut.",
+          "why_correct": "₱180 is right. Check: 150 × 1.5 = 225, and 225 × 0.8 = 180."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000045",
+          "correct_option": "o4: ₱180",
+          "distractor_option": "o2: ₱270",
+          "distractor_code": "NUM-EXTRA-STEP",
+          "why_wrong": "₱270 applies the 50% raise again at the end. That is one step too many.",
+          "why_correct": "₱180 is right. Check: 150 × 1.5 = 225, and 225 × 0.8 = 180."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000045",
+          "correct_option": "o4: ₱180",
+          "distractor_option": "o3: ₱195",
+          "distractor_code": "NUM-PCT-ADD",
+          "why_wrong": "₱195 adds and subtracts the percents first (50% − 20%). The second change is taken from the new price, not the old one.",
+          "why_correct": "₱180 is right. Check: 150 × 1.5 = 225, and 225 × 0.8 = 180."
+        }
+      ]
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000113",
+      "source_file": "docs/batches/batch-003.json",
+      "source_record_sha256": "5dae60fc367339e0aa11a2cf5ec21842a2e8c1d381170847e2489b6a2efd69df",
+      "source_question_hash": "778b6c380b871cfce41bed27389c3a5bde2e43610637411355213beb3fe0cfad",
+      "source": {
+        "id": "CIVIO-NUM-WP-PCT-CHANGE-000113",
+        "track": "both",
+        "archetype": "NUM-WP-PCT-CHANGE",
+        "stem": "A hardware store sold a tank of LPG for ₱240. It raised the price by 50%. Later, it lowered the new price by 50%. What is the final price?",
+        "options": [
+          {
+            "option_id": "o1",
+            "text": "₱270"
+          },
+          {
+            "option_id": "o2",
+            "text": "₱240"
+          },
+          {
+            "option_id": "o3",
+            "text": "₱360"
+          },
+          {
+            "option_id": "o4",
+            "text": "₱180"
+          }
+        ],
+        "answer_option_id": "o4",
+        "reveal": {
+          "terms": "\"Percent\" means \"out of 100\". A raise or a cut of a percent is always taken from the price at that moment.",
+          "shortcut": "Do one change at a time. ₱240 up 50% is ₱240 + ₱120 = ₱360. Then 50% of ₱360 is ₱180, so ₱360 − ₱180 = ₱180.",
+          "why_correct": "₱180 is right. Check: 240 × 1.5 = 360, and 360 × 0.5 = 180.",
+          "why_wrong": {
+            "o1": "₱270 applies the 50% raise again at the end. That is one step too many.",
+            "o2": "₱240 adds and subtracts the percents first (50% − 50%). The second change is taken from the new price, not the old one.",
+            "o3": "₱360 is only the price after the raise. It stops before the cut."
+          }
+        },
+        "distractor_reasoning": {
+          "o1": "NUM-EXTRA-STEP",
+          "o2": "NUM-PCT-ADD",
+          "o3": "NUM-PARTIAL"
+        },
+        "source": "Original, Civio",
+        "status": "approved"
+      },
+      "binding": {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000113",
+        "source_question_hash": "778b6c380b871cfce41bed27389c3a5bde2e43610637411355213beb3fe0cfad",
+        "source_record_sha256": "5dae60fc367339e0aa11a2cf5ec21842a2e8c1d381170847e2489b6a2efd69df",
+        "source_file": "docs/batches/batch-003.json",
+        "base_binding_sha256": "878401a6a29d1d27e3a3d93225963a84af339d3a515350c0f8bee4f35c708298",
+        "status": "draft",
+        "review": {
+          "reviewer_1": null,
+          "reviewer_2": null,
+          "adjudication": null
+        },
+        "family": "successive-price",
+        "flow_id": "successive-price",
+        "parameters": {
+          "original": "₱240",
+          "rate": "50"
+        },
+        "inherited_fields": [
+          "worked_solution",
+          "math_verification",
+          "distractor_evidence"
+        ],
+        "visibility": {
+          "given_meanings": "after_initial_response_only",
+          "worked_solution": "server_authorized_reveal_only",
+          "flow": "one_current_node_only"
+        },
+        "mental_method": [
+          "Take half.",
+          "Add that increase to the starting price.",
+          "Take half. Use the raised price this time.",
+          "Subtract that discount from the raised price."
+        ],
+        "prerequisites": {
+          "required": [
+            "understand_percent_as_hundredths",
+            "identify_stage",
+            "add_subtract"
+          ],
+          "optional_methods": [
+            "fraction_benchmarks",
+            "decimal_multipliers"
+          ],
+          "missing_approved_assessment": "NUM-PCT-BASIC"
+        },
+        "transfer": {
+          "candidate_ids": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000013"
+          ],
+          "full_target_distinct_family_id": null,
+          "same_family_pilot_siblings": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000001",
+            "CIVIO-NUM-WP-PCT-CHANGE-000024",
+            "CIVIO-NUM-WP-PCT-CHANGE-000038",
+            "CIVIO-NUM-WP-PCT-CHANGE-000045",
+            "CIVIO-NUM-WP-PCT-CHANGE-000227",
+            "CIVIO-NUM-WP-PCT-CHANGE-000324",
+            "CIVIO-NUM-WP-PCT-CHANGE-000328",
+            "CIVIO-NUM-WP-PCT-CHANGE-000415",
+            "CIVIO-NUM-WP-PCT-CHANGE-000428",
+            "CIVIO-NUM-WP-PCT-CHANGE-000429",
+            "CIVIO-NUM-WP-PCT-CHANGE-000515"
+          ],
+          "runtime_exposure": "unknown",
+          "independent_transfer_approved": false
+        }
+      },
+      "original_distractor_rows": [
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000113",
+          "correct_option": "o4: ₱180",
+          "distractor_option": "o1: ₱270",
+          "distractor_code": "NUM-EXTRA-STEP",
+          "why_wrong": "₱270 applies the 50% raise again at the end. That is one step too many.",
+          "why_correct": "₱180 is right. Check: 240 × 1.5 = 360, and 360 × 0.5 = 180."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000113",
+          "correct_option": "o4: ₱180",
+          "distractor_option": "o2: ₱240",
+          "distractor_code": "NUM-PCT-ADD",
+          "why_wrong": "₱240 adds and subtracts the percents first (50% − 50%). The second change is taken from the new price, not the old one.",
+          "why_correct": "₱180 is right. Check: 240 × 1.5 = 360, and 360 × 0.5 = 180."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000113",
+          "correct_option": "o4: ₱180",
+          "distractor_option": "o3: ₱360",
+          "distractor_code": "NUM-PARTIAL",
+          "why_wrong": "₱360 is only the price after the raise. It stops before the cut.",
+          "why_correct": "₱180 is right. Check: 240 × 1.5 = 360, and 360 × 0.5 = 180."
+        }
+      ]
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000224",
+      "source_file": "docs/batches/batch-004.json",
+      "source_record_sha256": "cc157ae997e69e915c844c9dd645561992d5952da2f61468d36b83b64f123592",
+      "source_question_hash": "fb7f20beea9d44b34e55a7fecf62abddec2fa714be7cbeedb19bbe9d93a080d7",
+      "source": {
+        "id": "CIVIO-NUM-WP-PCT-CHANGE-000224",
+        "track": "both",
+        "archetype": "NUM-WP-PCT-CHANGE",
+        "stem": "A rice cooker is priced at ₱960. It is sold at 25% off. How much does a buyer pay?",
+        "options": [
+          {
+            "option_id": "o1",
+            "text": "₱935"
+          },
+          {
+            "option_id": "o2",
+            "text": "₱240"
+          },
+          {
+            "option_id": "o3",
+            "text": "₱720"
+          },
+          {
+            "option_id": "o4",
+            "text": "₱1,200"
+          }
+        ],
+        "answer_option_id": "o3",
+        "reveal": {
+          "terms": "\"25% off\" means 25 pesos less for every 100 pesos of the price.",
+          "shortcut": "Pay 75% of the price: ₱960 × 0.75 = ₱720.",
+          "why_correct": "₱720 is right. Check: discount ₱240; ₱960 − ₱240 = ₱720.",
+          "why_wrong": {
+            "o1": "₱935 subtracts 25 pesos, not 25% of the price.",
+            "o2": "₱240 is the discount itself. The buyer pays the price minus this amount.",
+            "o4": "₱1,200 adds 25% instead of taking it off."
+          }
+        },
+        "distractor_reasoning": {
+          "o1": "NUM-WRONG-BASE",
+          "o2": "NUM-PARTIAL",
+          "o4": "NUM-OP-SWAP"
+        },
+        "source": "Original, Civio",
+        "status": "approved"
+      },
+      "binding": {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000224",
+        "source_question_hash": "fb7f20beea9d44b34e55a7fecf62abddec2fa714be7cbeedb19bbe9d93a080d7",
+        "source_record_sha256": "cc157ae997e69e915c844c9dd645561992d5952da2f61468d36b83b64f123592",
+        "source_file": "docs/batches/batch-004.json",
+        "base_binding_sha256": "fa05ed7be604a3cbdbd13d509389e5dc6d9a1acf41310927818d329417ed24c1",
+        "status": "draft",
+        "review": {
+          "reviewer_1": null,
+          "reviewer_2": null,
+          "adjudication": null
+        },
+        "family": "sale-price",
+        "flow_id": "sale-price",
+        "parameters": {
+          "original": "₱960",
+          "rate": "25"
+        },
+        "inherited_fields": [
+          "worked_solution",
+          "math_verification",
+          "distractor_evidence"
+        ],
+        "visibility": {
+          "given_meanings": "after_initial_response_only",
+          "worked_solution": "server_authorized_reveal_only",
+          "flow": "one_current_node_only"
+        },
+        "mental_method": [
+          "Find one quarter by dividing by 4.",
+          "Subtract the saving from the starting price."
+        ],
+        "prerequisites": {
+          "required": [
+            "understand_percent_as_hundredths",
+            "identify_stage",
+            "add_subtract"
+          ],
+          "optional_methods": [
+            "fraction_benchmarks",
+            "decimal_multipliers"
+          ],
+          "missing_approved_assessment": "NUM-PCT-BASIC"
+        },
+        "transfer": {
+          "candidate_ids": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000124",
+            "CIVIO-NUM-WP-PCT-CHANGE-000013"
+          ],
+          "full_target_distinct_family_id": null,
+          "same_family_pilot_siblings": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000030",
+            "CIVIO-NUM-WP-PCT-CHANGE-000036"
+          ],
+          "runtime_exposure": "unknown",
+          "independent_transfer_approved": false
+        }
+      },
+      "original_distractor_rows": [
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000224",
+          "correct_option": "o3: ₱720",
+          "distractor_option": "o1: ₱935",
+          "distractor_code": "NUM-WRONG-BASE",
+          "why_wrong": "₱935 subtracts 25 pesos, not 25% of the price.",
+          "why_correct": "₱720 is right. Check: discount ₱240; ₱960 − ₱240 = ₱720."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000224",
+          "correct_option": "o3: ₱720",
+          "distractor_option": "o2: ₱240",
+          "distractor_code": "NUM-PARTIAL",
+          "why_wrong": "₱240 is the discount itself. The buyer pays the price minus this amount.",
+          "why_correct": "₱720 is right. Check: discount ₱240; ₱960 − ₱240 = ₱720."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000224",
+          "correct_option": "o3: ₱720",
+          "distractor_option": "o4: ₱1,200",
+          "distractor_code": "NUM-OP-SWAP",
+          "why_wrong": "₱1,200 adds 25% instead of taking it off.",
+          "why_correct": "₱720 is right. Check: discount ₱240; ₱960 − ₱240 = ₱720."
+        }
+      ]
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000227",
+      "source_file": "docs/batches/batch-004.json",
+      "source_record_sha256": "23998dbad1aadee2cac7c02b8201d864be706de19fe83bd394911e297bbb8156",
+      "source_question_hash": "ef182f43b9fb1af4031cfb69e67817e204da66ea18442e48b2847011f184cac4",
+      "source": {
+        "id": "CIVIO-NUM-WP-PCT-CHANGE-000227",
+        "track": "both",
+        "archetype": "NUM-WP-PCT-CHANGE",
+        "stem": "A supplier sold a tank of LPG for ₱1,200. It raised the price by 40%. Later, it lowered the new price by 40%. What is the final price?",
+        "options": [
+          {
+            "option_id": "o1",
+            "text": "₱1,411.20"
+          },
+          {
+            "option_id": "o2",
+            "text": "₱1,680"
+          },
+          {
+            "option_id": "o3",
+            "text": "₱1,200"
+          },
+          {
+            "option_id": "o4",
+            "text": "₱1,008"
+          }
+        ],
+        "answer_option_id": "o4",
+        "reveal": {
+          "terms": "\"Percent\" means \"out of 100\". A raise or a cut of a percent is always taken from the price at that moment.",
+          "shortcut": "Do one change at a time. ₱1,200 up 40% is ₱1,200 + ₱480 = ₱1,680. Then 40% of ₱1,680 is ₱672, so ₱1,680 − ₱672 = ₱1,008.",
+          "why_correct": "₱1,008 is right. Check: 1,200 × 1.4 = 1,680, and 1,680 × 0.6 = 1,008.",
+          "why_wrong": {
+            "o1": "₱1,411.20 applies the 40% raise again at the end. That is one step too many.",
+            "o2": "₱1,680 is only the price after the raise. It stops before the cut.",
+            "o3": "₱1,200 adds and subtracts the percents first (40% − 40%). The second change is taken from the new price, not the old one."
+          }
+        },
+        "distractor_reasoning": {
+          "o1": "NUM-EXTRA-STEP",
+          "o2": "NUM-PARTIAL",
+          "o3": "NUM-PCT-ADD"
+        },
+        "source": "Original, Civio",
+        "status": "approved"
+      },
+      "binding": {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000227",
+        "source_question_hash": "ef182f43b9fb1af4031cfb69e67817e204da66ea18442e48b2847011f184cac4",
+        "source_record_sha256": "23998dbad1aadee2cac7c02b8201d864be706de19fe83bd394911e297bbb8156",
+        "source_file": "docs/batches/batch-004.json",
+        "base_binding_sha256": "2f28c8f072a1325c22081521983dd97c6051af872423bf47b7c3d89126c58364",
+        "status": "draft",
+        "review": {
+          "reviewer_1": null,
+          "reviewer_2": null,
+          "adjudication": null
+        },
+        "family": "successive-price",
+        "flow_id": "successive-price",
+        "parameters": {
+          "original": "₱1,200",
+          "rate": "40"
+        },
+        "inherited_fields": [
+          "worked_solution",
+          "math_verification",
+          "distractor_evidence"
+        ],
+        "visibility": {
+          "given_meanings": "after_initial_response_only",
+          "worked_solution": "server_authorized_reveal_only",
+          "flow": "one_current_node_only"
+        },
+        "mental_method": [
+          "Find 10% and multiply it by 4.",
+          "Add that increase to the starting price.",
+          "Find 10% and multiply it by 4. Use the raised price this time.",
+          "Subtract that discount from the raised price."
+        ],
+        "prerequisites": {
+          "required": [
+            "understand_percent_as_hundredths",
+            "identify_stage",
+            "add_subtract"
+          ],
+          "optional_methods": [
+            "fraction_benchmarks",
+            "decimal_multipliers"
+          ],
+          "missing_approved_assessment": "NUM-PCT-BASIC"
+        },
+        "transfer": {
+          "candidate_ids": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000013"
+          ],
+          "full_target_distinct_family_id": null,
+          "same_family_pilot_siblings": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000001",
+            "CIVIO-NUM-WP-PCT-CHANGE-000024",
+            "CIVIO-NUM-WP-PCT-CHANGE-000038",
+            "CIVIO-NUM-WP-PCT-CHANGE-000045",
+            "CIVIO-NUM-WP-PCT-CHANGE-000113",
+            "CIVIO-NUM-WP-PCT-CHANGE-000324",
+            "CIVIO-NUM-WP-PCT-CHANGE-000328",
+            "CIVIO-NUM-WP-PCT-CHANGE-000415",
+            "CIVIO-NUM-WP-PCT-CHANGE-000428",
+            "CIVIO-NUM-WP-PCT-CHANGE-000429",
+            "CIVIO-NUM-WP-PCT-CHANGE-000515"
+          ],
+          "runtime_exposure": "unknown",
+          "independent_transfer_approved": false
+        }
+      },
+      "original_distractor_rows": [
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000227",
+          "correct_option": "o4: ₱1,008",
+          "distractor_option": "o1: ₱1,411.20",
+          "distractor_code": "NUM-EXTRA-STEP",
+          "why_wrong": "₱1,411.20 applies the 40% raise again at the end. That is one step too many.",
+          "why_correct": "₱1,008 is right. Check: 1,200 × 1.4 = 1,680, and 1,680 × 0.6 = 1,008."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000227",
+          "correct_option": "o4: ₱1,008",
+          "distractor_option": "o2: ₱1,680",
+          "distractor_code": "NUM-PARTIAL",
+          "why_wrong": "₱1,680 is only the price after the raise. It stops before the cut.",
+          "why_correct": "₱1,008 is right. Check: 1,200 × 1.4 = 1,680, and 1,680 × 0.6 = 1,008."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000227",
+          "correct_option": "o4: ₱1,008",
+          "distractor_option": "o3: ₱1,200",
+          "distractor_code": "NUM-PCT-ADD",
+          "why_wrong": "₱1,200 adds and subtracts the percents first (40% − 40%). The second change is taken from the new price, not the old one.",
+          "why_correct": "₱1,008 is right. Check: 1,200 × 1.4 = 1,680, and 1,680 × 0.6 = 1,008."
+        }
+      ]
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000324",
+      "source_file": "docs/batches/batch-005.json",
+      "source_record_sha256": "312b4592451d48caa226655d1bbe33607dc34e87e287b251b39488484365283a",
+      "source_question_hash": "b147b9103976c8faffb4c0f709e9156fd96d34988cae1b0518fd5c12ea084782",
+      "source": {
+        "id": "CIVIO-NUM-WP-PCT-CHANGE-000324",
+        "track": "both",
+        "archetype": "NUM-WP-PCT-CHANGE",
+        "stem": "A market stall sold a set of school uniforms for ₱250. It raised the price by 20%. Later, it lowered the new price by 10%. What is the final price?",
+        "options": [
+          {
+            "option_id": "o1",
+            "text": "₱275"
+          },
+          {
+            "option_id": "o2",
+            "text": "₱270"
+          },
+          {
+            "option_id": "o3",
+            "text": "₱324"
+          },
+          {
+            "option_id": "o4",
+            "text": "₱300"
+          }
+        ],
+        "answer_option_id": "o2",
+        "reveal": {
+          "terms": "\"Percent\" means \"out of 100\". A raise or a cut of a percent is always taken from the price at that moment.",
+          "shortcut": "Do one change at a time. ₱250 up 20% is ₱250 + ₱50 = ₱300. Then 10% of ₱300 is ₱30, so ₱300 − ₱30 = ₱270.",
+          "why_correct": "₱270 is right. Check: 250 × 1.2 = 300, and 300 × 0.9 = 270.",
+          "why_wrong": {
+            "o1": "₱275 adds and subtracts the percents first (20% − 10%). The second change is taken from the new price, not the old one.",
+            "o3": "₱324 applies the 20% raise again at the end. That is one step too many.",
+            "o4": "₱300 is only the price after the raise. It stops before the cut."
+          }
+        },
+        "distractor_reasoning": {
+          "o1": "NUM-PCT-ADD",
+          "o3": "NUM-EXTRA-STEP",
+          "o4": "NUM-PARTIAL"
+        },
+        "source": "Original, Civio",
+        "status": "approved"
+      },
+      "binding": {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000324",
+        "source_question_hash": "b147b9103976c8faffb4c0f709e9156fd96d34988cae1b0518fd5c12ea084782",
+        "source_record_sha256": "312b4592451d48caa226655d1bbe33607dc34e87e287b251b39488484365283a",
+        "source_file": "docs/batches/batch-005.json",
+        "base_binding_sha256": "82da0f32f03859f2a95547029341ecb50f444d2f066e50f875ba2caa320203b2",
+        "status": "draft",
+        "review": {
+          "reviewer_1": null,
+          "reviewer_2": null,
+          "adjudication": null
+        },
+        "family": "successive-price",
+        "flow_id": "successive-price",
+        "parameters": {
+          "original": "₱250",
+          "rate": "20"
+        },
+        "inherited_fields": [
+          "worked_solution",
+          "math_verification",
+          "distractor_evidence"
+        ],
+        "visibility": {
+          "given_meanings": "after_initial_response_only",
+          "worked_solution": "server_authorized_reveal_only",
+          "flow": "one_current_node_only"
+        },
+        "mental_method": [
+          "Find one fifth by dividing by 5.",
+          "Add that increase to the starting price.",
+          "Find 10% by dividing by 10. Use the raised price this time.",
+          "Subtract that discount from the raised price."
+        ],
+        "prerequisites": {
+          "required": [
+            "understand_percent_as_hundredths",
+            "identify_stage",
+            "add_subtract"
+          ],
+          "optional_methods": [
+            "fraction_benchmarks",
+            "decimal_multipliers"
+          ],
+          "missing_approved_assessment": "NUM-PCT-BASIC"
+        },
+        "transfer": {
+          "candidate_ids": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000013"
+          ],
+          "full_target_distinct_family_id": null,
+          "same_family_pilot_siblings": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000001",
+            "CIVIO-NUM-WP-PCT-CHANGE-000024",
+            "CIVIO-NUM-WP-PCT-CHANGE-000038",
+            "CIVIO-NUM-WP-PCT-CHANGE-000045",
+            "CIVIO-NUM-WP-PCT-CHANGE-000113",
+            "CIVIO-NUM-WP-PCT-CHANGE-000227",
+            "CIVIO-NUM-WP-PCT-CHANGE-000328",
+            "CIVIO-NUM-WP-PCT-CHANGE-000415",
+            "CIVIO-NUM-WP-PCT-CHANGE-000428",
+            "CIVIO-NUM-WP-PCT-CHANGE-000429",
+            "CIVIO-NUM-WP-PCT-CHANGE-000515"
+          ],
+          "runtime_exposure": "unknown",
+          "independent_transfer_approved": false
+        }
+      },
+      "original_distractor_rows": [
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000324",
+          "correct_option": "o2: ₱270",
+          "distractor_option": "o1: ₱275",
+          "distractor_code": "NUM-PCT-ADD",
+          "why_wrong": "₱275 adds and subtracts the percents first (20% − 10%). The second change is taken from the new price, not the old one.",
+          "why_correct": "₱270 is right. Check: 250 × 1.2 = 300, and 300 × 0.9 = 270."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000324",
+          "correct_option": "o2: ₱270",
+          "distractor_option": "o3: ₱324",
+          "distractor_code": "NUM-EXTRA-STEP",
+          "why_wrong": "₱324 applies the 20% raise again at the end. That is one step too many.",
+          "why_correct": "₱270 is right. Check: 250 × 1.2 = 300, and 300 × 0.9 = 270."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000324",
+          "correct_option": "o2: ₱270",
+          "distractor_option": "o4: ₱300",
+          "distractor_code": "NUM-PARTIAL",
+          "why_wrong": "₱300 is only the price after the raise. It stops before the cut.",
+          "why_correct": "₱270 is right. Check: 250 × 1.2 = 300, and 300 × 0.9 = 270."
+        }
+      ]
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000328",
+      "source_file": "docs/batches/batch-005.json",
+      "source_record_sha256": "143ef20aadca10c803defde4ceb4fcc9346393a4baf5b1978824ebaf6ddc04fa",
+      "source_question_hash": "7ca2beb703defc9bdc2aa80f92c1026733440bf5cddc99280b5dc92e9c134151",
+      "source": {
+        "id": "CIVIO-NUM-WP-PCT-CHANGE-000328",
+        "track": "both",
+        "archetype": "NUM-WP-PCT-CHANGE",
+        "stem": "A market stall sold a tank of LPG for ₱750. It raised the price by 20%. Later, it lowered the new price by 40%. What is the final price?",
+        "options": [
+          {
+            "option_id": "o1",
+            "text": "₱540"
+          },
+          {
+            "option_id": "o2",
+            "text": "₱600"
+          },
+          {
+            "option_id": "o3",
+            "text": "₱648"
+          },
+          {
+            "option_id": "o4",
+            "text": "₱900"
+          }
+        ],
+        "answer_option_id": "o1",
+        "reveal": {
+          "terms": "\"Percent\" means \"out of 100\". A raise or a cut of a percent is always taken from the price at that moment.",
+          "shortcut": "Do one change at a time. ₱750 up 20% is ₱750 + ₱150 = ₱900. Then 40% of ₱900 is ₱360, so ₱900 − ₱360 = ₱540.",
+          "why_correct": "₱540 is right. Check: 750 × 1.2 = 900, and 900 × 0.6 = 540.",
+          "why_wrong": {
+            "o2": "₱600 adds and subtracts the percents first (20% − 40%). The second change is taken from the new price, not the old one.",
+            "o3": "₱648 applies the 20% raise again at the end. That is one step too many.",
+            "o4": "₱900 is only the price after the raise. It stops before the cut."
+          }
+        },
+        "distractor_reasoning": {
+          "o2": "NUM-PCT-ADD",
+          "o3": "NUM-EXTRA-STEP",
+          "o4": "NUM-PARTIAL"
+        },
+        "source": "Original, Civio",
+        "status": "approved"
+      },
+      "binding": {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000328",
+        "source_question_hash": "7ca2beb703defc9bdc2aa80f92c1026733440bf5cddc99280b5dc92e9c134151",
+        "source_record_sha256": "143ef20aadca10c803defde4ceb4fcc9346393a4baf5b1978824ebaf6ddc04fa",
+        "source_file": "docs/batches/batch-005.json",
+        "base_binding_sha256": "7aa20dbebdf445e613a0bedcf874a94dedaa90ec8911be752ff7095cbf26edbc",
+        "status": "draft",
+        "review": {
+          "reviewer_1": null,
+          "reviewer_2": null,
+          "adjudication": null
+        },
+        "family": "successive-price",
+        "flow_id": "successive-price",
+        "parameters": {
+          "original": "₱750",
+          "rate": "20"
+        },
+        "inherited_fields": [
+          "worked_solution",
+          "math_verification",
+          "distractor_evidence"
+        ],
+        "visibility": {
+          "given_meanings": "after_initial_response_only",
+          "worked_solution": "server_authorized_reveal_only",
+          "flow": "one_current_node_only"
+        },
+        "mental_method": [
+          "Find one fifth by dividing by 5.",
+          "Add that increase to the starting price.",
+          "Find 10% and multiply it by 4. Use the raised price this time.",
+          "Subtract that discount from the raised price."
+        ],
+        "prerequisites": {
+          "required": [
+            "understand_percent_as_hundredths",
+            "identify_stage",
+            "add_subtract"
+          ],
+          "optional_methods": [
+            "fraction_benchmarks",
+            "decimal_multipliers"
+          ],
+          "missing_approved_assessment": "NUM-PCT-BASIC"
+        },
+        "transfer": {
+          "candidate_ids": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000013"
+          ],
+          "full_target_distinct_family_id": null,
+          "same_family_pilot_siblings": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000001",
+            "CIVIO-NUM-WP-PCT-CHANGE-000024",
+            "CIVIO-NUM-WP-PCT-CHANGE-000038",
+            "CIVIO-NUM-WP-PCT-CHANGE-000045",
+            "CIVIO-NUM-WP-PCT-CHANGE-000113",
+            "CIVIO-NUM-WP-PCT-CHANGE-000227",
+            "CIVIO-NUM-WP-PCT-CHANGE-000324",
+            "CIVIO-NUM-WP-PCT-CHANGE-000415",
+            "CIVIO-NUM-WP-PCT-CHANGE-000428",
+            "CIVIO-NUM-WP-PCT-CHANGE-000429",
+            "CIVIO-NUM-WP-PCT-CHANGE-000515"
+          ],
+          "runtime_exposure": "unknown",
+          "independent_transfer_approved": false
+        }
+      },
+      "original_distractor_rows": [
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000328",
+          "correct_option": "o1: ₱540",
+          "distractor_option": "o2: ₱600",
+          "distractor_code": "NUM-PCT-ADD",
+          "why_wrong": "₱600 adds and subtracts the percents first (20% − 40%). The second change is taken from the new price, not the old one.",
+          "why_correct": "₱540 is right. Check: 750 × 1.2 = 900, and 900 × 0.6 = 540."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000328",
+          "correct_option": "o1: ₱540",
+          "distractor_option": "o3: ₱648",
+          "distractor_code": "NUM-EXTRA-STEP",
+          "why_wrong": "₱648 applies the 20% raise again at the end. That is one step too many.",
+          "why_correct": "₱540 is right. Check: 750 × 1.2 = 900, and 900 × 0.6 = 540."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000328",
+          "correct_option": "o1: ₱540",
+          "distractor_option": "o4: ₱900",
+          "distractor_code": "NUM-PARTIAL",
+          "why_wrong": "₱900 is only the price after the raise. It stops before the cut.",
+          "why_correct": "₱540 is right. Check: 750 × 1.2 = 900, and 900 × 0.6 = 540."
+        }
+      ]
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000415",
+      "source_file": "docs/batches/batch-006.json",
+      "source_record_sha256": "04b3b2bbca1299f980ebf50bad794bdd069a327c178838d903d2dc306c4d1456",
+      "source_question_hash": "933af4a14623a1fd5043029eaebe63efa4dcb1845eb4e4d79e595b474e8335eb",
+      "source": {
+        "id": "CIVIO-NUM-WP-PCT-CHANGE-000415",
+        "track": "both",
+        "archetype": "NUM-WP-PCT-CHANGE",
+        "stem": "A cooperative store sold a gallon of paint for ₱600. It raised the price by 50%. Later, it lowered the new price by 25%. What is the final price?",
+        "options": [
+          {
+            "option_id": "o1",
+            "text": "₱900"
+          },
+          {
+            "option_id": "o2",
+            "text": "₱1,012.50"
+          },
+          {
+            "option_id": "o3",
+            "text": "₱750"
+          },
+          {
+            "option_id": "o4",
+            "text": "₱675"
+          }
+        ],
+        "answer_option_id": "o4",
+        "reveal": {
+          "terms": "\"Percent\" means \"out of 100\". A raise or a cut of a percent is always taken from the price at that moment.",
+          "shortcut": "Do one change at a time. ₱600 up 50% is ₱600 + ₱300 = ₱900. Then 25% of ₱900 is ₱225, so ₱900 − ₱225 = ₱675.",
+          "why_correct": "₱675 is right. Check: 600 × 1.5 = 900, and 900 × 0.75 = 675.",
+          "why_wrong": {
+            "o1": "₱900 is only the price after the raise. It stops before the cut.",
+            "o2": "₱1,012.50 applies the 50% raise again at the end. That is one step too many.",
+            "o3": "₱750 adds and subtracts the percents first (50% − 25%). The second change is taken from the new price, not the old one."
+          }
+        },
+        "distractor_reasoning": {
+          "o1": "NUM-PARTIAL",
+          "o2": "NUM-EXTRA-STEP",
+          "o3": "NUM-PCT-ADD"
+        },
+        "source": "Original, Civio",
+        "status": "approved"
+      },
+      "binding": {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000415",
+        "source_question_hash": "933af4a14623a1fd5043029eaebe63efa4dcb1845eb4e4d79e595b474e8335eb",
+        "source_record_sha256": "04b3b2bbca1299f980ebf50bad794bdd069a327c178838d903d2dc306c4d1456",
+        "source_file": "docs/batches/batch-006.json",
+        "base_binding_sha256": "02b6f4f0601faee5e75eef0158a8cc57107546f210aeaa6df6c6311f5c15481e",
+        "status": "draft",
+        "review": {
+          "reviewer_1": null,
+          "reviewer_2": null,
+          "adjudication": null
+        },
+        "family": "successive-price",
+        "flow_id": "successive-price",
+        "parameters": {
+          "original": "₱600",
+          "rate": "50"
+        },
+        "inherited_fields": [
+          "worked_solution",
+          "math_verification",
+          "distractor_evidence"
+        ],
+        "visibility": {
+          "given_meanings": "after_initial_response_only",
+          "worked_solution": "server_authorized_reveal_only",
+          "flow": "one_current_node_only"
+        },
+        "mental_method": [
+          "Take half.",
+          "Add that increase to the starting price.",
+          "Find one quarter by dividing by 4. Use the raised price this time.",
+          "Subtract that discount from the raised price."
+        ],
+        "prerequisites": {
+          "required": [
+            "understand_percent_as_hundredths",
+            "identify_stage",
+            "add_subtract"
+          ],
+          "optional_methods": [
+            "fraction_benchmarks",
+            "decimal_multipliers"
+          ],
+          "missing_approved_assessment": "NUM-PCT-BASIC"
+        },
+        "transfer": {
+          "candidate_ids": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000013"
+          ],
+          "full_target_distinct_family_id": null,
+          "same_family_pilot_siblings": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000001",
+            "CIVIO-NUM-WP-PCT-CHANGE-000024",
+            "CIVIO-NUM-WP-PCT-CHANGE-000038",
+            "CIVIO-NUM-WP-PCT-CHANGE-000045",
+            "CIVIO-NUM-WP-PCT-CHANGE-000113",
+            "CIVIO-NUM-WP-PCT-CHANGE-000227",
+            "CIVIO-NUM-WP-PCT-CHANGE-000324",
+            "CIVIO-NUM-WP-PCT-CHANGE-000328",
+            "CIVIO-NUM-WP-PCT-CHANGE-000428",
+            "CIVIO-NUM-WP-PCT-CHANGE-000429",
+            "CIVIO-NUM-WP-PCT-CHANGE-000515"
+          ],
+          "runtime_exposure": "unknown",
+          "independent_transfer_approved": false
+        }
+      },
+      "original_distractor_rows": [
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000415",
+          "correct_option": "o4: ₱675",
+          "distractor_option": "o1: ₱900",
+          "distractor_code": "NUM-PARTIAL",
+          "why_wrong": "₱900 is only the price after the raise. It stops before the cut.",
+          "why_correct": "₱675 is right. Check: 600 × 1.5 = 900, and 900 × 0.75 = 675."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000415",
+          "correct_option": "o4: ₱675",
+          "distractor_option": "o2: ₱1,012.50",
+          "distractor_code": "NUM-EXTRA-STEP",
+          "why_wrong": "₱1,012.50 applies the 50% raise again at the end. That is one step too many.",
+          "why_correct": "₱675 is right. Check: 600 × 1.5 = 900, and 900 × 0.75 = 675."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000415",
+          "correct_option": "o4: ₱675",
+          "distractor_option": "o3: ₱750",
+          "distractor_code": "NUM-PCT-ADD",
+          "why_wrong": "₱750 adds and subtracts the percents first (50% − 25%). The second change is taken from the new price, not the old one.",
+          "why_correct": "₱675 is right. Check: 600 × 1.5 = 900, and 900 × 0.75 = 675."
+        }
+      ]
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000428",
+      "source_file": "docs/batches/batch-006.json",
+      "source_record_sha256": "463fc565686e11af7b2e7ad7afe08dbb54722eea16fefeba1b754464a9e32ab3",
+      "source_question_hash": "6c2b2872581e267b719e86b11dcf049fae89d12857fd4460c2d4886ffd60c707",
+      "source": {
+        "id": "CIVIO-NUM-WP-PCT-CHANGE-000428",
+        "track": "both",
+        "archetype": "NUM-WP-PCT-CHANGE",
+        "stem": "A hardware store sold a sack of rice for ₱400. It raised the price by 10%. Later, it lowered the new price by 40%. What is the final price?",
+        "options": [
+          {
+            "option_id": "o1",
+            "text": "₱440"
+          },
+          {
+            "option_id": "o2",
+            "text": "₱280"
+          },
+          {
+            "option_id": "o3",
+            "text": "₱290.40"
+          },
+          {
+            "option_id": "o4",
+            "text": "₱264"
+          }
+        ],
+        "answer_option_id": "o4",
+        "reveal": {
+          "terms": "\"Percent\" means \"out of 100\". A raise or a cut of a percent is always taken from the price at that moment.",
+          "shortcut": "Do one change at a time. ₱400 up 10% is ₱400 + ₱40 = ₱440. Then 40% of ₱440 is ₱176, so ₱440 − ₱176 = ₱264.",
+          "why_correct": "₱264 is right. Check: 400 × 1.1 = 440, and 440 × 0.6 = 264.",
+          "why_wrong": {
+            "o1": "₱440 is only the price after the raise. It stops before the cut.",
+            "o2": "₱280 adds and subtracts the percents first (10% − 40%). The second change is taken from the new price, not the old one.",
+            "o3": "₱290.40 applies the 10% raise again at the end. That is one step too many."
+          }
+        },
+        "distractor_reasoning": {
+          "o1": "NUM-PARTIAL",
+          "o2": "NUM-PCT-ADD",
+          "o3": "NUM-EXTRA-STEP"
+        },
+        "source": "Original, Civio",
+        "status": "approved"
+      },
+      "binding": {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000428",
+        "source_question_hash": "6c2b2872581e267b719e86b11dcf049fae89d12857fd4460c2d4886ffd60c707",
+        "source_record_sha256": "463fc565686e11af7b2e7ad7afe08dbb54722eea16fefeba1b754464a9e32ab3",
+        "source_file": "docs/batches/batch-006.json",
+        "base_binding_sha256": "3a63d75fc2443caeaf7ca87259b3469121c066bc220eb4d87a486ccf250b85b4",
+        "status": "draft",
+        "review": {
+          "reviewer_1": null,
+          "reviewer_2": null,
+          "adjudication": null
+        },
+        "family": "successive-price",
+        "flow_id": "successive-price",
+        "parameters": {
+          "original": "₱400",
+          "rate": "10"
+        },
+        "inherited_fields": [
+          "worked_solution",
+          "math_verification",
+          "distractor_evidence"
+        ],
+        "visibility": {
+          "given_meanings": "after_initial_response_only",
+          "worked_solution": "server_authorized_reveal_only",
+          "flow": "one_current_node_only"
+        },
+        "mental_method": [
+          "Find 10% by dividing by 10.",
+          "Add that increase to the starting price.",
+          "Find 10% and multiply it by 4. Use the raised price this time.",
+          "Subtract that discount from the raised price."
+        ],
+        "prerequisites": {
+          "required": [
+            "understand_percent_as_hundredths",
+            "identify_stage",
+            "add_subtract"
+          ],
+          "optional_methods": [
+            "fraction_benchmarks",
+            "decimal_multipliers"
+          ],
+          "missing_approved_assessment": "NUM-PCT-BASIC"
+        },
+        "transfer": {
+          "candidate_ids": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000013"
+          ],
+          "full_target_distinct_family_id": null,
+          "same_family_pilot_siblings": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000001",
+            "CIVIO-NUM-WP-PCT-CHANGE-000024",
+            "CIVIO-NUM-WP-PCT-CHANGE-000038",
+            "CIVIO-NUM-WP-PCT-CHANGE-000045",
+            "CIVIO-NUM-WP-PCT-CHANGE-000113",
+            "CIVIO-NUM-WP-PCT-CHANGE-000227",
+            "CIVIO-NUM-WP-PCT-CHANGE-000324",
+            "CIVIO-NUM-WP-PCT-CHANGE-000328",
+            "CIVIO-NUM-WP-PCT-CHANGE-000415",
+            "CIVIO-NUM-WP-PCT-CHANGE-000429",
+            "CIVIO-NUM-WP-PCT-CHANGE-000515"
+          ],
+          "runtime_exposure": "unknown",
+          "independent_transfer_approved": false
+        }
+      },
+      "original_distractor_rows": [
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000428",
+          "correct_option": "o4: ₱264",
+          "distractor_option": "o1: ₱440",
+          "distractor_code": "NUM-PARTIAL",
+          "why_wrong": "₱440 is only the price after the raise. It stops before the cut.",
+          "why_correct": "₱264 is right. Check: 400 × 1.1 = 440, and 440 × 0.6 = 264."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000428",
+          "correct_option": "o4: ₱264",
+          "distractor_option": "o2: ₱280",
+          "distractor_code": "NUM-PCT-ADD",
+          "why_wrong": "₱280 adds and subtracts the percents first (10% − 40%). The second change is taken from the new price, not the old one.",
+          "why_correct": "₱264 is right. Check: 400 × 1.1 = 440, and 440 × 0.6 = 264."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000428",
+          "correct_option": "o4: ₱264",
+          "distractor_option": "o3: ₱290.40",
+          "distractor_code": "NUM-EXTRA-STEP",
+          "why_wrong": "₱290.40 applies the 10% raise again at the end. That is one step too many.",
+          "why_correct": "₱264 is right. Check: 400 × 1.1 = 440, and 440 × 0.6 = 264."
+        }
+      ]
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000429",
+      "source_file": "docs/batches/batch-006.json",
+      "source_record_sha256": "581ea518b8afbe805e0a2d6050fd347ee0b0510f41ee5b8f5c976ad33b9eb35a",
+      "source_question_hash": "d15f4c9510e57d5e9e9535831d5b0fc4105fcb05cc8183accd6f90adb7d4487e",
+      "source": {
+        "id": "CIVIO-NUM-WP-PCT-CHANGE-000429",
+        "track": "both",
+        "archetype": "NUM-WP-PCT-CHANGE",
+        "stem": "A market stall sold a bag of cement for ₱600. It raised the price by 30%. Later, it lowered the new price by 40%. What is the final price?",
+        "options": [
+          {
+            "option_id": "o1",
+            "text": "₱468"
+          },
+          {
+            "option_id": "o2",
+            "text": "₱540"
+          },
+          {
+            "option_id": "o3",
+            "text": "₱608.40"
+          },
+          {
+            "option_id": "o4",
+            "text": "₱780"
+          }
+        ],
+        "answer_option_id": "o1",
+        "reveal": {
+          "terms": "\"Percent\" means \"out of 100\". A raise or a cut of a percent is always taken from the price at that moment.",
+          "shortcut": "Do one change at a time. ₱600 up 30% is ₱600 + ₱180 = ₱780. Then 40% of ₱780 is ₱312, so ₱780 − ₱312 = ₱468.",
+          "why_correct": "₱468 is right. Check: 600 × 1.3 = 780, and 780 × 0.6 = 468.",
+          "why_wrong": {
+            "o2": "₱540 adds and subtracts the percents first (30% − 40%). The second change is taken from the new price, not the old one.",
+            "o3": "₱608.40 applies the 30% raise again at the end. That is one step too many.",
+            "o4": "₱780 is only the price after the raise. It stops before the cut."
+          }
+        },
+        "distractor_reasoning": {
+          "o2": "NUM-PCT-ADD",
+          "o3": "NUM-EXTRA-STEP",
+          "o4": "NUM-PARTIAL"
+        },
+        "source": "Original, Civio",
+        "status": "approved"
+      },
+      "binding": {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000429",
+        "source_question_hash": "d15f4c9510e57d5e9e9535831d5b0fc4105fcb05cc8183accd6f90adb7d4487e",
+        "source_record_sha256": "581ea518b8afbe805e0a2d6050fd347ee0b0510f41ee5b8f5c976ad33b9eb35a",
+        "source_file": "docs/batches/batch-006.json",
+        "base_binding_sha256": "4f967a9cb16c0287dddcada01e26cab0823e7111781bce18280710080e083c8e",
+        "status": "draft",
+        "review": {
+          "reviewer_1": null,
+          "reviewer_2": null,
+          "adjudication": null
+        },
+        "family": "successive-price",
+        "flow_id": "successive-price",
+        "parameters": {
+          "original": "₱600",
+          "rate": "30"
+        },
+        "inherited_fields": [
+          "worked_solution",
+          "math_verification",
+          "distractor_evidence"
+        ],
+        "visibility": {
+          "given_meanings": "after_initial_response_only",
+          "worked_solution": "server_authorized_reveal_only",
+          "flow": "one_current_node_only"
+        },
+        "mental_method": [
+          "Find 10% and multiply it by 3.",
+          "Add that increase to the starting price.",
+          "Find 10% and multiply it by 4. Use the raised price this time.",
+          "Subtract that discount from the raised price."
+        ],
+        "prerequisites": {
+          "required": [
+            "understand_percent_as_hundredths",
+            "identify_stage",
+            "add_subtract"
+          ],
+          "optional_methods": [
+            "fraction_benchmarks",
+            "decimal_multipliers"
+          ],
+          "missing_approved_assessment": "NUM-PCT-BASIC"
+        },
+        "transfer": {
+          "candidate_ids": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000013"
+          ],
+          "full_target_distinct_family_id": null,
+          "same_family_pilot_siblings": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000001",
+            "CIVIO-NUM-WP-PCT-CHANGE-000024",
+            "CIVIO-NUM-WP-PCT-CHANGE-000038",
+            "CIVIO-NUM-WP-PCT-CHANGE-000045",
+            "CIVIO-NUM-WP-PCT-CHANGE-000113",
+            "CIVIO-NUM-WP-PCT-CHANGE-000227",
+            "CIVIO-NUM-WP-PCT-CHANGE-000324",
+            "CIVIO-NUM-WP-PCT-CHANGE-000328",
+            "CIVIO-NUM-WP-PCT-CHANGE-000415",
+            "CIVIO-NUM-WP-PCT-CHANGE-000428",
+            "CIVIO-NUM-WP-PCT-CHANGE-000515"
+          ],
+          "runtime_exposure": "unknown",
+          "independent_transfer_approved": false
+        }
+      },
+      "original_distractor_rows": [
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000429",
+          "correct_option": "o1: ₱468",
+          "distractor_option": "o2: ₱540",
+          "distractor_code": "NUM-PCT-ADD",
+          "why_wrong": "₱540 adds and subtracts the percents first (30% − 40%). The second change is taken from the new price, not the old one.",
+          "why_correct": "₱468 is right. Check: 600 × 1.3 = 780, and 780 × 0.6 = 468."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000429",
+          "correct_option": "o1: ₱468",
+          "distractor_option": "o3: ₱608.40",
+          "distractor_code": "NUM-EXTRA-STEP",
+          "why_wrong": "₱608.40 applies the 30% raise again at the end. That is one step too many.",
+          "why_correct": "₱468 is right. Check: 600 × 1.3 = 780, and 780 × 0.6 = 468."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000429",
+          "correct_option": "o1: ₱468",
+          "distractor_option": "o4: ₱780",
+          "distractor_code": "NUM-PARTIAL",
+          "why_wrong": "₱780 is only the price after the raise. It stops before the cut.",
+          "why_correct": "₱468 is right. Check: 600 × 1.3 = 780, and 780 × 0.6 = 468."
+        }
+      ]
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000515",
+      "source_file": "docs/batches/batch-007.json",
+      "source_record_sha256": "145e7b18ff7d694e10ef18fbb1b6872e3ce29ef789038bacc4d2fff28ac5dbf4",
+      "source_question_hash": "e52963ad4d5ac1f307416768c92677850d5173c6fb869a0a204bbb50e2e0c126",
+      "source": {
+        "id": "CIVIO-NUM-WP-PCT-CHANGE-000515",
+        "track": "both",
+        "archetype": "NUM-WP-PCT-CHANGE",
+        "stem": "A sari-sari store sold a tank of LPG for ₱240. It raised the price by 10%. Later, it lowered the new price by 50%. What is the final price?",
+        "options": [
+          {
+            "option_id": "o1",
+            "text": "₱132"
+          },
+          {
+            "option_id": "o2",
+            "text": "₱264"
+          },
+          {
+            "option_id": "o3",
+            "text": "₱144"
+          },
+          {
+            "option_id": "o4",
+            "text": "₱145.20"
+          }
+        ],
+        "answer_option_id": "o1",
+        "reveal": {
+          "terms": "\"Percent\" means \"out of 100\". A raise or a cut of a percent is always taken from the price at that moment.",
+          "shortcut": "Do one change at a time. ₱240 up 10% is ₱240 + ₱24 = ₱264. Then 50% of ₱264 is ₱132, so ₱264 − ₱132 = ₱132.",
+          "why_correct": "₱132 is right. Check: 240 × 1.1 = 264, and 264 × 0.5 = 132.",
+          "why_wrong": {
+            "o2": "₱264 is only the price after the raise. It stops before the cut.",
+            "o3": "₱144 adds and subtracts the percents first (10% − 50%). The second change is taken from the new price, not the old one.",
+            "o4": "₱145.20 applies the 10% raise again at the end. That is one step too many."
+          }
+        },
+        "distractor_reasoning": {
+          "o2": "NUM-PARTIAL",
+          "o3": "NUM-PCT-ADD",
+          "o4": "NUM-EXTRA-STEP"
+        },
+        "source": "Original, Civio",
+        "status": "approved"
+      },
+      "binding": {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000515",
+        "source_question_hash": "e52963ad4d5ac1f307416768c92677850d5173c6fb869a0a204bbb50e2e0c126",
+        "source_record_sha256": "145e7b18ff7d694e10ef18fbb1b6872e3ce29ef789038bacc4d2fff28ac5dbf4",
+        "source_file": "docs/batches/batch-007.json",
+        "base_binding_sha256": "b401b60a500acda8f54b602c285bc0ba37e38c2a2166265d8e314951e9c4a77c",
+        "status": "draft",
+        "review": {
+          "reviewer_1": null,
+          "reviewer_2": null,
+          "adjudication": null
+        },
+        "family": "successive-price",
+        "flow_id": "successive-price",
+        "parameters": {
+          "original": "₱240",
+          "rate": "10"
+        },
+        "inherited_fields": [
+          "worked_solution",
+          "math_verification",
+          "distractor_evidence"
+        ],
+        "visibility": {
+          "given_meanings": "after_initial_response_only",
+          "worked_solution": "server_authorized_reveal_only",
+          "flow": "one_current_node_only"
+        },
+        "mental_method": [
+          "Find 10% by dividing by 10.",
+          "Add that increase to the starting price.",
+          "Take half. Use the raised price this time.",
+          "Subtract that discount from the raised price."
+        ],
+        "prerequisites": {
+          "required": [
+            "understand_percent_as_hundredths",
+            "identify_stage",
+            "add_subtract"
+          ],
+          "optional_methods": [
+            "fraction_benchmarks",
+            "decimal_multipliers"
+          ],
+          "missing_approved_assessment": "NUM-PCT-BASIC"
+        },
+        "transfer": {
+          "candidate_ids": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000013"
+          ],
+          "full_target_distinct_family_id": null,
+          "same_family_pilot_siblings": [
+            "CIVIO-NUM-WP-PCT-CHANGE-000001",
+            "CIVIO-NUM-WP-PCT-CHANGE-000024",
+            "CIVIO-NUM-WP-PCT-CHANGE-000038",
+            "CIVIO-NUM-WP-PCT-CHANGE-000045",
+            "CIVIO-NUM-WP-PCT-CHANGE-000113",
+            "CIVIO-NUM-WP-PCT-CHANGE-000227",
+            "CIVIO-NUM-WP-PCT-CHANGE-000324",
+            "CIVIO-NUM-WP-PCT-CHANGE-000328",
+            "CIVIO-NUM-WP-PCT-CHANGE-000415",
+            "CIVIO-NUM-WP-PCT-CHANGE-000428",
+            "CIVIO-NUM-WP-PCT-CHANGE-000429"
+          ],
+          "runtime_exposure": "unknown",
+          "independent_transfer_approved": false
+        }
+      },
+      "original_distractor_rows": [
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000515",
+          "correct_option": "o1: ₱132",
+          "distractor_option": "o2: ₱264",
+          "distractor_code": "NUM-PARTIAL",
+          "why_wrong": "₱264 is only the price after the raise. It stops before the cut.",
+          "why_correct": "₱132 is right. Check: 240 × 1.1 = 264, and 264 × 0.5 = 132."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000515",
+          "correct_option": "o1: ₱132",
+          "distractor_option": "o3: ₱144",
+          "distractor_code": "NUM-PCT-ADD",
+          "why_wrong": "₱144 adds and subtracts the percents first (10% − 50%). The second change is taken from the new price, not the old one.",
+          "why_correct": "₱132 is right. Check: 240 × 1.1 = 264, and 264 × 0.5 = 132."
+        },
+        {
+          "item_id": "CIVIO-NUM-WP-PCT-CHANGE-000515",
+          "correct_option": "o1: ₱132",
+          "distractor_option": "o4: ₱145.20",
+          "distractor_code": "NUM-EXTRA-STEP",
+          "why_wrong": "₱145.20 applies the 10% raise again at the end. That is one step too many.",
+          "why_correct": "₱132 is right. Check: 240 × 1.1 = 264, and 264 × 0.5 = 132."
+        }
+      ]
+    }
+  ],
+  "flows": {
+    "successive-price": {
+      "entry": "interpret",
+      "nodes": {
+        "interpret": {
+          "prompt": "What does {original} represent in the question?",
+          "options": [
+            {
+              "id": "before",
+              "text": "The price before the raise",
+              "feedback": "You placed it before the raise. Now choose what happens to that starting price.",
+              "next": "direction",
+              "evidence": "consistent",
+              "hypothesis": null
+            },
+            {
+              "id": "after",
+              "text": "The price after the raise",
+              "feedback": "Let us check which wording led you there before changing your method.",
+              "next": "confirm",
+              "evidence": "possible",
+              "hypothesis": "given-stage"
+            },
+            {
+              "id": "unknown",
+              "text": "I am not sure",
+              "feedback": "Let us locate the given price and the action that follows it.",
+              "next": "wording_help",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ],
+          "kind": "comprehension"
+        },
+        "confirm": {
+          "prompt": "Which best describes why you placed the given price after the change?",
+          "options": [
+            {
+              "id": "assumption",
+              "text": "I assumed a stated price already includes the change",
+              "feedback": "That helps locate the issue: the given price comes before the stated action. We will label the stages before calculating.",
+              "next": "direction",
+              "evidence": "supports_if_prior_after",
+              "hypothesis": "given-stage"
+            },
+            {
+              "id": "misread",
+              "text": "I overlooked the words describing the change",
+              "feedback": "That sounds like a reading slip in this attempt. Reread the action, then choose the operation.",
+              "next": "direction",
+              "evidence": "self_report_only",
+              "hypothesis": null
+            },
+            {
+              "id": "guess",
+              "text": "I guessed or cannot explain yet",
+              "feedback": "We do not yet know the cause. Use the wording reminder and try the next step.",
+              "next": "wording_help",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ],
+          "kind": "self_report"
+        },
+        "wording_help": {
+          "prompt": "The price is given first; the raise is then applied. Which label belongs to the given amount?",
+          "options": [
+            {
+              "id": "before",
+              "text": "Before the change",
+              "feedback": "Yes. This is a supported retry after help, not new independent evidence.",
+              "next": "direction",
+              "evidence": "assisted_check",
+              "hypothesis": null
+            },
+            {
+              "id": "after",
+              "text": "After the change",
+              "feedback": "Keep the given amount at the start of the timeline. You can open the worked explanation if that remains unclear.",
+              "next": "hint_1",
+              "evidence": "assisted_check",
+              "hypothesis": null
+            },
+            {
+              "id": "unknown",
+              "text": "Still unsure",
+              "feedback": "We can take this in smaller steps or use the worked explanation.",
+              "next": "hint_1",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ],
+          "kind": "assisted_check"
+        },
+        "direction": {
+          "prompt": "The given amount is before the raise. Which action comes next?",
+          "options": [
+            {
+              "id": "forward",
+              "text": "Add a percentage of it",
+              "feedback": "That follows the direction stated in the question.",
+              "next": "base",
+              "evidence": "consistent",
+              "hypothesis": null
+            },
+            {
+              "id": "reverse",
+              "text": "Divide to recover an earlier price",
+              "feedback": "Division would recover an earlier value if the changed price were given. Here we start before the change.",
+              "next": "hint_1",
+              "evidence": "possible",
+              "hypothesis": "forward-reverse"
+            },
+            {
+              "id": "unknown",
+              "text": "I am not sure",
+              "feedback": "Name the action first: a raise adds; a discount takes away.",
+              "next": "hint_1",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ],
+          "kind": "comprehension"
+        },
+        "percent_meaning": {
+          "prompt": "In this question, {rate}% means what?",
+          "options": [
+            {
+              "id": "fraction",
+              "text": "{rate} out of every 100 parts of the stated base",
+              "feedback": "Right. It is a proportion of a price, not a fixed number of pesos.",
+              "next": "target",
+              "evidence": "consistent",
+              "hypothesis": null
+            },
+            {
+              "id": "pesos",
+              "text": "Exactly {rate} pesos, whatever the price",
+              "feedback": "Is that how you treated the percentage when choosing your answer?",
+              "next": "confirm_units",
+              "evidence": "possible",
+              "hypothesis": "percent-as-pesos"
+            },
+            {
+              "id": "unknown",
+              "text": "I am not sure",
+              "feedback": "Percent means out of 100. We can use 10%, half, or a quarter as a starting point.",
+              "next": "hint_1",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ],
+          "kind": "comprehension"
+        },
+        "confirm_units": {
+          "prompt": "When you first answered, how did you use the number {rate}?",
+          "options": [
+            {
+              "id": "fixed",
+              "text": "I treated it as a fixed peso amount",
+              "feedback": "Then the unit is the part to correct: {rate}% changes with the base price. We still have not tested your arithmetic.",
+              "next": "hint_1",
+              "evidence": "supports_if_prior_pesos",
+              "hypothesis": "percent-as-pesos"
+            },
+            {
+              "id": "proportion",
+              "text": "I meant a proportion but selected the wrong description",
+              "feedback": "We should not label this as percent-as-pesos from that selection. Check the requested amount next.",
+              "next": "target",
+              "evidence": "self_report_only",
+              "hypothesis": null
+            },
+            {
+              "id": "unknown",
+              "text": "I do not remember",
+              "feedback": "The cause remains unknown. Use a small percent reminder before trying again.",
+              "next": "hint_1",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ],
+          "kind": "self_report"
+        },
+        "target": {
+          "prompt": "Which amount must your final answer name?",
+          "options": [
+            {
+              "id": "paid",
+              "text": "The price the buyer pays after all stated changes",
+              "feedback": "Yes. A change amount can be calculated correctly and still answer the wrong question.",
+              "next": "arithmetic_check",
+              "evidence": "consistent",
+              "hypothesis": null
+            },
+            {
+              "id": "saved",
+              "text": "Only the amount taken off",
+              "feedback": "Did you stop at the amount taken off because you thought that was being asked?",
+              "next": "confirm_target",
+              "evidence": "possible",
+              "hypothesis": "change-versus-result"
+            },
+            {
+              "id": "unknown",
+              "text": "I am not sure",
+              "feedback": "Look at “final price” or “how much does a buyer pay.” It asks for what remains to be paid.",
+              "next": "hint_1",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ],
+          "kind": "comprehension"
+        },
+        "confirm_target": {
+          "prompt": "Which matches your first approach?",
+          "options": [
+            {
+              "id": "stopped",
+              "text": "I thought the amount taken off was the requested answer",
+              "feedback": "That supports a target-quantity mix-up in this attempt. Keep “amount saved” separate from “amount paid.”",
+              "next": "hint_1",
+              "evidence": "supports_if_prior_saved",
+              "hypothesis": "change-versus-result"
+            },
+            {
+              "id": "slip",
+              "text": "I knew it asked for the price but stopped early",
+              "feedback": "That may be an unfinished solution, not a misunderstanding of the words.",
+              "next": "hint_1",
+              "evidence": "self_report_only",
+              "hypothesis": null
+            },
+            {
+              "id": "unknown",
+              "text": "I am not sure",
+              "feedback": "No specific cause is established. Label the final amount before choosing.",
+              "next": "hint_1",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ],
+          "kind": "self_report"
+        },
+        "arithmetic_check": {
+          "prompt": "A small calculation check: what is 10% of ₱200?",
+          "options": [
+            {
+              "id": "20",
+              "text": "₱20",
+              "feedback": "That calculation is correct. If the original answer is still wrong, check the stage, base and target rather than assuming all percentage arithmetic is weak.",
+              "next": "retry",
+              "evidence": "arithmetic_sample_correct",
+              "hypothesis": null
+            },
+            {
+              "id": "2",
+              "text": "₱2",
+              "feedback": "₱2 is 1% of ₱200. For 10%, divide by 10: ₱20. This one response does not establish a lasting arithmetic difficulty.",
+              "next": "hint_1",
+              "evidence": "possible",
+              "hypothesis": "percent-scale"
+            },
+            {
+              "id": "10",
+              "text": "₱10",
+              "feedback": "The 10 is a percentage, not a fixed peso amount. Ten out of every hundred is ₱20 out of ₱200.",
+              "next": "hint_1",
+              "evidence": "possible",
+              "hypothesis": "percent-as-pesos"
+            },
+            {
+              "id": "unknown",
+              "text": "I am not sure",
+              "feedback": "10% is one tenth. Divide ₱200 into ten equal parts.",
+              "next": "hint_1",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ],
+          "kind": "arithmetic_sample",
+          "skip_rule": "Skip only if an equivalent pre-help arithmetic response is actually recorded; never infer ability from the original MCQ key alone."
+        },
+        "hint_1": {
+          "kind": "hint",
+          "level": 1,
+          "text": "Write the labels first: before the change, after the change, and the amount asked for.",
+          "next": "hint_2",
+          "requires": "learner_requests_next_hint"
+        },
+        "hint_2": {
+          "kind": "hint",
+          "level": 2,
+          "text": "Percent means out of 100. The base is the price at the moment this change happens.",
+          "next": "hint_3",
+          "requires": "learner_requests_next_hint"
+        },
+        "hint_3": {
+          "kind": "hint",
+          "level": 3,
+          "text": "Find the increase from the starting price. Then find the discount from the raised price and take it off.",
+          "next": "retry",
+          "requires": "learner_requests_next_hint"
+        },
+        "retry": {
+          "kind": "action",
+          "action": "return_to_original_mcq",
+          "assisted": true,
+          "next": "explain",
+          "requires": "learner_requests_authorized_reveal"
+        },
+        "explain": {
+          "kind": "action",
+          "action": "authorized_existing_worked_solution",
+          "next": "transfer",
+          "requires": "server_reveal_authorized"
+        },
+        "transfer": {
+          "kind": "terminal",
+          "action": "eligible_approved_transfer_or_truthful_gap"
+        },
+        "base": {
+          "prompt": "For the later discount, which amount is the base?",
+          "options": [
+            {
+              "id": "intermediate",
+              "text": "The price after the raise",
+              "feedback": "Yes. The discount uses the intermediate price.",
+              "next": "percent_meaning",
+              "evidence": "consistent",
+              "hypothesis": null
+            },
+            {
+              "id": "original",
+              "text": "The price before the raise",
+              "feedback": "Before we change that, which rule were you using for the two percentages?",
+              "next": "confirm_base",
+              "evidence": "possible",
+              "hypothesis": "base-stays-original"
+            },
+            {
+              "id": "unknown",
+              "text": "I am not sure",
+              "feedback": "The words “new price” identify the price after the raise. We can work from those stages.",
+              "next": "hint_1",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ],
+          "kind": "comprehension"
+        },
+        "confirm_base": {
+          "prompt": "Which describes your approach?",
+          "options": [
+            {
+              "id": "same",
+              "text": "I used the first price for both percentages",
+              "feedback": "That supports a same-base approach in this attempt. Each change instead uses the price just before it.",
+              "next": "hint_1",
+              "evidence": "supports_if_prior_original",
+              "hypothesis": "base-stays-original"
+            },
+            {
+              "id": "net",
+              "text": "I subtracted the percent rates first",
+              "feedback": "That supports combining rates before applying them. These changes use different bases, so that shortcut does not apply.",
+              "next": "hint_1",
+              "evidence": "self_report_only",
+              "hypothesis": "net-rates"
+            },
+            {
+              "id": "unknown",
+              "text": "I selected without a rule",
+              "feedback": "A wrong selection alone does not establish a misconception. We will label the two bases.",
+              "next": "hint_1",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ],
+          "kind": "self_report"
+        }
+      },
+      "exits": [
+        "stop",
+        "authorized_reveal"
+      ],
+      "node_budget": 16,
+      "diagnosis_policy": "Only combine a prior relevant selection with a matching pre-correction self-report. Call it supported for this attempt, never proven or a permanent learner trait. Post-teaching answers are assisted checks, not independent confirmation."
+    },
+    "sale-price": {
+      "entry": "interpret",
+      "nodes": {
+        "interpret": {
+          "prompt": "What does {original} represent in the question?",
+          "options": [
+            {
+              "id": "before",
+              "text": "The price before the discount",
+              "feedback": "You placed it before the discount. Now choose what happens to that starting price.",
+              "next": "direction",
+              "evidence": "consistent",
+              "hypothesis": null
+            },
+            {
+              "id": "after",
+              "text": "The price after the discount",
+              "feedback": "Let us check which wording led you there before changing your method.",
+              "next": "confirm",
+              "evidence": "possible",
+              "hypothesis": "given-stage"
+            },
+            {
+              "id": "unknown",
+              "text": "I am not sure",
+              "feedback": "Let us locate the given price and the action that follows it.",
+              "next": "wording_help",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ],
+          "kind": "comprehension"
+        },
+        "confirm": {
+          "prompt": "Which best describes why you placed the given price after the change?",
+          "options": [
+            {
+              "id": "assumption",
+              "text": "I assumed a stated price already includes the change",
+              "feedback": "That helps locate the issue: the given price comes before the stated action. We will label the stages before calculating.",
+              "next": "direction",
+              "evidence": "supports_if_prior_after",
+              "hypothesis": "given-stage"
+            },
+            {
+              "id": "misread",
+              "text": "I overlooked the words describing the change",
+              "feedback": "That sounds like a reading slip in this attempt. Reread the action, then choose the operation.",
+              "next": "direction",
+              "evidence": "self_report_only",
+              "hypothesis": null
+            },
+            {
+              "id": "guess",
+              "text": "I guessed or cannot explain yet",
+              "feedback": "We do not yet know the cause. Use the wording reminder and try the next step.",
+              "next": "wording_help",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ],
+          "kind": "self_report"
+        },
+        "wording_help": {
+          "prompt": "The price is given first; the discount is then applied. Which label belongs to the given amount?",
+          "options": [
+            {
+              "id": "before",
+              "text": "Before the change",
+              "feedback": "Yes. This is a supported retry after help, not new independent evidence.",
+              "next": "direction",
+              "evidence": "assisted_check",
+              "hypothesis": null
+            },
+            {
+              "id": "after",
+              "text": "After the change",
+              "feedback": "Keep the given amount at the start of the timeline. You can open the worked explanation if that remains unclear.",
+              "next": "hint_1",
+              "evidence": "assisted_check",
+              "hypothesis": null
+            },
+            {
+              "id": "unknown",
+              "text": "Still unsure",
+              "feedback": "We can take this in smaller steps or use the worked explanation.",
+              "next": "hint_1",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ],
+          "kind": "assisted_check"
+        },
+        "direction": {
+          "prompt": "The given amount is before the discount. Which action comes next?",
+          "options": [
+            {
+              "id": "forward",
+              "text": "Subtract a percentage of it",
+              "feedback": "That follows the direction stated in the question.",
+              "next": "percent_meaning",
+              "evidence": "consistent",
+              "hypothesis": null
+            },
+            {
+              "id": "reverse",
+              "text": "Divide to recover an earlier price",
+              "feedback": "Division would recover an earlier value if the changed price were given. Here we start before the change.",
+              "next": "hint_1",
+              "evidence": "possible",
+              "hypothesis": "forward-reverse"
+            },
+            {
+              "id": "unknown",
+              "text": "I am not sure",
+              "feedback": "Name the action first: a raise adds; a discount takes away.",
+              "next": "hint_1",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ],
+          "kind": "comprehension"
+        },
+        "percent_meaning": {
+          "prompt": "In this question, {rate}% means what?",
+          "options": [
+            {
+              "id": "fraction",
+              "text": "{rate} out of every 100 parts of the stated base",
+              "feedback": "Right. It is a proportion of a price, not a fixed number of pesos.",
+              "next": "target",
+              "evidence": "consistent",
+              "hypothesis": null
+            },
+            {
+              "id": "pesos",
+              "text": "Exactly {rate} pesos, whatever the price",
+              "feedback": "Is that how you treated the percentage when choosing your answer?",
+              "next": "confirm_units",
+              "evidence": "possible",
+              "hypothesis": "percent-as-pesos"
+            },
+            {
+              "id": "unknown",
+              "text": "I am not sure",
+              "feedback": "Percent means out of 100. We can use 10%, half, or a quarter as a starting point.",
+              "next": "hint_1",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ],
+          "kind": "comprehension"
+        },
+        "confirm_units": {
+          "prompt": "When you first answered, how did you use the number {rate}?",
+          "options": [
+            {
+              "id": "fixed",
+              "text": "I treated it as a fixed peso amount",
+              "feedback": "Then the unit is the part to correct: {rate}% changes with the base price. We still have not tested your arithmetic.",
+              "next": "hint_1",
+              "evidence": "supports_if_prior_pesos",
+              "hypothesis": "percent-as-pesos"
+            },
+            {
+              "id": "proportion",
+              "text": "I meant a proportion but selected the wrong description",
+              "feedback": "We should not label this as percent-as-pesos from that selection. Check the requested amount next.",
+              "next": "target",
+              "evidence": "self_report_only",
+              "hypothesis": null
+            },
+            {
+              "id": "unknown",
+              "text": "I do not remember",
+              "feedback": "The cause remains unknown. Use a small percent reminder before trying again.",
+              "next": "hint_1",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ],
+          "kind": "self_report"
+        },
+        "target": {
+          "prompt": "Which amount must your final answer name?",
+          "options": [
+            {
+              "id": "paid",
+              "text": "The price the buyer pays after all stated changes",
+              "feedback": "Yes. A change amount can be calculated correctly and still answer the wrong question.",
+              "next": "arithmetic_check",
+              "evidence": "consistent",
+              "hypothesis": null
+            },
+            {
+              "id": "saved",
+              "text": "Only the amount taken off",
+              "feedback": "Did you stop at the amount taken off because you thought that was being asked?",
+              "next": "confirm_target",
+              "evidence": "possible",
+              "hypothesis": "change-versus-result"
+            },
+            {
+              "id": "unknown",
+              "text": "I am not sure",
+              "feedback": "Look at “final price” or “how much does a buyer pay.” It asks for what remains to be paid.",
+              "next": "hint_1",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ],
+          "kind": "comprehension"
+        },
+        "confirm_target": {
+          "prompt": "Which matches your first approach?",
+          "options": [
+            {
+              "id": "stopped",
+              "text": "I thought the amount taken off was the requested answer",
+              "feedback": "That supports a target-quantity mix-up in this attempt. Keep “amount saved” separate from “amount paid.”",
+              "next": "hint_1",
+              "evidence": "supports_if_prior_saved",
+              "hypothesis": "change-versus-result"
+            },
+            {
+              "id": "slip",
+              "text": "I knew it asked for the price but stopped early",
+              "feedback": "That may be an unfinished solution, not a misunderstanding of the words.",
+              "next": "hint_1",
+              "evidence": "self_report_only",
+              "hypothesis": null
+            },
+            {
+              "id": "unknown",
+              "text": "I am not sure",
+              "feedback": "No specific cause is established. Label the final amount before choosing.",
+              "next": "hint_1",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ],
+          "kind": "self_report"
+        },
+        "arithmetic_check": {
+          "prompt": "A small calculation check: what is 10% of ₱200?",
+          "options": [
+            {
+              "id": "20",
+              "text": "₱20",
+              "feedback": "That calculation is correct. If the original answer is still wrong, check the stage, base and target rather than assuming all percentage arithmetic is weak.",
+              "next": "retry",
+              "evidence": "arithmetic_sample_correct",
+              "hypothesis": null
+            },
+            {
+              "id": "2",
+              "text": "₱2",
+              "feedback": "₱2 is 1% of ₱200. For 10%, divide by 10: ₱20. This one response does not establish a lasting arithmetic difficulty.",
+              "next": "hint_1",
+              "evidence": "possible",
+              "hypothesis": "percent-scale"
+            },
+            {
+              "id": "10",
+              "text": "₱10",
+              "feedback": "The 10 is a percentage, not a fixed peso amount. Ten out of every hundred is ₱20 out of ₱200.",
+              "next": "hint_1",
+              "evidence": "possible",
+              "hypothesis": "percent-as-pesos"
+            },
+            {
+              "id": "unknown",
+              "text": "I am not sure",
+              "feedback": "10% is one tenth. Divide ₱200 into ten equal parts.",
+              "next": "hint_1",
+              "evidence": "unknown",
+              "hypothesis": null
+            }
+          ],
+          "kind": "arithmetic_sample",
+          "skip_rule": "Skip only if an equivalent pre-help arithmetic response is actually recorded; never infer ability from the original MCQ key alone."
+        },
+        "hint_1": {
+          "kind": "hint",
+          "level": 1,
+          "text": "Write the labels first: before the change, after the change, and the amount asked for.",
+          "next": "hint_2",
+          "requires": "learner_requests_next_hint"
+        },
+        "hint_2": {
+          "kind": "hint",
+          "level": 2,
+          "text": "Percent means out of 100. The base is the price at the moment this change happens.",
+          "next": "hint_3",
+          "requires": "learner_requests_next_hint"
+        },
+        "hint_3": {
+          "kind": "hint",
+          "level": 3,
+          "text": "Find {rate}/100 of the starting price. That is the saving; subtract it to find the amount paid.",
+          "next": "retry",
+          "requires": "learner_requests_next_hint"
+        },
+        "retry": {
+          "kind": "action",
+          "action": "return_to_original_mcq",
+          "assisted": true,
+          "next": "explain",
+          "requires": "learner_requests_authorized_reveal"
+        },
+        "explain": {
+          "kind": "action",
+          "action": "authorized_existing_worked_solution",
+          "next": "transfer",
+          "requires": "server_reveal_authorized"
+        },
+        "transfer": {
+          "kind": "terminal",
+          "action": "eligible_approved_transfer_or_truthful_gap"
+        }
+      },
+      "exits": [
+        "stop",
+        "authorized_reveal"
+      ],
+      "node_budget": 16,
+      "diagnosis_policy": "Only combine a prior relevant selection with a matching pre-correction self-report. Call it supported for this attempt, never proven or a permanent learner trait. Post-teaching answers are assisted checks, not independent confirmation."
+    }
+  },
+  "contrast": {
+    "id": "original-versus-marked-up-640-v0.2",
+    "status": "draft",
+    "bank_question_id": null,
+    "entry": "meaning",
+    "nodes": {
+      "meaning": {
+        "prompt": "The problem calls ₱640 the original price. What does ₱640 represent?",
+        "options": [
+          {
+            "id": "original",
+            "text": "The price before the markup",
+            "feedback": "Correct. We can build forward from that starting value.",
+            "next": "forward",
+            "evidence": "consistent",
+            "hypothesis": null
+          },
+          {
+            "id": "marked",
+            "text": "The price after markup",
+            "feedback": "Before calculating, what made you place it after the markup?",
+            "next": "reason",
+            "evidence": "possible",
+            "hypothesis": "given-stage"
+          },
+          {
+            "id": "unknown",
+            "text": "I am not sure",
+            "feedback": "Original names the value before the stated changes. Let us check the direction next.",
+            "next": "forward",
+            "evidence": "unknown",
+            "hypothesis": null
+          }
+        ],
+        "kind": "comprehension"
+      },
+      "reason": {
+        "prompt": "Which best describes your interpretation?",
+        "options": [
+          {
+            "id": "assumed",
+            "text": "I took ₱640 to mean an already marked-up price",
+            "feedback": "That explains why you wanted to reverse it. In this problem, “original” places ₱640 before the markup. Your calculation of 25% can still be correct.",
+            "next": "forward",
+            "evidence": "supports_if_prior_marked",
+            "hypothesis": "given-stage"
+          },
+          {
+            "id": "slip",
+            "text": "I missed the word original",
+            "feedback": "That points to a reading slip, not proof of weak percentage arithmetic.",
+            "next": "forward",
+            "evidence": "self_report_only",
+            "hypothesis": null
+          },
+          {
+            "id": "unknown",
+            "text": "I cannot tell yet",
+            "feedback": "The cause is still uncertain. Place ₱640 before the action because the wording says original.",
+            "next": "forward",
+            "evidence": "unknown",
+            "hypothesis": null
+          }
+        ],
+        "kind": "self_report"
+      },
+      "forward": {
+        "prompt": "Using the already-correct result 25% of ₱640 = ₱160, what happens next?",
+        "options": [
+          {
+            "id": "add",
+            "text": "Add ₱160 to ₱640",
+            "feedback": "Yes. The markup is added to the original, giving ₱800.",
+            "next": "discount_base",
+            "evidence": "consistent",
+            "hypothesis": null
+          },
+          {
+            "id": "divide",
+            "text": "Divide ₱640 by 1.25",
+            "feedback": "That would answer a different problem where ₱640 was the marked-up price. Here the original is already given.",
+            "next": "discount_base",
+            "evidence": "possible",
+            "hypothesis": "forward-reverse"
+          },
+          {
+            "id": "unknown",
+            "text": "I am not sure",
+            "feedback": "A markup increases the starting value. ₱640 + ₱160 gives ₱800.",
+            "next": "discount_base",
+            "evidence": "unknown",
+            "hypothesis": null
+          }
+        ],
+        "kind": "comprehension"
+      },
+      "discount_base": {
+        "prompt": "After the markup gives ₱800, which value supplies the 20% discount?",
+        "options": [
+          {
+            "id": "new",
+            "text": "₱800",
+            "feedback": "Yes. 20% of ₱800 is ₱160, so the final price is ₱640.",
+            "next": "reverse_meaning",
+            "evidence": "consistent",
+            "hypothesis": null
+          },
+          {
+            "id": "old",
+            "text": "₱640",
+            "feedback": "The discount follows the markup, so it uses ₱800. Taking 20% off that gives ₱640.",
+            "next": "reverse_meaning",
+            "evidence": "possible",
+            "hypothesis": "base-stays-original"
+          },
+          {
+            "id": "unknown",
+            "text": "I am not sure",
+            "feedback": "Use the price at the moment of the discount: ₱800. The discount is ₱160 and the final price is ₱640.",
+            "next": "reverse_meaning",
+            "evidence": "unknown",
+            "hypothesis": null
+          }
+        ],
+        "kind": "comprehension"
+      },
+      "reverse_meaning": {
+        "prompt": "Now change the wording: ₱640 is the price AFTER a 25% markup. What percentage of the unknown original is ₱640?",
+        "options": [
+          {
+            "id": "125",
+            "text": "125%",
+            "feedback": "Right. The final price contains the original 100% plus 25%.",
+            "next": "reverse_operation",
+            "evidence": "consistent",
+            "hypothesis": null
+          },
+          {
+            "id": "100",
+            "text": "100%",
+            "feedback": "The given amount now includes the markup. It is 125% of the original.",
+            "next": "reverse_operation",
+            "evidence": "possible",
+            "hypothesis": "final-base"
+          },
+          {
+            "id": "unknown",
+            "text": "I am not sure",
+            "feedback": "Call the original 100%. With a further 25%, the given final amount is 125%.",
+            "next": "reverse_operation",
+            "evidence": "unknown",
+            "hypothesis": null
+          }
+        ],
+        "kind": "comprehension"
+      },
+      "reverse_operation": {
+        "prompt": "Which operation undoes multiplication by 1.25?",
+        "options": [
+          {
+            "id": "divide",
+            "text": "Divide by 1.25",
+            "feedback": "Yes. ₱640 ÷ 1.25 = ₱512. A check gives ₱512 + ₱128 = ₱640.",
+            "next": "different_example",
+            "evidence": "consistent",
+            "hypothesis": null
+          },
+          {
+            "id": "subtract",
+            "text": "Subtract 25% of ₱640",
+            "feedback": "That takes a quarter of the larger final amount. It gives ₱480, whose 25% markup reaches only ₱600. Divide by 1.25 instead: ₱512.",
+            "next": "different_example",
+            "evidence": "possible",
+            "hypothesis": "subtract-to-reverse"
+          },
+          {
+            "id": "unknown",
+            "text": "I am not sure",
+            "feedback": "If original × 1.25 = final, divide the final by 1.25 to recover the original. Here that gives ₱512.",
+            "next": "different_example",
+            "evidence": "unknown",
+            "hypothesis": null
+          }
+        ],
+        "kind": "comprehension"
+      },
+      "different_example": {
+        "prompt": "A bag costs ₱900 AFTER a 25% markup. Which statement identifies the unknown correctly?",
+        "options": [
+          {
+            "id": "base",
+            "text": "The original is unknown; ₱900 is 125% of it",
+            "feedback": "Yes. Now try the calculation without another hint.",
+            "next": "different_calculation",
+            "evidence": "assisted_check",
+            "hypothesis": null
+          },
+          {
+            "id": "start",
+            "text": "₱900 is the original, so the markup must still be added",
+            "feedback": "“After” means the increase is already included. This example is reverse, not forward.",
+            "next": "different_calculation",
+            "evidence": "assisted_check",
+            "hypothesis": null
+          },
+          {
+            "id": "unknown",
+            "text": "I am not sure",
+            "feedback": "The final price is given; the earlier price is the unknown.",
+            "next": "different_calculation",
+            "evidence": "unknown",
+            "hypothesis": null
+          }
+        ],
+        "kind": "assisted_check"
+      },
+      "different_calculation": {
+        "prompt": "What was the bag’s original price?",
+        "options": [
+          {
+            "id": "720",
+            "text": "₱720",
+            "feedback": "Check: 25% of ₱720 is ₱180; adding gives ₱900. This is a supported learning check, not an independent mastery result.",
+            "next": "fresh",
+            "evidence": "assisted_check",
+            "hypothesis": null
+          },
+          {
+            "id": "675",
+            "text": "₱675",
+            "feedback": "That subtracts 25% of the final price. ₱675 × 1.25 = ₱843.75, so it fails the forward check.",
+            "next": "fresh",
+            "evidence": "assisted_check",
+            "hypothesis": null
+          },
+          {
+            "id": "1125",
+            "text": "₱1,125",
+            "feedback": "That applies another markup to the final price. The original should be smaller than ₱900.",
+            "next": "fresh",
+            "evidence": "assisted_check",
+            "hypothesis": null
+          },
+          {
+            "id": "unknown",
+            "text": "I am not sure",
+            "feedback": "Use 900 ÷ 1.25, or 900 × 4/5. Continue with guided practice if needed.",
+            "next": "fresh",
+            "evidence": "unknown",
+            "hypothesis": null
+          }
+        ],
+        "kind": "assisted_check"
+      },
+      "fresh": {
+        "kind": "terminal",
+        "action": "request_approved_unassisted_item",
+        "full_target_transfer_id": null,
+        "missing_type": "reverse percentage or a distinct successive-change application",
+        "fallback": "No approved full-target transfer was found. Offer a clearly labeled cross-context percentage-base task if eligible; otherwise stop without claiming mastery."
+      }
+    },
+    "arithmetic_evidence": "The owner supplied that 25% of ₱640 = ₱160 was already understood. Do not generalize that observation to other learners.",
+    "requires": "authorized_explanation_context",
+    "independent_review": null,
+    "runtime_approved": false,
+    "checks": {
+      "forward": 640,
+      "reverse": 512,
+      "new_reverse": 720,
+      "wrong_reverse_forward": 600,
+      "new_wrong_reverse_forward": "843.75"
+    }
+  },
+  "candidate_sources": [
+    {
+      "question_id": "CIVIO-NUM-PCT-BASIC-926013",
+      "source_file": "docs/research/batch-subpro-num-001.json",
+      "source_record_sha256": "c4be7d69e70a2252d164e3ba440c0035f49e8c6d01a584998e6d8f4bd644c206",
+      "source": {
+        "id": "CIVIO-NUM-PCT-BASIC-926013",
+        "track": "subprofessional",
+        "archetype": "NUM-PCT-BASIC",
+        "stem": "An Albay library received 360 donated notebooks. It set aside 15% for an outreach class. How many notebooks were set aside?",
+        "options": [
+          {
+            "option_id": "o1",
+            "text": "54 notebooks"
+          },
+          {
+            "option_id": "o2",
+            "text": "72 notebooks"
+          },
+          {
+            "option_id": "o3",
+            "text": "36 notebooks"
+          },
+          {
+            "option_id": "o4",
+            "text": "24 notebooks"
+          }
+        ],
+        "answer_option_id": "o1",
+        "reveal": {
+          "terms": "Percent means per hundred. Fifteen percent is 15 out of every 100.",
+          "shortcut": "Find 10% of 360 = 36. Half of that is 5% = 18. Add 36 + 18 = 54.",
+          "why_correct": "54 is correct: 54 ÷ 360 = 0.15 = 15%.",
+          "why_wrong": {
+            "o2": "72 notebooks is 20% of 360. It treats the requested 15% as 20%, adding an unsupported five percentage points.",
+            "o3": "36 notebooks calculates only 10%, leaving out the additional 5%.",
+            "o4": "24 notebooks divides the total by 15 instead of taking 15 hundredths."
+          }
+        },
+        "distractor_reasoning": {
+          "o2": "NUM-EXTRA-STEP",
+          "o3": "NUM-PARTIAL",
+          "o4": "NUM-WRONG-BASE"
+        },
+        "source": "Original, Civio",
+        "status": "reviewed"
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-PCT-BASIC-926014",
+      "source_file": "docs/research/batch-subpro-num-001.json",
+      "source_record_sha256": "e0405970cf2984a518f274793600442831e614e4e43b3f0cbb2f27de29619607",
+      "source": {
+        "id": "CIVIO-NUM-PCT-BASIC-926014",
+        "track": "subprofessional",
+        "archetype": "NUM-PCT-BASIC",
+        "stem": "At a Davao orientation, 18 out of 60 invitees came by bicycle. What percentage of invitees came by bicycle?",
+        "options": [
+          {
+            "option_id": "o1",
+            "text": "3 1/3%"
+          },
+          {
+            "option_id": "o2",
+            "text": "30%"
+          },
+          {
+            "option_id": "o3",
+            "text": "18%"
+          },
+          {
+            "option_id": "o4",
+            "text": "70%"
+          }
+        ],
+        "answer_option_id": "o2",
+        "reveal": {
+          "terms": "Percentage of a group equals part ÷ whole × 100.",
+          "shortcut": "Divide 18 by 60 to get 3/10. Then 3/10 × 100 = 30%.",
+          "why_correct": "30% of 60 = 18, so the answer matches the reported bicycle riders.",
+          "why_wrong": {
+            "o1": "3 1/3% reverses part and whole and does not multiply the fraction by 100.",
+            "o3": "18% repeats the attendee count as a percent without dividing by the 60 invitees.",
+            "o4": "70% describes the people who did not cycle, not the 18 who did."
+          }
+        },
+        "distractor_reasoning": {
+          "o1": "NUM-OP-SWAP",
+          "o3": "NUM-GIVEN-REUSED",
+          "o4": "NUM-OTHER-SHARE"
+        },
+        "source": "Original, Civio",
+        "status": "reviewed"
+      }
+    },
+    {
+      "question_id": "CIVIO-NUM-PCT-BASIC-926015",
+      "source_file": "docs/research/batch-subpro-num-001.json",
+      "source_record_sha256": "2c3532fb80e247b99fcdb142e9d3fc652ae607196646e61ea95ac68b6636df74",
+      "source": {
+        "id": "CIVIO-NUM-PCT-BASIC-926015",
+        "track": "subprofessional",
+        "archetype": "NUM-PCT-BASIC",
+        "stem": "A municipal registrar has encoded 72 documents, which is 25% of the assigned files. How many files were assigned in total?",
+        "options": [
+          {
+            "option_id": "o1",
+            "text": "18 files"
+          },
+          {
+            "option_id": "o2",
+            "text": "72 files"
+          },
+          {
+            "option_id": "o3",
+            "text": "288 files"
+          },
+          {
+            "option_id": "o4",
+            "text": "96 files"
+          }
+        ],
+        "answer_option_id": "o3",
+        "reveal": {
+          "terms": "Twenty-five percent is one fourth of the whole.",
+          "shortcut": "If 72 is one fourth, multiply by 4: 72 × 4 = 288.",
+          "why_correct": "One fourth of 288 is 72 files, so 288 is the full assignment.",
+          "why_wrong": {
+            "o1": "18 files takes 25% of the completed portion, not the original total.",
+            "o2": "72 files is the already encoded quarter, not the complete assignment.",
+            "o4": "96 files divides by the remaining 75% even though 72 is stated as 25%."
+          }
+        },
+        "distractor_reasoning": {
+          "o1": "NUM-WRONG-BASE",
+          "o2": "NUM-GIVEN-REUSED",
+          "o4": "NUM-WRONG-BASE"
+        },
+        "source": "Original, Civio",
+        "status": "reviewed"
+      }
+    },
+    {
+      "question_id": "CIVIO-B3-NUM-PCT-BASIC-0265",
+      "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
+      "source_record_sha256": "92d8c6b6cfa380ab2ce7cddcd3d4ec573e3a44b98eeed6cd71dcf86ae7b3f1f2",
+      "source": {
+        "id": "CIVIO-B3-NUM-PCT-BASIC-0265",
+        "track": "both",
+        "archetype": "NUM-PCT-BASIC",
+        "stem": "After a 20% raise, a daily allowance is ₱180. What was the allowance before the raise, in pesos?",
+        "options": [
+          {
+            "option_id": "n1",
+            "text": "144"
+          },
+          {
+            "option_id": "n2",
+            "text": "150"
+          },
+          {
+            "option_id": "n3",
+            "text": "160"
+          },
+          {
+            "option_id": "n4",
+            "text": "216"
+          }
+        ],
+        "answer_option_id": "n2",
+        "reveal": {
+          "terms": "Operations: add, subtract, multiply, divide, percent, fraction.",
+          "shortcut": "Divide by 1.2: 180 ÷ 1.2 = 150.",
+          "why_correct": "Answer: 150. 1.2 × n = 180, so n = 150. Check: 150 + 30 = 180.",
+          "why_wrong": {
+            "n1": "Took 20% off 180 (wrong base).",
+            "n3": "Subtracted 20 instead of 20%.",
+            "n4": "Added 20% to 180."
+          },
+          "method_steps": {
+            "1_asked": "The allowance before a 20% raise.",
+            "2_givens": "after the raise: ₱180; raise 20%",
+            "3_method": "The new amount is 120% of the old one; divide by 1.2.",
+            "4_why": "The 20% is 20% of the old amount, not of ₱180.",
+            "5_solve_by_hand": "120% = ₱180, so 10% = ₱15 and 100% = ₱150.",
+            "6_check": "20% of 150 = 30; 150 + 30 = 180.",
+            "7_distractors": "144: Took 20% off 180 (wrong base). 160: Subtracted 20 instead of 20%. 216: Added 20% to 180.",
+            "8_shortcut": "Old = new ÷ 1.2 (or new × 5/6)."
+          }
+        },
+        "distractor_reasoning": {
+          "n1": "NUM-WRONG-BASE",
+          "n3": "NUM-OP-SWAP",
+          "n4": "NUM-OP-SWAP"
+        },
+        "source": "Civio baseline, rewritten (Grok Bot B3)",
+        "status": "draft"
+      }
+    }
+  ],
+  "review_form_template": {
+    "packet_sha256": "COMPUTE_SHA256_OF_PACKET_BYTES_WHEN_CREATING_SEPARATE_REVIEW_COPY",
+    "reviewer_identity": null,
+    "reviewer_kind": null,
+    "reviewed_at": null,
+    "independence_declaration": null,
+    "price_items": [
+      {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000001",
+        "own_solution": null,
+        "criteria": {
+          "interpretation_correct": null,
+          "diagnostic_tests_comprehension": null,
+          "feedback_distinct_and_appropriate": null,
+          "hypothesis_supported_without_overclaim": null,
+          "hints_progress_without_early_solution": null,
+          "worked_solution_and_shortcut_correct": null,
+          "original_intermediate_final_distinguished": null,
+          "accessible_to_percentage_beginner": null,
+          "natural_tutor_voice": null,
+          "safe_to_reuse_with_validated_parameters": null
+        },
+        "distractors": [
+          {
+            "option_id": "n2",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "n3",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "n4",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          }
+        ],
+        "item_family_distinct": null,
+        "notes": null
+      },
+      {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000024",
+        "own_solution": null,
+        "criteria": {
+          "interpretation_correct": null,
+          "diagnostic_tests_comprehension": null,
+          "feedback_distinct_and_appropriate": null,
+          "hypothesis_supported_without_overclaim": null,
+          "hints_progress_without_early_solution": null,
+          "worked_solution_and_shortcut_correct": null,
+          "original_intermediate_final_distinguished": null,
+          "accessible_to_percentage_beginner": null,
+          "natural_tutor_voice": null,
+          "safe_to_reuse_with_validated_parameters": null
+        },
+        "distractors": [
+          {
+            "option_id": "o1",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o2",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o4",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          }
+        ],
+        "item_family_distinct": null,
+        "notes": null
+      },
+      {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000030",
+        "own_solution": null,
+        "criteria": {
+          "interpretation_correct": null,
+          "diagnostic_tests_comprehension": null,
+          "feedback_distinct_and_appropriate": null,
+          "hypothesis_supported_without_overclaim": null,
+          "hints_progress_without_early_solution": null,
+          "worked_solution_and_shortcut_correct": null,
+          "original_intermediate_final_distinguished": null,
+          "accessible_to_percentage_beginner": null,
+          "natural_tutor_voice": null,
+          "safe_to_reuse_with_validated_parameters": null
+        },
+        "distractors": [
+          {
+            "option_id": "o2",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o3",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o4",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          }
+        ],
+        "item_family_distinct": null,
+        "notes": null
+      },
+      {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000036",
+        "own_solution": null,
+        "criteria": {
+          "interpretation_correct": null,
+          "diagnostic_tests_comprehension": null,
+          "feedback_distinct_and_appropriate": null,
+          "hypothesis_supported_without_overclaim": null,
+          "hints_progress_without_early_solution": null,
+          "worked_solution_and_shortcut_correct": null,
+          "original_intermediate_final_distinguished": null,
+          "accessible_to_percentage_beginner": null,
+          "natural_tutor_voice": null,
+          "safe_to_reuse_with_validated_parameters": null
+        },
+        "distractors": [
+          {
+            "option_id": "o2",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o3",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o4",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          }
+        ],
+        "item_family_distinct": null,
+        "notes": null
+      },
+      {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000038",
+        "own_solution": null,
+        "criteria": {
+          "interpretation_correct": null,
+          "diagnostic_tests_comprehension": null,
+          "feedback_distinct_and_appropriate": null,
+          "hypothesis_supported_without_overclaim": null,
+          "hints_progress_without_early_solution": null,
+          "worked_solution_and_shortcut_correct": null,
+          "original_intermediate_final_distinguished": null,
+          "accessible_to_percentage_beginner": null,
+          "natural_tutor_voice": null,
+          "safe_to_reuse_with_validated_parameters": null
+        },
+        "distractors": [
+          {
+            "option_id": "o1",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o2",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o3",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          }
+        ],
+        "item_family_distinct": null,
+        "notes": null
+      },
+      {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000045",
+        "own_solution": null,
+        "criteria": {
+          "interpretation_correct": null,
+          "diagnostic_tests_comprehension": null,
+          "feedback_distinct_and_appropriate": null,
+          "hypothesis_supported_without_overclaim": null,
+          "hints_progress_without_early_solution": null,
+          "worked_solution_and_shortcut_correct": null,
+          "original_intermediate_final_distinguished": null,
+          "accessible_to_percentage_beginner": null,
+          "natural_tutor_voice": null,
+          "safe_to_reuse_with_validated_parameters": null
+        },
+        "distractors": [
+          {
+            "option_id": "o1",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o2",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o3",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          }
+        ],
+        "item_family_distinct": null,
+        "notes": null
+      },
+      {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000113",
+        "own_solution": null,
+        "criteria": {
+          "interpretation_correct": null,
+          "diagnostic_tests_comprehension": null,
+          "feedback_distinct_and_appropriate": null,
+          "hypothesis_supported_without_overclaim": null,
+          "hints_progress_without_early_solution": null,
+          "worked_solution_and_shortcut_correct": null,
+          "original_intermediate_final_distinguished": null,
+          "accessible_to_percentage_beginner": null,
+          "natural_tutor_voice": null,
+          "safe_to_reuse_with_validated_parameters": null
+        },
+        "distractors": [
+          {
+            "option_id": "o1",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o2",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o3",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          }
+        ],
+        "item_family_distinct": null,
+        "notes": null
+      },
+      {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000224",
+        "own_solution": null,
+        "criteria": {
+          "interpretation_correct": null,
+          "diagnostic_tests_comprehension": null,
+          "feedback_distinct_and_appropriate": null,
+          "hypothesis_supported_without_overclaim": null,
+          "hints_progress_without_early_solution": null,
+          "worked_solution_and_shortcut_correct": null,
+          "original_intermediate_final_distinguished": null,
+          "accessible_to_percentage_beginner": null,
+          "natural_tutor_voice": null,
+          "safe_to_reuse_with_validated_parameters": null
+        },
+        "distractors": [
+          {
+            "option_id": "o1",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o2",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o4",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          }
+        ],
+        "item_family_distinct": null,
+        "notes": null
+      },
+      {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000227",
+        "own_solution": null,
+        "criteria": {
+          "interpretation_correct": null,
+          "diagnostic_tests_comprehension": null,
+          "feedback_distinct_and_appropriate": null,
+          "hypothesis_supported_without_overclaim": null,
+          "hints_progress_without_early_solution": null,
+          "worked_solution_and_shortcut_correct": null,
+          "original_intermediate_final_distinguished": null,
+          "accessible_to_percentage_beginner": null,
+          "natural_tutor_voice": null,
+          "safe_to_reuse_with_validated_parameters": null
+        },
+        "distractors": [
+          {
+            "option_id": "o1",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o2",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o3",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          }
+        ],
+        "item_family_distinct": null,
+        "notes": null
+      },
+      {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000324",
+        "own_solution": null,
+        "criteria": {
+          "interpretation_correct": null,
+          "diagnostic_tests_comprehension": null,
+          "feedback_distinct_and_appropriate": null,
+          "hypothesis_supported_without_overclaim": null,
+          "hints_progress_without_early_solution": null,
+          "worked_solution_and_shortcut_correct": null,
+          "original_intermediate_final_distinguished": null,
+          "accessible_to_percentage_beginner": null,
+          "natural_tutor_voice": null,
+          "safe_to_reuse_with_validated_parameters": null
+        },
+        "distractors": [
+          {
+            "option_id": "o1",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o3",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o4",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          }
+        ],
+        "item_family_distinct": null,
+        "notes": null
+      },
+      {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000328",
+        "own_solution": null,
+        "criteria": {
+          "interpretation_correct": null,
+          "diagnostic_tests_comprehension": null,
+          "feedback_distinct_and_appropriate": null,
+          "hypothesis_supported_without_overclaim": null,
+          "hints_progress_without_early_solution": null,
+          "worked_solution_and_shortcut_correct": null,
+          "original_intermediate_final_distinguished": null,
+          "accessible_to_percentage_beginner": null,
+          "natural_tutor_voice": null,
+          "safe_to_reuse_with_validated_parameters": null
+        },
+        "distractors": [
+          {
+            "option_id": "o2",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o3",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o4",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          }
+        ],
+        "item_family_distinct": null,
+        "notes": null
+      },
+      {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000415",
+        "own_solution": null,
+        "criteria": {
+          "interpretation_correct": null,
+          "diagnostic_tests_comprehension": null,
+          "feedback_distinct_and_appropriate": null,
+          "hypothesis_supported_without_overclaim": null,
+          "hints_progress_without_early_solution": null,
+          "worked_solution_and_shortcut_correct": null,
+          "original_intermediate_final_distinguished": null,
+          "accessible_to_percentage_beginner": null,
+          "natural_tutor_voice": null,
+          "safe_to_reuse_with_validated_parameters": null
+        },
+        "distractors": [
+          {
+            "option_id": "o1",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o2",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o3",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          }
+        ],
+        "item_family_distinct": null,
+        "notes": null
+      },
+      {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000428",
+        "own_solution": null,
+        "criteria": {
+          "interpretation_correct": null,
+          "diagnostic_tests_comprehension": null,
+          "feedback_distinct_and_appropriate": null,
+          "hypothesis_supported_without_overclaim": null,
+          "hints_progress_without_early_solution": null,
+          "worked_solution_and_shortcut_correct": null,
+          "original_intermediate_final_distinguished": null,
+          "accessible_to_percentage_beginner": null,
+          "natural_tutor_voice": null,
+          "safe_to_reuse_with_validated_parameters": null
+        },
+        "distractors": [
+          {
+            "option_id": "o1",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o2",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o3",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          }
+        ],
+        "item_family_distinct": null,
+        "notes": null
+      },
+      {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000429",
+        "own_solution": null,
+        "criteria": {
+          "interpretation_correct": null,
+          "diagnostic_tests_comprehension": null,
+          "feedback_distinct_and_appropriate": null,
+          "hypothesis_supported_without_overclaim": null,
+          "hints_progress_without_early_solution": null,
+          "worked_solution_and_shortcut_correct": null,
+          "original_intermediate_final_distinguished": null,
+          "accessible_to_percentage_beginner": null,
+          "natural_tutor_voice": null,
+          "safe_to_reuse_with_validated_parameters": null
+        },
+        "distractors": [
+          {
+            "option_id": "o2",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o3",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o4",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          }
+        ],
+        "item_family_distinct": null,
+        "notes": null
+      },
+      {
+        "question_id": "CIVIO-NUM-WP-PCT-CHANGE-000515",
+        "own_solution": null,
+        "criteria": {
+          "interpretation_correct": null,
+          "diagnostic_tests_comprehension": null,
+          "feedback_distinct_and_appropriate": null,
+          "hypothesis_supported_without_overclaim": null,
+          "hints_progress_without_early_solution": null,
+          "worked_solution_and_shortcut_correct": null,
+          "original_intermediate_final_distinguished": null,
+          "accessible_to_percentage_beginner": null,
+          "natural_tutor_voice": null,
+          "safe_to_reuse_with_validated_parameters": null
+        },
+        "distractors": [
+          {
+            "option_id": "o2",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o3",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          },
+          {
+            "option_id": "o4",
+            "code_matches_error": null,
+            "why_wrong_accurate": null,
+            "notes": null
+          }
+        ],
+        "item_family_distinct": null,
+        "notes": null
+      }
+    ],
+    "contrast": {
+      "meaning_first": null,
+      "forward_reverse_distinct": null,
+      "wrong_inverse_demonstrated": null,
+      "new_example_correct": null,
+      "no_false_independent_outcome": null,
+      "notes": null
+    },
+    "foundation_candidates": [
+      {
+        "question_id": "CIVIO-NUM-PCT-BASIC-926013",
+        "own_solution": null,
+        "key_correct": null,
+        "wording_clear": null,
+        "rationales_correct": null,
+        "codes_precise": null,
+        "transfer_role": null,
+        "notes": null
+      },
+      {
+        "question_id": "CIVIO-NUM-PCT-BASIC-926014",
+        "own_solution": null,
+        "key_correct": null,
+        "wording_clear": null,
+        "rationales_correct": null,
+        "codes_precise": null,
+        "transfer_role": null,
+        "notes": null
+      },
+      {
+        "question_id": "CIVIO-NUM-PCT-BASIC-926015",
+        "own_solution": null,
+        "key_correct": null,
+        "wording_clear": null,
+        "rationales_correct": null,
+        "codes_precise": null,
+        "transfer_role": null,
+        "notes": null
+      },
+      {
+        "question_id": "CIVIO-B3-NUM-PCT-BASIC-0265",
+        "own_solution": null,
+        "key_correct": null,
+        "wording_clear": null,
+        "rationales_correct": null,
+        "codes_precise": null,
+        "transfer_role": null,
+        "notes": null
+      }
+    ],
+    "overall_recommendation": null
+  },
+  "adjudication": {
+    "review_1_record": null,
+    "review_2_record": null,
+    "adjudicator": null,
+    "adjudicated_at": null,
+    "decision": null
+  }
+}

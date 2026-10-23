@@ -1,0 +1,170 @@
+{
+  "schema_version": "dexter-foundation-candidate-audit-v0.1",
+  "baseline_commit": "9584106042bdd8d57eaa054f98fb4a1b73470cb0",
+  "status": "author_review_only",
+  "question_count": 4,
+  "records": [
+    {
+      "question_id": "CIVIO-NUM-PCT-BASIC-926013",
+      "source_file": "docs/research/batch-subpro-num-001.json",
+      "source_question_hash": "f1a5c98a852a50c5d04bf07d2aa410ad5acde67cb178835596843a443e58dab5",
+      "source_record_sha256": "c4be7d69e70a2252d164e3ba440c0035f49e8c6d01a584998e6d8f4bd644c206",
+      "status_observed": "reviewed",
+      "eligible_for_runtime": false,
+      "family": "known_whole_and_rate_find_part",
+      "interpretation": "360 is the full donation; 15% is the fraction set aside; the unknown is a notebook count.",
+      "mathematical_verification": {
+        "status": "passed",
+        "result": "54",
+        "unit": "notebooks",
+        "methods": [
+          "360 × 15/100 = 54 notebooks.",
+          "10% is 36 and 5% is 18; 36 + 18 = 54."
+        ],
+        "wrong_options_recomputed": 3,
+        "exactly_one_correct_option": true
+      },
+      "editorial_observations": [
+        {
+          "option_id": "o4",
+          "canonical_code": "NUM-WRONG-BASE",
+          "proposed_local_hypothesis": "percent_operator_misread",
+          "note": "360 ÷ 15 uses the right whole but the wrong percent operation. It does not alone prove that another base was selected."
+        }
+      ],
+      "draft_diagnostic_prompts": [
+        "Which amount represents the full donation?",
+        "Does 15% name a number of notebooks or a fraction of the full donation?"
+      ],
+      "transfer_limit": "Potential approved prerequisite assessment after review/approval; different context from sale-price tasks, but only direct percentage amount.",
+      "independent_reviewer": null,
+      "adjudication": null,
+      "canonical_change": null
+    },
+    {
+      "question_id": "CIVIO-NUM-PCT-BASIC-926014",
+      "source_file": "docs/research/batch-subpro-num-001.json",
+      "source_question_hash": "7029c824bd165c2a78741b34e3799d6055ff37975ce874e43ce46bdafefb15fc",
+      "source_record_sha256": "e0405970cf2984a518f274793600442831e614e4e43b3f0cbb2f27de29619607",
+      "status_observed": "reviewed",
+      "eligible_for_runtime": false,
+      "family": "known_part_and_whole_find_rate",
+      "interpretation": "18 is the cycling part and 60 is the whole group of invitees; the unknown is a percentage.",
+      "mathematical_verification": {
+        "status": "passed",
+        "result": "30",
+        "unit": "percent",
+        "methods": [
+          "18 ÷ 60 × 100 = 30%.",
+          "Simplify 18/60 to 3/10, then scale to 30/100 = 30%."
+        ],
+        "wrong_options_recomputed": 3,
+        "exactly_one_correct_option": true
+      },
+      "editorial_observations": [
+        {
+          "option_id": "o1",
+          "canonical_code": "NUM-OP-SWAP",
+          "proposed_local_hypothesis": "whole_divided_by_part_then_mislabeled_percent",
+          "note": "60/18 = 3 1/3 is a ratio, not 3 1/3%. The foil requires inversion plus a missing percent conversion. Avoid describing it as a pure single-operation error."
+        },
+        {
+          "option_id": "o4",
+          "canonical_code": "NUM-OTHER-SHARE",
+          "proposed_local_hypothesis": "complement_group_selected",
+          "note": "70% is the non-cycling group. This is a target-group distinction; no ratio-sharing problem is involved."
+        }
+      ],
+      "draft_diagnostic_prompts": [
+        "Which group is the whole when the question says percentage of invitees?",
+        "Does the question ask how many people cycled or what percentage cycled?"
+      ],
+      "transfer_limit": "Potential part/whole-to-rate application after approval; cannot assess reverse markup by itself.",
+      "independent_reviewer": null,
+      "adjudication": null,
+      "canonical_change": null
+    },
+    {
+      "question_id": "CIVIO-NUM-PCT-BASIC-926015",
+      "source_file": "docs/research/batch-subpro-num-001.json",
+      "source_question_hash": "342a312165623794fdb2abf71bfc83206df20f195c6be22ba9776f8122aa1194",
+      "source_record_sha256": "2c3532fb80e247b99fcdb142e9d3fc652ae607196646e61ea95ac68b6636df74",
+      "status_observed": "reviewed",
+      "eligible_for_runtime": false,
+      "family": "known_part_and_rate_find_whole",
+      "interpretation": "72 is the encoded quarter, not the original total or the unencoded remainder.",
+      "mathematical_verification": {
+        "status": "passed",
+        "result": "288",
+        "unit": "files",
+        "methods": [
+          "72 ÷ 0.25 = 288 files.",
+          "25% is one quarter. Four quarters contain 4 × 72 = 288 files."
+        ],
+        "wrong_options_recomputed": 3,
+        "exactly_one_correct_option": true
+      },
+      "editorial_observations": [
+        {
+          "option_id": "o1",
+          "canonical_code": "NUM-WRONG-BASE",
+          "proposed_local_hypothesis": "part_mistaken_for_whole",
+          "note": "Ask what 72 represents before claiming the learner selected a wrong base."
+        },
+        {
+          "option_id": "o4",
+          "canonical_code": "NUM-WRONG-BASE",
+          "proposed_local_hypothesis": "given_part_mistaken_for_remaining_part",
+          "note": "72/0.75 assumes 72 is the 75% remainder. Confirm that interpretation; the code alone loses the distinction."
+        }
+      ],
+      "draft_diagnostic_prompts": [
+        "Does 72 represent all assigned files, the completed part, or the remaining part?",
+        "If 72 is one quarter, how many such equal quarters form the whole?"
+      ],
+      "transfer_limit": "Useful inverse-percent prerequisite after approval. It recovers a whole from a 25% part; it is a different relation from reversing a 25% markup, where the given final is 125%.",
+      "independent_reviewer": null,
+      "adjudication": null,
+      "canonical_change": null
+    },
+    {
+      "question_id": "CIVIO-B3-NUM-PCT-BASIC-0265",
+      "source_file": "docs/research/audit/fixes/round-03-baseline-b3-drafts.json",
+      "source_question_hash": "8c3b589062f3e46730f2e70abed1270c5da715ed820cefb4d2c996acd120d386",
+      "source_record_sha256": "92d8c6b6cfa380ab2ce7cddcd3d4ec573e3a44b98eeed6cd71dcf86ae7b3f1f2",
+      "status_observed": "draft",
+      "eligible_for_runtime": false,
+      "family": "known_final_after_raise_find_original",
+      "interpretation": "₱180 is already after the raise; the unknown original is 100% and the given final is 120%.",
+      "mathematical_verification": {
+        "status": "passed",
+        "result": "150",
+        "unit": "pesos",
+        "methods": [
+          "Original × 1.20 = 180, so original = 180 ÷ 1.20 = ₱150.",
+          "120% = ₱180, so 10% = ₱15 and 100% = ₱150."
+        ],
+        "wrong_options_recomputed": 3,
+        "exactly_one_correct_option": true
+      },
+      "editorial_observations": [
+        {
+          "option_id": "n3",
+          "canonical_code": "NUM-OP-SWAP",
+          "proposed_local_hypothesis": "percent_as_fixed_pesos",
+          "note": "180 − 20 treats 20% as ₱20. Separate unit interpretation from reversing a multiplication."
+        }
+      ],
+      "draft_diagnostic_prompts": [
+        "Has the 20% raise already happened when the allowance is ₱180?",
+        "Is ₱180 the original 100%, or the new 120% of the original?"
+      ],
+      "transfer_limit": "Closest existing reverse-raise near practice for the ₱640 contrast after approval. A 20% allowance raise is the same inverse-multiplier family as a 25% price markup, so it is not full unfamiliar-family transfer.",
+      "independent_reviewer": null,
+      "adjudication": null,
+      "canonical_change": null
+    }
+  ],
+  "approval_status": "pending",
+  "learner_results": null
+}
