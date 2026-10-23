@@ -5,6 +5,17 @@ The living record of how Civio differs from the baseline (commit `d3f0368`, tag
 as any change that makes Civio behave differently from the baseline (see "How to
 keep this current" below).
 
+## Low-end performance pass, 23 October 2026 (Issue #27)
+
+Measured with a throttled Playwright harness (`tests/Perf/`, see `docs/PERFORMANCE_REPORT.md`). Behaviour changes:
+- The header and sidebar logos use small 320 px / 360 px PNGs (4 KB and 8 KB instead of 239 KB and 169 KB). A cold `/exams` visit drops from 788 KB to 401 KB.
+- The bank pool is no longer cached as one `questions.active` blob (12.6 MB per entry); it is queried directly. `GET /exams` no longer loads the bank at all.
+- `pending_feedback_count` is computed only for admins; everyone else receives 0.
+- The Docker image adds `conf/nginx/civio-cache.conf`: hashed `/build/assets/*` immutable for a year, manifests `no-cache`, images 30 days. `public/.htaccess` gets the same rules (the old rule never matched). The unused `conf/nginx/nginx-site.conf` is deleted.
+- CI runs a byte and request-count budget (`npm run test:perf-budget`) and Pest caps queries per request.
+
+Strict Mock grading, timing, secrecy and rate limits are unchanged.
+
 ## Owner-funded AI kill switch, 22 October 2026 (Issue #18)
 
 `App\Services\Ai\OwnerAiSpendLock` closes every owner-key AI path by default. It opens only when `CIVIO_OWNER_FUNDED_AI` is exactly `true` (not `1`, `yes`, `TRUE` or padded values), and never in production. Credentials alone no longer enable anything. While it is closed:

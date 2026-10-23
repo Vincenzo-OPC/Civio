@@ -10,10 +10,11 @@ export default function AppLogoIcon({
 }: AppLogoIconProps) {
     return (
         <img
-            src="/images/civio-icon.png"
+            src="/images/civio-icon-320.png"
             alt={alt}
-            width={1024}
-            height={562}
+            width={320}
+            height={176}
+            decoding="async"
             className={`object-contain ${className ?? ''}`}
             {...props}
         />
