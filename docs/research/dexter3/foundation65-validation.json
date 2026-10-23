@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "audit_records": 65,
+  "exact_key_checks": 65,
+  "conflicts": 0,
+  "manual_exceptions": 0,
+  "approved_source_tutoring_drafts": 25,
+  "excluded_nonapproved_sources": 40,
+  "runtime_approved": 0,
+  "human_approved": 0
+}

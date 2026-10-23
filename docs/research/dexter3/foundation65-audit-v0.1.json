@@ -1,0 +1,1070 @@
+{
+  "schema_version": "dexter-foundation73-audit-v0.1",
+  "baseline_commit": "d215839e34884296e61bdce7c16961df02f0a74a",
+  "method": "Exact rational arithmetic on recognized stem templates; no guessed results for unsupported forms.",
+  "summary": {
+    "records": 65,
+    "groups": {
+      "NUM-FRAC-DEC": 41,
+      "NUM-OPS-FRAC-DEC": 6,
+      "NUM-PCT-BASIC": 9,
+      "NUM-DECIMAL": 1,
+      "NUM-PROPERTY": 8
+    },
+    "statuses": {
+      "approved": 25,
+      "draft": 22,
+      "reviewed": 18
+    },
+    "deterministic_calculations": 65,
+    "keys_matching": 65,
+    "key_conflicts": 0,
+    "manual_solution_required": 0,
+    "wrong_choice_rationales_missing": 0,
+    "status": "draft_audit_only",
+    "human_review": null,
+    "runtime_eligible": false
+  },
+  "items": [
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000034",
+      "source_record_sha256": "ebf2dd4cae84ea603dc3e7578fcb1b9361f853cc81623fc63537433d1c493465",
+      "source_status": "approved",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A barangay had 600 liters of fuel. It gave out 1/5 of them on Monday and 3/4 of the remaining liters of fuel on Tuesday. How many are left?",
+      "method": "successive-fractions-of-remaining",
+      "calculation": "120",
+      "key_value": "120",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000046",
+      "source_record_sha256": "49365fd681c93a1e457be8f97c76eada994d615f320a71bf0f55a5a1b8e6452f",
+      "source_status": "approved",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A barangay had 900 face masks. It gave out 2/5 of them on Monday and 1/3 of the remaining face masks on Tuesday. How many are left?",
+      "method": "successive-fractions-of-remaining",
+      "calculation": "360",
+      "key_value": "360",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000140",
+      "source_record_sha256": "7ed27d7a9ffbfddbd73174d358df06bf4c42ab1be2bc3234caf55f784d982cc3",
+      "source_status": "approved",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A barangay had 480 liters of fuel. It gave out 1/8 of them on Monday and 1/3 of the remaining liters of fuel on Tuesday. How many are left?",
+      "method": "successive-fractions-of-remaining",
+      "calculation": "280",
+      "key_value": "280",
+      "key_matches": true,
+      "matching_options": [
+        "o3"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000141",
+      "source_record_sha256": "21ef500757e7b078f5ecb386759d6dc34e0d0971998a8e8182daf753bf1aa1c3",
+      "source_status": "approved",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A barangay had 840 liters of fuel. It gave out 1/3 of them on Monday and 1/4 of the remaining liters of fuel on Tuesday. How many are left?",
+      "method": "successive-fractions-of-remaining",
+      "calculation": "420",
+      "key_value": "420",
+      "key_matches": true,
+      "matching_options": [
+        "o1"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000231",
+      "source_record_sha256": "908064d08ca961120783dc8dbd69acd0cc14a205b1a496d3d378bf947bbcadce",
+      "source_status": "approved",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A barangay had 180 bags of cement. It gave out 1/3 of them on Monday and 3/5 of the remaining bags of cement on Tuesday. How many are left?",
+      "method": "successive-fractions-of-remaining",
+      "calculation": "48",
+      "key_value": "48",
+      "key_matches": true,
+      "matching_options": [
+        "o1"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000237",
+      "source_record_sha256": "4933c76f5eaffcdb4a687ef1cc35022fade754e238b4574064f4ddcea07860c9",
+      "source_status": "approved",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A barangay had 1440 bags of cement. It gave out 1/3 of them on Monday and 1/3 of the remaining bags of cement on Tuesday. How many are left?",
+      "method": "successive-fractions-of-remaining",
+      "calculation": "640",
+      "key_value": "640",
+      "key_matches": true,
+      "matching_options": [
+        "o1"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000314",
+      "source_record_sha256": "14efb4bba7c084dd49518408895f715128b5893bb79382b0250a4848e74e53df",
+      "source_status": "approved",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A barangay had 180 notebooks. It gave out 1/4 of them on Monday and 3/5 of the remaining notebooks on Tuesday. How many are left?",
+      "method": "successive-fractions-of-remaining",
+      "calculation": "54",
+      "key_value": "54",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000333",
+      "source_record_sha256": "e092a5fc010b18dcc0978cb4c433dacc119a59c07f97f2603402e2ee44d9aebd",
+      "source_status": "approved",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A barangay had 1440 face masks. It gave out 2/5 of them on Monday and 1/4 of the remaining face masks on Tuesday. How many are left?",
+      "method": "successive-fractions-of-remaining",
+      "calculation": "648",
+      "key_value": "648",
+      "key_matches": true,
+      "matching_options": [
+        "o1"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000440",
+      "source_record_sha256": "daec28ad3aeb8fde4b12eabea5295c73c818549418aadf9c9177ff85bbe2543d",
+      "source_status": "approved",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A barangay had 1200 sacks of relief rice. It gave out 1/4 of them on Monday and 1/6 of the remaining sacks of relief rice on Tuesday. How many are left?",
+      "method": "successive-fractions-of-remaining",
+      "calculation": "750",
+      "key_value": "750",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000441",
+      "source_record_sha256": "d7b3f41afedaac77fd72a76cb5c094e853fed1fdd9a68afade94e2ab95fa1e77",
+      "source_status": "approved",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A barangay had 1080 school chairs. It gave out 1/6 of them on Monday and 2/3 of the remaining school chairs on Tuesday. How many are left?",
+      "method": "successive-fractions-of-remaining",
+      "calculation": "300",
+      "key_value": "300",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000540",
+      "source_record_sha256": "a250cebc1281558ede67e5a9ac4b63de4776585f669eaf2f053778f32f1aa05c",
+      "source_status": "approved",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A barangay had 720 bags of cement. It gave out 1/8 of them on Monday and 1/3 of the remaining bags of cement on Tuesday. How many are left?",
+      "method": "successive-fractions-of-remaining",
+      "calculation": "420",
+      "key_value": "420",
+      "key_matches": true,
+      "matching_options": [
+        "o3"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000541",
+      "source_record_sha256": "5daa427e921006de4b0f73099b1ec580943cc111f3a2f519b10c8285ad122a68",
+      "source_status": "approved",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A barangay had 240 bags of cement. It gave out 1/4 of them on Monday and 1/4 of the remaining bags of cement on Tuesday. How many are left?",
+      "method": "successive-fractions-of-remaining",
+      "calculation": "135",
+      "key_value": "135",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-D1022-SPMATH-0004",
+      "source_record_sha256": "b9bfa3fc88637532c99aa3e5bf0093adc2c2f671a0d3f92e4368bcae42f105da",
+      "source_status": "draft",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A canteen worker pours 5/6 liter of soup into one pot and 3/8 liter into another. How many liters were poured in all?",
+      "method": "add-fractions-with-common-unit",
+      "calculation": "29/24",
+      "key_value": "29/24",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000626",
+      "source_record_sha256": "56ac304955ab4d3065d9fed73c8438705d0b170fbb0e85b3ee8ca1339d1f66fd",
+      "source_status": "approved",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A barangay had 1200 sacks of relief rice. It gave out 3/8 of them on Monday and 3/5 of the remaining sacks of relief rice on Tuesday. How many are left?",
+      "method": "successive-fractions-of-remaining",
+      "calculation": "300",
+      "key_value": "300",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000632",
+      "source_record_sha256": "44175b9f1a678ae726e82a2442403894d29e50b178f6bfcb1500c1cd745f6d24",
+      "source_status": "approved",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A barangay had 1440 rolls of tarpaulin. It gave out 1/8 of them on Monday and 3/5 of the remaining rolls of tarpaulin on Tuesday. How many are left?",
+      "method": "successive-fractions-of-remaining",
+      "calculation": "504",
+      "key_value": "504",
+      "key_matches": true,
+      "matching_options": [
+        "o4"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000741",
+      "source_record_sha256": "27d589ee2508bdcd011ec475b8248261f11b12422c7bf7cd9123acdec2196526",
+      "source_status": "approved",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A barangay had 480 notebooks. It gave out 1/8 of them on Monday and 1/6 of the remaining notebooks on Tuesday. How many are left?",
+      "method": "successive-fractions-of-remaining",
+      "calculation": "350",
+      "key_value": "350",
+      "key_matches": true,
+      "matching_options": [
+        "o1"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000819",
+      "source_record_sha256": "7e08b1418010870caf0492fd2cd0af14fc4a42aa8e0e21a6d9491d4d3185d78d",
+      "source_status": "approved",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A barangay had 600 vitamin packs. It gave out 2/5 of them on Monday and 1/3 of the remaining vitamin packs on Tuesday. How many are left?",
+      "method": "successive-fractions-of-remaining",
+      "calculation": "240",
+      "key_value": "240",
+      "key_matches": true,
+      "matching_options": [
+        "o1"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000841",
+      "source_record_sha256": "45a4f256012e6a80c61c8649996c162d5bd56d380ed5567664b42a4447145eba",
+      "source_status": "approved",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A barangay had 900 notebooks. It gave out 2/5 of them on Monday and 1/6 of the remaining notebooks on Tuesday. How many are left?",
+      "method": "successive-fractions-of-remaining",
+      "calculation": "450",
+      "key_value": "450",
+      "key_matches": true,
+      "matching_options": [
+        "o1"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000930",
+      "source_record_sha256": "40493d19b10191e9273bb423f44d435646c6b004e1bd522b85f8c59c985679f0",
+      "source_status": "approved",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A barangay had 480 hygiene kits. It gave out 1/6 of them on Monday and 3/4 of the remaining hygiene kits on Tuesday. How many are left?",
+      "method": "successive-fractions-of-remaining",
+      "calculation": "100",
+      "key_value": "100",
+      "key_matches": true,
+      "matching_options": [
+        "o4"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000941",
+      "source_record_sha256": "c4415b72fccf3bbe9b95490fa19b13776c321275065984e54f7e2a7cb733587e",
+      "source_status": "approved",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A barangay had 960 seedlings. It gave out 2/5 of them on Monday and 1/6 of the remaining seedlings on Tuesday. How many are left?",
+      "method": "successive-fractions-of-remaining",
+      "calculation": "480",
+      "key_value": "480",
+      "key_matches": true,
+      "matching_options": [
+        "o3"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-D1022-SPMATH-0001",
+      "source_record_sha256": "30ec7fe8d6f275c86cea5e8127f829c01163a25e85b969d5dfa6a1020eecc61b",
+      "source_status": "draft",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "Rhea has 120 permit forms. In the morning she checks 1/4 of them, and in the afternoon she encodes 2/3 of the remaining permit forms. How many permit forms are still untouched at the end of the day?",
+      "method": "sequential-fractions-of-remaining",
+      "calculation": "30",
+      "key_value": "30",
+      "key_matches": true,
+      "matching_options": [
+        "o1"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0006",
+      "source_record_sha256": "885ea7d3cb71672eda6dedc0a0cb7c09d313b44578eefe9c6570119d338aa2e7",
+      "source_status": "approved",
+      "work_family": "NUM-OPS-FRAC-DEC",
+      "stem": "What is 3/4 + 5/6?",
+      "method": "fraction-addition",
+      "calculation": "19/12",
+      "key_value": "19/12",
+      "key_matches": true,
+      "matching_options": [
+        "o4"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0007",
+      "source_record_sha256": "b55be75708912f5f7702ea9bd6b96554d8a250f6347a5224ead907dafec507cd",
+      "source_status": "approved",
+      "work_family": "NUM-OPS-FRAC-DEC",
+      "stem": "What is 2.5 × 0.04?",
+      "method": "decimal-multiplication",
+      "calculation": "1/10",
+      "key_value": "1/10",
+      "key_matches": true,
+      "matching_options": [
+        "o4"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0008",
+      "source_record_sha256": "3276101d5ca0b6feb5bd8974a6b26a4548b509c22aa54ecea49e3afc25b6e0d6",
+      "source_status": "approved",
+      "work_family": "NUM-OPS-FRAC-DEC",
+      "stem": "What is 7.2 ÷ 0.08?",
+      "method": "decimal-division",
+      "calculation": "90",
+      "key_value": "90",
+      "key_matches": true,
+      "matching_options": [
+        "o1"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0009",
+      "source_record_sha256": "3d926ca9925cc1109e4cb0942168ce0da5439e7d703b7b6f6409ac65f8b8bbe5",
+      "source_status": "approved",
+      "work_family": "NUM-OPS-FRAC-DEC",
+      "stem": "Which number is the greatest? 0.6, 5/8, 0.58, 3/5",
+      "method": "compare-fractions-and-decimals",
+      "calculation": "5/8",
+      "key_value": "5/8",
+      "key_matches": true,
+      "matching_options": [
+        "o4"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0010",
+      "source_record_sha256": "aa2247792d826d98c1fdfd109737919eff416fffb0aba33fc856d686ed0c2350",
+      "source_status": "approved",
+      "work_family": "NUM-OPS-FRAC-DEC",
+      "stem": "A clerk used 2/5 of a 500-sheet ream on Monday and 1/4 of the same ream on Tuesday. How many sheets are left?",
+      "method": "fractions-of-the-same-whole-remaining",
+      "calculation": "175",
+      "key_value": "175",
+      "key_matches": true,
+      "matching_options": [
+        "o4"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0011",
+      "source_record_sha256": "4e13e1775445e70ac8c58ca221be0b41d18b0040c0cc9eb5ae04eefa6a4a7973",
+      "source_status": "approved",
+      "work_family": "NUM-OPS-FRAC-DEC",
+      "stem": "What is 1 2/3 × 3/5?",
+      "method": "fraction-multiplication",
+      "calculation": "1",
+      "key_value": "1",
+      "key_matches": true,
+      "matching_options": [
+        "o1"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-926001",
+      "source_record_sha256": "5d4516e8a6f6500de0c7093d6ebdd4ae856f57b7eeb79ddf8cb68d0e86e6dbe3",
+      "source_status": "reviewed",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A small fish pond was 7/8 meter deep. Maintenance lowered the water by 1/4 meter. What was the new water depth?",
+      "method": "subtract-measurement-fractions",
+      "calculation": "5/8",
+      "key_value": "5/8",
+      "key_matches": true,
+      "matching_options": [
+        "o1"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-926002",
+      "source_record_sha256": "2dfc02c6626db0a20e2527179f570d49e6bf9854fbc313dd097b95e44f1f7fb1",
+      "source_status": "reviewed",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "Of 72 seats in a municipal training room, 3/8 are reserved for visitors. How many visitor seats are reserved?",
+      "method": "fraction-of-a-whole-count",
+      "calculation": "27",
+      "key_value": "27",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-926003",
+      "source_record_sha256": "9ff74f0f3603448813a340b413265817a25c5cb9804dcca141b77ac13d92e0f5",
+      "source_status": "reviewed",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A health worker filled four identical containers to 4/7, 5/9, 7/12, and 3/5 of their capacity. What fraction is the fullest?",
+      "method": "compare-fractions",
+      "calculation": "3/5",
+      "key_value": "3/5",
+      "key_matches": true,
+      "matching_options": [
+        "o3"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-926004",
+      "source_record_sha256": "4dc2cdfc1494294243cb9d300c0abc61f9cc566bb60d489a92b5d1f5e34ad274",
+      "source_status": "reviewed",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A field notebook records a measured distance as 2 3/7 kilometers. Which improper fraction represents the same distance?",
+      "method": "mixed-to-improper-fraction",
+      "calculation": "17/7",
+      "key_value": "17/7",
+      "key_matches": true,
+      "matching_options": [
+        "o4"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-926005",
+      "source_record_sha256": "fe9ee696b0f5fbee19ec7a1318219bc114e108adc6adcf8fa6bd941ced8f37a9",
+      "source_status": "reviewed",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A bakery has 6 kilograms of flour for 3/4-kilogram sample bags. How many full sample bags can it fill?",
+      "method": "divide-total-by-unit-fraction",
+      "calculation": "8",
+      "key_value": "8",
+      "key_matches": true,
+      "matching_options": [
+        "o1"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-926006",
+      "source_record_sha256": "54487fbd018a6ffdb3dd718d19951dfcf918e4109f7caac34e76dda3b16414c5",
+      "source_status": "reviewed",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A relief team counted 45 blankets on one shelf. That shelf held 5/8 of all the blankets. How many blankets did the team have?",
+      "method": "recover-whole-from-fractional-part",
+      "calculation": "72",
+      "key_value": "72",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-926007",
+      "source_record_sha256": "87f02125d1aea3f243e7dd9a19fcc4ac653daf2c36403746e279f37019f21439",
+      "source_status": "reviewed",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A nutrition volunteer has 1 1/2 liters of juice. Each serving is 3/8 liter. How many equal servings are possible?",
+      "method": "divide-quantity-by-unit-fraction",
+      "calculation": "4",
+      "key_value": "4",
+      "key_matches": true,
+      "matching_options": [
+        "o3"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-926008",
+      "source_record_sha256": "9b4046a22a8f46d653f81ef9328ec9a8430c1853e9e19257f59f9f93f249630a",
+      "source_status": "reviewed",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A farmers' cooperative collected 1 2/3 kilograms of bean seeds from one plot and 2 1/6 kilograms from another. What was the combined weight?",
+      "method": "add-mixed-numbers",
+      "calculation": "23/6",
+      "key_value": "23/6",
+      "key_matches": true,
+      "matching_options": [
+        "o4"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-926009",
+      "source_record_sha256": "73e027186310f00007a3f43f81612a7b8972a9596c06731c9992f3fb51bfb555",
+      "source_status": "reviewed",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A coastal cleanup crew finished 3/10 of a shoreline on Saturday and another 1/5 of the same shoreline on Sunday. What fraction remains?",
+      "method": "remaining-fraction-after-two-parts",
+      "calculation": "1/2",
+      "key_value": "1/2",
+      "key_matches": true,
+      "matching_options": [
+        "o1"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-926010",
+      "source_record_sha256": "bbafba546ba08a9e811a4f46aef0adacf20a9f1fa2dad5b28b00db8528ff32d4",
+      "source_status": "reviewed",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A rain gauge showed 0.625 of its maximum capacity. Which fraction in simplest form is equal to 0.625?",
+      "method": "decimal-to-fraction-equivalence",
+      "calculation": "5/8",
+      "key_value": "5/8",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-926011",
+      "source_record_sha256": "ec8f73ed1363f62bff3b6b0d07b9a457ff3483c5079ecd44b1a6de181f78437f",
+      "source_status": "reviewed",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A nursery has 45 seedlings. Two thirds are native trees, and 3/5 of those native trees are narra. How many narra seedlings are there?",
+      "method": "fraction-of-a-fraction",
+      "calculation": "18",
+      "key_value": "18",
+      "key_matches": true,
+      "matching_options": [
+        "o3"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-926012",
+      "source_record_sha256": "c77633f93a02483ae55dbf56769697e5a10d8efd01525b75b3fe4e845327816e",
+      "source_status": "reviewed",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A rural footpath is 2 2/3 kilometers long. Surveyors have measured 3/4 of it. How many kilometers have they measured?",
+      "method": "fraction-of-measured-length",
+      "calculation": "2",
+      "key_value": "2",
+      "key_matches": true,
+      "matching_options": [
+        "o4"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-PCT-BASIC-926013",
+      "source_record_sha256": "c4be7d69e70a2252d164e3ba440c0035f49e8c6d01a584998e6d8f4bd644c206",
+      "source_status": "reviewed",
+      "work_family": "NUM-PCT-BASIC",
+      "stem": "An Albay library received 360 donated notebooks. It set aside 15% for an outreach class. How many notebooks were set aside?",
+      "method": "percentage-of-given-base",
+      "calculation": "54",
+      "key_value": "54",
+      "key_matches": true,
+      "matching_options": [
+        "o1"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-PCT-BASIC-926014",
+      "source_record_sha256": "e0405970cf2984a518f274793600442831e614e4e43b3f0cbb2f27de29619607",
+      "source_status": "reviewed",
+      "work_family": "NUM-PCT-BASIC",
+      "stem": "At a Davao orientation, 18 out of 60 invitees came by bicycle. What percentage of invitees came by bicycle?",
+      "method": "part-over-whole-as-percent",
+      "calculation": "30",
+      "key_value": "30",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-PCT-BASIC-926015",
+      "source_record_sha256": "2c3532fb80e247b99fcdb142e9d3fc652ae607196646e61ea95ac68b6636df74",
+      "source_status": "reviewed",
+      "work_family": "NUM-PCT-BASIC",
+      "stem": "A municipal registrar has encoded 72 documents, which is 25% of the assigned files. How many files were assigned in total?",
+      "method": "recover-whole-from-percent",
+      "calculation": "288",
+      "key_value": "288",
+      "key_matches": true,
+      "matching_options": [
+        "o3"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-PCT-BASIC-926018",
+      "source_record_sha256": "6aa838a99bc70ecc28a94d2fc298c59280820d2aa57a6293e351d4e9b3ebdf85",
+      "source_status": "reviewed",
+      "work_family": "NUM-PCT-BASIC",
+      "stem": "At a vocational fair, 80% of 20 morning attendees completed a survey. In the afternoon, 60% of 30 attendees completed it. What percentage of all attendees completed a survey?",
+      "method": "weighted-group-percentages",
+      "calculation": "68",
+      "key_value": "68",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-PCT-BASIC-926019",
+      "source_record_sha256": "9d1be2364093f164f1a58f6ef8f922ea8bce919e653cf58f0bfec57a66a42dea",
+      "source_status": "reviewed",
+      "work_family": "NUM-PCT-BASIC",
+      "stem": "A records office verified 72 of 80 marriage-certificate entries. What percentage has been verified?",
+      "method": "part-over-whole-as-percent",
+      "calculation": "90",
+      "key_value": "90",
+      "key_matches": true,
+      "matching_options": [
+        "o3"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-NUM-PCT-BASIC-926022",
+      "source_record_sha256": "8bf4d4ea63d0586094c5316b975d5d5ab49434eb66216f24f96620cd7f3c54d1",
+      "source_status": "reviewed",
+      "work_family": "NUM-PCT-BASIC",
+      "stem": "A municipal clinic gave vitamins to 40% of 250 enrolled children. A second clinic reached 30% of 400. How many more children did the second clinic reach?",
+      "method": "compare-percentages-with-different-wholes",
+      "calculation": "20",
+      "key_value": "20",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-D1022-SPMATH-0005",
+      "source_record_sha256": "785a9657dfb3356e2d33039d262d798089d11806b0c8d9eb2be6821676aa9396",
+      "source_status": "draft",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A household had 5 1/2 kilograms of rice and cooked 2 3/4 kilograms during the week. How many kilograms are left?",
+      "method": "subtract-mixed-numbers",
+      "calculation": "11/4",
+      "key_value": "11/4",
+      "key_matches": true,
+      "matching_options": [
+        "o4"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-D1022-SPMATH-0007",
+      "source_record_sha256": "c228c09d7af73c4fbb389bcea8ea6135b4459d99cedba71683d78ea5ad86f2a8",
+      "source_status": "draft",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "In a municipal office of 35 employees, 2/5 ride the jeepney to work. How many employees ride the jeepney?",
+      "method": "fraction-of-a-whole-count",
+      "calculation": "14",
+      "key_value": "14",
+      "key_matches": true,
+      "matching_options": [
+        "o3"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-D1022-SPMATH-0009",
+      "source_record_sha256": "93bbbf88c3aaae40a6c6a3b46c0f9921b1b60ecd7c3b00e19db22264aa48a2c9",
+      "source_status": "draft",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A 6-meter roll of packing tape is cut into strips, each 3/4 meter long. How many strips can be cut?",
+      "method": "divide-length-by-strip-length",
+      "calculation": "8",
+      "key_value": "8",
+      "key_matches": true,
+      "matching_options": [
+        "o3"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-D1022-SPMATH-0011",
+      "source_record_sha256": "dd48cfa21c357904135cf47d851a7447d83548a4f1c296f0dee93e99e4b8f6e9",
+      "source_status": "draft",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A barangay spent ₱4,500 on medicines, which is 3/8 of its health budget for the quarter. What is the whole quarterly health budget?",
+      "method": "recover-whole-budget-from-fraction",
+      "calculation": "12000",
+      "key_value": "12000",
+      "key_matches": true,
+      "matching_options": [
+        "o2"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-B3-NUM-DECIMAL-0175",
+      "source_record_sha256": "f2ac5159e6837fec293a3628197efbb5580fcafc43e09e6b827aaa92c9d2e165",
+      "source_status": "draft",
+      "work_family": "NUM-DECIMAL",
+      "stem": "What is 125 × 0.8?",
+      "method": "decimal-multiplication",
+      "calculation": "100",
+      "key_value": "100",
+      "key_matches": true,
+      "matching_options": [
+        "n4"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-B3-NUM-FRAC-DEC-0180",
+      "source_record_sha256": "7681a2bfe2e4ff07f9cf8303fcd1c620370826407790f9d2825436707205ad8c",
+      "source_status": "draft",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "What is 0.125 as a fraction in lowest terms?",
+      "method": "decimal-to-fraction",
+      "calculation": "1/8",
+      "key_value": "1/8",
+      "key_matches": true,
+      "matching_options": [
+        "n4"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-B3-NUM-FRAC-DEC-0183",
+      "source_record_sha256": "6e3ce4ac4b8d9c4ac70d4ae211c9ecbc030ebc9e37f70d5536c1c34fdd9eb88a",
+      "source_status": "draft",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "Pens and pencils are in the ratio 3 : 5. What fraction of all the items are pens?",
+      "method": "ratio-part-over-total-parts",
+      "calculation": "3/8",
+      "key_value": "3/8",
+      "key_matches": true,
+      "matching_options": [
+        "n2"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-B3-NUM-PCT-BASIC-0173",
+      "source_record_sha256": "239b62934cb62c1a2a785a5181d3441f2c25e9f6061522aee2e0739b1af88012",
+      "source_status": "draft",
+      "work_family": "NUM-PCT-BASIC",
+      "stem": "An office budget of 450 thousand pesos sets aside 18% for supplies. How many thousand pesos is that?",
+      "method": "percentage-of-given-base",
+      "calculation": "81",
+      "key_value": "81",
+      "key_matches": true,
+      "matching_options": [
+        "n3"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-B3-NUM-PCT-BASIC-0184",
+      "source_record_sha256": "6bce225ac7a98fbb24ac147bc2f43942ad0331e88f018076fa506bc581a9b66b",
+      "source_status": "draft",
+      "work_family": "NUM-PCT-BASIC",
+      "stem": "A clerk earns a 2.5% commission on ₱800 of sales. How much is the commission, in pesos?",
+      "method": "percent-of-a-money-base",
+      "calculation": "20",
+      "key_value": "20",
+      "key_matches": true,
+      "matching_options": [
+        "n3"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-B3-NUM-PCT-BASIC-0265",
+      "source_record_sha256": "92d8c6b6cfa380ab2ce7cddcd3d4ec573e3a44b98eeed6cd71dcf86ae7b3f1f2",
+      "source_status": "draft",
+      "work_family": "NUM-PCT-BASIC",
+      "stem": "After a 20% raise, a daily allowance is ₱180. What was the allowance before the raise, in pesos?",
+      "method": "reverse-percentage-after-increase",
+      "calculation": "150",
+      "key_value": "150",
+      "key_matches": true,
+      "matching_options": [
+        "n2"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-B3-NUM-PROPERTY-0041",
+      "source_record_sha256": "374fc544e746e9f8cf7ebe13ccb5140da86de8e538dc0a690a65139117f4b881",
+      "source_status": "draft",
+      "work_family": "NUM-PROPERTY",
+      "stem": "What is 15 + 27?",
+      "method": "addition",
+      "calculation": "42",
+      "key_value": "42",
+      "key_matches": true,
+      "matching_options": [
+        "n3"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-B3-NUM-PROPERTY-0042",
+      "source_record_sha256": "0bb859f31bfaf26e61723c769407d01c155ee872fb758b01f87932f1c0ca26c9",
+      "source_status": "draft",
+      "work_family": "NUM-PROPERTY",
+      "stem": "What is 96 ÷ 8?",
+      "method": "decimal-division",
+      "calculation": "12",
+      "key_value": "12",
+      "key_matches": true,
+      "matching_options": [
+        "n4"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-B3-NUM-PROPERTY-0043",
+      "source_record_sha256": "161cf76f1d52477cf12709109e3bc15fdb38c9908635555e42abfa56147552be",
+      "source_status": "draft",
+      "work_family": "NUM-PROPERTY",
+      "stem": "What is 7 × 9?",
+      "method": "decimal-multiplication",
+      "calculation": "63",
+      "key_value": "63",
+      "key_matches": true,
+      "matching_options": [
+        "n1"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-B3-NUM-PROPERTY-0044",
+      "source_record_sha256": "a5e6e2e64645429493f749fcf2cb9ea6c0acc814cf4ebdd8b0f0d294b8fe5aa6",
+      "source_status": "draft",
+      "work_family": "NUM-PROPERTY",
+      "stem": "What is 100 − 37?",
+      "method": "subtraction",
+      "calculation": "63",
+      "key_value": "63",
+      "key_matches": true,
+      "matching_options": [
+        "n2"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-B3-NUM-PROPERTY-0176",
+      "source_record_sha256": "53a2d0a16fb03dabe066f3e490f8c9861223f6958ba731df38cf912317bfca85",
+      "source_status": "draft",
+      "work_family": "NUM-PROPERTY",
+      "stem": "Evaluate 2⁵ (two multiplied by itself five times).",
+      "method": "integer-power",
+      "calculation": "32",
+      "key_value": "32",
+      "key_matches": true,
+      "matching_options": [
+        "n1"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-B3-NUM-PROPERTY-0178",
+      "source_record_sha256": "fa7edd9412448dea43e359e8d8bf386fa0047e360be3e81e2f43e81635527609",
+      "source_status": "draft",
+      "work_family": "NUM-PROPERTY",
+      "stem": "What is the least common multiple (LCM) of 6 and 8?",
+      "method": "least-common-multiple",
+      "calculation": "24",
+      "key_value": "24",
+      "key_matches": true,
+      "matching_options": [
+        "n2"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-B3-NUM-PROPERTY-0179",
+      "source_record_sha256": "7bffb266bb1b69b1da34ab9cfb09b9d9697b083c1d70027be0e29fbe200a9b75",
+      "source_status": "draft",
+      "work_family": "NUM-PROPERTY",
+      "stem": "What is the greatest common factor (GCF) of 36 and 54?",
+      "method": "greatest-common-factor",
+      "calculation": "18",
+      "key_value": "18",
+      "key_matches": true,
+      "matching_options": [
+        "n3"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-B3-NUM-PROPERTY-0263",
+      "source_record_sha256": "8bf6b6c99b05ade7af100de9b018058747c0ec0804bc81fe81a9e9466b523012",
+      "source_status": "draft",
+      "work_family": "NUM-PROPERTY",
+      "stem": "Which whole number, multiplied by itself, gives 196?",
+      "method": "perfect-square-root",
+      "calculation": "14",
+      "key_value": "14",
+      "key_matches": true,
+      "matching_options": [
+        "n4"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-D1022-SPMATH-0002",
+      "source_record_sha256": "4cb137dab46a601bc3bd1a55a9ff7169ca49b39d8476098af7b0c45531baa490",
+      "source_status": "draft",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "The records unit has 96 old folders. In the morning it scans 3/8 of them, and in the afternoon it labels 1/4 of the remaining old folders. How many old folders are still untouched at the end of the day?",
+      "method": "sequential-fractions-of-remaining",
+      "calculation": "45",
+      "key_value": "45",
+      "key_matches": true,
+      "matching_options": [
+        "o3"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    },
+    {
+      "question_id": "CIVIO-D1022-SPMATH-0003",
+      "source_record_sha256": "5f4200f1b3f06b20649679d9f3e81f380272229a68dab06f39176903e9a5230d",
+      "source_status": "draft",
+      "work_family": "NUM-FRAC-DEC",
+      "stem": "A carpenter cuts two boards for a counter, one 3/4 meter long and one 2/3 meter long. What is their total length in meters?",
+      "method": "add-board-lengths",
+      "calculation": "17/12",
+      "key_value": "17/12",
+      "key_matches": true,
+      "matching_options": [
+        "o1"
+      ],
+      "wrong_choice_explanation_coverage": true,
+      "manual_review": null
+    }
+  ]
+}

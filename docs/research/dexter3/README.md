@@ -120,3 +120,5 @@ See [resumable production](BULK_EXECUTION.md), [current summary](bulk-summary.js
 **Numerical queue batch 1:** [84-item key audit, 59 approved-source Guide Me drafts, and reproducible checks](BULK_EXECUTION.md#numerical-batch-1-order-of-operations-and-sequences). The 25 non-approved source records were audited but excluded from tutoring bindings.
 
 **Numerical queue batch 2:** [87-item exact word-problem audit and 60 approved-source tutoring drafts](BULK_EXECUTION.md#numerical-batch-2-averages-geometry-and-algebra-word-problems). 8 reviewed and 19 draft bank records were audited but not bound.
+
+**Numerical queue batch 3:** [65-item foundational math audit and 25 approved-source draft bindings](BULK_EXECUTION.md#numerical-batch-3-fraction-decimal-percentage-and-operation-foundations). The nine basic-percentage source items in this slice remain reviewed/draft, not active tutoring bindings.

@@ -1,0 +1,1724 @@
+{
+  "schema_version": "dexter-foundation65-guide-v0.1",
+  "baseline_commit": "d215839e34884296e61bdce7c16961df02f0a74a",
+  "status": "draft",
+  "runtime_eligible": false,
+  "human_review": null,
+  "learner_evidence": null,
+  "bindings": [
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000034",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "ebf2dd4cae84ea603dc3e7578fcb1b9361f853cc81623fc63537433d1c493465",
+      "bank_status_at_authoring": "approved",
+      "method": "successive-fractions-of-remaining",
+      "diagnostic": {
+        "prompt": "Tuesday gives out 3/4 of the remaining items. What does that fraction apply to?",
+        "choices": [
+          {
+            "id": "new-remainder",
+            "text": "The amount left after Monday.",
+            "role": "correct-rule",
+            "feedback": "Yes. The word “remaining” resets the base to what is left after Monday."
+          },
+          {
+            "id": "original-total",
+            "text": "The original amount from the start.",
+            "role": "common-error",
+            "feedback": "That would be correct only if the question said the Tuesday fraction was of the original total. Here it says “of the remaining.”"
+          },
+          {
+            "id": "monday-given",
+            "text": "Only the amount given out on Monday.",
+            "role": "common-error",
+            "feedback": "The fraction applies to what is still left after Monday, not to the amount already given out."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s find the amount remaining after Monday first."
+          }
+        ],
+        "confirmation": "Was this the base you used originally, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Find Monday’s amount and subtract it from the starting amount.",
+        "Apply Tuesday’s fraction to the smaller remainder, then subtract that amount."
+      ],
+      "worked_solution": [
+        "Start with 600. Monday gives out 1/5 × 600 = 120.",
+        "After Monday, 600 − 120 = 480 remain.",
+        "Tuesday gives out 3/4 × 480 = 360.",
+        "Subtract Tuesday’s amount: 480 − 360 = 120 left."
+      ],
+      "verified_answer": {
+        "option_id": "o2",
+        "value": "120",
+        "source_key_text": "120",
+        "exact_check_passed": true
+      },
+      "canonical_explanation": "120 is right. Check: 120 + 360 + 120 = 600.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_is_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_only": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000046",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "49365fd681c93a1e457be8f97c76eada994d615f320a71bf0f55a5a1b8e6452f",
+      "bank_status_at_authoring": "approved",
+      "method": "successive-fractions-of-remaining",
+      "diagnostic": {
+        "prompt": "Tuesday gives out 1/3 of the remaining items. What does that fraction apply to?",
+        "choices": [
+          {
+            "id": "new-remainder",
+            "text": "The amount left after Monday.",
+            "role": "correct-rule",
+            "feedback": "Yes. The word “remaining” resets the base to what is left after Monday."
+          },
+          {
+            "id": "original-total",
+            "text": "The original amount from the start.",
+            "role": "common-error",
+            "feedback": "That would be correct only if the question said the Tuesday fraction was of the original total. Here it says “of the remaining.”"
+          },
+          {
+            "id": "monday-given",
+            "text": "Only the amount given out on Monday.",
+            "role": "common-error",
+            "feedback": "The fraction applies to what is still left after Monday, not to the amount already given out."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s find the amount remaining after Monday first."
+          }
+        ],
+        "confirmation": "Was this the base you used originally, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Find Monday’s amount and subtract it from the starting amount.",
+        "Apply Tuesday’s fraction to the smaller remainder, then subtract that amount."
+      ],
+      "worked_solution": [
+        "Start with 900. Monday gives out 2/5 × 900 = 360.",
+        "After Monday, 900 − 360 = 540 remain.",
+        "Tuesday gives out 1/3 × 540 = 180.",
+        "Subtract Tuesday’s amount: 540 − 180 = 360 left."
+      ],
+      "verified_answer": {
+        "option_id": "o2",
+        "value": "360",
+        "source_key_text": "360",
+        "exact_check_passed": true
+      },
+      "canonical_explanation": "360 is right. Check: 360 + 180 + 360 = 900.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_is_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_only": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000140",
+      "source_file": "docs/batches/batch-003.json",
+      "source_record_sha256": "7ed27d7a9ffbfddbd73174d358df06bf4c42ab1be2bc3234caf55f784d982cc3",
+      "bank_status_at_authoring": "approved",
+      "method": "successive-fractions-of-remaining",
+      "diagnostic": {
+        "prompt": "Tuesday gives out 1/3 of the remaining items. What does that fraction apply to?",
+        "choices": [
+          {
+            "id": "new-remainder",
+            "text": "The amount left after Monday.",
+            "role": "correct-rule",
+            "feedback": "Yes. The word “remaining” resets the base to what is left after Monday."
+          },
+          {
+            "id": "original-total",
+            "text": "The original amount from the start.",
+            "role": "common-error",
+            "feedback": "That would be correct only if the question said the Tuesday fraction was of the original total. Here it says “of the remaining.”"
+          },
+          {
+            "id": "monday-given",
+            "text": "Only the amount given out on Monday.",
+            "role": "common-error",
+            "feedback": "The fraction applies to what is still left after Monday, not to the amount already given out."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s find the amount remaining after Monday first."
+          }
+        ],
+        "confirmation": "Was this the base you used originally, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Find Monday’s amount and subtract it from the starting amount.",
+        "Apply Tuesday’s fraction to the smaller remainder, then subtract that amount."
+      ],
+      "worked_solution": [
+        "Start with 480. Monday gives out 1/8 × 480 = 60.",
+        "After Monday, 480 − 60 = 420 remain.",
+        "Tuesday gives out 1/3 × 420 = 140.",
+        "Subtract Tuesday’s amount: 420 − 140 = 280 left."
+      ],
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "280",
+        "source_key_text": "280",
+        "exact_check_passed": true
+      },
+      "canonical_explanation": "280 is right. Check: 60 + 140 + 280 = 480.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_is_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_only": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000141",
+      "source_file": "docs/batches/batch-003.json",
+      "source_record_sha256": "21ef500757e7b078f5ecb386759d6dc34e0d0971998a8e8182daf753bf1aa1c3",
+      "bank_status_at_authoring": "approved",
+      "method": "successive-fractions-of-remaining",
+      "diagnostic": {
+        "prompt": "Tuesday gives out 1/4 of the remaining items. What does that fraction apply to?",
+        "choices": [
+          {
+            "id": "new-remainder",
+            "text": "The amount left after Monday.",
+            "role": "correct-rule",
+            "feedback": "Yes. The word “remaining” resets the base to what is left after Monday."
+          },
+          {
+            "id": "original-total",
+            "text": "The original amount from the start.",
+            "role": "common-error",
+            "feedback": "That would be correct only if the question said the Tuesday fraction was of the original total. Here it says “of the remaining.”"
+          },
+          {
+            "id": "monday-given",
+            "text": "Only the amount given out on Monday.",
+            "role": "common-error",
+            "feedback": "The fraction applies to what is still left after Monday, not to the amount already given out."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s find the amount remaining after Monday first."
+          }
+        ],
+        "confirmation": "Was this the base you used originally, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Find Monday’s amount and subtract it from the starting amount.",
+        "Apply Tuesday’s fraction to the smaller remainder, then subtract that amount."
+      ],
+      "worked_solution": [
+        "Start with 840. Monday gives out 1/3 × 840 = 280.",
+        "After Monday, 840 − 280 = 560 remain.",
+        "Tuesday gives out 1/4 × 560 = 140.",
+        "Subtract Tuesday’s amount: 560 − 140 = 420 left."
+      ],
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "420",
+        "source_key_text": "420",
+        "exact_check_passed": true
+      },
+      "canonical_explanation": "420 is right. Check: 280 + 140 + 420 = 840.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_is_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_only": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000231",
+      "source_file": "docs/batches/batch-004.json",
+      "source_record_sha256": "908064d08ca961120783dc8dbd69acd0cc14a205b1a496d3d378bf947bbcadce",
+      "bank_status_at_authoring": "approved",
+      "method": "successive-fractions-of-remaining",
+      "diagnostic": {
+        "prompt": "Tuesday gives out 3/5 of the remaining items. What does that fraction apply to?",
+        "choices": [
+          {
+            "id": "new-remainder",
+            "text": "The amount left after Monday.",
+            "role": "correct-rule",
+            "feedback": "Yes. The word “remaining” resets the base to what is left after Monday."
+          },
+          {
+            "id": "original-total",
+            "text": "The original amount from the start.",
+            "role": "common-error",
+            "feedback": "That would be correct only if the question said the Tuesday fraction was of the original total. Here it says “of the remaining.”"
+          },
+          {
+            "id": "monday-given",
+            "text": "Only the amount given out on Monday.",
+            "role": "common-error",
+            "feedback": "The fraction applies to what is still left after Monday, not to the amount already given out."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s find the amount remaining after Monday first."
+          }
+        ],
+        "confirmation": "Was this the base you used originally, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Find Monday’s amount and subtract it from the starting amount.",
+        "Apply Tuesday’s fraction to the smaller remainder, then subtract that amount."
+      ],
+      "worked_solution": [
+        "Start with 180. Monday gives out 1/3 × 180 = 60.",
+        "After Monday, 180 − 60 = 120 remain.",
+        "Tuesday gives out 3/5 × 120 = 72.",
+        "Subtract Tuesday’s amount: 120 − 72 = 48 left."
+      ],
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "48",
+        "source_key_text": "48",
+        "exact_check_passed": true
+      },
+      "canonical_explanation": "48 is right. Check: 60 + 72 + 48 = 180.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_is_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_only": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000237",
+      "source_file": "docs/batches/batch-004.json",
+      "source_record_sha256": "4933c76f5eaffcdb4a687ef1cc35022fade754e238b4574064f4ddcea07860c9",
+      "bank_status_at_authoring": "approved",
+      "method": "successive-fractions-of-remaining",
+      "diagnostic": {
+        "prompt": "Tuesday gives out 1/3 of the remaining items. What does that fraction apply to?",
+        "choices": [
+          {
+            "id": "new-remainder",
+            "text": "The amount left after Monday.",
+            "role": "correct-rule",
+            "feedback": "Yes. The word “remaining” resets the base to what is left after Monday."
+          },
+          {
+            "id": "original-total",
+            "text": "The original amount from the start.",
+            "role": "common-error",
+            "feedback": "That would be correct only if the question said the Tuesday fraction was of the original total. Here it says “of the remaining.”"
+          },
+          {
+            "id": "monday-given",
+            "text": "Only the amount given out on Monday.",
+            "role": "common-error",
+            "feedback": "The fraction applies to what is still left after Monday, not to the amount already given out."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s find the amount remaining after Monday first."
+          }
+        ],
+        "confirmation": "Was this the base you used originally, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Find Monday’s amount and subtract it from the starting amount.",
+        "Apply Tuesday’s fraction to the smaller remainder, then subtract that amount."
+      ],
+      "worked_solution": [
+        "Start with 1440. Monday gives out 1/3 × 1440 = 480.",
+        "After Monday, 1440 − 480 = 960 remain.",
+        "Tuesday gives out 1/3 × 960 = 320.",
+        "Subtract Tuesday’s amount: 960 − 320 = 640 left."
+      ],
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "640",
+        "source_key_text": "640",
+        "exact_check_passed": true
+      },
+      "canonical_explanation": "640 is right. Check: 480 + 320 + 640 = 1440.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_is_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_only": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000314",
+      "source_file": "docs/batches/batch-005.json",
+      "source_record_sha256": "14efb4bba7c084dd49518408895f715128b5893bb79382b0250a4848e74e53df",
+      "bank_status_at_authoring": "approved",
+      "method": "successive-fractions-of-remaining",
+      "diagnostic": {
+        "prompt": "Tuesday gives out 3/5 of the remaining items. What does that fraction apply to?",
+        "choices": [
+          {
+            "id": "new-remainder",
+            "text": "The amount left after Monday.",
+            "role": "correct-rule",
+            "feedback": "Yes. The word “remaining” resets the base to what is left after Monday."
+          },
+          {
+            "id": "original-total",
+            "text": "The original amount from the start.",
+            "role": "common-error",
+            "feedback": "That would be correct only if the question said the Tuesday fraction was of the original total. Here it says “of the remaining.”"
+          },
+          {
+            "id": "monday-given",
+            "text": "Only the amount given out on Monday.",
+            "role": "common-error",
+            "feedback": "The fraction applies to what is still left after Monday, not to the amount already given out."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s find the amount remaining after Monday first."
+          }
+        ],
+        "confirmation": "Was this the base you used originally, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Find Monday’s amount and subtract it from the starting amount.",
+        "Apply Tuesday’s fraction to the smaller remainder, then subtract that amount."
+      ],
+      "worked_solution": [
+        "Start with 180. Monday gives out 1/4 × 180 = 45.",
+        "After Monday, 180 − 45 = 135 remain.",
+        "Tuesday gives out 3/5 × 135 = 81.",
+        "Subtract Tuesday’s amount: 135 − 81 = 54 left."
+      ],
+      "verified_answer": {
+        "option_id": "o2",
+        "value": "54",
+        "source_key_text": "54",
+        "exact_check_passed": true
+      },
+      "canonical_explanation": "54 is right. Check: 45 + 81 + 54 = 180.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_is_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_only": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000333",
+      "source_file": "docs/batches/batch-005.json",
+      "source_record_sha256": "e092a5fc010b18dcc0978cb4c433dacc119a59c07f97f2603402e2ee44d9aebd",
+      "bank_status_at_authoring": "approved",
+      "method": "successive-fractions-of-remaining",
+      "diagnostic": {
+        "prompt": "Tuesday gives out 1/4 of the remaining items. What does that fraction apply to?",
+        "choices": [
+          {
+            "id": "new-remainder",
+            "text": "The amount left after Monday.",
+            "role": "correct-rule",
+            "feedback": "Yes. The word “remaining” resets the base to what is left after Monday."
+          },
+          {
+            "id": "original-total",
+            "text": "The original amount from the start.",
+            "role": "common-error",
+            "feedback": "That would be correct only if the question said the Tuesday fraction was of the original total. Here it says “of the remaining.”"
+          },
+          {
+            "id": "monday-given",
+            "text": "Only the amount given out on Monday.",
+            "role": "common-error",
+            "feedback": "The fraction applies to what is still left after Monday, not to the amount already given out."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s find the amount remaining after Monday first."
+          }
+        ],
+        "confirmation": "Was this the base you used originally, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Find Monday’s amount and subtract it from the starting amount.",
+        "Apply Tuesday’s fraction to the smaller remainder, then subtract that amount."
+      ],
+      "worked_solution": [
+        "Start with 1440. Monday gives out 2/5 × 1440 = 576.",
+        "After Monday, 1440 − 576 = 864 remain.",
+        "Tuesday gives out 1/4 × 864 = 216.",
+        "Subtract Tuesday’s amount: 864 − 216 = 648 left."
+      ],
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "648",
+        "source_key_text": "648",
+        "exact_check_passed": true
+      },
+      "canonical_explanation": "648 is right. Check: 576 + 216 + 648 = 1440.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_is_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_only": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000440",
+      "source_file": "docs/batches/batch-006.json",
+      "source_record_sha256": "daec28ad3aeb8fde4b12eabea5295c73c818549418aadf9c9177ff85bbe2543d",
+      "bank_status_at_authoring": "approved",
+      "method": "successive-fractions-of-remaining",
+      "diagnostic": {
+        "prompt": "Tuesday gives out 1/6 of the remaining items. What does that fraction apply to?",
+        "choices": [
+          {
+            "id": "new-remainder",
+            "text": "The amount left after Monday.",
+            "role": "correct-rule",
+            "feedback": "Yes. The word “remaining” resets the base to what is left after Monday."
+          },
+          {
+            "id": "original-total",
+            "text": "The original amount from the start.",
+            "role": "common-error",
+            "feedback": "That would be correct only if the question said the Tuesday fraction was of the original total. Here it says “of the remaining.”"
+          },
+          {
+            "id": "monday-given",
+            "text": "Only the amount given out on Monday.",
+            "role": "common-error",
+            "feedback": "The fraction applies to what is still left after Monday, not to the amount already given out."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s find the amount remaining after Monday first."
+          }
+        ],
+        "confirmation": "Was this the base you used originally, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Find Monday’s amount and subtract it from the starting amount.",
+        "Apply Tuesday’s fraction to the smaller remainder, then subtract that amount."
+      ],
+      "worked_solution": [
+        "Start with 1200. Monday gives out 1/4 × 1200 = 300.",
+        "After Monday, 1200 − 300 = 900 remain.",
+        "Tuesday gives out 1/6 × 900 = 150.",
+        "Subtract Tuesday’s amount: 900 − 150 = 750 left."
+      ],
+      "verified_answer": {
+        "option_id": "o2",
+        "value": "750",
+        "source_key_text": "750",
+        "exact_check_passed": true
+      },
+      "canonical_explanation": "750 is right. Check: 300 + 150 + 750 = 1200.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_is_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_only": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000441",
+      "source_file": "docs/batches/batch-006.json",
+      "source_record_sha256": "d7b3f41afedaac77fd72a76cb5c094e853fed1fdd9a68afade94e2ab95fa1e77",
+      "bank_status_at_authoring": "approved",
+      "method": "successive-fractions-of-remaining",
+      "diagnostic": {
+        "prompt": "Tuesday gives out 2/3 of the remaining items. What does that fraction apply to?",
+        "choices": [
+          {
+            "id": "new-remainder",
+            "text": "The amount left after Monday.",
+            "role": "correct-rule",
+            "feedback": "Yes. The word “remaining” resets the base to what is left after Monday."
+          },
+          {
+            "id": "original-total",
+            "text": "The original amount from the start.",
+            "role": "common-error",
+            "feedback": "That would be correct only if the question said the Tuesday fraction was of the original total. Here it says “of the remaining.”"
+          },
+          {
+            "id": "monday-given",
+            "text": "Only the amount given out on Monday.",
+            "role": "common-error",
+            "feedback": "The fraction applies to what is still left after Monday, not to the amount already given out."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s find the amount remaining after Monday first."
+          }
+        ],
+        "confirmation": "Was this the base you used originally, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Find Monday’s amount and subtract it from the starting amount.",
+        "Apply Tuesday’s fraction to the smaller remainder, then subtract that amount."
+      ],
+      "worked_solution": [
+        "Start with 1080. Monday gives out 1/6 × 1080 = 180.",
+        "After Monday, 1080 − 180 = 900 remain.",
+        "Tuesday gives out 2/3 × 900 = 600.",
+        "Subtract Tuesday’s amount: 900 − 600 = 300 left."
+      ],
+      "verified_answer": {
+        "option_id": "o2",
+        "value": "300",
+        "source_key_text": "300",
+        "exact_check_passed": true
+      },
+      "canonical_explanation": "300 is right. Check: 180 + 600 + 300 = 1080.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_is_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_only": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000540",
+      "source_file": "docs/batches/batch-007.json",
+      "source_record_sha256": "a250cebc1281558ede67e5a9ac4b63de4776585f669eaf2f053778f32f1aa05c",
+      "bank_status_at_authoring": "approved",
+      "method": "successive-fractions-of-remaining",
+      "diagnostic": {
+        "prompt": "Tuesday gives out 1/3 of the remaining items. What does that fraction apply to?",
+        "choices": [
+          {
+            "id": "new-remainder",
+            "text": "The amount left after Monday.",
+            "role": "correct-rule",
+            "feedback": "Yes. The word “remaining” resets the base to what is left after Monday."
+          },
+          {
+            "id": "original-total",
+            "text": "The original amount from the start.",
+            "role": "common-error",
+            "feedback": "That would be correct only if the question said the Tuesday fraction was of the original total. Here it says “of the remaining.”"
+          },
+          {
+            "id": "monday-given",
+            "text": "Only the amount given out on Monday.",
+            "role": "common-error",
+            "feedback": "The fraction applies to what is still left after Monday, not to the amount already given out."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s find the amount remaining after Monday first."
+          }
+        ],
+        "confirmation": "Was this the base you used originally, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Find Monday’s amount and subtract it from the starting amount.",
+        "Apply Tuesday’s fraction to the smaller remainder, then subtract that amount."
+      ],
+      "worked_solution": [
+        "Start with 720. Monday gives out 1/8 × 720 = 90.",
+        "After Monday, 720 − 90 = 630 remain.",
+        "Tuesday gives out 1/3 × 630 = 210.",
+        "Subtract Tuesday’s amount: 630 − 210 = 420 left."
+      ],
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "420",
+        "source_key_text": "420",
+        "exact_check_passed": true
+      },
+      "canonical_explanation": "420 is right. Check: 90 + 210 + 420 = 720.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_is_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_only": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000541",
+      "source_file": "docs/batches/batch-007.json",
+      "source_record_sha256": "5daa427e921006de4b0f73099b1ec580943cc111f3a2f519b10c8285ad122a68",
+      "bank_status_at_authoring": "approved",
+      "method": "successive-fractions-of-remaining",
+      "diagnostic": {
+        "prompt": "Tuesday gives out 1/4 of the remaining items. What does that fraction apply to?",
+        "choices": [
+          {
+            "id": "new-remainder",
+            "text": "The amount left after Monday.",
+            "role": "correct-rule",
+            "feedback": "Yes. The word “remaining” resets the base to what is left after Monday."
+          },
+          {
+            "id": "original-total",
+            "text": "The original amount from the start.",
+            "role": "common-error",
+            "feedback": "That would be correct only if the question said the Tuesday fraction was of the original total. Here it says “of the remaining.”"
+          },
+          {
+            "id": "monday-given",
+            "text": "Only the amount given out on Monday.",
+            "role": "common-error",
+            "feedback": "The fraction applies to what is still left after Monday, not to the amount already given out."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s find the amount remaining after Monday first."
+          }
+        ],
+        "confirmation": "Was this the base you used originally, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Find Monday’s amount and subtract it from the starting amount.",
+        "Apply Tuesday’s fraction to the smaller remainder, then subtract that amount."
+      ],
+      "worked_solution": [
+        "Start with 240. Monday gives out 1/4 × 240 = 60.",
+        "After Monday, 240 − 60 = 180 remain.",
+        "Tuesday gives out 1/4 × 180 = 45.",
+        "Subtract Tuesday’s amount: 180 − 45 = 135 left."
+      ],
+      "verified_answer": {
+        "option_id": "o2",
+        "value": "135",
+        "source_key_text": "135",
+        "exact_check_passed": true
+      },
+      "canonical_explanation": "135 is right. Check: 60 + 45 + 135 = 240.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_is_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_only": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000626",
+      "source_file": "docs/batches/batch-008.json",
+      "source_record_sha256": "56ac304955ab4d3065d9fed73c8438705d0b170fbb0e85b3ee8ca1339d1f66fd",
+      "bank_status_at_authoring": "approved",
+      "method": "successive-fractions-of-remaining",
+      "diagnostic": {
+        "prompt": "Tuesday gives out 3/5 of the remaining items. What does that fraction apply to?",
+        "choices": [
+          {
+            "id": "new-remainder",
+            "text": "The amount left after Monday.",
+            "role": "correct-rule",
+            "feedback": "Yes. The word “remaining” resets the base to what is left after Monday."
+          },
+          {
+            "id": "original-total",
+            "text": "The original amount from the start.",
+            "role": "common-error",
+            "feedback": "That would be correct only if the question said the Tuesday fraction was of the original total. Here it says “of the remaining.”"
+          },
+          {
+            "id": "monday-given",
+            "text": "Only the amount given out on Monday.",
+            "role": "common-error",
+            "feedback": "The fraction applies to what is still left after Monday, not to the amount already given out."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s find the amount remaining after Monday first."
+          }
+        ],
+        "confirmation": "Was this the base you used originally, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Find Monday’s amount and subtract it from the starting amount.",
+        "Apply Tuesday’s fraction to the smaller remainder, then subtract that amount."
+      ],
+      "worked_solution": [
+        "Start with 1200. Monday gives out 3/8 × 1200 = 450.",
+        "After Monday, 1200 − 450 = 750 remain.",
+        "Tuesday gives out 3/5 × 750 = 450.",
+        "Subtract Tuesday’s amount: 750 − 450 = 300 left."
+      ],
+      "verified_answer": {
+        "option_id": "o2",
+        "value": "300",
+        "source_key_text": "300",
+        "exact_check_passed": true
+      },
+      "canonical_explanation": "300 is right. Check: 450 + 450 + 300 = 1200.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_is_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_only": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000632",
+      "source_file": "docs/batches/batch-008.json",
+      "source_record_sha256": "44175b9f1a678ae726e82a2442403894d29e50b178f6bfcb1500c1cd745f6d24",
+      "bank_status_at_authoring": "approved",
+      "method": "successive-fractions-of-remaining",
+      "diagnostic": {
+        "prompt": "Tuesday gives out 3/5 of the remaining items. What does that fraction apply to?",
+        "choices": [
+          {
+            "id": "new-remainder",
+            "text": "The amount left after Monday.",
+            "role": "correct-rule",
+            "feedback": "Yes. The word “remaining” resets the base to what is left after Monday."
+          },
+          {
+            "id": "original-total",
+            "text": "The original amount from the start.",
+            "role": "common-error",
+            "feedback": "That would be correct only if the question said the Tuesday fraction was of the original total. Here it says “of the remaining.”"
+          },
+          {
+            "id": "monday-given",
+            "text": "Only the amount given out on Monday.",
+            "role": "common-error",
+            "feedback": "The fraction applies to what is still left after Monday, not to the amount already given out."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s find the amount remaining after Monday first."
+          }
+        ],
+        "confirmation": "Was this the base you used originally, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Find Monday’s amount and subtract it from the starting amount.",
+        "Apply Tuesday’s fraction to the smaller remainder, then subtract that amount."
+      ],
+      "worked_solution": [
+        "Start with 1440. Monday gives out 1/8 × 1440 = 180.",
+        "After Monday, 1440 − 180 = 1260 remain.",
+        "Tuesday gives out 3/5 × 1260 = 756.",
+        "Subtract Tuesday’s amount: 1260 − 756 = 504 left."
+      ],
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "504",
+        "source_key_text": "504",
+        "exact_check_passed": true
+      },
+      "canonical_explanation": "504 is right. Check: 180 + 756 + 504 = 1440.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_is_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_only": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000741",
+      "source_file": "docs/batches/batch-009.json",
+      "source_record_sha256": "27d589ee2508bdcd011ec475b8248261f11b12422c7bf7cd9123acdec2196526",
+      "bank_status_at_authoring": "approved",
+      "method": "successive-fractions-of-remaining",
+      "diagnostic": {
+        "prompt": "Tuesday gives out 1/6 of the remaining items. What does that fraction apply to?",
+        "choices": [
+          {
+            "id": "new-remainder",
+            "text": "The amount left after Monday.",
+            "role": "correct-rule",
+            "feedback": "Yes. The word “remaining” resets the base to what is left after Monday."
+          },
+          {
+            "id": "original-total",
+            "text": "The original amount from the start.",
+            "role": "common-error",
+            "feedback": "That would be correct only if the question said the Tuesday fraction was of the original total. Here it says “of the remaining.”"
+          },
+          {
+            "id": "monday-given",
+            "text": "Only the amount given out on Monday.",
+            "role": "common-error",
+            "feedback": "The fraction applies to what is still left after Monday, not to the amount already given out."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s find the amount remaining after Monday first."
+          }
+        ],
+        "confirmation": "Was this the base you used originally, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Find Monday’s amount and subtract it from the starting amount.",
+        "Apply Tuesday’s fraction to the smaller remainder, then subtract that amount."
+      ],
+      "worked_solution": [
+        "Start with 480. Monday gives out 1/8 × 480 = 60.",
+        "After Monday, 480 − 60 = 420 remain.",
+        "Tuesday gives out 1/6 × 420 = 70.",
+        "Subtract Tuesday’s amount: 420 − 70 = 350 left."
+      ],
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "350",
+        "source_key_text": "350",
+        "exact_check_passed": true
+      },
+      "canonical_explanation": "350 is right. Check: 60 + 70 + 350 = 480.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_is_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_only": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000819",
+      "source_file": "docs/batches/batch-010.json",
+      "source_record_sha256": "7e08b1418010870caf0492fd2cd0af14fc4a42aa8e0e21a6d9491d4d3185d78d",
+      "bank_status_at_authoring": "approved",
+      "method": "successive-fractions-of-remaining",
+      "diagnostic": {
+        "prompt": "Tuesday gives out 1/3 of the remaining items. What does that fraction apply to?",
+        "choices": [
+          {
+            "id": "new-remainder",
+            "text": "The amount left after Monday.",
+            "role": "correct-rule",
+            "feedback": "Yes. The word “remaining” resets the base to what is left after Monday."
+          },
+          {
+            "id": "original-total",
+            "text": "The original amount from the start.",
+            "role": "common-error",
+            "feedback": "That would be correct only if the question said the Tuesday fraction was of the original total. Here it says “of the remaining.”"
+          },
+          {
+            "id": "monday-given",
+            "text": "Only the amount given out on Monday.",
+            "role": "common-error",
+            "feedback": "The fraction applies to what is still left after Monday, not to the amount already given out."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s find the amount remaining after Monday first."
+          }
+        ],
+        "confirmation": "Was this the base you used originally, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Find Monday’s amount and subtract it from the starting amount.",
+        "Apply Tuesday’s fraction to the smaller remainder, then subtract that amount."
+      ],
+      "worked_solution": [
+        "Start with 600. Monday gives out 2/5 × 600 = 240.",
+        "After Monday, 600 − 240 = 360 remain.",
+        "Tuesday gives out 1/3 × 360 = 120.",
+        "Subtract Tuesday’s amount: 360 − 120 = 240 left."
+      ],
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "240",
+        "source_key_text": "240",
+        "exact_check_passed": true
+      },
+      "canonical_explanation": "240 is right. Check: 240 + 120 + 240 = 600.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_is_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_only": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000841",
+      "source_file": "docs/batches/batch-010.json",
+      "source_record_sha256": "45a4f256012e6a80c61c8649996c162d5bd56d380ed5567664b42a4447145eba",
+      "bank_status_at_authoring": "approved",
+      "method": "successive-fractions-of-remaining",
+      "diagnostic": {
+        "prompt": "Tuesday gives out 1/6 of the remaining items. What does that fraction apply to?",
+        "choices": [
+          {
+            "id": "new-remainder",
+            "text": "The amount left after Monday.",
+            "role": "correct-rule",
+            "feedback": "Yes. The word “remaining” resets the base to what is left after Monday."
+          },
+          {
+            "id": "original-total",
+            "text": "The original amount from the start.",
+            "role": "common-error",
+            "feedback": "That would be correct only if the question said the Tuesday fraction was of the original total. Here it says “of the remaining.”"
+          },
+          {
+            "id": "monday-given",
+            "text": "Only the amount given out on Monday.",
+            "role": "common-error",
+            "feedback": "The fraction applies to what is still left after Monday, not to the amount already given out."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s find the amount remaining after Monday first."
+          }
+        ],
+        "confirmation": "Was this the base you used originally, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Find Monday’s amount and subtract it from the starting amount.",
+        "Apply Tuesday’s fraction to the smaller remainder, then subtract that amount."
+      ],
+      "worked_solution": [
+        "Start with 900. Monday gives out 2/5 × 900 = 360.",
+        "After Monday, 900 − 360 = 540 remain.",
+        "Tuesday gives out 1/6 × 540 = 90.",
+        "Subtract Tuesday’s amount: 540 − 90 = 450 left."
+      ],
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "450",
+        "source_key_text": "450",
+        "exact_check_passed": true
+      },
+      "canonical_explanation": "450 is right. Check: 360 + 90 + 450 = 900.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_is_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_only": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000930",
+      "source_file": "docs/batches/batch-011.json",
+      "source_record_sha256": "40493d19b10191e9273bb423f44d435646c6b004e1bd522b85f8c59c985679f0",
+      "bank_status_at_authoring": "approved",
+      "method": "successive-fractions-of-remaining",
+      "diagnostic": {
+        "prompt": "Tuesday gives out 3/4 of the remaining items. What does that fraction apply to?",
+        "choices": [
+          {
+            "id": "new-remainder",
+            "text": "The amount left after Monday.",
+            "role": "correct-rule",
+            "feedback": "Yes. The word “remaining” resets the base to what is left after Monday."
+          },
+          {
+            "id": "original-total",
+            "text": "The original amount from the start.",
+            "role": "common-error",
+            "feedback": "That would be correct only if the question said the Tuesday fraction was of the original total. Here it says “of the remaining.”"
+          },
+          {
+            "id": "monday-given",
+            "text": "Only the amount given out on Monday.",
+            "role": "common-error",
+            "feedback": "The fraction applies to what is still left after Monday, not to the amount already given out."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s find the amount remaining after Monday first."
+          }
+        ],
+        "confirmation": "Was this the base you used originally, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Find Monday’s amount and subtract it from the starting amount.",
+        "Apply Tuesday’s fraction to the smaller remainder, then subtract that amount."
+      ],
+      "worked_solution": [
+        "Start with 480. Monday gives out 1/6 × 480 = 80.",
+        "After Monday, 480 − 80 = 400 remain.",
+        "Tuesday gives out 3/4 × 400 = 300.",
+        "Subtract Tuesday’s amount: 400 − 300 = 100 left."
+      ],
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "100",
+        "source_key_text": "100",
+        "exact_check_passed": true
+      },
+      "canonical_explanation": "100 is right. Check: 80 + 300 + 100 = 480.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_is_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_only": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-FRAC-DEC-000941",
+      "source_file": "docs/batches/batch-011.json",
+      "source_record_sha256": "c4415b72fccf3bbe9b95490fa19b13776c321275065984e54f7e2a7cb733587e",
+      "bank_status_at_authoring": "approved",
+      "method": "successive-fractions-of-remaining",
+      "diagnostic": {
+        "prompt": "Tuesday gives out 1/6 of the remaining items. What does that fraction apply to?",
+        "choices": [
+          {
+            "id": "new-remainder",
+            "text": "The amount left after Monday.",
+            "role": "correct-rule",
+            "feedback": "Yes. The word “remaining” resets the base to what is left after Monday."
+          },
+          {
+            "id": "original-total",
+            "text": "The original amount from the start.",
+            "role": "common-error",
+            "feedback": "That would be correct only if the question said the Tuesday fraction was of the original total. Here it says “of the remaining.”"
+          },
+          {
+            "id": "monday-given",
+            "text": "Only the amount given out on Monday.",
+            "role": "common-error",
+            "feedback": "The fraction applies to what is still left after Monday, not to the amount already given out."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Let’s find the amount remaining after Monday first."
+          }
+        ],
+        "confirmation": "Was this the base you used originally, or did you choose it after seeing the options?"
+      },
+      "hints": [
+        "Find Monday’s amount and subtract it from the starting amount.",
+        "Apply Tuesday’s fraction to the smaller remainder, then subtract that amount."
+      ],
+      "worked_solution": [
+        "Start with 960. Monday gives out 2/5 × 960 = 384.",
+        "After Monday, 960 − 384 = 576 remain.",
+        "Tuesday gives out 1/6 × 576 = 96.",
+        "Subtract Tuesday’s amount: 576 − 96 = 480 left."
+      ],
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "480",
+        "source_key_text": "480",
+        "exact_check_passed": true
+      },
+      "canonical_explanation": "480 is right. Check: 384 + 96 + 480 = 960.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_is_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_only": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0006",
+      "source_file": "docs/research/gap-fill-002.json",
+      "source_record_sha256": "885ea7d3cb71672eda6dedc0a0cb7c09d313b44578eefe9c6570119d338aa2e7",
+      "bank_status_at_authoring": "approved",
+      "method": "fraction-addition",
+      "diagnostic": {
+        "prompt": "Before adding fractions, what should you do with their denominators?",
+        "choices": [
+          {
+            "id": "same",
+            "text": "Rewrite both fractions with a common denominator.",
+            "role": "correct-rule",
+            "feedback": "Right. Equivalent fractions with a shared denominator can be added by combining their numerators."
+          },
+          {
+            "id": "add-denominators",
+            "text": "Add the denominators directly.",
+            "role": "common-error",
+            "feedback": "The denominator names the size of the parts. First express both amounts using the same-sized parts."
+          },
+          {
+            "id": "numerators-only",
+            "text": "Add numerators and keep the first denominator.",
+            "role": "common-error",
+            "feedback": "This can combine different-sized parts incorrectly. Make the denominators match first."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. We can find a common-sized part before adding."
+          }
+        ],
+        "confirmation": "Was this the method you used before answering, or is this a new insight?"
+      },
+      "hints": [
+        "Find a common denominator, such as the least common multiple.",
+        "Rewrite each fraction equivalently, then add the numerators."
+      ],
+      "worked_solution": [
+        "Rewrite both fractions with denominator 12.",
+        "3/4 = 9/12 and 5/6 = 10/12.",
+        "9/12 + 10/12 = 19/12 = 1 7/12."
+      ],
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "19/12",
+        "source_key_text": "1 7/12",
+        "exact_check_passed": true
+      },
+      "canonical_explanation": "LCD 12: 9/12 + 10/12 = 19/12 = 1 7/12.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_is_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_only": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0007",
+      "source_file": "docs/research/gap-fill-002.json",
+      "source_record_sha256": "b55be75708912f5f7702ea9bd6b96554d8a250f6347a5224ead907dafec507cd",
+      "bank_status_at_authoring": "approved",
+      "method": "decimal-multiplication",
+      "diagnostic": {
+        "prompt": "What is a reliable way to estimate a product when one factor is 0.04?",
+        "choices": [
+          {
+            "id": "hundredth",
+            "text": "0.04 is four hundredths, so the product is four hundredths of the other factor.",
+            "role": "correct-rule",
+            "feedback": "Correct. The value of 0.04 is 4/100, not 4."
+          },
+          {
+            "id": "use-four",
+            "text": "Treat 0.04 as 4 and multiply.",
+            "role": "common-error",
+            "feedback": "That drops the hundredths place and makes the result 100 times too large."
+          },
+          {
+            "id": "add",
+            "text": "Add the two factors.",
+            "role": "common-error",
+            "feedback": "The operation is multiplication. Use 0.04 as four hundredths of the other amount."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Rewrite 0.04 as 4/100 and estimate the size."
+          }
+        ],
+        "confirmation": "Was this the method you used before answering, or is this a new insight?"
+      },
+      "hints": [
+        "Rewrite 0.04 as 4/100.",
+        "Multiply by 4, then divide by 100."
+      ],
+      "worked_solution": [
+        "2.5 × 0.04 = 2.5 × 4/100.",
+        "2.5 × 4 = 10; 10/100 = 0.10 = 0.1."
+      ],
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "1/10",
+        "source_key_text": "0.1",
+        "exact_check_passed": true
+      },
+      "canonical_explanation": "25 × 4 = 100; there are 1 + 2 = 3 decimal places, so 0.100 = 0.1.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_is_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_only": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0008",
+      "source_file": "docs/research/gap-fill-002.json",
+      "source_record_sha256": "3276101d5ca0b6feb5bd8974a6b26a4548b509c22aa54ecea49e3afc25b6e0d6",
+      "bank_status_at_authoring": "approved",
+      "method": "decimal-division",
+      "diagnostic": {
+        "prompt": "When dividing by 0.08, how can you make the divisor a whole number without changing the quotient?",
+        "choices": [
+          {
+            "id": "both",
+            "text": "Multiply both the dividend and divisor by 100.",
+            "role": "correct-rule",
+            "feedback": "Yes. Scaling both numbers equally preserves the quotient and changes 0.08 to 8."
+          },
+          {
+            "id": "divisor-only",
+            "text": "Move the divisor decimal two places but leave the dividend unchanged.",
+            "role": "common-error",
+            "feedback": "Changing only one number changes the quotient. Apply the same scale factor to both."
+          },
+          {
+            "id": "times-ten",
+            "text": "Multiply both by 10, leaving the divisor as 0.8.",
+            "role": "common-error",
+            "feedback": "That keeps the quotient but does not yet make the divisor whole. Use a factor of 100."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Choose a scale factor that turns 0.08 into 8."
+          }
+        ],
+        "confirmation": "Was this the method you used before answering, or is this a new insight?"
+      },
+      "hints": [
+        "Choose a power of ten that makes 0.08 a whole number.",
+        "Scale the dividend by the same factor, then divide."
+      ],
+      "worked_solution": [
+        "Multiply both numbers by 100: 7.2 ÷ 0.08 = 720 ÷ 8.",
+        "720 ÷ 8 = 90."
+      ],
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "90",
+        "source_key_text": "90",
+        "exact_check_passed": true
+      },
+      "canonical_explanation": "Multiply both by 100: 720 ÷ 8 = 90.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_is_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_only": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0009",
+      "source_file": "docs/research/gap-fill-002.json",
+      "source_record_sha256": "3d926ca9925cc1109e4cb0942168ce0da5439e7d703b7b6f6409ac65f8b8bbe5",
+      "bank_status_at_authoring": "approved",
+      "method": "compare-fractions-and-decimals",
+      "diagnostic": {
+        "prompt": "How can you compare 0.6, 5/8, 0.58, and 3/5 fairly?",
+        "choices": [
+          {
+            "id": "same-form",
+            "text": "Convert each value to the same form, then compare.",
+            "role": "correct-rule",
+            "feedback": "Correct. For example, 0.6 = 0.60 and 5/8 = 0.625, so their sizes can be compared directly."
+          },
+          {
+            "id": "numerator",
+            "text": "Compare only the numerators of the fractions.",
+            "role": "common-error",
+            "feedback": "The denominator changes the size of each fractional part. Compare equivalent values instead."
+          },
+          {
+            "id": "digits",
+            "text": "Assume more written decimal digits means a larger number.",
+            "role": "common-error",
+            "feedback": "Trailing zeros do not change value. Align place values, or use a common denominator."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Convert the fractions to decimals or to a common denominator."
+          }
+        ],
+        "confirmation": "Was this the method you used before answering, or is this a new insight?"
+      },
+      "hints": [
+        "Convert all values to decimals or a common denominator.",
+        "Compare their values after conversion."
+      ],
+      "worked_solution": [
+        "0.6 = 0.60; 3/5 = 0.60; 0.58 = 0.58; 5/8 = 0.625.",
+        "0.625 is greatest, so 5/8 is greatest."
+      ],
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "5/8",
+        "source_key_text": "5/8",
+        "exact_check_passed": true
+      },
+      "canonical_explanation": "5/8 = 0.625, which beats 0.6 = 3/5 and 0.58.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_is_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_only": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0010",
+      "source_file": "docs/research/gap-fill-002.json",
+      "source_record_sha256": "aa2247792d826d98c1fdfd109737919eff416fffb0aba33fc856d686ed0c2350",
+      "bank_status_at_authoring": "approved",
+      "method": "fractions-of-the-same-whole-remaining",
+      "diagnostic": {
+        "prompt": "The problem says both fractions are of the same ream. What is the second fraction based on?",
+        "choices": [
+          {
+            "id": "same-whole",
+            "text": "The original 500-sheet ream.",
+            "role": "correct-rule",
+            "feedback": "Yes. “Of the same ream” keeps the original whole as the base for both fractions."
+          },
+          {
+            "id": "remainder",
+            "text": "The amount left after Monday.",
+            "role": "common-error",
+            "feedback": "That would apply if the wording said “of the remaining.” Here both fractions refer to the same original ream."
+          },
+          {
+            "id": "monday-use",
+            "text": "The number of sheets used Monday.",
+            "role": "common-error",
+            "feedback": "The second fraction is of the ream, not of Monday’s used amount."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Keep the original whole separate from the amount already used."
+          }
+        ],
+        "confirmation": "Was this the method you used before answering, or is this a new insight?"
+      },
+      "hints": [
+        "Both fractions use the original 500-sheet ream.",
+        "Find each part of 500, then subtract both used amounts."
+      ],
+      "worked_solution": [
+        "Monday: 2/5 × 500 = 200 sheets.",
+        "Tuesday: 1/4 × 500 = 125 sheets, using the original whole as the base.",
+        "Left: 500 − 200 − 125 = 175 sheets."
+      ],
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "175",
+        "source_key_text": "175",
+        "exact_check_passed": true
+      },
+      "canonical_explanation": "Used 200 + 125 = 325 sheets, so 500 − 325 = 175 remain.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_is_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_only": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-GAP2-NUM-OPS-FRAC-DEC-0011",
+      "source_file": "docs/research/gap-fill-002.json",
+      "source_record_sha256": "4e13e1775445e70ac8c58ca221be0b41d18b0040c0cc9eb5ae04eefa6a4a7973",
+      "bank_status_at_authoring": "approved",
+      "method": "fraction-multiplication",
+      "diagnostic": {
+        "prompt": "Before multiplying a mixed number by a fraction, what should you do with the mixed number?",
+        "choices": [
+          {
+            "id": "convert",
+            "text": "Convert it to an improper fraction.",
+            "role": "correct-rule",
+            "feedback": "Yes. Then multiply numerators and denominators and simplify."
+          },
+          {
+            "id": "multiply-whole",
+            "text": "Multiply only the whole-number part.",
+            "role": "common-error",
+            "feedback": "That leaves out the fractional part. Convert the entire mixed number first."
+          },
+          {
+            "id": "add-parts",
+            "text": "Add the numerator and denominator to the whole number.",
+            "role": "common-error",
+            "feedback": "A mixed number represents a whole amount plus a fraction, not a sum of its written digits."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Write the mixed number as one improper fraction first."
+          }
+        ],
+        "confirmation": "Was this the method you used before answering, or is this a new insight?"
+      },
+      "hints": [
+        "Write the mixed number as an improper fraction.",
+        "Multiply across, then simplify."
+      ],
+      "worked_solution": [
+        "Convert 1 2/3 to 5/3.",
+        "5/3 × 3/5 = 15/15 = 1."
+      ],
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "1",
+        "source_key_text": "1",
+        "exact_check_passed": true
+      },
+      "canonical_explanation": "1 2/3 = 5/3, and 5/3 × 3/5 = 15/15 = 1.",
+      "transfer": {
+        "approved_question_id": null,
+        "status": "gap_unresolved"
+      },
+      "assistance_contract": {
+        "diagnostic_is_assisted": true,
+        "diagnostic_does_not_establish_mastery": true,
+        "uncertain_or_misclick_assigns_no_hypothesis": true,
+        "confirmation_is_self_report_only": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    }
+  ],
+  "excluded_nonapproved_ids": [
+    "CIVIO-D1022-SPMATH-0004",
+    "CIVIO-D1022-SPMATH-0001",
+    "CIVIO-NUM-FRAC-DEC-926001",
+    "CIVIO-NUM-FRAC-DEC-926002",
+    "CIVIO-NUM-FRAC-DEC-926003",
+    "CIVIO-NUM-FRAC-DEC-926004",
+    "CIVIO-NUM-FRAC-DEC-926005",
+    "CIVIO-NUM-FRAC-DEC-926006",
+    "CIVIO-NUM-FRAC-DEC-926007",
+    "CIVIO-NUM-FRAC-DEC-926008",
+    "CIVIO-NUM-FRAC-DEC-926009",
+    "CIVIO-NUM-FRAC-DEC-926010",
+    "CIVIO-NUM-FRAC-DEC-926011",
+    "CIVIO-NUM-FRAC-DEC-926012",
+    "CIVIO-NUM-PCT-BASIC-926013",
+    "CIVIO-NUM-PCT-BASIC-926014",
+    "CIVIO-NUM-PCT-BASIC-926015",
+    "CIVIO-NUM-PCT-BASIC-926018",
+    "CIVIO-NUM-PCT-BASIC-926019",
+    "CIVIO-NUM-PCT-BASIC-926022",
+    "CIVIO-D1022-SPMATH-0005",
+    "CIVIO-D1022-SPMATH-0007",
+    "CIVIO-D1022-SPMATH-0009",
+    "CIVIO-D1022-SPMATH-0011",
+    "CIVIO-B3-NUM-DECIMAL-0175",
+    "CIVIO-B3-NUM-FRAC-DEC-0180",
+    "CIVIO-B3-NUM-FRAC-DEC-0183",
+    "CIVIO-B3-NUM-PCT-BASIC-0173",
+    "CIVIO-B3-NUM-PCT-BASIC-0184",
+    "CIVIO-B3-NUM-PCT-BASIC-0265",
+    "CIVIO-B3-NUM-PROPERTY-0041",
+    "CIVIO-B3-NUM-PROPERTY-0042",
+    "CIVIO-B3-NUM-PROPERTY-0043",
+    "CIVIO-B3-NUM-PROPERTY-0044",
+    "CIVIO-B3-NUM-PROPERTY-0176",
+    "CIVIO-B3-NUM-PROPERTY-0178",
+    "CIVIO-B3-NUM-PROPERTY-0179",
+    "CIVIO-B3-NUM-PROPERTY-0263",
+    "CIVIO-D1022-SPMATH-0002",
+    "CIVIO-D1022-SPMATH-0003"
+  ],
+  "notes": [
+    "The audit covers 65 fraction, decimal, percentage and basic-operation items.",
+    "The tutoring sidecar includes only 25 approved-source items; 40 reviewed/draft records are excluded.",
+    "Nineteen approved items repeat one two-day successive-remainder structure.",
+    "All tutoring diagnostics and retries are assisted; no key, approval, source, or runtime state was changed.",
+    "No distinct-family transfer was independently verified."
+  ]
+}

@@ -98,3 +98,23 @@ python3 docs/research/dexter3/validate_word_math87.py
 ```
 
 This is answer verification and a draft teaching scaffold, not independent editorial approval. Review calculations for distractors as distinct from checking their explanation presence; assess whether the diagnostic choices represent plausible learner strategies; and find appropriate approved transfer items before any runtime use.
+
+## Numerical batch 3: fraction, decimal, percentage and operation foundations
+
+Checkpoint parent: `d215839e34884296e61bdce7c16961df02f0a74a`.
+
+The exact audit covers **65 records** across five queued groups: 41 fraction/decimal, 6 fraction/decimal operations, 9 basic percentages, 1 decimal and 8 basic operations. Deterministic templates computed all 65 answers with exact rational arithmetic, compared each result against all four choices, and confirmed exactly one matching stored key. The bank records include explanations for each wrong choice; their mathematical validity was not independently recalculated in this pass. No key conflict or unsupported calculation remained. This is key verification, not full editorial or misconception approval.
+
+The 25 records labeled approved received draft tutoring bindings. The 40 records labeled reviewed or draft were audited but excluded from bindings. Of the approved set, 19 share one successive-remainder question structure: take a fraction from the starting quantity, then take a second fraction from what remains. The other six cover fraction addition, decimal multiplication/division, comparing fractions and decimals, fractions of the same whole, and fraction multiplication. They do not yet supply broad approved foundational coverage: several useful basic fraction skills appear only in non-approved records in this audited slice.
+
+Percentage-base coverage is especially limited in the approved items: all nine basic-percentage records here are reviewed or draft, so none was bound to tutoring metadata. The reverse-raise item remains a draft. The 25 tutoring bindings ask about denominator/base interpretation, use an assisted diagnostic, and provide a checked solution. None has an approved transfer mapping. Nothing was activated or approved during this pass.
+
+Run:
+
+```bash
+python3 docs/research/dexter3/audit_foundation65.py
+python3 docs/research/dexter3/build_foundation65_tutoring.py
+python3 docs/research/dexter3/validate_foundation65.py
+```
+
+Across the three queued numerical batches, 236 distinct records have targeted exact-key checks and 144 approved-source tutoring bindings are drafted. Remaining numerical groups still include the mixed `NUM-WP-RATE` pool, ratio, multiplication-pattern sequences, percent change and other topics. Do not read the current batch count as completion of the 2,100-item audit.
