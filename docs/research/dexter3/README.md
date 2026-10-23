@@ -130,3 +130,5 @@ See [resumable production](BULK_EXECUTION.md), [current summary](bulk-summary.js
 **Numerical queue batch 6:** [38-item price-change, sale-price and simple-interest audit](BULK_EXECUTION.md#numerical-batch-6-successive-price-changes-sale-price-and-simple-interest). Existing 20 bindings were preserved; 17 uncovered approved sources received incremental draft guides.
 
 **Numerical queue batch 7:** [43-item ratio/proportion audit](BULK_EXECUTION.md#numerical-batch-7-ratio-and-proportional-allocation). Existing 20 guides were preserved; nine uncovered approved two-person share questions received incremental drafts, while 14 nonapproved sources remain excluded.
+
+**Numerical queue batch 8:** [Final two numerical-family answer checks](BULK_EXECUTION.md#numerical-batch-8-final-sequence-and-unit-conversion-records). All 400 queued numerical records now have targeted answer checks; this is not full bank completion.

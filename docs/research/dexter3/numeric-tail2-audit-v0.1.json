@@ -1,0 +1,51 @@
+{
+  "schema_version": "dexter-numeric-tail2-audit-v0.1",
+  "baseline_commit": "8ec91ef1386a7755e59c0e47ef9e0ac1d6c6c4f7",
+  "method": "Direct exact arithmetic. The sequence item uses alternating increasing and decreasing subsequences; the duration conversion uses 60 minutes per hour.",
+  "summary": {
+    "record_count": 2,
+    "by_family": {
+      "NUM-SEQ-ALT": 1,
+      "NUM-UNIT": 1
+    },
+    "all_records_draft": true,
+    "key_matches": 2,
+    "key_conflicts": 0,
+    "tutoring_bindings_added": 0,
+    "status": "draft_audit_only",
+    "human_review": null,
+    "runtime_eligible": false
+  },
+  "items": [
+    {
+      "question_id": "CIVIO-D1022-NUMSEQ-0006",
+      "status": "draft",
+      "source_record_sha256": "ea77e45186829b7480d0e35a7b77ba7bbf56890af08086168079f8d7987803a8",
+      "stem": "Find the next number in the series: 6, 30, 9, 27, 12, 24, ___",
+      "method": "two-interleaved-arithmetic-sequences",
+      "calculated_answer": "15",
+      "key_option_id": "o3",
+      "matching_options": [
+        "o3"
+      ],
+      "key_matches": true,
+      "manual_review": "Sequence continuation remains an editorial judgment; alternating rule and options support the stored result.",
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-B3-NUM-UNIT-0264",
+      "status": "draft",
+      "source_record_sha256": "c606a0c359b0d311740ca772ee2ca1a3b9d484340b5efcc8ceec0ff03641a15e",
+      "stem": "How many minutes are in 3.5 hours?",
+      "method": "hours-times-60-minutes-per-hour",
+      "calculated_answer": "210",
+      "key_option_id": "n1",
+      "matching_options": [
+        "n1"
+      ],
+      "key_matches": true,
+      "manual_review": null,
+      "runtime_eligible": false
+    }
+  ]
+}

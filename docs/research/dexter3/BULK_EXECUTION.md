@@ -191,4 +191,19 @@ python3 docs/research/dexter3/build_ratio43_tutoring.py
 python3 docs/research/dexter3/validate_ratio43.py
 ```
 
-Across seven numerical batches, **398 distinct records** have targeted exact answer checks and **217 incremental approved-source tutoring bindings** are drafted. These are audit slices, not full coverage or human approvals.
+Across seven numerical batches, **398 distinct records** had targeted exact answer checks and **217 incremental approved-source tutoring bindings** were drafted. Batch 8 closes the remaining two singleton families below. These figures cover the numeric queue slice; they do not cover the full 2,100-record bank or constitute human approval.
+
+## Numerical batch 8: final sequence and unit-conversion records
+
+Checkpoint parent: `8ec91ef1386a7755e59c0e47ef9e0ac1d6c6c4f7`.
+
+This closes the two remaining numeric-family records: one draft alternating sequence and one draft hours-to-minutes conversion. Both calculations match exactly one stored answer. No tutoring binding is created for either draft. The sequence rule is a reasonable reading of the given alternating subsequences; its continuation still needs ordinary editorial judgment.
+
+Run:
+
+```bash
+python3 docs/research/dexter3/audit_numeric_tail2.py
+python3 docs/research/dexter3/validate_numeric_tail2.py
+```
+
+The queued numerical families now have targeted exact answer checks for **all 400 of 400 records** represented in those groups. This is not a 2,100-item audit completion claim: the English, Filipino, analytical, clerical and General Information queues remain.
