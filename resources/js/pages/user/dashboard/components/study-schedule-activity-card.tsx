@@ -120,7 +120,7 @@ export function StudyScheduleActivityCard({
                                 </button>
                                 <div className="min-w-0">
                                     <p
-                                        className={`truncate text-sm font-medium ${
+                                        className={`line-clamp-2 text-sm font-medium ${
                                             task.is_done
                                                 ? 'dash-muted line-through'
                                                 : ''
@@ -159,7 +159,7 @@ export function StudyScheduleActivityCard({
                                 className="flex items-center justify-between gap-3 py-2"
                             >
                                 <div className="min-w-0">
-                                    <p className="truncate text-sm font-medium">
+                                    <p className="line-clamp-2 text-sm font-medium">
                                         {attempt.title}
                                     </p>
                                     <p className="dash-muted text-xs">

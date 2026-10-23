@@ -128,7 +128,9 @@ export function AiReadinessBentoCard({
                         <div>
                             <dt className="inline font-semibold">Track: </dt>
                             <dd className="inline">
-                                {accuracy.track} · {accuracy.sample}
+                                {accuracy.track.charAt(0).toUpperCase() +
+                                    accuracy.track.slice(1)}{' '}
+                                · {accuracy.sample}
                             </dd>
                         </div>
                         <div>{accuracy.strictLine}</div>
@@ -137,7 +139,7 @@ export function AiReadinessBentoCard({
 
                     {primaryWeakness && (
                         <div className="dash-tile mt-auto flex items-center justify-between gap-3 px-3 py-2.5">
-                            <p className="min-w-0 truncate text-sm">
+                            <p className="line-clamp-2 min-w-0 text-sm">
                                 <span className="dash-muted">Focus: </span>
                                 <span className="font-semibold">
                                     {primaryWeakness}

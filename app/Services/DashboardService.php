@@ -199,7 +199,7 @@ class DashboardService
 
                 return [
                     'id' => $attempt->id,
-                    'title' => $attempt->category?->name ?? ($trackName.' - '.($meta['exam_type'] ?? 'General')),
+                    'title' => $attempt->category?->name ?? (ucfirst((string) $trackName).' - '.($meta['exam_type'] ?? 'General')),
                     'score_percentage' => round($scorePercentage, 1),
                     'passed' => $scorePercentage >= 80,
                     'is_mock' => $isTrackExam,

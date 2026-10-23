@@ -28,9 +28,19 @@ const AUGUST: ExamSitting = {
 };
 const SITTINGS = [MARCH, AUGUST];
 const MILESTONES: ExamMilestone[] = [
-    { ...MARCH, date: '2026-11-02', label: 'Filing opens', kind: 'filing_opens' },
+    {
+        ...MARCH,
+        date: '2026-11-02',
+        label: 'Filing opens',
+        kind: 'filing_opens',
+    },
     { ...MARCH, kind: 'exam_day' },
-    { ...AUGUST, date: '2027-05-10', label: 'Filing opens', kind: 'filing_opens' },
+    {
+        ...AUGUST,
+        date: '2027-05-10',
+        label: 'Filing opens',
+        kind: 'filing_opens',
+    },
     { ...AUGUST, kind: 'exam_day' },
 ];
 
@@ -46,7 +56,12 @@ describe('exam countdown target is 00:00 Philippine time', () => {
         assert.equal(s.phase, 'counting');
         assert.ok(s.phase === 'counting');
         assert.equal(s.sitting.date, '2027-03-14');
-        assert.deepEqual(s.parts, { days: 142, hours: 3, minutes: 30, seconds: 0 });
+        assert.deepEqual(s.parts, {
+            days: 142,
+            hours: 3,
+            minutes: 30,
+            seconds: 0,
+        });
     });
 
     it('does not depend on the browser timezone (America/Los_Angeles)', () => {
@@ -56,7 +71,12 @@ describe('exam countdown target is 00:00 Philippine time', () => {
             const now = at('2027-03-13T15:59:59Z');
             const s = examCountdown(SITTINGS, now);
             assert.ok(s.phase === 'counting');
-            assert.deepEqual(s.parts, { days: 0, hours: 0, minutes: 0, seconds: 1 });
+            assert.deepEqual(s.parts, {
+                days: 0,
+                hours: 0,
+                minutes: 0,
+                seconds: 1,
+            });
             assert.equal(formatPhDate('2027-03-14'), 'March 14, 2027');
         } finally {
             process.env.TZ = prev;
@@ -94,10 +114,16 @@ describe('milestones', () => {
     it('walks Nov 2 -> Mar 14 -> May 10 -> Aug 8 in PH days', () => {
         const pick = (iso: string) => nextMilestone(MILESTONES, at(iso));
         assert.equal(pick('2026-10-22T12:00:00+08:00')?.date, '2026-11-02');
-        assert.equal(milestoneText(pick('2026-10-22T12:00:00+08:00')!), 'March CSE registration opens');
+        assert.equal(
+            milestoneText(pick('2026-10-22T12:00:00+08:00')!),
+            'March CSE registration opens',
+        );
         assert.equal(pick('2026-11-03T00:00:00+08:00')?.date, '2027-03-14');
         assert.equal(pick('2027-03-15T00:00:00+08:00')?.date, '2027-05-10');
-        assert.equal(milestoneText(pick('2027-03-15T00:00:00+08:00')!), 'August CSE registration opens');
+        assert.equal(
+            milestoneText(pick('2027-03-15T00:00:00+08:00')!),
+            'August CSE registration opens',
+        );
         assert.equal(pick('2027-05-11T00:00:00+08:00')?.date, '2027-08-08');
         assert.equal(pick('2027-08-09T00:00:00+08:00'), null);
     });
@@ -112,9 +138,8 @@ describe('Professional / Subprofessional selection', () => {
 });
 
 describe('ExamCountdown component', async () => {
-    const { ExamCountdown } = await import(
-        '../../resources/js/pages/user/dashboard/components/exam-countdown'
-    );
+    const { ExamCountdown } =
+        await import('../../resources/js/pages/user/dashboard/components/exam-countdown');
     const render = (now: string, sittings = SITTINGS) =>
         renderToStaticMarkup(
             createElement(ExamCountdown, {
@@ -134,10 +159,25 @@ describe('ExamCountdown component', async () => {
         assert.match(html, /Until exam day/);
         assert.doesNotMatch(html, /Until exam starts/);
         assert.match(html, /March 14, 2027/);
-        assert.match(html, /role="radio" aria-checked="true"[^>]*>Professional/);
+        assert.match(
+            html,
+            /role="radio" aria-checked="true"[^>]*>Professional/,
+        );
         assert.match(html, />Subprofessional</);
         assert.match(html, /November 2, 2026 · March CSE registration opens/);
         assert.doesNotMatch(html, /November 22/);
+    });
+
+    it('gives the track radio group one tab stop on the checked level', () => {
+        const html = render('2026-10-22T20:30:00+08:00');
+        assert.match(
+            html,
+            /aria-checked="true" tabindex="0"[^>]*>Professional/,
+        );
+        assert.match(
+            html,
+            /aria-checked="false" tabindex="-1"[^>]*>Subprofessional/,
+        );
     });
 
     it('says Exam Day Today on exam day and has no ticking digits', () => {
@@ -160,15 +200,26 @@ describe('ExamCountdown component', async () => {
 });
 
 describe('countdown updates without reload', () => {
-    beforeEach(() => mock.timers.enable({ apis: ['setInterval', 'Date'], now: at('2026-10-22T20:30:00+08:00') }));
+    beforeEach(() =>
+        mock.timers.enable({
+            apis: ['setInterval', 'Date'],
+            now: at('2026-10-22T20:30:00+08:00'),
+        }),
+    );
     afterEach(() => mock.timers.reset());
 
     it('the component ticks once a second via setInterval', () => {
         const src = readFileSync(
-            new URL('../../resources/js/pages/user/dashboard/components/exam-countdown.tsx', import.meta.url),
+            new URL(
+                '../../resources/js/pages/user/dashboard/components/exam-countdown.tsx',
+                import.meta.url,
+            ),
             'utf8',
         );
-        assert.match(src, /setInterval\(\(\) => setNow\(Date\.now\(\)\), 1000\)/);
+        assert.match(
+            src,
+            /setInterval\(\(\) => setNow\(Date\.now\(\)\), 1000\)/,
+        );
         assert.doesNotMatch(src, /T00:00:00`\)/);
 
         let now = Date.now();
@@ -185,7 +236,10 @@ describe('countdown updates without reload', () => {
 
 describe('dashboard layout', () => {
     const page = readFileSync(
-        new URL('../../resources/js/pages/user/dashboard/index.tsx', import.meta.url),
+        new URL(
+            '../../resources/js/pages/user/dashboard/index.tsx',
+            import.meta.url,
+        ),
         'utf8',
     );
     it('renders DailyGoalStreakCard, SmartStudyLaunchers and ExamCountdown once each', () => {
@@ -195,7 +249,10 @@ describe('dashboard layout', () => {
     });
     it('the hero no longer shows a days-only exam date', () => {
         const hero = readFileSync(
-            new URL('../../resources/js/pages/user/dashboard/components/dashboard-hero.tsx', import.meta.url),
+            new URL(
+                '../../resources/js/pages/user/dashboard/components/dashboard-hero.tsx',
+                import.meta.url,
+            ),
             'utf8',
         );
         assert.doesNotMatch(hero, /days left/);

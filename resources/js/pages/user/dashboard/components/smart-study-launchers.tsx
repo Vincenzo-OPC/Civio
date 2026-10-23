@@ -101,7 +101,7 @@ export function SmartStudyLaunchers({
                             <h3 className="text-[15px] leading-5 font-semibold">
                                 {tile.title}
                             </h3>
-                            <p className="dash-muted mt-0.5 truncate text-[13px] leading-5">
+                            <p className="dash-muted mt-0.5 line-clamp-2 text-[13px] leading-5">
                                 {tile.detail}
                             </p>
                         </div>

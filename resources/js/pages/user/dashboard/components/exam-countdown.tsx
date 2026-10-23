@@ -103,7 +103,32 @@ export function ExamCountdown({
                     type="button"
                     role="radio"
                     aria-checked={track === t}
+                    tabIndex={track === t ? 0 : -1}
                     onClick={() => chooseTrack(t)}
+                    onKeyDown={(event) => {
+                        // Radio group pattern: arrows move and select.
+                        if (
+                            ![
+                                'ArrowLeft',
+                                'ArrowRight',
+                                'ArrowUp',
+                                'ArrowDown',
+                            ].includes(event.key)
+                        ) {
+                            return;
+                        }
+
+                        event.preventDefault();
+                        const next =
+                            TRACKS[(TRACKS.indexOf(t) + 1) % TRACKS.length];
+                        chooseTrack(next);
+                        (
+                            event.currentTarget.parentElement?.querySelector(
+                                `[data-track="${next}"]`,
+                            ) as HTMLElement | null
+                        )?.focus();
+                    }}
+                    data-track={t}
                     className={`rounded-md px-2.5 py-1.5 text-[13px] font-semibold transition-colors @xs:px-3 @xs:text-sm ${
                         track === t
                             ? 'bg-(--dash-accent) text-(--dash-on-accent)'

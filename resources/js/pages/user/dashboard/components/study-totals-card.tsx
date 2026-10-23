@@ -14,7 +14,7 @@ export function StudyTotalsCard({ totals }: { totals?: StudyTotals | null }) {
     return (
         <section
             aria-labelledby="study-totals-title"
-            className="dash-panel flex flex-col gap-4 lg:col-span-2 lg:flex-row lg:items-center lg:justify-between"
+            className="dash-panel flex flex-col gap-4 lg:col-span-2 xl:flex-row xl:items-center xl:justify-between"
         >
             <div className="min-w-0">
                 <h2 id="study-totals-title" className="dash-title">
@@ -27,7 +27,7 @@ export function StudyTotalsCard({ totals }: { totals?: StudyTotals | null }) {
                 </p>
             </div>
             {hasData ? (
-                <dl className="grid grid-cols-3 gap-3 sm:gap-4 lg:w-[34rem] lg:shrink-0">
+                <dl className="grid grid-cols-3 gap-3 sm:gap-4 xl:w-[34rem] xl:shrink-0">
                     {items.map((item) => (
                         <div
                             key={item.label}
