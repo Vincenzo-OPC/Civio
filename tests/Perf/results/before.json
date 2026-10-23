@@ -1,0 +1,366 @@
+{
+    "label": "before",
+    "at": "2026-10-23T00:41:48.351Z",
+    "runs": {
+        "exam-cold+warm lite=off net=none cpu=1x": {
+            "lite": false,
+            "net": "none",
+            "cpu": 1,
+            "served": 150,
+            "cold": {
+                "setupVisibleMs": 234,
+                "firstQuestionMs": 536,
+                "kb": 787.9,
+                "requests": 77,
+                "byTypeKB": {
+                    "Document": 4.6,
+                    "Stylesheet": 38.4,
+                    "Script": 328.8,
+                    "Image": 398.4,
+                    "Fetch": 17.6
+                },
+                "lcpMs": 232,
+                "cls": 0,
+                "tbtMs": 0,
+                "longTasks": 0,
+                "heapMB": 7.6
+            },
+            "backgroundAfterFirstQuestionKB": 0,
+            "warm": {
+                "resumedUnfinishedMock": true,
+                "firstQuestionMs": 180,
+                "kb": 1.4,
+                "requests": 75,
+                "wireRequests": 1,
+                "lcpMs": 144,
+                "cls": 0
+            }
+        },
+        "exam-cold+warm lite=off net=400kbps cpu=4x": {
+            "lite": false,
+            "net": "400kbps",
+            "cpu": 4,
+            "served": 150,
+            "cold": {
+                "setupVisibleMs": 10492,
+                "firstQuestionMs": 12715,
+                "kb": 387.2,
+                "requests": 77,
+                "byTypeKB": {
+                    "Document": 4.6,
+                    "Stylesheet": 38.4,
+                    "Script": 326.4,
+                    "Image": 0,
+                    "Fetch": 17.7
+                },
+                "lcpMs": 10316,
+                "cls": 0,
+                "tbtMs": 175,
+                "longTasks": 3,
+                "heapMB": 7.6
+            },
+            "backgroundAfterFirstQuestionKB": 398.4,
+            "warm": {
+                "resumedUnfinishedMock": true,
+                "firstQuestionMs": 507,
+                "kb": 1.4,
+                "requests": 75,
+                "wireRequests": 1,
+                "lcpMs": 416,
+                "cls": 0
+            }
+        },
+        "exam-cold+warm lite=off net=400kbps cpu=6x": {
+            "lite": false,
+            "net": "400kbps",
+            "cpu": 6,
+            "served": 150,
+            "cold": {
+                "setupVisibleMs": 10626,
+                "firstQuestionMs": 12940,
+                "kb": 387.3,
+                "requests": 77,
+                "byTypeKB": {
+                    "Document": 4.6,
+                    "Stylesheet": 38.4,
+                    "Script": 326.4,
+                    "Image": 0,
+                    "Fetch": 17.8
+                },
+                "lcpMs": 10496,
+                "cls": 0,
+                "tbtMs": 373,
+                "longTasks": 4,
+                "heapMB": 7.3
+            },
+            "backgroundAfterFirstQuestionKB": 398.4,
+            "warm": {
+                "resumedUnfinishedMock": true,
+                "firstQuestionMs": 871,
+                "kb": 1.4,
+                "requests": 75,
+                "wireRequests": 1,
+                "lcpMs": 740,
+                "cls": 0
+            }
+        },
+        "exam-cold+warm lite=off net=250kbps cpu=4x": {
+            "lite": false,
+            "net": "250kbps",
+            "cpu": 4,
+            "served": 150,
+            "cold": {
+                "setupVisibleMs": 15644,
+                "firstQuestionMs": 18683,
+                "kb": 387.2,
+                "requests": 77,
+                "byTypeKB": {
+                    "Document": 4.6,
+                    "Stylesheet": 38.4,
+                    "Script": 326.4,
+                    "Image": 0,
+                    "Fetch": 17.7
+                },
+                "lcpMs": 15620,
+                "cls": 0,
+                "tbtMs": 191,
+                "longTasks": 3,
+                "heapMB": 7.2
+            },
+            "backgroundAfterFirstQuestionKB": 398.4,
+            "warm": {
+                "resumedUnfinishedMock": true,
+                "firstQuestionMs": 535,
+                "kb": 1.4,
+                "requests": 75,
+                "wireRequests": 1,
+                "lcpMs": 436,
+                "cls": 0
+            }
+        },
+        "exam-cold+warm lite=off net=250kbps cpu=6x": {
+            "lite": false,
+            "net": "250kbps",
+            "cpu": 6,
+            "served": 150,
+            "cold": {
+                "setupVisibleMs": 15744,
+                "firstQuestionMs": 18996,
+                "kb": 387.3,
+                "requests": 77,
+                "byTypeKB": {
+                    "Document": 4.6,
+                    "Stylesheet": 38.4,
+                    "Script": 326.4,
+                    "Image": 0,
+                    "Fetch": 17.8
+                },
+                "lcpMs": 15700,
+                "cls": 0,
+                "tbtMs": 330,
+                "longTasks": 4,
+                "heapMB": 7.2
+            },
+            "backgroundAfterFirstQuestionKB": 398.4,
+            "warm": {
+                "resumedUnfinishedMock": true,
+                "firstQuestionMs": 799,
+                "kb": 1.4,
+                "requests": 75,
+                "wireRequests": 1,
+                "lcpMs": 628,
+                "cls": 0
+            }
+        },
+        "exam-cold+warm lite=on net=none cpu=1x": {
+            "lite": true,
+            "net": "none",
+            "cpu": 1,
+            "served": 150,
+            "cold": {
+                "setupVisibleMs": 209,
+                "firstQuestionMs": 445,
+                "kb": 784.8,
+                "requests": 75,
+                "byTypeKB": {
+                    "Document": 4.6,
+                    "Stylesheet": 38.4,
+                    "Script": 325.5,
+                    "Image": 398.4,
+                    "Fetch": 17.9
+                },
+                "lcpMs": 220,
+                "cls": 0,
+                "tbtMs": 0,
+                "longTasks": 0,
+                "heapMB": 7.3
+            },
+            "backgroundAfterFirstQuestionKB": 0,
+            "warm": {
+                "resumedUnfinishedMock": true,
+                "firstQuestionMs": 149,
+                "kb": 7.4,
+                "requests": 74,
+                "wireRequests": 3,
+                "lcpMs": 120,
+                "cls": 0
+            }
+        },
+        "exam-cold+warm lite=on net=400kbps cpu=4x": {
+            "lite": true,
+            "net": "400kbps",
+            "cpu": 4,
+            "served": 150,
+            "cold": {
+                "setupVisibleMs": 10515,
+                "firstQuestionMs": 12587,
+                "kb": 386.3,
+                "requests": 75,
+                "byTypeKB": {
+                    "Document": 4.6,
+                    "Stylesheet": 38.4,
+                    "Script": 325.5,
+                    "Image": 0,
+                    "Fetch": 17.8
+                },
+                "lcpMs": 10340,
+                "cls": 0,
+                "tbtMs": 194,
+                "longTasks": 3,
+                "heapMB": 7.1
+            },
+            "backgroundAfterFirstQuestionKB": 398.4,
+            "warm": {
+                "resumedUnfinishedMock": true,
+                "firstQuestionMs": 749,
+                "kb": 7.4,
+                "requests": 74,
+                "wireRequests": 3,
+                "lcpMs": 664,
+                "cls": 0
+            }
+        },
+        "exam-cold+warm lite=on net=400kbps cpu=6x": {
+            "lite": true,
+            "net": "400kbps",
+            "cpu": 6,
+            "served": 150,
+            "cold": {
+                "setupVisibleMs": 10591,
+                "firstQuestionMs": 12864,
+                "kb": 386.4,
+                "requests": 75,
+                "byTypeKB": {
+                    "Document": 4.6,
+                    "Stylesheet": 38.4,
+                    "Script": 325.5,
+                    "Image": 0,
+                    "Fetch": 17.9
+                },
+                "lcpMs": 10468,
+                "cls": 0,
+                "tbtMs": 306,
+                "longTasks": 4,
+                "heapMB": 7.1
+            },
+            "backgroundAfterFirstQuestionKB": 398.4,
+            "warm": {
+                "resumedUnfinishedMock": true,
+                "firstQuestionMs": 934,
+                "kb": 7.4,
+                "requests": 74,
+                "wireRequests": 3,
+                "lcpMs": 836,
+                "cls": 0
+            }
+        },
+        "exam-cold+warm lite=on net=250kbps cpu=4x": {
+            "lite": true,
+            "net": "250kbps",
+            "cpu": 4,
+            "served": 150,
+            "cold": {
+                "setupVisibleMs": 15610,
+                "firstQuestionMs": 18661,
+                "kb": 386.3,
+                "requests": 75,
+                "byTypeKB": {
+                    "Document": 4.6,
+                    "Stylesheet": 38.4,
+                    "Script": 325.5,
+                    "Image": 0,
+                    "Fetch": 17.7
+                },
+                "lcpMs": 15540,
+                "cls": 0,
+                "tbtMs": 170,
+                "longTasks": 3,
+                "heapMB": 8.4
+            },
+            "backgroundAfterFirstQuestionKB": 398.4,
+            "warm": {
+                "resumedUnfinishedMock": true,
+                "firstQuestionMs": 918,
+                "kb": 7.4,
+                "requests": 74,
+                "wireRequests": 3,
+                "lcpMs": 816,
+                "cls": 0
+            }
+        },
+        "exam-cold+warm lite=on net=250kbps cpu=6x": {
+            "lite": true,
+            "net": "250kbps",
+            "cpu": 6,
+            "served": 150,
+            "cold": {
+                "setupVisibleMs": 15760,
+                "firstQuestionMs": 18998,
+                "kb": 386.4,
+                "requests": 75,
+                "byTypeKB": {
+                    "Document": 4.6,
+                    "Stylesheet": 38.4,
+                    "Script": 325.5,
+                    "Image": 0,
+                    "Fetch": 17.9
+                },
+                "lcpMs": 15720,
+                "cls": 0,
+                "tbtMs": 384,
+                "longTasks": 5,
+                "heapMB": 8.3
+            },
+            "backgroundAfterFirstQuestionKB": 398.4,
+            "warm": {
+                "resumedUnfinishedMock": true,
+                "firstQuestionMs": 1143,
+                "kb": 7.4,
+                "requests": 74,
+                "wireRequests": 3,
+                "lcpMs": 1008,
+                "cls": 0
+            }
+        },
+        "full-mock": {
+            "served": 150,
+            "answeringKB": 233.8,
+            "answeringRequests": 150,
+            "writeRequests": 150,
+            "submitAndScorecardKB": 11.4,
+            "submitRequests": 3,
+            "totalIncrementalKB": 245.2,
+            "perItemBytes": 1674,
+            "projected150KB": 245.2,
+            "maxInteractionMs": 40,
+            "tbtMs": 289,
+            "heapAfterMockMB": 14,
+            "urls": [
+                "POST /exams/sessions/progress",
+                "POST /exams/attempts",
+                "GET /images/civio-mark.svg",
+                "GET /build/assets/answer-keys-BOBmpns6.js"
+            ]
+        }
+    }
+}

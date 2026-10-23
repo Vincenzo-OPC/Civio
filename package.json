@@ -14,7 +14,8 @@
         "test:js": "tsx --test tests/Js/*.test.ts",
         "changelog": "git-cliff d3f0368..HEAD -o CHANGELOG.md",
         "size": "size-limit",
-        "test:e2e": "playwright test"
+        "test:e2e": "playwright test",
+        "test:perf-budget": "playwright test -c playwright.perf.config.ts budget"
     },
     "devDependencies": {
         "@eslint/js": "^9.19.0",
