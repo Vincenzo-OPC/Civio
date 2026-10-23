@@ -173,4 +173,22 @@ python3 docs/research/dexter3/build_price38_tutoring.py
 python3 docs/research/dexter3/validate_price38.py
 ```
 
-Across six numerical batches, **355 distinct records** have targeted exact answer checks and **208 approved-source tutoring bindings** are drafted. Prior pilot/math overlays are counted once, not regenerated. The 2,100-record audit remains incomplete.
+Across six numerical batches, **355 distinct records** had targeted exact answer checks and **208 approved-source tutoring bindings** were drafted. Batch 7 adds 43 records and nine incremental drafts below. Prior pilot/math overlays are counted once, not regenerated. The 2,100-record audit remains incomplete.
+
+## Numerical batch 7: ratio and proportional allocation
+
+Checkpoint parent: `32db7861a2d89435c4019a3a7a66b41dd4fd604a`.
+
+The exact-rational pass covers **43 records** across two queued families: 29 approved two-person shares and 14 additional ratio/proportion questions. All 43 calculations matched exactly one option and the stored key; no unsupported stems, key conflicts or missing wrong-choice feedback remain. Statuses are 29 approved, nine draft and five reviewed. Five groups reuse identical total-and-ratio values across different names/contexts, confirming that the 29 approved records largely repeat one two-person allocation archetype.
+
+Existing pilot and math-overlay metadata already cover 20 approved sources, which were preserved. Nine uncovered approved share records receive incremental draft bindings that explicitly add all ratio parts before computing the requested fraction of the total. All 14 other ratio records are reviewed/draft and excluded from tutoring. Their distinct skills—known-part scaling, three-way allocations, difference constraints, and “add to equalize”—are answer-audited but cannot serve as approved transfer items. No cross-family transfer has been approved here.
+
+Run:
+
+```bash
+python3 docs/research/dexter3/audit_ratio43.py
+python3 docs/research/dexter3/build_ratio43_tutoring.py
+python3 docs/research/dexter3/validate_ratio43.py
+```
+
+Across seven numerical batches, **398 distinct records** have targeted exact answer checks and **217 incremental approved-source tutoring bindings** are drafted. These are audit slices, not full coverage or human approvals.

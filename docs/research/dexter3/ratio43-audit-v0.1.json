@@ -1,0 +1,1298 @@
+{
+  "schema_version": "dexter-ratio43-audit-v0.1",
+  "baseline_commit": "32db7861a2d89435c4019a3a7a66b41dd4fd604a",
+  "method": "Exact rational parts-total, known-part and known-difference calculations; source pilot and math overlays reconciled to avoid duplicate tutoring bindings. Unsupported forms remain manual.",
+  "summary": {
+    "record_count": 43,
+    "statuses": {
+      "approved": 29,
+      "draft": 9,
+      "reviewed": 5
+    },
+    "families": {
+      "two-share-total-candidate": 29,
+      "NUM-WP-RATIO": 14
+    },
+    "methods": {
+      "two-person-share-of-total": 29,
+      "three-part-total-allocation": 4,
+      "two-part-total-allocation": 3,
+      "known-first-part-to-second": 2,
+      "direct-proportion-known-second-part": 1,
+      "difference-to-equalize-ratio-groups": 1,
+      "known-second-part-to-first": 1,
+      "age-ratio-from-difference": 1,
+      "known-difference-between-ratio-parts": 1
+    },
+    "exact_calculations": 43,
+    "key_matches": 43,
+    "key_conflicts": 0,
+    "manual_required": 0,
+    "missing_wrong_choice_feedback": 0,
+    "approved_already_bound": 20,
+    "approved_unbound": 9,
+    "parameter_repeat_groups": [
+      {
+        "question_ids": [
+          "CIVIO-NUM-WP-RATIO-000022",
+          "CIVIO-NUM-WP-RATIO-000516",
+          "CIVIO-NUM-WP-RATIO-000629"
+        ],
+        "parameters": [
+          "two-person-share-of-total",
+          "{\"parts\": [3, 7], \"selected_part\": 2, \"total\": \"25000\"}"
+        ]
+      },
+      {
+        "question_ids": [
+          "CIVIO-NUM-WP-RATIO-000126",
+          "CIVIO-NUM-WP-RATIO-000714"
+        ],
+        "parameters": [
+          "two-person-share-of-total",
+          "{\"parts\": [3, 7], \"selected_part\": 2, \"total\": \"5000\"}"
+        ]
+      },
+      {
+        "question_ids": [
+          "CIVIO-NUM-WP-RATIO-000223",
+          "CIVIO-NUM-WP-RATIO-000740",
+          "CIVIO-NUM-WP-RATIO-000816",
+          "CIVIO-NUM-WP-RATIO-000929"
+        ],
+        "parameters": [
+          "two-person-share-of-total",
+          "{\"parts\": [3, 4], \"selected_part\": 2, \"total\": \"3500\"}"
+        ]
+      },
+      {
+        "question_ids": [
+          "CIVIO-NUM-WP-RATIO-000432",
+          "CIVIO-NUM-WP-RATIO-000637"
+        ],
+        "parameters": [
+          "two-person-share-of-total",
+          "{\"parts\": [5, 7], \"selected_part\": 2, \"total\": \"14400\"}"
+        ]
+      },
+      {
+        "question_ids": [
+          "CIVIO-NUM-WP-RATIO-000625",
+          "CIVIO-NUM-WP-RATIO-000813"
+        ],
+        "parameters": [
+          "two-person-share-of-total",
+          "{\"parts\": [3, 5], \"selected_part\": 2, \"total\": \"9600\"}"
+        ]
+      }
+    ],
+    "status": "draft_audit_only",
+    "human_review": null,
+    "runtime_eligible": false
+  },
+  "items": [
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000003",
+      "status": "approved",
+      "source_file": "docs/batches/batch-001.json",
+      "source_record_sha256": "7a844b529b0e76180a7e6c7ebe5a542200efb5c92844f29422f204a630307e40",
+      "family": "two-share-total-candidate",
+      "stem": "A barangay will split a ₱18,000 cleanup fund between Purok Uno and Purok Dos in the ratio 4 : 5. How much will Purok Dos receive?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "18000",
+        "parts": [
+          4,
+          5
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "10000",
+      "key_option_id": "r4",
+      "key_text": "₱10,000",
+      "matching_options": [
+        "r4"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [4, 5], \\\"selected_part\\\": 2, \\\"total\\\": \\\"18000\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": true
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000021",
+      "status": "approved",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "c5d47aaad6c244b98d3efce762acfc4eccfbab21e7939d3d89cb5aa0c32c6946",
+      "family": "two-share-total-candidate",
+      "stem": "Rhea and Liza will share ₱10,500 of prize money in the ratio 2 : 5. How much is Liza's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "10500",
+        "parts": [
+          2,
+          5
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "7500",
+      "key_option_id": "o1",
+      "key_text": "₱7,500",
+      "matching_options": [
+        "o1"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [2, 5], \\\"selected_part\\\": 2, \\\"total\\\": \\\"10500\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000022",
+      "status": "approved",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "f3fdf2ac07b4e010ddfb6b69b73cfebf4b262c972b194747d149400e21ef0532",
+      "family": "two-share-total-candidate",
+      "stem": "Rogelio and Kimberly will share ₱25,000 of prize money in the ratio 3 : 7. How much is Kimberly's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "25000",
+        "parts": [
+          3,
+          7
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "17500",
+      "key_option_id": "o3",
+      "key_text": "₱17,500",
+      "matching_options": [
+        "o3"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [3, 7], \\\"selected_part\\\": 2, \\\"total\\\": \\\"25000\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": true
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000040",
+      "status": "approved",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "436c3fdb29f7a7a417bd03b8c79e80967bf3ea532e9d26333b9667058853d8a6",
+      "family": "two-share-total-candidate",
+      "stem": "Aileen and Efren will share ₱21,000 of commission in the ratio 3 : 4. How much is Efren's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "21000",
+        "parts": [
+          3,
+          4
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "12000",
+      "key_option_id": "o2",
+      "key_text": "₱12,000",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [3, 4], \\\"selected_part\\\": 2, \\\"total\\\": \\\"21000\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": true
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000125",
+      "status": "approved",
+      "source_file": "docs/batches/batch-003.json",
+      "source_record_sha256": "753b0abc16299df3435ebd5e06aa0316ab70fb499f35c9ee281b021d493f1759",
+      "family": "two-share-total-candidate",
+      "stem": "Ramon and Dindo will share ₱14,000 of commission in the ratio 2 : 5. How much is Dindo's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "14000",
+        "parts": [
+          2,
+          5
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "10000",
+      "key_option_id": "o1",
+      "key_text": "₱10,000",
+      "matching_options": [
+        "o1"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [2, 5], \\\"selected_part\\\": 2, \\\"total\\\": \\\"14000\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": true
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000126",
+      "status": "approved",
+      "source_file": "docs/batches/batch-003.json",
+      "source_record_sha256": "f2748ac3038c2456a5ff3ff53ff41364079ca2c59efd9c61c7b6f806987ebc4c",
+      "family": "two-share-total-candidate",
+      "stem": "Marites and Lourdes will share ₱5,000 of cleanup fund in the ratio 3 : 7. How much is Lourdes's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "5000",
+        "parts": [
+          3,
+          7
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "3500",
+      "key_option_id": "o4",
+      "key_text": "₱3,500",
+      "matching_options": [
+        "o4"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [3, 7], \\\"selected_part\\\": 2, \\\"total\\\": \\\"5000\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000136",
+      "status": "approved",
+      "source_file": "docs/batches/batch-003.json",
+      "source_record_sha256": "074ffae88e8b72a81415c324c5c486dc9a50bd499aba77a50a442365b589ba14",
+      "family": "two-share-total-candidate",
+      "stem": "A ₱7,500 allowance fund is divided between Liza and Kimberly in the ratio 2 : 3. What is Kimberly's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "7500",
+        "parts": [
+          2,
+          3
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "4500",
+      "key_option_id": "o4",
+      "key_text": "₱4,500",
+      "matching_options": [
+        "o4"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [2, 3], \\\"selected_part\\\": 2, \\\"total\\\": \\\"7500\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": true
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000223",
+      "status": "approved",
+      "source_file": "docs/batches/batch-004.json",
+      "source_record_sha256": "ea5bdeb850242fa1dd17a10c722ee6d72f304b015225fbfd30e8e46c206c4fbd",
+      "family": "two-share-total-candidate",
+      "stem": "A ₱3,500 prize money is divided between Aileen and Tess in the ratio 3 : 4. What is Tess's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "3500",
+        "parts": [
+          3,
+          4
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "2000",
+      "key_option_id": "o2",
+      "key_text": "₱2,000",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [3, 4], \\\"selected_part\\\": 2, \\\"total\\\": \\\"3500\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000234",
+      "status": "approved",
+      "source_file": "docs/batches/batch-004.json",
+      "source_record_sha256": "2f4091e01d7c8a06c6eb2990ddc5ca68b4e292922d22fbe83193b04c8eed29a8",
+      "family": "two-share-total-candidate",
+      "stem": "A ₱12,000 commission is divided between Teresa and Grace in the ratio 3 : 7. What is Grace's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "12000",
+        "parts": [
+          3,
+          7
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "8400",
+      "key_option_id": "o1",
+      "key_text": "₱8,400",
+      "matching_options": [
+        "o1"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [3, 7], \\\"selected_part\\\": 2, \\\"total\\\": \\\"12000\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": true
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000312",
+      "status": "approved",
+      "source_file": "docs/batches/batch-005.json",
+      "source_record_sha256": "659f2503e0b06a46d6d6b98ba6822346397e547d26df798f5f0bfcd4e70ab6f0",
+      "family": "two-share-total-candidate",
+      "stem": "Teresa and Rogelio will share ₱36,000 of allowance fund in the ratio 5 : 7. How much is Rogelio's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "36000",
+        "parts": [
+          5,
+          7
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "21000",
+      "key_option_id": "o3",
+      "key_text": "₱21,000",
+      "matching_options": [
+        "o3"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [5, 7], \\\"selected_part\\\": 2, \\\"total\\\": \\\"36000\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000320",
+      "status": "approved",
+      "source_file": "docs/batches/batch-005.json",
+      "source_record_sha256": "1d24801c5a3ac01aa8eb621a9aa10ec7a4c56331b9a9189c6f03dbb4886f1d05",
+      "family": "two-share-total-candidate",
+      "stem": "Paolo and Lourdes will share ₱2,500 of allowance fund in the ratio 2 : 3. How much is Lourdes's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "2500",
+        "parts": [
+          2,
+          3
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "1500",
+      "key_option_id": "o4",
+      "key_text": "₱1,500",
+      "matching_options": [
+        "o4"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [2, 3], \\\"selected_part\\\": 2, \\\"total\\\": \\\"2500\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": true
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000327",
+      "status": "approved",
+      "source_file": "docs/batches/batch-005.json",
+      "source_record_sha256": "cb232c4e03eceeb42d9c5a8592fd3a45fbe2137b2d3dce2f7f5d96c687e4b38e",
+      "family": "two-share-total-candidate",
+      "stem": "Datu and Arnel will share ₱9,000 of cleanup fund in the ratio 4 : 5. How much is Arnel's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "9000",
+        "parts": [
+          4,
+          5
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "5000",
+      "key_option_id": "o2",
+      "key_text": "₱5,000",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [4, 5], \\\"selected_part\\\": 2, \\\"total\\\": \\\"9000\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": true
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000426",
+      "status": "approved",
+      "source_file": "docs/batches/batch-006.json",
+      "source_record_sha256": "1ed473c8b243a60fa01b85b89453176ef3822b4932d37840e1e6005811e5f068",
+      "family": "two-share-total-candidate",
+      "stem": "A ₱27,000 commission is divided between Bea and Cora in the ratio 4 : 5. What is Cora's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "27000",
+        "parts": [
+          4,
+          5
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "15000",
+      "key_option_id": "o3",
+      "key_text": "₱15,000",
+      "matching_options": [
+        "o3"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [4, 5], \\\"selected_part\\\": 2, \\\"total\\\": \\\"27000\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": true
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000432",
+      "status": "approved",
+      "source_file": "docs/batches/batch-006.json",
+      "source_record_sha256": "4d63fe34710ea50a28d34ecffe80b92765692c0a6c973842ca56f8a385e605ae",
+      "family": "two-share-total-candidate",
+      "stem": "Carlo and Aling Rosa will share ₱14,400 of cleanup fund in the ratio 5 : 7. How much is Aling Rosa's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "14400",
+        "parts": [
+          5,
+          7
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "8400",
+      "key_option_id": "o4",
+      "key_text": "₱8,400",
+      "matching_options": [
+        "o4"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [5, 7], \\\"selected_part\\\": 2, \\\"total\\\": \\\"14400\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": true
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000434",
+      "status": "approved",
+      "source_file": "docs/batches/batch-006.json",
+      "source_record_sha256": "aee354167010626ff0fc7767348d973c15d8ea09ad21b130b15902e23f2e1cad",
+      "family": "two-share-total-candidate",
+      "stem": "Aileen and Joy will share ₱12,500 of cleanup fund in the ratio 2 : 3. How much is Joy's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "12500",
+        "parts": [
+          2,
+          3
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "7500",
+      "key_option_id": "o3",
+      "key_text": "₱7,500",
+      "matching_options": [
+        "o3"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [2, 3], \\\"selected_part\\\": 2, \\\"total\\\": \\\"12500\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": true
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000516",
+      "status": "approved",
+      "source_file": "docs/batches/batch-007.json",
+      "source_record_sha256": "e8102cfcb43db37af5926b17a19544ce8b40d02145c82227bbacf2c28d9c0b46",
+      "family": "two-share-total-candidate",
+      "stem": "Bong and Teresa will share ₱25,000 of harvest income in the ratio 3 : 7. How much is Teresa's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "25000",
+        "parts": [
+          3,
+          7
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "17500",
+      "key_option_id": "o4",
+      "key_text": "₱17,500",
+      "matching_options": [
+        "o4"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [3, 7], \\\"selected_part\\\": 2, \\\"total\\\": \\\"25000\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": true
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000519",
+      "status": "approved",
+      "source_file": "docs/batches/batch-007.json",
+      "source_record_sha256": "edcc43d3b5a3fa70fbbfa20a3e90539a433c3be614c3ec79cee4484b2b9a32d5",
+      "family": "two-share-total-candidate",
+      "stem": "Lourdes and Rogelio will share ₱10,500 of cleanup fund in the ratio 3 : 4. How much is Rogelio's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "10500",
+        "parts": [
+          3,
+          4
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "6000",
+      "key_option_id": "o1",
+      "key_text": "₱6,000",
+      "matching_options": [
+        "o1"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [3, 4], \\\"selected_part\\\": 2, \\\"total\\\": \\\"10500\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": true
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000522",
+      "status": "approved",
+      "source_file": "docs/batches/batch-007.json",
+      "source_record_sha256": "e5fdacf883b2b9639fa4a1b16e85ce3e68c11d9e8f293d3c02bf3bd0cfcea66b",
+      "family": "two-share-total-candidate",
+      "stem": "Liza and Jomar will share ₱15,000 of cleanup fund in the ratio 2 : 3. How much is Jomar's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "15000",
+        "parts": [
+          2,
+          3
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "9000",
+      "key_option_id": "o2",
+      "key_text": "₱9,000",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [2, 3], \\\"selected_part\\\": 2, \\\"total\\\": \\\"15000\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000625",
+      "status": "approved",
+      "source_file": "docs/batches/batch-008.json",
+      "source_record_sha256": "867e52db825c75455cd7dd09b22dee03b3e50d8bc5def45dfe3b7ced49992622",
+      "family": "two-share-total-candidate",
+      "stem": "Aling Rosa and Paolo will share ₱9,600 of allowance fund in the ratio 3 : 5. How much is Paolo's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "9600",
+        "parts": [
+          3,
+          5
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "6000",
+      "key_option_id": "o1",
+      "key_text": "₱6,000",
+      "matching_options": [
+        "o1"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [3, 5], \\\"selected_part\\\": 2, \\\"total\\\": \\\"9600\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": true
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000629",
+      "status": "approved",
+      "source_file": "docs/batches/batch-008.json",
+      "source_record_sha256": "f55807a5979940cea907dac41d6ce2382daeea10f260b98a10489a31c0b0f845",
+      "family": "two-share-total-candidate",
+      "stem": "Inday and Dindo will share ₱25,000 of cleanup fund in the ratio 3 : 7. How much is Dindo's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "25000",
+        "parts": [
+          3,
+          7
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "17500",
+      "key_option_id": "o1",
+      "key_text": "₱17,500",
+      "matching_options": [
+        "o1"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [3, 7], \\\"selected_part\\\": 2, \\\"total\\\": \\\"25000\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": true
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000637",
+      "status": "approved",
+      "source_file": "docs/batches/batch-008.json",
+      "source_record_sha256": "a7f7d9bfacd0972ed2cd3321219ff0acc3de033423adf9b5be451ba7ef07bddf",
+      "family": "two-share-total-candidate",
+      "stem": "A ₱14,400 commission is divided between Mylene and Aling Rosa in the ratio 5 : 7. What is Aling Rosa's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "14400",
+        "parts": [
+          5,
+          7
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "8400",
+      "key_option_id": "o1",
+      "key_text": "₱8,400",
+      "matching_options": [
+        "o1"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [5, 7], \\\"selected_part\\\": 2, \\\"total\\\": \\\"14400\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": true
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000714",
+      "status": "approved",
+      "source_file": "docs/batches/batch-009.json",
+      "source_record_sha256": "d7e1886920b9dd1033e5a45171ea445916f20710b2431f3a994479ce6c7eb671",
+      "family": "two-share-total-candidate",
+      "stem": "Aileen and Datu will share ₱5,000 of harvest income in the ratio 3 : 7. How much is Datu's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "5000",
+        "parts": [
+          3,
+          7
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "3500",
+      "key_option_id": "o2",
+      "key_text": "₱3,500",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [3, 7], \\\"selected_part\\\": 2, \\\"total\\\": \\\"5000\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000740",
+      "status": "approved",
+      "source_file": "docs/batches/batch-009.json",
+      "source_record_sha256": "4088183f181cc8e6b517361ee8e0bfe66699b73d7de4f6132486c2004a254988",
+      "family": "two-share-total-candidate",
+      "stem": "Tess and Ramon will share ₱3,500 of allowance fund in the ratio 3 : 4. How much is Ramon's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "3500",
+        "parts": [
+          3,
+          4
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "2000",
+      "key_option_id": "o1",
+      "key_text": "₱2,000",
+      "matching_options": [
+        "o1"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [3, 4], \\\"selected_part\\\": 2, \\\"total\\\": \\\"3500\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": true
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000813",
+      "status": "approved",
+      "source_file": "docs/batches/batch-010.json",
+      "source_record_sha256": "9e4b8e66978e82b271cc9cefb0aa9917178db146f329b30381aac0457f4d5172",
+      "family": "two-share-total-candidate",
+      "stem": "A ₱9,600 harvest income is divided between Inday and Aileen in the ratio 3 : 5. What is Aileen's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "9600",
+        "parts": [
+          3,
+          5
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "6000",
+      "key_option_id": "o4",
+      "key_text": "₱6,000",
+      "matching_options": [
+        "o4"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [3, 5], \\\"selected_part\\\": 2, \\\"total\\\": \\\"9600\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": true
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000816",
+      "status": "approved",
+      "source_file": "docs/batches/batch-010.json",
+      "source_record_sha256": "04561c4f4a0e2719ac59d1293e8d89cb828ae5535e5ef6f28d7b86371dd91e56",
+      "family": "two-share-total-candidate",
+      "stem": "Cora and Kimberly will share ₱3,500 of harvest income in the ratio 3 : 4. How much is Kimberly's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "3500",
+        "parts": [
+          3,
+          4
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "2000",
+      "key_option_id": "o4",
+      "key_text": "₱2,000",
+      "matching_options": [
+        "o4"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [3, 4], \\\"selected_part\\\": 2, \\\"total\\\": \\\"3500\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000821",
+      "status": "approved",
+      "source_file": "docs/batches/batch-010.json",
+      "source_record_sha256": "0a9ccb9e413c135b3657022bec8c5d03371ce04f9a24bdd97aebdcaefb5bf470",
+      "family": "two-share-total-candidate",
+      "stem": "Jun-jun and Joy will share ₱22,500 of allowance fund in the ratio 4 : 5. How much is Joy's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "22500",
+        "parts": [
+          4,
+          5
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "12500",
+      "key_option_id": "o2",
+      "key_text": "₱12,500",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [4, 5], \\\"selected_part\\\": 2, \\\"total\\\": \\\"22500\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": true
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000925",
+      "status": "approved",
+      "source_file": "docs/batches/batch-011.json",
+      "source_record_sha256": "24ca6b7bb9917feadabbd03b551b19de4170346bfc23c73dc945d0196cd7b3dc",
+      "family": "two-share-total-candidate",
+      "stem": "A ₱15,000 prize money is divided between Jun-jun and Liza in the ratio 3 : 7. What is Liza's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "15000",
+        "parts": [
+          3,
+          7
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "10500",
+      "key_option_id": "o4",
+      "key_text": "₱10,500",
+      "matching_options": [
+        "o4"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [3, 7], \\\"selected_part\\\": 2, \\\"total\\\": \\\"15000\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000929",
+      "status": "approved",
+      "source_file": "docs/batches/batch-011.json",
+      "source_record_sha256": "fe26fe25e05fde1fb6179053786e3f7336a7bd42d1d37d9c289f4f8067a32616",
+      "family": "two-share-total-candidate",
+      "stem": "Mang Jun and Datu will share ₱3,500 of prize money in the ratio 3 : 4. How much is Datu's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "3500",
+        "parts": [
+          3,
+          4
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "2000",
+      "key_option_id": "o2",
+      "key_text": "₱2,000",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [3, 4], \\\"selected_part\\\": 2, \\\"total\\\": \\\"3500\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000933",
+      "status": "approved",
+      "source_file": "docs/batches/batch-011.json",
+      "source_record_sha256": "d666e56edf3368fa769aa571aa6ee14495e0fd8a5a4c08def8185743bc25b433",
+      "family": "two-share-total-candidate",
+      "stem": "Rhea and Arnel will share ₱30,000 of prize money in the ratio 3 : 7. How much is Arnel's share?",
+      "method": "two-person-share-of-total",
+      "parameters": {
+        "total": "30000",
+        "parts": [
+          3,
+          7
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "21000",
+      "key_option_id": "o3",
+      "key_text": "₱21,000",
+      "matching_options": [
+        "o3"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-person-share-of-total\", \"{\\\"parts\\\": [3, 7], \\\"selected_part\\\": 2, \\\"total\\\": \\\"30000\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": true
+    },
+    {
+      "question_id": "CIVIO-D1022-SPMATH-0020",
+      "status": "draft",
+      "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+      "source_record_sha256": "20f52778e7d076cdbafd00193a200096526202eff7729ef35fdc37e416ff1e81",
+      "family": "NUM-WP-RATIO",
+      "stem": "A town spreads 1,260 seedlings among three barangays in the ratio 3 : 5 : 6. How many seedlings go to the barangay with the largest share?",
+      "method": "three-part-total-allocation",
+      "parameters": {
+        "total": "1260",
+        "parts": [
+          3,
+          5,
+          6
+        ],
+        "selected_part": 3
+      },
+      "calculated_answer": "540",
+      "key_option_id": "o2",
+      "key_text": "540",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"three-part-total-allocation\", \"{\\\"parts\\\": [3, 5, 6], \\\"selected_part\\\": 3, \\\"total\\\": \\\"1260\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-926025",
+      "status": "reviewed",
+      "source_file": "docs/research/batch-subpro-num-001.json",
+      "source_record_sha256": "91330356a8fd84af06fe734f4e67b4fcb2ccee61d19813e09746ea06b1fd2baf",
+      "family": "NUM-WP-RATIO",
+      "stem": "A community workshop has red and blue stools in a ratio of 4 to 7. There are 55 stools in all. How many stools are blue?",
+      "method": "two-part-total-allocation",
+      "parameters": {
+        "total": 55,
+        "ratio": [
+          4,
+          7
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "35",
+      "key_option_id": "o1",
+      "key_text": "35 stools",
+      "matching_options": [
+        "o1"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-part-total-allocation\", \"{\\\"ratio\\\": [4, 7], \\\"selected_part\\\": 2, \\\"total\\\": 55}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-926026",
+      "status": "reviewed",
+      "source_file": "docs/research/batch-subpro-num-001.json",
+      "source_record_sha256": "86e5a2b8c9c5fe93df3f7bd5b844e9c97bf12b3f97d4a4abfdf596ddb4e71cef",
+      "family": "NUM-WP-RATIO",
+      "stem": "A rural collection center stores coffee beans and cacao beans in a 5-to-8 ratio by sack count. If there are 30 coffee sacks, how many cacao sacks are there?",
+      "method": "known-first-part-to-second",
+      "parameters": {
+        "ratio": [
+          5,
+          8
+        ],
+        "known_first": 30
+      },
+      "calculated_answer": "48",
+      "key_option_id": "o2",
+      "key_text": "48 sacks",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"known-first-part-to-second\", \"{\\\"known_first\\\": 30, \\\"ratio\\\": [5, 8]}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-926027",
+      "status": "reviewed",
+      "source_file": "docs/research/batch-subpro-num-001.json",
+      "source_record_sha256": "c0f77cefd246b0a968fd42a4f9714d6fe8bac6caa84e8efb3c509a75251d1bea",
+      "family": "NUM-WP-RATIO",
+      "stem": "A calamansi drink uses 2 cups of syrup for every 5 cups of water. A canteen plans to use 20 cups of water. How many cups of syrup are needed?",
+      "method": "direct-proportion-known-second-part",
+      "parameters": {
+        "ratio": [
+          2,
+          5
+        ],
+        "known_second": 20
+      },
+      "calculated_answer": "8",
+      "key_option_id": "o3",
+      "key_text": "8 cups",
+      "matching_options": [
+        "o3"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"direct-proportion-known-second-part\", \"{\\\"known_second\\\": 20, \\\"ratio\\\": [2, 5]}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-926028",
+      "status": "reviewed",
+      "source_file": "docs/research/batch-subpro-num-001.json",
+      "source_record_sha256": "4f08278b19b82522df8d5ae1e401deb234e0efcb6d8b000710b72da6471db586",
+      "family": "NUM-WP-RATIO",
+      "stem": "A literacy caravan sends reading kits to three areas in the ratio 2 : 3 : 5. It has 100 kits. How many kits go to the third area?",
+      "method": "three-part-total-allocation",
+      "parameters": {
+        "total": "100",
+        "parts": [
+          2,
+          3,
+          5
+        ],
+        "selected_part": 3
+      },
+      "calculated_answer": "50",
+      "key_option_id": "o4",
+      "key_text": "50 kits",
+      "matching_options": [
+        "o4"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"three-part-total-allocation\", \"{\\\"parts\\\": [2, 3, 5], \\\"selected_part\\\": 3, \\\"total\\\": \\\"100\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-926032",
+      "status": "reviewed",
+      "source_file": "docs/research/batch-subpro-num-001.json",
+      "source_record_sha256": "dfa3d2a7a676ebb20b5737fafec46d1221d1ebcd6962b205720036cf9a623766",
+      "family": "NUM-WP-RATIO",
+      "stem": "Two barangay teams have recycling crates in the ratio 4 : 5. Together they have 36 crates. Without removing any crates from the larger team, how many must be added to the smaller team to match it?",
+      "method": "difference-to-equalize-ratio-groups",
+      "parameters": {
+        "ratio": [
+          4,
+          5
+        ],
+        "total": 36
+      },
+      "calculated_answer": "4",
+      "key_option_id": "o4",
+      "key_text": "4 crates",
+      "matching_options": [
+        "o4"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"difference-to-equalize-ratio-groups\", \"{\\\"ratio\\\": [4, 5], \\\"total\\\": 36}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": false
+    },
+    {
+      "question_id": "CIVIO-D1022-SPMATH-0021",
+      "status": "draft",
+      "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+      "source_record_sha256": "13f83f57d17859d526e66e841934002ae3408f33799923dce9e4ae243c4780ba",
+      "family": "NUM-WP-RATIO",
+      "stem": "In a training class, the ratio of men to women is 4 : 5. If there are 35 women, how many men are there?",
+      "method": "known-second-part-to-first",
+      "parameters": {
+        "ratio": [
+          4,
+          5
+        ],
+        "known_second": 35
+      },
+      "calculated_answer": "28",
+      "key_option_id": "o3",
+      "key_text": "28",
+      "matching_options": [
+        "o3"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"known-second-part-to-first\", \"{\\\"known_second\\\": 35, \\\"ratio\\\": [4, 5]}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": false
+    },
+    {
+      "question_id": "CIVIO-D1022-SPMATH-0022",
+      "status": "draft",
+      "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+      "source_record_sha256": "e7ad27762dfca1b605b7cdebb55e9a72096b654c872ab633cfad68ba722f3643",
+      "family": "NUM-WP-RATIO",
+      "stem": "A clinic's ratio of nurses to midwives is 7 : 3. If there are 28 nurses, how many midwives work there?",
+      "method": "known-first-part-to-second",
+      "parameters": {
+        "ratio": [
+          7,
+          3
+        ],
+        "known_first": 28
+      },
+      "calculated_answer": "12",
+      "key_option_id": "o1",
+      "key_text": "12",
+      "matching_options": [
+        "o1"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"known-first-part-to-second\", \"{\\\"known_first\\\": 28, \\\"ratio\\\": [7, 3]}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": false
+    },
+    {
+      "question_id": "CIVIO-D1022-SPMATH-0023",
+      "status": "draft",
+      "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+      "source_record_sha256": "8a8992ba63b4307036937e9c3ed2e6d8e9c24126ed451befd7aad5870ebab497",
+      "family": "NUM-WP-RATIO",
+      "stem": "The ages of two siblings are in the ratio 7 : 4, and the older one is 27 years older. How old is the older sibling?",
+      "method": "age-ratio-from-difference",
+      "parameters": {
+        "ratio": [
+          7,
+          4
+        ],
+        "age_difference": 27,
+        "selected_part": 1
+      },
+      "calculated_answer": "63",
+      "key_option_id": "o3",
+      "key_text": "63",
+      "matching_options": [
+        "o3"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"age-ratio-from-difference\", \"{\\\"age_difference\\\": 27, \\\"ratio\\\": [7, 4], \\\"selected_part\\\": 1}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": false
+    },
+    {
+      "question_id": "CIVIO-D1022-SPMATH-0024",
+      "status": "draft",
+      "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+      "source_record_sha256": "a3187d1270d72ff9f660d4720004495ec908ed02b7e9a89c056471110a0e4996",
+      "family": "NUM-WP-RATIO",
+      "stem": "Two offices received complaint letters in the ratio 9 : 5. The first office received 32 more letters than the second. How many letters did the first office receive?",
+      "method": "known-difference-between-ratio-parts",
+      "parameters": {
+        "ratio": [
+          9,
+          5
+        ],
+        "difference": 32,
+        "selected_part": 1
+      },
+      "calculated_answer": "72",
+      "key_option_id": "o2",
+      "key_text": "72",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"known-difference-between-ratio-parts\", \"{\\\"difference\\\": 32, \\\"ratio\\\": [9, 5], \\\"selected_part\\\": 1}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": false
+    },
+    {
+      "question_id": "CIVIO-B4-NUM-WP-RATIO-0209",
+      "status": "draft",
+      "source_file": "docs/research/audit/fixes/round-03-baseline-b4-drafts.json",
+      "source_record_sha256": "fddd25b1a535659c7f6d5aa0b01588ecbc52ae0bb507c0302bfd99980dd3a7df",
+      "family": "NUM-WP-RATIO",
+      "stem": "₱900 is shared among three volunteers in the ratio 2 : 3 : 4. How much is the middle share?",
+      "method": "three-part-total-allocation",
+      "parameters": {
+        "total": "900",
+        "parts": [
+          2,
+          3,
+          4
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "300",
+      "key_option_id": "n3",
+      "key_text": "₱300",
+      "matching_options": [
+        "n3"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"three-part-total-allocation\", \"{\\\"parts\\\": [2, 3, 4], \\\"selected_part\\\": 2, \\\"total\\\": \\\"900\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": false
+    },
+    {
+      "question_id": "CIVIO-D1022-SPMATH-0017",
+      "status": "draft",
+      "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+      "source_record_sha256": "3ee2267c5ff0f7fa10aa0e1e9b161e5ab10969f59085a72424dd7047b7ca40d4",
+      "family": "NUM-WP-RATIO",
+      "stem": "Two cousins share a ₱7,200 prize from a barangay quiz bee in the ratio 5 : 3. How much does the cousin with the smaller share get?",
+      "method": "two-part-total-allocation",
+      "parameters": {
+        "total": "7200",
+        "ratio": [
+          5,
+          3
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "2700",
+      "key_option_id": "o1",
+      "key_text": "₱2,700",
+      "matching_options": [
+        "o1"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-part-total-allocation\", \"{\\\"ratio\\\": [5, 3], \\\"selected_part\\\": 2, \\\"total\\\": \\\"7200\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": false
+    },
+    {
+      "question_id": "CIVIO-D1022-SPMATH-0018",
+      "status": "draft",
+      "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+      "source_record_sha256": "70b81cbdc1666f246029bc6425dac8a34d248bf40e48da93e7bd4f396e8d6ede",
+      "family": "NUM-WP-RATIO",
+      "stem": "A cooperative divides ₱18,000 of earnings between its savings fund and its members' dividends in the ratio 4 : 5. How much goes to dividends?",
+      "method": "two-part-total-allocation",
+      "parameters": {
+        "total": "18000",
+        "ratio": [
+          4,
+          5
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "10000",
+      "key_option_id": "o4",
+      "key_text": "₱10,000",
+      "matching_options": [
+        "o4"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"two-part-total-allocation\", \"{\\\"ratio\\\": [4, 5], \\\"selected_part\\\": 2, \\\"total\\\": \\\"18000\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": false
+    },
+    {
+      "question_id": "CIVIO-D1022-SPMATH-0019",
+      "status": "draft",
+      "source_file": "docs/research/batches/drafts/subpro-math-2026-10-22.json",
+      "source_record_sha256": "369166ca9a0f5718da0dcb7593bcabbb900e46d54784a04a25640703af7fcba2",
+      "family": "NUM-WP-RATIO",
+      "stem": "Three volunteers pack 600 relief bags in the ratio 2 : 3 : 5 according to the hours each can give. How many bags does the second volunteer pack?",
+      "method": "three-part-total-allocation",
+      "parameters": {
+        "total": "600",
+        "parts": [
+          2,
+          3,
+          5
+        ],
+        "selected_part": 2
+      },
+      "calculated_answer": "180",
+      "key_option_id": "o2",
+      "key_text": "180",
+      "matching_options": [
+        "o2"
+      ],
+      "key_matches": true,
+      "wrong_choice_feedback_present": true,
+      "duplicate_signature": "[\"three-part-total-allocation\", \"{\\\"parts\\\": [2, 3, 5], \\\"selected_part\\\": 2, \\\"total\\\": \\\"600\\\"}\"]",
+      "manual_review": null,
+      "existing_tutoring_binding": false
+    }
+  ]
+}

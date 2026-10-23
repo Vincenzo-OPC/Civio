@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "audited_records": 43,
+  "unique_records": 43,
+  "exact_answer_and_option_checks": 43,
+  "key_conflicts": 0,
+  "manual_exceptions": 0,
+  "approved_sources_already_bound": 20,
+  "new_approved_source_drafts": 9,
+  "reviewed_or_draft_excluded": 14,
+  "duplicate_parameter_groups": 5,
+  "human_reviews": 0,
+  "runtime_approved": 0
+}

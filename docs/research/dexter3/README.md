@@ -128,3 +128,5 @@ See [resumable production](BULK_EXECUTION.md), [current summary](bulk-summary.js
 **Numerical queue batch 5:** [45-item work-rate, time and proportionality audit with 27 approved-source tutoring drafts](BULK_EXECUTION.md#numerical-batch-5-work-rates-time-speed-and-proportionality). All answer checks pass; nine repeated numeric work-time input groups are documented.
 
 **Numerical queue batch 6:** [38-item price-change, sale-price and simple-interest audit](BULK_EXECUTION.md#numerical-batch-6-successive-price-changes-sale-price-and-simple-interest). Existing 20 bindings were preserved; 17 uncovered approved sources received incremental draft guides.
+
+**Numerical queue batch 7:** [43-item ratio/proportion audit](BULK_EXECUTION.md#numerical-batch-7-ratio-and-proportional-allocation). Existing 20 guides were preserved; nine uncovered approved two-person share questions received incremental drafts, while 14 nonapproved sources remain excluded.

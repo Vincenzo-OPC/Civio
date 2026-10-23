@@ -1,0 +1,828 @@
+{
+  "schema_version": "dexter-ratio43-guide-draft-v0.1",
+  "baseline_commit": "32db7861a2d89435c4019a3a7a66b41dd4fd604a",
+  "status": "draft",
+  "runtime_eligible": false,
+  "independent_review": null,
+  "learner_evidence": null,
+  "bindings": [
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000021",
+      "source_file": "docs/batches/batch-002.json",
+      "source_record_sha256": "c5d47aaad6c244b98d3efce762acfc4eccfbab21e7939d3d89cb5aa0c32c6946",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "ratio-part-to-whole-sharing",
+      "diagnostic_template": "add-ratio-parts-before-taking-share",
+      "diagnostic": {
+        "prompt": "Before calculating, how do you interpret the ratio 2 : 5 for this total?",
+        "choices": [
+          {
+            "id": "sum-parts",
+            "text": "There are 2 + 5 = 7 equal parts in all; the requested person gets 5 of them.",
+            "role": "correct-rule",
+            "feedback": "Yes. The ratio parts describe portions of the whole. Add all parts to find the total number of equal portions, then take the requested number."
+          },
+          {
+            "id": "ratio-number-as-denominator",
+            "text": "The requested person gets 5 parts out of only 5 total parts.",
+            "role": "omit-other-part-hypothesis",
+            "feedback": "The other person also receives 2 parts. Include both ratio numbers when finding the total number of parts."
+          },
+          {
+            "id": "ratio-as-peso-amount",
+            "text": "The second person receives b pesos for every peso in the total.",
+            "role": "ratio-unit-confusion",
+            "feedback": "The ratio numbers are unitless part counts, not pesos. First find the value of one part from the total."
+          },
+          {
+            "id": "multiply-only",
+            "text": "Multiply the total by 5 without dividing by 7 total parts.",
+            "role": "part-whole-fraction-hypothesis",
+            "feedback": "The requested share is 5 parts out of 7 parts, so use 5/7 of the total."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Write the number of parts for each person, then count all parts together."
+          }
+        ],
+        "confirmation": "Was that your original interpretation, a method you chose after seeing these choices, a guess, or a misclick?"
+      },
+      "verified_answer": {
+        "option_id": "o1",
+        "value": "7500",
+        "unit": "PHP",
+        "fraction_of_total": "5/7",
+        "method": "requested part ÷ total parts × total amount",
+        "checks": [
+          "all ratio parts included in denominator",
+          "computed share agrees with stored key",
+          "exactly one option matches"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Total ratio parts: 2 + 5 = 7.",
+          "Value of one part: ₱10500 ÷ 7 = ₱1500.",
+          "The requested share has 5 parts: 5 × ₱1500 = ₱7500."
+        ],
+        "hints": [
+          "Add every number in the ratio; that is the number of equal parts in the whole.",
+          "Divide the total amount by the number of parts to find one part.",
+          "Multiply one part by the number belonging to the requested recipient."
+        ],
+        "shortcut": "The requested recipient gets 5/7 of the total. The denominator is the sum of all ratio terms."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "The existing approved pool is predominantly two-person allocation with repeated parameter sets; no distinct, unfamiliar approved transfer is identified in this ratio batch."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000126",
+      "source_file": "docs/batches/batch-003.json",
+      "source_record_sha256": "f2748ac3038c2456a5ff3ff53ff41364079ca2c59efd9c61c7b6f806987ebc4c",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "ratio-part-to-whole-sharing",
+      "diagnostic_template": "add-ratio-parts-before-taking-share",
+      "diagnostic": {
+        "prompt": "Before calculating, how do you interpret the ratio 3 : 7 for this total?",
+        "choices": [
+          {
+            "id": "sum-parts",
+            "text": "There are 3 + 7 = 10 equal parts in all; the requested person gets 7 of them.",
+            "role": "correct-rule",
+            "feedback": "Yes. The ratio parts describe portions of the whole. Add all parts to find the total number of equal portions, then take the requested number."
+          },
+          {
+            "id": "ratio-number-as-denominator",
+            "text": "The requested person gets 7 parts out of only 7 total parts.",
+            "role": "omit-other-part-hypothesis",
+            "feedback": "The other person also receives 3 parts. Include both ratio numbers when finding the total number of parts."
+          },
+          {
+            "id": "ratio-as-peso-amount",
+            "text": "The second person receives b pesos for every peso in the total.",
+            "role": "ratio-unit-confusion",
+            "feedback": "The ratio numbers are unitless part counts, not pesos. First find the value of one part from the total."
+          },
+          {
+            "id": "multiply-only",
+            "text": "Multiply the total by 7 without dividing by 10 total parts.",
+            "role": "part-whole-fraction-hypothesis",
+            "feedback": "The requested share is 7 parts out of 10 parts, so use 7/10 of the total."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Write the number of parts for each person, then count all parts together."
+          }
+        ],
+        "confirmation": "Was that your original interpretation, a method you chose after seeing these choices, a guess, or a misclick?"
+      },
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "3500",
+        "unit": "PHP",
+        "fraction_of_total": "7/10",
+        "method": "requested part ÷ total parts × total amount",
+        "checks": [
+          "all ratio parts included in denominator",
+          "computed share agrees with stored key",
+          "exactly one option matches"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Total ratio parts: 3 + 7 = 10.",
+          "Value of one part: ₱5000 ÷ 10 = ₱500.",
+          "The requested share has 7 parts: 7 × ₱500 = ₱3500."
+        ],
+        "hints": [
+          "Add every number in the ratio; that is the number of equal parts in the whole.",
+          "Divide the total amount by the number of parts to find one part.",
+          "Multiply one part by the number belonging to the requested recipient."
+        ],
+        "shortcut": "The requested recipient gets 7/10 of the total. The denominator is the sum of all ratio terms."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "The existing approved pool is predominantly two-person allocation with repeated parameter sets; no distinct, unfamiliar approved transfer is identified in this ratio batch."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000223",
+      "source_file": "docs/batches/batch-004.json",
+      "source_record_sha256": "ea5bdeb850242fa1dd17a10c722ee6d72f304b015225fbfd30e8e46c206c4fbd",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "ratio-part-to-whole-sharing",
+      "diagnostic_template": "add-ratio-parts-before-taking-share",
+      "diagnostic": {
+        "prompt": "Before calculating, how do you interpret the ratio 3 : 4 for this total?",
+        "choices": [
+          {
+            "id": "sum-parts",
+            "text": "There are 3 + 4 = 7 equal parts in all; the requested person gets 4 of them.",
+            "role": "correct-rule",
+            "feedback": "Yes. The ratio parts describe portions of the whole. Add all parts to find the total number of equal portions, then take the requested number."
+          },
+          {
+            "id": "ratio-number-as-denominator",
+            "text": "The requested person gets 4 parts out of only 4 total parts.",
+            "role": "omit-other-part-hypothesis",
+            "feedback": "The other person also receives 3 parts. Include both ratio numbers when finding the total number of parts."
+          },
+          {
+            "id": "ratio-as-peso-amount",
+            "text": "The second person receives b pesos for every peso in the total.",
+            "role": "ratio-unit-confusion",
+            "feedback": "The ratio numbers are unitless part counts, not pesos. First find the value of one part from the total."
+          },
+          {
+            "id": "multiply-only",
+            "text": "Multiply the total by 4 without dividing by 7 total parts.",
+            "role": "part-whole-fraction-hypothesis",
+            "feedback": "The requested share is 4 parts out of 7 parts, so use 4/7 of the total."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Write the number of parts for each person, then count all parts together."
+          }
+        ],
+        "confirmation": "Was that your original interpretation, a method you chose after seeing these choices, a guess, or a misclick?"
+      },
+      "verified_answer": {
+        "option_id": "o2",
+        "value": "2000",
+        "unit": "PHP",
+        "fraction_of_total": "4/7",
+        "method": "requested part ÷ total parts × total amount",
+        "checks": [
+          "all ratio parts included in denominator",
+          "computed share agrees with stored key",
+          "exactly one option matches"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Total ratio parts: 3 + 4 = 7.",
+          "Value of one part: ₱3500 ÷ 7 = ₱500.",
+          "The requested share has 4 parts: 4 × ₱500 = ₱2000."
+        ],
+        "hints": [
+          "Add every number in the ratio; that is the number of equal parts in the whole.",
+          "Divide the total amount by the number of parts to find one part.",
+          "Multiply one part by the number belonging to the requested recipient."
+        ],
+        "shortcut": "The requested recipient gets 4/7 of the total. The denominator is the sum of all ratio terms."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "The existing approved pool is predominantly two-person allocation with repeated parameter sets; no distinct, unfamiliar approved transfer is identified in this ratio batch."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000312",
+      "source_file": "docs/batches/batch-005.json",
+      "source_record_sha256": "659f2503e0b06a46d6d6b98ba6822346397e547d26df798f5f0bfcd4e70ab6f0",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "ratio-part-to-whole-sharing",
+      "diagnostic_template": "add-ratio-parts-before-taking-share",
+      "diagnostic": {
+        "prompt": "Before calculating, how do you interpret the ratio 5 : 7 for this total?",
+        "choices": [
+          {
+            "id": "sum-parts",
+            "text": "There are 5 + 7 = 12 equal parts in all; the requested person gets 7 of them.",
+            "role": "correct-rule",
+            "feedback": "Yes. The ratio parts describe portions of the whole. Add all parts to find the total number of equal portions, then take the requested number."
+          },
+          {
+            "id": "ratio-number-as-denominator",
+            "text": "The requested person gets 7 parts out of only 7 total parts.",
+            "role": "omit-other-part-hypothesis",
+            "feedback": "The other person also receives 5 parts. Include both ratio numbers when finding the total number of parts."
+          },
+          {
+            "id": "ratio-as-peso-amount",
+            "text": "The second person receives b pesos for every peso in the total.",
+            "role": "ratio-unit-confusion",
+            "feedback": "The ratio numbers are unitless part counts, not pesos. First find the value of one part from the total."
+          },
+          {
+            "id": "multiply-only",
+            "text": "Multiply the total by 7 without dividing by 12 total parts.",
+            "role": "part-whole-fraction-hypothesis",
+            "feedback": "The requested share is 7 parts out of 12 parts, so use 7/12 of the total."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Write the number of parts for each person, then count all parts together."
+          }
+        ],
+        "confirmation": "Was that your original interpretation, a method you chose after seeing these choices, a guess, or a misclick?"
+      },
+      "verified_answer": {
+        "option_id": "o3",
+        "value": "21000",
+        "unit": "PHP",
+        "fraction_of_total": "7/12",
+        "method": "requested part ÷ total parts × total amount",
+        "checks": [
+          "all ratio parts included in denominator",
+          "computed share agrees with stored key",
+          "exactly one option matches"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Total ratio parts: 5 + 7 = 12.",
+          "Value of one part: ₱36000 ÷ 12 = ₱3000.",
+          "The requested share has 7 parts: 7 × ₱3000 = ₱21000."
+        ],
+        "hints": [
+          "Add every number in the ratio; that is the number of equal parts in the whole.",
+          "Divide the total amount by the number of parts to find one part.",
+          "Multiply one part by the number belonging to the requested recipient."
+        ],
+        "shortcut": "The requested recipient gets 7/12 of the total. The denominator is the sum of all ratio terms."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "The existing approved pool is predominantly two-person allocation with repeated parameter sets; no distinct, unfamiliar approved transfer is identified in this ratio batch."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000522",
+      "source_file": "docs/batches/batch-007.json",
+      "source_record_sha256": "e5fdacf883b2b9639fa4a1b16e85ce3e68c11d9e8f293d3c02bf3bd0cfcea66b",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "ratio-part-to-whole-sharing",
+      "diagnostic_template": "add-ratio-parts-before-taking-share",
+      "diagnostic": {
+        "prompt": "Before calculating, how do you interpret the ratio 2 : 3 for this total?",
+        "choices": [
+          {
+            "id": "sum-parts",
+            "text": "There are 2 + 3 = 5 equal parts in all; the requested person gets 3 of them.",
+            "role": "correct-rule",
+            "feedback": "Yes. The ratio parts describe portions of the whole. Add all parts to find the total number of equal portions, then take the requested number."
+          },
+          {
+            "id": "ratio-number-as-denominator",
+            "text": "The requested person gets 3 parts out of only 3 total parts.",
+            "role": "omit-other-part-hypothesis",
+            "feedback": "The other person also receives 2 parts. Include both ratio numbers when finding the total number of parts."
+          },
+          {
+            "id": "ratio-as-peso-amount",
+            "text": "The second person receives b pesos for every peso in the total.",
+            "role": "ratio-unit-confusion",
+            "feedback": "The ratio numbers are unitless part counts, not pesos. First find the value of one part from the total."
+          },
+          {
+            "id": "multiply-only",
+            "text": "Multiply the total by 3 without dividing by 5 total parts.",
+            "role": "part-whole-fraction-hypothesis",
+            "feedback": "The requested share is 3 parts out of 5 parts, so use 3/5 of the total."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Write the number of parts for each person, then count all parts together."
+          }
+        ],
+        "confirmation": "Was that your original interpretation, a method you chose after seeing these choices, a guess, or a misclick?"
+      },
+      "verified_answer": {
+        "option_id": "o2",
+        "value": "9000",
+        "unit": "PHP",
+        "fraction_of_total": "3/5",
+        "method": "requested part ÷ total parts × total amount",
+        "checks": [
+          "all ratio parts included in denominator",
+          "computed share agrees with stored key",
+          "exactly one option matches"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Total ratio parts: 2 + 3 = 5.",
+          "Value of one part: ₱15000 ÷ 5 = ₱3000.",
+          "The requested share has 3 parts: 3 × ₱3000 = ₱9000."
+        ],
+        "hints": [
+          "Add every number in the ratio; that is the number of equal parts in the whole.",
+          "Divide the total amount by the number of parts to find one part.",
+          "Multiply one part by the number belonging to the requested recipient."
+        ],
+        "shortcut": "The requested recipient gets 3/5 of the total. The denominator is the sum of all ratio terms."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "The existing approved pool is predominantly two-person allocation with repeated parameter sets; no distinct, unfamiliar approved transfer is identified in this ratio batch."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000714",
+      "source_file": "docs/batches/batch-009.json",
+      "source_record_sha256": "d7e1886920b9dd1033e5a45171ea445916f20710b2431f3a994479ce6c7eb671",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "ratio-part-to-whole-sharing",
+      "diagnostic_template": "add-ratio-parts-before-taking-share",
+      "diagnostic": {
+        "prompt": "Before calculating, how do you interpret the ratio 3 : 7 for this total?",
+        "choices": [
+          {
+            "id": "sum-parts",
+            "text": "There are 3 + 7 = 10 equal parts in all; the requested person gets 7 of them.",
+            "role": "correct-rule",
+            "feedback": "Yes. The ratio parts describe portions of the whole. Add all parts to find the total number of equal portions, then take the requested number."
+          },
+          {
+            "id": "ratio-number-as-denominator",
+            "text": "The requested person gets 7 parts out of only 7 total parts.",
+            "role": "omit-other-part-hypothesis",
+            "feedback": "The other person also receives 3 parts. Include both ratio numbers when finding the total number of parts."
+          },
+          {
+            "id": "ratio-as-peso-amount",
+            "text": "The second person receives b pesos for every peso in the total.",
+            "role": "ratio-unit-confusion",
+            "feedback": "The ratio numbers are unitless part counts, not pesos. First find the value of one part from the total."
+          },
+          {
+            "id": "multiply-only",
+            "text": "Multiply the total by 7 without dividing by 10 total parts.",
+            "role": "part-whole-fraction-hypothesis",
+            "feedback": "The requested share is 7 parts out of 10 parts, so use 7/10 of the total."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Write the number of parts for each person, then count all parts together."
+          }
+        ],
+        "confirmation": "Was that your original interpretation, a method you chose after seeing these choices, a guess, or a misclick?"
+      },
+      "verified_answer": {
+        "option_id": "o2",
+        "value": "3500",
+        "unit": "PHP",
+        "fraction_of_total": "7/10",
+        "method": "requested part ÷ total parts × total amount",
+        "checks": [
+          "all ratio parts included in denominator",
+          "computed share agrees with stored key",
+          "exactly one option matches"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Total ratio parts: 3 + 7 = 10.",
+          "Value of one part: ₱5000 ÷ 10 = ₱500.",
+          "The requested share has 7 parts: 7 × ₱500 = ₱3500."
+        ],
+        "hints": [
+          "Add every number in the ratio; that is the number of equal parts in the whole.",
+          "Divide the total amount by the number of parts to find one part.",
+          "Multiply one part by the number belonging to the requested recipient."
+        ],
+        "shortcut": "The requested recipient gets 7/10 of the total. The denominator is the sum of all ratio terms."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "The existing approved pool is predominantly two-person allocation with repeated parameter sets; no distinct, unfamiliar approved transfer is identified in this ratio batch."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000816",
+      "source_file": "docs/batches/batch-010.json",
+      "source_record_sha256": "04561c4f4a0e2719ac59d1293e8d89cb828ae5535e5ef6f28d7b86371dd91e56",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "ratio-part-to-whole-sharing",
+      "diagnostic_template": "add-ratio-parts-before-taking-share",
+      "diagnostic": {
+        "prompt": "Before calculating, how do you interpret the ratio 3 : 4 for this total?",
+        "choices": [
+          {
+            "id": "sum-parts",
+            "text": "There are 3 + 4 = 7 equal parts in all; the requested person gets 4 of them.",
+            "role": "correct-rule",
+            "feedback": "Yes. The ratio parts describe portions of the whole. Add all parts to find the total number of equal portions, then take the requested number."
+          },
+          {
+            "id": "ratio-number-as-denominator",
+            "text": "The requested person gets 4 parts out of only 4 total parts.",
+            "role": "omit-other-part-hypothesis",
+            "feedback": "The other person also receives 3 parts. Include both ratio numbers when finding the total number of parts."
+          },
+          {
+            "id": "ratio-as-peso-amount",
+            "text": "The second person receives b pesos for every peso in the total.",
+            "role": "ratio-unit-confusion",
+            "feedback": "The ratio numbers are unitless part counts, not pesos. First find the value of one part from the total."
+          },
+          {
+            "id": "multiply-only",
+            "text": "Multiply the total by 4 without dividing by 7 total parts.",
+            "role": "part-whole-fraction-hypothesis",
+            "feedback": "The requested share is 4 parts out of 7 parts, so use 4/7 of the total."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Write the number of parts for each person, then count all parts together."
+          }
+        ],
+        "confirmation": "Was that your original interpretation, a method you chose after seeing these choices, a guess, or a misclick?"
+      },
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "2000",
+        "unit": "PHP",
+        "fraction_of_total": "4/7",
+        "method": "requested part ÷ total parts × total amount",
+        "checks": [
+          "all ratio parts included in denominator",
+          "computed share agrees with stored key",
+          "exactly one option matches"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Total ratio parts: 3 + 4 = 7.",
+          "Value of one part: ₱3500 ÷ 7 = ₱500.",
+          "The requested share has 4 parts: 4 × ₱500 = ₱2000."
+        ],
+        "hints": [
+          "Add every number in the ratio; that is the number of equal parts in the whole.",
+          "Divide the total amount by the number of parts to find one part.",
+          "Multiply one part by the number belonging to the requested recipient."
+        ],
+        "shortcut": "The requested recipient gets 4/7 of the total. The denominator is the sum of all ratio terms."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "The existing approved pool is predominantly two-person allocation with repeated parameter sets; no distinct, unfamiliar approved transfer is identified in this ratio batch."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000925",
+      "source_file": "docs/batches/batch-011.json",
+      "source_record_sha256": "24ca6b7bb9917feadabbd03b551b19de4170346bfc23c73dc945d0196cd7b3dc",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "ratio-part-to-whole-sharing",
+      "diagnostic_template": "add-ratio-parts-before-taking-share",
+      "diagnostic": {
+        "prompt": "Before calculating, how do you interpret the ratio 3 : 7 for this total?",
+        "choices": [
+          {
+            "id": "sum-parts",
+            "text": "There are 3 + 7 = 10 equal parts in all; the requested person gets 7 of them.",
+            "role": "correct-rule",
+            "feedback": "Yes. The ratio parts describe portions of the whole. Add all parts to find the total number of equal portions, then take the requested number."
+          },
+          {
+            "id": "ratio-number-as-denominator",
+            "text": "The requested person gets 7 parts out of only 7 total parts.",
+            "role": "omit-other-part-hypothesis",
+            "feedback": "The other person also receives 3 parts. Include both ratio numbers when finding the total number of parts."
+          },
+          {
+            "id": "ratio-as-peso-amount",
+            "text": "The second person receives b pesos for every peso in the total.",
+            "role": "ratio-unit-confusion",
+            "feedback": "The ratio numbers are unitless part counts, not pesos. First find the value of one part from the total."
+          },
+          {
+            "id": "multiply-only",
+            "text": "Multiply the total by 7 without dividing by 10 total parts.",
+            "role": "part-whole-fraction-hypothesis",
+            "feedback": "The requested share is 7 parts out of 10 parts, so use 7/10 of the total."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Write the number of parts for each person, then count all parts together."
+          }
+        ],
+        "confirmation": "Was that your original interpretation, a method you chose after seeing these choices, a guess, or a misclick?"
+      },
+      "verified_answer": {
+        "option_id": "o4",
+        "value": "10500",
+        "unit": "PHP",
+        "fraction_of_total": "7/10",
+        "method": "requested part ÷ total parts × total amount",
+        "checks": [
+          "all ratio parts included in denominator",
+          "computed share agrees with stored key",
+          "exactly one option matches"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Total ratio parts: 3 + 7 = 10.",
+          "Value of one part: ₱15000 ÷ 10 = ₱1500.",
+          "The requested share has 7 parts: 7 × ₱1500 = ₱10500."
+        ],
+        "hints": [
+          "Add every number in the ratio; that is the number of equal parts in the whole.",
+          "Divide the total amount by the number of parts to find one part.",
+          "Multiply one part by the number belonging to the requested recipient."
+        ],
+        "shortcut": "The requested recipient gets 7/10 of the total. The denominator is the sum of all ratio terms."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "The existing approved pool is predominantly two-person allocation with repeated parameter sets; no distinct, unfamiliar approved transfer is identified in this ratio batch."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    },
+    {
+      "question_id": "CIVIO-NUM-WP-RATIO-000929",
+      "source_file": "docs/batches/batch-011.json",
+      "source_record_sha256": "fe26fe25e05fde1fb6179053786e3f7336a7bd42d1d37d9c289f4f8067a32616",
+      "bank_status_at_authoring": "approved",
+      "difficulty": "medium",
+      "language": "en",
+      "concept_family": "ratio-part-to-whole-sharing",
+      "diagnostic_template": "add-ratio-parts-before-taking-share",
+      "diagnostic": {
+        "prompt": "Before calculating, how do you interpret the ratio 3 : 4 for this total?",
+        "choices": [
+          {
+            "id": "sum-parts",
+            "text": "There are 3 + 4 = 7 equal parts in all; the requested person gets 4 of them.",
+            "role": "correct-rule",
+            "feedback": "Yes. The ratio parts describe portions of the whole. Add all parts to find the total number of equal portions, then take the requested number."
+          },
+          {
+            "id": "ratio-number-as-denominator",
+            "text": "The requested person gets 4 parts out of only 4 total parts.",
+            "role": "omit-other-part-hypothesis",
+            "feedback": "The other person also receives 3 parts. Include both ratio numbers when finding the total number of parts."
+          },
+          {
+            "id": "ratio-as-peso-amount",
+            "text": "The second person receives b pesos for every peso in the total.",
+            "role": "ratio-unit-confusion",
+            "feedback": "The ratio numbers are unitless part counts, not pesos. First find the value of one part from the total."
+          },
+          {
+            "id": "multiply-only",
+            "text": "Multiply the total by 4 without dividing by 7 total parts.",
+            "role": "part-whole-fraction-hypothesis",
+            "feedback": "The requested share is 4 parts out of 7 parts, so use 4/7 of the total."
+          },
+          {
+            "id": "unsure",
+            "text": "I am unsure, guessed, or selected by mistake.",
+            "role": "uncertain",
+            "feedback": "No cause is established. Write the number of parts for each person, then count all parts together."
+          }
+        ],
+        "confirmation": "Was that your original interpretation, a method you chose after seeing these choices, a guess, or a misclick?"
+      },
+      "verified_answer": {
+        "option_id": "o2",
+        "value": "2000",
+        "unit": "PHP",
+        "fraction_of_total": "4/7",
+        "method": "requested part ÷ total parts × total amount",
+        "checks": [
+          "all ratio parts included in denominator",
+          "computed share agrees with stored key",
+          "exactly one option matches"
+        ]
+      },
+      "worked_solution": {
+        "steps": [
+          "Total ratio parts: 3 + 4 = 7.",
+          "Value of one part: ₱3500 ÷ 7 = ₱500.",
+          "The requested share has 4 parts: 4 × ₱500 = ₱2000."
+        ],
+        "hints": [
+          "Add every number in the ratio; that is the number of equal parts in the whole.",
+          "Divide the total amount by the number of parts to find one part.",
+          "Multiply one part by the number belonging to the requested recipient."
+        ],
+        "shortcut": "The requested recipient gets 4/7 of the total. The denominator is the sum of all ratio terms."
+      },
+      "transfer": {
+        "approved_question_id": null,
+        "reason": "The existing approved pool is predominantly two-person allocation with repeated parameter sets; no distinct, unfamiliar approved transfer is identified in this ratio batch."
+      },
+      "outcome_contract": {
+        "diagnostic_is_assisted": true,
+        "misconception_is_hypothesis_only": true,
+        "confirmation_required_for_persistent_hypothesis": true,
+        "uncertain_or_misclick_assigns_hypothesis": false,
+        "diagnostic_correctness_is_not_mastery": true,
+        "independent_transfer_required_for_mastery": true
+      },
+      "status": "draft",
+      "editorial_review": null,
+      "runtime_eligible": false
+    }
+  ],
+  "already_covered_ids": [
+    "CIVIO-NUM-WP-RATIO-000003",
+    "CIVIO-NUM-WP-RATIO-000022",
+    "CIVIO-NUM-WP-RATIO-000040",
+    "CIVIO-NUM-WP-RATIO-000125",
+    "CIVIO-NUM-WP-RATIO-000136",
+    "CIVIO-NUM-WP-RATIO-000234",
+    "CIVIO-NUM-WP-RATIO-000320",
+    "CIVIO-NUM-WP-RATIO-000327",
+    "CIVIO-NUM-WP-RATIO-000426",
+    "CIVIO-NUM-WP-RATIO-000432",
+    "CIVIO-NUM-WP-RATIO-000434",
+    "CIVIO-NUM-WP-RATIO-000516",
+    "CIVIO-NUM-WP-RATIO-000519",
+    "CIVIO-NUM-WP-RATIO-000625",
+    "CIVIO-NUM-WP-RATIO-000629",
+    "CIVIO-NUM-WP-RATIO-000637",
+    "CIVIO-NUM-WP-RATIO-000740",
+    "CIVIO-NUM-WP-RATIO-000813",
+    "CIVIO-NUM-WP-RATIO-000821",
+    "CIVIO-NUM-WP-RATIO-000933"
+  ],
+  "excluded_nonapproved_ids": [
+    "CIVIO-D1022-SPMATH-0020",
+    "CIVIO-NUM-WP-RATIO-926025",
+    "CIVIO-NUM-WP-RATIO-926026",
+    "CIVIO-NUM-WP-RATIO-926027",
+    "CIVIO-NUM-WP-RATIO-926028",
+    "CIVIO-NUM-WP-RATIO-926032",
+    "CIVIO-D1022-SPMATH-0021",
+    "CIVIO-D1022-SPMATH-0022",
+    "CIVIO-D1022-SPMATH-0023",
+    "CIVIO-D1022-SPMATH-0024",
+    "CIVIO-B4-NUM-WP-RATIO-0209",
+    "CIVIO-D1022-SPMATH-0017",
+    "CIVIO-D1022-SPMATH-0018",
+    "CIVIO-D1022-SPMATH-0019"
+  ],
+  "notes": [
+    "Only nine uncovered approved share questions receive new bindings; 20 existing pilot/overlay bindings are retained unchanged.",
+    "All nine new bindings reuse one two-person ratio-share family and are practice support, not independent mastery evidence.",
+    "The 14 other ratio/proportion records are all reviewed or draft and are excluded.",
+    "No transfer question is promoted or invented; reviewer and runtime fields remain pending."
+  ]
+}
