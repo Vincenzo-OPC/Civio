@@ -1,0 +1,7 @@
+{
+  "schema_version": "dexter-spell133-validation-v0.1",
+  "record_count": 133,
+  "unique_ids": true,
+  "result": "PASS",
+  "scope": "lexical/key screen; no approval or runtime eligibility"
+}

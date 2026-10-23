@@ -132,3 +132,5 @@ See [resumable production](BULK_EXECUTION.md), [current summary](bulk-summary.js
 **Numerical queue batch 7:** [43-item ratio/proportion audit](BULK_EXECUTION.md#numerical-batch-7-ratio-and-proportional-allocation). Existing 20 guides were preserved; nine uncovered approved two-person share questions received incremental drafts, while 14 nonapproved sources remain excluded.
 
 **Numerical queue batch 8:** [Final two numerical-family answer checks](BULK_EXECUTION.md#numerical-batch-8-final-sequence-and-unit-conversion-records). All 400 queued numerical records now have targeted answer checks; this is not full bank completion.
+
+**Clerical spelling screen:** [133-question Hunspell audit and exception review](SPELLING_REVIEW.md). One item remains ambiguous (`yield`/`yeld`); the context-defined calendar/calender item is defensible. No status changed.

@@ -207,3 +207,18 @@ python3 docs/research/dexter3/validate_numeric_tail2.py
 ```
 
 The queued numerical families now have targeted exact answer checks for **all 400 of 400 records** represented in those groups. This is not a 2,100-item audit completion claim: the English, Filipino, analytical, clerical and General Information queues remain.
+
+## Clerical batch 9: English spelling screen
+
+The lexical screen covers **133 records** in `CLR-SPELL-WRONG` (63), `CLR-SPELL-RIGHT` (50) and `CLR-SPELLING` (20): 113 approved labels and 20 draft labels. Local Hunspell en_US accepted the keyed spelling rule for 131 items. One additional alternative is resolved by the stem's meaning cue (“calendar” versus the different word “calender”); one item offers “yield” and regional/dialect “yeld” without defining the target meaning and remains a single-answer ambiguity. All 133 have wrong-choice feedback, and 20 already have pilot bindings, which were preserved. This is dictionary screening plus two lexical context reviews, not human approval of all explanations. No canonical question, status or runtime eligibility was changed.
+
+The checkpoint adds the record-level source-hash report and the reproducible validator. The spell audit uses the host Hunspell 1.7 library and `hunspell-en-us 1:2020.12.07-2`; it is a research-time dependency, not an application dependency.
+
+Run:
+
+```bash
+python3 docs/research/dexter3/audit_spell133.py
+python3 docs/research/dexter3/validate_spell133.py
+```
+
+See [SPELLING_REVIEW.md](SPELLING_REVIEW.md) for source-specific linguistic references and the unresolved item. Across numerical batches 1–8 and this clerical screen, **533 distinct candidates** have targeted answer/lexical checks. Numeric answers: 400/400. English spelling keys: 131 dictionary-supported, one resolved by meaning context, one flagged for review. All 2,100 remain short of full independent editorial auditing; none of these automated results confer runtime approval.
