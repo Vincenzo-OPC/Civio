@@ -153,4 +153,24 @@ python3 docs/research/dexter3/build_rate45_tutoring.py
 python3 docs/research/dexter3/validate_rate45.py
 ```
 
-Across five numerical batches, **317 distinct records** have targeted exact answer checks and **191 approved-source tutoring bindings** are drafted. None of these figures represents a complete review of the 2,100 candidates or human approval.
+Across five numerical batches, **317 distinct records** had targeted exact answer checks and **191 approved-source tutoring bindings** were drafted. Batch 6 adds 38 audited price/interest records and 17 incremental tutoring drafts below. None of these figures represents a complete review of the 2,100 candidates or human approval.
+
+## Numerical batch 6: successive price changes, sale price and simple interest
+
+Checkpoint parent: `2e1127feee2a8e67afe0dc248cf21728053f984d`.
+
+The audit covers **38 records**: 14 successive price changes, 11 sale-price items and 13 simple-interest items. All 38 exact calculations match exactly one offered option and the stored key. Statuses are 37 approved and one draft; no calculation exceptions or missing wrong-choice feedback were found. This verifies answer arithmetic, not the quality of every canonical explanation.
+
+Existing Dexter coverage was reconciled before authoring: 20 approved records already have pilot or math-overlay bindings and were left unchanged. The sidecar adds drafts only for the **17 uncovered approved records** (two successive changes, seven sale-price, eight simple-interest). The draft sale-price clone with the same ₱480/15% parameters as an approved shoe item stays excluded. Successive-price stems describe the starting amount as a price “sold for” before later changes; new diagnostic metadata checks that the learner interprets the initial base before calculating, while human editorial review must still judge whether each source stem labels it clearly enough.
+
+The tutoring drafts separate original, intermediate and final price; apply the second percentage to the intermediate base; distinguish discount amount from amount paid; and distinguish simple interest from total repayment. One exact solution-parameter clone crosses approved/draft status. All transfer mappings and editorial fields remain pending.
+
+Run:
+
+```bash
+python3 docs/research/dexter3/audit_price38.py
+python3 docs/research/dexter3/build_price38_tutoring.py
+python3 docs/research/dexter3/validate_price38.py
+```
+
+Across six numerical batches, **355 distinct records** have targeted exact answer checks and **208 approved-source tutoring bindings** are drafted. Prior pilot/math overlays are counted once, not regenerated. The 2,100-record audit remains incomplete.
