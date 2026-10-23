@@ -1,0 +1,604 @@
+{
+  "items": [
+    {
+      "id": "CIVIO-D1022-VEN-INS-0001-R2",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "sentence insertion",
+      "micro_skill": "place an added sentence using its pointer words",
+      "archetype": "VEN-PARA-INSERT",
+      "difficulty": "medium",
+      "est_seconds": 70,
+      "language": "en",
+      "stem": "Read the paragraph. After which sentence should the added sentence be placed?\n\"Most of the questions are about senior citizen and PWD benefits.\"\n\n(1) Our barangay hall opens a help desk every Saturday morning. (2) Residents bring questions about permits, clearances and benefits. (3) The desk staff answer that largest group of inquiries first and refer the rest to the right office. (4) Many residents say the desk has saved them trips to the city hall.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "After sentence 3"
+        },
+        {
+          "option_id": "o2",
+          "text": "After sentence 2"
+        },
+        {
+          "option_id": "o3",
+          "text": "After sentence 1"
+        },
+        {
+          "option_id": "o4",
+          "text": "After sentence 4"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Sentence insertion: an added sentence goes right after the sentence its pointer words (this, these, such, also, for example) refer to.",
+        "shortcut": "Underline the pointer word in the added sentence and find the sentence that names what it points to.",
+        "why_correct": "Answer: After sentence 2. Place the added sentence after sentence 2. Sentence 2 introduces the questions; the added sentence identifies the largest group. Sentence 3 then refers to “that largest group.” Without the added sentence before sentence 3, no group has been identified as largest.",
+        "why_wrong": {
+          "o1": "After sentence 3 is too late: sentence 3 already refers to “that largest group” before the inserted sentence has identified it.",
+          "o3": "After sentence 1, the added sentence would sit next to an idea it does not refer to; it belongs after sentence 2 because \"the questions\" needs the residents' questions already named in sentence 2.",
+          "o4": "At the end, the added sentence would come after the paragraph's closing point; it belongs after sentence 2 because \"the questions\" needs the residents' questions already named in sentence 2."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "PO-TRANSITION-IGNORED",
+        "o3": "PO-TRANSITION-IGNORED",
+        "o4": "LOG-IGNORED-CLUE"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Codex independent editorial follow-up",
+        "method": "full-item correction proposal",
+        "created_at": "2026-10-23",
+        "spec_version": "0.1.9",
+        "based_on": "CIVIO-D1022-VEN-INS-0001"
+      },
+      "notes": "Independent A01 ambiguity correction proposal. Pending independent item-level approval; original manifest item unchanged.",
+      "shortcut": "Underline the pointer word in the added sentence and find the sentence that names what it points to.",
+      "recipe": {
+        "op": "judgment",
+        "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+      },
+      "replaces": "CIVIO-D1022-VEN-INS-0001",
+      "revision_history": [
+        {
+          "date": "2026-10-23",
+          "reason": "A01 independent editorial review found a second defensible answer",
+          "change": "Revised passage dependency and explanation; no manifest status change."
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-D1022-VEN-PO-0001-R2",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "ordering",
+      "micro_skill": "order sentences using the topic sentence, pointer words and transitions",
+      "archetype": "VEN-PARA-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Which sequence of sentences P, Q, R and S makes the most logical paragraph?\nP. Attendance among senior citizens has since risen every month.\nQ. With the free glasses, these readers could again enjoy newspapers and books in the reading room.\nR. That problem was that many older readers had stopped coming because they could no longer see small print.\nS. The city library began lending reading glasses to visitors last year after noticing a problem.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "S-R-P-Q"
+        },
+        {
+          "option_id": "o2",
+          "text": "R-S-Q-P"
+        },
+        {
+          "option_id": "o3",
+          "text": "S-Q-R-P"
+        },
+        {
+          "option_id": "o4",
+          "text": "S-R-Q-P"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Paragraph order: the topic sentence needs nothing before it; pointer words (this, these, such, they) and transitions (however, therefore, as a result) must follow what they refer to.",
+        "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
+        "why_correct": "Answer: S-R-Q-P. S introduces the library program and a problem. R identifies that problem and the older readers; Q refers to these readers and the free glasses; P gives the later result. R cannot open because “That problem” needs the problem first introduced in S.",
+        "why_wrong": {
+          "o1": "This puts the closing sentence before the sentence it depends on.",
+          "o2": "This order or slot breaks the dependency introduced in the revised wording. S introduces the library program and a problem. R identifies that problem and the older readers; Q refers to these readers and the free glasses; P gives the later result. R cannot open because “That problem” needs the problem first introduced in S.",
+          "o3": "This swaps the middle two sentences, so a sentence comes before the idea it builds on."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "PO-TRANSITION-IGNORED",
+        "o2": "PO-OPENER-MISPLACED",
+        "o3": "LOG-ORDER-SWAP"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Codex independent editorial follow-up",
+        "method": "full-item correction proposal",
+        "created_at": "2026-10-23",
+        "spec_version": "0.1.9",
+        "based_on": "CIVIO-D1022-VEN-PO-0001"
+      },
+      "notes": "Independent A01 ambiguity correction proposal. Pending independent item-level approval; original manifest item unchanged.",
+      "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
+      "recipe": {
+        "op": "judgment",
+        "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+      },
+      "replaces": "CIVIO-D1022-VEN-PO-0001",
+      "revision_history": [
+        {
+          "date": "2026-10-23",
+          "reason": "A01 independent editorial review found a second defensible answer",
+          "change": "Revised passage dependency and explanation; no manifest status change."
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-D1022-VEN-PO-0004-R2",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "ordering",
+      "micro_skill": "order sentences using the topic sentence, pointer words and transitions",
+      "archetype": "VEN-PARA-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Choose the most coherent order for sentences P to S.\nP. Public offices are now required to post their service steps at the entrance.\nQ. Because the chart gives a time for each step, clients can see whether a request is moving too slowly.\nR. Some offices have found that the chart also helps new employees learn the process.\nS. The posted chart lists each step, the person responsible and the time it should take.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "P-S-Q-R"
+        },
+        {
+          "option_id": "o2",
+          "text": "S-P-Q-R"
+        },
+        {
+          "option_id": "o3",
+          "text": "P-Q-S-R"
+        },
+        {
+          "option_id": "o4",
+          "text": "R-Q-S-P"
+        }
+      ],
+      "answer_option_id": "o1",
+      "reveal": {
+        "terms": "Paragraph order: the topic sentence needs nothing before it; pointer words (this, these, such, they) and transitions (however, therefore, as a result) must follow what they refer to.",
+        "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
+        "why_correct": "Answer: P-S-Q-R. P introduces the posting rule, S supplies the chart and its time limits, Q draws a client benefit from those time limits, and R adds an employee benefit. Q cannot precede S because the specified time per step has not yet been stated.",
+        "why_wrong": {
+          "o2": "This opens with a supporting sentence; the topic sentence must come first.",
+          "o3": "This order or slot breaks the dependency introduced in the revised wording. P introduces the posting rule, S supplies the chart and its time limits, Q draws a client benefit from those time limits, and R adds an employee benefit. Q cannot precede S because the specified time per step has not yet been stated.",
+          "o4": "This runs the paragraph backward, so it ends with the topic sentence and opens with the conclusion."
+        }
+      },
+      "distractor_reasoning": {
+        "o2": "PO-OPENER-MISPLACED",
+        "o3": "LOG-ORDER-SWAP",
+        "o4": "LOG-ORDER-REVERSED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Codex independent editorial follow-up",
+        "method": "full-item correction proposal",
+        "created_at": "2026-10-23",
+        "spec_version": "0.1.9",
+        "based_on": "CIVIO-D1022-VEN-PO-0004"
+      },
+      "notes": "Independent A01 ambiguity correction proposal. Pending independent item-level approval; original manifest item unchanged.",
+      "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
+      "recipe": {
+        "op": "judgment",
+        "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+      },
+      "replaces": "CIVIO-D1022-VEN-PO-0004",
+      "revision_history": [
+        {
+          "date": "2026-10-23",
+          "reason": "A01 independent editorial review found a second defensible answer",
+          "change": "Revised passage dependency and explanation; no manifest status change."
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-D1022-VEN-PO-0006-R2",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "ordering",
+      "micro_skill": "order sentences using the topic sentence, pointer words and transitions",
+      "archetype": "VEN-PARA-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Arrange the sentences to form a logical paragraph. Which order is correct?\nP. The treasurer now plans to open a second express window during the January rush.\nQ. After moving into that separate line, residents making these small payments waited about ten minutes instead of an hour.\nR. Residents paying for barangay clearances formed a separate line instead of lining up with large business taxpayers.\nS. Last June, the municipal hall moved its cashier to a single express window for small payments.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "S-R-P-Q"
+        },
+        {
+          "option_id": "o2",
+          "text": "R-S-Q-P"
+        },
+        {
+          "option_id": "o3",
+          "text": "S-Q-R-P"
+        },
+        {
+          "option_id": "o4",
+          "text": "S-R-Q-P"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Paragraph order: the topic sentence needs nothing before it; pointer words (this, these, such, they) and transitions (however, therefore, as a result) must follow what they refer to.",
+        "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
+        "why_correct": "Answer: S-R-Q-P. S announces the new window; R establishes the separate line for clearance payers; Q refers to “that separate line” and reports their wait; P looks ahead. Placing Q immediately after S leaves its separate-line reference unexplained.",
+        "why_wrong": {
+          "o1": "This puts the closing sentence before the sentence it depends on.",
+          "o2": "This opens with a supporting sentence; the topic sentence must come first.",
+          "o3": "This order or slot breaks the dependency introduced in the revised wording. S announces the new window; R establishes the separate line for clearance payers; Q refers to “that separate line” and reports their wait; P looks ahead. Placing Q immediately after S leaves its separate-line reference unexplained."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "PO-TRANSITION-IGNORED",
+        "o2": "PO-OPENER-MISPLACED",
+        "o3": "LOG-ORDER-SWAP"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Codex independent editorial follow-up",
+        "method": "full-item correction proposal",
+        "created_at": "2026-10-23",
+        "spec_version": "0.1.9",
+        "based_on": "CIVIO-D1022-VEN-PO-0006"
+      },
+      "notes": "Independent A01 ambiguity correction proposal. Pending independent item-level approval; original manifest item unchanged.",
+      "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
+      "recipe": {
+        "op": "judgment",
+        "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+      },
+      "replaces": "CIVIO-D1022-VEN-PO-0006",
+      "revision_history": [
+        {
+          "date": "2026-10-23",
+          "reason": "A01 independent editorial review found a second defensible answer",
+          "change": "Revised passage dependency and explanation; no manifest status change."
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-D1022-VEN-PO-0015-R2",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "ordering",
+      "micro_skill": "order sentences using the topic sentence, pointer words and transitions",
+      "archetype": "VEN-PARA-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Select the sequence that makes a coherent paragraph.\nP. For example, a five-minute break every hour lets the eyes and mind rest.\nQ. Supervisors should therefore encourage, not punish, these short pauses.\nR. After the break, workers usually return with fresh attention.\nS. Employees who take short breaks during long tasks often work better.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "P-S-R-Q"
+        },
+        {
+          "option_id": "o2",
+          "text": "S-P-R-Q"
+        },
+        {
+          "option_id": "o3",
+          "text": "Q-R-P-S"
+        },
+        {
+          "option_id": "o4",
+          "text": "S-R-P-Q"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Paragraph order: the topic sentence needs nothing before it; pointer words (this, these, such, they) and transitions (however, therefore, as a result) must follow what they refer to.",
+        "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
+        "why_correct": "Answer: S-P-R-Q. S states the broad claim. P introduces a specific example with “For example”; R follows the break and Q gives the recommendation. P cannot open with “For example” before the general claim it illustrates.",
+        "why_wrong": {
+          "o1": "This order or slot breaks the dependency introduced in the revised wording. S states the broad claim. P introduces a specific example with “For example”; R follows the break and Q gives the recommendation. P cannot open with “For example” before the general claim it illustrates.",
+          "o3": "This runs the paragraph backward, so it ends with the topic sentence and opens with the conclusion.",
+          "o4": "This swaps the middle two sentences, so a sentence comes before the idea it builds on."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "PO-OPENER-MISPLACED",
+        "o3": "LOG-ORDER-REVERSED",
+        "o4": "LOG-ORDER-SWAP"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Codex independent editorial follow-up",
+        "method": "full-item correction proposal",
+        "created_at": "2026-10-23",
+        "spec_version": "0.1.9",
+        "based_on": "CIVIO-D1022-VEN-PO-0015"
+      },
+      "notes": "Independent A01 ambiguity correction proposal. Pending independent item-level approval; original manifest item unchanged.",
+      "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
+      "recipe": {
+        "op": "judgment",
+        "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+      },
+      "replaces": "CIVIO-D1022-VEN-PO-0015",
+      "revision_history": [
+        {
+          "date": "2026-10-23",
+          "reason": "A01 independent editorial review found a second defensible answer",
+          "change": "Revised passage dependency and explanation; no manifest status change."
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-D1022-VEN-PO-0016-R2",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "ordering",
+      "micro_skill": "order sentences using the topic sentence, pointer words and transitions",
+      "archetype": "VEN-PARA-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Read P to S and select the sequence that forms a clear paragraph.\nP. Donated books were sorted by age group and placed on low shelves.\nQ. The barangay set up a small library inside its covered court.\nR. The library has become the busiest corner of the court.\nS. Once those books were on the shelves, high school volunteers began reading stories to younger children on weekends.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Q-S-P-R"
+        },
+        {
+          "option_id": "o2",
+          "text": "Q-P-S-R"
+        },
+        {
+          "option_id": "o3",
+          "text": "P-Q-S-R"
+        },
+        {
+          "option_id": "o4",
+          "text": "R-S-P-Q"
+        }
+      ],
+      "answer_option_id": "o2",
+      "reveal": {
+        "terms": "Paragraph order: the topic sentence needs nothing before it; pointer words (this, these, such, they) and transitions (however, therefore, as a result) must follow what they refer to.",
+        "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
+        "why_correct": "Answer: Q-P-S-R. Q introduces the library, P places the donated books on shelves, S refers back to those shelved books before the weekend reading starts, and R states the result. S cannot precede P because the books have not yet been placed on shelves.",
+        "why_wrong": {
+          "o1": "This order or slot breaks the dependency introduced in the revised wording. Q introduces the library, P places the donated books on shelves, S refers back to those shelved books before the weekend reading starts, and R states the result. S cannot precede P because the books have not yet been placed on shelves.",
+          "o3": "This opens with a supporting sentence; the topic sentence must come first.",
+          "o4": "This runs the paragraph backward, so it ends with the topic sentence and opens with the conclusion."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "LOG-ORDER-SWAP",
+        "o3": "PO-OPENER-MISPLACED",
+        "o4": "LOG-ORDER-REVERSED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Codex independent editorial follow-up",
+        "method": "full-item correction proposal",
+        "created_at": "2026-10-23",
+        "spec_version": "0.1.9",
+        "based_on": "CIVIO-D1022-VEN-PO-0016"
+      },
+      "notes": "Independent A01 ambiguity correction proposal. Pending independent item-level approval; original manifest item unchanged.",
+      "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
+      "recipe": {
+        "op": "judgment",
+        "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+      },
+      "replaces": "CIVIO-D1022-VEN-PO-0016",
+      "revision_history": [
+        {
+          "date": "2026-10-23",
+          "reason": "A01 independent editorial review found a second defensible answer",
+          "change": "Revised passage dependency and explanation; no manifest status change."
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-D1022-VEN-PO-0017-R2",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "ordering",
+      "micro_skill": "order sentences using the topic sentence, pointer words and transitions",
+      "archetype": "VEN-PARA-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "Put the sentences below in the best order. Which arrangement is correct?\nP. Residents can lower this risk by avoiding overloaded extension cords and outlets.\nQ. Fire is one of the most common emergencies in crowded city areas.\nR. One example of this overloading is connecting many appliances to a single extension cord.\nS. Some of these fires start from overloaded electrical outlets.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Q-R-S-P"
+        },
+        {
+          "option_id": "o2",
+          "text": "S-Q-R-P"
+        },
+        {
+          "option_id": "o3",
+          "text": "P-R-S-Q"
+        },
+        {
+          "option_id": "o4",
+          "text": "Q-S-R-P"
+        }
+      ],
+      "answer_option_id": "o4",
+      "reveal": {
+        "terms": "Paragraph order: the topic sentence needs nothing before it; pointer words (this, these, such, they) and transitions (however, therefore, as a result) must follow what they refer to.",
+        "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
+        "why_correct": "Answer: Q-S-R-P. Q introduces fires, S identifies outlet overloading as one cause, R begins “One example of this overloading” and must follow S, and P gives a preventive action. R before S has no established overloading to illustrate.",
+        "why_wrong": {
+          "o1": "This order or slot breaks the dependency introduced in the revised wording. Q introduces fires, S identifies outlet overloading as one cause, R begins “One example of this overloading” and must follow S, and P gives a preventive action. R before S has no established overloading to illustrate.",
+          "o2": "This opens with a supporting sentence; the topic sentence must come first.",
+          "o3": "This runs the paragraph backward, so it ends with the topic sentence and opens with the conclusion."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "LOG-ORDER-SWAP",
+        "o2": "PO-OPENER-MISPLACED",
+        "o3": "LOG-ORDER-REVERSED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Codex independent editorial follow-up",
+        "method": "full-item correction proposal",
+        "created_at": "2026-10-23",
+        "spec_version": "0.1.9",
+        "based_on": "CIVIO-D1022-VEN-PO-0017"
+      },
+      "notes": "Independent A01 ambiguity correction proposal. Pending independent item-level approval; original manifest item unchanged.",
+      "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
+      "recipe": {
+        "op": "judgment",
+        "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+      },
+      "replaces": "CIVIO-D1022-VEN-PO-0017",
+      "revision_history": [
+        {
+          "date": "2026-10-23",
+          "reason": "A01 independent editorial review found a second defensible answer",
+          "change": "Revised passage dependency and explanation; no manifest status change."
+        }
+      ]
+    },
+    {
+      "id": "CIVIO-D1022-VEN-PO-0018-R2",
+      "track": "both",
+      "domain": "verbal_en",
+      "competency": "Paragraph organization",
+      "concept": "ordering",
+      "micro_skill": "order sentences using the topic sentence, pointer words and transitions",
+      "archetype": "VEN-PARA-ORDER",
+      "difficulty": "medium",
+      "est_seconds": 75,
+      "language": "en",
+      "stem": "How should these sentences be ordered into one paragraph?\nP. After passengers began using that before-payment check, complaints about overcharging fell.\nQ. A new ordinance requires tricycle drivers to post their fare matrix inside the cab.\nR. Passengers can now check the correct fare before they pay.\nS. The town plans to apply the same rule to jeepneys next year.",
+      "options": [
+        {
+          "option_id": "o1",
+          "text": "Q-P-R-S"
+        },
+        {
+          "option_id": "o2",
+          "text": "S-P-R-Q"
+        },
+        {
+          "option_id": "o3",
+          "text": "Q-R-P-S"
+        },
+        {
+          "option_id": "o4",
+          "text": "R-Q-P-S"
+        }
+      ],
+      "answer_option_id": "o3",
+      "reveal": {
+        "terms": "Paragraph order: the topic sentence needs nothing before it; pointer words (this, these, such, they) and transitions (however, therefore, as a result) must follow what they refer to.",
+        "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
+        "why_correct": "Answer: Q-R-P-S. Q announces the fare-posting rule, R introduces a before-payment check, P explicitly relies on “that before-payment check,” and S describes a future extension. Q-P-R-S is broken because P refers to a check not yet introduced.",
+        "why_wrong": {
+          "o1": "This order or slot breaks the dependency introduced in the revised wording. Q announces the fare-posting rule, R introduces a before-payment check, P explicitly relies on “that before-payment check,” and S describes a future extension. Q-P-R-S is broken because P refers to a check not yet introduced.",
+          "o2": "This runs the paragraph backward, so it ends with the topic sentence and opens with the conclusion.",
+          "o4": "This opens with a supporting sentence; the topic sentence must come first."
+        }
+      },
+      "distractor_reasoning": {
+        "o1": "LOG-ORDER-SWAP",
+        "o2": "LOG-ORDER-REVERSED",
+        "o4": "PO-OPENER-MISPLACED"
+      },
+      "source": "Original, Civio",
+      "source_url": null,
+      "source_group": "civio",
+      "status": "draft",
+      "review_status": "unreviewed",
+      "reviewer": null,
+      "reviewed_at": null,
+      "provenance": {
+        "author": "Codex independent editorial follow-up",
+        "method": "full-item correction proposal",
+        "created_at": "2026-10-23",
+        "spec_version": "0.1.9",
+        "based_on": "CIVIO-D1022-VEN-PO-0018"
+      },
+      "notes": "Independent A01 ambiguity correction proposal. Pending independent item-level approval; original manifest item unchanged.",
+      "shortcut": "Find the sentence that can stand first on its own, then chain each pointer word to the sentence it points back to.",
+      "recipe": {
+        "op": "judgment",
+        "why": "paragraph logic / reading judgment; order keys computed from the authored order"
+      },
+      "replaces": "CIVIO-D1022-VEN-PO-0018",
+      "revision_history": [
+        {
+          "date": "2026-10-23",
+          "reason": "A01 independent editorial review found a second defensible answer",
+          "change": "Revised passage dependency and explanation; no manifest status change."
+        }
+      ]
+    }
+  ]
+}

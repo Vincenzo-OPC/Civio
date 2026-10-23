@@ -27,6 +27,18 @@ VFIL_SECOND_PASS = {
     "CIVIO-GF2K01-VFIL-WIKAIN-0002": "'ilaw ng tahanan ng taon' is unnatural, and 'panauhing dumadalaw' is mislabeled as an antonym of mother.",
     "CIVIO-GF2K01-VFIL-WIKAIN-0014": "'kalansay na lamang' can itself mean extremely thin, so two choices can defend the key's meaning; replace that foil.",
 }
+# Independent editorial review of Packet A01 found alternative defensible orders/slots.
+# This review is an AI recommendation, never a human decision or approval.
+VEN_A01_SECOND_PASS = {
+    "CIVIO-D1022-VEN-INS-0001": "Insertion after sentence 3 also reads coherently; require unique placement after sentence 2.",
+    "CIVIO-D1022-VEN-PO-0001": "R-S-Q-P also forms a coherent problem-to-solution paragraph.",
+    "CIVIO-D1022-VEN-PO-0004": "P-Q-S-R also forms a coherent chart-benefit-detail paragraph.",
+    "CIVIO-D1022-VEN-PO-0006": "S-Q-R-P also forms a coherent window-wait-beneficiary paragraph.",
+    "CIVIO-D1022-VEN-PO-0015": "P-S-R-Q also coherently defines the break before its benefits.",
+    "CIVIO-D1022-VEN-PO-0016": "Q-S-P-R also coherently places weekend reading before organizing books.",
+    "CIVIO-D1022-VEN-PO-0017": "Q-R-S-P also coherently places the overloading example before the wider explanation.",
+    "CIVIO-D1022-VEN-PO-0018": "Q-P-R-S remains coherent despite the author's revision: the posted fare matrix itself permits spotting overcharging.",
+}
 HOW = {"recipe solver": "key recomputed from the stem by the item's recipe (drafts/solver_2026_10_22.py)",
        "bank solver": "key recomputed from the stem by the qa.py domain solver",
        "evidence sheet": "key matches the hand-checked evidence sheet (audit/verified_keys or gi_legacy_evidence, verbatim lawphil quote)",
@@ -82,6 +94,10 @@ def p2_p4(m, cache):
             rec, human = "Revise", True
             notes = [n for n in notes if "one defensible answer" not in n]
             notes.append("Independent 23 Oct review: " + VFIL_SECOND_PASS[e["id"]])
+        if e["id"] in VEN_A01_SECOND_PASS:
+            rec, human = "Revise", True
+            notes.append("Independent A01 editorial review: " + VEN_A01_SECOND_PASS[e["id"]]
+                         + " See A01-GPT6-INDEPENDENT-REVIEW-2026-10-22.md; separate -R2 draft proposal in audit/fixes/ven-a01-r2-2026-10-23.json, no approval or manifest replacement.")
         out.append({"id": e["id"], "priority": e["priority"], "status": e["status"], "recommendation": rec, "reason": " | ".join(notes),
                     "checked": "evidence pass (queue_evidence_2026_10_22.py) + reading", "needs_human_read": "yes" if human else "no",
                     "decision_by_human": ""})

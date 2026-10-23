@@ -1,5 +1,7 @@
 # Packet A01: verbal_en, human-judgment-needed (36 items)
 
+**23 Oct reconciliation:** This packet is a 22 Oct snapshot. Its seven `Accept` recommendations for `VEN-INS-0001`, `VEN-PO-0001`, `VEN-PO-0004`, `VEN-PO-0006`, `VEN-PO-0015`, `VEN-PO-0016` and `VEN-PO-0017` have been superseded by `Revise` in the current queue. `VEN-PO-0018` remains `Revise`. See `A01-GPT6-INDEPENDENT-REVIEW-2026-10-22.md` for the eight item-specific alternative readings and `../audit/fixes/ven-a01-r2-2026-10-23.json` for separate draft correction proposals. The original items remain drafts and no human decision has been recorded.
+
 ## One-page summary
 
 **Risk rank:** 1 of 23 (highest risk first). Highest item risk score 140, mean 58.
